@@ -1,0 +1,457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: LocalAnalysis
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: LocalAnalysis
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Define a Local Analysis
+</dl>
+<dl>
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="class_jmfDuplicateObject_class_jmfNamedObject_.html">class jmfDuplicateObject<class jmfNamedObject></a>
+            |
+            +--<a href="AbstractActivity.html">AbstractActivity</a>
+                 |
+                 +--<a href="AnalysisRun.html">AnalysisRun</a>
+                      |
+                      +--<b>LocalAnalysis</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="LocalAnalysis.html#LocalAnalysis()">LocalAnalysis</a></b>()</code>
+<div class="explanation">
+Construct a new LMLA</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractActivity.html#enableLoadCase(AbstractLoadCase, bool)">enableLoadCase</a></b>(<b><a href="AbstractLoadCase.html">AbstractLoadCase</a></b>, <b>bool</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractActivity.html#execute()">execute</a></b>()</code>
+<div class="explanation">
+Execute the analysis</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractActivity.html#setActive()">setActive</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="lcActivity.html">lcActivity</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractActivity.html#step(int)">step</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Retrieve an object in the analysis</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="class_jmfDuplicateObject_class_jmfNamedObject_.html#copy()">copy</a></b>()</code>
+<div class="explanation">
+Make an identical copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="LocalAnalysis.html#ApplyLocalLoads()">ApplyLocalLoads</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="LocalAnalysis.html#DistributeLoadsInSupports()">DistributeLoadsInSupports</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="LocalAnalysis.html#DistributePointLoads()">DistributePointLoads</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="LocalAnalysis.html#DistributeTemperatureLoads()">DistributeTemperatureLoads</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="LocalAnalysis.html#FEMInputFile()">FEMInputFile</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="LocalAnalysis.html#FrictionCoefficient()">FrictionCoefficient</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="LocalAnalysis.html#GlobalSINInputFile()">GlobalSINInputFile</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="LocalAnalysis.html#GlobalSubsetInclCargoTank()">GlobalSubsetInclCargoTank</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="LocalAnalysis.html#IgnoreBeamEccentricityOfGlobalResult()">IgnoreBeamEccentricityOfGlobalResult</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LoadsForState.html">LoadsForState</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LocalAnalysis.html#LoadsForState()">LoadsForState</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LengthVector3d.html">LengthVector3d</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LocalAnalysis.html#LocalModelTranslation()">LocalModelTranslation</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Set.html">Set</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LocalAnalysis.html#SubsetIncludingContactSurface()">SubsetIncludingContactSurface</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="SupportType.html">SupportType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LocalAnalysis.html#SupportType()">SupportType</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="TempGradient.html">TempGradient</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LocalAnalysis.html#TemperatureGradient()">TemperatureGradient</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Angle.html">Angle</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LocalAnalysis.html#ToleranceAngle()">ToleranceAngle</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LocalAnalysis.html#ToleranceDistanceLMLA()">ToleranceDistanceLMLA</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LocalAnalysis.html#ToleranceDistanceSubmod()">ToleranceDistanceSubmod</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="AnalysisRun.html#dataCheckOnly()">dataCheckOnly</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Data check only</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="AnalysisRun.html#generateInput()">generateInput</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Generate input files</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="AbstractActivity.html#needsToBeExecuted()">needsToBeExecuted</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="LocalAnalysis()"></a>
+<h3>LocalAnalysis</h3>
+<p class="function">
+<b>LocalAnalysis</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new LMLA
+</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="ApplyLocalLoads()"></a>
+<h3>ApplyLocalLoads</h3>
+<p class="function">
+<b>bool</b> <b>ApplyLocalLoads</b>()</p>
+<p>
+<a name="DistributeLoadsInSupports()"></a>
+<h3>DistributeLoadsInSupports</h3>
+<p class="function">
+<b>bool</b> <b>DistributeLoadsInSupports</b>()</p>
+<p>
+<a name="DistributePointLoads()"></a>
+<h3>DistributePointLoads</h3>
+<p class="function">
+<b>bool</b> <b>DistributePointLoads</b>()</p>
+<p>
+<a name="DistributeTemperatureLoads()"></a>
+<h3>DistributeTemperatureLoads</h3>
+<p class="function">
+<b>bool</b> <b>DistributeTemperatureLoads</b>()</p>
+<p>
+<a name="FEMInputFile()"></a>
+<h3>FEMInputFile</h3>
+<p class="function">
+<b>string</b> <b>FEMInputFile</b>()</p>
+<p>
+<a name="FrictionCoefficient()"></a>
+<h3>FrictionCoefficient</h3>
+<p class="function">
+<b>double</b> <b>FrictionCoefficient</b>()</p>
+<p>
+<a name="GlobalSINInputFile()"></a>
+<h3>GlobalSINInputFile</h3>
+<p class="function">
+<b>string</b> <b>GlobalSINInputFile</b>()</p>
+<p>
+<a name="GlobalSubsetInclCargoTank()"></a>
+<h3>GlobalSubsetInclCargoTank</h3>
+<p class="function">
+<b>string</b> <b>GlobalSubsetInclCargoTank</b>()</p>
+<p>
+<a name="IgnoreBeamEccentricityOfGlobalResult()"></a>
+<h3>IgnoreBeamEccentricityOfGlobalResult</h3>
+<p class="function">
+<b>bool</b> <b>IgnoreBeamEccentricityOfGlobalResult</b>()</p>
+<p>
+<a name="LoadsForState()"></a>
+<h3>LoadsForState</h3>
+<p class="function">
+<b><a href="LoadsForState.html">LoadsForState</a></b> <b>LoadsForState</b>()</p>
+<p>
+<a name="LocalModelTranslation()"></a>
+<h3>LocalModelTranslation</h3>
+<p class="function">
+<b><a href="LengthVector3d.html">LengthVector3d</a></b> <b>LocalModelTranslation</b>()</p>
+<p>
+<a name="SubsetIncludingContactSurface()"></a>
+<h3>SubsetIncludingContactSurface</h3>
+<p class="function">
+<b><a href="Set.html">Set</a></b> <b>SubsetIncludingContactSurface</b>()</p>
+<p>
+<a name="SupportType()"></a>
+<h3>SupportType</h3>
+<p class="function">
+<b><a href="SupportType.html">SupportType</a></b> <b>SupportType</b>()</p>
+<p>
+<a name="TemperatureGradient()"></a>
+<h3>TemperatureGradient</h3>
+<p class="function">
+<b><a href="TempGradient.html">TempGradient</a></b> <b>TemperatureGradient</b>()</p>
+<p>
+<a name="ToleranceAngle()"></a>
+<h3>ToleranceAngle</h3>
+<p class="function">
+<b><a href="Angle.html">Angle</a></b> <b>ToleranceAngle</b>()</p>
+<p>
+<a name="ToleranceDistanceLMLA()"></a>
+<h3>ToleranceDistanceLMLA</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>ToleranceDistanceLMLA</b>()</p>
+<p>
+<a name="ToleranceDistanceSubmod()"></a>
+<h3>ToleranceDistanceSubmod</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>ToleranceDistanceSubmod</b>()</p>
+<p>
+</body>
+</html>

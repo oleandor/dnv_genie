@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: Traction2dLinearFunction
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: Traction2dLinearFunction
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+
+  |
+  +--
+       |
+       +--<a href="IIntensityFunction2d.html">IIntensityFunction2d</a>
+            |
+            +--<a href="Traction2dIntensityFunction.html">Traction2dIntensityFunction</a>
+                 |
+                 +--
+                      |
+                      +--<b>Traction2dLinearFunction</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="Traction2dLinearFunction.html#Traction2dLinearFunction(ForcePerUnitVolume, ForcePerUnitVolume, ForcePerUnitVolume, ForcePerUnitArea, LengthVector3d)">Traction2dLinearFunction</a></b>(<b><a href="ForcePerUnitVolume.html">ForcePerUnitVolume</a></b> k1, <b><a href="ForcePerUnitVolume.html">ForcePerUnitVolume</a></b> k2, <b><a href="ForcePerUnitVolume.html">ForcePerUnitVolume</a></b> k3, <b><a href="ForcePerUnitArea.html">ForcePerUnitArea</a></b> k4, <b><a href="LengthVector3d.html">LengthVector3d</a></b> guideDirection)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href=".html#Delete(DNVS::MoFa::Loads::IntensityFunction)">Delete</a></b>(<b><a href="DNVS__MoFa__Loads__IntensityFunction.html">DNVS::MoFa::Loads::IntensityFunction</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LengthVector3d.html">LengthVector3d</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Traction2dIntensityFunction.html#GuideDirection()">GuideDirection</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Guide direction is projected onto the loaded surface to give the direction of the traction pressure</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="lcCoordinateSystem.html">lcCoordinateSystem</a></b></code>
+</td>
+<td width="90%"><code><b><a href=".html#IntensitySystem()">IntensitySystem</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ForcePerUnitVolume.html">ForcePerUnitVolume</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Traction2dLinearFunction.html#K1()">K1</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Term multiplied with x</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ForcePerUnitVolume.html">ForcePerUnitVolume</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Traction2dLinearFunction.html#K2()">K2</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Term multiplied with y</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ForcePerUnitVolume.html">ForcePerUnitVolume</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Traction2dLinearFunction.html#K3()">K3</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Term multiplied with z</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ForcePerUnitArea.html">ForcePerUnitArea</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Traction2dLinearFunction.html#K4()">K4</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Constant term</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="lcCoordinateSystem.html">lcCoordinateSystem</a></b></code>
+</td>
+<td width="90%"><code><b><a href=".html#PositionSystem()">PositionSystem</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="Traction2dLinearFunction(ForcePerUnitVolume, ForcePerUnitVolume, ForcePerUnitVolume, ForcePerUnitArea, LengthVector3d)"></a>
+<h3>Traction2dLinearFunction</h3>
+<p class="function">
+<b>Traction2dLinearFunction</b>(<b><a href="ForcePerUnitVolume.html">ForcePerUnitVolume</a></b> k1, <b><a href="ForcePerUnitVolume.html">ForcePerUnitVolume</a></b> k2, <b><a href="ForcePerUnitVolume.html">ForcePerUnitVolume</a></b> k3, <b><a href="ForcePerUnitArea.html">ForcePerUnitArea</a></b> k4, <b><a href="LengthVector3d.html">LengthVector3d</a></b> guideDirection)</p>
+<p>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="K1()"></a>
+<h3>K1</h3>
+<p class="function">
+<b><a href="ForcePerUnitVolume.html">ForcePerUnitVolume</a></b> <b>K1</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Term multiplied with x
+</dl>
+<a name="K2()"></a>
+<h3>K2</h3>
+<p class="function">
+<b><a href="ForcePerUnitVolume.html">ForcePerUnitVolume</a></b> <b>K2</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Term multiplied with y
+</dl>
+<a name="K3()"></a>
+<h3>K3</h3>
+<p class="function">
+<b><a href="ForcePerUnitVolume.html">ForcePerUnitVolume</a></b> <b>K3</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Term multiplied with z
+</dl>
+<a name="K4()"></a>
+<h3>K4</h3>
+<p class="function">
+<b><a href="ForcePerUnitArea.html">ForcePerUnitArea</a></b> <b>K4</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Constant term
+</dl>
+</body>
+</html>

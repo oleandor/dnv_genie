@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: Location
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: Location
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Insert Location. Define the environmental data for air (wind), water (wave and current) <br/>and soil for use in hydrodynamic and pile-soil analyses. There may be several <br/>locations whereby it is possible to run a number of analyses using the different locations.
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Define properties for air, water and the soil</td></tr><tr>  <td>     <code>1.<br/>Location1 = Location(0m, -1 m);<br/>Location1.gravity = 9.80665 m/s^2;<br/>Location1.air.density = 1.226 Kg/m^3;<br/>Location1.air.kinematicViscosity = 1.462e-005 m^2/s;<br/>Location1.water.density = 1025 Kg/m^3;<br/>Location1.water.kinematicViscosity = 1.19e-006 m^2/s;<br/>Location1.seabed.normaldirection = Vector3d(0 m,0 m,1 m);<br/>Location1.relativeSoilLayers = false;<br/><br/>2.<br/>Location1 = Location(124 m, 0 m);<br/>Location1.gravity = 9.80665 m/s^2;<br/>Location1.air.density = 0.001226 tonne/m^3;<br/>Location1.air.kinematicViscosity = 1.462e-005 m^2/s;<br/>Location1.water.density = 1.025 tonne/m^3;<br/>Location1.water.kinematicViscosity = 1.19e-006 m^2/s;<br/>Location1.seabed.normaldirection = Vector3d(0 m,0 m,1 m);<br/>Location1.seabed.seabedDelta = Scour1;<br/>Location1.insertSoilBorder(-1.5 m);<br/><br/>Location1.insertSoilBorder(-80 m);<br/>Location1.soil(1).soilCurves = SoilCurves1;<br/>Location1.soil(1).soilData = SoilData1;<br/>Location1.soil(1).soilType = Sand1;<br/>Location1.soil(1).numberOfSublayers = 1;<br/><br/>Location1.soil(7).soilCurves = SoilCurves1;<br/>Location1.soil(7).soilData = SoilData6;<br/>Location1.soil(7).soilType = Sand5;<br/>Location1.soil(7).numberOfSublayers = 2;<br/>     </code>		<div class="explanation">1. This command is scripted. For the soil you may define soil type, soil curves and soil data<br/>2. This command is scripted. The scripting depends on which data are used to define the location.<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="class_jmfDuplicateObject_class_jmfNamedObject_.html">class jmfDuplicateObject<class jmfNamedObject></a>
+            |
+            +--<a href="AbstractLocation.html">AbstractLocation</a>
+                 |
+                 +--<b>Location</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="Location.html#HydroLocation()">HydroLocation</a></b>()</code>
+<div class="explanation">
+Create a new Location</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Location.html#HydroLocation(Length)">HydroLocation</a></b>(<b><a href="Length.html">Length</a></b> stillWaterLevel)</code>
+<div class="explanation">
+Create a new Location with infinite waterdepth</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Location.html#HydroLocation(Length, Length)">HydroLocation</a></b>(<b><a href="Length.html">Length</a></b> stillWaterLevel, <b><a href="Length.html">Length</a></b> mudLine)</code>
+<div class="explanation">
+Create a new Location with a seabed</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Location.html#Location()">Location</a></b>()</code>
+<div class="explanation">
+Create a new Location</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Location.html#Location(Length)">Location</a></b>(<b><a href="Length.html">Length</a></b> stillWaterLevel)</code>
+<div class="explanation">
+Create a new Location with infinite waterdepth</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Location.html#Location(Length, Length)">Location</a></b>(<b><a href="Length.html">Length</a></b> stillWaterLevel, <b><a href="Length.html">Length</a></b> mudLine)</code>
+<div class="explanation">
+Create a new Location with a seabed</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Location.html#clearSoilLayers()">clearSoilLayers</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Location.html#insertSoilBorder(Length)">insertSoilBorder</a></b>(<b><a href="Length.html">Length</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Location.html#joinSoilLayers(unsigned __int64, unsigned __int64)">joinSoilLayers</a></b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b>, <b><a href="unsigned___int64.html">unsigned __int64</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Location.html#moveAtmosphere(Length)">moveAtmosphere</a></b>(<b><a href="Length.html">Length</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Location.html#moveSeabed(Length)">moveSeabed</a></b>(<b><a href="Length.html">Length</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Location.html#moveSoilBorder(unsigned __int64, Length)">moveSoilBorder</a></b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b>, <b><a href="Length.html">Length</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Location.html#moveWaterSurface(Length)">moveWaterSurface</a></b>(<b><a href="Length.html">Length</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractLocation.html#setActive()">setActive</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Location.html#setDepth(Length)">setDepth</a></b>(<b><a href="Length.html">Length</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="SoilLayer.html">SoilLayer</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Location.html#soil(unsigned __int64)">soil</a></b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="evBorder.html">evBorder</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Location.html#soilBorder(unsigned __int64)">soilBorder</a></b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="class_jmfDuplicateObject_class_jmfNamedObject_.html#copy()">copy</a></b>()</code>
+<div class="explanation">
+Make an identical copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Air.html">Air</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Location.html#air()">air</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Acceleration.html">Acceleration</a></b></code>
+</td>
+<td width="90%"><code><b><a href="AbstractLocation.html#gravity()">gravity</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="AbstractLocation.html#isActive()">isActive</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="infinite.html">infinite</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Location.html#lowerInfinity()">lowerInfinity</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Location.html#relativeSoilLayers()">relativeSoilLayers</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Seabed.html">Seabed</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Location.html#seabed()">seabed</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="unsigned___int64.html">unsigned __int64</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Location.html#soilCount()">soilCount</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="infinite.html">infinite</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Location.html#upperInfinity()">upperInfinity</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Water.html">Water</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Location.html#water()">water</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="WaterSurface.html">WaterSurface</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Location.html#waterSurface()">waterSurface</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="HydroLocation()"></a>
+<h3>HydroLocation</h3>
+<p class="function">
+<b>HydroLocation</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a new Location
+</dl>
+<hr>
+
+<a name="HydroLocation(Length)"></a>
+<h3>HydroLocation</h3>
+<p class="function">
+<b>HydroLocation</b>(<b><a href="Length.html">Length</a></b> stillWaterLevel)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a new Location with infinite waterdepth
+</dl>
+<hr>
+
+<a name="HydroLocation(Length, Length)"></a>
+<h3>HydroLocation</h3>
+<p class="function">
+<b>HydroLocation</b>(<b><a href="Length.html">Length</a></b> stillWaterLevel, <b><a href="Length.html">Length</a></b> mudLine)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a new Location with a seabed
+</dl>
+<hr>
+
+<a name="Location()"></a>
+<h3>Location</h3>
+<p class="function">
+<b>Location</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a new Location
+</dl>
+<hr>
+
+<a name="Location(Length)"></a>
+<h3>Location</h3>
+<p class="function">
+<b>Location</b>(<b><a href="Length.html">Length</a></b> stillWaterLevel)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a new Location with infinite waterdepth
+</dl>
+<hr>
+
+<a name="Location(Length, Length)"></a>
+<h3>Location</h3>
+<p class="function">
+<b>Location</b>(<b><a href="Length.html">Length</a></b> stillWaterLevel, <b><a href="Length.html">Length</a></b> mudLine)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a new Location with a seabed
+</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="clearSoilLayers()"></a>
+<h3>clearSoilLayers</h3>
+<p class="function">
+<b>&nbsp;</b> <b>clearSoilLayers</b>()</p>
+<p>
+<hr>
+
+<a name="insertSoilBorder(Length)"></a>
+<h3>insertSoilBorder</h3>
+<p class="function">
+<b>&nbsp;</b> <b>insertSoilBorder</b>(<b><a href="Length.html">Length</a></b>)</p>
+<p>
+<hr>
+
+<a name="joinSoilLayers(unsigned __int64, unsigned __int64)"></a>
+<h3>joinSoilLayers</h3>
+<p class="function">
+<b>&nbsp;</b> <b>joinSoilLayers</b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b>, <b><a href="unsigned___int64.html">unsigned __int64</a></b>)</p>
+<p>
+<hr>
+
+<a name="moveAtmosphere(Length)"></a>
+<h3>moveAtmosphere</h3>
+<p class="function">
+<b>&nbsp;</b> <b>moveAtmosphere</b>(<b><a href="Length.html">Length</a></b>)</p>
+<p>
+<hr>
+
+<a name="moveSeabed(Length)"></a>
+<h3>moveSeabed</h3>
+<p class="function">
+<b>&nbsp;</b> <b>moveSeabed</b>(<b><a href="Length.html">Length</a></b>)</p>
+<p>
+<hr>
+
+<a name="moveSoilBorder(unsigned __int64, Length)"></a>
+<h3>moveSoilBorder</h3>
+<p class="function">
+<b>&nbsp;</b> <b>moveSoilBorder</b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b>, <b><a href="Length.html">Length</a></b>)</p>
+<p>
+<hr>
+
+<a name="moveWaterSurface(Length)"></a>
+<h3>moveWaterSurface</h3>
+<p class="function">
+<b>&nbsp;</b> <b>moveWaterSurface</b>(<b><a href="Length.html">Length</a></b>)</p>
+<p>
+<hr>
+
+<a name="setDepth(Length)"></a>
+<h3>setDepth</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setDepth</b>(<b><a href="Length.html">Length</a></b>)</p>
+<p>
+<hr>
+
+<a name="soil(unsigned __int64)"></a>
+<h3>soil</h3>
+<p class="function">
+<b><a href="SoilLayer.html">SoilLayer</a></b> <b>soil</b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b>)</p>
+<p>
+<hr>
+
+<a name="soilBorder(unsigned __int64)"></a>
+<h3>soilBorder</h3>
+<p class="function">
+<b><a href="evBorder.html">evBorder</a></b> <b>soilBorder</b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b>)</p>
+<p>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="air()"></a>
+<h3>air</h3>
+<p class="function">
+<b><a href="Air.html">Air</a></b> <b>air</b>()</p>
+<p>
+<a name="lowerInfinity()"></a>
+<h3>lowerInfinity</h3>
+<p class="function">
+<b><a href="infinite.html">infinite</a></b> <b>lowerInfinity</b>()</p>
+<p>
+<a name="relativeSoilLayers()"></a>
+<h3>relativeSoilLayers</h3>
+<p class="function">
+<b>bool</b> <b>relativeSoilLayers</b>()</p>
+<p>
+<a name="seabed()"></a>
+<h3>seabed</h3>
+<p class="function">
+<b><a href="Seabed.html">Seabed</a></b> <b>seabed</b>()</p>
+<p>
+<a name="soilCount()"></a>
+<h3>soilCount</h3>
+<p class="function">
+<b><a href="unsigned___int64.html">unsigned __int64</a></b> <b>soilCount</b>()</p>
+<p>
+<a name="upperInfinity()"></a>
+<h3>upperInfinity</h3>
+<p class="function">
+<b><a href="infinite.html">infinite</a></b> <b>upperInfinity</b>()</p>
+<p>
+<a name="water()"></a>
+<h3>water</h3>
+<p class="function">
+<b><a href="Water.html">Water</a></b> <b>water</b>()</p>
+<p>
+<a name="waterSurface()"></a>
+<h3>waterSurface</h3>
+<p class="function">
+<b><a href="WaterSurface.html">WaterSurface</a></b> <b>waterSurface</b>()</p>
+<p>
+</body>
+</html>

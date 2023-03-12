@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: IRSoilLoadsAtSurface
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: IRSoilLoadsAtSurface
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="UnnamedObject.html">UnnamedObject</a>
+       |
+       +--<b>IRSoilLoadsAtSurface</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="IRSoilLoadsAtSurface.html#distancePileToEmbankmentToe()">distancePileToEmbankmentToe</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Distance from pile to embankment toe</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="IRSoilLoadsAtSurface.html#radiusOfCircularLoadedArea()">radiusOfCircularLoadedArea</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Radius of circular loaded area</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Stress.html">Stress</a></b></code>
+</td>
+<td width="90%"><code><b><a href="IRSoilLoadsAtSurface.html#verticalStressAtSurface()">verticalStressAtSurface</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Vertical stress at soil surface</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Stress.html">Stress</a></b></code>
+</td>
+<td width="90%"><code><b><a href="IRSoilLoadsAtSurface.html#verticalStressUnderCircularLoadedArea()">verticalStressUnderCircularLoadedArea</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Vertical stress under circular loaded area</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Stress.html">Stress</a></b></code>
+</td>
+<td width="90%"><code><b><a href="IRSoilLoadsAtSurface.html#verticalStressUnderEmbankment()">verticalStressUnderEmbankment</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Vertical stress under embankment</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="IRSoilLoadsAtSurface.html#widthOfEmbankmentSlopingPart()">widthOfEmbankmentSlopingPart</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Width of embankment sloping part</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="distancePileToEmbankmentToe()"></a>
+<h3>distancePileToEmbankmentToe</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>distancePileToEmbankmentToe</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Distance from pile to embankment toe
+</dl>
+<a name="radiusOfCircularLoadedArea()"></a>
+<h3>radiusOfCircularLoadedArea</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>radiusOfCircularLoadedArea</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Radius of circular loaded area
+</dl>
+<a name="verticalStressAtSurface()"></a>
+<h3>verticalStressAtSurface</h3>
+<p class="function">
+<b><a href="Stress.html">Stress</a></b> <b>verticalStressAtSurface</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Vertical stress at soil surfaceUniform vertical stress acting over a large area
+</dl>
+<a name="verticalStressUnderCircularLoadedArea()"></a>
+<h3>verticalStressUnderCircularLoadedArea</h3>
+<p class="function">
+<b><a href="Stress.html">Stress</a></b> <b>verticalStressUnderCircularLoadedArea</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Vertical stress under circular loaded areaUniform vertical stress acting over a circular area with the pile at its centre
+</dl>
+<a name="verticalStressUnderEmbankment()"></a>
+<h3>verticalStressUnderEmbankment</h3>
+<p class="function">
+<b><a href="Stress.html">Stress</a></b> <b>verticalStressUnderEmbankment</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Vertical stress under embankmentUniform vertical stress acting under the flat part of the embankment
+</dl>
+<a name="widthOfEmbankmentSlopingPart()"></a>
+<h3>widthOfEmbankmentSlopingPart</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>widthOfEmbankmentSlopingPart</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Width of embankment sloping part
+</dl>
+</body>
+</html>

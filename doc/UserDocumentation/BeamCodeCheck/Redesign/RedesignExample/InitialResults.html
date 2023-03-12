@@ -1,0 +1,1323 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  				
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>12.4.1.1. Initial Results &mdash; GeniE V8.5-04 User Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />									   
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+        <link rel="index" title="Index"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../../search.html"/>
+    <link rel="top" title="GeniE V8.5-04 User Documentation" href="../../../../index.html"/>
+        <link rel="up" title="12.4.1. Redesign Example" href="../RedesignExample.html"/>
+        <link rel="next" title="12.4.1.2. The Redesign Dialog" href="RedesignDialog.html"/>
+        <link rel="prev" title="12.4.1. Redesign Example" href="../RedesignExample.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+
+	
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div>
+      <a href="../../../../index.html" id="topleftlogo">HOME</a>
+      </div>
+      <div class="topleftinfotext">
+	  <div class="topleftheading">Sesam GeniE V8.5-04</div>
+      25-jan-2023<br>
+      </div>
+	  
+    
+    
+
+	
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../License.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ReleaseNotes/ReleaseNotes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../SupportRequest.html">Support Request</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../UserDocumentation.html">User Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../Introduction.html">1. Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Introduction/AboutThisManual.html">1.1. About this User Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Introduction/GenieAnIntegratedDesignSolution.html">1.2. GeniE -- An Integrated Design Solution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Introduction/GenieInTheSesamSystem.html">1.3. GeniE in the Sesam System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Introduction/StatusList.html">1.4. Status List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Introduction/OnlineHelpSystemAndTutorials.html">1.5. On-line Help System and Tutorials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Introduction/ProgramExtensions.html">1.6. Program Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Introduction/HardwareRecommendations.html">1.7. Hardware Recommendations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Introduction/AcronymsFrequentlyUsedInTheManual.html">1.8. Acronyms Frequently Used in the Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../UsingGeniE.html">2. Using GeniE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE.html">2.1. Features of GeniE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE/FundamentalsOfGeniE.html">2.1.1. Fundamentals of GeniE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE/ConceptModelling.html">2.1.2. Concept Modelling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE/TypicalProcedureGeniE.html">2.1.3. Typical Procedure in GeniE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise.html">2.1.4. Setting the Design Premise</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForBeamCreation.html">2.1.4.1. Rules for Beam Creation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForTransformation.html">2.1.4.2. Rules for Transformation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForTolerantModelling.html">2.1.4.3. Rules for Tolerant Modelling</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForConnectedMove.html">2.1.4.4. Rules for Connected Move</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForMeshing.html">2.1.4.5. Rules for Meshing</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForMeshing/General.html">2.1.4.5.1. General</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForMeshing/MaxMinAngle.html">2.1.4.5.2. Max/Min Angle</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForMeshing/Jacobi.html">2.1.4.5.3. Jacobi</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForMeshing/EliminateEdge.html">2.1.4.5.4. Eliminate Edge</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForMeshing/ChordHeight.html">2.1.4.5.5. Chord Height</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForUnits.html">2.1.4.6. Rules for Units</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForScriptingSets.html">2.1.4.7. Rules for Scripting of Sets</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/Compatibility.html">2.1.4.8. Compatibility Options</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/DefaultNames.html">2.1.4.9. Default Names</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../UsingGeniE/GettingStarted.html">2.2. Getting Started</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/TheGraphicalUserInterface.html">2.2.1.     Graphical User Interface</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/TheGraphicalUserInterface/TopDropDownMenu.html">2.2.1.1. Top Dropdown Menu</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/TheGraphicalUserInterface/Browser.html">2.2.1.2. Browser</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/TheGraphicalUserInterface/ContextSensitiveMenu.html">2.2.1.3. Context Sensitive Menu</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/StartingUp.html">2.2.2.     Starting Up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/SettingUpYourPreferences.html">2.2.3.     Setting Up Your Preferences</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/SettingUpYourPreferences/DisplayingBeams.html">2.2.3.1. Displaying Beams</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/SettingUpYourPreferences/ChangeAppearanceOfUI.html">2.2.3.2. General -- Change Appearance of GUI</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/SettingUpYourPreferences/DisplayConfigurations.html">2.2.3.3. Settings -- Change Display Configurations</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/SettingUpYourPreferences/HoveringInformation.html">2.2.3.4. Mouse -- Information when Hovering</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/SettingUpYourPreferences/ColourCoding.html">2.2.3.5. Color Coding Palette -- Color Details</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/SettingUpYourPreferences/GlobalLabelling.html">2.2.3.6. Annotations -- Global Labelling</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/SettingUpYourPreferences/ViewOptionsBrowser.html">2.2.3.7. Browser -- Options for Browser</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/ViewManipulations.html">2.2.4.     View Manipulations (LMB &amp; RMB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/SelectingObjects.html">2.2.5.     Selecting Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/GraphicModellingAndEditing.html">2.2.6.     Graphic Modelling and Editing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/BrowserModellingAndEditing.html">2.2.7.     Browser Modelling and Editing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/TheCommandLineInterfaceAndJournalling.html">2.2.8.     Command Line and Journalling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/DefaultsAndNaming.html">2.2.9.     Default Names</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/UsingTheClipboards.html">2.2.10.     Visual Clipboard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/DocumentingMassAndCentreOfGravity.html">2.2.11.     Mass and Centre of Gravity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/Labelling.html">2.2.12.     Local Labelling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/WorkingWithVisibleModel.html">2.2.13.     Working with Visible Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../UsingGeniE/GettingStarted/GenieRuntime.html">2.2.14.     Genie Runtime</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../View.html">3. View</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../View/ViewManipulationsToolbarDisplayConfiguration.html">3.1. Display Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../View/ViewManipulationsToolbarRefreshGraphics.html">3.2. Refresh Graphics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../View/ViewViewManipulations.html">3.3. View Manipulations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewViewManipulations/ViewManipulationsToolbarRotate.html">3.3.1. Rotate (F2)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewViewManipulations/ViewManipulationsToolbarRotateMethod.html">3.3.2. Rotate Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewViewManipulations/ViewManipulationsToolbarZoom.html">3.3.3. Zoom (F3)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewViewManipulations/ViewManipulationsToolbarPan.html">3.3.4. Pan (F4)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewViewManipulations/ViewManipulationsToolbarZoomRubberband.html">3.3.5. Zoom Area (Ctrl+Shift+RMB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewViewManipulations/ViewManipulationsToolbarTurntableRotate.html">3.3.6. Turntable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewViewManipulations/ViewManipulationsToolbarTurntableRotateMethod.html">3.3.7. Turntable Rotate Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewViewManipulations/ViewManipulationsToolbarFit.html">3.3.8. Fit Model (F9)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewViewManipulations/ViewManipulationsToolbarFitToSelection.html">3.3.9. Fit Camera to Selection (Alt+Z)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewViewManipulations/ViewManipulationsToolbarCameraUndo.html">3.3.10. Camera Back</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewViewManipulations/ViewManipulationsToolbarCameraRedo.html">3.3.11. Camera Forward</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewViewManipulations/ViewManipulationsToolbarSpin.html">3.3.12. Spin Model (F10)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewViewManipulations/ViewManipulationsToolbarIsoView.html">3.3.13. Isometric View (F5)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewViewManipulations/ViewManipulationsToolbarViewFromX.html">3.3.14. View From X (F6)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewViewManipulations/ViewManipulationsToolbarViewFromY.html">3.3.15. View From Y (F7)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewViewManipulations/ViewManipulationsToolbarViewFromZ.html">3.3.16. View From Z (F8)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewViewManipulations/ViewManipulationsToolbarSaveView.html">3.3.17. Save View</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../View/ViewManipulationsToolbarPerspective.html">3.4. Select Projection Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../View/ViewManipulationsToolbarCutPlane.html">3.5. Cut Plane</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../View/ViewSelection.html">3.6. Selection</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarSelection.html">3.6.1. Select</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarPolygonSelection.html">3.6.2. Polygon Select</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarSelectionMethod.html">3.6.3. Select Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarSelectFiniteElements.html">3.6.4. Filter Mesh -- Select Finite Elements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarBeamSelection.html">3.6.5. Filter Beam/Segment Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarPlateSelection.html">3.6.6. Filter Plate/Side/Seam Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarGuidePointSelection.html">3.6.7. Filter Point -- Point Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarGuideCurveSelection.html">3.6.8. Filter Guide Curve -- Guide Curve Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarGuidePlaneSelection.html">3.6.9. Filter Guide Plane -- Guide Plane Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarGuidePointsetSelection.html">3.6.10. Filter Pointset -- Pointset Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarGuidePointgridSelection.html">3.6.11. Filter Grid -- Grid Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarModellingGridSelection.html">3.6.12. Filter Modelling Grid -- Modelling Grid Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarSupportSelection.html">3.6.13. Filter Support -- Support Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarPPCSelection.html">3.6.14. Filter Point-Point Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarJointSelection.html">3.6.15. Filter Joint -- Joint Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarEquipmentSelection.html">3.6.16. Filter Equipment -- Equipment Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarDiagramSelection.html">3.6.17. Filter Diagram -- Diagram Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarLocationSelection.html">3.6.18. Filter Location -- Location Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarFeatureEdgeSelection.html">3.6.19. Filter Feature Edge Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarSlotLugSelection.html">3.6.20. Filter Slot/Lug -- Slot/Lug Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarHoleSelection.html">3.6.21. Filter Holes -- Hole Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarCompartmentSelection.html">3.6.22. Filter Compartments -- Compartment Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSelection/SelectionToolbarLoadSelection.html">3.6.23. Filter Loads -- Load Selection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../View/ViewDimension.html">3.7. Dimension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../View/ViewSnapping.html">3.8. Snapping</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSnapping/CreateMethodsToolbarSnapPoint.html">3.8.1. Snap Point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSnapping/CreateMethodsToolbarSnapPointLoop.html">3.8.2. Snap Point Loop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSnapping/CreateMethodsToolbarSnapTypes.html">3.8.3. Snap Plane/Perpendicular/Tangential/Eccentric</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSnapping/CreateMethodsToolbarSnapModellingGrid.html">3.8.4. Snap to Modelling Grid / Format Coordinates Using #</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSnapping/CreateMethodsToolbarUndoSnapPoint.html">3.8.5. Undo Snap Point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSnapping/CreateMethodsToolbarClearSnapPoints.html">3.8.6. Clear Snap Points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewSnapping/CreateMethodsToolbarReferencePointModelling.html">3.8.7. Reference Point Modelling</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../View/ViewColorCode.html">3.9. Color Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../View/ViewBrowserTabsStatusBar.html">3.10. Browser, Tabs and Status Bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../View/Toolbars.html">3.11. Toolbars</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/Toolbars/MainToolbar.html">3.11.1.     Main Toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/Toolbars/GraphicsScreenManipulationsToolbar.html">3.11.2.     Graphics Screen Manipulations Toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/Toolbars/ColorCodeAndLabelsToolbar.html">3.11.3.     Color Code and Label Toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/Toolbars/SelectionToolbar.html">3.11.4.     Selection and Filters Toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/Toolbars/DimensionsToolbar.html">3.11.5.     Dimensions Toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/Toolbars/SnappingToolbar.html">3.11.6.     Snapping Toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/Toolbars/LoadcaseToolbar.html">3.11.7.     Loadcase Toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/Toolbars/DefaultPropertiesToolbar.html">3.11.8.     Default Properties Toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/Toolbars/GuidingGeometryToolbar.html">3.11.9.     Guiding Geometry Toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/Toolbars/StructureToolbar.html">3.11.10.     Structure Toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/Toolbars/HullDesignToolbar.html">3.11.11.     Hull Design Toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/Toolbars/FeaturesToolbar.html">3.11.12.     Features Toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/Toolbars/TopologyToolbar.html">3.11.13.     Topology Toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/Toolbars/EditMeshToolbar.html">3.11.14.     Edit Mesh Toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/Toolbars/PanelToolsToolbar.html">3.11.15.     Panel Tools Toolbar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../View/ViewRestoreWindowDefaultSettings.html">3.12. Restore Window Default Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../View/ViewOptions.html">3.13. Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewOptions/ViewOptionsGeneral.html">3.13.1. General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewOptions/ViewOptionsSettings.html">3.13.2. Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewOptions/ViewOptionsMouse.html">3.13.3. Mouse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewOptions/ViewOptionsColorCoding.html">3.13.4. Color Coding Palette</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewOptions/ViewOptionsAnnotations.html">3.13.5. Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../View/ViewOptions/ViewOptionsBrowser.html">3.13.6. Browser</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../View/ViewBeamsLayout.html">3.14. Beams Display</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../View/ViewSelectMode.html">3.15. User Interface Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../GuidingGeometry.html">4. Guiding Geometry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../GuidingGeometry/Points.html">4.1. Points</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Points/GuidePointDialog.html">4.1.1. Guide Point Dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Points/Point.html">4.1.2. Point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Points/PointOnCurve.html">4.1.3. Point on Curve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Points/PointOnSurface.html">4.1.4. Point on Surface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Points/ClosestToTheSelection.html">4.1.5. Closest to Point on Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Points/ControlPoints.html">4.1.6. Control Points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Points/KnotVectorPoints.html">4.1.7. Knot Vector Points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Points/CurvePointsAtEqualLengths.html">4.1.8. Curve Points at Equal Lengths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Points/CurvePointsAtEqualIntervals.html">4.1.9. Curve Points at Equal Intervals</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GuidingGeometry/GuideLines.html">4.2. Lines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/GuideLines/GuideLineDialog.html">4.2.1. Guide Line Dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/GuideLines/FromTwoPoints.html">4.2.2. From Two Points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/GuideLines/ClosestToTheSelection.html">4.2.3. Closest to the Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/GuideLines/PerpendicularToCurve.html">4.2.4. Perpendicular to Curve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/GuideLines/TangentialToCurve.html">4.2.5. Tangential to Curve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/GuideLines/TangentialFromCurve.html">4.2.6. Tangential from Curve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/GuideLines/NormalToSurface.html">4.2.7. Normal to Surface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/GuideLines/NormalFromSurface.html">4.2.8. Normal from Surface</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GuidingGeometry/Polylines.html">4.3. Polylines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Polylines/Polyline.html">4.3.1. Polyline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Polylines/PolylineFromCurve.html">4.3.2. Polyline from Curve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Polylines/PolygonSurroundingCurves.html">4.3.3. Polygon Surrounding Curves</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Polylines/ControlPolygon.html">4.3.4. Control Polygon</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GuidingGeometry/ConicSections.html">4.4. Conic Sections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/ConicSections/CircleFromCenterAndRadius.html">4.4.1.     Circle from Center and Radius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/ConicSections/CircleFromCenterNormalAndRadius.html">4.4.2.     Circle from Center, Normal and Radius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/ConicSections/CircleFromThreePoints.html">4.4.3.     Circle from Three Points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/ConicSections/CircularArcFromThreePoints.html">4.4.4.     Circular Arc from Three Points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/ConicSections/CircularArcFromThreePointsAndRadius.html">4.4.5.     Circular Arc from Three Points and Radius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/ConicSections/CircularFillet.html">4.4.6.     Circular Fillet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/ConicSections/FilletAllPolygonalSegments.html">4.4.7.     Fillet all Polygonal Segments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/ConicSections/SurroundingCurveOfTwoCircles.html">4.4.8.     Surrounding Curve of Two Circles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/ConicSections/EllipseFromCenterAndAxesEnds.html">4.4.9.     Ellipse from Center and Axes Ends</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/ConicSections/EllipticArcFromCenterAndTwoPoints.html">4.4.10.     Elliptic Arc from Center and Two Points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/ConicSections/EllipticArcFromPointTangentialToCurve.html">4.4.11.     Elliptic Arc from Point Tangential to Curve</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GuidingGeometry/FreeFormCurves.html">4.5. Free-Form Curves</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/FreeFormCurves/CubicSpline.html">4.5.1. Cubic Spline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/FreeFormCurves/HermiteCubicSpline.html">4.5.2. Hermite Cubic Spline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/FreeFormCurves/ShapePreservingCubicSpline.html">4.5.3. Shape Preserving Cubic Spline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/FreeFormCurves/Polycurve.html">4.5.4. Poly-Curve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/FreeFormCurves/CubicSplineFromPolyline.html">4.5.5. Cubic Spline from Polyline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/FreeFormCurves/BSplineFromControlPoints.html">4.5.6. B-Spline from Control Points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/FreeFormCurves/ModifyControlPolygon.html">4.5.7. Modify Control Polygon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/FreeFormCurves/LinearizeCurveSegment.html">4.5.8. Linearize Curve Segment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/FreeFormCurves/InterpolatingPolynomial.html">4.5.9. Interpolating Polynomial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/FreeFormCurves/CubicPolynomialPointsVectors.html">4.5.10. Cubic Polynomial from Two Points and Vectors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/FreeFormCurves/PolynomialBridgeBetweenTwoCurves.html">4.5.11. Polynomial Bridge Between Two Curves</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/FreeFormCurves/PolynomialFromPolyline.html">4.5.12. Polynomial from Polyline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/FreeFormCurves/OffsetCurve.html">4.5.13. Offset Curve</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GuidingGeometry/SplitJoinCurves.html">4.6. Split/Join Curves</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/SplitJoinCurves/JoinCurves.html">4.6.1. Join Curves</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/SplitJoinCurves/JoinMultipleCurves.html">4.6.2. Join Multiple Curves</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/SplitJoinCurves/SplitAtPoint.html">4.6.3. Split at Point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/SplitJoinCurves/SplitAtParameter.html">4.6.4. Split at Parameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/SplitJoinCurves/SplitAtLengthFraction.html">4.6.5. Split at Length Fraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/SplitJoinCurves/SplitAtDiscontinuities.html">4.6.6. Split at Discontinuities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/SplitJoinCurves/SplitAtIntersectionsWithCurve.html">4.6.7. Split at Intersections with Curve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/SplitJoinCurves/SplitAtIntersectionsWithPlane.html">4.6.8. Split at Intersections with Plane</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/SplitJoinCurves/TrimCurveWithCurve.html">4.6.9. Trim Curve with a Curve</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GuidingGeometry/CurvesOnSurfaces.html">4.7. Curves on Surfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/CurvesOnSurfaces/ModelCurve.html">4.7.1. Model Curve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/CurvesOnSurfaces/ShortestCurveEdges.html">4.7.2. Shortest Curve on Edges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/CurvesOnSurfaces/ShortestCurveFaces.html">4.7.3. Shortest Curve on Faces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/CurvesOnSurfaces/PlateShellIntersectionWithPlane.html">4.7.4. Plate/Shell Intersection with Plane</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/CurvesOnSurfaces/PlateShellIntersectionsWithFamilyOfPlanes.html">4.7.5. Plate/Shell Intersections with Family of Planes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/CurvesOnSurfaces/ProjectCurveOnPlateShell.html">4.7.6. Project Curve on Plate/Shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/CurvesOnSurfaces/PlateShellEdges.html">4.7.7. Plate/Shell Edges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/CurvesOnSurfaces/PlateShellBoundaryEdges.html">4.7.8. Plate/Shell Boundary Edges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/CurvesOnSurfaces/PlateShellEdgesOffsetsOnTheSurface.html">4.7.9. Plate/Shell Edges' Offsets on the Surface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/CurvesOnSurfaces/PlateShellEdgesOffsetsNormalToTheSurface.html">4.7.10. Plate/Shell Edges' Offsets Normal to the Surface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/CurvesOnSurfaces/CommonOffsetOfHoles.html">4.7.11. Common Offset Curve from the Holes of Plate/Shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/CurvesOnSurfaces/SurfaceUIsoparametrics.html">4.7.12. Surface U-Isoparametrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/CurvesOnSurfaces/SurfaceVIsoparametrics.html">4.7.13. Surface V-Isoparametrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/CurvesOnSurfaces/SurfaceIsoparametricsAtPoint.html">4.7.14. Surface Isoparametrics at Point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/CurvesOnSurfaces/SurfaceUKnotsIsoparametrics.html">4.7.15. Surface U-Knots Isoparametrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/CurvesOnSurfaces/SurfaceVKnotsIsoparametrics.html">4.7.16. Surface V-Knots Isoparametrics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GuidingGeometry/Planes.html">4.8. Planes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Planes/GuidePlaneDialog.html">4.8.1. Guide Plane Dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Planes/HorizontalPlane.html">4.8.2. Horizontal Plane</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Planes/YZPlane.html">4.8.3. YZ Plane</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Planes/ZXPlane.html">4.8.4. ZX Plane</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Planes/FromThreePoints.html">4.8.5. From Three Points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Planes/VerticalPlane.html">4.8.6. Vertical Plane</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Planes/TriangularPlane.html">4.8.7. Triangular Plane</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Planes/TrapezoidalPlane.html">4.8.8. Trapezoidal Plane</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GuidingGeometry/PointSets.html">4.9. Point Sets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/PointSets/OrderedSetOfPoints.html">4.9.1. Ordered Set of Points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/PointSets/RectangularNet.html">4.9.2. Rectangular Net</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/PointSets/ControlPointSet.html">4.9.3. Control Point Set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/PointSets/ShellControlPointNet.html">4.9.4. Shell Control Point Net</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/PointSets/PointSetFromCuttingPlane.html">4.9.5. Point Set from Cutting Plane</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GuidingGeometry/PointGrids.html">4.10. Point Grids</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/PointGrids/Create1DGrid.html">4.10.1. Create 1D Grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/PointGrids/Create1DGridFromSelection.html">4.10.2. Create 1D Grid from Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/PointGrids/JoinTwo1DGrids.html">4.10.3. Join Two 1D Grids</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/PointGrids/InsertPointTo1DGrid.html">4.10.4. Insert Point to 1D Grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/PointGrids/DeletePointFrom1DGrid.html">4.10.5. Delete Point from 1D Grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/PointGrids/SetKeyTo1DGridPoint.html">4.10.6. Set Key to 1D Grid Point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/PointGrids/Create2DGrid.html">4.10.7. Create 2D Grid</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GuidingGeometry/ModellingGrids.html">4.11. Modelling Grids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GuidingGeometry/Transformations.html">4.12. Transformations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Transformations/LinearTransformations.html">4.12.1.     Linear Transformations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Transformations/CurveOrthogonalProjectionOnAPlane.html">4.12.2.     Curve Orthogonal Projection on a Plane</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Transformations/AdvancedNURBSFromConcept.html">4.12.3.     NURBS from Concept</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GuidingGeometry/Profiles.html">4.13. Profiles</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Profiles/Profile.html">4.13.1.     Profile Dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GuidingGeometry/Profiles/AdvancedProfileFromNURBS.html">4.13.2.     Profile from NURBS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Structure.html">5. Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Structure/BeamsAndPiles.html">5.1. Beams and Piles</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/BeamsAndPiles/StraightBeamDialog.html">5.1.1. Straight Beam Dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/BeamsAndPiles/GroutedBeamDialog.html">5.1.2. Grouted Beam Dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/BeamsAndPiles/StraightBeam.html">5.1.3. Straight Beam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/BeamsAndPiles/StraightOverlappingBeam.html">5.1.4. Straight Overlapping Beam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/BeamsAndPiles/Pile.html">5.1.5. Pile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/BeamsAndPiles/CurvedBeam.html">5.1.6. Curved Beam</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Structure/FlatPlates.html">5.2. Flat Plates</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FlatPlates/FlatPlateDialog.html">5.2.1. Flat Plate Dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FlatPlates/FlatPlate.html">5.2.2. Flat Plate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FlatPlates/FlatRegion.html">5.2.3. Flat Region</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FlatPlates/CoverCurves.html">5.2.4. Cover Curves</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Structure/ShellsWithCircularSections.html">5.3. Shells with Circular Sections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/ShellsWithCircularSections/CircularConeCylinder.html">5.3.1. Circular Cone/Cylinder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/ShellsWithCircularSections/EllipticConeCylinder.html">5.3.2. Elliptic Cone/Cylinder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/ShellsWithCircularSections/Sphere.html">5.3.3. Sphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/ShellsWithCircularSections/RevolveAProfileAroundAnAxis.html">5.3.4. Revolve a Profile Around an Axis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/ShellsWithCircularSections/Pipe.html">5.3.5. Pipe</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Structure/FreeFormShells.html">5.4. Free Form Shells</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FreeFormShells/SweepCurvesDialog.html">5.4.1. Sweep Curves Dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FreeFormShells/SkinLoftCurves.html">5.4.2. Skin/Loft Curves</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FreeFormShells/CurveNetInterpolation.html">5.4.3. Curve-Net Interpolation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FreeFormShells/ThreeSidedHoleFilling.html">5.4.4. 3-Sided Hole Filling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FreeFormShells/SweepAProfileAlongATrajectory.html">5.4.5. Sweep a Profile along a Trajectory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FreeFormShells/SweepExtrudeAProfileAlongAVector.html">5.4.6. Sweep/Extrude a Profile along a Vector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FreeFormShells/LocalSkinningInterpolation.html">5.4.7. Local Skinning Inteprolation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FreeFormShells/LocalCurveNetInterpolation.html">5.4.8. Local Curve-Net Interpolation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Structure/ShellsFromPointNets.html">5.5. Shells from Point-Nets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/ShellsFromPointNets/ControlPointNet.html">5.5.1. Control Point Net</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/ShellsFromPointNets/PointNetInterpolation.html">5.5.2. Point-Net Interpolation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/ShellsFromPointNets/PointNetFitting.html">5.5.3. Point-Net Fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/ShellsFromPointNets/ShapePreservingPointNetInterpolation.html">5.5.4. Shape-Preserving Point-Net Interpolation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Structure/HullDesignTools.html">5.6. Hull Design Tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/HullDesignTools/CreateHullBySkinningApproximation.html">5.6.1. Create Ship Hull from Transverse Smooth Curves</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/HullDesignTools/CreateHullBySkinningApproximationBasedOnPolygons.html">5.6.2. Create Ship Hull from Transverse Polylines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/HullDesignTools/CreateHullBySkinningApproximationBasedOnASetOfCurves.html">5.6.3. Create Ship Hull from Arbitrary Set of Curves</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/HullDesignTools/CreateStiffeners.html">5.6.4. Create Stiffeners</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/HullDesignTools/InclinedStiffenersFromFourPoints.html">5.6.5. Inclined Stiffeners from Four Points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/HullDesignTools/ProfilePunchOrCut.html">5.6.6. Profile Punch or Cut</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/HullDesignTools/GuidingCurvePunchOrCut.html">5.6.7. Guiding Curve Punch or Cut</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/HullDesignTools/ExportEntitiesInBoxToXML.html">5.6.8. Export Entities in Box to XML</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/HullDesignTools/ReportOnPlatesAndBeams.html">5.6.9. Report on Plates and Beams</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Structure/FeaturesAndHoles.html">5.7. Features and Holes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FeaturesAndHoles/FeatureEdgeDialog.html">5.7.1. Feature Edge Dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FeaturesAndHoles/SlotLugDialog.html">5.7.2. Create Slot/Lug Dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FeaturesAndHoles/FeatureEdge.html">5.7.3. Feature Edge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FeaturesAndHoles/FeatureEdgesFromBoundaryEdges.html">5.7.4. Feature Edges from Plate/Shell Boundary Edges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FeaturesAndHoles/MultipleJoinOfFeatureEdges.html">5.7.5. Join Multiple Feature Edges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FeaturesAndHoles/CreateHoleFromGuidingCurve.html">5.7.6. Create Hole from Guiding Curve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FeaturesAndHoles/CreateHoleFromProfile.html">5.7.7. Create Hole from Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/FeaturesAndHoles/SlotLug.html">5.7.8. Create Slot/Lug</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Structure/Support.html">5.8. Supports (Boundary Conditions)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/Support/SupportPointDialog.html">5.8.1. Support Point Dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/Support/SupportRigidLinkDialog.html">5.8.2. Support Rigid Link Dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/Support/SupportPoint.html">5.8.3. Support Point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/Support/SupportCurve.html">5.8.4. Support Curve</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Structure/Connection.html">5.9. Point Connections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/Connection/PointPointConnectionDialog.html">5.9.1. Point-Point Connection Dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/Connection/PointPointConnection.html">5.9.2. Point-Point Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/Connection/CreateConnectionPoint.html">5.9.3. Create Additional Connection Point</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Structure/Joint.html">5.10. Joints</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/Joint/JointDialog.html">5.10.1. Joint Dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/Joint/GenerateJoints.html">5.10.2. Generate Joints</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Structure/PointMass.html">5.11. Point Masses</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/PointMass/UniformPointMass.html">5.11.1. Uniform Point Mass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/PointMass/GenericPointMass.html">5.11.2. Generic Point Mass</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Structure/DetailBox.html">5.12. Detail Box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Structure/ExternalMatrices.html">5.13. External Matrices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Structure/Topology.html">5.14. Topology</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/Topology/SimplifyTopology.html">5.14.1. Simplify Topology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/Topology/ModelVerification.html">5.14.2. Verify Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/Topology/DisplayPlate.html">5.14.3. Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/Topology/HealStructure.html">5.14.4. Heal Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/Topology/SplitPeriodicGeometry.html">5.14.5. Split Periodic Geometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/Topology/Split.html">5.14.6. Split</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/Topology/StandAloneBeams.html">5.14.7. Stand-Alone Beams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Structure/Topology/DisconnectConcepts.html">5.14.8. Disconnect Concepts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../MoreOnModelling.html">6. More on Structure Modelling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../MoreOnModelling/AdvantagesConceptModelling.html">6.1. Advantages of Concept Modelling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../MoreOnModelling/Beams.html">6.2. Beams</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/Beams/RegularStraightBeam.html">6.2.1. Regular Straight Beam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/Beams/OverlappingBeams.html">6.2.2. Overlapping Beams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/Beams/ModellingPerpendicularBeams.html">6.2.3. Snap Perpendicular</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/Beams/SnapPlanes.html">6.2.4. Snap to Plane</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/Beams/ConnectingBeamsToAnEccentricBeamEnd.html">6.2.5. Snap to Eccentric Beam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/Beams/BeamEccentricities.html">6.2.6. Beam Offset</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../MoreOnModelling/Beams/BeamEccentricities/AlignedOffset.html">6.2.6.1. Aligned Offset</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../MoreOnModelling/Beams/BeamEccentricities/ConstantOffset.html">6.2.6.2. Constant Offset</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../MoreOnModelling/Beams/BeamEccentricities/EndOffset.html">6.2.6.3. End Offset</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../MoreOnModelling/Beams/BeamEccentricities/JoinedCurveOffset.html">6.2.6.4. Joined Curve Offset</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../MoreOnModelling/Beams/BeamEccentricities/LinearVaryingOffset.html">6.2.6.5. Linear Varying Offset</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../MoreOnModelling/Beams/BeamEccentricities/NoCurveOffset.html">6.2.6.6. No Curve Offset</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../MoreOnModelling/Beams/BeamEccentricities/ReparameterizedBeamOffset.html">6.2.6.7. Reparameterized Beam Offset</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../MoreOnModelling/Beams/BeamEccentricities/ApplyDefaultCurveOffset.html">6.2.6.8. Apply Default Curve Offset</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../MoreOnModelling/Beams/BeamEccentricities/RemoveDependenciesFromCO.html">6.2.6.9. Remove Dependencies from Curve Offset</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/Beams/BeamEndSniping.html">6.2.7. Beam End Sniping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/Beams/BeamHinges.html">6.2.8. Beam End Hinges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/Beams/InsertSplitPoints.html">6.2.9. Insert Split Points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/Beams/SplitJoinAndDivideBeams.html">6.2.10. Split, Join and Divide Beams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/Beams/BeamBuckling.html">6.2.11. Beam Buckling</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../MoreOnModelling/Plates.html">6.3. Plates and Shells</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/Plates/ConvertCurvedShellToFlatPlate.html">6.3.1. Convert one or more Curved Shell(s) to Flat Plate(s)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/Plates/OverlappingPlates.html">6.3.2. Overlapping Plates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/Plates/SplitAndJoinPlates.html">6.3.3. Split and Join Plates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/Plates/StiffenedPanels.html">6.3.4. Stiffened Panels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/Plates/PlateSeams.html">6.3.5. Plate Seams</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../MoreOnModelling/DeleteMoveCopy.html">6.4. Delete, Move and Copy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../MoreOnModelling/MoveBeamEnd.html">6.5. Move Beam End</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../MoreOnModelling/ChangeProperties.html">6.6. Change Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../MoreOnModelling/LocalCoordinateSystem.html">6.7. Local Coordinate (Axis) System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../MoreOnModelling/AdvancedBeamModelling.html">6.8. Advanced Straight Beam Modelling</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/AdvancedBeamModelling/SegmentedBeamModelling.html">6.8.1.      Segmented Beam Modelling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/AdvancedBeamModelling/TubularJointModelling.html">6.8.2.      Tubular Joint Modelling</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../MoreOnModelling/AdvancedBeamModelling/TubularJointModelling/RulesForJointCreation.html">6.8.2.1. Rules for Joint Creation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../MoreOnModelling/AdvancedBeamModelling/TubularJointModelling/AssignJoints.html">6.8.2.2. Create Joints</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../MoreOnModelling/AdvancedBeamModelling/TubularJointModelling/RulesForJointDesign.html">6.8.2.3. Rules for Joint Design</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../MoreOnModelling/AdvancedBeamModelling/TubularJointModelling/AssignCansAndStubs.html">6.8.2.4. Add Cans and Stubs</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../MoreOnModelling/AdvancedBeamModelling/TubularJointModelling/AssignNewPropertiesToCansAndStubs.html">6.8.2.5. Assign New Properties to Cans and Stubs</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../MoreOnModelling/AdvancedBeamModelling/TubularJointModelling/AssignCones.html">6.8.2.6. Assign Cones</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../MoreOnModelling/AdvancedBeamModelling/TubularJointModelling/PerformPlanewiseGapCalculations.html">6.8.2.7. Plane-Wise Gap Calculation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../MoreOnModelling/AdvancedBeamModelling/TubularJointModelling/AssignJointCan.html">6.8.2.8. Assign Joint Can</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/AdvancedBeamModelling/LocalJointFlexibility.html">6.8.3.      Local Joint Flexibility</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/AdvancedBeamModelling/ReferencePointModellingOfBeamStructures.html">6.8.4.      Reference Point Modelling of Beam Structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/AdvancedBeamModelling/ReleaseXJoints.html">6.8.5.      Release X-Joints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/AdvancedBeamModelling/PointPointConnection.html">6.8.6.      Add Point-Point-Connection to Inner Beam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/AdvancedBeamModelling/ModellingAPileInsideALegGroutedCase.html">6.8.7.      Pile Inside Leg with Grout</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../MoreOnModelling/CurvedPlateModelling.html">6.9. Curved Plate/Shell/Beam Modelling</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/CurvedPlateModelling/CurvedBeamsAndEccentricities.html">6.9.1.      Curved Beams, Axes and Eccentricities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/CurvedPlateModelling/DetailedModelTubularJoint.html">6.9.2.      Detailed Model of Tubular Joint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MoreOnModelling/CurvedPlateModelling/CompareInvestigateCurves.html">6.9.3.      Compare and Investigate Curves</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../MoreOnModelling/BeamsToShells.html">6.10. Convert Beams to Shells</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../MoreOnModelling/JointsToShells.html">6.11. Convert Joints to Shells</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Properties.html">7. Properties</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/BeamClassification.html">7.1. Beam Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/BeamTypes.html">7.2. Beam Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/BeamTypes/NonStructural.html">7.2.1. Non-Structural Beam Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/BeamTypes/Truss.html">7.2.2. Truss Beam Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/BeamTypes/Shim.html">7.2.3. Shim Beam Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/BeamTypes/InnerBeam.html">7.2.4. Inner Beam Beam Type</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/CompartmentContent.html">7.3. Compartment Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/CorrosionAddition.html">7.4. Corrosion Addition</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/CorrosionAddition/CorrosionAdditionConstant.html">7.4.1. CorrosionAdditionConstant</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../Properties/CorrosionAddition/CorrosionAdditionGeneric.html">7.4.1.1. Corrosion Addition Generic Case</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Properties/CorrosionAddition/CorrosionAdditionRule.html">7.4.1.2. Corrosion Addition Rule Case</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/CorrosionAddition/CorrosionAdditionZLevel.html">7.4.2. CorrosionAdditionZLevel</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/EffectiveFlange.html">7.5. Effective Flange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/Hinges.html">7.6. Hinges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/Hydro.html">7.7. Hydro</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/Hydro/Flooding.html">7.7.1. Flooding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/Hydro/HydrodynamicDiameter.html">7.7.2. Hydrodynamic Diameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/Hydro/ConductorShielding.html">7.7.3. Conductor Shielding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/Hydro/ElementRefinement.html">7.7.4. Element Refinement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/Hydro/BuoyancyArea.html">7.7.5. Buoyancy Area</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/Hydro/Morison.html">7.7.6. Morison</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../Properties/Hydro/Morison/MorisonConstant.html">7.7.6.1. Morison Constants</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Properties/Hydro/Morison/MorisonDiameter.html">7.7.6.2. Morison Function of Diameter</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Properties/Hydro/Morison/MorisonReynolds.html">7.7.6.3. Morison Function of Roughness/Reynolds Number</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Properties/Hydro/Morison/MorisonKC.html">7.7.6.4. Morison Function of Roughness/KC Number</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Properties/Hydro/Morison/MorisonByRule.html">7.7.6.5. Morison By Rule</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Properties/Hydro/Morison/MorisonGlobalDirection.html">7.7.6.6. Morison Function of Global Direction</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/Hydro/MarineGrowth.html">7.7.7. Marine Growth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/Hydro/AirDrag.html">7.7.8. Air Drag</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/LoadInterfaces.html">7.8. Load Interfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/MassDensityFactors.html">7.9. Mass Density Factors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/Materials.html">7.10. Materials</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/Material/LinearIsotropic.html">7.10.1. Linear Isotropic Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/Material/IsotropicShear.html">7.10.2. Shear Isotropic Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/Material/Orthotropic.html">7.10.3. Orthotropic Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/Material/ScaledMaterials.html">7.10.4. Scaled Materials</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/Mesh.html">7.11. Mesh Density / Number of Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/MeshOptions.html">7.12. Mesh Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/MeshOptions/MeshOptionEdge.html">7.12.1. Mesh Option for Edge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/MeshOptions/MeshOptionFace.html">7.12.2. Mesh Option for Face</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/MeshOptions/MeshOptionHole.html">7.12.3. Mesh Option for Hole</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/Permeability.html">7.13. Permeability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/PileCharacteristics.html">7.14. Pile Characteristics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/PlateTypes.html">7.15. Plate Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/Reinforcements.html">7.16. Reinforcements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/Sections.html">7.17. Sections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/Sections/SectionTypes.html">7.17.1. Section Types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/Sections/DerivedProperties.html">7.17.2. Derived Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/Sections/EditGeneral.html">7.17.3. Edit General</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/SlotsLugs.html">7.18. Slots/Lugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/SnipingProperties.html">7.19. Sniping Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/StructureType.html">7.20. Structure Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/Thicknesses.html">7.21. Thicknesses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/WetSurface.html">7.22. Wet Surface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Properties/LocalSystem.html">7.23. Local System</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/LocalSystem/LocalSystemBeam.html">7.23.1. Local System for Beam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/LocalSystem/LocalSystemPlate.html">7.23.2. Local System for Plate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/LocalSystem/LocalSystemSupport.html">7.23.3. Local System for Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Properties/LocalSystem/LocalSystemEquipment.html">7.23.4. Local System for Equipment</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Loads.html">8. Loads</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Loads/ExplicitLoad.html">8.1. Explicit Load</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/ExplicitLoad/PointLoad.html">8.1.1. Point Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/ExplicitLoad/LineLoad.html">8.1.2. Line Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/ExplicitLoad/SurfaceLoad.html">8.1.3. Surface Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/ExplicitLoad/NormalPressureSignConvention.html">8.1.4. Normal Pressure Sign Convention</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/ExplicitLoad/PrescribedDisplacement.html">8.1.5. Prescribed Displacement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/ExplicitLoad/LineTemperature.html">8.1.6. Line Temperature</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Loads/LoadCase.html">8.2. Load Case</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Loads/LoadCombination.html">8.3. Load Combination</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Loads/Compartment.html">8.4. Compartment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Compartment/CompartmentManager.html">8.4.1. Compartment Manager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Compartment/CompartmentationMethod.html">8.4.2. Compartment Display Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Compartment/VisualizeAndRename.html">8.4.3. Visualise and Rename Compartments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Compartment/ModifyStructure.html">8.4.4. Compartments Updated when Modifying Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Compartment/OpenCompartments.html">8.4.5. Close Open Compartments with Non-Structural Plates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Compartment/NonWatertightBulkheads.html">8.4.6. Non-Watertight Bulkheads in Compartments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Compartment/CorrosionAdditionCompartments.html">8.4.7. Corrosion Addition in Compartments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Compartment/CompartmentLoads.html">8.4.8. Compartment Loads</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../Loads/Compartment/CompartmentLoads/CompartmentLoadsContentLiquid.html">8.4.8.1. Compartment Liquid Content</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Loads/Compartment/CompartmentLoads/CompartmentLoadsContentSolid.html">8.4.8.2. Compartment Solid Content</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Loads/Compartment/CompartmentLoads/CompartmentLoadsManuallyDefine.html">8.4.8.3. Manually Defined Compartment Loads</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Compartment/CompartmentLoadsDipoleSheet.html">8.4.9. Dipole Sheets for HydroD analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Loads/LinearSlicer.html">8.5. Linear Slicer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Loads/Equipment.html">8.6. Equipment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Equipments/CreateEquipment.html">8.6.1. Create Equipment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Equipments/EquipmentCOGandFootprint.html">8.6.2. Equipment COG and Footprint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Equipments/PlacingTheEquipment.html">8.6.3. Placing the Equipment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Equipments/LoadsFromEquipments.html">8.6.4. Loads from Placed Equipments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Equipments/VerifyingEquipmentLoads.html">8.6.5. Verifying Applied Equipment Loads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Equipments/WindLoadsOnEquipment.html">8.6.6. Wind Loads on Equipment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Loads/WeightList.html">8.7. Import Weight List</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/WeightList/WeightListFormat.html">8.7.1. Format of Weight List Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/WeightList/WeightListImport.html">8.7.2. Import Weight List Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/WeightList/WeightListEquipments.html">8.7.3. Equipments from Weight Lists</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/WeightList/WeightListLoadCalculation.html">8.7.4. Calculating the Loads</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Loads/Environment.html">8.8. Environment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Environment/Location.html">8.8.1. Location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Environment/RegularWaveSet.html">8.8.2. Regular Wave Set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Environment/WaveFrequencies.html">8.8.3. Wave Frequencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Environment/WaveHeights.html">8.8.4. Wave Heights</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Environment/WavePhases.html">8.8.5. Wave Phases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Environment/WaveDirections.html">8.8.6. Wave Directions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Environment/CurrentProfile.html">8.8.7. Current Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Environment/WindProfile.html">8.8.8. Wind Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Environment/WaveLoadCondition.html">8.8.9. Wave Load Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Environment/Soil.html">8.8.10. Soil</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../Loads/Environment/Soil/SeabedScour.html">8.8.10.1. Seabed Scour</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Loads/Environment/Soil/SoilClay.html">8.8.10.2. Soil Clay</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Loads/Environment/Soil/SoilSand.html">8.8.10.3. Soil Sand</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Loads/Environment/Soil/SoilCurves.html">8.8.10.4. Soil Curves</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Loads/Environment/Soil/SoilData.html">8.8.10.5. Soil Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Loads/AccelerationAndRotField.html">8.9. Acceleration Field and Rotation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Acceleration/Constant.html">8.9.1. Constant Acceleration Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Acceleration/Rotation.html">8.9.2. Rotational Acceleration/Velocity</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../Loads/Acceleration/Rotation/Circular.html">8.9.2.1. Circular (Rotational) Motion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Loads/Acceleration/Rotation/Harmonic.html">8.9.2.2. Harmonic (Wave Induced) Motion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Loads/Acceleration/Rotation/EquipmentRotation.html">8.9.2.3. Equipment and Rotation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Loads/LoadAnnotations.html">8.10. Load Annotations to FE Mesh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Annotations/DisplayingLoadAnnotations.html">8.10.1. Displaying Load Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Annotations/AnnotationLayout.html">8.10.2. Annotation Layout and Refresh Graphics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Annotations/AnnotationSettings.html">8.10.3. Annotation Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Annotations/PerformanceOptions.html">8.10.4. Performance Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Loads/Annotations/AnnotationSlices.html">8.10.5. Annotation Slices</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Loads/DesignCondition.html">8.11. Design Condition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Loads/ExternalMatricesLoad.html">8.12. External Matrices Load</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../MeshAndElementTypes.html">9. FE Mesh and Element Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../MeshAndElementTypes/CreAndCtrlMesh.html">9.1. Create and Control Mesh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/CreAndCtrlMesh/CreateDefaultMesh.html">9.1.1. Create Default Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/CreAndCtrlMesh/GlobalMeshDensity.html">9.1.2. Global Mesh Density</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/CreAndCtrlMesh/LocalMeshDensity.html">9.1.3. Local Mesh Density</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/CreAndCtrlMesh/ControlMeshWithFeatureEdge.html">9.1.4. Control Mesh with Feature Edge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/CreAndCtrlMesh/SetMeshQuality.html">9.1.5. Set Mesh Quality Measures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/CreAndCtrlMesh/MeshAlongCurvedEdge.html">9.1.6. Refine Mesh along Curved Edge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/CreAndCtrlMesh/CtrlMeshConcavities.html">9.1.7. Control Mesh at Concavities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/CreAndCtrlMesh/AdvancingFrontConcavities.html">9.1.8. Advancing Front Mesher for Concavities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/CreAndCtrlMesh/CtrlMeshAlongLines.html">9.1.9. Control Mesh along Beams and Feature Edges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/CreAndCtrlMesh/RoundOffMeshDensity.html">9.1.10. Round off Mesh Density</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/CreAndCtrlMesh/MeshingSequence.html">9.1.11. Meshing Sequence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/CreAndCtrlMesh/TabularVerificationOfMesh.html">9.1.12. Tabular Verification of Mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../MeshAndElementTypes/TypicalMeshProblems.html">9.2. Typical Mesh Problems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../MeshAndElementTypes/FiniteElementTypes.html">9.3. Finite Element Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../MeshAndElementTypes/ConditionalMeshing.html">9.4. Conditional Regenerate Mesh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/ConditionalMeshing/RulesConditionalRegenerateMesh.html">9.4.1. Rules for Conditional Regenerate Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/ConditionalMeshing/LockingMeshedParts.html">9.4.2. Locking of Meshed Parts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/ConditionalMeshing/TriggeringOfRemesh.html">9.4.3. Triggering Remeshing a Part</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/ConditionalMeshing/ForceRemeshPart.html">9.4.4. Force Remeshing Part</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/ConditionalMeshing/EnforceCoarseDensity.html">9.4.5. Enforce Coarse Density on Boundary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/ConditionalMeshing/ImportExportMeshGNX.html">9.4.6. Import/Export Mesh through GNX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/ConditionalMeshing/KeepMesh.html">9.4.7. Keep Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/ConditionalMeshing/LimitationsConditionalRegenerate.html">9.4.8. Limitations in Conditional Regenerate Mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../MeshAndElementTypes/MeshEditing.html">9.5. Mesh Editing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/MeshEditing/Introduction.html">9.5.1. Introduction to Mesh Editing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/MeshEditing/MoveNode.html">9.5.2. Move Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/MeshEditing/AlignNodesGrid.html">9.5.3. Align Nodes in Element Grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/MeshEditing/AlignNodesLine.html">9.5.4. Align Nodes along Line and Move by Constant Vector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/MeshEditing/ManipulateTriangle.html">9.5.5. Manipulate and Slide Triangle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/MeshEditing/SplitEdge.html">9.5.6. Split Edge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/MeshEditing/CollapseEdge.html">9.5.7. Collapse Edge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/MeshEditing/ImprintNode.html">9.5.8. Imprint Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/MeshEditing/RemoveNode.html">9.5.9. Remove Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/MeshEditing/AddPlateElement.html">9.5.10. Add Plate Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/MeshEditing/RemoveElement.html">9.5.11. Remove Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/MeshEditing/EnhanceQuality.html">9.5.12. Enhance Quality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/MeshEditing/RefineGrid2.html">9.5.13. Refine Grid (2)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/MeshEditing/RefineGrid3.html">9.5.14. Refine Grid (3)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/MeshEditing/RefineEdge23.html">9.5.15. Refine Edge (2)/(3)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/MeshEditing/RefineBox.html">9.5.16. Refine Box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../MeshAndElementTypes/MeshEditing/ConvertBeamToPlate.html">9.5.17. Convert Beam to Plate</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../MeshAndElementTypes/LocateFE.html">9.6. Locate finite element (FE)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Analysis.html">10. Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Analysis/CreateAnalysis.html">10.1. Create Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Analysis/ActivityMonitor.html">10.2. Activity Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Analysis/MakingFEModel.html">10.3. Making a Finite Element Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/MakingFEModel/CoCentricStiffener.html">10.3.1. Co-Centric Stiffener</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/MakingFEModel/FEMLoadcaseNumbers.html">10.3.2. FEM Loadcase Numbers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/MakingFEModel/CtrlFEMLoadcaseNumbers.html">10.3.3. Controlling FEM Loadcase Numbers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/MakingFEModel/MeshOnlyPartsOfModel.html">10.3.4. Mesh Only Parts of Model</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../Analysis/MakingFEModel/MeshOnlyPartsOfModel/MeshPartUsingScript.html">10.3.4.1. Mesh part of model using script language</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Analysis/MakingFEModel/MeshOnlyPartsOfModel/MeshPartUsingGUI.html">10.3.4.2. Mesh part of model using GUI</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Analysis/MakingFEModel/MeshOnlyPartsOfModel/ExcludeLoadsFromMesh.html">10.3.4.3. Exclude loads from the mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/MakingFEModel/PostponeFEMFileWriting.html">10.3.5. Postpone FEM File Writing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/MakingFEModel/ParallelizeMeshGen.html">10.3.6. Parallelize Mesh Generation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Analysis/EquipmentMasses.html">10.4. Equipment Represented as Mass</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/EquipmentMasses/BeamsAndMass.html">10.4.1. Beams and Mass for Equipment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/EquipmentMasses/EccentricMass.html">10.4.2. Eccentric Mass for Equipment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/EquipmentMasses/FootprintMass.html">10.4.3. Footprint Mass for Equipment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/EquipmentMasses/VerticalBeamsAndMass.html">10.4.4. Vertical Beams and Mass for Equipment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Analysis/LoadsAsMasses.html">10.5. Explicit Loads Represented as Mass</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/LoadsAsMasses/LoadsAsMassesLoadCase.html">10.5.1. Load Case represented as Mass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/LoadsAsMasses/LoadsAsMassesLoadComb.html">10.5.2. Load Combination represented as Mass</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Analysis/StaticAnalysis.html">10.6. Static Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Analysis/EigenValueAnalysis.html">10.7. Eigenvalue Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Analysis/DynamicAnalysis.html">10.8. Dynamic Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Analysis/EquivalentStaticLoadsAnalysis.html">10.9. Equivalent Static Loads Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Analysis/FixedEnvironmentalAnalysis.html">10.10. Fixed Structure Environmental Load Analysis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/FixedEnvironmentalAnalysis/TheWaveLoadRun.html">10.10.1. Edit Wave Load Run</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../Analysis/FixedEnvironmentalAnalysis/EditWaveLoadRun/DeterministicSeastates.html">10.10.1.1. Deterministic Seastates</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Analysis/FixedEnvironmentalAnalysis/EditWaveLoadRun/AddedMassDamping.html">10.10.1.2. Added Mass and Damping</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Analysis/FixedEnvironmentalAnalysis/EditWaveLoadRun/Rules.html">10.10.1.3. Rules</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Analysis/FixedEnvironmentalAnalysis/EditWaveLoadRun/Buoyancy.html">10.10.1.4. Buoyancy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Analysis/FixedEnvironmentalAnalysis/EditWaveLoadRun/Morison.html">10.10.1.5. Morison</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Analysis/FixedEnvironmentalAnalysis/EditWaveLoadRun/Output.html">10.10.1.6. Outout</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Analysis/FixedEnvironmentalAnalysis/EditWaveLoadRun/SpecialOptions.html">10.10.1.7. Special Options</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/FixedEnvironmentalAnalysis/ExecutionWaveLoadAnalysis.html">10.10.2. Execution of Wave Load Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Analysis/TensionCompressionAnalysis.html">10.11. Tension/Compression Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Analysis/PileSoilAnalysis.html">10.12. Pile Soil Analysis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/PileSoilAnalysis/EditPileSoilAnalysis.html">10.12.1. Edit Pile Soil Analysis Activity</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../Analysis/PileSoilAnalysis/EditPileSoilAnalysis/EditPSA_Soil.html">10.12.1.1. Edit Pile Soil Activity - Soil</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Analysis/PileSoilAnalysis/EditPileSoilAnalysis/EditPSA_Splice.html">10.12.1.2. Edit Pile Soil Activity - Splice</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../Analysis/PileSoilAnalysis/EditPileSoilAnalysis/EditPSA_Sestra.html">10.12.1.3. Edit Pile Soil Activity - Sestra</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/PileSoilAnalysis/ScalingDownBLC.html">10.12.2. Scaling down Basic Load Cases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/PileSoilAnalysis/PileCapacityPlot.html">10.12.3. Pile Capacity Plot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/PileSoilAnalysis/PileCodeCheck.html">10.12.4. Pile Code Check</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Analysis/PileSoilAnalysis/SimplifiedStaticAnalysis.html">10.12.5. Simplified Static Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Analysis/HGLA.html">10.13. Hull Girder Load Adjuster for Ship Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Analysis/LocalAnalysis.html">10.14. Local Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Analysis/IndepTankCouplingAnalysis.html">10.15. Independent Tank Coupling Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ResultsPresentation.html">11. Results Presentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../ResultsPresentation/GeneralResultPresentation.html">11.1. General Results Presentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ResultsPresentation/BeamResultDiagrams.html">11.2. Beam Result Diagrams</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../ResultsPresentation/BeamResultDiagrams/SelectBeams.html">11.2.1. Select Beams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ResultsPresentation/BeamResultDiagrams/SelectLoadcase.html">11.2.2. Select Loadcase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ResultsPresentation/BeamResultDiagrams/SelectComponent.html">11.2.3. Select Component</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ResultsPresentation/BeamResultDiagrams/SelectHotspot.html">11.2.4. Select Hotspot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ResultsPresentation/BeamResultDiagrams/ResultSelectionGraphs.html">11.2.5. Graphs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ResultsPresentation/BeamResultDiagrams/MaxMinTables.html">11.2.6. Max/Min Tables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ResultsPresentation/BeamResultDiagrams/BeamLineTables.html">11.2.7. Beam Line Tables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../BeamCodeCheck.html">12. Beam Code Check</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../Introduction.html">12.1. Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Introduction/Learning.html">12.1.1. Learning from Tutorials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Introduction/LargeModels.html">12.1.2. Code Checking Large Models</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Features.html">12.2. Beam Code Check Features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Features/Standards.html">12.2.1. Standards Supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Features/MemberJointChecks.html">12.2.2. Member and Joint checks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Features/ModelRequirements.html">12.2.3. Model Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Features/CodeCheckingProcedures.html">12.2.4. Code Check Procedures</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../Features/CodeCheckingProcedures/ReferenceModel.html">12.2.4.1. Reference Model</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../Features/CodeCheckingProcedures/MakingLoadCombinations.html">12.2.4.2. Making Load Combinations</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../Features/CodeCheckingProcedures/CreateCapacityManager.html">12.2.4.3. Create a Capacity Manager</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../Features/CodeCheckingProcedures/CreateMembersJoints.html">12.2.4.4. Create Capacity Members and Joints</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../Features/CodeCheckingProcedures/FromStructureMemberOptions.html">12.2.4.5. Use From Structure Member Options</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../Features/CodeCheckingProcedures/CreateCodeCheckRuns.html">12.2.4.6. Create Code Check Runs</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../Features/CodeCheckingProcedures/ComputeCodeCheckForces.html">12.2.4.7. Compute Code Check Forces</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../Features/CodeCheckingProcedures/PerformCodeCheck.html">12.2.4.8. Perform the Code Check</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../Features/CodeCheckingProcedures/MakeCodeCheckReport.html">12.2.4.9. Make Code Check Report</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../HowToDo.html">12.3. Performing Code Check</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../HowToDo/CreateCapManager.html">12.3.1. Create a Capacity Manager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../HowToDo/DefineMembers.html">12.3.2. Define Members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../HowToDo/FromStructureMemberOptions.html">12.3.3. Use From Structure Member Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../HowToDo/DefineJoints.html">12.3.4. Define Joints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../HowToDo/CreateCodeCheckRun.html">12.3.5. Create a Code Check Run</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../HowToDo/CreateCodeCheckRun/DefineGeneralCCParams.html">12.3.5.1. Define General Code Check Parameters</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../HowToDo/CreateCodeCheckRun/DefineGlobalMembParams.html">12.3.5.2. Define Global Member Parameters</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../HowToDo/CreateCodeCheckRun/DefineGlobalJointParams.html">12.3.5.3. Define Global Joint Parameters</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../HowToDo/CreateCodeCheckRun/DefineGlobalJointParams/BraceTypeClassification.html">12.3.5.3.1. Brace Type Classification</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../HowToDo/CreateCodeCheckRun/DefineGlobalJointParams/GapClassification.html">12.3.5.3.2. Gap Classification</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../HowToDo/CreateCodeCheckRun/DefineGlobalJointParams/LoadTransferClassification.html">12.3.5.3.3. Load Transfer Classification</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../HowToDo/CreateCodeCheckRun/DefineGlobalJointParams/ThroughBraceClassification.html">12.3.5.3.4. Through Brace Classification</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../HowToDo/CreateCodeCheckRun/DefineGlobalJointParams/WeldThicknessClassification.html">12.3.5.3.5. Weld Thickness Classification</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../HowToDo/CreateCodeCheckRun/DefineGlobalJointParams/BraceUtilisation.html">12.3.5.3.6. Brace Utilisation</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../HowToDo/CreateCodeCheckRun/DefineGlobalJointParams/GroutedJoint.html">12.3.5.3.7. Grouted Joint</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../HowToDo/LocalCodeCheckParams.html">12.3.6. Local Code Checking Parameters</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../HowToDo/LocalCodeCheckParams/ModifyLocalMemberParams.html">12.3.6.1. Modify Local Member Parameters</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../HowToDo/LocalCodeCheckParams/ModifyLocalJointParams.html">12.3.6.2. Modify Local Joint Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../HowToDo/CodeCheckPositionsForces.html">12.3.7. Code Checking Positions and Forces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../HowToDo/PerformTheCodeCheck.html">12.3.8. Perform the Code Check</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../HowToDo/InvestigateResults.html">12.3.9. Investigate the Results</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../HowToDo/InvestigateResults/FromTheBrowser.html">12.3.9.1. From the Browser</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../HowToDo/InvestigateResults/FromTheGraphicWindow.html">12.3.9.2. From the Graphic Window</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../HowToDo/InvestigateResults/FromObjectProperty.html">12.3.9.3. From Object Property</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../HowToDo/ModifyAndRerunCC.html">12.3.10. Modify and Re-Run Code Check</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../HowToDo/ModifyAndRerunCC/ChangeCCParamsOnly.html">12.3.10.1. Change Code Checking Parameters Only</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../HowToDo/ModifyAndRerunCC/ModifyWithoutReRunAna.html">12.3.10.2. Modify Structural Data Without Re-Running Analysis</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../HowToDo/ModifyAndRerunCC/ModifyAndReRunAna.html">12.3.10.3. Modify Structural Data and Re-Run Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../HowToDo/RunAllCommand.html">12.3.11. The &quot;Run All&quot; command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../HowToDo/MakeAReport.html">12.3.12. Make a Report</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../Redesign.html">12.4. Redesign</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../RedesignExample.html">12.4.1. Redesign Example</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">12.4.1.1. Initial Results</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RedesignDialog.html">12.4.1.2. The Redesign Dialog</a></li>
+<li class="toctree-l5"><a class="reference internal" href="UpdateConceptModel.html">12.4.1.3. Update the Concept Model</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RerunAnalysis.html">12.4.1.4. Re-Run Analysis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../SuperelementResults.html">12.5. Post-Processing of Superelement Results</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../SuperelementResults/ModellingAndPostProcessing.html">12.5.1. Modelling - Superelement Analysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../SuperelementResults/FirstLevelSuperelement.html">12.5.2. GeniE First Level Superelements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../SuperelementResults/SuperelementPostProcessing.html">12.5.3. Post-Processing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../CCusingFramework.html">12.6. Code Check Using Framework</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../CCusingFramework/ImportModelUsingFEnumbers.html">12.6.1. Import Model using Finite Element Numbers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../CCusingFramework/GenerateMembersFramework.html">12.6.2. Generate Members in Framework</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../CCusingFramework/ImportModelUsingConceptsNS.html">12.6.3. Import with Concepts, no Split</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../CCusingFramework/ImportModelUsingConceptsSRJ.html">12.6.4. Import with Concepts, Split at Reinforced Joints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../CCusingFramework/ImportModelUsingConceptsSAJ.html">12.6.5. Import with Concepts, Split at All Joints</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../PanelCodeCheck.html">13. Panel Code Check</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOT.html">13.1. DNV or CSR BC &amp; OT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTPreparationsForMeshing.html">13.2. Preparations for Meshing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTCreateACapacityManager.html">13.3. Create a Capacity Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTDefiningPanels.html">13.4. Defining Panels</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/PanelFunctions/JoinTwoPanels.html">13.4.1. Join Two Panels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/PanelFunctions/ExplodePanel.html">13.4.2. Explode Panel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/PanelFunctions/DividePanelByPlane.html">13.4.3. Divide Panel by Plane</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/PanelFunctions/DividePanelAlongDirection.html">13.4.4. Divide Panel along Direction</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTCreateARun.html">13.5. Create a Run</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTCreateARun/DNVGLOrCSRBCAndOTCreateARunIntro.html">13.5.1. Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTCreateARun/DNVGLOrCSRBCAndOTGeneralParameters.html">13.5.2. General Code Checking Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTCreateARun/DNVGLOrCSRBCAndOTPermissibleUFParameters.html">13.5.3. Permissible Usage Factor Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTCreateARun/DNVGLOrCSRBCAndOTYieldParameters.html">13.5.4. Yield Checking Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTCreateARun/DNVGLOrCSRBCAndOTPanelParameters.html">13.5.5. Panel Buckling Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTUsingOneNamedSet.html">13.6. Using One Named Set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTSinglePanelTool.html">13.7. Single Panel Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTPermissibleUF.html">13.8. Permissible Usage Factor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTPermissibleUF/DNVGLOrCSRBCAndOTPermissibleScreeningDescription.html">13.8.1. Permissible UF Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTPermissibleUF/DNVGLOrCSRBCAndOTPermissibleManualInputView.html">13.8.2. Manual Input View</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTPermissibleUF/DNVGLOrCSRBCAndOTPermissibleCoarseInputView.html">13.8.3. Coarse Input View</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTPermissibleUF/DNVGLOrCSRBCAndOTPermissibleScreeningView.html">13.8.4. Yield Screening View</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTPermissibleUF/DNVGLOrCSRBCAndOTPermissibleFineMeshView.html">13.8.5. Fine Mesh View</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTYieldScreening.html">13.9. Yield Screening Properties</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTYieldScreening/DNVGLOrCSRBCAndOTYieldScreeningDescription.html">13.9.1. Yield Screening Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTYieldScreening/DNVGLOrCSRBCAndOTYieldManualInputView.html">13.9.2. Manual Input View</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTYieldScreening/DNVGLOrCSRBCAndOTYieldCoarseInputView.html">13.9.3. Coarse Input View</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTYieldScreening/DNVGLOrCSRBCAndOTYieldScreeningView.html">13.9.4. Yield Screening View</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTYieldScreening/DNVGLOrCSRBCAndOTYieldFineMeshView.html">13.9.5. Fine Mesh View</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../PanelCodeCheck/DNVGLOrCSRBCAndOTChangingPropertiesForAPanel.html">13.10. Panel Buckling Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../PanelCodeCheck/PanelCodeCheckRunAll.html">13.11. Panel Code Check - Run All</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ImportAndExport.html">14. Import and Export</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../ImportAndExport/Import.html">14.1. Import</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Import/ImportGNXWorkspaceFile.html">14.1.1. Import Workspace (GNX File)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Import/ImportXMLConceptModelFile.html">14.1.2. Import XML Concept Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Import/ImportFEMFile.html">14.1.3. Import FEM File</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../ImportAndExport/Import/ImportFEMFile/FEMFileBasicTab.html">14.1.3.1. FEM File - Basic Tab</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../ImportAndExport/Import/ImportFEMFile/FEMFileAdvancedTab.html">14.1.3.2. FEM File - Advanced Tab</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../ImportAndExport/Import/ImportFEMFile/FEMFileBeamsTab.html">14.1.3.3. FEM File - Beams Tab</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../ImportAndExport/Import/ImportFEMFile/FEMFilePlatesTab.html">14.1.3.4. FEM File - Plates Tab</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../ImportAndExport/Import/ImportFEMFile/FEMFileRepairTab.html">14.1.3.5. FEM File - Repair Tab</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../ImportAndExport/Import/ImportFEMFile/FEMFileSubsetTab.html">14.1.3.6. FEM File - Subset Tab</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../ImportAndExport/Import/ImportFEMFile/ScopeOfFEMImport.html">14.1.3.7. Scope of FEM Import</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../ImportAndExport/Import/ImportFEMFile/FEMFileFEMRepair.html">14.1.3.8. FEM Screening and Repair</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Import/ImportExternalResultSIN.html">14.1.4. Import External Results SIN File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Import/ImportLinerarisedPileheadSprings.html">14.1.5. Import Linearised Pilehead Springs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Import/ImportGENSODFile.html">14.1.6. Import Gensod File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Import/ImportSoilData.html">14.1.7. Import Soil Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Import/ImportWAJACFile.html">14.1.8. Import Wajac File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Import/ImportSACSFile.html">14.1.9. Import SACS File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Import/ImportSTRUCAD3DFile.html">14.1.10. Import StruCAD3D File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Import/ImportIntergraphPDSFile.html">14.1.11. Import Intergraph PDS (SDNF File)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Import/ImportCadCentrePDMSFile.html">14.1.12. Import CadCentre PDMS (SDNF File)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Import/ImportNastranFile.html">14.1.13. Import Nastran File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Import/ImportRuleLoadsXMLFile.html">14.1.14. Import Rule Loads XML File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Import/ImportACISSATFile.html">14.1.15. Import ACIS SAT File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Import/ImportDXFFile.html">14.1.16. Import DXF File</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ImportAndExport/Export.html">14.2. Export</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Export/ExportGNXWorkspaceFile.html">14.2.1. Export Workspace (GNX File)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Export/ExportXMLConceptModelFile.html">14.2.2. Export XML Concept Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Export/ExportCondensedCommandFile.html">14.2.3. Export GeniE Journal File (JS File)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Export/ExportFEMFile.html">14.2.4. Export FEM File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Export/ExportExternalResultSIN.html">14.2.5. Export Results SIN File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Export/ExportUFO.html">14.2.6. Export Usfos File</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../ImportAndExport/Export/ExportUsfos/OutputTab.html">14.2.6.1. Export to Usfos - Output Tab</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../ImportAndExport/Export/ExportUsfos/PushOverControlTab.html">14.2.6.2. Export to Usfos - Pushover Analysis Control Tab</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../ImportAndExport/Export/ExportUsfos/BoatImpactControlTab.html">14.2.6.3. Export to Usfos - Boat Impact Analysis Control Tab</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../ImportAndExport/Export/ExportUsfos/DataChecksTab.html">14.2.6.4. Export to Usfos - Data Checks Tab</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../ImportAndExport/Export/ExportUsfos/JointModellingControlTab.html">14.2.6.5. Export to Usfos - Joint Modelling Control Tab</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Export/ExportIntergraphPDSFile.html">14.2.7. Export Intergraph PDS (SDNF File)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Export/ExportCadCentrePDMSFile.html">14.2.8. Export CadCentre PDMS (SDNF File)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Export/ExportRuleLoadsXMLFile.html">14.2.9. Export Rule Loads XML File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Export/ExportACISSATFile.html">14.2.10. Export ACIS SAT File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Export/ExportGuidingCurvesToRhino.html">14.2.11. Export Selected Guiding Curves to Rhino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/Export/ExportPLNFile.html">14.2.12. Export Polyline Approximations to PLN File</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ImportAndExport/CommandFileGeneratedByGeniE.html">14.3. Logging and Reading Command File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ImportAndExport/MaterialLibrary.html">14.4. Material Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ImportAndExport/SectionLibrary.html">14.5. Section Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ImportAndExport/ExportFatigueDetail.html">14.6. Export Fatigue Detail</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/ExportFatigueDetail/ExportFatigueDetailBeam.html">14.6.1. Export Fatigue Detail - Beam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ImportAndExport/ExportFatigueDetail/ExportFatigueDetailDetailBox.html">14.6.2. Export Fatigue Detail - Detail Box</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ImportAndExport/SesamInsightUploader.html">14.7. Sesam Insight Uploader</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Reporting.html">15. Reporting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Reporting/MakingAReport.html">15.1. Making a Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Reporting/LoopingLoadsAndSetsInChapters.html">15.2. Looping Loads and Sets in Chapters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Reporting/StructureChapter.html">15.3. The Structure Chapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Reporting/PropertiesChapter.html">15.4. The Properties Chapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Reporting/MassesChapter.html">15.5. The Masses Chapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Reporting/LoadsChapter.html">15.6. The Loads Chapter</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Reporting/LoadChapter/LoadCombConv2Mass.html">15.6.1. Load Combinations Converted to Mass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Reporting/LoadChapter/CenterOfForce.html">15.6.2. Load Sum - Centre of Force</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Reporting/FEMResultsChapter.html">15.7. The FEM Results Chapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Reporting/FrameCodeCheckChapter.html">15.8. The Frame Code Check Chapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Reporting/PlateCodeCheckChapter.html">15.9. The Plate Code Check Chapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Reporting/GraphicsChapter.html">15.10. The Graphics Chapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Reporting/CutCopyAndPasteChapters.html">15.11. Cut, Copy and Paste Chapters in the Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Reporting/ReportTemplates.html">15.12. Report Templates</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Reporting/ReportTemplates/CreatingAReportTemplate.html">15.12.1. Creating a Report Template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Reporting/ReportTemplates/ShipCargoholdTemplate.html">15.12.2. Ship Cargo Hold Template</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Utilities.html">16. Utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Utilities/CutPlanes.html">16.1. Cut Planes and Slices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Utilities/Evaluators.html">16.2. Evaluators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Utilities/MeshPriorities.html">16.3. Mesh Priorities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Utilities/ModelViews.html">16.4. Model Views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Utilities/Sets.html">16.5. Sets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Utilities/Sets/Set.html">16.5.1. Set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Utilities/Sets/DynamicSet.html">16.5.2. Dynamic Set</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ExternalApplications.html">17. Other Sesam Applications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/SesamManager.html">17.1. Sesam Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/SesamInterfaceFiles.html">17.2. Sesam Interface Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/AVM.html">17.3. Application Version Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/Preframe.html">17.4. Preframe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/Presel.html">17.5. Presel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/Submod.html">17.6. Submod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/HydroD.html">17.7. HydroD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/Wadam.html">17.8. Wadam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/Wasim.html">17.9. Wasim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/Wajac.html">17.10. Wajac</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/GENSOD.html">17.11. Gensod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/Splice.html">17.12. Splice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/Sestra.html">17.13. Sestra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/Usfos.html">17.14. Usfos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/Framework.html">17.15. Framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/Platework.html">17.16. Platework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/Xtract.html">17.17. Xtract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/Cutres.html">17.18. Cutres</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/SesamConverters.html">17.19. Sesam Converters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/Prepost.html">17.20. Prepost</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ExternalApplications/NauticusHull.html">17.21. Nauticus Hull</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../GuidingDocuments.html">Guiding Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../Tutorials/TutorialsBasicAndCodechecking.html">Basics and Code Checking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../Tutorials/TutorialsAdvancedModelling.html">Advanced Modelling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ReferenceDocuments.html">Reference Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../jscript/index.html">JScript Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../WizardTemplates.html">Wizard Templates</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sesam.dnv.com/genie_utils/">GeniE SnackPack</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sesam.dnv.com/examples/examples.html">Sesam Examples</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sesam.dnv.com/">Sesam Portal</a></li>
+</ul>
+
+          
+        
+        <div class="bottomlefttext">
+	      Build V8.5.4.686
+	    </div>
+      </div>
+      &nbsp;
+      
+      
+      <!--
+      <div class="wy-side-nav-search">
+        
+          <a href="../../../../index.html" class="fa fa-home"> Sesam GeniE V8.5-04</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>	
+      </div>-->
+      
+    </nav>
+    <!--
+    <div class="float-right-search">
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>	
+    </div>
+	-->
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">Sesam GeniE V8.5-04</a>
+	
+	
+	  
+	
+      </nav>
+      
+      
+
+
+
+      
+      <div class="wy-nav-content">
+	  
+	    <div class="float-right-search">
+			
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>	
+        </div>
+
+	  
+        <div class="rst-content">
+		  
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">GeniE V8.5-04 Documentation</a> &raquo;</li>
+      
+          <li><a href="../../../../UserDocumentation.html">GeniE User Documentation</a> &raquo;</li>
+      
+          <li><a href="../../../BeamCodeCheck.html"><span class="section-number">12. </span>Beam Code Check</a> &raquo;</li>
+      
+          <li><a href="../../Redesign.html"><span class="section-number">12.4. </span>Redesign</a> &raquo;</li>
+      
+          <li><a href="../RedesignExample.html"><span class="section-number">12.4.1. </span>Redesign Example</a> &raquo;</li>
+      
+    <li><span class="section-number">12.4.1.1. </span>Initial Results</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+		  
+		  <!--Previous and Next buttons on top: -->
+		  
+			<div class="rst-header-buttons" role="navigation" aria-label="footer navigation">
+              
+			    <a href="RedesignDialog.html" class="btn btn-neutral float-right" title="12.4.1.2. The Redesign Dialog">Next <span class="fa fa-arrow-circle-right"></span></a>
+              
+              
+                <a href="../RedesignExample.html" class="btn btn-neutral" title="12.4.1. Redesign Example"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+              
+            </div>
+          
+		  <!--End of Previous and Next buttons on top -->		  
+
+          <div role="main" class="document">
+            
+  <div class="section" id="initial-results">
+<span id="redesinitialresults"></span><h1><span class="section-number">12.4.1.1. </span>Initial Results</h1>
+<p>Taking a brief look at the results we can observe that for some members the usage factor (UfTot) is greater than 1, meaning that these structural members do not comply with the selected Specification Standard.
+In this example API WSD 22nd edition (2014) is used.</p>
+<div class="figure align-default" id="id1">
+<img alt="../../../../_images/Redesign2.png" src="../../../../_images/Redesign2.png" />
+<p class="caption"><span class="caption-number">Fig. 12.117 </span><span class="caption-text">Result Overview</span></p>
+</div>
+<p>The usage factor for all the members can be color coded as shown below. The model in the “Capacity Models” view. The same colors, representing the same range of UfTots, can be found in the Redesign window.
+This is a useful tool allowing the user to immediately spot the members that need to be updated.</p>
+<div class="figure align-default" id="id2">
+<img alt="../../../../_images/Redesign3.png" src="../../../../_images/Redesign3.png" />
+<p class="caption"><span class="caption-number">Fig. 12.118 </span><span class="caption-text">Color Coding of usage factors</span></p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="RedesignDialog.html" class="btn btn-neutral float-right" title="12.4.1.2. The Redesign Dialog">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../RedesignExample.html" class="btn btn-neutral" title="12.4.1. Redesign Example"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        <!--&copy; Copyright DNV AS.-->
+		Copyright &copy; DNV AS 2023
+    </p>
+  </div>
+
+  
+  <!--Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a>.
+  -->
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'V8.5.4.686',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

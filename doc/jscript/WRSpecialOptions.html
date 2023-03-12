@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: WRSpecialOptions
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: WRSpecialOptions
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Eliminate structural parts from the wave load analysis.<br/>You can also add additional still water levels
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Eliminate, Exclude and Add specialOptions</td></tr><tr>  <td>     <code>Analysis1.step(2).specialOptions().excludeEccentricities(true);<br/>Analysis1.step(2).specialOptions().useEliminatedStructure(true);<br/>Analysis1.step(2).specialOptions().eliminatedStructure = Topside;<br/>Analysis1.step(2).specialOptions().absoluteWaterDepths(false);<br/>Analysis1.step(2).specialOptions().removeAllLevels();<br/>Analysis1.step(2).specialOptions().addLevel(2m);<br/>Analysis1.step(2).specialOptions().addLevel(-3m);<br/>     </code>		<div class="explanation">This command is scripted. By excluding eccentricities, eliminating the named set "Topside"<br/>and adding two new still water levels at +2m and -3 m relative to the base still water level.<br/>Note that this is the default behavior. Thus, the "absoluteWaterDepths(false)" command is not needed.<br/>Please read the user manual GeniE Vol. 6 for more information about additional details for SpecialOptions<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Added Mass and Damping only</td></tr><tr>  <td>     <code>Analysis1.step(2).addedMassAndDampingOnly(true);<br/>Analysis1.step(2).addedMassAndDamping().calculateDamping(true);<br/>Analysis1.step(2).addedMassAndDamping().useCm(true);<br/>Analysis1.step(2).addedMassAndDamping().includeInternalWater(true);<br/>     </code>		<div class="explanation">This command is scripted. This option implies that no load cases will <br/>be calculated and written to the loads interface file – only added mass and damping are considered.<br/>Please read the user manual GeniE Vol. 6 for more information about additional details about Added Mass and Damping<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Data Check Only</td></tr><tr>  <td>     <code>Analysis1.step(2).dataCheckOnly(true);<br/>     </code>		<div class="explanation">This command is scripted. The data check option prevents Wajac from a full execution of the analysis;<br/>a data check will be performed of the input data to determine whether they are consistent.<br/>Please read the user manual GeniE Vol. 6 for more information about additional details about Data Check Only<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Automatic generation of input files</td></tr><tr>  <td>     <code>Analysis4.step(2).generateInput = false;<br/>     </code>		<div class="explanation">This command is scripted. The default option (“True”) implies that the input file for Wajac is automatically generated. <br/>In other words, if you modify one of the parameters this file is automatically updated prior to the next analysis run. <br/>If you want to have a manual control of the input file you should deselect this option.<br/>Please read the user manual GeniE Vol. 6 for more information about additional details about generation of input files<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>RelativeAdditionalDepths and Add specialOptions</td></tr><tr>  <td>     <code>Analysis1.step(2).specialOptions().absoluteWaterDepths(true);<br/>Analysis1.step(2).specialOptions().removeAllLevels();<br/>Analysis1.step(2).specialOptions().addLevel(52m);<br/>Analysis1.step(2).specialOptions().addLevel(47m);<br/>     </code>		<div class="explanation">This command is scripted. Two new still water levels are added at 52m and 47 m relative to the seabed Z.<br/>Note that the default behavior is that additional water levels are defined relative to Location water level Z.<br/>Thus, the "absoluteWaterDepths(true)" command is needed.<br/>Please read the user manual GeniE Vol. 6 for more information about additional details for SpecialOptions<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="UnnamedObject.html">UnnamedObject</a>
+       |
+       +--<b>WRSpecialOptions</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="WRSpecialOptions.html#addLevel(Length)">addLevel</a></b>(<b><a href="Length.html">Length</a></b>)</code>
+<div class="explanation">
+Add a still water level</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="WRSpecialOptions.html#removeAllLevels()">removeAllLevels</a></b>()</code>
+<div class="explanation">
+Remove all still water levels</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRSpecialOptions.html#absoluteWaterDepths()">absoluteWaterDepths</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Set additional water levels relative to Seabed Z</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Set.html">Set</a></b></code>
+</td>
+<td width="90%"><code><b><a href="WRSpecialOptions.html#eliminatedStructure()">eliminatedStructure</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+The particular structure where hydrodynamic load calculation should be eliminated</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRSpecialOptions.html#excludeEccentricities()">excludeEccentricities</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Include eccentricities in calculations</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRSpecialOptions.html#ignoreBreakingHeightLimit()">ignoreBreakingHeightLimit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Include breaking wave height limits in wave kinematics calculations</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRSpecialOptions.html#inPhase()">inPhase</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Inertia forces applied in phase</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>int</b></code>
+</td>
+<td width="90%"><code><b><a href="WRSpecialOptions.html#maxNumSegments()">maxNumSegments</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Set maximum number of segments for auto-segmentation</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td width="90%"><code><b><a href="WRSpecialOptions.html#multipleLevels()">multipleLevels</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Multiple levels/still water levels</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Set.html">Set</a></b></code>
+</td>
+<td width="90%"><code><b><a href="WRSpecialOptions.html#onStructure()">onStructure</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+The particular structure where to use the MacCamy-Fuchs formula.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRSpecialOptions.html#phaseLag()">phaseLag</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Inertia forces applied using a phase lag</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRSpecialOptions.html#useAutoSegmentation()">useAutoSegmentation</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use Auto-segmentation of members</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRSpecialOptions.html#useEliminatedStructure()">useEliminatedStructure</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Eliminate particular structure from hydrodynamic load calculation</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRSpecialOptions.html#useMacCamyFuchs()">useMacCamyFuchs</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use MacCamy & Fuchs solution</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRSpecialOptions.html#useOnStructure()">useOnStructure</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use MacCamy-Fuchs formula on particular structure</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="addLevel(Length)"></a>
+<h3>addLevel</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addLevel</b>(<b><a href="Length.html">Length</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Add a still water level
+</dl>
+<hr>
+
+<a name="removeAllLevels()"></a>
+<h3>removeAllLevels</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAllLevels</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove all still water levels
+</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="absoluteWaterDepths()"></a>
+<h3>absoluteWaterDepths</h3>
+<p class="function">
+<b>bool</b> <b>absoluteWaterDepths</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set additional water levels relative to Seabed Z
+</dl>
+<a name="eliminatedStructure()"></a>
+<h3>eliminatedStructure</h3>
+<p class="function">
+<b><a href="Set.html">Set</a></b> <b>eliminatedStructure</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>The particular structure where hydrodynamic load calculation should be eliminated
+</dl>
+<a name="excludeEccentricities()"></a>
+<h3>excludeEccentricities</h3>
+<p class="function">
+<b>bool</b> <b>excludeEccentricities</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Include eccentricities in calculations
+</dl>
+<a name="ignoreBreakingHeightLimit()"></a>
+<h3>ignoreBreakingHeightLimit</h3>
+<p class="function">
+<b>bool</b> <b>ignoreBreakingHeightLimit</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Include breaking wave height limits in wave kinematics calculations
+</dl>
+<a name="inPhase()"></a>
+<h3>inPhase</h3>
+<p class="function">
+<b>bool</b> <b>inPhase</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Inertia forces applied in phase
+</dl>
+<a name="maxNumSegments()"></a>
+<h3>maxNumSegments</h3>
+<p class="function">
+<b>int</b> <b>maxNumSegments</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set maximum number of segments for auto-segmentation
+</dl>
+<a name="multipleLevels()"></a>
+<h3>multipleLevels</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>multipleLevels</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Multiple levels/still water levels
+</dl>
+<a name="onStructure()"></a>
+<h3>onStructure</h3>
+<p class="function">
+<b><a href="Set.html">Set</a></b> <b>onStructure</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>The particular structure where to use the MacCamy-Fuchs formula.
+</dl>
+<a name="phaseLag()"></a>
+<h3>phaseLag</h3>
+<p class="function">
+<b>bool</b> <b>phaseLag</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Inertia forces applied using a phase lag
+</dl>
+<a name="useAutoSegmentation()"></a>
+<h3>useAutoSegmentation</h3>
+<p class="function">
+<b>bool</b> <b>useAutoSegmentation</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Use Auto-segmentation of members
+</dl>
+<a name="useEliminatedStructure()"></a>
+<h3>useEliminatedStructure</h3>
+<p class="function">
+<b>bool</b> <b>useEliminatedStructure</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Eliminate particular structure from hydrodynamic load calculation
+</dl>
+<a name="useMacCamyFuchs()"></a>
+<h3>useMacCamyFuchs</h3>
+<p class="function">
+<b>bool</b> <b>useMacCamyFuchs</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Use MacCamy & Fuchs solution
+</dl>
+<a name="useOnStructure()"></a>
+<h3>useOnStructure</h3>
+<p class="function">
+<b>bool</b> <b>useOnStructure</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Use MacCamy-Fuchs formula on particular structure
+</dl>
+</body>
+</html>

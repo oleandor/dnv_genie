@@ -1,0 +1,1475 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: Shell
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: Shell
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Define a Curved Shell
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Skin/Loft Curves</td></tr><tr>  <td>     <code>Pl4 = SkinCurves(Array(Curve2, Curve3, Curve4));<br/>Pl6 = LoftCurves(Pl2, Array(Curve2, Curve3, Curve4));<br/>     </code>		<div class="explanation">Code for Pl4: Similarly, when using plate Pl2 as guidance to control the initial surface of Pl4 (this is a lofting operation)<br/>Code for Pl6: This command is scripted. Typically, when defining Pl4 from a skin operation between Curve1, Curve2 and Curve3<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Curve-Net Interpolation</td></tr><tr>  <td>     <code>Pl5 = InterpolateCurveNet(Array(Curve1, Curve2, Curve3), Array(Curve4, Curve5));<br/>Pl7 = InterpolateCurveNet(Array(Point1,Curve1, Curve2, Curve3), Array(Curve4, Curve5))<br/>     </code>		<div class="explanation">Code for Pl5: This command is scripted. Typically, when defining P15 from such an operation between <br/> the curve arrays Array(Curve1, Curve2, Curve3) and Array(Curve4, Curve5)<br/>Code for Pl7: Note that one of the curves may be a single point, provided that the same intersection restrictions hold for this point as well. For instance the command<br/>will give a valid result, provided that Point1 is the intersection point Curve4 and Curve5, thus forming a triangular patch (which is a degenerate rectangular patch).<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Sweep Curve</td></tr><tr>  <td>     <code>Pl9 = SweepCurve(Curve2, Curve5);<br/>     </code>		<div class="explanation">This command is scripted. Typically, when defining Pl9 by referring to Curve2 and Curve 5<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="Transformable.html">Transformable</a>
+            |
+            +--<a href="BasicConcept.html">BasicConcept</a>
+                 |
+                 +--<a href="Plate.html">Plate</a>
+                      |
+                      +--<b>Shell</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CoverCurves(...)">CoverCurves</a></b>([ ...])</code>
+<div class="explanation">
+Generic cover curves functionality.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CoverCurves(Array)">CoverCurves</a></b>(<b><a href="Array.html">Array</a></b>)</code>
+<div class="explanation">
+Generic cover curves functionality.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateBSplineSurface(PointSet, Array, Array, int, int)">CreateBSplineSurface</a></b>(<b><a href="PointSet.html">PointSet</a></b>, <b><a href="Array.html">Array</a></b>, <b><a href="Array.html">Array</a></b>, <b>int</b>, <b>int</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateBSplineSurface(PointSet, Array, Array, int, int, Array)">CreateBSplineSurface</a></b>(<b><a href="PointSet.html">PointSet</a></b>, <b><a href="Array.html">Array</a></b>, <b><a href="Array.html">Array</a></b>, <b>int</b>, <b>int</b>, <b><a href="Array.html">Array</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateBSplineSurfaceUniformKnotVectors(PointSet, int, int)">CreateBSplineSurfaceUniformKnotVectors</a></b>(<b><a href="PointSet.html">PointSet</a></b>, <b>int</b>, <b>int</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateGordonCoonsSurface(Array, Array)">CreateGordonCoonsSurface</a></b>(<b><a href="Array.html">Array</a></b> uCurves, <b><a href="Array.html">Array</a></b> vCurves)</code>
+<div class="explanation">
+Creates a surface which interpolates a net of curves in u and v parametric directions</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateRationalBSplineSurface(PointSet, Array, Array, Array, int, int)">CreateRationalBSplineSurface</a></b>(<b><a href="PointSet.html">PointSet</a></b>, <b><a href="Array.html">Array</a></b>, <b><a href="Array.html">Array</a></b>, <b><a href="Array.html">Array</a></b>, <b>int</b>, <b>int</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateRationalBSplineSurface(PointSet, Array, Array, Array, int, int, Array)">CreateRationalBSplineSurface</a></b>(<b><a href="PointSet.html">PointSet</a></b>, <b><a href="Array.html">Array</a></b>, <b><a href="Array.html">Array</a></b>, <b><a href="Array.html">Array</a></b>, <b>int</b>, <b>int</b>, <b><a href="Array.html">Array</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateShellCircularConeCylinder(Point, Length, Point, Length, double, double)">CreateShellCircularConeCylinder</a></b>(<b><a href="Point.html">Point</a></b>, <b><a href="Length.html">Length</a></b>, <b><a href="Point.html">Point</a></b>, <b><a href="Length.html">Length</a></b>, <b>double</b>, <b>double</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateShellEllipticConeCylinder(Point, Point, Point, double, Point, double, double, double)">CreateShellEllipticConeCylinder</a></b>(<b><a href="Point.html">Point</a></b>, <b><a href="Point.html">Point</a></b>, <b><a href="Point.html">Point</a></b>, <b>double</b>, <b><a href="Point.html">Point</a></b>, <b>double</b>, <b>double</b>, <b>double</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateShellFiniteElement(Array)">CreateShellFiniteElement</a></b>(<b><a href="Array.html">Array</a></b> arrayOfPoints)</code>
+<div class="explanation">
+Reconstructs the FEM surface from a list of points</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateShellLinearGordonCoons(ggGuideCurve, ggGuideCurve, ggGuideCurve, ggGuideCurve)">CreateShellLinearGordonCoons</a></b>(<b><a href="ggGuideCurve.html">ggGuideCurve</a></b> q0, <b><a href="ggGuideCurve.html">ggGuideCurve</a></b> q1, <b><a href="ggGuideCurve.html">ggGuideCurve</a></b> r0, <b><a href="ggGuideCurve.html">ggGuideCurve</a></b> r1)</code>
+<div class="explanation">
+Constructs a linearly blended Gordon-Coons surface from two couples of curves</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateShellLinearMultiSidedHoleFilling(Array, RadialCurveType)">CreateShellLinearMultiSidedHoleFilling</a></b>(<b><a href="Array.html">Array</a></b> arrayOfCurves, <b><a href="RadialCurveType.html">RadialCurveType</a></b> typeOfRadialCurves)</code>
+<div class="explanation">
+Constructs n linearly blended Gordon Coons patches to cover an n-sided hole</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateShellLinearSkinning(ggGuideCurve, ggGuideCurve)">CreateShellLinearSkinning</a></b>(<b><a href="ggGuideCurve.html">ggGuideCurve</a></b> curve1, <b><a href="ggGuideCurve.html">ggGuideCurve</a></b> curve2)</code>
+<div class="explanation">
+Constructs a linearly blended skinning surface from two curves</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateShellLinearThreeSidedHoleFilling(ggGuideCurve, ggGuideCurve, ggGuideCurve)">CreateShellLinearThreeSidedHoleFilling</a></b>(<b><a href="ggGuideCurve.html">ggGuideCurve</a></b> curve1, <b><a href="ggGuideCurve.html">ggGuideCurve</a></b> curve2, <b><a href="ggGuideCurve.html">ggGuideCurve</a></b> curve3)</code>
+<div class="explanation">
+Constructs three linearly blended Gordon-Coons patches to cover a three sided hole</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateShellPipeSurface(ggGuideCurve, Length, double, double)">CreateShellPipeSurface</a></b>(<b><a href="ggGuideCurve.html">ggGuideCurve</a></b>, <b><a href="Length.html">Length</a></b>, <b>double</b>, <b>double</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateShellSphere(Point, Length, LengthVector3d, double, double, double, double)">CreateShellSphere</a></b>(<b><a href="Point.html">Point</a></b>, <b><a href="Length.html">Length</a></b>, <b><a href="LengthVector3d.html">LengthVector3d</a></b>, <b>double</b>, <b>double</b>, <b>double</b>, <b>double</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateShellSurfaceOfRevolution(ggGuideCurve, Point, Point, double, double)">CreateShellSurfaceOfRevolution</a></b>(<b><a href="ggGuideCurve.html">ggGuideCurve</a></b>, <b><a href="Point.html">Point</a></b>, <b><a href="Point.html">Point</a></b>, <b>double</b>, <b>double</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateShellTranslationalSurface(ggGuideCurve, LengthVector3d)">CreateShellTranslationalSurface</a></b>(<b><a href="ggGuideCurve.html">ggGuideCurve</a></b>, <b><a href="LengthVector3d.html">LengthVector3d</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateShellTranslationalSurface(ggGuideCurve, ggGuideCurve)">CreateShellTranslationalSurface</a></b>(<b><a href="ggGuideCurve.html">ggGuideCurve</a></b>, <b><a href="ggGuideCurve.html">ggGuideCurve</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateSkinningSurface(Array)">CreateSkinningSurface</a></b>(<b><a href="Array.html">Array</a></b>)</code>
+<div class="explanation">
+Create a shell based on 2 or more curves.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#CreateThreeSidedHoleFilling(ggGuideCurve, ggGuideCurve, ggGuideCurve)">CreateThreeSidedHoleFilling</a></b>(<b><a href="ggGuideCurve.html">ggGuideCurve</a></b> Curve1, <b><a href="ggGuideCurve.html">ggGuideCurve</a></b> Curve2, <b><a href="ggGuideCurve.html">ggGuideCurve</a></b> Curve3)</code>
+<div class="explanation">
+Creates a triangular surface which interpolates three curves forming a hole</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#FitSurfaceToRectangularNet(PointSet, Length)">FitSurfaceToRectangularNet</a></b>(<b><a href="PointSet.html">PointSet</a></b>, <b><a href="Length.html">Length</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#InterpolateCurveNet(Array, Array)">InterpolateCurveNet</a></b>(<b><a href="Array.html">Array</a></b> uCurves, <b><a href="Array.html">Array</a></b> vCurves)</code>
+<div class="explanation">
+Creates a surface which interpolates a net of curves in u and v parametric directions</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#InterpolateRectangularNet(PointSet)">InterpolateRectangularNet</a></b>(<b><a href="PointSet.html">PointSet</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#InterpolateRectangularNetShapePreserving(PointSet, RepresentationContinuityOrder)">InterpolateRectangularNetShapePreserving</a></b>(<b><a href="PointSet.html">PointSet</a></b>, <b><a href="RepresentationContinuityOrder.html">RepresentationContinuityOrder</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#InterpolateRectangularNetShapePreserving(PointSet, SplineParameterizationType, SplineParameterizationType, RepresentationContinuityOrder)">InterpolateRectangularNetShapePreserving</a></b>(<b><a href="PointSet.html">PointSet</a></b>, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b>, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b>, <b><a href="RepresentationContinuityOrder.html">RepresentationContinuityOrder</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#LoftCurves(Array, Plate)">LoftCurves</a></b>(<b><a href="Array.html">Array</a></b>, <b><a href="Plate.html">Plate</a></b>)</code>
+<div class="explanation">
+Create a shell based on 2 or more curves and a guide plate.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#LoftCurves(Plate, Array)">LoftCurves</a></b>(<b><a href="Plate.html">Plate</a></b>, <b><a href="Array.html">Array</a></b>)</code>
+<div class="explanation">
+Create a shell based on 2 or more curves and a guide plate.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#LoftCurves(Plate, Array, Plate)">LoftCurves</a></b>(<b><a href="Plate.html">Plate</a></b>, <b><a href="Array.html">Array</a></b>, <b><a href="Plate.html">Plate</a></b>)</code>
+<div class="explanation">
+Create a shell based on 2 or more curves and two guide plates.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#SkinCurves(...)">SkinCurves</a></b>([ ...])</code>
+<div class="explanation">
+Create a shell based on 2 or more curves.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#SkinCurves(Array)">SkinCurves</a></b>(<b><a href="Array.html">Array</a></b>)</code>
+<div class="explanation">
+Create a shell based on 2 or more curves.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#SweepCurve(Variant, Variant)">SweepCurve</a></b>(<b><a href="Variant.html">Variant</a></b> profile, <b><a href="Variant.html">Variant</a></b> path)</code>
+<div class="explanation">
+Sweep profile along path to create a surface</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Shell.html#SweepCurve(Variant, Variant, UseTolerantModellingMode)">SweepCurve</a></b>(<b><a href="Variant.html">Variant</a></b> profile, <b><a href="Variant.html">Variant</a></b> path, <b><a href="UseTolerantModellingMode.html">UseTolerantModellingMode</a></b> useOfTolerantModelling)</code>
+<div class="explanation">
+Sweep profile along path to create a surface</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#AddInnerBoundaryLoop(Array)">AddInnerBoundaryLoop</a></b>(<b><a href="Array.html">Array</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#AddInnerDomainLoop2D(Array)">AddInnerDomainLoop2D</a></b>(<b><a href="Array.html">Array</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#AddInnerDomainLoop3D(Array)">AddInnerDomainLoop3D</a></b>(<b><a href="Array.html">Array</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#AddSeam(gmDirectedCurve)">AddSeam</a></b>(<b><a href="gmDirectedCurve.html">gmDirectedCurve</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#AddSeams(plane3d)">AddSeams</a></b>(<b><a href="plane3d.html">plane3d</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Shell.html#ConvertCurvedShellToFlatPlate()">ConvertCurvedShellToFlatPlate</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#GeometryToString()">GeometryToString</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Shell.html#MaxDistance(Array)">MaxDistance</a></b>(<b><a href="Array.html">Array</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#RemoveSeamsAt(Point)">RemoveSeamsAt</a></b>(<b><a href="Point.html">Point</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="scPlateSegment.html">scPlateSegment</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#Segment(unsigned __int64)">Segment</a></b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="scPlateSegment.html">scPlateSegment</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#SegmentAt(Point)">SegmentAt</a></b>(<b><a href="Point.html">Point</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#SetOuterBoundaryLoop(Array)">SetOuterBoundaryLoop</a></b>(<b><a href="Array.html">Array</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#SetOuterDomainLoop2D(Array)">SetOuterDomainLoop2D</a></b>(<b><a href="Array.html">Array</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#SetOuterDomainLoop3D(Array)">SetOuterDomainLoop3D</a></b>(<b><a href="Array.html">Array</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Shell.html#SplitAtAnalyticDiscontinuities()">SplitAtAnalyticDiscontinuities</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Shell.html#SplitPeriodicGeometry()">SplitPeriodicGeometry</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="mfMetaObject.html">mfMetaObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#copyOffset(Length)">copyOffset</a></b>(<b><a href="Length.html">Length</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>Plate</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#divide(mfRelationObject)">divide</a></b>(<b><a href="mfRelationObject.html">mfRelationObject</a></b><span title="curve to divide plate with"> curve</span>)</code>
+<div class="explanation">
+Divide a plate in two based on the input curve</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#divide(oriented_bbox3d, std::shared_ptr<mfNameMask>)">divide</a></b>(<b><a href="oriented_bbox3d.html">oriented_bbox3d</a></b><span title="bounding box to divide plate with"> boundingBox</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b>)</code>
+<div class="explanation">
+Divide a plate in multiple plates based on the input bounding box</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>Plate</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#divide(plane3d)">divide</a></b>(<b><a href="plane3d.html">plane3d</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#divide(plane3d, std::shared_ptr<mfNameMask>)">divide</a></b>(<b><a href="plane3d.html">plane3d</a></b>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b>)</code>
+<div class="explanation">
+Divide a plate by a plane into possibly multiple plates, if specified name mask provides enough free names.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>Plate</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#divideUnsafe(ModelObject)">divideUnsafe</a></b>(<b><a href="ModelObject.html">ModelObject</a></b>)</code>
+<div class="explanation">
+Deprecated, only for special compatibility issues. Use divide in stead</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#explode(std::shared_ptr<mfNameMask>)">explode</a></b>(<b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Controls the naming of the new concepts"> nameMask</span>)</code>
+<div class="explanation">
+Split structure into smaller parts</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#flipNormal()">flipNormal</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#flipNormalAwayFromPoint(Point)">flipNormalAwayFromPoint</a></b>(<b><a href="Point.html">Point</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#flipNormalTowardsPoint(Point)">flipNormalTowardsPoint</a></b>(<b><a href="Point.html">Point</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Shell.html#join(Plate)">join</a></b>(<b><a href="Plate.html">Plate</a></b> shell)</code>
+<div class="explanation">
+Joins two shells that has at least G1 continuity</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#lockMesh(...)">lockMesh</a></b>([ ...])</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#move3Point(Point, Point, Point, Point, Point, Point)">move3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> p4</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> p5</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> p6</span>)</code>
+<div class="explanation">
+Move the object from one coordinate system to another</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#move3Point(Point, Point, Point, Point, Point, Point, ConnectionType)">move3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> p4</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> p5</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> p6</span>, <b><a href="ConnectionType.html">ConnectionType</a></b><span title="Specify the connection type (geCONNECTED or geUNCONNECTED)"> connectionType</span>)</code>
+<div class="explanation">
+Move the object from one coordinate system to another</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveMirror(Point, LengthVector3d)">moveMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveMirror(Point, LengthVector3d, ConnectionType)">moveMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>, <b><a href="ConnectionType.html">ConnectionType</a></b><span title="Specify the connection type (geCONNECTED or geUNCONNECTED)"> connectionType</span>)</code>
+<div class="explanation">
+Mirror the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#moveOffset(Length)">moveOffset</a></b>(<b><a href="Length.html">Length</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveRotate(Point, LengthVector3d, Angle)">moveRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveRotate(Point, LengthVector3d, Angle, ConnectionType)">moveRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b><a href="ConnectionType.html">ConnectionType</a></b><span title="Specify the connection type (geCONNECTED or geUNCONNECTED)"> connectionType</span>)</code>
+<div class="explanation">
+Rotate the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveTransform(Transformation3d)">moveTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general transformation to the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveTransform(Transformation3d, ConnectionType)">moveTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>, <b><a href="ConnectionType.html">ConnectionType</a></b><span title="Specify the connection type (geCONNECTED or geUNCONNECTED)"> connectionType</span>)</code>
+<div class="explanation">
+Apply a general transformation to the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveTranslate(LengthVector3d)">moveTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveTranslate(LengthVector3d, ConnectionType)">moveTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b><a href="ConnectionType.html">ConnectionType</a></b><span title="Specify the connection type (geCONNECTED or geUNCONNECTED)"> connectionType</span>)</code>
+<div class="explanation">
+Translate this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="LengthVector3d.html">LengthVector3d</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Shell.html#normal(Point)">normal</a></b>(<b><a href="Point.html">Point</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>BasicConcept</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#offset(Length)">offset</a></b>(<b><a href="Length.html">Length</a></b><span title="distance"> distance</span>)</code>
+<div class="explanation">
+Apply an offset transformation to the object</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Shell.html#project(Point)">project</a></b>(<b><a href="Point.html">Point</a></b> in)</code>
+<div class="explanation">
+Project the point <code>in</code> onto the plate</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#rotateLocalX(Angle)">rotateLocalX</a></b>(<b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotates the local coordinate system about the X axis. </div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#rotateLocalY(Angle)">rotateLocalY</a></b>(<b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotates the local coordinate system about the Y axis. </div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#rotateLocalZ(Angle)">rotateLocalZ</a></b>(<b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotates the local coordinate system about the Y axis. </div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#setLocalX(LengthVector3d)">setLocalX</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="direction vector indicating local x"> xvector</span>)</code>
+<div class="explanation">
+Set the local x-direction.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#setLocalY(LengthVector3d)">setLocalY</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="direction vector indicating local y"> yvector</span>)</code>
+<div class="explanation">
+Set the local y-direction.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#setLocalZ(LengthVector3d)">setLocalZ</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="direction vector indicating local z"> zvector</span>)</code>
+<div class="explanation">
+Set the local z-direction.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Shell.html#setLocalZ(Point, LengthVector3d)">setLocalZ</a></b>(<b><a href="Point.html">Point</a></b>, <b><a href="LengthVector3d.html">LengthVector3d</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Shell.html#setNoMassDensityFactor()">setNoMassDensityFactor</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#setNoMaterial()">setNoMaterial</a></b>()</code>
+<div class="explanation">
+Remove material assignment</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#setNoMeshDensity()">setNoMeshDensity</a></b>()</code>
+<div class="explanation">
+Remove mesh density assignment</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#setNoMeshOption()">setNoMeshOption</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#setNoMeshProperty()">setNoMeshProperty</a></b>()</code>
+<div class="explanation">
+Remove mesh property assignment</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#setNoPermeability()">setNoPermeability</a></b>()</code>
+<div class="explanation">
+Remove permeability property</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#setNoPlateType()">setNoPlateType</a></b>()</code>
+<div class="explanation">
+Remove plateType property</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#setNoStructureType()">setNoStructureType</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Plate.html#setNoThickness()">setNoThickness</a></b>()</code>
+<div class="explanation">
+Remove plate thickness</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#simplifyTopology()">simplifyTopology</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#unLockMesh()">unLockMesh</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copy3Point(Point, Point, Point, Point, Point, Point)">copy3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> sp1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> sp2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> sp3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> dp1</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> dp2</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> dp3</span>)</code>
+<div class="explanation">
+Copy the object without scaling from one location to another.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyMirror(Point, LengthVector3d)">copyMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int, std::shared_ptr<mfNameMask>)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyScale(double, Point)">copyScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Scale a copy of the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTransform(Transformation3d)">copyTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general transformation to a copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate a copy of this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int, std::shared_ptr<mfNameMask>)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#move3Point(Point, Point, Point, Point, Point, Point)">move3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> p4</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> p5</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> p6</span>)</code>
+<div class="explanation">
+Move the object from one coordinate system to another</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveMirror(Point, LengthVector3d)">moveMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveRotate(Point, LengthVector3d, Angle)">moveRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveScale(double, Point)">moveScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Move and scale the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTransform(Transformation3d)">moveTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general selection to the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTranslate(LengthVector3d)">moveTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="unsigned___int64.html">unsigned __int64</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Plate.html#SegmentCount()">SegmentCount</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Area.html">Area</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Plate.html#area()">area</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="SideBack.html">SideBack</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Plate.html#back()">back</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BasicConcept.html#centreOfGravity()">centreOfGravity</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="SideFront.html">SideFront</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Plate.html#front()">front</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geCONNECTED()">geCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use connected move</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geUNCONNECTED()">geUNCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use unconnected move</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LocalSystem.html">LocalSystem</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BasicConcept.html#localSystem()">localSystem</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Gets or sets the local coordinate system.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Mass.html">Mass</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BasicConcept.html#mass()">mass</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="MassDensityFactor.html">MassDensityFactor</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Shell.html#massDensityFactor()">massDensityFactor</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Material.html">Material</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BasicConcept.html#material()">material</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Material</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="MeshDensity.html">MeshDensity</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BasicConcept.html#meshDensity()">meshDensity</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Mesh density</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="MeshOptionFace.html">MeshOptionFace</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Plate.html#meshOption()">meshOption</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Permeable.html">Permeable</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Plate.html#permeability()">permeability</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Permeability property</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="PlateType.html">PlateType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Plate.html#plateType()">plateType</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+plateType property</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>int</b></code>
+</td>
+<td width="90%"><code><b><a href="BasicConcept.html#primitivePartCount()">primitivePartCount</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="StructureType.html">StructureType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Plate.html#structureType()">structureType</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="prThickness.html">prThickness</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Plate.html#thickness()">thickness</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Plate thickness</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="CoverCurves(...)"></a>
+<h3>CoverCurves</h3>
+<p class="function">
+<b>CoverCurves</b>([ ...])</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Generic cover curves functionality.CoverCurves has two modi: <br>- Cover planar curve: Create a complex set of curves making up a closed loop. CoverCurves will create a surface that fits the loop <br>- Skinning with guide curves: Create a set of skinning curves (may be of arbitrary complexity, but G1. Create simple Guide Curves that pass through all the skinning curves (defines the internal topology + bounding curve) <br>The skinning curves may not intersect. <br>The simple Guide Curves may not intersect. <br><br>The curves are analyzed internally, so the order which they are passed to CoverCurves is arbitrary.
+</dl>
+<hr>
+
+<a name="CoverCurves(Array)"></a>
+<h3>CoverCurves</h3>
+<p class="function">
+<b>CoverCurves</b>(<b><a href="Array.html">Array</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Generic cover curves functionality.CoverCurves has two modi: <br>- Cover planar curve: Create a complex set of curves making up a closed loop. CoverCurves will create a surface that fits the loop <br>- Skinning with guide curves: Create a set of skinning curves (may be of arbitrary complexity, but G1. Create simple Guide Curves that pass through all the skinning curves (defines the internal topology + bounding curve) <br>The skinning curves may not intersect. <br>The simple Guide Curves may not intersect. <br><br>The curves are analyzed internally, so the order which they are passed to CoverCurves is arbitrary.
+</dl>
+<hr>
+
+<a name="CreateBSplineSurface(PointSet, Array, Array, int, int)"></a>
+<h3>CreateBSplineSurface</h3>
+<p class="function">
+<b>CreateBSplineSurface</b>(<b><a href="PointSet.html">PointSet</a></b>, <b><a href="Array.html">Array</a></b>, <b><a href="Array.html">Array</a></b>, <b>int</b>, <b>int</b>)</p>
+<p>
+<hr>
+
+<a name="CreateBSplineSurface(PointSet, Array, Array, int, int, Array)"></a>
+<h3>CreateBSplineSurface</h3>
+<p class="function">
+<b>CreateBSplineSurface</b>(<b><a href="PointSet.html">PointSet</a></b>, <b><a href="Array.html">Array</a></b>, <b><a href="Array.html">Array</a></b>, <b>int</b>, <b>int</b>, <b><a href="Array.html">Array</a></b>)</p>
+<p>
+<hr>
+
+<a name="CreateBSplineSurfaceUniformKnotVectors(PointSet, int, int)"></a>
+<h3>CreateBSplineSurfaceUniformKnotVectors</h3>
+<p class="function">
+<b>CreateBSplineSurfaceUniformKnotVectors</b>(<b><a href="PointSet.html">PointSet</a></b>, <b>int</b>, <b>int</b>)</p>
+<p>
+<hr>
+
+<a name="CreateGordonCoonsSurface(Array, Array)"></a>
+<h3>CreateGordonCoonsSurface</h3>
+<p class="function">
+<b>CreateGordonCoonsSurface</b>(<b><a href="Array.html">Array</a></b> uCurves, <b><a href="Array.html">Array</a></b> vCurves)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a surface which interpolates a net of curves in u and v parametric directionsThe curves must occur in the correct order and satisfy the compatibility conditions. A single point can be used as the start or end curve.
+</dl>
+<hr>
+
+<a name="CreateRationalBSplineSurface(PointSet, Array, Array, Array, int, int)"></a>
+<h3>CreateRationalBSplineSurface</h3>
+<p class="function">
+<b>CreateRationalBSplineSurface</b>(<b><a href="PointSet.html">PointSet</a></b>, <b><a href="Array.html">Array</a></b>, <b><a href="Array.html">Array</a></b>, <b><a href="Array.html">Array</a></b>, <b>int</b>, <b>int</b>)</p>
+<p>
+<hr>
+
+<a name="CreateRationalBSplineSurface(PointSet, Array, Array, Array, int, int, Array)"></a>
+<h3>CreateRationalBSplineSurface</h3>
+<p class="function">
+<b>CreateRationalBSplineSurface</b>(<b><a href="PointSet.html">PointSet</a></b>, <b><a href="Array.html">Array</a></b>, <b><a href="Array.html">Array</a></b>, <b><a href="Array.html">Array</a></b>, <b>int</b>, <b>int</b>, <b><a href="Array.html">Array</a></b>)</p>
+<p>
+<hr>
+
+<a name="CreateShellCircularConeCylinder(Point, Length, Point, Length, double, double)"></a>
+<h3>CreateShellCircularConeCylinder</h3>
+<p class="function">
+<b>CreateShellCircularConeCylinder</b>(<b><a href="Point.html">Point</a></b>, <b><a href="Length.html">Length</a></b>, <b><a href="Point.html">Point</a></b>, <b><a href="Length.html">Length</a></b>, <b>double</b>, <b>double</b>)</p>
+<p>
+<hr>
+
+<a name="CreateShellEllipticConeCylinder(Point, Point, Point, double, Point, double, double, double)"></a>
+<h3>CreateShellEllipticConeCylinder</h3>
+<p class="function">
+<b>CreateShellEllipticConeCylinder</b>(<b><a href="Point.html">Point</a></b>, <b><a href="Point.html">Point</a></b>, <b><a href="Point.html">Point</a></b>, <b>double</b>, <b><a href="Point.html">Point</a></b>, <b>double</b>, <b>double</b>, <b>double</b>)</p>
+<p>
+<hr>
+
+<a name="CreateShellFiniteElement(Array)"></a>
+<h3>CreateShellFiniteElement</h3>
+<p class="function">
+<b>CreateShellFiniteElement</b>(<b><a href="Array.html">Array</a></b> arrayOfPoints)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reconstructs the FEM surface from a list of points
+</dl>
+<hr>
+
+<a name="CreateShellLinearGordonCoons(ggGuideCurve, ggGuideCurve, ggGuideCurve, ggGuideCurve)"></a>
+<h3>CreateShellLinearGordonCoons</h3>
+<p class="function">
+<b>CreateShellLinearGordonCoons</b>(<b><a href="ggGuideCurve.html">ggGuideCurve</a></b> q0, <b><a href="ggGuideCurve.html">ggGuideCurve</a></b> q1, <b><a href="ggGuideCurve.html">ggGuideCurve</a></b> r0, <b><a href="ggGuideCurve.html">ggGuideCurve</a></b> r1)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Constructs a linearly blended Gordon-Coons surface from two couples of curves
+</dl>
+<hr>
+
+<a name="CreateShellLinearMultiSidedHoleFilling(Array, RadialCurveType)"></a>
+<h3>CreateShellLinearMultiSidedHoleFilling</h3>
+<p class="function">
+<b>CreateShellLinearMultiSidedHoleFilling</b>(<b><a href="Array.html">Array</a></b> arrayOfCurves, <b><a href="RadialCurveType.html">RadialCurveType</a></b> typeOfRadialCurves)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Constructs n linearly blended Gordon Coons patches to cover an n-sided hole
+</dl>
+<hr>
+
+<a name="CreateShellLinearSkinning(ggGuideCurve, ggGuideCurve)"></a>
+<h3>CreateShellLinearSkinning</h3>
+<p class="function">
+<b>CreateShellLinearSkinning</b>(<b><a href="ggGuideCurve.html">ggGuideCurve</a></b> curve1, <b><a href="ggGuideCurve.html">ggGuideCurve</a></b> curve2)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Constructs a linearly blended skinning surface from two curves
+</dl>
+<hr>
+
+<a name="CreateShellLinearThreeSidedHoleFilling(ggGuideCurve, ggGuideCurve, ggGuideCurve)"></a>
+<h3>CreateShellLinearThreeSidedHoleFilling</h3>
+<p class="function">
+<b>CreateShellLinearThreeSidedHoleFilling</b>(<b><a href="ggGuideCurve.html">ggGuideCurve</a></b> curve1, <b><a href="ggGuideCurve.html">ggGuideCurve</a></b> curve2, <b><a href="ggGuideCurve.html">ggGuideCurve</a></b> curve3)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Constructs three linearly blended Gordon-Coons patches to cover a three sided hole
+</dl>
+<hr>
+
+<a name="CreateShellPipeSurface(ggGuideCurve, Length, double, double)"></a>
+<h3>CreateShellPipeSurface</h3>
+<p class="function">
+<b>CreateShellPipeSurface</b>(<b><a href="ggGuideCurve.html">ggGuideCurve</a></b>, <b><a href="Length.html">Length</a></b>, <b>double</b>, <b>double</b>)</p>
+<p>
+<hr>
+
+<a name="CreateShellSphere(Point, Length, LengthVector3d, double, double, double, double)"></a>
+<h3>CreateShellSphere</h3>
+<p class="function">
+<b>CreateShellSphere</b>(<b><a href="Point.html">Point</a></b>, <b><a href="Length.html">Length</a></b>, <b><a href="LengthVector3d.html">LengthVector3d</a></b>, <b>double</b>, <b>double</b>, <b>double</b>, <b>double</b>)</p>
+<p>
+<hr>
+
+<a name="CreateShellSurfaceOfRevolution(ggGuideCurve, Point, Point, double, double)"></a>
+<h3>CreateShellSurfaceOfRevolution</h3>
+<p class="function">
+<b>CreateShellSurfaceOfRevolution</b>(<b><a href="ggGuideCurve.html">ggGuideCurve</a></b>, <b><a href="Point.html">Point</a></b>, <b><a href="Point.html">Point</a></b>, <b>double</b>, <b>double</b>)</p>
+<p>
+<hr>
+
+<a name="CreateShellTranslationalSurface(ggGuideCurve, LengthVector3d)"></a>
+<h3>CreateShellTranslationalSurface</h3>
+<p class="function">
+<b>CreateShellTranslationalSurface</b>(<b><a href="ggGuideCurve.html">ggGuideCurve</a></b>, <b><a href="LengthVector3d.html">LengthVector3d</a></b>)</p>
+<p>
+<hr>
+
+<a name="CreateShellTranslationalSurface(ggGuideCurve, ggGuideCurve)"></a>
+<h3>CreateShellTranslationalSurface</h3>
+<p class="function">
+<b>CreateShellTranslationalSurface</b>(<b><a href="ggGuideCurve.html">ggGuideCurve</a></b>, <b><a href="ggGuideCurve.html">ggGuideCurve</a></b>)</p>
+<p>
+<hr>
+
+<a name="CreateSkinningSurface(Array)"></a>
+<h3>CreateSkinningSurface</h3>
+<p class="function">
+<b>CreateSkinningSurface</b>(<b><a href="Array.html">Array</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a shell based on 2 or more curves.The surface will be an interpolation between the curves. The curves must occur in the correct order. Use CoverCurves if you want to control the boundary curve. A point can be used as the start or end curve of a skinning operation.
+</dl>
+<hr>
+
+<a name="CreateThreeSidedHoleFilling(ggGuideCurve, ggGuideCurve, ggGuideCurve)"></a>
+<h3>CreateThreeSidedHoleFilling</h3>
+<p class="function">
+<b>CreateThreeSidedHoleFilling</b>(<b><a href="ggGuideCurve.html">ggGuideCurve</a></b> Curve1, <b><a href="ggGuideCurve.html">ggGuideCurve</a></b> Curve2, <b><a href="ggGuideCurve.html">ggGuideCurve</a></b> Curve3)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a triangular surface which interpolates three curves forming a holeThe curves must satisfy the compatibility conditions (intersect).
+</dl>
+<hr>
+
+<a name="FitSurfaceToRectangularNet(PointSet, Length)"></a>
+<h3>FitSurfaceToRectangularNet</h3>
+<p class="function">
+<b>FitSurfaceToRectangularNet</b>(<b><a href="PointSet.html">PointSet</a></b>, <b><a href="Length.html">Length</a></b>)</p>
+<p>
+<hr>
+
+<a name="InterpolateCurveNet(Array, Array)"></a>
+<h3>InterpolateCurveNet</h3>
+<p class="function">
+<b>InterpolateCurveNet</b>(<b><a href="Array.html">Array</a></b> uCurves, <b><a href="Array.html">Array</a></b> vCurves)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a surface which interpolates a net of curves in u and v parametric directionsThe curves must occur in the correct order and satisfy the compatibility conditions. A single point can be used as the start or end curve.
+</dl>
+<hr>
+
+<a name="InterpolateRectangularNet(PointSet)"></a>
+<h3>InterpolateRectangularNet</h3>
+<p class="function">
+<b>InterpolateRectangularNet</b>(<b><a href="PointSet.html">PointSet</a></b>)</p>
+<p>
+<hr>
+
+<a name="InterpolateRectangularNetShapePreserving(PointSet, RepresentationContinuityOrder)"></a>
+<h3>InterpolateRectangularNetShapePreserving</h3>
+<p class="function">
+<b>InterpolateRectangularNetShapePreserving</b>(<b><a href="PointSet.html">PointSet</a></b>, <b><a href="RepresentationContinuityOrder.html">RepresentationContinuityOrder</a></b>)</p>
+<p>
+<hr>
+
+<a name="InterpolateRectangularNetShapePreserving(PointSet, SplineParameterizationType, SplineParameterizationType, RepresentationContinuityOrder)"></a>
+<h3>InterpolateRectangularNetShapePreserving</h3>
+<p class="function">
+<b>InterpolateRectangularNetShapePreserving</b>(<b><a href="PointSet.html">PointSet</a></b>, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b>, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b>, <b><a href="RepresentationContinuityOrder.html">RepresentationContinuityOrder</a></b>)</p>
+<p>
+<hr>
+
+<a name="LoftCurves(Array, Plate)"></a>
+<h3>LoftCurves</h3>
+<p class="function">
+<b>LoftCurves</b>(<b><a href="Array.html">Array</a></b>, <b><a href="Plate.html">Plate</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a shell based on 2 or more curves and a guide plate.The surface will be an interpolation between the curves with G1 continuity with the plate. The curves must occur in the correct order. The plate must coincide with the last curve.
+</dl>
+<hr>
+
+<a name="LoftCurves(Plate, Array)"></a>
+<h3>LoftCurves</h3>
+<p class="function">
+<b>LoftCurves</b>(<b><a href="Plate.html">Plate</a></b>, <b><a href="Array.html">Array</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a shell based on 2 or more curves and a guide plate.The surface will be an interpolation between the curves with G1 continuity with the plate. The curves must occur in the correct order. The plate must coincide with the first curve.
+</dl>
+<hr>
+
+<a name="LoftCurves(Plate, Array, Plate)"></a>
+<h3>LoftCurves</h3>
+<p class="function">
+<b>LoftCurves</b>(<b><a href="Plate.html">Plate</a></b>, <b><a href="Array.html">Array</a></b>, <b><a href="Plate.html">Plate</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a shell based on 2 or more curves and two guide plates.The surface will be an interpolation between the curves with G1 continuity with the plates. The curves must occur in the correct order. The first plate must coincide with the first curve. The last plate must coincide with the last curve.
+</dl>
+<hr>
+
+<a name="SkinCurves(...)"></a>
+<h3>SkinCurves</h3>
+<p class="function">
+<b>SkinCurves</b>([ ...])</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a shell based on 2 or more curves.The surface will be an interpolation between the curves. The curves must occur in the correct order. Use CoverCurves if you want to control the boundary curve. A point can be used as the start or end curve of a skinning operation.
+</dl>
+<hr>
+
+<a name="SkinCurves(Array)"></a>
+<h3>SkinCurves</h3>
+<p class="function">
+<b>SkinCurves</b>(<b><a href="Array.html">Array</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a shell based on 2 or more curves.The surface will be an interpolation between the curves. The curves must occur in the correct order. Use CoverCurves if you want to control the boundary curve. A point can be used as the start or end curve of a skinning operation.
+</dl>
+<hr>
+
+<a name="SweepCurve(Variant, Variant)"></a>
+<h3>SweepCurve</h3>
+<p class="function">
+<b>SweepCurve</b>(<b><a href="Variant.html">Variant</a></b> profile, <b><a href="Variant.html">Variant</a></b> path)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Sweep profile along path to create a surface
+</dl>
+<hr>
+
+<a name="SweepCurve(Variant, Variant, UseTolerantModellingMode)"></a>
+<h3>SweepCurve</h3>
+<p class="function">
+<b>SweepCurve</b>(<b><a href="Variant.html">Variant</a></b> profile, <b><a href="Variant.html">Variant</a></b> path, <b><a href="UseTolerantModellingMode.html">UseTolerantModellingMode</a></b> useOfTolerantModelling)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Sweep profile along path to create a surface
+</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="ConvertCurvedShellToFlatPlate()"></a>
+<h3>ConvertCurvedShellToFlatPlate</h3>
+<p class="function">
+<b>&nbsp;</b> <b>ConvertCurvedShellToFlatPlate</b>()</p>
+<p>
+<hr>
+
+<a name="MaxDistance(Array)"></a>
+<h3>MaxDistance</h3>
+<p class="function">
+<b>double</b> <b>MaxDistance</b>(<b><a href="Array.html">Array</a></b>)</p>
+<p>
+<hr>
+
+<a name="SplitAtAnalyticDiscontinuities()"></a>
+<h3>SplitAtAnalyticDiscontinuities</h3>
+<p class="function">
+<b>&nbsp;</b> <b>SplitAtAnalyticDiscontinuities</b>()</p>
+<p>
+<hr>
+
+<a name="SplitPeriodicGeometry()"></a>
+<h3>SplitPeriodicGeometry</h3>
+<p class="function">
+<b>&nbsp;</b> <b>SplitPeriodicGeometry</b>()</p>
+<p>
+<hr>
+
+<a name="join(Plate)"></a>
+<h3>join</h3>
+<p class="function">
+<b>&nbsp;</b> <b>join</b>(<b><a href="Plate.html">Plate</a></b> shell)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Joins two shells that has at least G1 continuity
+</dl>
+<hr>
+
+<a name="normal(Point)"></a>
+<h3>normal</h3>
+<p class="function">
+<b><a href="LengthVector3d.html">LengthVector3d</a></b> <b>normal</b>(<b><a href="Point.html">Point</a></b>)</p>
+<p>
+<hr>
+
+<a name="project(Point)"></a>
+<h3>project</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>project</b>(<b><a href="Point.html">Point</a></b> in)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Project the point <code>in</code> onto the plate
+</dl>
+<dl>
+<dt>Returns:</dt>
+<dd>
+</dl>
+<hr>
+
+<a name="setLocalZ(Point, LengthVector3d)"></a>
+<h3>setLocalZ</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setLocalZ</b>(<b><a href="Point.html">Point</a></b>, <b><a href="LengthVector3d.html">LengthVector3d</a></b>)</p>
+<p>
+<hr>
+
+<a name="setNoMassDensityFactor()"></a>
+<h3>setNoMassDensityFactor</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoMassDensityFactor</b>()</p>
+<p>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="massDensityFactor()"></a>
+<h3>massDensityFactor</h3>
+<p class="function">
+<b><a href="MassDensityFactor.html">MassDensityFactor</a></b> <b>massDensityFactor</b>()</p>
+<p>
+</body>
+</html>

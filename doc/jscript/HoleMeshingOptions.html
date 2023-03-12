@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: HoleMeshingOptions
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: HoleMeshingOptions
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<hr/>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>HoleMeshingOptions</b></code>
+</td>
+<td width="90%"><code><b><a href="HoleMeshingOptions.html#hmIgnoreHole()">hmIgnoreHole</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Holes with this option will be ignored during meshing. No trace of them will remain on the mesh.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>HoleMeshingOptions</b></code>
+</td>
+<td width="90%"><code><b><a href="HoleMeshingOptions.html#hmMeshHole()">hmMeshHole</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Holes with this option will be meshed. The number of layers chosen ensures at least that number of perfect offset layers around the hole.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>HoleMeshingOptions</b></code>
+</td>
+<td width="90%"><code><b><a href="HoleMeshingOptions.html#hmRemoveElementsByAreaFraction()">hmRemoveElementsByAreaFraction</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Holes with this option will be ignored during meshing. After mesh is complete, elements whose intersection with the hole has area fraction larger than threshold value will be removed automatically.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>HoleMeshingOptions</b></code>
+</td>
+<td width="90%"><code><b><a href="HoleMeshingOptions.html#hmRemoveElementsFromInsideHole()">hmRemoveElementsFromInsideHole</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Holes with this option will be ignored during meshing. After mesh is complete, elements with centroid inside the hole will be removed automatically.</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="hmIgnoreHole()"></a>
+<h3>hmIgnoreHole</h3>
+<p class="function">
+<b>HoleMeshingOptions</b> <b>hmIgnoreHole</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Holes with this option will be ignored during meshing. No trace of them will remain on the mesh.
+</dl>
+<a name="hmMeshHole()"></a>
+<h3>hmMeshHole</h3>
+<p class="function">
+<b>HoleMeshingOptions</b> <b>hmMeshHole</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Holes with this option will be meshed. The number of layers chosen ensures at least that number of perfect offset layers around the hole.
+</dl>
+<a name="hmRemoveElementsByAreaFraction()"></a>
+<h3>hmRemoveElementsByAreaFraction</h3>
+<p class="function">
+<b>HoleMeshingOptions</b> <b>hmRemoveElementsByAreaFraction</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Holes with this option will be ignored during meshing. After mesh is complete, elements whose intersection with the hole has area fraction larger than threshold value will be removed automatically.
+</dl>
+<a name="hmRemoveElementsFromInsideHole()"></a>
+<h3>hmRemoveElementsFromInsideHole</h3>
+<p class="function">
+<b>HoleMeshingOptions</b> <b>hmRemoveElementsFromInsideHole</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Holes with this option will be ignored during meshing. After mesh is complete, elements with centroid inside the hole will be removed automatically.
+</dl>
+</body>
+</html>

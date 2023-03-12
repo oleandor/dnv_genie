@@ -1,0 +1,2134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: GuideNURBS
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: GuideNURBS
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Represent any curve in NURBS form
+</dl>
+<dl>
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="Transformable.html">Transformable</a>
+            |
+            +--<a href="GuideCurve.html">GuideCurve</a>
+                 |
+                 +--<b>GuideNURBS</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#ComputeMinimalPath(Array, bool)">ComputeMinimalPath</a></b>(<b><a href="Array.html">Array</a></b> arrayOfPoints, <b>bool</b>)</code>
+<div class="explanation">
+Creates a curve on the edges of the model from a list of points, with minimal length</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateBSpline(Array, Array, int)">CreateBSpline</a></b>(<b><a href="Array.html">Array</a></b> controlPoints, <b><a href="Array.html">Array</a></b> knotVector, <b>int</b> degree)</code>
+<div class="explanation">
+Creates a b-spline curve by giving its control-points, knot-vector and degree.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateBSplineUniformKnotVector(Array, int)">CreateBSplineUniformKnotVector</a></b>(<b><a href="Array.html">Array</a></b> controlPoints, <b>int</b> degree)</code>
+<div class="explanation">
+Creates a b-spline curve by giving its control-points and degree. The knot vector is assumed to be uniform.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateBezierCurveFromTwoPointsAndNormals(Point, Point, LengthVector3d, LengthVector3d, SplineParameterizationType)">CreateBezierCurveFromTwoPointsAndNormals</a></b>(<b><a href="Point.html">Point</a></b> point1, <b><a href="Point.html">Point</a></b> point2, <b><a href="LengthVector3d.html">LengthVector3d</a></b> normal1, <b><a href="LengthVector3d.html">LengthVector3d</a></b> normal2, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b> parameterizationType)</code>
+<div class="explanation">
+Creates a cubic polynomial interpolating two given points and the normal vectors on them.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateBezierJoiningTwoCurves(GuideCurve, Point, GuideCurve, Point, SplineParameterizationType)">CreateBezierJoiningTwoCurves</a></b>(<b><a href="GuideCurve.html">GuideCurve</a></b> curve1, <b><a href="Point.html">Point</a></b> pointOnCurve1, <b><a href="GuideCurve.html">GuideCurve</a></b> curve2, <b><a href="Point.html">Point</a></b> pointOnCurve2, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b> parameterizationType)</code>
+<div class="explanation">
+Creates a polynomial to join smoothly two given curves.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateCircleFromCenterAndRadius(Point, Point, Point)">CreateCircleFromCenterAndRadius</a></b>(<b><a href="Point.html">Point</a></b> centerPoint, <b><a href="Point.html">Point</a></b> radiusPoint, <b><a href="Point.html">Point</a></b> planePoint)</code>
+<div class="explanation">
+Creates a circle from its center and radius and a third point to define the plane of the circle.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateCircleFromPlaneAndRadius(Point, LengthVector3d, Length)">CreateCircleFromPlaneAndRadius</a></b>(<b><a href="Point.html">Point</a></b> centerPoint, <b><a href="LengthVector3d.html">LengthVector3d</a></b> normalVector, <b><a href="Length.html">Length</a></b> radius)</code>
+<div class="explanation">
+Creates a circle from its center and normal to define the plane of the circle and the radius.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateCircleFromThreePoints(Point, Point, Point)">CreateCircleFromThreePoints</a></b>(<b><a href="Point.html">Point</a></b> point1, <b><a href="Point.html">Point</a></b> point2, <b><a href="Point.html">Point</a></b> point3)</code>
+<div class="explanation">
+Creates a circle, which interpolates the three given points.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateCircularArcFromThreePoints(Point, Point, Point)">CreateCircularArcFromThreePoints</a></b>(<b><a href="Point.html">Point</a></b> point1, <b><a href="Point.html">Point</a></b> point2, <b><a href="Point.html">Point</a></b> point3)</code>
+<div class="explanation">
+Creates a circular arc, which interpolates the three given points.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateCircularArcFromThreePointsAndRadius(Point, Point, Length, Point)">CreateCircularArcFromThreePointsAndRadius</a></b>(<b><a href="Point.html">Point</a></b> point1, <b><a href="Point.html">Point</a></b> point2, <b><a href="Length.html">Length</a></b> radius, <b><a href="Point.html">Point</a></b> point3)</code>
+<div class="explanation">
+Creates a circular arc between the first two points and its radius. The third point defines the plane.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateCircularFillet(GuideCurve, Point, GuideCurve, Point, Length)">CreateCircularFillet</a></b>(<b><a href="GuideCurve.html">GuideCurve</a></b> curve1, <b><a href="Point.html">Point</a></b> pointOnCurve1, <b><a href="GuideCurve.html">GuideCurve</a></b> curve2, <b><a href="Point.html">Point</a></b> pointOnCurve2, <b><a href="Length.html">Length</a></b> radius)</code>
+<div class="explanation">
+Creates a circular arc of given radius connecting smoothly two curves.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateCircularFilletBetweenLinearSegments(GuideCurve, Point, GuideCurve, Point, Length)">CreateCircularFilletBetweenLinearSegments</a></b>(<b><a href="GuideCurve.html">GuideCurve</a></b> curve1, <b><a href="Point.html">Point</a></b> pointOnCurve1, <b><a href="GuideCurve.html">GuideCurve</a></b> curve2, <b><a href="Point.html">Point</a></b> pointOnCurve2, <b><a href="Length.html">Length</a></b> radius)</code>
+<div class="explanation">
+Creates a circular arc of given radius connecting smoothly two linear segments of spline curves.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateCubicSpline(Array, bool, LengthVector3d, LengthVector3d, SplineParameterizationType)">CreateCubicSpline</a></b>(<b><a href="Array.html">Array</a></b> arrayOfPoints, <b>bool</b> isPeriodic, <b><a href="LengthVector3d.html">LengthVector3d</a></b> startTangent, <b><a href="LengthVector3d.html">LengthVector3d</a></b> endTangent, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b> parameterizationType)</code>
+<div class="explanation">
+Creates a cubic spline by interpolating an ordered set of points.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateCubicSplineFromPolyline(GuideCurve, LengthVector3d, LengthVector3d, Length)">CreateCubicSplineFromPolyline</a></b>(<b><a href="GuideCurve.html">GuideCurve</a></b> polyLine, <b><a href="LengthVector3d.html">LengthVector3d</a></b> startTangent, <b><a href="LengthVector3d.html">LengthVector3d</a></b> endTangent, <b><a href="Length.html">Length</a></b> tolerance)</code>
+<div class="explanation">
+Creates a cubic-spline to approximate the given poly-line.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateEllipseFromCenterAndAxesEnds(Point, Point, Point)">CreateEllipseFromCenterAndAxesEnds</a></b>(<b><a href="Point.html">Point</a></b> center, <b><a href="Point.html">Point</a></b> majorAxisEnd, <b><a href="Point.html">Point</a></b> minorAxisEnd)</code>
+<div class="explanation">
+Creates an ellipse from its center and its axes end points.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateEllipticArcFromCenterAndEndPoints(Point, Point, Point, bool)">CreateEllipticArcFromCenterAndEndPoints</a></b>(<b><a href="Point.html">Point</a></b> center, <b><a href="Point.html">Point</a></b> majorAxisEnd, <b><a href="Point.html">Point</a></b> arcEnd, <b>bool</b>)</code>
+<div class="explanation">
+Creates an elliptic arc from its center and its end points.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateEllipticArcFromPointTangentialToCurve(Point, GuideCurve, Point, bool)">CreateEllipticArcFromPointTangentialToCurve</a></b>(<b><a href="Point.html">Point</a></b> pointIn3D, <b><a href="GuideCurve.html">GuideCurve</a></b> curveIn3D, <b><a href="Point.html">Point</a></b> pointOnCurve, <b>bool</b> isShortArc)</code>
+<div class="explanation">
+Creates the quarter of an ellipse from the first given point and tangential to the given curve at the second given point which is on curve.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateHermiteCubicSpline(Array, bool, LengthVector3d, LengthVector3d, SplineParameterizationType)">CreateHermiteCubicSpline</a></b>(<b><a href="Array.html">Array</a></b> arrayOfPoints, <b>bool</b> isPeriodic, <b><a href="LengthVector3d.html">LengthVector3d</a></b> startTangent, <b><a href="LengthVector3d.html">LengthVector3d</a></b> endTangent, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b> parameterizationType)</code>
+<div class="explanation">
+Creates a Hermite cubic spline by interpolating an ordered set of points and tangent vectors on them. The tangent vectors are computed automatically.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateHermiteVDShapePreservingSpline(Array, bool, LengthVector3d, LengthVector3d, SplineParameterizationType)">CreateHermiteVDShapePreservingSpline</a></b>(<b><a href="Array.html">Array</a></b>, <b>bool</b>, <b><a href="LengthVector3d.html">LengthVector3d</a></b>, <b><a href="LengthVector3d.html">LengthVector3d</a></b>, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b>)</code>
+<div class="explanation">
+OBSOLETE</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateInterpolatingPolynomial(Array, SplineParameterizationType)">CreateInterpolatingPolynomial</a></b>(<b><a href="Array.html">Array</a></b> arrayOfPoints, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b> parameterizationType)</code>
+<div class="explanation">
+Creates a polynomial to interpolate a set of ordered points.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateLineClosestToSelection(Point, Array)">CreateLineClosestToSelection</a></b>(<b><a href="Point.html">Point</a></b> givenPoint, <b><a href="Array.html">Array</a></b> arrayOfModelObjects)</code>
+<div class="explanation">
+Creates a linear segment from a given point, to a point on the selected objects, which is closest to the given one.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateLineFromPointNormalToSurface(Point, ModelObject)">CreateLineFromPointNormalToSurface</a></b>(<b><a href="Point.html">Point</a></b> LinearSegment1, <b><a href="ModelObject.html">ModelObject</a></b> LinearSegment2)</code>
+<div class="explanation">
+Creates a linear segment from a given point normal to a given surface.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateLineFromPointPerpendicularToCurve(Point, GuideCurve)">CreateLineFromPointPerpendicularToCurve</a></b>(<b><a href="Point.html">Point</a></b> point, <b><a href="GuideCurve.html">GuideCurve</a></b> guideCurve)</code>
+<div class="explanation">
+Creates a linear segment from a given point perpendicular to a given curve.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateLineFromPointTangentialToCurve(Point, GuideCurve)">CreateLineFromPointTangentialToCurve</a></b>(<b><a href="Point.html">Point</a></b> point, <b><a href="GuideCurve.html">GuideCurve</a></b> guideCurve)</code>
+<div class="explanation">
+Creates a linear segment from a given point tangential to a given curve.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateLineNormalFromSurface(ModelObject, Point, Point)">CreateLineNormalFromSurface</a></b>(<b><a href="ModelObject.html">ModelObject</a></b> plateOrShell, <b><a href="Point.html">Point</a></b> pointOnSurface, <b><a href="Point.html">Point</a></b> endPoint)</code>
+<div class="explanation">
+Creates a linear segment from a point on surface, normal to the surface.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateLineOfMinimumLengthFromTwoLines(GuideNURBS, GuideNURBS)">CreateLineOfMinimumLengthFromTwoLines</a></b>(<b>GuideNURBS</b>, <b>GuideNURBS</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateLineTangentFromCurve(GuideCurve, Point, Point)">CreateLineTangentFromCurve</a></b>(<b><a href="GuideCurve.html">GuideCurve</a></b> guideCurve, <b><a href="Point.html">Point</a></b> pointOnCurve, <b><a href="Point.html">Point</a></b> endPoint)</code>
+<div class="explanation">
+Creates a linear segment from a point on curve, tangential to the curve.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateLineTwoPoints(Point, Point)">CreateLineTwoPoints</a></b>(<b><a href="Point.html">Point</a></b> startPoint, <b><a href="Point.html">Point</a></b> endPoint)</code>
+<div class="explanation">
+Creates a linear segment from its two end points.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateModelCurve(Array)">CreateModelCurve</a></b>(<b><a href="Array.html">Array</a></b> arrayOfPoints)</code>
+<div class="explanation">
+Creates a model curve from a list of points</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateModelCurveFromTwoPoints(Point, Point)">CreateModelCurveFromTwoPoints</a></b>(<b><a href="Point.html">Point</a></b> startPoint, <b><a href="Point.html">Point</a></b> endPoint)</code>
+<div class="explanation">
+Creates a model curve from two points</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateModelCurveFromTwoPointsAccurate(Point, Point)">CreateModelCurveFromTwoPointsAccurate</a></b>(<b><a href="Point.html">Point</a></b> startPoint, <b><a href="Point.html">Point</a></b> endPoint)</code>
+<div class="explanation">
+Creates a model curve from two points and imposes ACIS tolerance in the extraction of the intersections</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateNURBS(Array, Array, Array, int)">CreateNURBS</a></b>(<b><a href="Array.html">Array</a></b> controlPoints, <b><a href="Array.html">Array</a></b> knotVector, <b><a href="Array.html">Array</a></b> weights, <b>int</b> degree)</code>
+<div class="explanation">
+Creates a rational b-spline curve by giving its control-points, knot-vector, weights and degree.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateNURBSFromObject(ModelObject)">CreateNURBSFromObject</a></b>(<b><a href="ModelObject.html">ModelObject</a></b> object1D)</code>
+<div class="explanation">
+Creates a NURBS curve from a beam, or a support curve or a feature edge.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreatePolylineFromASetOfPoints(Array)">CreatePolylineFromASetOfPoints</a></b>(<b><a href="Array.html">Array</a></b> arrayOfPoints)</code>
+<div class="explanation">
+Creates a poly-line by giving a list of ordered points.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreatePolylineFromCurve(GuideCurve, Length)">CreatePolylineFromCurve</a></b>(<b><a href="GuideCurve.html">GuideCurve</a></b> curve, <b><a href="Length.html">Length</a></b> tolerance)</code>
+<div class="explanation">
+Creates a poly-line approximating the given curve.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreatePolynomialFromPolyline(GuideCurve, int, LengthVector3d, LengthVector3d)">CreatePolynomialFromPolyline</a></b>(<b><a href="GuideCurve.html">GuideCurve</a></b> polyLine, <b>int</b> degree, <b><a href="LengthVector3d.html">LengthVector3d</a></b> startTangent, <b><a href="LengthVector3d.html">LengthVector3d</a></b> endTangent)</code>
+<div class="explanation">
+Creates a polynomial segment to approximate a poly-line.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateShapePreservingCubicSpline(Array, bool, LengthVector3d, LengthVector3d, SplineParameterizationType)">CreateShapePreservingCubicSpline</a></b>(<b><a href="Array.html">Array</a></b> arrayOfPoints, <b>bool</b> isPeriodic, <b><a href="LengthVector3d.html">LengthVector3d</a></b> startTangent, <b><a href="LengthVector3d.html">LengthVector3d</a></b> endTangent, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b> parameterizationType)</code>
+<div class="explanation">
+Creates a shape-preserving cubic spline by interpolating an ordered set of points.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateShortestCurveOnModelEdges(Point, Point)">CreateShortestCurveOnModelEdges</a></b>(<b><a href="Point.html">Point</a></b> startPoint, <b><a href="Point.html">Point</a></b> endPoint)</code>
+<div class="explanation">
+Creates a curve on the edges of the model from two points, with minimal length</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateShortestCurveOnModelEdges(Point, Point, bool)">CreateShortestCurveOnModelEdges</a></b>(<b><a href="Point.html">Point</a></b> startPoint, <b><a href="Point.html">Point</a></b> endPoint, <b>bool</b> isSmooth)</code>
+<div class="explanation">
+Creates a model-edge composite curve from two points</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateShortestCurveOnModelFaces(Point, Point, plane3d)">CreateShortestCurveOnModelFaces</a></b>(<b><a href="Point.html">Point</a></b> startPoint, <b><a href="Point.html">Point</a></b> endPoint, <b><a href="plane3d.html">plane3d</a></b> plane)</code>
+<div class="explanation">
+Creates a curve on the model from two points, with minimal length</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateShortestCurveOnModelFaces(Point, Point, double)">CreateShortestCurveOnModelFaces</a></b>(<b><a href="Point.html">Point</a></b> startPoint, <b><a href="Point.html">Point</a></b> endPoint, <b>double</b> tolerance)</code>
+<div class="explanation">
+Creates a shortest path on assembly faces from two points</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateShortestCurveOnModelFaces(ModelObject, Point, Point, double)">CreateShortestCurveOnModelFaces</a></b>(<b><a href="ModelObject.html">ModelObject</a></b> shell, <b><a href="Point.html">Point</a></b> startPoint, <b><a href="Point.html">Point</a></b> endPoint, <b>double</b> tolerance)</code>
+<div class="explanation">
+Creates a shortest path on assembly faces from two points and a shell</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateSurroundingCurveOfTwoCircles(Point, Length, Point, Length, Point)">CreateSurroundingCurveOfTwoCircles</a></b>(<b><a href="Point.html">Point</a></b> centerCircle1, <b><a href="Length.html">Length</a></b> radiusCircle1, <b><a href="Point.html">Point</a></b> centerCircle1, <b><a href="Length.html">Length</a></b> radiusCircle2, <b><a href="Point.html">Point</a></b> planePoint)</code>
+<div class="explanation">
+Creates the curve surrounding two circles.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateSurroundingPolygonalApproximation(Array, Length)">CreateSurroundingPolygonalApproximation</a></b>(<b><a href="Array.html">Array</a></b> arrayOfCurves, <b><a href="Length.html">Length</a></b> tolerance)</code>
+<div class="explanation">
+Creates the smallest convex polygon which encloses the polygonal approximations of the given curves.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#CreateVariableDegreeSpline(SplineType, Array, bool, LengthVector3d, LengthVector3d, SplineParameterizationType)">CreateVariableDegreeSpline</a></b>(<b><a href="SplineType.html">SplineType</a></b>, <b><a href="Array.html">Array</a></b>, <b>bool</b>, <b><a href="LengthVector3d.html">LengthVector3d</a></b>, <b><a href="LengthVector3d.html">LengthVector3d</a></b>, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b>)</code>
+<div class="explanation">
+OBSOLETE</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#GuideNURBS(GuideCurve)">GuideNURBS</a></b>(<b><a href="GuideCurve.html">GuideCurve</a></b> curve)</code>
+<div class="explanation">
+Converts any guiding curve to its NURBS form.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#Join(Array, bool)">Join</a></b>(<b><a href="Array.html">Array</a></b> ArrayOfCurves, <b>bool</b> ReparameterizeCurves)</code>
+<div class="explanation">
+Creates a NURBS curve by joining two or more given curves.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideNURBS.html#Join(GuideCurve, GuideCurve)">Join</a></b>(<b><a href="GuideCurve.html">GuideCurve</a></b> curve1, <b><a href="GuideCurve.html">GuideCurve</a></b> curve2)</code>
+<div class="explanation">
+Creates a NURBS curve by joining two given curves.</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#ActivateSnapPoints()">ActivateSnapPoints</a></b>()</code>
+<div class="explanation">
+Activates the snap points of the curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideNURBS</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#CurvatureFunction(int, double)">CurvatureFunction</a></b>(<b>int</b> numberOfPoints, <b>double</b> scalingFactor)</code>
+<div class="explanation">
+Creates a poly-line of a given number of points of the curvature of a NURBS curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideNURBS</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#CurvatureFunction2D(int, double)">CurvatureFunction2D</a></b>(<b>int</b> numberOfPoints, <b>double</b> scalingFactor)</code>
+<div class="explanation">
+Creates a poly-line of a given number of points of the 2D curvature of a (2D) NURBS curve.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#CurvatureRadius(Point)">CurvatureRadius</a></b>(<b><a href="Point.html">Point</a></b>)</code>
+<div class="explanation">
+Returns the curvature radius of a curve at a given point</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="LengthVector3d.html">LengthVector3d</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#CurvatureVector(Point)">CurvatureVector</a></b>(<b><a href="Point.html">Point</a></b>)</code>
+<div class="explanation">
+Returns the curvature vector of a curve at a given point</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#DeactivateSnapPoints()">DeactivateSnapPoints</a></b>()</code>
+<div class="explanation">
+Deactivates the snap points of the curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#ElevateDegree()">ElevateDegree</a></b>()</code>
+<div class="explanation">
+Elevates the degree of the curve by one.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#EvaluateAtLengthFraction(double)">EvaluateAtLengthFraction</a></b>(<b>double</b> lengthFraction)</code>
+<div class="explanation">
+Evaluates the curve at a given length-fraction.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#EvaluateAtLocalParameter(double)">EvaluateAtLocalParameter</a></b>(<b>double</b> localParameter)</code>
+<div class="explanation">
+Evaluates the curve at a given local-parametric value.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#EvaluateAtParameter(double)">EvaluateAtParameter</a></b>(<b>double</b> parameter)</code>
+<div class="explanation">
+Evaluates the curve at a given parametric value.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#FairC2CubicSplineKnotVectorPoint(int, Length)">FairC2CubicSplineKnotVectorPoint</a></b>(<b>int</b> knotIndex, <b><a href="Length.html">Length</a></b> tolerance)</code>
+<div class="explanation">
+Modifies one of the knot vector (interpolation) points of a NURBS curve making the curve fairer.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#FairC2CubicSpline_DegreeReduction(int, Length)">FairC2CubicSpline_DegreeReduction</a></b>(<b>int</b> knotIndex, <b><a href="Length.html">Length</a></b> tolerance)</code>
+<div class="explanation">
+Modifies one of the control points of a NURBS curve making the curve fairer.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#FairC2CubicSpline_KnotRemoval(int, Length)">FairC2CubicSpline_KnotRemoval</a></b>(<b>int</b> knotIndex, <b><a href="Length.html">Length</a></b> tolerance)</code>
+<div class="explanation">
+Modifies one of the control points of a NURBS curve making the curve fairer.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#FilletPolygonalEdges(Length)">FilletPolygonalEdges</a></b>(<b><a href="Length.html">Length</a></b>)</code>
+<div class="explanation">
+Smoothens the polygonal edges of the curve by filleting them with the given radius.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#GeometryToString()">GeometryToString</a></b>()</code>
+<div class="explanation">
+Returns analytic parameters of the curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideNURBS</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#GetControlPolygon()">GetControlPolygon</a></b>()</code>
+<div class="explanation">
+Creates a poly-line out of the control points of a NURBS curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#GetControlPolygonArray()">GetControlPolygonArray</a></b>()</code>
+<div class="explanation">
+Returns the array of the control points of a NURBS curve.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#GetCurveInformation()">GetCurveInformation</a></b>()</code>
+<div class="explanation">
+Returns the global properties of a curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#GetKnotVectorArray()">GetKnotVectorArray</a></b>()</code>
+<div class="explanation">
+Returns the array of knot-vector nodes of a NURBS curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#GetLocalParameter(Point)">GetLocalParameter</a></b>(<b><a href="Point.html">Point</a></b> point)</code>
+<div class="explanation">
+Returns the local-parameter of the curve for a given point on it.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#GetLowerBound()">GetLowerBound</a></b>()</code>
+<div class="explanation">
+Returns the lower bound of the parametric interval.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#GetMinimumDistanceFromLinearSegment(GuideNURBS)">GetMinimumDistanceFromLinearSegment</a></b>(<b>GuideNURBS</b> OtherLinearSegment)</code>
+<div class="explanation">
+Returns the minimum distance between two linear segments.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#GetMinimumDistancePointBetweenTwoLines(GuideNURBS)">GetMinimumDistancePointBetweenTwoLines</a></b>(<b>GuideNURBS</b> OtherLinearSegment)</code>
+<div class="explanation">
+Returns one point which minimizes the distance to both segments.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#GetNodalPointsArray()">GetNodalPointsArray</a></b>()</code>
+<div class="explanation">
+Returns the array of the nodal points (points on the knot-vector nodes) of a NURBS curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#GetParameter(Point)">GetParameter</a></b>(<b><a href="Point.html">Point</a></b> point)</code>
+<div class="explanation">
+Returns the parameter of the curve for a given point on it.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="plane3d.html">plane3d</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#GetPlane()">GetPlane</a></b>()</code>
+<div class="explanation">
+Returns the plane (if exists) on which the given curve lies.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#GetPointsOnEqualIntervals(int)">GetPointsOnEqualIntervals</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Returns an array of a given number of points on a NURBS curve distributed on equal parametric intervals on it.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#GetPointsOnEquidistantLengths(int)">GetPointsOnEquidistantLengths</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Returns an array of a given number of points on a NURBS curve distributed equidistantly on it.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#GetUpperBound()">GetUpperBound</a></b>()</code>
+<div class="explanation">
+Returns the upper bound of the parametric interval.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#GetWeightsArray()">GetWeightsArray</a></b>()</code>
+<div class="explanation">
+Returns the array of weights of a NURBS curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#InsertKnot(double)">InsertKnot</a></b>(<b>double</b>)</code>
+<div class="explanation">
+Inserts the given knot into the knot vector of the curve.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#IsBezierCurve()">IsBezierCurve</a></b>()</code>
+<div class="explanation">
+Checks if the curve is a polynomial segment.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#IsClosed()">IsClosed</a></b>()</code>
+<div class="explanation">
+Checks if the curve is closed.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#IsLine()">IsLine</a></b>()</code>
+<div class="explanation">
+Checks if the curve is a linear segment.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#IsPlanar()">IsPlanar</a></b>()</code>
+<div class="explanation">
+Checks if the curve is planar.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#IsPolyline()">IsPolyline</a></b>()</code>
+<div class="explanation">
+Checks if the curve is a poly-line.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#IsRational()">IsRational</a></b>()</code>
+<div class="explanation">
+Checks if the curve is given by a rational function.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#IsSelfIntersecting()">IsSelfIntersecting</a></b>()</code>
+<div class="explanation">
+Checks if the curve is intersecting itself.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#IsSmooth()">IsSmooth</a></b>()</code>
+<div class="explanation">
+Checks if the curve is smooth (G1).</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#Length()">Length</a></b>()</code>
+<div class="explanation">
+Returns the length of the curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#Length(double, double)">Length</a></b>(<b>double</b> startLocalParameter, <b>double</b> endLocalParameter)</code>
+<div class="explanation">
+Returns the length of a NURBS curve, between the given local parametric values.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#LinearizeSegment(int)">LinearizeSegment</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Linearizes the selected segment.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideNURBS</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#ProjectionOnPlane(plane3d)">ProjectionOnPlane</a></b>(<b><a href="plane3d.html">plane3d</a></b> plane)</code>
+<div class="explanation">
+Projects the given curve onto the given plane.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#Reverse()">Reverse</a></b>()</code>
+<div class="explanation">
+Reverses the order of the control points of a NURBS curve, thus reversing its direction.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#SetControlPoint(int, Point)">SetControlPoint</a></b>(<b>int</b> controlPointIndex, <b><a href="Point.html">Point</a></b> newControlPoint)</code>
+<div class="explanation">
+Modifies one of the control points of a NURBS curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideNURBS</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#SubdivisionAtLengthFraction(double)">SubdivisionAtLengthFraction</a></b>(<b>double</b> lengthFraction)</code>
+<div class="explanation">
+Subdivides a given curve at the given length fraction, in [0,1].</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideNURBS</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#SubdivisionAtLocalParameter(double)">SubdivisionAtLocalParameter</a></b>(<b>double</b> localParameter)</code>
+<div class="explanation">
+Subdivides a given curve at the given local-parametric value, in [0,1].</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideNURBS</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#SubdivisionAtParametricValue(double)">SubdivisionAtParametricValue</a></b>(<b>double</b> parameter)</code>
+<div class="explanation">
+Subdivides a given curve at the given parametric value.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideNURBS</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#SubdivisionNearPoint(Point)">SubdivisionNearPoint</a></b>(<b><a href="Point.html">Point</a></b> point)</code>
+<div class="explanation">
+Subdivides a given curve near a point on it.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="LengthVector3d.html">LengthVector3d</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#TangentVector(Point)">TangentVector</a></b>(<b><a href="Point.html">Point</a></b>)</code>
+<div class="explanation">
+Returns the tangent vector of a curve at a given point</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideNURBS</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#TorsionFunction(int, double)">TorsionFunction</a></b>(<b>int</b> numberOfPoints, <b>double</b> scalingFactor)</code>
+<div class="explanation">
+Creates a poly-line of a given number of points of the torsion of a NURBS curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#TotalEvaluation(int, double, double, double, double, double)">TotalEvaluation</a></b>(<b>int</b> numberOfPoints, <b>double</b> FrenetFrameScaleFactor, <b>double</b> CurvatureVectorScaleFactor, <b>double</b> CurvatureScaleFactor, <b>double</b> TorsionScaleFactor, <b>double</b> DarbouxVectorScaleFactor)</code>
+<div class="explanation">
+Creates poly-lines of a given number of points of the Frenet-frame, vector-curvature, curvature, torsion and Darboux-vector of a NURBS curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#TrimBack(plane3d)">TrimBack</a></b>(<b><a href="plane3d.html">plane3d</a></b> plane)</code>
+<div class="explanation">
+Trims a curve before the given plane.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#TrimEnd(Point)">TrimEnd</a></b>(<b><a href="Point.html">Point</a></b> point)</code>
+<div class="explanation">
+Trims a curve after the given point.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#TrimEnd(double)">TrimEnd</a></b>(<b>double</b> parameter)</code>
+<div class="explanation">
+Trims a curve after the given parameter.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#TrimFront(plane3d)">TrimFront</a></b>(<b><a href="plane3d.html">plane3d</a></b> plane)</code>
+<div class="explanation">
+Trims a curve after the given plane.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#TrimStart(Point)">TrimStart</a></b>(<b><a href="Point.html">Point</a></b> point)</code>
+<div class="explanation">
+Trims a curve before the given point.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#TrimStart(double)">TrimStart</a></b>(<b>double</b> parameter)</code>
+<div class="explanation">
+Trims a curve before the given parameter.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideNURBS</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#TrimWithCurve(Point, GuideNURBS)">TrimWithCurve</a></b>(<b><a href="Point.html">Point</a></b> pointOnThisCurve, <b>GuideNURBS</b> cuttingEdge)</code>
+<div class="explanation">
+Trims the segment of the curve, determined by the intersection points of the cutting-edge, where the given point lies on .</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideNURBS</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideNURBS.html#VectorCurvatureFunction(int, double)">VectorCurvatureFunction</a></b>(<b>int</b> numberOfPoints, <b>double</b> scalingFactor)</code>
+<div class="explanation">
+Creates a poly-line of a given number of points of the vector-curvature of a NURBS curve, on the curve.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#crop(double, double)">crop</a></b>(<b>double</b> start, <b>double</b> end)</code>
+<div class="explanation">
+crop the guide curve given a range [0..1]</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#curvePoint(int)">curvePoint</a></b>(<b>int</b> iParam)</code>
+<div class="explanation">
+Return a point along the guide curve based on the spacing coordinates</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideCurve</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#divide(ModelObject)">divide</a></b>(<b><a href="ModelObject.html">ModelObject</a></b> modelObject)</code>
+<div class="explanation">
+Subdivides a curve at the intersection point with a given model object.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideCurve</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#divide(plane3d)">divide</a></b>(<b><a href="plane3d.html">plane3d</a></b> plane)</code>
+<div class="explanation">
+Subdivides a curve at the intersection point with a given plane.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideCurve</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#divideAt(double)">divideAt</a></b>(<b>double</b> lengthFraction)</code>
+<div class="explanation">
+Subdivides a curve at the given length-fraction.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#flip()">flip</a></b>()</code>
+<div class="explanation">
+flip the parameter direction of the curve</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#intersect(ModelObject)">intersect</a></b>(<b><a href="ModelObject.html">ModelObject</a></b> modelObject)</code>
+<div class="explanation">
+Returns the intersection point with a model-object.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#intersect(plane3d)">intersect</a></b>(<b><a href="plane3d.html">plane3d</a></b> plane)</code>
+<div class="explanation">
+Returns the intersection point with a given plane.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideCurve</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#offset(Length)">offset</a></b>(<b><a href="Length.html">Length</a></b> distance)</code>
+<div class="explanation">
+Offsets the given curve at the given distance.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#parameter(Point)">parameter</a></b>(<b><a href="Point.html">Point</a></b> point)</code>
+<div class="explanation">
+Returns the length-fraction at a given point on the curve.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#point(double)">point</a></b>(<b>double</b> param)</code>
+<div class="explanation">
+Return a point along the guide curve</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#project(Point)">project</a></b>(<b><a href="Point.html">Point</a></b> in)</code>
+<div class="explanation">
+project the point <code>in</code> onto the curve</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#punch(Variant)">punch</a></b>(<b><a href="Variant.html">Variant</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#spacings(Array)">spacings</a></b>(<b><a href="Array.html">Array</a></b> spacings)</code>
+<div class="explanation">
+Change the spacings on the guide curve</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copy3Point(Point, Point, Point, Point, Point, Point)">copy3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> sp1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> sp2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> sp3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> dp1</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> dp2</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> dp3</span>)</code>
+<div class="explanation">
+Copy the object without scaling from one location to another.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyMirror(Point, LengthVector3d)">copyMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int, std::shared_ptr<mfNameMask>)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyScale(double, Point)">copyScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Scale a copy of the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTransform(Transformation3d)">copyTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general transformation to a copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate a copy of this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int, std::shared_ptr<mfNameMask>)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#move3Point(Point, Point, Point, Point, Point, Point)">move3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> p4</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> p5</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> p6</span>)</code>
+<div class="explanation">
+Move the object from one coordinate system to another</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveMirror(Point, LengthVector3d)">moveMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveRotate(Point, LengthVector3d, Angle)">moveRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveScale(double, Point)">moveScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Move and scale the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTransform(Transformation3d)">moveTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general selection to the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTranslate(LengthVector3d)">moveTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td width="90%"><code><b><a href="GuideCurve.html#end1()">end1</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Returns the start point of the curve</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td width="90%"><code><b><a href="GuideCurve.html#end2()">end2</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Returns the end point of the curve</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geCONNECTED()">geCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use connected move</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geUNCONNECTED()">geUNCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use unconnected move</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>int</b></code>
+</td>
+<td width="90%"><code><b><a href="GuideCurve.html#grid()">grid</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Gets or sets the number of grid points</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="GuideCurve.html#snapMode()">snapMode</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Gets or sets the snapping mode of the curve</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="ComputeMinimalPath(Array, bool)"></a>
+<h3>ComputeMinimalPath</h3>
+<p class="function">
+<b>ComputeMinimalPath</b>(<b><a href="Array.html">Array</a></b> arrayOfPoints, <b>bool</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a curve on the edges of the model from a list of points, with minimal length
+</dl>
+<hr>
+
+<a name="CreateBSpline(Array, Array, int)"></a>
+<h3>CreateBSpline</h3>
+<p class="function">
+<b>CreateBSpline</b>(<b><a href="Array.html">Array</a></b> controlPoints, <b><a href="Array.html">Array</a></b> knotVector, <b>int</b> degree)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a b-spline curve by giving its control-points, knot-vector and degree.
+</dl>
+<hr>
+
+<a name="CreateBSplineUniformKnotVector(Array, int)"></a>
+<h3>CreateBSplineUniformKnotVector</h3>
+<p class="function">
+<b>CreateBSplineUniformKnotVector</b>(<b><a href="Array.html">Array</a></b> controlPoints, <b>int</b> degree)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a b-spline curve by giving its control-points and degree. The knot vector is assumed to be uniform.
+</dl>
+<hr>
+
+<a name="CreateBezierCurveFromTwoPointsAndNormals(Point, Point, LengthVector3d, LengthVector3d, SplineParameterizationType)"></a>
+<h3>CreateBezierCurveFromTwoPointsAndNormals</h3>
+<p class="function">
+<b>CreateBezierCurveFromTwoPointsAndNormals</b>(<b><a href="Point.html">Point</a></b> point1, <b><a href="Point.html">Point</a></b> point2, <b><a href="LengthVector3d.html">LengthVector3d</a></b> normal1, <b><a href="LengthVector3d.html">LengthVector3d</a></b> normal2, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b> parameterizationType)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a cubic polynomial interpolating two given points and the normal vectors on them.
+</dl>
+<hr>
+
+<a name="CreateBezierJoiningTwoCurves(GuideCurve, Point, GuideCurve, Point, SplineParameterizationType)"></a>
+<h3>CreateBezierJoiningTwoCurves</h3>
+<p class="function">
+<b>CreateBezierJoiningTwoCurves</b>(<b><a href="GuideCurve.html">GuideCurve</a></b> curve1, <b><a href="Point.html">Point</a></b> pointOnCurve1, <b><a href="GuideCurve.html">GuideCurve</a></b> curve2, <b><a href="Point.html">Point</a></b> pointOnCurve2, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b> parameterizationType)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a polynomial to join smoothly two given curves.
+</dl>
+<hr>
+
+<a name="CreateCircleFromCenterAndRadius(Point, Point, Point)"></a>
+<h3>CreateCircleFromCenterAndRadius</h3>
+<p class="function">
+<b>CreateCircleFromCenterAndRadius</b>(<b><a href="Point.html">Point</a></b> centerPoint, <b><a href="Point.html">Point</a></b> radiusPoint, <b><a href="Point.html">Point</a></b> planePoint)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a circle from its center and radius and a third point to define the plane of the circle.
+</dl>
+<hr>
+
+<a name="CreateCircleFromPlaneAndRadius(Point, LengthVector3d, Length)"></a>
+<h3>CreateCircleFromPlaneAndRadius</h3>
+<p class="function">
+<b>CreateCircleFromPlaneAndRadius</b>(<b><a href="Point.html">Point</a></b> centerPoint, <b><a href="LengthVector3d.html">LengthVector3d</a></b> normalVector, <b><a href="Length.html">Length</a></b> radius)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a circle from its center and normal to define the plane of the circle and the radius.
+</dl>
+<hr>
+
+<a name="CreateCircleFromThreePoints(Point, Point, Point)"></a>
+<h3>CreateCircleFromThreePoints</h3>
+<p class="function">
+<b>CreateCircleFromThreePoints</b>(<b><a href="Point.html">Point</a></b> point1, <b><a href="Point.html">Point</a></b> point2, <b><a href="Point.html">Point</a></b> point3)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a circle, which interpolates the three given points.
+</dl>
+<hr>
+
+<a name="CreateCircularArcFromThreePoints(Point, Point, Point)"></a>
+<h3>CreateCircularArcFromThreePoints</h3>
+<p class="function">
+<b>CreateCircularArcFromThreePoints</b>(<b><a href="Point.html">Point</a></b> point1, <b><a href="Point.html">Point</a></b> point2, <b><a href="Point.html">Point</a></b> point3)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a circular arc, which interpolates the three given points.
+</dl>
+<hr>
+
+<a name="CreateCircularArcFromThreePointsAndRadius(Point, Point, Length, Point)"></a>
+<h3>CreateCircularArcFromThreePointsAndRadius</h3>
+<p class="function">
+<b>CreateCircularArcFromThreePointsAndRadius</b>(<b><a href="Point.html">Point</a></b> point1, <b><a href="Point.html">Point</a></b> point2, <b><a href="Length.html">Length</a></b> radius, <b><a href="Point.html">Point</a></b> point3)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a circular arc between the first two points and its radius. The third point defines the plane.
+</dl>
+<hr>
+
+<a name="CreateCircularFillet(GuideCurve, Point, GuideCurve, Point, Length)"></a>
+<h3>CreateCircularFillet</h3>
+<p class="function">
+<b>CreateCircularFillet</b>(<b><a href="GuideCurve.html">GuideCurve</a></b> curve1, <b><a href="Point.html">Point</a></b> pointOnCurve1, <b><a href="GuideCurve.html">GuideCurve</a></b> curve2, <b><a href="Point.html">Point</a></b> pointOnCurve2, <b><a href="Length.html">Length</a></b> radius)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a circular arc of given radius connecting smoothly two curves.
+</dl>
+<hr>
+
+<a name="CreateCircularFilletBetweenLinearSegments(GuideCurve, Point, GuideCurve, Point, Length)"></a>
+<h3>CreateCircularFilletBetweenLinearSegments</h3>
+<p class="function">
+<b>CreateCircularFilletBetweenLinearSegments</b>(<b><a href="GuideCurve.html">GuideCurve</a></b> curve1, <b><a href="Point.html">Point</a></b> pointOnCurve1, <b><a href="GuideCurve.html">GuideCurve</a></b> curve2, <b><a href="Point.html">Point</a></b> pointOnCurve2, <b><a href="Length.html">Length</a></b> radius)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a circular arc of given radius connecting smoothly two linear segments of spline curves.
+</dl>
+<hr>
+
+<a name="CreateCubicSpline(Array, bool, LengthVector3d, LengthVector3d, SplineParameterizationType)"></a>
+<h3>CreateCubicSpline</h3>
+<p class="function">
+<b>CreateCubicSpline</b>(<b><a href="Array.html">Array</a></b> arrayOfPoints, <b>bool</b> isPeriodic, <b><a href="LengthVector3d.html">LengthVector3d</a></b> startTangent, <b><a href="LengthVector3d.html">LengthVector3d</a></b> endTangent, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b> parameterizationType)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a cubic spline by interpolating an ordered set of points.
+</dl>
+<hr>
+
+<a name="CreateCubicSplineFromPolyline(GuideCurve, LengthVector3d, LengthVector3d, Length)"></a>
+<h3>CreateCubicSplineFromPolyline</h3>
+<p class="function">
+<b>CreateCubicSplineFromPolyline</b>(<b><a href="GuideCurve.html">GuideCurve</a></b> polyLine, <b><a href="LengthVector3d.html">LengthVector3d</a></b> startTangent, <b><a href="LengthVector3d.html">LengthVector3d</a></b> endTangent, <b><a href="Length.html">Length</a></b> tolerance)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a cubic-spline to approximate the given poly-line.
+</dl>
+<hr>
+
+<a name="CreateEllipseFromCenterAndAxesEnds(Point, Point, Point)"></a>
+<h3>CreateEllipseFromCenterAndAxesEnds</h3>
+<p class="function">
+<b>CreateEllipseFromCenterAndAxesEnds</b>(<b><a href="Point.html">Point</a></b> center, <b><a href="Point.html">Point</a></b> majorAxisEnd, <b><a href="Point.html">Point</a></b> minorAxisEnd)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates an ellipse from its center and its axes end points.
+</dl>
+<hr>
+
+<a name="CreateEllipticArcFromCenterAndEndPoints(Point, Point, Point, bool)"></a>
+<h3>CreateEllipticArcFromCenterAndEndPoints</h3>
+<p class="function">
+<b>CreateEllipticArcFromCenterAndEndPoints</b>(<b><a href="Point.html">Point</a></b> center, <b><a href="Point.html">Point</a></b> majorAxisEnd, <b><a href="Point.html">Point</a></b> arcEnd, <b>bool</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates an elliptic arc from its center and its end points.
+</dl>
+<hr>
+
+<a name="CreateEllipticArcFromPointTangentialToCurve(Point, GuideCurve, Point, bool)"></a>
+<h3>CreateEllipticArcFromPointTangentialToCurve</h3>
+<p class="function">
+<b>CreateEllipticArcFromPointTangentialToCurve</b>(<b><a href="Point.html">Point</a></b> pointIn3D, <b><a href="GuideCurve.html">GuideCurve</a></b> curveIn3D, <b><a href="Point.html">Point</a></b> pointOnCurve, <b>bool</b> isShortArc)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates the quarter of an ellipse from the first given point and tangential to the given curve at the second given point which is on curve.
+</dl>
+<hr>
+
+<a name="CreateHermiteCubicSpline(Array, bool, LengthVector3d, LengthVector3d, SplineParameterizationType)"></a>
+<h3>CreateHermiteCubicSpline</h3>
+<p class="function">
+<b>CreateHermiteCubicSpline</b>(<b><a href="Array.html">Array</a></b> arrayOfPoints, <b>bool</b> isPeriodic, <b><a href="LengthVector3d.html">LengthVector3d</a></b> startTangent, <b><a href="LengthVector3d.html">LengthVector3d</a></b> endTangent, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b> parameterizationType)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a Hermite cubic spline by interpolating an ordered set of points and tangent vectors on them. The tangent vectors are computed automatically.
+</dl>
+<hr>
+
+<a name="CreateHermiteVDShapePreservingSpline(Array, bool, LengthVector3d, LengthVector3d, SplineParameterizationType)"></a>
+<h3>CreateHermiteVDShapePreservingSpline</h3>
+<p class="function">
+<b>CreateHermiteVDShapePreservingSpline</b>(<b><a href="Array.html">Array</a></b>, <b>bool</b>, <b><a href="LengthVector3d.html">LengthVector3d</a></b>, <b><a href="LengthVector3d.html">LengthVector3d</a></b>, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>OBSOLETE
+</dl>
+<hr>
+
+<a name="CreateInterpolatingPolynomial(Array, SplineParameterizationType)"></a>
+<h3>CreateInterpolatingPolynomial</h3>
+<p class="function">
+<b>CreateInterpolatingPolynomial</b>(<b><a href="Array.html">Array</a></b> arrayOfPoints, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b> parameterizationType)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a polynomial to interpolate a set of ordered points.
+</dl>
+<hr>
+
+<a name="CreateLineClosestToSelection(Point, Array)"></a>
+<h3>CreateLineClosestToSelection</h3>
+<p class="function">
+<b>CreateLineClosestToSelection</b>(<b><a href="Point.html">Point</a></b> givenPoint, <b><a href="Array.html">Array</a></b> arrayOfModelObjects)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a linear segment from a given point, to a point on the selected objects, which is closest to the given one.
+</dl>
+<hr>
+
+<a name="CreateLineFromPointNormalToSurface(Point, ModelObject)"></a>
+<h3>CreateLineFromPointNormalToSurface</h3>
+<p class="function">
+<b>CreateLineFromPointNormalToSurface</b>(<b><a href="Point.html">Point</a></b> LinearSegment1, <b><a href="ModelObject.html">ModelObject</a></b> LinearSegment2)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a linear segment from a given point normal to a given surface.Creates a linear segment from two points on two given linear segments of minimum length.
+</dl>
+<hr>
+
+<a name="CreateLineFromPointPerpendicularToCurve(Point, GuideCurve)"></a>
+<h3>CreateLineFromPointPerpendicularToCurve</h3>
+<p class="function">
+<b>CreateLineFromPointPerpendicularToCurve</b>(<b><a href="Point.html">Point</a></b> point, <b><a href="GuideCurve.html">GuideCurve</a></b> guideCurve)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a linear segment from a given point perpendicular to a given curve.
+</dl>
+<hr>
+
+<a name="CreateLineFromPointTangentialToCurve(Point, GuideCurve)"></a>
+<h3>CreateLineFromPointTangentialToCurve</h3>
+<p class="function">
+<b>CreateLineFromPointTangentialToCurve</b>(<b><a href="Point.html">Point</a></b> point, <b><a href="GuideCurve.html">GuideCurve</a></b> guideCurve)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a linear segment from a given point tangential to a given curve.
+</dl>
+<hr>
+
+<a name="CreateLineNormalFromSurface(ModelObject, Point, Point)"></a>
+<h3>CreateLineNormalFromSurface</h3>
+<p class="function">
+<b>CreateLineNormalFromSurface</b>(<b><a href="ModelObject.html">ModelObject</a></b> plateOrShell, <b><a href="Point.html">Point</a></b> pointOnSurface, <b><a href="Point.html">Point</a></b> endPoint)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a linear segment from a point on surface, normal to the surface.
+</dl>
+<hr>
+
+<a name="CreateLineOfMinimumLengthFromTwoLines(GuideNURBS, GuideNURBS)"></a>
+<h3>CreateLineOfMinimumLengthFromTwoLines</h3>
+<p class="function">
+<b>CreateLineOfMinimumLengthFromTwoLines</b>(<b>GuideNURBS</b>, <b>GuideNURBS</b>)</p>
+<p>
+<hr>
+
+<a name="CreateLineTangentFromCurve(GuideCurve, Point, Point)"></a>
+<h3>CreateLineTangentFromCurve</h3>
+<p class="function">
+<b>CreateLineTangentFromCurve</b>(<b><a href="GuideCurve.html">GuideCurve</a></b> guideCurve, <b><a href="Point.html">Point</a></b> pointOnCurve, <b><a href="Point.html">Point</a></b> endPoint)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a linear segment from a point on curve, tangential to the curve.
+</dl>
+<hr>
+
+<a name="CreateLineTwoPoints(Point, Point)"></a>
+<h3>CreateLineTwoPoints</h3>
+<p class="function">
+<b>CreateLineTwoPoints</b>(<b><a href="Point.html">Point</a></b> startPoint, <b><a href="Point.html">Point</a></b> endPoint)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a linear segment from its two end points.
+</dl>
+<hr>
+
+<a name="CreateModelCurve(Array)"></a>
+<h3>CreateModelCurve</h3>
+<p class="function">
+<b>CreateModelCurve</b>(<b><a href="Array.html">Array</a></b> arrayOfPoints)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a model curve from a list of points
+</dl>
+<hr>
+
+<a name="CreateModelCurveFromTwoPoints(Point, Point)"></a>
+<h3>CreateModelCurveFromTwoPoints</h3>
+<p class="function">
+<b>CreateModelCurveFromTwoPoints</b>(<b><a href="Point.html">Point</a></b> startPoint, <b><a href="Point.html">Point</a></b> endPoint)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a model curve from two points
+</dl>
+<hr>
+
+<a name="CreateModelCurveFromTwoPointsAccurate(Point, Point)"></a>
+<h3>CreateModelCurveFromTwoPointsAccurate</h3>
+<p class="function">
+<b>CreateModelCurveFromTwoPointsAccurate</b>(<b><a href="Point.html">Point</a></b> startPoint, <b><a href="Point.html">Point</a></b> endPoint)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a model curve from two points and imposes ACIS tolerance in the extraction of the intersections
+</dl>
+<hr>
+
+<a name="CreateNURBS(Array, Array, Array, int)"></a>
+<h3>CreateNURBS</h3>
+<p class="function">
+<b>CreateNURBS</b>(<b><a href="Array.html">Array</a></b> controlPoints, <b><a href="Array.html">Array</a></b> knotVector, <b><a href="Array.html">Array</a></b> weights, <b>int</b> degree)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a rational b-spline curve by giving its control-points, knot-vector, weights and degree.
+</dl>
+<hr>
+
+<a name="CreateNURBSFromObject(ModelObject)"></a>
+<h3>CreateNURBSFromObject</h3>
+<p class="function">
+<b>CreateNURBSFromObject</b>(<b><a href="ModelObject.html">ModelObject</a></b> object1D)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a NURBS curve from a beam, or a support curve or a feature edge.
+</dl>
+<hr>
+
+<a name="CreatePolylineFromASetOfPoints(Array)"></a>
+<h3>CreatePolylineFromASetOfPoints</h3>
+<p class="function">
+<b>CreatePolylineFromASetOfPoints</b>(<b><a href="Array.html">Array</a></b> arrayOfPoints)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a poly-line by giving a list of ordered points.
+</dl>
+<hr>
+
+<a name="CreatePolylineFromCurve(GuideCurve, Length)"></a>
+<h3>CreatePolylineFromCurve</h3>
+<p class="function">
+<b>CreatePolylineFromCurve</b>(<b><a href="GuideCurve.html">GuideCurve</a></b> curve, <b><a href="Length.html">Length</a></b> tolerance)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a poly-line approximating the given curve.
+</dl>
+<hr>
+
+<a name="CreatePolynomialFromPolyline(GuideCurve, int, LengthVector3d, LengthVector3d)"></a>
+<h3>CreatePolynomialFromPolyline</h3>
+<p class="function">
+<b>CreatePolynomialFromPolyline</b>(<b><a href="GuideCurve.html">GuideCurve</a></b> polyLine, <b>int</b> degree, <b><a href="LengthVector3d.html">LengthVector3d</a></b> startTangent, <b><a href="LengthVector3d.html">LengthVector3d</a></b> endTangent)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a polynomial segment to approximate a poly-line.
+</dl>
+<hr>
+
+<a name="CreateShapePreservingCubicSpline(Array, bool, LengthVector3d, LengthVector3d, SplineParameterizationType)"></a>
+<h3>CreateShapePreservingCubicSpline</h3>
+<p class="function">
+<b>CreateShapePreservingCubicSpline</b>(<b><a href="Array.html">Array</a></b> arrayOfPoints, <b>bool</b> isPeriodic, <b><a href="LengthVector3d.html">LengthVector3d</a></b> startTangent, <b><a href="LengthVector3d.html">LengthVector3d</a></b> endTangent, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b> parameterizationType)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a shape-preserving cubic spline by interpolating an ordered set of points.
+</dl>
+<hr>
+
+<a name="CreateShortestCurveOnModelEdges(Point, Point)"></a>
+<h3>CreateShortestCurveOnModelEdges</h3>
+<p class="function">
+<b>CreateShortestCurveOnModelEdges</b>(<b><a href="Point.html">Point</a></b> startPoint, <b><a href="Point.html">Point</a></b> endPoint)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a curve on the edges of the model from two points, with minimal length
+</dl>
+<hr>
+
+<a name="CreateShortestCurveOnModelEdges(Point, Point, bool)"></a>
+<h3>CreateShortestCurveOnModelEdges</h3>
+<p class="function">
+<b>CreateShortestCurveOnModelEdges</b>(<b><a href="Point.html">Point</a></b> startPoint, <b><a href="Point.html">Point</a></b> endPoint, <b>bool</b> isSmooth)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a model-edge composite curve from two points
+</dl>
+<hr>
+
+<a name="CreateShortestCurveOnModelFaces(Point, Point, plane3d)"></a>
+<h3>CreateShortestCurveOnModelFaces</h3>
+<p class="function">
+<b>CreateShortestCurveOnModelFaces</b>(<b><a href="Point.html">Point</a></b> startPoint, <b><a href="Point.html">Point</a></b> endPoint, <b><a href="plane3d.html">plane3d</a></b> plane)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a curve on the model from two points, with minimal length
+</dl>
+<hr>
+
+<a name="CreateShortestCurveOnModelFaces(Point, Point, double)"></a>
+<h3>CreateShortestCurveOnModelFaces</h3>
+<p class="function">
+<b>CreateShortestCurveOnModelFaces</b>(<b><a href="Point.html">Point</a></b> startPoint, <b><a href="Point.html">Point</a></b> endPoint, <b>double</b> tolerance)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a shortest path on assembly faces from two points
+</dl>
+<hr>
+
+<a name="CreateShortestCurveOnModelFaces(ModelObject, Point, Point, double)"></a>
+<h3>CreateShortestCurveOnModelFaces</h3>
+<p class="function">
+<b>CreateShortestCurveOnModelFaces</b>(<b><a href="ModelObject.html">ModelObject</a></b> shell, <b><a href="Point.html">Point</a></b> startPoint, <b><a href="Point.html">Point</a></b> endPoint, <b>double</b> tolerance)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a shortest path on assembly faces from two points and a shell
+</dl>
+<hr>
+
+<a name="CreateSurroundingCurveOfTwoCircles(Point, Length, Point, Length, Point)"></a>
+<h3>CreateSurroundingCurveOfTwoCircles</h3>
+<p class="function">
+<b>CreateSurroundingCurveOfTwoCircles</b>(<b><a href="Point.html">Point</a></b> centerCircle1, <b><a href="Length.html">Length</a></b> radiusCircle1, <b><a href="Point.html">Point</a></b> centerCircle1, <b><a href="Length.html">Length</a></b> radiusCircle2, <b><a href="Point.html">Point</a></b> planePoint)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates the curve surrounding two circles.
+</dl>
+<hr>
+
+<a name="CreateSurroundingPolygonalApproximation(Array, Length)"></a>
+<h3>CreateSurroundingPolygonalApproximation</h3>
+<p class="function">
+<b>CreateSurroundingPolygonalApproximation</b>(<b><a href="Array.html">Array</a></b> arrayOfCurves, <b><a href="Length.html">Length</a></b> tolerance)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates the smallest convex polygon which encloses the polygonal approximations of the given curves.
+</dl>
+<hr>
+
+<a name="CreateVariableDegreeSpline(SplineType, Array, bool, LengthVector3d, LengthVector3d, SplineParameterizationType)"></a>
+<h3>CreateVariableDegreeSpline</h3>
+<p class="function">
+<b>CreateVariableDegreeSpline</b>(<b><a href="SplineType.html">SplineType</a></b>, <b><a href="Array.html">Array</a></b>, <b>bool</b>, <b><a href="LengthVector3d.html">LengthVector3d</a></b>, <b><a href="LengthVector3d.html">LengthVector3d</a></b>, <b><a href="SplineParameterizationType.html">SplineParameterizationType</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>OBSOLETE
+</dl>
+<hr>
+
+<a name="GuideNURBS(GuideCurve)"></a>
+<h3>GuideNURBS</h3>
+<p class="function">
+<b>GuideNURBS</b>(<b><a href="GuideCurve.html">GuideCurve</a></b> curve)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Converts any guiding curve to its NURBS form.
+</dl>
+<hr>
+
+<a name="Join(Array, bool)"></a>
+<h3>Join</h3>
+<p class="function">
+<b>Join</b>(<b><a href="Array.html">Array</a></b> ArrayOfCurves, <b>bool</b> ReparameterizeCurves)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a NURBS curve by joining two or more given curves.
+</dl>
+<hr>
+
+<a name="Join(GuideCurve, GuideCurve)"></a>
+<h3>Join</h3>
+<p class="function">
+<b>Join</b>(<b><a href="GuideCurve.html">GuideCurve</a></b> curve1, <b><a href="GuideCurve.html">GuideCurve</a></b> curve2)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a NURBS curve by joining two given curves.
+</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="CurvatureFunction(int, double)"></a>
+<h3>CurvatureFunction</h3>
+<p class="function">
+<b>GuideNURBS</b> <b>CurvatureFunction</b>(<b>int</b> numberOfPoints, <b>double</b> scalingFactor)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a poly-line of a given number of points of the curvature of a NURBS curve.
+</dl>
+<hr>
+
+<a name="CurvatureFunction2D(int, double)"></a>
+<h3>CurvatureFunction2D</h3>
+<p class="function">
+<b>GuideNURBS</b> <b>CurvatureFunction2D</b>(<b>int</b> numberOfPoints, <b>double</b> scalingFactor)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a poly-line of a given number of points of the 2D curvature of a (2D) NURBS curve.
+</dl>
+<hr>
+
+<a name="ElevateDegree()"></a>
+<h3>ElevateDegree</h3>
+<p class="function">
+<b>&nbsp;</b> <b>ElevateDegree</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Elevates the degree of the curve by one.
+</dl>
+<hr>
+
+<a name="EvaluateAtLengthFraction(double)"></a>
+<h3>EvaluateAtLengthFraction</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>EvaluateAtLengthFraction</b>(<b>double</b> lengthFraction)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Evaluates the curve at a given length-fraction.
+</dl>
+<hr>
+
+<a name="EvaluateAtLocalParameter(double)"></a>
+<h3>EvaluateAtLocalParameter</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>EvaluateAtLocalParameter</b>(<b>double</b> localParameter)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Evaluates the curve at a given local-parametric value.
+</dl>
+<hr>
+
+<a name="EvaluateAtParameter(double)"></a>
+<h3>EvaluateAtParameter</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>EvaluateAtParameter</b>(<b>double</b> parameter)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Evaluates the curve at a given parametric value.
+</dl>
+<hr>
+
+<a name="FairC2CubicSplineKnotVectorPoint(int, Length)"></a>
+<h3>FairC2CubicSplineKnotVectorPoint</h3>
+<p class="function">
+<b>&nbsp;</b> <b>FairC2CubicSplineKnotVectorPoint</b>(<b>int</b> knotIndex, <b><a href="Length.html">Length</a></b> tolerance)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Modifies one of the knot vector (interpolation) points of a NURBS curve making the curve fairer.
+</dl>
+<hr>
+
+<a name="FairC2CubicSpline_DegreeReduction(int, Length)"></a>
+<h3>FairC2CubicSpline_DegreeReduction</h3>
+<p class="function">
+<b>&nbsp;</b> <b>FairC2CubicSpline_DegreeReduction</b>(<b>int</b> knotIndex, <b><a href="Length.html">Length</a></b> tolerance)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Modifies one of the control points of a NURBS curve making the curve fairer.
+</dl>
+<hr>
+
+<a name="FairC2CubicSpline_KnotRemoval(int, Length)"></a>
+<h3>FairC2CubicSpline_KnotRemoval</h3>
+<p class="function">
+<b>&nbsp;</b> <b>FairC2CubicSpline_KnotRemoval</b>(<b>int</b> knotIndex, <b><a href="Length.html">Length</a></b> tolerance)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Modifies one of the control points of a NURBS curve making the curve fairer.
+</dl>
+<hr>
+
+<a name="FilletPolygonalEdges(Length)"></a>
+<h3>FilletPolygonalEdges</h3>
+<p class="function">
+<b>&nbsp;</b> <b>FilletPolygonalEdges</b>(<b><a href="Length.html">Length</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Smoothens the polygonal edges of the curve by filleting them with the given radius.
+</dl>
+<hr>
+
+<a name="GetControlPolygon()"></a>
+<h3>GetControlPolygon</h3>
+<p class="function">
+<b>GuideNURBS</b> <b>GetControlPolygon</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a poly-line out of the control points of a NURBS curve.
+</dl>
+<hr>
+
+<a name="GetControlPolygonArray()"></a>
+<h3>GetControlPolygonArray</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>GetControlPolygonArray</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the array of the control points of a NURBS curve.
+</dl>
+<hr>
+
+<a name="GetKnotVectorArray()"></a>
+<h3>GetKnotVectorArray</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>GetKnotVectorArray</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the array of knot-vector nodes of a NURBS curve.
+</dl>
+<hr>
+
+<a name="GetLocalParameter(Point)"></a>
+<h3>GetLocalParameter</h3>
+<p class="function">
+<b>double</b> <b>GetLocalParameter</b>(<b><a href="Point.html">Point</a></b> point)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the local-parameter of the curve for a given point on it.
+</dl>
+<hr>
+
+<a name="GetMinimumDistanceFromLinearSegment(GuideNURBS)"></a>
+<h3>GetMinimumDistanceFromLinearSegment</h3>
+<p class="function">
+<b>double</b> <b>GetMinimumDistanceFromLinearSegment</b>(<b>GuideNURBS</b> OtherLinearSegment)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the minimum distance between two linear segments.
+</dl>
+<hr>
+
+<a name="GetMinimumDistancePointBetweenTwoLines(GuideNURBS)"></a>
+<h3>GetMinimumDistancePointBetweenTwoLines</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>GetMinimumDistancePointBetweenTwoLines</b>(<b>GuideNURBS</b> OtherLinearSegment)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns one point which minimizes the distance to both segments.
+</dl>
+<hr>
+
+<a name="GetNodalPointsArray()"></a>
+<h3>GetNodalPointsArray</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>GetNodalPointsArray</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the array of the nodal points (points on the knot-vector nodes) of a NURBS curve.
+</dl>
+<hr>
+
+<a name="GetParameter(Point)"></a>
+<h3>GetParameter</h3>
+<p class="function">
+<b>double</b> <b>GetParameter</b>(<b><a href="Point.html">Point</a></b> point)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the parameter of the curve for a given point on it.
+</dl>
+<hr>
+
+<a name="GetPointsOnEqualIntervals(int)"></a>
+<h3>GetPointsOnEqualIntervals</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>GetPointsOnEqualIntervals</b>(<b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns an array of a given number of points on a NURBS curve distributed on equal parametric intervals on it.
+</dl>
+<hr>
+
+<a name="GetPointsOnEquidistantLengths(int)"></a>
+<h3>GetPointsOnEquidistantLengths</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>GetPointsOnEquidistantLengths</b>(<b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns an array of a given number of points on a NURBS curve distributed equidistantly on it.
+</dl>
+<hr>
+
+<a name="GetWeightsArray()"></a>
+<h3>GetWeightsArray</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>GetWeightsArray</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the array of weights of a NURBS curve.
+</dl>
+<hr>
+
+<a name="InsertKnot(double)"></a>
+<h3>InsertKnot</h3>
+<p class="function">
+<b>&nbsp;</b> <b>InsertKnot</b>(<b>double</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Inserts the given knot into the knot vector of the curve.
+</dl>
+<hr>
+
+<a name="Length()"></a>
+<h3>Length</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>Length</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the length of the curve.
+</dl>
+<hr>
+
+<a name="Length(double, double)"></a>
+<h3>Length</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>Length</b>(<b>double</b> startLocalParameter, <b>double</b> endLocalParameter)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the length of a NURBS curve, between the given local parametric values.
+</dl>
+<hr>
+
+<a name="LinearizeSegment(int)"></a>
+<h3>LinearizeSegment</h3>
+<p class="function">
+<b>&nbsp;</b> <b>LinearizeSegment</b>(<b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Linearizes the selected segment.
+</dl>
+<hr>
+
+<a name="ProjectionOnPlane(plane3d)"></a>
+<h3>ProjectionOnPlane</h3>
+<p class="function">
+<b>GuideNURBS</b> <b>ProjectionOnPlane</b>(<b><a href="plane3d.html">plane3d</a></b> plane)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Projects the given curve onto the given plane.
+</dl>
+<hr>
+
+<a name="Reverse()"></a>
+<h3>Reverse</h3>
+<p class="function">
+<b>&nbsp;</b> <b>Reverse</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reverses the order of the control points of a NURBS curve, thus reversing its direction.
+</dl>
+<hr>
+
+<a name="SetControlPoint(int, Point)"></a>
+<h3>SetControlPoint</h3>
+<p class="function">
+<b>&nbsp;</b> <b>SetControlPoint</b>(<b>int</b> controlPointIndex, <b><a href="Point.html">Point</a></b> newControlPoint)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Modifies one of the control points of a NURBS curve.
+</dl>
+<hr>
+
+<a name="SubdivisionAtLengthFraction(double)"></a>
+<h3>SubdivisionAtLengthFraction</h3>
+<p class="function">
+<b>GuideNURBS</b> <b>SubdivisionAtLengthFraction</b>(<b>double</b> lengthFraction)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Subdivides a given curve at the given length fraction, in [0,1].
+</dl>
+<hr>
+
+<a name="SubdivisionAtLocalParameter(double)"></a>
+<h3>SubdivisionAtLocalParameter</h3>
+<p class="function">
+<b>GuideNURBS</b> <b>SubdivisionAtLocalParameter</b>(<b>double</b> localParameter)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Subdivides a given curve at the given local-parametric value, in [0,1].
+</dl>
+<hr>
+
+<a name="SubdivisionAtParametricValue(double)"></a>
+<h3>SubdivisionAtParametricValue</h3>
+<p class="function">
+<b>GuideNURBS</b> <b>SubdivisionAtParametricValue</b>(<b>double</b> parameter)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Subdivides a given curve at the given parametric value.
+</dl>
+<hr>
+
+<a name="SubdivisionNearPoint(Point)"></a>
+<h3>SubdivisionNearPoint</h3>
+<p class="function">
+<b>GuideNURBS</b> <b>SubdivisionNearPoint</b>(<b><a href="Point.html">Point</a></b> point)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Subdivides a given curve near a point on it.
+</dl>
+<hr>
+
+<a name="TorsionFunction(int, double)"></a>
+<h3>TorsionFunction</h3>
+<p class="function">
+<b>GuideNURBS</b> <b>TorsionFunction</b>(<b>int</b> numberOfPoints, <b>double</b> scalingFactor)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a poly-line of a given number of points of the torsion of a NURBS curve.
+</dl>
+<hr>
+
+<a name="TotalEvaluation(int, double, double, double, double, double)"></a>
+<h3>TotalEvaluation</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>TotalEvaluation</b>(<b>int</b> numberOfPoints, <b>double</b> FrenetFrameScaleFactor, <b>double</b> CurvatureVectorScaleFactor, <b>double</b> CurvatureScaleFactor, <b>double</b> TorsionScaleFactor, <b>double</b> DarbouxVectorScaleFactor)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates poly-lines of a given number of points of the Frenet-frame, vector-curvature, curvature, torsion and Darboux-vector of a NURBS curve.
+</dl>
+<hr>
+
+<a name="TrimBack(plane3d)"></a>
+<h3>TrimBack</h3>
+<p class="function">
+<b>&nbsp;</b> <b>TrimBack</b>(<b><a href="plane3d.html">plane3d</a></b> plane)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Trims a curve before the given plane.
+</dl>
+<hr>
+
+<a name="TrimEnd(Point)"></a>
+<h3>TrimEnd</h3>
+<p class="function">
+<b>&nbsp;</b> <b>TrimEnd</b>(<b><a href="Point.html">Point</a></b> point)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Trims a curve after the given point.
+</dl>
+<hr>
+
+<a name="TrimEnd(double)"></a>
+<h3>TrimEnd</h3>
+<p class="function">
+<b>&nbsp;</b> <b>TrimEnd</b>(<b>double</b> parameter)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Trims a curve after the given parameter.
+</dl>
+<hr>
+
+<a name="TrimFront(plane3d)"></a>
+<h3>TrimFront</h3>
+<p class="function">
+<b>&nbsp;</b> <b>TrimFront</b>(<b><a href="plane3d.html">plane3d</a></b> plane)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Trims a curve after the given plane.
+</dl>
+<hr>
+
+<a name="TrimStart(Point)"></a>
+<h3>TrimStart</h3>
+<p class="function">
+<b>&nbsp;</b> <b>TrimStart</b>(<b><a href="Point.html">Point</a></b> point)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Trims a curve before the given point.
+</dl>
+<hr>
+
+<a name="TrimStart(double)"></a>
+<h3>TrimStart</h3>
+<p class="function">
+<b>&nbsp;</b> <b>TrimStart</b>(<b>double</b> parameter)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Trims a curve before the given parameter.
+</dl>
+<hr>
+
+<a name="TrimWithCurve(Point, GuideNURBS)"></a>
+<h3>TrimWithCurve</h3>
+<p class="function">
+<b>GuideNURBS</b> <b>TrimWithCurve</b>(<b><a href="Point.html">Point</a></b> pointOnThisCurve, <b>GuideNURBS</b> cuttingEdge)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Trims the segment of the curve, determined by the intersection points of the cutting-edge, where the given point lies on .
+</dl>
+<hr>
+
+<a name="VectorCurvatureFunction(int, double)"></a>
+<h3>VectorCurvatureFunction</h3>
+<p class="function">
+<b>GuideNURBS</b> <b>VectorCurvatureFunction</b>(<b>int</b> numberOfPoints, <b>double</b> scalingFactor)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a poly-line of a given number of points of the vector-curvature of a NURBS curve, on the curve.
+</dl>
+<hr>
+
+</body>
+</html>

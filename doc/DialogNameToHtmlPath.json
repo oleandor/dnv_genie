@@ -1,0 +1,200 @@
+{
+  "Help":  "index.html",
+  "Error": "UserDocumentation/Introduction/OnlineHelpSystemAndTutorials.html",
+  
+  "Add plate seam...": "UserDocumentation/MoreOnModelling/Plates/PlateSeams.html",
+
+  "New Workspace": "UserDocumentation/UsingGeniE/GettingStarted/StartingUp.html",
+
+  "View Options": "UserDocumentation/UsingGeniE/GettingStarted/SettingUpYourPreferences.html",
+
+  "Browse for Folder": "UserDocumentation/UsingGeniE/GettingStarted/StartingUp.html",
+
+  "Model Verification": "UserDocumentation/Structure/Topology/ModelVerification.html",
+  "Result presentation": "UserDocumentation/ResultsPresentation/GeneralResultPresentation.html",
+
+  "Save Model View": "UserDocumentation/View/ViewViewManipulations/ViewManipulationsToolbarSaveView.html",
+
+  "Frame Code Check": "UserDocumentation/BeamCodeCheck/CCusingFramework.html",
+
+  "Edit Beams": "UserDocumentation/MoreOnModelling/Beams.html",
+  "Compute Mass/Centre Of Gravity": "UserDocumentation/UsingGeniE/GettingStarted/DocumentingMassAndCentreOfGravity.html",
+  "Delete": "UserDocumentation/MoreOnModelling/DeleteMoveCopy.html",
+  "Copy": "UserDocumentation/MoreOnModelling/DeleteMoveCopy.html",
+  "Move": "UserDocumentation/MoreOnModelling/DeleteMoveCopy.html",
+  "Divide": "UserDocumentation/MoreOnModelling/Beams/SplitJoinAndDivideBeams.html",
+  "Join": "UserDocumentation/MoreOnModelling/Beams/SplitJoinAndDivideBeams.html",
+
+
+  "Beam Creation Rules": "UserDocumentation/UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForBeamCreation.html",
+  "Transformation Rules": "UserDocumentation/UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForTransformation.html",
+  "Tolerances Rule": "UserDocumentation/UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForTolerantModelling.html",
+  "Connected Move Rule": "UserDocumentation/UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForConnectedMove.html",
+  "Input Units": "UserDocumentation/UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForUnits.html",
+  "Rules Meshing": "UserDocumentation/UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForMeshing.html",
+  "Sets": "UserDocumentation/UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/RulesForScriptingSets.html",
+  "Compatibility": "UserDocumentation/UsingGeniE/FeaturesOfGeniE/SettingTheDesignPremise/Compatibility.html",
+
+  "Select GeniE features": "License.html",
+
+  "Create a Single Point": "UserDocumentation/GuidingGeometry/Points/GuidePointDialog.html",
+  "Create Line From Two Points": "UserDocumentation/UserDocumentation/GuidingGeometry/GuideLines/GuideLineDialog.html",
+  "Guide Plane": "UserDocumentation/GuidingGeometry/Planes/GuidePlaneDialog.html",
+
+  "Create grid on one of the principal axes": "UserDocumentation/GuidingGeometry/PointGrids/Create1DGrid.html",
+  "Create a Grid by projecting the selected object points on an axis": "UserDocumentation/GuidingGeometry/PointGrids/Create1DGridFromSelection.html",
+
+  "General transformation": "UserDocumentation/GuidingGeometry/Transformations/LinearTransformations.html",
+  "Project the Selected Curve(s) onto a Plane": "UserDocumentation/GuidingGeometry/Transformations/CurveOrthogonalProjectionOnAPlane.html",
+
+  "Profiles": "UserDocumentation/GuidingGeometry/Profiles/Profile.html",
+  "Report": "UserDocumentation/Reporting/MakingAReport.html",
+  "Create Grouted Beam": "UserDocumentation/Structure/BeamsAndPiles/GroutedBeamDialog.html",
+  "Create Straight Beam": "UserDocumentation/Structure/BeamsAndPiles/StraightBeamDialog.html",
+  "Insert Plate": "UserDocumentation/Structure/FlatPlates/FlatPlateDialog.html",
+  "Create Plate from an ordered Point-Set": "UserDocumentation/Structure/FlatPlates/FlatPlateDialog.html",
+  "Create Flat Region": "UserDocumentation/Structure/FlatPlates/FlatRegion.html",
+
+  "Create Shell Sweeping a Profile along a Trajectory": "UserDocumentation/Structure/FreeFormShells/SweepCurvesDialog.html",
+
+  "Create Ship Hull from Transverse Smooth Curves": "UserDocumentation/Structure/HullDesignTools/CreateHullBySkinningApproximation.html",
+  "Create Ship Hull from Transverse Polylines": "UserDocumentation/Structure/HullDesignTools/CreateHullBySkinningApproximationBasedOnPolygons.html",
+  "Create Ship Hull from Arbitrary Set of Curves": "UserDocumentation/Structure/HullDesignTools/CreateHullBySkinningApproximationBasedOnASetOfCurves.html",
+
+  "Create a set of stiffeners": "UserDocumentation/Structure/HullDesignTools/CreateStiffeners.html",
+  "Create stiffeners on equidistant points on two model curves": "UserDocumentation/Structure/HullDesignTools/InclinedStiffenersFromFourPoints.html",
+
+  "Profile Punch / Cut": "UserDocumentation/Structure/HullDesignTools/ProfilePunchOrCut.html",
+  "Guiding Curve Punch/Cut": "UserDocumentation/Structure/HullDesignTools/GuidingCurvePunchOrCut.html",
+  "Export Concepts in Box to XML File": "UserDocumentation/Structure/HullDesignTools/ExportEntitiesInBoxToXML.html",
+
+  "Create Feature Edge": "UserDocumentation/Structure/FeaturesAndHoles/FeatureEdgeDialog.html",
+  "Create/Modify slot/lug at vertex": "UserDocumentation/Structure/FeaturesAndHoles/SlotLugDialog.html",
+  "Create Hole from Profile": "UserDocumentation/Structure/FeaturesAndHoles/CreateHoleFromProfile.html",
+
+  "Support Point": "UserDocumentation/Structure/Support/SupportPointDialog.html",
+  "Insert Support Rigid Link": "UserDocumentation/Structure/Support/SupportRigidLinkDialog.html",
+  "Point-point connection": "UserDocumentation/Structure/Connection/PointPointConnectionDialog.html",
+
+  "Insert Joint": "UserDocumentation/Structure/Joint/JointDialog.html",
+  "Convert joint(s) to shells": "UserDocumentation/MoreOnModelling/JointsToShells.html",
+
+  "Create Point Mass": "UserDocumentation/Structure/PointMass/UniformPointMass.html",
+
+  "Detail Box": "UserDocumentation/Structure/DetailBox.html",
+  "External matrices": "UserDocumentation/Structure/ExternalMatrices.html",
+
+  "Properties": "UserDocumentation/Properties.html",
+  "Beam Classification": "UserDocumentation/Properties/BeamClassification.html",
+  "Create/Edit Beam Type": "UserDocumentation/Properties/BeamTypes.html",
+  "Create/Edit Content": "UserDocumentation/Properties/CompartmentContent.html",
+  "CorrosionAdditions": "UserDocumentation/Properties/CorrosionAddition.html",
+  "Corrosion Addition": "UserDocumentation/Properties/CorrosionAddition.html",
+  "Create/Edit Effective Flange": "UserDocumentation/Properties/EffectiveFlange.html",
+  "Hinge": "UserDocumentation/Properties/Hinges.html",
+  "Create/Edit Hydro Property": "UserDocumentation/Properties/Hydro.html",
+  "Create/Edit Load Interface": "UserDocumentation/Properties/LoadInterfaces.html",
+  "Scale Mass Densities": "UserDocumentation/Properties/MassDensityFactors.html",
+  "Material": "UserDocumentation/Properties/Materials.html",
+  "MeshProperty": "UserDocumentation/Properties/Mesh.html",
+  "Mesh Density": "UserDocumentation/Properties/Mesh.html",
+  "Create/Edit Mesh property": "UserDocumentation/Properties/Mesh.html",
+  "MeshOption": "UserDocumentation/Properties/MeshOptions.html",
+  "Mesh Option for Face": "UserDocumentation/Properties/MeshOptions.html",
+  "Create/Edit permeability": "UserDocumentation/Properties/Permeability.html",
+  "Pile Characteristics": "UserDocumentation/Properties/PileCharacteristics.html",
+  "Create/Edit plate type": "UserDocumentation/Properties/PlateTypes.html",
+  "Create/Edit Reinforcements": "UserDocumentation/Properties/Reinforcements.html",
+  "Sections": "UserDocumentation/Properties/Sections.html",
+  "Slot/Lug": "UserDocumentation/Properties/SlotsLugs.html",
+  "Sniping property": "UserDocumentation/Properties/SnipingProperties.html",
+  "Create/Edit Structure Type": "UserDocumentation/Properties/StructureType.html",
+  "Thickness": "UserDocumentation/Properties/Thicknesses.html",
+  "Create/Edit Thickness": "UserDocumentation/Properties/Thicknesses.html",
+  "Create/Edit Wet Surface Properties": "UserDocumentation/Properties/WetSurface.html",
+
+  "Insert Load Case": "UserDocumentation/Loads/LoadCase.html",
+  "Point Load": "UserDocumentation/Loads/ExplicitLoad/PointLoad.html",
+  "Create Line Load": "UserDocumentation/Loads/ExplicitLoad/LineLoad.html",
+  "Create Surface Load": "UserDocumentation/Loads/ExplicitLoad/SurfaceLoad.html",
+  "Insert Prescribed Displacement in:%": "UserDocumentation/Loads/ExplicitLoad/PrescribedDisplacement.html",
+  "Insert Load Combination": "UserDocumentation/Loads/LoadCombination.html",
+  "Create Scan Combinations": "UserDocumentation/Loads/LoadCombination.html",
+  "Create Linear Slicer": "UserDocumentation/Loads/LinearSlicer.html",
+
+  "Compartment Manager": "UserDocumentation/Loads/Compartment/CompartmentManager.html",
+  "Insert Equipment": "UserDocumentation/Loads/Equipments/CreateEquipment.html",
+
+  "Create/Edit Location": "UserDocumentation/Loads/Environment/Location.html",
+  "Regular Wave Set": "UserDocumentation/Loads/Environment/RegularWaveSet.html",
+  "Frequency Set": "UserDocumentation/Loads/Environment/WaveFrequencies.html",
+  "Create/Edit Wave Height": "UserDocumentation/Loads/Environment/WaveHeights.html",
+  "Phase Angles Set": "UserDocumentation/Loads/Environment/WavePhases.html",
+  "Create/Edit Direction": "UserDocumentation/Loads/Environment/WaveDirections.html",
+  "Create/Edit Current Profile": "UserDocumentation/Loads/Environment/CurrentProfile.html",
+  "Create/Edit Wind Profile": "UserDocumentation/Loads/Environment/WindProfile.html",
+  "New Wave Load Condition": "UserDocumentation/Loads/Environment/WaveLoadCondition.html",
+  "Create/Edit Seabed delta": "UserDocumentation/Loads/Environment/Soil/SeabedScour.html",
+  "External Matrices Loads": "UserDocumentation/Loads/ExternalMatricesLoad.html",
+  "Create/Edit Soil": "UserDocumentation/Loads/Environment/Soil.html",
+  "Create/Edit Soil Properties": "UserDocumentation/Loads/Environment/Soil/SoilCurves.html",
+
+  "Create a cut plane": "UserDocumentation/View/Toolbars/ViewManipulationsToolbar/ViewManipulationsToolbarCutPlane.html",
+
+  "Create Mesh Priority Set": "UserDocumentation/Utilities/MeshPriorities.html",
+  "Dynamic Set": "UserDocumentation/Utilities/Sets/DynamicSet.html",
+  "Regular Set": "UserDocumentation/Utilities/Sets/Set.html",
+
+  "Create Activity": "UserDocumentation/Analysis/CreateAnalysis.html",
+  "Create Linear Static Analysis": "UserDocumentation/Analysis/CreateAnalysis.html",
+
+  "Capacity Manager": "UserDocumentation/BeamCodeCheck/Features/CodeCheckingProcedures/CreateCapacityManager.html",
+  "Create Code Check Run": "UserDocumentation/BeamCodeCheck/Features/CodeCheckingProcedures/CreateCodeCheckRuns.html",
+
+  "Create (Update) Members": "UserDocumentation/BeamCodeCheck/Features/CodeCheckingProcedures/CreateMembersJoints.html",
+
+  "Create Joints": "UserDocumentation/BeamCodeCheck/Features/CodeCheckingProcedures/CreateMembersJoints.html",
+
+  "Create (Update) Panels": "UserDocumentation/PanelCodeCheck/DNVGLOrCSRBCAndOTDefiningPanels.html",
+
+  "Customize": "UserDocumentation/UsingGeniE/GettingStarted/DefaultsAndNaming.html",
+
+  "Beam Deflection, Force and Stresses Display": "UserDocumentation/ResultsPresentation/BeamResultDiagrams.html",
+  "Beam Force and Stresses Display": "UserDocumentation/ResultsPresentation/BeamResultDiagrams/ResultSelectionGraphs.html",
+  "Create New Linear Analysis": "UserDocumentation/Analysis/CreateAnalysis.html",
+  "Create Activity": "UserDocumentation/Analysis/CreateAnalysis.html",
+  "Create Wave Load Activity": "UserDocumentation/Analysis/CreateAnalysis.html",
+  "Create Wave Load + Linear Static Analysis": "UserDocumentation/Analysis/CreateAnalysis.html",
+  "Create Wave Load + Pile Soil Analysis": "UserDocumentation/Analysis/CreateAnalysis.html",
+  "Create Wave Load + Tension/Compression Analysis": "UserDocumentation/Analysis/CreateAnalysis.html",
+  "Create Tension/Compression Analysis": "UserDocumentation/Analysis/CreateAnalysis.html",
+  "Create Pile Soil Analysis": "UserDocumentation/Analysis/CreateAnalysis.html",
+  "Create Linear Static Analysis": "UserDocumentation/Analysis/CreateAnalysis.html",
+  "Modify Linear Static Analysis": "UserDocumentation/Analysis/CreateAnalysis.html",
+  
+  "Import Concepts from XML File": "UserDocumentation/ImportAndExport/Import/ImportXMLConceptModelFile.html",
+  "Import FEM File": "UserDocumentation/ImportAndExport/Import/ImportFEMFile.html",
+  "Import SACS file": "UserDocumentation/ImportAndExport/Import/ImportSACSFile.html",
+  "Import Nastran File": "UserDocumentation/ImportAndExport/Import/ImportNastran.html",
+  "Import External Results SIN file": "UserDocumentation/ImportAndExport/Import/ImportExternalResultSIN.html",
+  "Import ACIS SAT file": "UserDocumentation/ImportAndExport/Import/ImportACISSATFile.html",
+  "Section Library": "UserDocumentation/ImportAndExport/Import/ImportSectionLibrary.html",
+  "Import External Results SIN file": "UserDocumentation/ImportAndExport/Import/ExternalResultSIN.html",
+  "Import Gensod File": "UserDocumentation/ImportAndExport/Import/ImportGENSODFile.html",
+  "Import WAJAC File": "UserDocumentation/ImportAndExport/Import/ImportFromWajac.html",
+  "Import Guiding Geometry from DXF File": "UserDocumentation/ImportAndExport/Import/ImportDXFFile.html",
+  "Import linearised pilehead springs": "UserDocumentation/ImportAndExport/Import/ImportLinerarisedPileheadSprings.html",
+  "Import workspace": "UserDocumentation/ImportAndExport/Import/ImportGNXWorkspaceFile.html",
+  "Import Weight List File": "UserDocumentation/Tools/Equipment/ImportWeightListImport.html",
+
+  "Export to SESAM FEM File": "UserDocumentation/ImportAndExport/Export/ExportFEMFile.html",
+  "Export to SESAM results SIN File": "UserDocumentation/ImportAndExport/Export/ExportExternalResultSIN.html",
+  "Export Concepts to XML File": "UserDocumentation/ImportAndExport/Export/ExportXMLConceptModelFile.html",
+  "Export to ACIS SAT File": "UserDocumentation/ImportAndExport/Export/ExportACISSATFile.html",
+  "Export Polyline Approximations to pln-File": "UserDocumentation/ImportAndExport/Export/ExportPLNFile.html",
+  "Export to Usfos": "UserDocumentation/ImportAndExport/Export/ExportUFO.html",
+  "Export workspace": "UserDocumentation/ImportAndExport/Export/ExportGNXWorkspaceFile.html",
+  
+  "Sesam Insight Uploader": "UserDocumentation/ImportAndExport/SesamInsightUploader.html"
+}
+

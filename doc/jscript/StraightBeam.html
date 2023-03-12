@@ -1,0 +1,2237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: StraightBeam
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: StraightBeam
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+The Beam command creates a straight beam between two points
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Define a Straight Beam</td></tr><tr>  <td>     <code>b1 = Beam(Point(0,0,0),Point(1,0,0));<br/>b2 = Beam(b1.end1),Point(2,2,0));<br/>     </code>		<div class="explanation">This command is scripted.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Define a Straight Overlapping Beam</td></tr><tr>  <td>     <code>Bm4 = Beam(Point1,Point2,geAllowOverlap);<br/>     </code>		<div class="explanation">This command is scripted. Typically, when inserting Bm4 on top of another beam (automatically name) between<br/>Point1 and Point2 when using reference point modelling.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Counting beams (or other items of interest</td></tr><tr>  <td>     <code>var counter = 0;<br/>for (var object in ModelObjects){<br/>if(object.supportsType(typeStraightbeam)){<br/>counter = counter + 1<br/>}}<br/>print("Num of beams: " + counter)<br/>     </code>		<div class="explanation">This script is counting the number of straight beams in your model. <br/> You could easily change it to counting other items of interest<br/> by exchanging typeStraightBeam with typeFlatPlate, typeCurvedBeam, typeCurvedShell etc<br/>You could easily change it to counting other items of interest<br/>by exchanging typeStraightBeam with typeFlatPlate, typeCurvedBeam, typeCurvedShell etc<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Additional Information</td></tr><tr>  <td>     <code>     </code>		<div class="explanation">The beam can be<br/> assigned a local coordinate system, and an offset (either constant beam offset or end offsets).<br/>The beam can also have material, mesh density, cross section, element type,<br/> and load interface properties assigned. <br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="Transformable.html">Transformable</a>
+            |
+            +--<a href="BasicConcept.html">BasicConcept</a>
+                 |
+                 +--<a href="Beam.html">Beam</a>
+                      |
+                      +--<b>StraightBeam</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="StraightBeam.html#StraightBeam(Point, Point)">StraightBeam</a></b>(<b><a href="Point.html">Point</a></b><span title="End 1 of the Beam"> p1</span>, <b><a href="Point.html">Point</a></b><span title="End 2 of the Beam"> p2</span>)</code>
+<div class="explanation">
+Create a straight Beam</div></td>
+</tr>
+<tr >
+<td><code><b><a href="StraightBeam.html#StraightBeam(Point, Point, scTopologicalConcept::scOverlapPolicy)">StraightBeam</a></b>(<b><a href="Point.html">Point</a></b><span title="End 1 of the Beam"> p1</span>, <b><a href="Point.html">Point</a></b><span title="End 2 of the Beam"> p2</span>, <b><a href="scTopologicalConcept__scOverlapPolicy.html">scTopologicalConcept::scOverlapPolicy</a></b><span title="Specifies how this beam is to be inserted into the model"> overlapPolicy</span>)</code>
+<div class="explanation">
+Create a straight Beam</div></td>
+</tr>
+<tr >
+<td><code><b><a href="StraightBeam.html#StraightBeam(ggGuideCurve)">StraightBeam</a></b>(<b><a href="ggGuideCurve.html">ggGuideCurve</a></b><span title="guide curve to create beam from"> curve</span>)</code>
+<div class="explanation">
+Create a straight Beam</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#AdjustSegmentLengths()">AdjustSegmentLengths</a></b>()</code>
+<div class="explanation">
+Adjusts all segment lengths based on reinforcements and conical transitions</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#SetNoClassification()">SetNoClassification</a></b>()</code>
+<div class="explanation">
+Remove beam classification assignment for whole beam</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>Beam</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#divide(mfRelationObject)">divide</a></b>(<b><a href="mfRelationObject.html">mfRelationObject</a></b> dividerObject)</code>
+<div class="explanation">
+Divide beam in two with a curve or a plate</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#divide(oriented_bbox3d, std::shared_ptr<mfNameMask>)">divide</a></b>(<b><a href="oriented_bbox3d.html">oriented_bbox3d</a></b><span title="bounding box to divide beam with"> boundingBox</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b>)</code>
+<div class="explanation">
+Divide a beam in multiple beams based on the input bounding box</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>Beam</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#divide(plane3d)">divide</a></b>(<b><a href="plane3d.html">plane3d</a></b> dividerPlane)</code>
+<div class="explanation">
+Divide beam in two with a plane</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>Beam</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#divideAt(double)">divideAt</a></b>(<b>double</b><span title="value in range <0,1>."> parameter</span>)</code>
+<div class="explanation">
+Divide beam at parameter value and return the second half of the beam</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>Beam</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#divideAtEccentric(double)">divideAtEccentric</a></b>(<b>double</b><span title="value in range <0,1>."> length fraction</span>)</code>
+<div class="explanation">
+Divide beam at eccentric length fraction value and return the second half of the beam</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#divideSegmentAt(int, double)">divideSegmentAt</a></b>(<b>int</b><span title="segment index"> iseg</span>, <b>double</b><span title="value in range <0,1>."> parameter</span>)</code>
+<div class="explanation">
+Divide beam segment at parameter value</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#divideSegmentAtEccentric(int, double)">divideSegmentAtEccentric</a></b>(<b>int</b>, <b>double</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#divideSegmentAtPlane(plane3d)">divideSegmentAtPlane</a></b>(<b><a href="plane3d.html">plane3d</a></b><span title="dividing plane"> plane</span>)</code>
+<div class="explanation">
+Divide beam segment using plane</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#explode(std::shared_ptr<mfNameMask>)">explode</a></b>(<b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Controls the naming of the new concepts"> nameMask</span>)</code>
+<div class="explanation">
+Split structure into smaller parts</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#extendEnd(long, Length)">extendEnd</a></b>(<b><a href="long.html">long</a></b><span title="Beam end number, 1 or 2."> iend</span>, <b><a href="Length.html">Length</a></b><span title="length to extend or shorten beam"> extension</span>)</code>
+<div class="explanation">
+Extend or shorten beam at end 1 or 2 along direction of beam</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#flushOffsetToPlane(int, plane3d)">flushOffsetToPlane</a></b>(<b>int</b><span title="Beam end number (1 or 2)"> end_id</span>, <b><a href="plane3d.html">plane3d</a></b><span title="Plane to limit beam"> plane</span>)</code>
+<div class="explanation">
+Flush the offset at any side to the given plane if possible.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#getConnectedBeams(pointOnBeam)">getConnectedBeams</a></b>(<b><a href="pointOnBeam.html">pointOnBeam</a></b>)</code>
+<div class="explanation">
+Returns all beams that are connected to this beam at pointOnBeam</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="LengthVector3d.html">LengthVector3d</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#getOffset(double)">getOffset</a></b>(<b>double</b><span title="beam parameter [0..1]"> param</span>)</code>
+<div class="explanation">
+Retrieve local eccentricity at beam parameter position.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#getSegmentLength(int)">getSegmentLength</a></b>(<b>int</b> iseg)</code>
+<div class="explanation">
+Returns the length of segment number <code>iseg</code></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Material.html">Material</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#getSegmentMaterial(int)">getSegmentMaterial</a></b>(<b>int</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Section.html">Section</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#getSegmentSection(int)">getSegmentSection</a></b>(<b>int</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#intersect(Transformable)">intersect</a></b>(<b><a href="Transformable.html">Transformable</a></b> object)</code>
+<div class="explanation">
+Find the intersection point, if any, between the beam and the other object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#intersect(mfRelationObject)">intersect</a></b>(<b><a href="mfRelationObject.html">mfRelationObject</a></b> object)</code>
+<div class="explanation">
+Find the intersection point between the beam and the object</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#intersect(plane3d)">intersect</a></b>(<b><a href="plane3d.html">plane3d</a></b> plane)</code>
+<div class="explanation">
+Find the intersection point, if between the beam and a plane</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#joinBeams(StraightBeam)">joinBeams</a></b>(<b>StraightBeam</b><span title="Beam to be joined"> slave_beam</span>)</code>
+<div class="explanation">
+Join this beam with slave beam</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#joinSegments(int, int)">joinSegments</a></b>(<b>int</b><span title="Master segment"> iseg1</span>, <b>int</b><span title="Slave segment"> iseg2</span>)</code>
+<div class="explanation">
+Join two neighbour segments</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#lockMesh(...)">lockMesh</a></b>([ ...])</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#move3Point(Point, Point, Point, Point, Point, Point)">move3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> p4</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> p5</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> p6</span>)</code>
+<div class="explanation">
+Move the object from one coordinate system to another</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#move3Point(Point, Point, Point, Point, Point, Point, ConnectionType)">move3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> p4</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> p5</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> p6</span>, <b><a href="ConnectionType.html">ConnectionType</a></b><span title="Specify the connection type (geCONNECTED or geUNCONNECTED)"> connectionType</span>)</code>
+<div class="explanation">
+Move the object from one coordinate system to another</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#moveEnd(long, LengthVector3d)">moveEnd</a></b>(<b><a href="long.html">long</a></b><span title="Beam end number, 1 or 2."> iend</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="vector describing movement"> offset</span>)</code>
+<div class="explanation">
+Move beam end by giving in a vector</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#moveEnd(long, Point)">moveEnd</a></b>(<b><a href="long.html">long</a></b><span title="Beam end number, 1 or 2."> iend</span>, <b><a href="Point.html">Point</a></b><span title="point that beam end should be moved to"> newPos</span>)</code>
+<div class="explanation">
+Move beam end by giving in the new end point</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#moveEndPoints(Point, Point)">moveEndPoints</a></b>(<b><a href="Point.html">Point</a></b><span title="New position of end1"> newPos1</span>, <b><a href="Point.html">Point</a></b><span title="New position of end2"> newPos2</span>)</code>
+<div class="explanation">
+Move beam ends to specified new positions</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveMirror(Point, LengthVector3d)">moveMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveMirror(Point, LengthVector3d, ConnectionType)">moveMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>, <b><a href="ConnectionType.html">ConnectionType</a></b><span title="Specify the connection type (geCONNECTED or geUNCONNECTED)"> connectionType</span>)</code>
+<div class="explanation">
+Mirror the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveRotate(Point, LengthVector3d, Angle)">moveRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveRotate(Point, LengthVector3d, Angle, ConnectionType)">moveRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b><a href="ConnectionType.html">ConnectionType</a></b><span title="Specify the connection type (geCONNECTED or geUNCONNECTED)"> connectionType</span>)</code>
+<div class="explanation">
+Rotate the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#moveSegmentEnd(int, double)">moveSegmentEnd</a></b>(<b>int</b><span title="Segment number. Will move end of this segment."> isegEnd</span>, <b>double</b><span title="Parameter value on beam with the new segment position."> parameter</span>)</code>
+<div class="explanation">
+Move segment end (boundary between two segments)</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveTransform(Transformation3d)">moveTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general transformation to the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveTransform(Transformation3d, ConnectionType)">moveTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>, <b><a href="ConnectionType.html">ConnectionType</a></b><span title="Specify the connection type (geCONNECTED or geUNCONNECTED)"> connectionType</span>)</code>
+<div class="explanation">
+Apply a general transformation to the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveTranslate(LengthVector3d)">moveTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveTranslate(LengthVector3d, ConnectionType)">moveTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b><a href="ConnectionType.html">ConnectionType</a></b><span title="Specify the connection type (geCONNECTED or geUNCONNECTED)"> connectionType</span>)</code>
+<div class="explanation">
+Translate this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>BasicConcept</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#offset(Length)">offset</a></b>(<b><a href="Length.html">Length</a></b><span title="distance"> distance</span>)</code>
+<div class="explanation">
+Apply an offset transformation to the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#parameter(Point)">parameter</a></b>(<b><a href="Point.html">Point</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#point(double)">point</a></b>(<b>double</b> param)</code>
+<div class="explanation">
+Return a point at parameter value <code>param</code> along the beam</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#project(Point)">project</a></b>(<b><a href="Point.html">Point</a></b> in)</code>
+<div class="explanation">
+Project the point <code>in</code> onto the beam</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#rotateLocalX(Angle)">rotateLocalX</a></b>(<b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotates the local coordinate system about the X axis. </div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#rotateLocalY(Angle)">rotateLocalY</a></b>(<b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotates the local coordinate system about the Y axis. </div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#rotateLocalZ(Angle)">rotateLocalZ</a></b>(<b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotates the local coordinate system about the Y axis. </div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Segment.html">Segment</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#segment(int)">segment</a></b>(<b>int</b><span title="Beam parameter, value in range <0,1>."> parameter</span>)</code>
+<div class="explanation">
+Provide access</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setBeamOffset(LengthVector3d)">setBeamOffset</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Offset vector"> offset</span>)</code>
+<div class="explanation">
+Defines local eccentricity for the whole beam. When using this option, any setEndOffset values defined will be cancelled. </div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setBeamOffsetLocal(LengthVector3d)">setBeamOffsetLocal</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Offset vector defined in the local system"> offset</span>)</code>
+<div class="explanation">
+Defines local eccentricity for the whole beam. When using this option, any setEndOffset values defined will be cancelled. </div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setEndHinge(int, HingeBase)">setEndHinge</a></b>(<b>int</b><span title="Beam end number (1 or 2)"> end_id</span>, <b><a href="HingeBase.html">HingeBase</a></b><span title="The hinge to add"> hinge</span>)</code>
+<div class="explanation">
+Adds a hinge at the specified beam end</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setEndNoHinge(int)">setEndNoHinge</a></b>(<b>int</b><span title="Beam end number (1 or 2)"> end_id</span>)</code>
+<div class="explanation">
+Removes a hinge from the specified beam end</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setEndOffset(int, LengthVector3d)">setEndOffset</a></b>(<b>int</b><span title="Beam end number (1 or 2)"> end_id</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Offset vector"> offset</span>)</code>
+<div class="explanation">
+Defines local eccentricity at either end of the beam. The "end_id" must be an integer with value 1 or 2. When using this option, any setBeamOffset values defined will be cancelled. </div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setLocalSystemRule(LocalSystemRule)">setLocalSystemRule</a></b>(<b><a href="LocalSystemRule.html">LocalSystemRule</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#setLocalX(LengthVector3d)">setLocalX</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="direction vector indicating local x"> xvector</span>)</code>
+<div class="explanation">
+Set the local x-direction.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#setLocalY(LengthVector3d)">setLocalY</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="direction vector indicating local y"> yvector</span>)</code>
+<div class="explanation">
+Set the local y-direction.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#setLocalZ(LengthVector3d)">setLocalZ</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="direction vector indicating local z"> zvector</span>)</code>
+<div class="explanation">
+Set the local z-direction.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setNoAirDrag()">setNoAirDrag</a></b>()</code>
+<div class="explanation">
+Remove Air drag property</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setNoBeamType()">setNoBeamType</a></b>()</code>
+<div class="explanation">
+Remove BeamType property</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setNoBuckling()">setNoBuckling</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setNoBuoyancyArea()">setNoBuoyancyArea</a></b>()</code>
+<div class="explanation">
+Remove Buoyancy area property</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#setNoCorrosionAddition()">setNoCorrosionAddition</a></b>()</code>
+<div class="explanation">
+Remove corrosion addition assignment for whole beam</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setNoEffectiveFlange()">setNoEffectiveFlange</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setNoElementRefinement()">setNoElementRefinement</a></b>()</code>
+<div class="explanation">
+Remove Element refinement property</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setNoFlooding()">setNoFlooding</a></b>()</code>
+<div class="explanation">
+Remove flooding property</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setNoHydrodynamicDiameter()">setNoHydrodynamicDiameter</a></b>()</code>
+<div class="explanation">
+Remove Hydrodynamic diameter property</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setNoMarineGrowth()">setNoMarineGrowth</a></b>()</code>
+<div class="explanation">
+Remove Marine growth property</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setNoMassDensityFactor()">setNoMassDensityFactor</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#setNoMaterial()">setNoMaterial</a></b>()</code>
+<div class="explanation">
+Remove material assignment</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#setNoMeshDensity()">setNoMeshDensity</a></b>()</code>
+<div class="explanation">
+Remove mesh density assignment</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#setNoMeshOption()">setNoMeshOption</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#setNoMeshProperty()">setNoMeshProperty</a></b>()</code>
+<div class="explanation">
+Remove mesh property assignment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setNoMorison()">setNoMorison</a></b>()</code>
+<div class="explanation">
+Remove Morison coefficient property</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setNoNumberOfElements()">setNoNumberOfElements</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setNoPermeabilityFactor()">setNoPermeabilityFactor</a></b>()</code>
+<div class="explanation">
+Remove Permeability factor property</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#setNoSection()">setNoSection</a></b>()</code>
+<div class="explanation">
+Remove cross section assignment for whole beam</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setNoShielding()">setNoShielding</a></b>()</code>
+<div class="explanation">
+Remove Shielding effect property</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setNoStiffenerOrientation()">setNoStiffenerOrientation</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentAirDrag(int, AirDrag)">setSegmentAirDrag</a></b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="AirDrag.html">AirDrag</a></b><span title="Air drag property"> airDrag</span>)</code>
+<div class="explanation">
+Set Air drag property for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentBuoyancyArea(int, HydroBuoyancyArea)">setSegmentBuoyancyArea</a></b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="HydroBuoyancyArea.html">HydroBuoyancyArea</a></b><span title="Buoyancy area property"> buoyancyArea</span>)</code>
+<div class="explanation">
+Set Buoyancy area property for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentElementRefinement(int, ElementRefinement)">setSegmentElementRefinement</a></b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="ElementRefinement.html">ElementRefinement</a></b><span title="Element refinement property"> refinement</span>)</code>
+<div class="explanation">
+Set Element refinement property for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentFlooding(int, Flooding)">setSegmentFlooding</a></b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="Flooding.html">Flooding</a></b><span title="Flooding property"> flooding</span>)</code>
+<div class="explanation">
+Set flooding property for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentHydrodynamicDiameter(int, HydroDynamicDiameter)">setSegmentHydrodynamicDiameter</a></b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="HydroDynamicDiameter.html">HydroDynamicDiameter</a></b><span title="Hydrodynamic diameter property"> diameter</span>)</code>
+<div class="explanation">
+Set Hydrodynamic diameter property for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentMarineGrowth(int, MarineGrowth)">setSegmentMarineGrowth</a></b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="MarineGrowth.html">MarineGrowth</a></b><span title="Marine growth property"> marineGrowth</span>)</code>
+<div class="explanation">
+Set Marine growth property for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentMassDensityFactor(int, MassDensityFactor)">setSegmentMassDensityFactor</a></b>(<b>int</b>, <b><a href="MassDensityFactor.html">MassDensityFactor</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#setSegmentMaterial(int, Material)">setSegmentMaterial</a></b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="Material.html">Material</a></b><span title="Material property"> material</span>)</code>
+<div class="explanation">
+Set material assignment for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentMorison(int, Morison)">setSegmentMorison</a></b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="Morison.html">Morison</a></b><span title="Morison coefficient property"> morison</span>)</code>
+<div class="explanation">
+Set Morison coefficient property for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentNoAirDrag(int)">setSegmentNoAirDrag</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Remove Air drag property for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentNoBuoyancyArea(int)">setSegmentNoBuoyancyArea</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Remove Buoyancy area property for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentNoElementRefinement(int)">setSegmentNoElementRefinement</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Remove Element refinement property for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentNoFlooding(int)">setSegmentNoFlooding</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Remove flooding property for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentNoHydrodynamicDiameter(int)">setSegmentNoHydrodynamicDiameter</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Remove Hydrodynamic diameter property for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentNoMarineGrowth(int)">setSegmentNoMarineGrowth</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Remove Marine growth property for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentNoMassDensityFactor(int)">setSegmentNoMassDensityFactor</a></b>(<b>int</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#setSegmentNoMaterial(int)">setSegmentNoMaterial</a></b>(<b>int</b><span title="Segment number"> iseg</span>)</code>
+<div class="explanation">
+Remove material assignment for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentNoMorison(int)">setSegmentNoMorison</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Remove Morison coefficient property for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentNoPermeabilityFactor(int)">setSegmentNoPermeabilityFactor</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Remove Permeability factor property for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentNoReinforcement(int)">setSegmentNoReinforcement</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Remove reinforcement property for segment</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#setSegmentNoSection(int)">setSegmentNoSection</a></b>(<b>int</b><span title="Segment number"> iseg</span>)</code>
+<div class="explanation">
+Remove section assignment for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentNoShielding(int)">setSegmentNoShielding</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Remove Shielding effect property for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentNoThickness(int)">setSegmentNoThickness</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Remove thickness property</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentPermeabilityFactor(int, PermeabilityFactor)">setSegmentPermeabilityFactor</a></b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="PermeabilityFactor.html">PermeabilityFactor</a></b><span title="Permeability factor property"> factor</span>)</code>
+<div class="explanation">
+Set Permeability factor property for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentReinforcement(int, Reinforcement)">setSegmentReinforcement</a></b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="Reinforcement.html">Reinforcement</a></b><span title="Reinforcement property"> reinforcement</span>)</code>
+<div class="explanation">
+Set reinforcement property for segment</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#setSegmentSection(int, Section)">setSegmentSection</a></b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="Section.html">Section</a></b><span title="Cross section property"> material</span>)</code>
+<div class="explanation">
+Set cross section assignment for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentShielding(int, ConductorShielding)">setSegmentShielding</a></b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="ConductorShielding.html">ConductorShielding</a></b><span title="Shielding effect property"> shielding</span>)</code>
+<div class="explanation">
+Set Shielding effect property for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="StraightBeam.html#setSegmentThickness(int, prThickness)">setSegmentThickness</a></b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="prThickness.html">prThickness</a></b><span title="Thickness property"> thickness</span>)</code>
+<div class="explanation">
+Set thickness property for segment</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#simplifyTopology()">simplifyTopology</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#splitAt(double)">splitAt</a></b>(<b>double</b><span title="Beam parameter, value in range <0,1>."> parameter</span>)</code>
+<div class="explanation">
+Insert split point at given parameter position</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#unLockMesh()">unLockMesh</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copy3Point(Point, Point, Point, Point, Point, Point)">copy3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> sp1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> sp2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> sp3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> dp1</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> dp2</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> dp3</span>)</code>
+<div class="explanation">
+Copy the object without scaling from one location to another.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyMirror(Point, LengthVector3d)">copyMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int, std::shared_ptr<mfNameMask>)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyScale(double, Point)">copyScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Scale a copy of the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTransform(Transformation3d)">copyTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general transformation to a copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate a copy of this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int, std::shared_ptr<mfNameMask>)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#move3Point(Point, Point, Point, Point, Point, Point)">move3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> p4</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> p5</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> p6</span>)</code>
+<div class="explanation">
+Move the object from one coordinate system to another</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveMirror(Point, LengthVector3d)">moveMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveRotate(Point, LengthVector3d, Angle)">moveRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveScale(double, Point)">moveScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Move and scale the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTransform(Transformation3d)">moveTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general selection to the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTranslate(LengthVector3d)">moveTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LengthVector3d.html">LengthVector3d</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#BeamDirection()">BeamDirection</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="DNVS__MoFa__Utility__SmartPointer_DNVS__MoFa__CurveOffsets__ICurveOffset_.html">DNVS::MoFa::Utility::SmartPointer<DNVS::MoFa::CurveOffsets::ICurveOffset></a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#CurveOffset()">CurveOffset</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="DNVS__MoFa__Utility__SmartPointer_DNVS__MoFa__CurveOrientations__ICurveOrientation_.html">DNVS::MoFa::Utility::SmartPointer<DNVS::MoFa::CurveOrientations::ICurveOrientation></a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#CurveOrientation()">CurveOrientation</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Apex.html">Apex</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#End1()">End1</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Apex.html">Apex</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#End2()">End2</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="AirDrag.html">AirDrag</a></b></code>
+</td>
+<td width="90%"><code><b><a href="StraightBeam.html#airDrag()">airDrag</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Air drag property</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="BeamType.html">BeamType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="StraightBeam.html#beamType()">beamType</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+beamType property</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="BucklingFactor.html">BucklingFactor</a></b></code>
+</td>
+<td width="90%"><code><b><a href="StraightBeam.html#buckling()">buckling</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="HydroBuoyancyArea.html">HydroBuoyancyArea</a></b></code>
+</td>
+<td width="90%"><code><b><a href="StraightBeam.html#buoyancyArea()">buoyancyArea</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Buoyancy area property</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BasicConcept.html#centreOfGravity()">centreOfGravity</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="BeamClassification.html">BeamClassification</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#classification()">classification</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Classification (whole beam)</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="AbstractCorrosionAddition.html">AbstractCorrosionAddition</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#corrosionAddition()">corrosionAddition</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Corrosion Addition (whole beam)</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="EffectiveFlange.html">EffectiveFlange</a></b></code>
+</td>
+<td width="90%"><code><b><a href="StraightBeam.html#effectiveFlange()">effectiveFlange</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ElementRefinement.html">ElementRefinement</a></b></code>
+</td>
+<td width="90%"><code><b><a href="StraightBeam.html#elementRefinement()">elementRefinement</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Element refinement property</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Flooding.html">Flooding</a></b></code>
+</td>
+<td width="90%"><code><b><a href="StraightBeam.html#flooding()">flooding</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Flooding property</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geCONNECTED()">geCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use connected move</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geUNCONNECTED()">geUNCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use unconnected move</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="HydroDynamicDiameter.html">HydroDynamicDiameter</a></b></code>
+</td>
+<td width="90%"><code><b><a href="StraightBeam.html#hydrodynamicDiameter()">hydrodynamicDiameter</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Hydrodynamic diameter property</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#intersectionPoints()">intersectionPoints</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+returns all points along a beam that can have intersecting beams</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="StraightBeam.html#length()">length</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Returns the length of a beam</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LocalSystem.html">LocalSystem</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BasicConcept.html#localSystem()">localSystem</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Gets or sets the local coordinate system.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LocalSystemRule.html">LocalSystemRule</a></b></code>
+</td>
+<td width="90%"><code><b><a href="StraightBeam.html#localSystemRule()">localSystemRule</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="MarineGrowth.html">MarineGrowth</a></b></code>
+</td>
+<td width="90%"><code><b><a href="StraightBeam.html#marineGrowth()">marineGrowth</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Marine growth property</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Mass.html">Mass</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BasicConcept.html#mass()">mass</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="MassDensityFactor.html">MassDensityFactor</a></b></code>
+</td>
+<td width="90%"><code><b><a href="StraightBeam.html#massDensityFactor()">massDensityFactor</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Material.html">Material</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#material()">material</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Material (whole beam)</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="MeshDensity.html">MeshDensity</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#meshDensity()">meshDensity</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Mesh density (whole beam)</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="MeshOptionEdge.html">MeshOptionEdge</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#meshOption()">meshOption</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Morison.html">Morison</a></b></code>
+</td>
+<td width="90%"><code><b><a href="StraightBeam.html#morison()">morison</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Morison coefficient property</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="NumberOfElements.html">NumberOfElements</a></b></code>
+</td>
+<td width="90%"><code><b><a href="StraightBeam.html#numberOfElements()">numberOfElements</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="PermeabilityFactor.html">PermeabilityFactor</a></b></code>
+</td>
+<td width="90%"><code><b><a href="StraightBeam.html#permeabilityFactor()">permeabilityFactor</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Permeability factor property</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>int</b></code>
+</td>
+<td width="90%"><code><b><a href="BasicConcept.html#primitivePartCount()">primitivePartCount</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Section.html">Section</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#section()">section</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Cross section (whole beam)</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>int</b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#segmentCount()">segmentCount</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConductorShielding.html">ConductorShielding</a></b></code>
+</td>
+<td width="90%"><code><b><a href="StraightBeam.html#shielding()">shielding</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Shielding effect property</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="prStiffenerOrientation.html">prStiffenerOrientation</a></b></code>
+</td>
+<td width="90%"><code><b><a href="StraightBeam.html#stiffenerOrientation()">stiffenerOrientation</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="StraightBeam(Point, Point)"></a>
+<h3>StraightBeam</h3>
+<p class="function">
+<b>StraightBeam</b>(<b><a href="Point.html">Point</a></b><span title="End 1 of the Beam"> p1</span>, <b><a href="Point.html">Point</a></b><span title="End 2 of the Beam"> p2</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a straight Beam
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>p1</code> - End 1 of the Beam<dd><code>p2</code> - End 2 of the Beam</dl>
+<hr>
+
+<a name="StraightBeam(Point, Point, scTopologicalConcept::scOverlapPolicy)"></a>
+<h3>StraightBeam</h3>
+<p class="function">
+<b>StraightBeam</b>(<b><a href="Point.html">Point</a></b><span title="End 1 of the Beam"> p1</span>, <b><a href="Point.html">Point</a></b><span title="End 2 of the Beam"> p2</span>, <b><a href="scTopologicalConcept__scOverlapPolicy.html">scTopologicalConcept::scOverlapPolicy</a></b><span title="Specifies how this beam is to be inserted into the model"> overlapPolicy</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a straight Beam
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>p1</code> - End 1 of the Beam<dd><code>p2</code> - End 2 of the Beam<dd><code>overlapPolicy</code> - Specifies how this beam is to be inserted into the model</dl>
+<hr>
+
+<a name="StraightBeam(ggGuideCurve)"></a>
+<h3>StraightBeam</h3>
+<p class="function">
+<b>StraightBeam</b>(<b><a href="ggGuideCurve.html">ggGuideCurve</a></b><span title="guide curve to create beam from"> curve</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a straight Beam
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>curve</code> - guide curve to create beam from</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="AdjustSegmentLengths()"></a>
+<h3>AdjustSegmentLengths</h3>
+<p class="function">
+<b>&nbsp;</b> <b>AdjustSegmentLengths</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Adjusts all segment lengths based on reinforcements and conical transitions
+</dl>
+<hr>
+
+<a name="flushOffsetToPlane(int, plane3d)"></a>
+<h3>flushOffsetToPlane</h3>
+<p class="function">
+<b>&nbsp;</b> <b>flushOffsetToPlane</b>(<b>int</b><span title="Beam end number (1 or 2)"> end_id</span>, <b><a href="plane3d.html">plane3d</a></b><span title="Plane to limit beam"> plane</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Flush the offset at any side to the given plane if possible.
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>end_id</code> - Beam end number (1 or 2)<dd><code>plane</code> - Plane to limit beam</dl>
+<hr>
+
+<a name="getOffset(double)"></a>
+<h3>getOffset</h3>
+<p class="function">
+<b><a href="LengthVector3d.html">LengthVector3d</a></b> <b>getOffset</b>(<b>double</b><span title="beam parameter [0..1]"> param</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Retrieve local eccentricity at beam parameter position.
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>param</code> - beam parameter [0..1]</dl>
+<hr>
+
+<a name="getSegmentLength(int)"></a>
+<h3>getSegmentLength</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>getSegmentLength</b>(<b>int</b> iseg)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the length of segment number <code>iseg</code>
+</dl>
+<hr>
+
+<a name="intersect(Transformable)"></a>
+<h3>intersect</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>intersect</b>(<b><a href="Transformable.html">Transformable</a></b> object)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Find the intersection point, if any, between the beam and the other object
+</dl>
+<dl>
+<dt>Returns:</dt>
+<dd>
+</dl>
+<hr>
+
+<a name="intersect(plane3d)"></a>
+<h3>intersect</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>intersect</b>(<b><a href="plane3d.html">plane3d</a></b> plane)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Find the intersection point, if between the beam and a plane
+</dl>
+<dl>
+<dt>Returns:</dt>
+<dd>
+</dl>
+<hr>
+
+<a name="joinBeams(StraightBeam)"></a>
+<h3>joinBeams</h3>
+<p class="function">
+<b>&nbsp;</b> <b>joinBeams</b>(<b>StraightBeam</b><span title="Beam to be joined"> slave_beam</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Join this beam with slave beam
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>slave_beam</code> - Beam to be joined</dl>
+<hr>
+
+<a name="project(Point)"></a>
+<h3>project</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>project</b>(<b><a href="Point.html">Point</a></b> in)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Project the point <code>in</code> onto the beamThe point is projected onto the centric beam. This means that eccentricities are not taken into account.
+</dl>
+<dl>
+<dt>Returns:</dt>
+<dd>
+</dl>
+<hr>
+
+<a name="setBeamOffset(LengthVector3d)"></a>
+<h3>setBeamOffset</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setBeamOffset</b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Offset vector"> offset</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Defines local eccentricity for the whole beam. When using this option, any setEndOffset values defined will be cancelled. 
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>offset</code> - Offset vector</dl>
+<hr>
+
+<a name="setBeamOffsetLocal(LengthVector3d)"></a>
+<h3>setBeamOffsetLocal</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setBeamOffsetLocal</b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Offset vector defined in the local system"> offset</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Defines local eccentricity for the whole beam. When using this option, any setEndOffset values defined will be cancelled. 
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>offset</code> - Offset vector defined in the local system</dl>
+<hr>
+
+<a name="setEndHinge(int, HingeBase)"></a>
+<h3>setEndHinge</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setEndHinge</b>(<b>int</b><span title="Beam end number (1 or 2)"> end_id</span>, <b><a href="HingeBase.html">HingeBase</a></b><span title="The hinge to add"> hinge</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Adds a hinge at the specified beam end
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>end_id</code> - Beam end number (1 or 2)<dd><code>hinge</code> - The hinge to add</dl>
+<hr>
+
+<a name="setEndNoHinge(int)"></a>
+<h3>setEndNoHinge</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setEndNoHinge</b>(<b>int</b><span title="Beam end number (1 or 2)"> end_id</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Removes a hinge from the specified beam end
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>end_id</code> - Beam end number (1 or 2)</dl>
+<hr>
+
+<a name="setEndOffset(int, LengthVector3d)"></a>
+<h3>setEndOffset</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setEndOffset</b>(<b>int</b><span title="Beam end number (1 or 2)"> end_id</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Offset vector"> offset</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Defines local eccentricity at either end of the beam. The "end_id" must be an integer with value 1 or 2. When using this option, any setBeamOffset values defined will be cancelled. 
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>end_id</code> - Beam end number (1 or 2)<dd><code>offset</code> - Offset vector</dl>
+<hr>
+
+<a name="setLocalSystemRule(LocalSystemRule)"></a>
+<h3>setLocalSystemRule</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setLocalSystemRule</b>(<b><a href="LocalSystemRule.html">LocalSystemRule</a></b>)</p>
+<p>
+<hr>
+
+<a name="setNoAirDrag()"></a>
+<h3>setNoAirDrag</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoAirDrag</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove Air drag property
+</dl>
+<hr>
+
+<a name="setNoBeamType()"></a>
+<h3>setNoBeamType</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoBeamType</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove BeamType property
+</dl>
+<hr>
+
+<a name="setNoBuckling()"></a>
+<h3>setNoBuckling</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoBuckling</b>()</p>
+<p>
+<hr>
+
+<a name="setNoBuoyancyArea()"></a>
+<h3>setNoBuoyancyArea</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoBuoyancyArea</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove Buoyancy area property
+</dl>
+<hr>
+
+<a name="setNoEffectiveFlange()"></a>
+<h3>setNoEffectiveFlange</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoEffectiveFlange</b>()</p>
+<p>
+<hr>
+
+<a name="setNoElementRefinement()"></a>
+<h3>setNoElementRefinement</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoElementRefinement</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove Element refinement property
+</dl>
+<hr>
+
+<a name="setNoFlooding()"></a>
+<h3>setNoFlooding</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoFlooding</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove flooding property
+</dl>
+<hr>
+
+<a name="setNoHydrodynamicDiameter()"></a>
+<h3>setNoHydrodynamicDiameter</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoHydrodynamicDiameter</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove Hydrodynamic diameter property
+</dl>
+<hr>
+
+<a name="setNoMarineGrowth()"></a>
+<h3>setNoMarineGrowth</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoMarineGrowth</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove Marine growth property
+</dl>
+<hr>
+
+<a name="setNoMassDensityFactor()"></a>
+<h3>setNoMassDensityFactor</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoMassDensityFactor</b>()</p>
+<p>
+<hr>
+
+<a name="setNoMorison()"></a>
+<h3>setNoMorison</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoMorison</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove Morison coefficient property
+</dl>
+<hr>
+
+<a name="setNoNumberOfElements()"></a>
+<h3>setNoNumberOfElements</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoNumberOfElements</b>()</p>
+<p>
+<hr>
+
+<a name="setNoPermeabilityFactor()"></a>
+<h3>setNoPermeabilityFactor</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoPermeabilityFactor</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove Permeability factor property
+</dl>
+<hr>
+
+<a name="setNoShielding()"></a>
+<h3>setNoShielding</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoShielding</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove Shielding effect property
+</dl>
+<hr>
+
+<a name="setNoStiffenerOrientation()"></a>
+<h3>setNoStiffenerOrientation</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoStiffenerOrientation</b>()</p>
+<p>
+<hr>
+
+<a name="setSegmentAirDrag(int, AirDrag)"></a>
+<h3>setSegmentAirDrag</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentAirDrag</b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="AirDrag.html">AirDrag</a></b><span title="Air drag property"> airDrag</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set Air drag property for segment
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iseg</code> - Segment number<dd><code>airDrag</code> - Air drag property</dl>
+<hr>
+
+<a name="setSegmentBuoyancyArea(int, HydroBuoyancyArea)"></a>
+<h3>setSegmentBuoyancyArea</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentBuoyancyArea</b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="HydroBuoyancyArea.html">HydroBuoyancyArea</a></b><span title="Buoyancy area property"> buoyancyArea</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set Buoyancy area property for segment
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iseg</code> - Segment number<dd><code>buoyancyArea</code> - Buoyancy area property</dl>
+<hr>
+
+<a name="setSegmentElementRefinement(int, ElementRefinement)"></a>
+<h3>setSegmentElementRefinement</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentElementRefinement</b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="ElementRefinement.html">ElementRefinement</a></b><span title="Element refinement property"> refinement</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set Element refinement property for segment
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iseg</code> - Segment number<dd><code>refinement</code> - Element refinement property</dl>
+<hr>
+
+<a name="setSegmentFlooding(int, Flooding)"></a>
+<h3>setSegmentFlooding</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentFlooding</b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="Flooding.html">Flooding</a></b><span title="Flooding property"> flooding</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set flooding property for segment
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iseg</code> - Segment number<dd><code>flooding</code> - Flooding property</dl>
+<hr>
+
+<a name="setSegmentHydrodynamicDiameter(int, HydroDynamicDiameter)"></a>
+<h3>setSegmentHydrodynamicDiameter</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentHydrodynamicDiameter</b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="HydroDynamicDiameter.html">HydroDynamicDiameter</a></b><span title="Hydrodynamic diameter property"> diameter</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set Hydrodynamic diameter property for segment
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iseg</code> - Segment number<dd><code>diameter</code> - Hydrodynamic diameter property</dl>
+<hr>
+
+<a name="setSegmentMarineGrowth(int, MarineGrowth)"></a>
+<h3>setSegmentMarineGrowth</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentMarineGrowth</b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="MarineGrowth.html">MarineGrowth</a></b><span title="Marine growth property"> marineGrowth</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set Marine growth property for segment
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iseg</code> - Segment number<dd><code>marineGrowth</code> - Marine growth property</dl>
+<hr>
+
+<a name="setSegmentMassDensityFactor(int, MassDensityFactor)"></a>
+<h3>setSegmentMassDensityFactor</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentMassDensityFactor</b>(<b>int</b>, <b><a href="MassDensityFactor.html">MassDensityFactor</a></b>)</p>
+<p>
+<hr>
+
+<a name="setSegmentMorison(int, Morison)"></a>
+<h3>setSegmentMorison</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentMorison</b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="Morison.html">Morison</a></b><span title="Morison coefficient property"> morison</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set Morison coefficient property for segment
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iseg</code> - Segment number<dd><code>morison</code> - Morison coefficient property</dl>
+<hr>
+
+<a name="setSegmentNoAirDrag(int)"></a>
+<h3>setSegmentNoAirDrag</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentNoAirDrag</b>(<b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove Air drag property for segment
+</dl>
+<hr>
+
+<a name="setSegmentNoBuoyancyArea(int)"></a>
+<h3>setSegmentNoBuoyancyArea</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentNoBuoyancyArea</b>(<b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove Buoyancy area property for segment
+</dl>
+<hr>
+
+<a name="setSegmentNoElementRefinement(int)"></a>
+<h3>setSegmentNoElementRefinement</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentNoElementRefinement</b>(<b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove Element refinement property for segment
+</dl>
+<hr>
+
+<a name="setSegmentNoFlooding(int)"></a>
+<h3>setSegmentNoFlooding</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentNoFlooding</b>(<b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove flooding property for segment
+</dl>
+<hr>
+
+<a name="setSegmentNoHydrodynamicDiameter(int)"></a>
+<h3>setSegmentNoHydrodynamicDiameter</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentNoHydrodynamicDiameter</b>(<b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove Hydrodynamic diameter property for segment
+</dl>
+<hr>
+
+<a name="setSegmentNoMarineGrowth(int)"></a>
+<h3>setSegmentNoMarineGrowth</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentNoMarineGrowth</b>(<b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove Marine growth property for segment
+</dl>
+<hr>
+
+<a name="setSegmentNoMassDensityFactor(int)"></a>
+<h3>setSegmentNoMassDensityFactor</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentNoMassDensityFactor</b>(<b>int</b>)</p>
+<p>
+<hr>
+
+<a name="setSegmentNoMorison(int)"></a>
+<h3>setSegmentNoMorison</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentNoMorison</b>(<b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove Morison coefficient property for segment
+</dl>
+<hr>
+
+<a name="setSegmentNoPermeabilityFactor(int)"></a>
+<h3>setSegmentNoPermeabilityFactor</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentNoPermeabilityFactor</b>(<b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove Permeability factor property for segment
+</dl>
+<hr>
+
+<a name="setSegmentNoReinforcement(int)"></a>
+<h3>setSegmentNoReinforcement</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentNoReinforcement</b>(<b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove reinforcement property for segment
+</dl>
+<hr>
+
+<a name="setSegmentNoShielding(int)"></a>
+<h3>setSegmentNoShielding</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentNoShielding</b>(<b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove Shielding effect property for segment
+</dl>
+<hr>
+
+<a name="setSegmentNoThickness(int)"></a>
+<h3>setSegmentNoThickness</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentNoThickness</b>(<b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove thickness property
+</dl>
+<hr>
+
+<a name="setSegmentPermeabilityFactor(int, PermeabilityFactor)"></a>
+<h3>setSegmentPermeabilityFactor</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentPermeabilityFactor</b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="PermeabilityFactor.html">PermeabilityFactor</a></b><span title="Permeability factor property"> factor</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set Permeability factor property for segment
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iseg</code> - Segment number<dd><code>factor</code> - Permeability factor property</dl>
+<hr>
+
+<a name="setSegmentReinforcement(int, Reinforcement)"></a>
+<h3>setSegmentReinforcement</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentReinforcement</b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="Reinforcement.html">Reinforcement</a></b><span title="Reinforcement property"> reinforcement</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set reinforcement property for segment
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iseg</code> - Segment number<dd><code>reinforcement</code> - Reinforcement property</dl>
+<hr>
+
+<a name="setSegmentShielding(int, ConductorShielding)"></a>
+<h3>setSegmentShielding</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentShielding</b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="ConductorShielding.html">ConductorShielding</a></b><span title="Shielding effect property"> shielding</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set Shielding effect property for segment
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iseg</code> - Segment number<dd><code>shielding</code> - Shielding effect property</dl>
+<hr>
+
+<a name="setSegmentThickness(int, prThickness)"></a>
+<h3>setSegmentThickness</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentThickness</b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="prThickness.html">prThickness</a></b><span title="Thickness property"> thickness</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set thickness property for segmentThickness is only used for cone segments
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iseg</code> - Segment number<dd><code>thickness</code> - Thickness property</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="airDrag()"></a>
+<h3>airDrag</h3>
+<p class="function">
+<b><a href="AirDrag.html">AirDrag</a></b> <b>airDrag</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Air drag property
+</dl>
+<a name="beamType()"></a>
+<h3>beamType</h3>
+<p class="function">
+<b><a href="BeamType.html">BeamType</a></b> <b>beamType</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>beamType property
+</dl>
+<a name="buckling()"></a>
+<h3>buckling</h3>
+<p class="function">
+<b><a href="BucklingFactor.html">BucklingFactor</a></b> <b>buckling</b>()</p>
+<p>
+<a name="buoyancyArea()"></a>
+<h3>buoyancyArea</h3>
+<p class="function">
+<b><a href="HydroBuoyancyArea.html">HydroBuoyancyArea</a></b> <b>buoyancyArea</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Buoyancy area property
+</dl>
+<a name="effectiveFlange()"></a>
+<h3>effectiveFlange</h3>
+<p class="function">
+<b><a href="EffectiveFlange.html">EffectiveFlange</a></b> <b>effectiveFlange</b>()</p>
+<p>
+<a name="elementRefinement()"></a>
+<h3>elementRefinement</h3>
+<p class="function">
+<b><a href="ElementRefinement.html">ElementRefinement</a></b> <b>elementRefinement</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Element refinement property
+</dl>
+<a name="flooding()"></a>
+<h3>flooding</h3>
+<p class="function">
+<b><a href="Flooding.html">Flooding</a></b> <b>flooding</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Flooding property
+</dl>
+<a name="hydrodynamicDiameter()"></a>
+<h3>hydrodynamicDiameter</h3>
+<p class="function">
+<b><a href="HydroDynamicDiameter.html">HydroDynamicDiameter</a></b> <b>hydrodynamicDiameter</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Hydrodynamic diameter property
+</dl>
+<a name="length()"></a>
+<h3>length</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>length</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the length of a beam
+</dl>
+<a name="localSystemRule()"></a>
+<h3>localSystemRule</h3>
+<p class="function">
+<b><a href="LocalSystemRule.html">LocalSystemRule</a></b> <b>localSystemRule</b>()</p>
+<p>
+<a name="marineGrowth()"></a>
+<h3>marineGrowth</h3>
+<p class="function">
+<b><a href="MarineGrowth.html">MarineGrowth</a></b> <b>marineGrowth</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Marine growth property
+</dl>
+<a name="massDensityFactor()"></a>
+<h3>massDensityFactor</h3>
+<p class="function">
+<b><a href="MassDensityFactor.html">MassDensityFactor</a></b> <b>massDensityFactor</b>()</p>
+<p>
+<a name="morison()"></a>
+<h3>morison</h3>
+<p class="function">
+<b><a href="Morison.html">Morison</a></b> <b>morison</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Morison coefficient property
+</dl>
+<a name="numberOfElements()"></a>
+<h3>numberOfElements</h3>
+<p class="function">
+<b><a href="NumberOfElements.html">NumberOfElements</a></b> <b>numberOfElements</b>()</p>
+<p>
+<a name="permeabilityFactor()"></a>
+<h3>permeabilityFactor</h3>
+<p class="function">
+<b><a href="PermeabilityFactor.html">PermeabilityFactor</a></b> <b>permeabilityFactor</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Permeability factor property
+</dl>
+<a name="shielding()"></a>
+<h3>shielding</h3>
+<p class="function">
+<b><a href="ConductorShielding.html">ConductorShielding</a></b> <b>shielding</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Shielding effect property
+</dl>
+<a name="stiffenerOrientation()"></a>
+<h3>stiffenerOrientation</h3>
+<p class="function">
+<b><a href="prStiffenerOrientation.html">prStiffenerOrientation</a></b> <b>stiffenerOrientation</b>()</p>
+<p>
+</body>
+</html>

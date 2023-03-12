@@ -1,0 +1,182 @@
+/*
+	Sitemap Styler 	 
+*/
+body {
+		padding-left: 20px;
+		float: left;
+	}
+* {	
+	font-family:arial;
+	line-height:1.4em;
+	}
+.wrapper {
+	width:840px;
+	margin:0 auto;
+	float: left;
+	}
+.header {
+	width:680px;
+	margin-bottom:10px;
+	padding-bottom:10px;
+	border-bottom:1px solid #ddd;
+	}
+.content {
+	font-size:12pt;
+	clear:both;
+	}
+.header,
+.genie_logo, 
+.instructions,
+.column1,
+.column2 {
+	position:relative;
+	float:left;
+	}
+.genie_logo {
+	width:180px;
+	height:121px;
+	background-image:url('../images/geniesocial.png');
+	background-repeat:no-repeat;
+	margin-top:20px;
+	margin-bottom:20px;
+	}
+.instructions {
+	width:460px;
+	margin-left:40px;
+	margin-bottom:20px;
+	}
+.instructions p {
+	font-size:0.8em
+	}
+table,
+td,
+th {
+	border: solid 1px silver;
+	color:#666;
+	padding:5px;
+	font-size:9pt;
+	}
+table {
+	border-collapse:collapse;
+	}
+table tr {
+	background-color:#eee;
+	}
+
+table td, table th{
+		border:1px solid #fff;}
+.column1 {
+	width: 990px
+	}
+	
+	table#demotable1 {
+	width:990px;
+}
+th {
+	background-color:#333;
+	color:#fff;
+	font-size:1em
+	}
+a{
+	text-decoration:none;
+	color:#057fac;
+}
+a:hover{
+	text-decoration:none;
+	color:#999;
+}
+h2 {
+	color:#00334e;
+	font-weight:normal;
+	text-shadow:0px 1px 1px #fff;
+	}
+h3 {
+	font-size:1em;
+	}
+
+#container{
+	margin:0 auto;
+	width:680px;
+	background:#fff;
+	padding-bottom:20px;
+}
+#content{margin:0 20px;}
+p{	
+	margin:0 auto;
+	width:680px;
+	padding:1em 0;
+}
+
+#sitemap, #sitemap ul, #sitemap li{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#sitemap{}
+#sitemap ul{
+	display:none;
+}
+#sitemap li{
+	line-height:200%;
+	margin-top:1px;
+	background:#eee;
+	position:relative;
+	width:100%;
+}
+/* IE leaves a blank space where span is added so this is to avoid that */
+* html #sitemap li{
+	float:left;
+	display:inline;
+}
+
+#sitemap li a{padding-left:28px;}
+#sitemap li span{float:left;position:absolute;top:5px;left:5px;width:13px;height:13px;cursor:auto;font-size:0;}
+#sitemap li span, #sitemap li span.collapsed{background:url(collapsed.gif) no-repeat 0 0;} 
+#sitemap li span.expanded{background:url(expanded.gif) no-repeat 0 0;}
+
+/* second level */
+
+#sitemap li li{
+	background:#fff;
+}
+#sitemap li li a{padding-left:56px;}
+#sitemap li li span{left:28px;}
+
+/* third level */
+
+#sitemap li li li a{padding-left:84px;}
+#sitemap li li li span{left:56px;}
+
+/* fourth level */
+
+#sitemap li li li li a{padding-left:112px;}
+#sitemap li li li li span{left:84px;}
+
+/* fourth level */
+
+#sitemap li li li li li a{padding-left:140px;}
+#sitemap li li li li li span{left:112px;}
+
+/* fifth level */
+
+#sitemap li li li li li li a{padding-left:168px;}
+#sitemap li li li li li li span{left:140px;}
+
+/* sixth level */
+
+#sitemap li li li li li li li a{padding-left:196px;}
+#sitemap li li li li li li li span{left:168px;}
+
+/* etc. */
+.clear {
+	clear:both
+	}
+hr {
+	margin-top:20px;
+	border:1px dotted #eee;
+	width:640px;
+	}
+#cleanfilters {
+	margin-left:20px;
+	}
+/*  */

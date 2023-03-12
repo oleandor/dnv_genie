@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: ScriptableRepairOptions
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: ScriptableRepairOptions
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Repair options.
+</dl>
+<dl>
+<hr/>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableRepairOptions.html#RemoveCollapsedElements()">RemoveCollapsedElements</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Collapsed elements will get removed when this option is checked.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableRepairOptions.html#RemoveDisconnectedElements()">RemoveDisconnectedElements</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Not connected elements and their nodes will be removed.
+Nodes that are connected to other elements will not be removed.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableRepairOptions.html#RemoveDisconnectedNodes()">RemoveDisconnectedNodes</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Not connected nodes will get removed when this option is checked.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableRepairOptions.html#SplitLargeAngleQuads()">SplitLargeAngleQuads</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Large angle quads Quad elements with an angle larger than the Corner angle >screening criteria will be split by the diagonal in the corner with the largest angle.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableRepairOptions.html#SplitWarpedQuads()">SplitWarpedQuads</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Warped quads Quad elements with warping relative distance larger than the screening criteria are split.</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="RemoveCollapsedElements()"></a>
+<h3>RemoveCollapsedElements</h3>
+<p class="function">
+<b>bool</b> <b>RemoveCollapsedElements</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Collapsed elements will get removed when this option is checked.
+</dl>
+<a name="RemoveDisconnectedElements()"></a>
+<h3>RemoveDisconnectedElements</h3>
+<p class="function">
+<b>bool</b> <b>RemoveDisconnectedElements</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Not connected elements and their nodes will be removed.
+Nodes that are connected to other elements will not be removed.
+</dl>
+<a name="RemoveDisconnectedNodes()"></a>
+<h3>RemoveDisconnectedNodes</h3>
+<p class="function">
+<b>bool</b> <b>RemoveDisconnectedNodes</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Not connected nodes will get removed when this option is checked.
+</dl>
+<a name="SplitLargeAngleQuads()"></a>
+<h3>SplitLargeAngleQuads</h3>
+<p class="function">
+<b>bool</b> <b>SplitLargeAngleQuads</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Large angle quads Quad elements with an angle larger than the Corner angle >screening criteria will be split by the diagonal in the corner with the largest angle.
+</dl>
+<a name="SplitWarpedQuads()"></a>
+<h3>SplitWarpedQuads</h3>
+<p class="function">
+<b>bool</b> <b>SplitWarpedQuads</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Warped quads Quad elements with warping relative distance larger than the screening criteria are split.
+</dl>
+</body>
+</html>

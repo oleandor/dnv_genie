@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: Array
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: Array
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Create an array or control the program flow
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Creating braces in the jacket wizard</td></tr><tr>  <td>     <code>for (i = 0; i < (NrxBrace); i++) <br/>{<br/>&nbsp;&nbsp;Thisbrace = xBrace[i];<br/>&nbsp;&nbsp;if (Thisbrace == "braceup") <br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BraceUpX(i); <br/>&nbsp;&nbsp;}<br/>&nbsp;&nbsp;else if (Thisbrace == "bracedown") <br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;BraceDownX(i); <br/>&nbsp;&nbsp;}<br/>&nbsp;&nbsp;else if (Thisbrace == "xbrace") <br/>&nbsp;&nbsp;{ <br/>&nbsp;&nbsp;&nbsp;&nbsp;BraceUpX(i); <br/>&nbsp;&nbsp;&nbsp;&nbsp;BraceDownX(i); <br/>&nbsp;&nbsp;}<br/>&nbsp;&nbsp;else if (Thisbrace == "kbrace") <br/>&nbsp;&nbsp;{ <br/>&nbsp;&nbsp;&nbsp;&nbsp;Print("K-Brace not implemented"); <br/>&nbsp;&nbsp;}<br/>}<br/>     </code>		<div class="explanation">xBrace[i] is an array of the braces to be created<br/>BraceUpX(i), BraceDownX(i) etc. are functions that create braces<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Create an array of points on a circle</td></tr><tr>  <td>     <code>var myPoints = new Array(NrPoints);<br/>var NrPoints = 36;<br/>var Rad = 10.0; <br/>var X,Y; <br/>for(var icount = 0; icount < NrPoints; icount++)<br/>{<br/>&nbsp;&nbsp;X=Rad*Math.cos(icount*10*Math.PI/180);<br/>&nbsp;&nbsp;Y=Rad*Math.sin(icount*10*Math.PI/180);<br/>&nbsp;&nbsp;myPoints[icount]=Point(X,Y,0);<br/>&nbsp;&nbsp;myPoints[icount].name="Point"+icount;<br/>}<br/>     </code>		<div class="explanation">//var NrPoints = Number of points<br/>//var X, Y = X, Y coordinate<br/>//var Rad = Radius<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Set X-coordinate of some points</td></tr><tr>  <td>     <code>var MyPoints = new Array();<br/>MyPoints[0] = Point(0, 0, 1.0);<br/>MyPoints[1] = Point(0, 0, 2.0);<br/>MyPoints[2] = Point(0, 0, 3.0);<br/>for (var MyPoint in MyPoints)<br/>{<br/>&nbsp;&nbsp;MyPoint.x = 2m;<br/>}<br/>     </code>		<div class="explanation">		</div>   </td></tr></table><hr/>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Variant.html">Variant</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Array.html#pop()">pop</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="unsigned_int.html">unsigned int</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Array.html#push(...)">push</a></b>([ ...])</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="unsigned_int.html">unsigned int</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Array.html#length()">length</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="pop()"></a>
+<h3>pop</h3>
+<p class="function">
+<b><a href="Variant.html">Variant</a></b> <b>pop</b>()</p>
+<p>
+<hr>
+
+<a name="push(...)"></a>
+<h3>push</h3>
+<p class="function">
+<b><a href="unsigned_int.html">unsigned int</a></b> <b>push</b>([ ...])</p>
+<p>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="length()"></a>
+<h3>length</h3>
+<p class="function">
+<b><a href="unsigned_int.html">unsigned int</a></b> <b>length</b>()</p>
+<p>
+</body>
+</html>

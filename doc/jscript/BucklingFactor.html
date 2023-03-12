@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: BucklingFactor
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: BucklingFactor
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Beam buckling factor property. ky or effectiveLengthFactorY and kz or effectiveLengthFactorZ are the buckling factors, <br/>bucklingLengthY and bucklingLengthZ are the buckling lengths and momentAmplificationY and momentAmplificationZ are the moment amplifications <br/> in the respective directions.
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Define local buckling factors for individual beams</td></tr><tr>  <td>     <code>Bm21.buckling = BucklingFactor(0.9, 0.8);<br/>     </code>		<div class="explanation">This command is scripted. Typically when specifying buckling factor of 0.9 and 0.8 <br/>for buckling around local y and z-axis. These factors can be referred to when defining a <br/>capacity model. These factors are also transferred to Framework if you want to do code checking <br/>based on older code checking standards. See User Manual Volume 4 for more details.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Define local buckling data for individual beams</td></tr><tr>  <td>     <code>Bm22.buckling = BucklingFactor(bucklingLengthOptionBeamLength, bucklingLengthOptionBeamLength, 0.9, 0.8, 0.85, 0.85);<br/>     </code>		<div class="explanation">This is an example of a command for specifying default buckling lengths, <br/>effective length factor of 0.9 and 0.8 and moment amplifications of 0.85 <br/>for buckling around local y and z-axis. These factors can be referred to when defining a <br/>capacity model. These factors are also transferred to Framework if you want to do code checking <br/>based on older code checking standards. See User Manual Volume 4 for more details.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Define extended local buckling data for individual beams</td></tr><tr>  <td>     <code>Bm22.buckling = BucklingData(bucklingLengthOptionBeamLength, bucklingLengthOptionBeamLength, 0.9, 0.8, 0.85, 0.85, stiffenerSpacingOptionNone, stiffenerSpacingOptionNone, 0.97, unbracedLengthOptionNone, unbracedLengthOptionNone);<br/>     </code>		<div class="explanation">This is an example of a command for specifying default buckling lengths, <br/>effective length factor of 0.9 and 0.8, moment amplifications of 0.85, default stiffener spacing, <br/>bending coefficient of 0.97 and default unbraced length values for buckling around local y and z-axis. These factors can be referred to when defining a <br/>capacity model. These factors are also transferred to Framework if you want to do code checking <br/>based on older code checking standards. See User Manual Volume 4 for more details.<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="Property.html">Property</a>
+            |
+            +--<b>BucklingFactor</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="BucklingFactor.html#BucklingFactor(double, double)">BucklingFactor</a></b>(<b>double</b><span title="Buckling Factor of Beam about local y axis"> ky</span>, <b>double</b><span title="Buckling Factor of Beam about local z axis"> kz</span>)</code>
+<div class="explanation">
+Construct a new local buckling factor</div></td>
+</tr>
+<tr >
+<td><code><b><a href="BucklingFactor.html#BucklingFactor(Length or BucklingLengthOption, Length or BucklingLengthOption, double, double, double or MomentAmplificationOption, double or MomentAmplificationOption)">BucklingFactor</a></b>(<b><a href="Length_or_BucklingLengthOption.html">Length or BucklingLengthOption</a></b><span title="Buckling Length of Beam about local y axis"> bucklingLengthY</span>, <b><a href="Length_or_BucklingLengthOption.html">Length or BucklingLengthOption</a></b><span title="Buckling Length of Beam about local z axis"> bucklingLengthZ</span>, <b>double</b><span title="Effective Length Factor (Buckling Factor) of Beam about local y axis"> effectiveLengthFactorY</span>, <b>double</b><span title="Effective Length Factor (Buckling Factor) of Beam about local z axis"> effectiveLengthFactorZ</span>, <b><a href="double_or_MomentAmplificationOption.html">double or MomentAmplificationOption</a></b><span title="Moment Amplification of Beam about local y axis"> momentAmplificationY</span>, <b><a href="double_or_MomentAmplificationOption.html">double or MomentAmplificationOption</a></b><span title="Moment Amplification of Beam about local z axis"> momentAmplificationZ</span>)</code>
+<div class="explanation">
+Construct a new local buckling factor</div></td>
+</tr>
+<tr >
+<td><code><b><a href="BucklingFactor.html#BucklingFactor(Length or BucklingLengthOption, Length or BucklingLengthOption, double, double, double or MomentAmplificationOption, double or MomentAmplificationOption, Length or StiffenerSpacingOption, Length or StiffenerSpacingOption, double or BendingCoefficientOption, Length or UnbracedLengthOption, Length or UnbracedLengthOption)">BucklingFactor</a></b>(<b><a href="Length_or_BucklingLengthOption.html">Length or BucklingLengthOption</a></b><span title="Buckling Length of Beam about local y axis"> bucklingLengthY</span>, <b><a href="Length_or_BucklingLengthOption.html">Length or BucklingLengthOption</a></b><span title="Buckling Length of Beam about local z axis"> bucklingLengthZ</span>, <b>double</b><span title="Effective Length Factor (Buckling Factor) of Beam about local y axis"> effectiveLengthFactorY</span>, <b>double</b><span title="Effective Length Factor (Buckling Factor) of Beam about local z axis"> effectiveLengthFactorZ</span>, <b><a href="double_or_MomentAmplificationOption.html">double or MomentAmplificationOption</a></b><span title="Moment Amplification of Beam about local y axis"> momentAmplificationY</span>, <b><a href="double_or_MomentAmplificationOption.html">double or MomentAmplificationOption</a></b><span title="Moment Amplification of Beam about local z axis"> momentAmplificationY</span>, <b><a href="Length_or_StiffenerSpacingOption.html">Length or StiffenerSpacingOption</a></b><span title="Stiffener spacing for the uniform cross section parts of the member"> stiffenerSpacingMember</span>, <b><a href="Length_or_StiffenerSpacingOption.html">Length or StiffenerSpacingOption</a></b><span title="Stiffener spacing for the conical parts of the member"> stiffenerSpacingCone</span>, <b><a href="double_or_BendingCoefficientOption.html">double or BendingCoefficientOption</a></b><span title="Bending coefficient of a Beam"> bendingCoefficient</span>, <b><a href="Length_or_UnbracedLengthOption.html">Length or UnbracedLengthOption</a></b><span title="Unbraced Length of Top Flange"> unbracedLengthTopFlange</span>, <b><a href="Length_or_UnbracedLengthOption.html">Length or UnbracedLengthOption</a></b><span title="Unbraced Length of Bottom Flange"> unbracedLengthBottomFlange</span>)</code>
+<div class="explanation">
+Construct a new local buckling factor</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="double_or_BendingCoefficientOption.html">double or BendingCoefficientOption</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BucklingFactor.html#bendingCoefficient()">bendingCoefficient</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Bending coefficient*
+Bending (moment) coefficient of the member</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length_or_BucklingLengthOption.html">Length or BucklingLengthOption</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BucklingFactor.html#bucklingLengthY()">bucklingLengthY</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Buckling length Y (Ly)*
+Buckling length of beam about local y axis</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length_or_BucklingLengthOption.html">Length or BucklingLengthOption</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BucklingFactor.html#bucklingLengthZ()">bucklingLengthZ</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Buckling length Z (Lz)*
+Buckling length of beam about local z axis</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="BucklingFactor.html#effectiveLengthFactorY()">effectiveLengthFactorY</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Effective length factor Y (Ky)*
+Effective length factor (buckling factor) of beam about local y axis</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="BucklingFactor.html#effectiveLengthFactorZ()">effectiveLengthFactorZ</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Effective length factor Z (Kz)*
+Effective length factor (buckling factor) of beam about local z axis</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="BucklingFactor.html#ky()">ky</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Effective length factor Y (Ky)*
+Effective length factor (buckling factor) of beam about local y axis</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="BucklingFactor.html#kz()">kz</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Effective length factor Z (Kz)*
+Effective length factor (buckling factor) of beam about local z axis</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="double_or_MomentAmplificationOption.html">double or MomentAmplificationOption</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BucklingFactor.html#momentAmplificationY()">momentAmplificationY</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Moment amplification factor Y (MampY)*
+Moment amplification factor of beam about local y axis</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="double_or_MomentAmplificationOption.html">double or MomentAmplificationOption</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BucklingFactor.html#momentAmplificationZ()">momentAmplificationZ</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Moment amplification factor Z (MampZ)*
+Moment amplification factor of beam about local z axis</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length_or_StiffenerSpacingOption.html">Length or StiffenerSpacingOption</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BucklingFactor.html#stiffenerSpacingCone()">stiffenerSpacingCone</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Stiffener spacing cone*
+Spacing for the conical parts of the pipe member.
+'None' means that cone length is used</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length_or_StiffenerSpacingOption.html">Length or StiffenerSpacingOption</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BucklingFactor.html#stiffenerSpacingMember()">stiffenerSpacingMember</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Stiffener spacing member*
+Spacing for the uniform cross section parts of the member, both pipe and non-pipe section members.
+'None' means that member length is used. (For AISC 2005 spacing equal to zero must be used for “Unstiffened” panel.)</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length_or_UnbracedLengthOption.html">Length or UnbracedLengthOption</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BucklingFactor.html#unbracedLengthBottomFlange()">unbracedLengthBottomFlange</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Unbraced length bottom flange*
+Unbraced length at bottom flange.
+'None' means that member length is used.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length_or_UnbracedLengthOption.html">Length or UnbracedLengthOption</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BucklingFactor.html#unbracedLengthTopFlange()">unbracedLengthTopFlange</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Unbraced length top flange*
+Unbraced length at top flange.
+'None' means that member length is used.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="unsigned___int64.html">unsigned __int64</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Property.html#useCount()">useCount</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Returns the number of objects that uses this property</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="BucklingFactor(double, double)"></a>
+<h3>BucklingFactor</h3>
+<p class="function">
+<b>BucklingFactor</b>(<b>double</b><span title="Buckling Factor of Beam about local y axis"> ky</span>, <b>double</b><span title="Buckling Factor of Beam about local z axis"> kz</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new local buckling factor
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>ky</code> - Buckling Factor of Beam about local y axis<dd><code>kz</code> - Buckling Factor of Beam about local z axis</dl>
+<hr>
+
+<a name="BucklingFactor(Length or BucklingLengthOption, Length or BucklingLengthOption, double, double, double or MomentAmplificationOption, double or MomentAmplificationOption)"></a>
+<h3>BucklingFactor</h3>
+<p class="function">
+<b>BucklingFactor</b>(<b><a href="Length_or_BucklingLengthOption.html">Length or BucklingLengthOption</a></b><span title="Buckling Length of Beam about local y axis"> bucklingLengthY</span>, <b><a href="Length_or_BucklingLengthOption.html">Length or BucklingLengthOption</a></b><span title="Buckling Length of Beam about local z axis"> bucklingLengthZ</span>, <b>double</b><span title="Effective Length Factor (Buckling Factor) of Beam about local y axis"> effectiveLengthFactorY</span>, <b>double</b><span title="Effective Length Factor (Buckling Factor) of Beam about local z axis"> effectiveLengthFactorZ</span>, <b><a href="double_or_MomentAmplificationOption.html">double or MomentAmplificationOption</a></b><span title="Moment Amplification of Beam about local y axis"> momentAmplificationY</span>, <b><a href="double_or_MomentAmplificationOption.html">double or MomentAmplificationOption</a></b><span title="Moment Amplification of Beam about local z axis"> momentAmplificationZ</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new local buckling factor
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>bucklingLengthY</code> - Buckling Length of Beam about local y axis<dd><code>bucklingLengthZ</code> - Buckling Length of Beam about local z axis<dd><code>effectiveLengthFactorY</code> - Effective Length Factor (Buckling Factor) of Beam about local y axis<dd><code>effectiveLengthFactorZ</code> - Effective Length Factor (Buckling Factor) of Beam about local z axis<dd><code>momentAmplificationY</code> - Moment Amplification of Beam about local y axis<dd><code>momentAmplificationZ</code> - Moment Amplification of Beam about local z axis</dl>
+<hr>
+
+<a name="BucklingFactor(Length or BucklingLengthOption, Length or BucklingLengthOption, double, double, double or MomentAmplificationOption, double or MomentAmplificationOption, Length or StiffenerSpacingOption, Length or StiffenerSpacingOption, double or BendingCoefficientOption, Length or UnbracedLengthOption, Length or UnbracedLengthOption)"></a>
+<h3>BucklingFactor</h3>
+<p class="function">
+<b>BucklingFactor</b>(<b><a href="Length_or_BucklingLengthOption.html">Length or BucklingLengthOption</a></b><span title="Buckling Length of Beam about local y axis"> bucklingLengthY</span>, <b><a href="Length_or_BucklingLengthOption.html">Length or BucklingLengthOption</a></b><span title="Buckling Length of Beam about local z axis"> bucklingLengthZ</span>, <b>double</b><span title="Effective Length Factor (Buckling Factor) of Beam about local y axis"> effectiveLengthFactorY</span>, <b>double</b><span title="Effective Length Factor (Buckling Factor) of Beam about local z axis"> effectiveLengthFactorZ</span>, <b><a href="double_or_MomentAmplificationOption.html">double or MomentAmplificationOption</a></b><span title="Moment Amplification of Beam about local y axis"> momentAmplificationY</span>, <b><a href="double_or_MomentAmplificationOption.html">double or MomentAmplificationOption</a></b><span title="Moment Amplification of Beam about local z axis"> momentAmplificationY</span>, <b><a href="Length_or_StiffenerSpacingOption.html">Length or StiffenerSpacingOption</a></b><span title="Stiffener spacing for the uniform cross section parts of the member"> stiffenerSpacingMember</span>, <b><a href="Length_or_StiffenerSpacingOption.html">Length or StiffenerSpacingOption</a></b><span title="Stiffener spacing for the conical parts of the member"> stiffenerSpacingCone</span>, <b><a href="double_or_BendingCoefficientOption.html">double or BendingCoefficientOption</a></b><span title="Bending coefficient of a Beam"> bendingCoefficient</span>, <b><a href="Length_or_UnbracedLengthOption.html">Length or UnbracedLengthOption</a></b><span title="Unbraced Length of Top Flange"> unbracedLengthTopFlange</span>, <b><a href="Length_or_UnbracedLengthOption.html">Length or UnbracedLengthOption</a></b><span title="Unbraced Length of Bottom Flange"> unbracedLengthBottomFlange</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new local buckling factor
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>bucklingLengthY</code> - Buckling Length of Beam about local y axis<dd><code>bucklingLengthZ</code> - Buckling Length of Beam about local z axis<dd><code>effectiveLengthFactorY</code> - Effective Length Factor (Buckling Factor) of Beam about local y axis<dd><code>effectiveLengthFactorZ</code> - Effective Length Factor (Buckling Factor) of Beam about local z axis<dd><code>momentAmplificationY</code> - Moment Amplification of Beam about local y axis<dd><code>momentAmplificationY</code> - Moment Amplification of Beam about local z axis<dd><code>stiffenerSpacingMember</code> - Stiffener spacing for the uniform cross section parts of the member<dd><code>stiffenerSpacingCone</code> - Stiffener spacing for the conical parts of the member<dd><code>bendingCoefficient</code> - Bending coefficient of a Beam<dd><code>unbracedLengthTopFlange</code> - Unbraced Length of Top Flange<dd><code>unbracedLengthBottomFlange</code> - Unbraced Length of Bottom Flange</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="bendingCoefficient()"></a>
+<h3>bendingCoefficient</h3>
+<p class="function">
+<b><a href="double_or_BendingCoefficientOption.html">double or BendingCoefficientOption</a></b> <b>bendingCoefficient</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Bending coefficient*
+Bending (moment) coefficient of the member
+</dl>
+<a name="bucklingLengthY()"></a>
+<h3>bucklingLengthY</h3>
+<p class="function">
+<b><a href="Length_or_BucklingLengthOption.html">Length or BucklingLengthOption</a></b> <b>bucklingLengthY</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Buckling length Y (Ly)*
+Buckling length of beam about local y axis
+</dl>
+<a name="bucklingLengthZ()"></a>
+<h3>bucklingLengthZ</h3>
+<p class="function">
+<b><a href="Length_or_BucklingLengthOption.html">Length or BucklingLengthOption</a></b> <b>bucklingLengthZ</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Buckling length Z (Lz)*
+Buckling length of beam about local z axis
+</dl>
+<a name="effectiveLengthFactorY()"></a>
+<h3>effectiveLengthFactorY</h3>
+<p class="function">
+<b>double</b> <b>effectiveLengthFactorY</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Effective length factor Y (Ky)*
+Effective length factor (buckling factor) of beam about local y axis
+</dl>
+<a name="effectiveLengthFactorZ()"></a>
+<h3>effectiveLengthFactorZ</h3>
+<p class="function">
+<b>double</b> <b>effectiveLengthFactorZ</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Effective length factor Z (Kz)*
+Effective length factor (buckling factor) of beam about local z axis
+</dl>
+<a name="ky()"></a>
+<h3>ky</h3>
+<p class="function">
+<b>double</b> <b>ky</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Effective length factor Y (Ky)*
+Effective length factor (buckling factor) of beam about local y axis
+</dl>
+<a name="kz()"></a>
+<h3>kz</h3>
+<p class="function">
+<b>double</b> <b>kz</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Effective length factor Z (Kz)*
+Effective length factor (buckling factor) of beam about local z axis
+</dl>
+<a name="momentAmplificationY()"></a>
+<h3>momentAmplificationY</h3>
+<p class="function">
+<b><a href="double_or_MomentAmplificationOption.html">double or MomentAmplificationOption</a></b> <b>momentAmplificationY</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Moment amplification factor Y (MampY)*
+Moment amplification factor of beam about local y axis
+</dl>
+<a name="momentAmplificationZ()"></a>
+<h3>momentAmplificationZ</h3>
+<p class="function">
+<b><a href="double_or_MomentAmplificationOption.html">double or MomentAmplificationOption</a></b> <b>momentAmplificationZ</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Moment amplification factor Z (MampZ)*
+Moment amplification factor of beam about local z axis
+</dl>
+<a name="stiffenerSpacingCone()"></a>
+<h3>stiffenerSpacingCone</h3>
+<p class="function">
+<b><a href="Length_or_StiffenerSpacingOption.html">Length or StiffenerSpacingOption</a></b> <b>stiffenerSpacingCone</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Stiffener spacing cone*
+Spacing for the conical parts of the pipe member.
+'None' means that cone length is used
+</dl>
+<a name="stiffenerSpacingMember()"></a>
+<h3>stiffenerSpacingMember</h3>
+<p class="function">
+<b><a href="Length_or_StiffenerSpacingOption.html">Length or StiffenerSpacingOption</a></b> <b>stiffenerSpacingMember</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Stiffener spacing member*
+Spacing for the uniform cross section parts of the member, both pipe and non-pipe section members.
+'None' means that member length is used. (For AISC 2005 spacing equal to zero must be used for “Unstiffened” panel.)
+</dl>
+<a name="unbracedLengthBottomFlange()"></a>
+<h3>unbracedLengthBottomFlange</h3>
+<p class="function">
+<b><a href="Length_or_UnbracedLengthOption.html">Length or UnbracedLengthOption</a></b> <b>unbracedLengthBottomFlange</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Unbraced length bottom flange*
+Unbraced length at bottom flange.
+'None' means that member length is used.
+</dl>
+<a name="unbracedLengthTopFlange()"></a>
+<h3>unbracedLengthTopFlange</h3>
+<p class="function">
+<b><a href="Length_or_UnbracedLengthOption.html">Length or UnbracedLengthOption</a></b> <b>unbracedLengthTopFlange</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Unbraced length top flange*
+Unbraced length at top flange.
+'None' means that member length is used.
+</dl>
+</body>
+</html>

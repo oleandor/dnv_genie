@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: ModelTransformer
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: ModelTransformer
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Copy a set of concepts with a transformation
+</dl>
+<dl>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="ModelTransformer.html#ModelTransformer(Set)">ModelTransformer</a></b>(<b><a href="Set.html">Set</a></b>)</code>
+<div class="explanation">
+Construct a new ModelTransformer</div></td>
+</tr>
+<tr >
+<td><code><b><a href="ModelTransformer.html#ModelTransformer(ObjectNameMap)">ModelTransformer</a></b>(<b><a href="ObjectNameMap.html">ObjectNameMap</a></b>)</code>
+<div class="explanation">
+Construct a new ModelTransformer</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelTransformer.html#Copy3Point(Point, Point, Point, Point, Point, Point)">Copy3Point</a></b>(<b><a href="Point.html">Point</a></b> p1, <b><a href="Point.html">Point</a></b> p2, <b><a href="Point.html">Point</a></b> p3, <b><a href="Point.html">Point</a></b> p4, <b><a href="Point.html">Point</a></b> p5, <b><a href="Point.html">Point</a></b> p6)</code>
+<div class="explanation">
+Copy with a 3 point transformation</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelTransformer.html#CopyMirror(Point, LengthVector3d)">CopyMirror</a></b>(<b><a href="Point.html">Point</a></b> pointInMirrorPlane, <b><a href="LengthVector3d.html">LengthVector3d</a></b> mirrorPlaneNormal)</code>
+<div class="explanation">
+Copy mirror</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelTransformer.html#CopyRotate(Point, LengthVector3d, Angle)">CopyRotate</a></b>(<b><a href="Point.html">Point</a></b> point, <b><a href="LengthVector3d.html">LengthVector3d</a></b> axis, <b><a href="Angle.html">Angle</a></b> angle)</code>
+<div class="explanation">
+Copy with a rotation</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelTransformer.html#CopyRotate(Point, LengthVector3d, Angle, int)">CopyRotate</a></b>(<b><a href="Point.html">Point</a></b> point, <b><a href="LengthVector3d.html">LengthVector3d</a></b> axis, <b><a href="Angle.html">Angle</a></b> angle, <b>int</b> nCopies)</code>
+<div class="explanation">
+Copy N times with a rotation</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelTransformer.html#CopyScale(double, Point)">CopyScale</a></b>(<b>double</b> scale, <b><a href="Point.html">Point</a></b> fixedPoint)</code>
+<div class="explanation">
+Copy with a scaling</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelTransformer.html#CopyTransform(Transformation3d)">CopyTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b> tranformation)</code>
+<div class="explanation">
+Copy with a generic transformation</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelTransformer.html#CopyTranslate(LengthVector3d)">CopyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b> trans)</code>
+<div class="explanation">
+Copy N times with a translation</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelTransformer.html#CopyTranslate(LengthVector3d, int)">CopyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b> trans, <b>int</b>)</code>
+<div class="explanation">
+Copy with a translation</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="ModelTransformer(Set)"></a>
+<h3>ModelTransformer</h3>
+<p class="function">
+<b>ModelTransformer</b>(<b><a href="Set.html">Set</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new ModelTransformer
+</dl>
+<hr>
+
+<a name="ModelTransformer(ObjectNameMap)"></a>
+<h3>ModelTransformer</h3>
+<p class="function">
+<b>ModelTransformer</b>(<b><a href="ObjectNameMap.html">ObjectNameMap</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new ModelTransformer
+</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="Copy3Point(Point, Point, Point, Point, Point, Point)"></a>
+<h3>Copy3Point</h3>
+<p class="function">
+<b>&nbsp;</b> <b>Copy3Point</b>(<b><a href="Point.html">Point</a></b> p1, <b><a href="Point.html">Point</a></b> p2, <b><a href="Point.html">Point</a></b> p3, <b><a href="Point.html">Point</a></b> p4, <b><a href="Point.html">Point</a></b> p5, <b><a href="Point.html">Point</a></b> p6)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Copy with a 3 point transformation
+</dl>
+<hr>
+
+<a name="CopyMirror(Point, LengthVector3d)"></a>
+<h3>CopyMirror</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CopyMirror</b>(<b><a href="Point.html">Point</a></b> pointInMirrorPlane, <b><a href="LengthVector3d.html">LengthVector3d</a></b> mirrorPlaneNormal)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Copy mirror
+</dl>
+<hr>
+
+<a name="CopyRotate(Point, LengthVector3d, Angle, int)"></a>
+<h3>CopyRotate</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CopyRotate</b>(<b><a href="Point.html">Point</a></b> point, <b><a href="LengthVector3d.html">LengthVector3d</a></b> axis, <b><a href="Angle.html">Angle</a></b> angle, <b>int</b> nCopies)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Copy N times with a rotation
+</dl>
+<hr>
+
+<a name="CopyRotate(Point, LengthVector3d, Angle)"></a>
+<h3>CopyRotate</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CopyRotate</b>(<b><a href="Point.html">Point</a></b> point, <b><a href="LengthVector3d.html">LengthVector3d</a></b> axis, <b><a href="Angle.html">Angle</a></b> angle)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Copy with a rotation
+</dl>
+<hr>
+
+<a name="CopyScale(double, Point)"></a>
+<h3>CopyScale</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CopyScale</b>(<b>double</b> scale, <b><a href="Point.html">Point</a></b> fixedPoint)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Copy with a scaling
+</dl>
+<hr>
+
+<a name="CopyTransform(Transformation3d)"></a>
+<h3>CopyTransform</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CopyTransform</b>(<b><a href="Transformation3d.html">Transformation3d</a></b> tranformation)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Copy with a generic transformation
+</dl>
+<hr>
+
+<a name="CopyTranslate(LengthVector3d)"></a>
+<h3>CopyTranslate</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CopyTranslate</b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b> trans)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Copy N times with a translation
+</dl>
+<hr>
+
+<a name="CopyTranslate(LengthVector3d, int)"></a>
+<h3>CopyTranslate</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CopyTranslate</b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b> trans, <b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Copy with a translation
+</dl>
+<hr>
+
+</body>
+</html>

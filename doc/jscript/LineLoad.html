@@ -1,0 +1,424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: LineLoad
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: LineLoad
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Define a LineLoad
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Define a constant or linearly varying line load between two points along a line.</td></tr><tr>  <td>     <code>LLoad1 = LineLoad(LC1, FootprintLine(Point(4 m,0 m,10 m), Point(12 m,0 m,10 m)),<br/>Component1dLinear(Vector3d(0 kN/m, 0 kN/m, -300 kN/m), Vector3d(0 kN/m, 0 kN/m, -100 kN/m)));<br/>     </code>		<div class="explanation">This command is scripted. Typically for a linear variation in z-direction<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Define a constant or linearly varying line load between two points along a beam.</td></tr><tr>  <td>     <code>LLoad2 = LineLoad(LC1, FootprintBeam(Bm14, 0.2, 0.7), <br/>Component1dLinear(Vector3d(0 kN/m, 0 kN/m, -300 kN/m), Vector3d(0 kN/m, 0 kN/m, -100 kN/m)));<br/>     </code>		<div class="explanation">This command is scripted. Typically for a constant line load in z-direction between relative positions 0.2 and 0.7 on beam Bm14<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Define constant or linearly varying temperature intensity between two points along a beam</td></tr><tr>  <td>     <code>LLoad5 = LineLoad(LC1, FootprintLine(Point(2 m,0 m,1 m), Point(2 m,5 m,1 m)), Temperature1dLinear(100 delC, 100 delC));<br/>     </code>		<div class="explanation">This command is scripted. Typically for a constant temperature of 100 delC between two points<br/>Notice that the temperature is constant over the beams cross section. It is possible to specify the temperature by referring <br/>to two explicit points; in this case the load becomes independent of the beam and will not follow when the beam is moved or copied<br/>There are two options:<br/>Linear (as shown over or Javascript). Slide the "intensities" bar to change between the two options.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Specify the temperature by referring to relative positions of a beam(s)</td></tr><tr>  <td>     <code>LLoad6 = LineLoad(LC1, FootprintBeam(Bm20), Temperature1dLinear(50 delC, 100 delC));<br/>     </code>		<div class="explanation">This command is scripted. Typically for a varying temperature load between the two end positions on beam Bm20<br/>Notice that the load becomes dependent of the beam and will follow when the beam is moved but not when it is copied.<br/>There are two options: <br/>Linear (as shown over or Javascript). Slide the "intensities" bar to change between the two options.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Create Line Component Load</td></tr><tr>  <td>     <code>return Vector3d(1N/m,x*2N/m2,0);<br/>     </code>		<div class="explanation">- input x,y,z, all of type Length<br/>- output type Vector3d(ForcePerLength,ForcePerLength,ForcePerLength)<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Create Line Component Load - Parametric</td></tr><tr>  <td>     <code>return Vector3d(1N/m,param*2N/m,0);<br/>     </code>		<div class="explanation">- input t, of type Number (unitless)<br/>- output type Vector3d(ForcePerLength,ForcePerLength,ForcePerLength)<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Create Line Temperature Load</td></tr><tr>  <td>     <code>return 1delC*y.toDouble();<br/>     </code>		<div class="explanation">- input x,y,z, all of type Length<br/>- output TempDiff<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Create Line Temperature Load - Parametric</td></tr><tr>  <td>     <code>return param*10delC;<br/>     </code>		<div class="explanation">- input t, of type Number (unitless)<br/>- output type TempDiff<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="Transformable.html">Transformable</a>
+            |
+            +--<a href="Load.html">Load</a>
+                 |
+                 +--<b>LineLoad</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="LineLoad.html#LineLoad(LoadCase, Point, Point, ForcePerUnitLength, ForcePerUnitLength, ForcePerUnitLength, ForcePerUnitLength, ForcePerUnitLength, ForcePerUnitLength)">LineLoad</a></b>(<b><a href="LoadCase.html">LoadCase</a></b><span title="Loadcase where LineLoad acts"> loadcase</span>, <b><a href="Point.html">Point</a></b><span title="Start position of LineLoad"> pos1</span>, <b><a href="Point.html">Point</a></b><span title="End position of LineLoad"> pos2</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end1, x-component"> fx1</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end1, y-component"> fy1</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end1, z-component"> fz1</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end2, x-component"> fx2</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end2, y-component"> fy2</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end2, z-component"> fz2</span>)</code>
+<div class="explanation">
+Construct a new LineLoad</div></td>
+</tr>
+<tr >
+<td><code><b><a href="LineLoad.html#LineLoad(LoadCase, Point, Point, ForcePerUnitLength, ForcePerUnitLength, ForcePerUnitLength, ForcePerUnitLength, ForcePerUnitLength, ForcePerUnitLength, LocalSystem)">LineLoad</a></b>(<b><a href="LoadCase.html">LoadCase</a></b><span title="Loadcase where LineLoad acts"> loadcase</span>, <b><a href="Point.html">Point</a></b><span title="Start position of LineLoad"> pos1</span>, <b><a href="Point.html">Point</a></b><span title="End position of LineLoad"> pos2</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end1, x-component"> fx1</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end1, y-component"> fy1</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end1, z-component"> fz1</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end2, x-component"> fx2</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end2, y-component"> fy2</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end2, z-component"> fz2</span>, <b><a href="LocalSystem.html">LocalSystem</a></b><span title="Local coordinate system"> locsys</span>)</code>
+<div class="explanation">
+Construct a new LineLoad in a local coordinate system</div></td>
+</tr>
+<tr >
+<td><code><b><a href="LineLoad.html#LineLoad(LoadCase, Footprint1d, lcIntensityFunction)">LineLoad</a></b>(<b><a href="LoadCase.html">LoadCase</a></b><span title="Loadcase where LineLoad acts"> loadcase</span>, <b><a href="Footprint1d.html">Footprint1d</a></b><span title="The footprint of the load"> footprint</span>, <b><a href="lcIntensityFunction.html">lcIntensityFunction</a></b><span title="The intensity function"> function</span>)</code>
+<div class="explanation">
+Construct a new LineLoad</div></td>
+</tr>
+<tr >
+<td><code><b><a href="LineLoad.html#LineLoad(LoadCase, Footprint1d, lcIntensityFunction, LocalSystem)">LineLoad</a></b>(<b><a href="LoadCase.html">LoadCase</a></b><span title="Loadcase where LineLoad acts"> loadcase</span>, <b><a href="Footprint1d.html">Footprint1d</a></b><span title="The footprint of the load"> footprint</span>, <b><a href="lcIntensityFunction.html">lcIntensityFunction</a></b><span title="The intensity function"> function</span>, <b><a href="LocalSystem.html">LocalSystem</a></b><span title="Local coordinate system"> locsys</span>)</code>
+<div class="explanation">
+Construct a new LineLoad</div></td>
+</tr>
+<tr >
+<td><code><b><a href="LineLoad.html#LineTemperature(LoadCase, Point, Point, TempDiff, TempDiff)">LineTemperature</a></b>(<b><a href="LoadCase.html">LoadCase</a></b><span title="Loadcase where PointLoad acts"> loadcase</span>, <b><a href="Point.html">Point</a></b><span title="Start position of line temperature"> pos1</span>, <b><a href="Point.html">Point</a></b><span title="End position of line temperature"> pos2</span>, <b><a href="TempDiff.html">TempDiff</a></b><span title="Temperature difference (relative to ambient) at pos1."> t1</span>, <b><a href="TempDiff.html">TempDiff</a></b><span title="Temperature difference (relative to ambient) at pos2."> t2</span>)</code>
+<div class="explanation">
+Construct a new LineTemperature</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="slLoad.html">slLoad</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Load.html#copy(LoadCase)">copy</a></b>(<b><a href="LoadCase.html">LoadCase</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copy3Point(Point, Point, Point, Point, Point, Point)">copy3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> sp1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> sp2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> sp3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> dp1</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> dp2</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> dp3</span>)</code>
+<div class="explanation">
+Copy the object without scaling from one location to another.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyMirror(Point, LengthVector3d)">copyMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int, std::shared_ptr<mfNameMask>)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyScale(double, Point)">copyScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Scale a copy of the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTransform(Transformation3d)">copyTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general transformation to a copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate a copy of this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int, std::shared_ptr<mfNameMask>)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#move3Point(Point, Point, Point, Point, Point, Point)">move3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> p4</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> p5</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> p6</span>)</code>
+<div class="explanation">
+Move the object from one coordinate system to another</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveMirror(Point, LengthVector3d)">moveMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveRotate(Point, LengthVector3d, Angle)">moveRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveScale(double, Point)">moveScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Move and scale the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTransform(Transformation3d)">moveTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general selection to the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTranslate(LengthVector3d)">moveTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Footprint1d.html">Footprint1d</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LineLoad.html#footprint()">footprint</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geCONNECTED()">geCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use connected move</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geUNCONNECTED()">geUNCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use unconnected move</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="lcIntensityFunction.html">lcIntensityFunction</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LineLoad.html#intensity()">intensity</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LoadCase.html">LoadCase</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Load.html#loadCase()">loadCase</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LocalSystem.html">LocalSystem</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Load.html#localSystem()">localSystem</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Specifies what local system the load intensities will be evaluated in</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="LineLoad(LoadCase, Point, Point, ForcePerUnitLength, ForcePerUnitLength, ForcePerUnitLength, ForcePerUnitLength, ForcePerUnitLength, ForcePerUnitLength)"></a>
+<h3>LineLoad</h3>
+<p class="function">
+<b>LineLoad</b>(<b><a href="LoadCase.html">LoadCase</a></b><span title="Loadcase where LineLoad acts"> loadcase</span>, <b><a href="Point.html">Point</a></b><span title="Start position of LineLoad"> pos1</span>, <b><a href="Point.html">Point</a></b><span title="End position of LineLoad"> pos2</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end1, x-component"> fx1</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end1, y-component"> fy1</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end1, z-component"> fz1</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end2, x-component"> fx2</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end2, y-component"> fy2</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end2, z-component"> fz2</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new LineLoad
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>loadcase</code> - Loadcase where LineLoad acts<dd><code>pos1</code> - Start position of LineLoad<dd><code>pos2</code> - End position of LineLoad<dd><code>fx1</code> - Force end1, x-component<dd><code>fy1</code> - Force end1, y-component<dd><code>fz1</code> - Force end1, z-component<dd><code>fx2</code> - Force end2, x-component<dd><code>fy2</code> - Force end2, y-component<dd><code>fz2</code> - Force end2, z-component</dl>
+<hr>
+
+<a name="LineLoad(LoadCase, Point, Point, ForcePerUnitLength, ForcePerUnitLength, ForcePerUnitLength, ForcePerUnitLength, ForcePerUnitLength, ForcePerUnitLength, LocalSystem)"></a>
+<h3>LineLoad</h3>
+<p class="function">
+<b>LineLoad</b>(<b><a href="LoadCase.html">LoadCase</a></b><span title="Loadcase where LineLoad acts"> loadcase</span>, <b><a href="Point.html">Point</a></b><span title="Start position of LineLoad"> pos1</span>, <b><a href="Point.html">Point</a></b><span title="End position of LineLoad"> pos2</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end1, x-component"> fx1</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end1, y-component"> fy1</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end1, z-component"> fz1</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end2, x-component"> fx2</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end2, y-component"> fy2</span>, <b><a href="ForcePerUnitLength.html">ForcePerUnitLength</a></b><span title="Force end2, z-component"> fz2</span>, <b><a href="LocalSystem.html">LocalSystem</a></b><span title="Local coordinate system"> locsys</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new LineLoad in a local coordinate system
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>loadcase</code> - Loadcase where LineLoad acts<dd><code>pos1</code> - Start position of LineLoad<dd><code>pos2</code> - End position of LineLoad<dd><code>fx1</code> - Force end1, x-component<dd><code>fy1</code> - Force end1, y-component<dd><code>fz1</code> - Force end1, z-component<dd><code>fx2</code> - Force end2, x-component<dd><code>fy2</code> - Force end2, y-component<dd><code>fz2</code> - Force end2, z-component<dd><code>locsys</code> - Local coordinate system</dl>
+<hr>
+
+<a name="LineLoad(LoadCase, Footprint1d, lcIntensityFunction)"></a>
+<h3>LineLoad</h3>
+<p class="function">
+<b>LineLoad</b>(<b><a href="LoadCase.html">LoadCase</a></b><span title="Loadcase where LineLoad acts"> loadcase</span>, <b><a href="Footprint1d.html">Footprint1d</a></b><span title="The footprint of the load"> footprint</span>, <b><a href="lcIntensityFunction.html">lcIntensityFunction</a></b><span title="The intensity function"> function</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new LineLoad
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>loadcase</code> - Loadcase where LineLoad acts<dd><code>footprint</code> - The footprint of the load<dd><code>function</code> - The intensity function</dl>
+<hr>
+
+<a name="LineLoad(LoadCase, Footprint1d, lcIntensityFunction, LocalSystem)"></a>
+<h3>LineLoad</h3>
+<p class="function">
+<b>LineLoad</b>(<b><a href="LoadCase.html">LoadCase</a></b><span title="Loadcase where LineLoad acts"> loadcase</span>, <b><a href="Footprint1d.html">Footprint1d</a></b><span title="The footprint of the load"> footprint</span>, <b><a href="lcIntensityFunction.html">lcIntensityFunction</a></b><span title="The intensity function"> function</span>, <b><a href="LocalSystem.html">LocalSystem</a></b><span title="Local coordinate system"> locsys</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new LineLoad
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>loadcase</code> - Loadcase where LineLoad acts<dd><code>footprint</code> - The footprint of the load<dd><code>function</code> - The intensity function<dd><code>locsys</code> - Local coordinate system</dl>
+<hr>
+
+<a name="LineTemperature(LoadCase, Point, Point, TempDiff, TempDiff)"></a>
+<h3>LineTemperature</h3>
+<p class="function">
+<b>LineTemperature</b>(<b><a href="LoadCase.html">LoadCase</a></b><span title="Loadcase where PointLoad acts"> loadcase</span>, <b><a href="Point.html">Point</a></b><span title="Start position of line temperature"> pos1</span>, <b><a href="Point.html">Point</a></b><span title="End position of line temperature"> pos2</span>, <b><a href="TempDiff.html">TempDiff</a></b><span title="Temperature difference (relative to ambient) at pos1."> t1</span>, <b><a href="TempDiff.html">TempDiff</a></b><span title="Temperature difference (relative to ambient) at pos2."> t2</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new LineTemperature
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>loadcase</code> - Loadcase where PointLoad acts<dd><code>pos1</code> - Start position of line temperature<dd><code>pos2</code> - End position of line temperature<dd><code>t1</code> - Temperature difference (relative to ambient) at pos1.<dd><code>t2</code> - Temperature difference (relative to ambient) at pos2.</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="footprint()"></a>
+<h3>footprint</h3>
+<p class="function">
+<b><a href="Footprint1d.html">Footprint1d</a></b> <b>footprint</b>()</p>
+<p>
+<a name="intensity()"></a>
+<h3>intensity</h3>
+<p class="function">
+<b><a href="lcIntensityFunction.html">lcIntensityFunction</a></b> <b>intensity</b>()</p>
+<p>
+</body>
+</html>

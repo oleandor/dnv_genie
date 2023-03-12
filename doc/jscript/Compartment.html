@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: Compartment
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: Compartment
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Define represent options for Compartments
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Looping over Compartments</td></tr><tr>  <td>     <code>for (var comManobject in ModelObjects){<br/>if(comManobject.name.charAt(0) == "c" )<br/>{<br/>var compArray = new Array();<br/>compArray = comManobject.Compartments();<br/>var compArraySize = compArray.length(); <br/>Print(compArray[0].name());<br/>}<br/>}<br/>     </code>		<div class="explanation">This command is scripted.<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<b>Compartment</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Compartment.html#bounding()">bounding</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Compartment.html#findTopPointOfCompartment(LengthVector3d)">findTopPointOfCompartment</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Compartment.html#findTopPointOfCompartment(LengthVector3d, Angle)">findTopPointOfCompartment</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b>, <b><a href="Angle.html">Angle</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Compartment.html#getBoundaryPlates()">getBoundaryPlates</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Compartment.html#getInternalAndBoundaryPlates()">getInternalAndBoundaryPlates</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Compartment.html#getInternalPlates()">getInternalPlates</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Compartment.html#getPointInCompartment()">getPointInCompartment</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Compartment.html#printInfo(bool, bool)">printInfo</a></b>(<b>bool</b><span title="Print Boundary-Plates' names"> PrintBoundaryPlates</span>, <b>bool</b><span title="Print Load-Cases' names"> PrintLoadCases</span>)</code>
+<div class="explanation">
+Print compartment information( 
+    boolean Print Boundary-Plates, 
+    boolean Print Load-Cases )
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Compartment.html#setNoCompartmentType()">setNoCompartmentType</a></b>()</code>
+<div class="explanation">
+Remove corrosion addition assignment for whole compartment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Compartment.html#setNoCorrosionAddition()">setNoCorrosionAddition</a></b>()</code>
+<div class="explanation">
+Remove corrosion addition assignment for whole compartment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Compartment.html#volume()">volume</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Compartment.html#volumeCog()">volumeCog</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="CompartmentType.html">CompartmentType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Compartment.html#compartmentType()">compartmentType</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Corrosion Addition (whole compartment)</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="CorrosionAddition.html">CorrosionAddition</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Compartment.html#corrosionAddition()">corrosionAddition</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Corrosion Addition (whole compartment)</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="bounding()"></a>
+<h3>bounding</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>bounding</b>()</p>
+<p>
+<hr>
+
+<a name="findTopPointOfCompartment(LengthVector3d, Angle)"></a>
+<h3>findTopPointOfCompartment</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>findTopPointOfCompartment</b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b>, <b><a href="Angle.html">Angle</a></b>)</p>
+<p>
+<hr>
+
+<a name="findTopPointOfCompartment(LengthVector3d)"></a>
+<h3>findTopPointOfCompartment</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>findTopPointOfCompartment</b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b>)</p>
+<p>
+<hr>
+
+<a name="getBoundaryPlates()"></a>
+<h3>getBoundaryPlates</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>getBoundaryPlates</b>()</p>
+<p>
+<hr>
+
+<a name="getInternalAndBoundaryPlates()"></a>
+<h3>getInternalAndBoundaryPlates</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>getInternalAndBoundaryPlates</b>()</p>
+<p>
+<hr>
+
+<a name="getInternalPlates()"></a>
+<h3>getInternalPlates</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>getInternalPlates</b>()</p>
+<p>
+<hr>
+
+<a name="getPointInCompartment()"></a>
+<h3>getPointInCompartment</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>getPointInCompartment</b>()</p>
+<p>
+<hr>
+
+<a name="printInfo(bool, bool)"></a>
+<h3>printInfo</h3>
+<p class="function">
+<b>string</b> <b>printInfo</b>(<b>bool</b><span title="Print Boundary-Plates' names"> PrintBoundaryPlates</span>, <b>bool</b><span title="Print Load-Cases' names"> PrintLoadCases</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Print compartment information( 
+    boolean Print Boundary-Plates, 
+    boolean Print Load-Cases )
+
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>PrintBoundaryPlates</code> - Print Boundary-Plates' names<dd><code>PrintLoadCases</code> - Print Load-Cases' names</dl>
+<hr>
+
+<a name="setNoCompartmentType()"></a>
+<h3>setNoCompartmentType</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoCompartmentType</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove corrosion addition assignment for whole compartment
+</dl>
+<hr>
+
+<a name="setNoCorrosionAddition()"></a>
+<h3>setNoCorrosionAddition</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoCorrosionAddition</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove corrosion addition assignment for whole compartment
+</dl>
+<hr>
+
+<a name="volume()"></a>
+<h3>volume</h3>
+<p class="function">
+<b>double</b> <b>volume</b>()</p>
+<p>
+<hr>
+
+<a name="volumeCog()"></a>
+<h3>volumeCog</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>volumeCog</b>()</p>
+<p>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="compartmentType()"></a>
+<h3>compartmentType</h3>
+<p class="function">
+<b><a href="CompartmentType.html">CompartmentType</a></b> <b>compartmentType</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Corrosion Addition (whole compartment)
+</dl>
+<a name="corrosionAddition()"></a>
+<h3>corrosionAddition</h3>
+<p class="function">
+<b><a href="CorrosionAddition.html">CorrosionAddition</a></b> <b>corrosionAddition</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Corrosion Addition (whole compartment)
+</dl>
+</body>
+</html>

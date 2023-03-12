@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: GeneralOptions
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: GeneralOptions
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+General Options and Factors in Capacity Checks
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Define global and general code checking factors</td></tr><tr>  <td>     <code>Cc1.run(1).generalOptions.computeLoadsAsNeeded = true;<br/>Cc1.run(1).generalOptions.purgePositionResults = true;<br/>     </code>		<div class="explanation">This command is scripted. Most factors are different for the various code checking standards.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Generate Code Check Loads</td></tr><tr>  <td>     <code>Cc1.run(1).generateCodeCheckLoads();<br/>     </code>		<div class="explanation">This command is scripted. Compute forces and moments at system defined locations for use in <br/>the subsequent code check. See User Manual Volume 4 and 5 for details.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Execute Code Checks</td></tr><tr>  <td>     <code>Cc1.executeCodeChecks();<br/>     </code>		<div class="explanation">This command is scripted. perform the code check according to the parameters as defined in the <br/>Add Run and the code check forces and moments computed by the generate Code Check Loads.<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="UnnamedObject.html">UnnamedObject</a>
+       |
+       +--<b>GeneralOptions</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="GeneralOptions.html#computeLoadsAsNeeded()">computeLoadsAsNeeded</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Compute loads when needed*
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="GeneralOptions.html#computeLoadsOnTheFly()">computeLoadsOnTheFly</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Compute loads when needed*
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="GeneralOptions.html#purgePositionResults()">purgePositionResults</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Purge position results*
+</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="computeLoadsAsNeeded()"></a>
+<h3>computeLoadsAsNeeded</h3>
+<p class="function">
+<b>bool</b> <b>computeLoadsAsNeeded</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Compute loads when needed*
+To reduce use of database memory, you can compute temporary loads (during code check execution). These loads will be deleted immediately when no longer needed.
+ This option can affect performance on redesign, as loads must be recalculated locally every time you change member/joint settings.
+ With this option checked, you will always use the latest FEM loads. When unchecked, you will use the FEM loads retrieved the last time you used ‘Generate Code Check Loads’.
+ Note that with option checked member loads will not be available in the report nor in object properties.
+</dl>
+<a name="computeLoadsOnTheFly()"></a>
+<h3>computeLoadsOnTheFly</h3>
+<p class="function">
+<b>bool</b> <b>computeLoadsOnTheFly</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Compute loads when needed*
+To reduce use of database memory, you can compute temporary loads (during code check execution). These loads will be deleted immediately when no longer needed.
+ This option can affect performance on redesign, as loads must be recalculated locally every time you change member/joint settings.
+ With this option checked, you will always use the latest FEM loads. When unchecked, you will use the FEM loads retrieved the last time you used ‘Generate Code Check Loads’.
+ Note that with option checked member loads will not be available in the report nor in object properties.
+</dl>
+<a name="purgePositionResults()"></a>
+<h3>purgePositionResults</h3>
+<p class="function">
+<b>bool</b> <b>purgePositionResults</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Purge position results*
+[DEPRECATED] Code check results are now stored on file, so this option is no longer supported
+</dl>
+</body>
+</html>

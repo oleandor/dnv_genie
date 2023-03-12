@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: CorrosionAddition
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: CorrosionAddition
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Represent corrosion addition. Use this property on the front or back side of a plate to mark corrosion addition for this side.Assign to a beam to mark one-sided corrosion addition on the beam profile. For hollow profiles (pipe and box) the corrosion addition is only deducted from the outer surface.
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Create and edit a corrosion addition</td></tr><tr>  <td>     <code>MyCorrosion = CorrosionAddition(8mm);<br/>     </code>		<div class="explanation">This command is scripted. Typically for a corrosion addition of 8 mm<br/>Used when creating a finite element model using the CSR rules for bulk ships<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="Property.html">Property</a>
+            |
+            +--<a href="AbstractCorrosionAddition.html">AbstractCorrosionAddition</a>
+                 |
+                 +--<b>CorrosionAddition</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="CorrosionAddition.html#CorrosionAddition(Length)">CorrosionAddition</a></b>(<b><a href="Length.html">Length</a></b>)</code>
+<div class="explanation">
+Construct a new corrosion addition property</div></td>
+</tr>
+<tr >
+<td><code><b><a href="CorrosionAddition.html#CorrosionAddition(Length, bool)">CorrosionAddition</a></b>(<b><a href="Length.html">Length</a></b>, <b>bool</b>)</code>
+<div class="explanation">
+Construct a new corrosion addition property specifying whether or not it has the stainless property</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="CorrosionAddition.html#addition()">addition</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+corrosion addition for one side</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="CorrosionAddition.html#isStainless()">isStainless</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+stainless property, should be the same for both sides</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="unsigned___int64.html">unsigned __int64</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Property.html#useCount()">useCount</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Returns the number of objects that uses this property</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="CorrosionAddition(Length)"></a>
+<h3>CorrosionAddition</h3>
+<p class="function">
+<b>CorrosionAddition</b>(<b><a href="Length.html">Length</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new corrosion addition property
+</dl>
+<hr>
+
+<a name="CorrosionAddition(Length, bool)"></a>
+<h3>CorrosionAddition</h3>
+<p class="function">
+<b>CorrosionAddition</b>(<b><a href="Length.html">Length</a></b>, <b>bool</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new corrosion addition property specifying whether or not it has the stainless property
+</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="addition()"></a>
+<h3>addition</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>addition</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>corrosion addition for one side
+</dl>
+<a name="isStainless()"></a>
+<h3>isStainless</h3>
+<p class="function">
+<b>bool</b> <b>isStainless</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>stainless property, should be the same for both sides
+</dl>
+</body>
+</html>

@@ -1,0 +1,1084 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: ExportUsfos
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: ExportUsfos
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Export GeniE model to Usfos formatted file(s)
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Export GeniE model</td></tr><tr>  <td>     <code>UsfosExporter = ExportUsfos();<br/>UsfosExporter.SetAnalysis(Analysis1);<br/>UsfosExporter.DoExport("C:/Location/Location");<br/>     </code>		<div class="explanation">		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="AbstractExchange.html">AbstractExchange</a>
+  |
+  +--<a href="AbstractExport.html">AbstractExport</a>
+       |
+       +--<b>ExportUsfos</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="ExportUsfos.html#ExportUsfos()">ExportUsfos</a></b>()</code>
+<div class="explanation">
+Construct a new export helper object</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#BimpactAddRow(long, long, long, DNVS::MoFa::Space::Vector<3>, DNVS::MoFa::Units::Quantity<DNVS::MoFa::Units::EnergyPhenomenon,void>, DNVS::MoFa::Units::Quantity<DNVS::MoFa::Units::LengthPhenomenon,void>, long)">BimpactAddRow</a></b>(<b><a href="long.html">long</a></b> loadcase, elnox, elpos, dir, energy, <b><a href="long.html">long</a></b>, <b><a href="long.html">long</a></b>, <b><a href="DNVS__MoFa__Space__Vector_3_.html">DNVS::MoFa::Space::Vector<3></a></b>, <b><a href="DNVS__MoFa__Units__Quantity_DNVS__MoFa__Units__EnergyPhenomenon,void_.html">DNVS::MoFa::Units::Quantity<DNVS::MoFa::Units::EnergyPhenomenon,void></a></b>, <b><a href="DNVS__MoFa__Units__Quantity_DNVS__MoFa__Units__LengthPhenomenon,void_.html">DNVS::MoFa::Units::Quantity<DNVS::MoFa::Units::LengthPhenomenon,void></a></b>, <b><a href="long.html">long</a></b>)</code>
+<div class="explanation">
+Set data row for BIMPACT card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#BimpactSetBeam(Beam)">BimpactSetBeam</a></b>(<b><a href="Beam.html">Beam</a></b> Beam name)</code>
+<div class="explanation">
+Set elnox info for BIMPACT card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#BimpactSetBeamEnd(string)">BimpactSetBeamEnd</a></b>(<b>string</b> Beam end)</code>
+<div class="explanation">
+Set elpos info for BIMPACT card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#BimpactSetDirection(Array)">BimpactSetDirection</a></b>(<b><a href="Array.html">Array</a></b> Direction)</code>
+<div class="explanation">
+Set direction info for BIMPACT card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#BimpactSetEnergy(Energy)">BimpactSetEnergy</a></b>(<b><a href="Energy.html">Energy</a></b> Energy)</code>
+<div class="explanation">
+Set energy parameter for BIMPACT card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#BimpactSetLoadCase(long)">BimpactSetLoadCase</a></b>(<b><a href="long.html">long</a></b> Load case)</code>
+<div class="explanation">
+Set ldcs parameter for BIMPACT card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#ChjointSetJointSet(Set)">ChjointSetJointSet</a></b>(<b><a href="Set.html">Set</a></b>)</code>
+<div class="explanation">
+Set joints for generating CHJOINT cards</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#CnodesSetBeamEnd(string)">CnodesSetBeamEnd</a></b>(<b>string</b> BeamEnd)</code>
+<div class="explanation">
+Set which end(s) of beam to result in node(s) in CNODES card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#CnodesSetDOF(long)">CnodesSetDOF</a></b>(<b><a href="long.html">long</a></b> DOF)</code>
+<div class="explanation">
+Set DOF parameter for CNODES card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#CnodesSetFromBeam(Beam)">CnodesSetFromBeam</a></b>(<b><a href="Beam.html">Beam</a></b> BeamName)</code>
+<div class="explanation">
+Set Beam for fetching nodes of CNODES card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#CnodesSetFromBeams(Array)">CnodesSetFromBeams</a></b>(<b><a href="Array.html">Array</a></b> BeamNames)</code>
+<div class="explanation">
+Set Beams for fetching nodes of CNODES card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#CnodesSetdFact(double)">CnodesSetdFact</a></b>(<b>double</b> dFact)</code>
+<div class="explanation">
+Set dFact parameter for CNODES card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#CusfosAddRow(long, double, double, long, double)">CusfosAddRow</a></b>(<b><a href="long.html">long</a></b> FemNo, lFact, mxLd, nStep, minStp, <b>double</b>, <b>double</b>, <b><a href="long.html">long</a></b>, <b>double</b>)</code>
+<div class="explanation">
+Set data row for CUSFOS card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#CusfosSetMxPDis(double)">CusfosSetMxPDis</a></b>(<b>double</b> MxPDis)</code>
+<div class="explanation">
+Set MxPDis parameter for CUSFOS card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#CusfosSetMxPStp(double)">CusfosSetMxPStp</a></b>(<b>double</b> MxPStp)</code>
+<div class="explanation">
+Set MxPStp parameter for CUSFOS card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#CusfosSetnLoads(long)">CusfosSetnLoads</a></b>(<b><a href="long.html">long</a></b> nLoads)</code>
+<div class="explanation">
+Set nLoads parameter for CUSFOS card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#CusfosSetnPostStp(long)">CusfosSetnPostStp</a></b>(<b><a href="long.html">long</a></b> nPostStp)</code>
+<div class="explanation">
+Set nPostStp parameter for CUSFOS card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#DoExport(string)">DoExport</a></b>(<b>string</b> filePrefixName)</code>
+<div class="explanation">
+Perform export operation</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#IllegalBeamLengthRatio(double)">IllegalBeamLengthRatio</a></b>(<b>double</b> ratio)</code>
+<div class="explanation">
+Set BeamLength ratio for ILLEGAL card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#IllegalEccentricityRatio(double)">IllegalEccentricityRatio</a></b>(<b>double</b> ratio)</code>
+<div class="explanation">
+Set Eccentricity ratio for ILLEGAL card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#IllegalShellMinAngle(double)">IllegalShellMinAngle</a></b>(<b>double</b> angle)</code>
+<div class="explanation">
+Set minimum ShellAngle for ILLEGAL card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#IllegalSoilThicknessRatio(double)">IllegalSoilThicknessRatio</a></b>(<b>double</b> ratio)</code>
+<div class="explanation">
+Set SoilThickness ratio for ILLEGAL card</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#JntoptionSetGroutedJointSet(Set)">JntoptionSetGroutedJointSet</a></b>(<b><a href="Set.html">Set</a></b>)</code>
+<div class="explanation">
+Set grouted joints for generating JNTOPTION card and optionally CHJOINT cards</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#SetAnalysis(Analysis)">SetAnalysis</a></b>(<b><a href="Analysis.html">Analysis</a></b> selectedAnalysis)</code>
+<div class="explanation">
+Set selected analysis</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ExportUsfos.html#SetCombination(LoadCombination)">SetCombination</a></b>(<b><a href="LoadCombination.html">LoadCombination</a></b> selectedCombination)</code>
+<div class="explanation">
+Set selected load combination</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="double_or_CapacityLevel.html">double or CapacityLevel</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#ChjointSetCapacityLevel()">ChjointSetCapacityLevel</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Set capacity level for CHJOINT cards, only id capacity rule not equal to MSL</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="DNVS__MoFa__UsfosExchange__CapRuleEnum.html">DNVS::MoFa::UsfosExchange::CapRuleEnum</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#ChjointSetCapacityRule()">ChjointSetCapacityRule</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Set capacity rule for CHJOINT cards</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#ChjointSetQfSafetyCoeff()">ChjointSetQfSafetyCoeff</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Set safety factor for CHJOINT cards, only id capacity rule not equal to MSL and level equals scalfact</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#ConvertHingesToSprings()">ConvertHingesToSprings</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Convert hinges to zero-length spring</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="AnalysisControl.html">AnalysisControl</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#ExportAnalysisControl()">ExportAnalysisControl</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Export analysis control information</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#ExportEnvironmentalData()">ExportEnvironmentalData</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Export environmental data, e.g. flooding, hydro coefficients and marine growth</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#ExportEnvironmentalLoads()">ExportEnvironmentalLoads</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Export environmental loads of type wave, current and buoyancy</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#ExportPileSoilData()">ExportPileSoilData</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Include pile-soil data in export
+If checked the 'Use Splice Output' option is enabled
+The 'Use Splice Output' option is by default un-check if the 'Gensod Only' option of the Pile-Soil Analysis dialog is checked</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#ExportSelectedLoads()">ExportSelectedLoads</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Export loads of selected load combination only</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#ExportStructuralData()">ExportStructuralData</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Export structural data including nodes, beams, plates and structural properties</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#ExportStructuralLoads()">ExportStructuralLoads</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Export structural loads of type point loads, concentrated- and distributed line loads, pressure- and temperature loads.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#ExportWajacLoads()">ExportWajacLoads</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Export Wajac generated loads, i.e. loads of the L-file</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#ForceUnit()">ForceUnit</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Force unit of Usfos export equal to FEM Analysis units</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#IllegalBeamLengthUsersRisk()">IllegalBeamLengthUsersRisk</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Set BeamLength users risk for ILLEGAL card</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#IllegalEccentricityUsersRisk()">IllegalEccentricityUsersRisk</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Set Eccentricity users risk for ILLEGAL card</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#IllegalShellAngleUsersRisk()">IllegalShellAngleUsersRisk</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Set ShellAngle users risk for ILLEGAL card</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#IllegalSoilThicknessUsersRisk()">IllegalSoilThicknessUsersRisk</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Set SoilThickness users risk for ILLEGAL card</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#IncludeJointModelling()">IncludeJointModelling</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Include joint modeling control data in export</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#IncludeWind()">IncludeWind</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Include airdrag, windprofiles and wind loads in export</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#JntoptionSetSelectGroutedJoints()">JntoptionSetSelectGroutedJoints</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Include grouted joints</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#LengthUnit()">LengthUnit</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Length unit of Usfos export equal to FEM Analysis units</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="FileSplitting.html">FileSplitting</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#SplitUsfosData()">SplitUsfosData</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+If SplitAlternativ1 is selected the followings files are generated; <prefix>_control.fem, <prefix>_ufo.fem, <prefix>_ufo_load.fem
+If SplitAlternativ2 is selected the followings files are generated; <prefix>_control.fem, <prefix>_ufo.fem, <prefix>_ufo_soil.fem, <prefix>_ufo_environment.fem
+If NoSplitting is selected all data is written to <prefix>_ufo.fem</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#SwitchesJointRepairBraceEccentricities()">SwitchesJointRepairBraceEccentricities</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Turn on repair of brace eccentricities</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#TemperatureUnit()">TemperatureUnit</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Temperature unit of Usfos export equal to FEM Analysis units</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#UseIllegalValues()">UseIllegalValues</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Set if use ILLEGAL card values for export data checks</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ExportUsfos.html#UseSpliceOutput()">UseSpliceOutput</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+When checked pile and soil data is created by Splice
+When un-checked, pile data is directly exported and soil data is created by Gensod
+When un-checked, Usfos export is done without the need of Wajac and Splice licenses</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="ExportUsfos()"></a>
+<h3>ExportUsfos</h3>
+<p class="function">
+<b>ExportUsfos</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new export helper object
+</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="BimpactAddRow(long, long, long, DNVS::MoFa::Space::Vector<3>, DNVS::MoFa::Units::Quantity<DNVS::MoFa::Units::EnergyPhenomenon,void>, DNVS::MoFa::Units::Quantity<DNVS::MoFa::Units::LengthPhenomenon,void>, long)"></a>
+<h3>BimpactAddRow</h3>
+<p class="function">
+<b>&nbsp;</b> <b>BimpactAddRow</b>(<b><a href="long.html">long</a></b> loadcase, elnox, elpos, dir, energy, <b><a href="long.html">long</a></b>, <b><a href="long.html">long</a></b>, <b><a href="DNVS__MoFa__Space__Vector_3_.html">DNVS::MoFa::Space::Vector<3></a></b>, <b><a href="DNVS__MoFa__Units__Quantity_DNVS__MoFa__Units__EnergyPhenomenon,void_.html">DNVS::MoFa::Units::Quantity<DNVS::MoFa::Units::EnergyPhenomenon,void></a></b>, <b><a href="DNVS__MoFa__Units__Quantity_DNVS__MoFa__Units__LengthPhenomenon,void_.html">DNVS::MoFa::Units::Quantity<DNVS::MoFa::Units::LengthPhenomenon,void></a></b>, <b><a href="long.html">long</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set data row for BIMPACT card
+</dl>
+<hr>
+
+<a name="BimpactSetBeam(Beam)"></a>
+<h3>BimpactSetBeam</h3>
+<p class="function">
+<b>&nbsp;</b> <b>BimpactSetBeam</b>(<b><a href="Beam.html">Beam</a></b> Beam name)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set elnox info for BIMPACT card
+</dl>
+<hr>
+
+<a name="BimpactSetBeamEnd(string)"></a>
+<h3>BimpactSetBeamEnd</h3>
+<p class="function">
+<b>&nbsp;</b> <b>BimpactSetBeamEnd</b>(<b>string</b> Beam end)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set elpos info for BIMPACT card
+</dl>
+<hr>
+
+<a name="BimpactSetDirection(Array)"></a>
+<h3>BimpactSetDirection</h3>
+<p class="function">
+<b>&nbsp;</b> <b>BimpactSetDirection</b>(<b><a href="Array.html">Array</a></b> Direction)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set direction info for BIMPACT card
+</dl>
+<hr>
+
+<a name="BimpactSetEnergy(Energy)"></a>
+<h3>BimpactSetEnergy</h3>
+<p class="function">
+<b>&nbsp;</b> <b>BimpactSetEnergy</b>(<b><a href="Energy.html">Energy</a></b> Energy)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set energy parameter for BIMPACT card
+</dl>
+<hr>
+
+<a name="BimpactSetLoadCase(long)"></a>
+<h3>BimpactSetLoadCase</h3>
+<p class="function">
+<b>&nbsp;</b> <b>BimpactSetLoadCase</b>(<b><a href="long.html">long</a></b> Load case)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set ldcs parameter for BIMPACT card
+</dl>
+<hr>
+
+<a name="ChjointSetJointSet(Set)"></a>
+<h3>ChjointSetJointSet</h3>
+<p class="function">
+<b>&nbsp;</b> <b>ChjointSetJointSet</b>(<b><a href="Set.html">Set</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set joints for generating CHJOINT cards
+</dl>
+<hr>
+
+<a name="CnodesSetBeamEnd(string)"></a>
+<h3>CnodesSetBeamEnd</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CnodesSetBeamEnd</b>(<b>string</b> BeamEnd)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set which end(s) of beam to result in node(s) in CNODES card
+</dl>
+<hr>
+
+<a name="CnodesSetDOF(long)"></a>
+<h3>CnodesSetDOF</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CnodesSetDOF</b>(<b><a href="long.html">long</a></b> DOF)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set DOF parameter for CNODES card
+</dl>
+<hr>
+
+<a name="CnodesSetFromBeam(Beam)"></a>
+<h3>CnodesSetFromBeam</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CnodesSetFromBeam</b>(<b><a href="Beam.html">Beam</a></b> BeamName)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set Beam for fetching nodes of CNODES card
+</dl>
+<hr>
+
+<a name="CnodesSetFromBeams(Array)"></a>
+<h3>CnodesSetFromBeams</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CnodesSetFromBeams</b>(<b><a href="Array.html">Array</a></b> BeamNames)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set Beams for fetching nodes of CNODES card
+</dl>
+<hr>
+
+<a name="CnodesSetdFact(double)"></a>
+<h3>CnodesSetdFact</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CnodesSetdFact</b>(<b>double</b> dFact)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set dFact parameter for CNODES card
+</dl>
+<hr>
+
+<a name="CusfosAddRow(long, double, double, long, double)"></a>
+<h3>CusfosAddRow</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CusfosAddRow</b>(<b><a href="long.html">long</a></b> FemNo, lFact, mxLd, nStep, minStp, <b>double</b>, <b>double</b>, <b><a href="long.html">long</a></b>, <b>double</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set data row for CUSFOS card
+</dl>
+<hr>
+
+<a name="CusfosSetMxPDis(double)"></a>
+<h3>CusfosSetMxPDis</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CusfosSetMxPDis</b>(<b>double</b> MxPDis)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set MxPDis parameter for CUSFOS card
+</dl>
+<hr>
+
+<a name="CusfosSetMxPStp(double)"></a>
+<h3>CusfosSetMxPStp</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CusfosSetMxPStp</b>(<b>double</b> MxPStp)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set MxPStp parameter for CUSFOS card
+</dl>
+<hr>
+
+<a name="CusfosSetnLoads(long)"></a>
+<h3>CusfosSetnLoads</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CusfosSetnLoads</b>(<b><a href="long.html">long</a></b> nLoads)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set nLoads parameter for CUSFOS card
+</dl>
+<hr>
+
+<a name="CusfosSetnPostStp(long)"></a>
+<h3>CusfosSetnPostStp</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CusfosSetnPostStp</b>(<b><a href="long.html">long</a></b> nPostStp)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set nPostStp parameter for CUSFOS card
+</dl>
+<hr>
+
+<a name="DoExport(string)"></a>
+<h3>DoExport</h3>
+<p class="function">
+<b>&nbsp;</b> <b>DoExport</b>(<b>string</b> filePrefixName)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Perform export operation
+</dl>
+<hr>
+
+<a name="IllegalBeamLengthRatio(double)"></a>
+<h3>IllegalBeamLengthRatio</h3>
+<p class="function">
+<b>&nbsp;</b> <b>IllegalBeamLengthRatio</b>(<b>double</b> ratio)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set BeamLength ratio for ILLEGAL card
+</dl>
+<hr>
+
+<a name="IllegalEccentricityRatio(double)"></a>
+<h3>IllegalEccentricityRatio</h3>
+<p class="function">
+<b>&nbsp;</b> <b>IllegalEccentricityRatio</b>(<b>double</b> ratio)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set Eccentricity ratio for ILLEGAL card
+</dl>
+<hr>
+
+<a name="IllegalShellMinAngle(double)"></a>
+<h3>IllegalShellMinAngle</h3>
+<p class="function">
+<b>&nbsp;</b> <b>IllegalShellMinAngle</b>(<b>double</b> angle)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set minimum ShellAngle for ILLEGAL card
+</dl>
+<hr>
+
+<a name="IllegalSoilThicknessRatio(double)"></a>
+<h3>IllegalSoilThicknessRatio</h3>
+<p class="function">
+<b>&nbsp;</b> <b>IllegalSoilThicknessRatio</b>(<b>double</b> ratio)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set SoilThickness ratio for ILLEGAL card
+</dl>
+<hr>
+
+<a name="JntoptionSetGroutedJointSet(Set)"></a>
+<h3>JntoptionSetGroutedJointSet</h3>
+<p class="function">
+<b>&nbsp;</b> <b>JntoptionSetGroutedJointSet</b>(<b><a href="Set.html">Set</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set grouted joints for generating JNTOPTION card and optionally CHJOINT cards
+</dl>
+<hr>
+
+<a name="SetAnalysis(Analysis)"></a>
+<h3>SetAnalysis</h3>
+<p class="function">
+<b>&nbsp;</b> <b>SetAnalysis</b>(<b><a href="Analysis.html">Analysis</a></b> selectedAnalysis)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set selected analysis
+</dl>
+<hr>
+
+<a name="SetCombination(LoadCombination)"></a>
+<h3>SetCombination</h3>
+<p class="function">
+<b>&nbsp;</b> <b>SetCombination</b>(<b><a href="LoadCombination.html">LoadCombination</a></b> selectedCombination)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set selected load combination
+</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="ChjointSetCapacityLevel()"></a>
+<h3>ChjointSetCapacityLevel</h3>
+<p class="function">
+<b><a href="double_or_CapacityLevel.html">double or CapacityLevel</a></b> <b>ChjointSetCapacityLevel</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set capacity level for CHJOINT cards, only id capacity rule not equal to MSL
+</dl>
+<a name="ChjointSetCapacityRule()"></a>
+<h3>ChjointSetCapacityRule</h3>
+<p class="function">
+<b><a href="DNVS__MoFa__UsfosExchange__CapRuleEnum.html">DNVS::MoFa::UsfosExchange::CapRuleEnum</a></b> <b>ChjointSetCapacityRule</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set capacity rule for CHJOINT cards
+</dl>
+<a name="ChjointSetQfSafetyCoeff()"></a>
+<h3>ChjointSetQfSafetyCoeff</h3>
+<p class="function">
+<b>double</b> <b>ChjointSetQfSafetyCoeff</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set safety factor for CHJOINT cards, only id capacity rule not equal to MSL and level equals scalfact
+</dl>
+<a name="ConvertHingesToSprings()"></a>
+<h3>ConvertHingesToSprings</h3>
+<p class="function">
+<b>bool</b> <b>ConvertHingesToSprings</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Convert hinges to zero-length spring
+</dl>
+<a name="ExportAnalysisControl()"></a>
+<h3>ExportAnalysisControl</h3>
+<p class="function">
+<b><a href="AnalysisControl.html">AnalysisControl</a></b> <b>ExportAnalysisControl</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Export analysis control information
+</dl>
+<a name="ExportEnvironmentalData()"></a>
+<h3>ExportEnvironmentalData</h3>
+<p class="function">
+<b>bool</b> <b>ExportEnvironmentalData</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Export environmental data, e.g. flooding, hydro coefficients and marine growth
+</dl>
+<a name="ExportEnvironmentalLoads()"></a>
+<h3>ExportEnvironmentalLoads</h3>
+<p class="function">
+<b>bool</b> <b>ExportEnvironmentalLoads</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Export environmental loads of type wave, current and buoyancy
+</dl>
+<a name="ExportPileSoilData()"></a>
+<h3>ExportPileSoilData</h3>
+<p class="function">
+<b>bool</b> <b>ExportPileSoilData</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Include pile-soil data in export
+If checked the 'Use Splice Output' option is enabled
+The 'Use Splice Output' option is by default un-check if the 'Gensod Only' option of the Pile-Soil Analysis dialog is checked
+</dl>
+<a name="ExportSelectedLoads()"></a>
+<h3>ExportSelectedLoads</h3>
+<p class="function">
+<b>bool</b> <b>ExportSelectedLoads</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Export loads of selected load combination only
+</dl>
+<a name="ExportStructuralData()"></a>
+<h3>ExportStructuralData</h3>
+<p class="function">
+<b>bool</b> <b>ExportStructuralData</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Export structural data including nodes, beams, plates and structural properties
+</dl>
+<a name="ExportStructuralLoads()"></a>
+<h3>ExportStructuralLoads</h3>
+<p class="function">
+<b>bool</b> <b>ExportStructuralLoads</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Export structural loads of type point loads, concentrated- and distributed line loads, pressure- and temperature loads.
+</dl>
+<a name="ExportWajacLoads()"></a>
+<h3>ExportWajacLoads</h3>
+<p class="function">
+<b>bool</b> <b>ExportWajacLoads</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Export Wajac generated loads, i.e. loads of the L-file
+</dl>
+<a name="ForceUnit()"></a>
+<h3>ForceUnit</h3>
+<p class="function">
+<b>string</b> <b>ForceUnit</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Force unit of Usfos export equal to FEM Analysis units
+</dl>
+<a name="IllegalBeamLengthUsersRisk()"></a>
+<h3>IllegalBeamLengthUsersRisk</h3>
+<p class="function">
+<b>bool</b> <b>IllegalBeamLengthUsersRisk</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set BeamLength users risk for ILLEGAL card
+</dl>
+<a name="IllegalEccentricityUsersRisk()"></a>
+<h3>IllegalEccentricityUsersRisk</h3>
+<p class="function">
+<b>bool</b> <b>IllegalEccentricityUsersRisk</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set Eccentricity users risk for ILLEGAL card
+</dl>
+<a name="IllegalShellAngleUsersRisk()"></a>
+<h3>IllegalShellAngleUsersRisk</h3>
+<p class="function">
+<b>bool</b> <b>IllegalShellAngleUsersRisk</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set ShellAngle users risk for ILLEGAL card
+</dl>
+<a name="IllegalSoilThicknessUsersRisk()"></a>
+<h3>IllegalSoilThicknessUsersRisk</h3>
+<p class="function">
+<b>bool</b> <b>IllegalSoilThicknessUsersRisk</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set SoilThickness users risk for ILLEGAL card
+</dl>
+<a name="IncludeJointModelling()"></a>
+<h3>IncludeJointModelling</h3>
+<p class="function">
+<b>bool</b> <b>IncludeJointModelling</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Include joint modeling control data in export
+</dl>
+<a name="IncludeWind()"></a>
+<h3>IncludeWind</h3>
+<p class="function">
+<b>bool</b> <b>IncludeWind</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Include airdrag, windprofiles and wind loads in export
+</dl>
+<a name="JntoptionSetSelectGroutedJoints()"></a>
+<h3>JntoptionSetSelectGroutedJoints</h3>
+<p class="function">
+<b>bool</b> <b>JntoptionSetSelectGroutedJoints</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Include grouted joints
+</dl>
+<a name="LengthUnit()"></a>
+<h3>LengthUnit</h3>
+<p class="function">
+<b>string</b> <b>LengthUnit</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Length unit of Usfos export equal to FEM Analysis units
+</dl>
+<a name="SplitUsfosData()"></a>
+<h3>SplitUsfosData</h3>
+<p class="function">
+<b><a href="FileSplitting.html">FileSplitting</a></b> <b>SplitUsfosData</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>If SplitAlternativ1 is selected the followings files are generated; <prefix>_control.fem, <prefix>_ufo.fem, <prefix>_ufo_load.fem
+If SplitAlternativ2 is selected the followings files are generated; <prefix>_control.fem, <prefix>_ufo.fem, <prefix>_ufo_soil.fem, <prefix>_ufo_environment.fem
+If NoSplitting is selected all data is written to <prefix>_ufo.fem
+</dl>
+<a name="SwitchesJointRepairBraceEccentricities()"></a>
+<h3>SwitchesJointRepairBraceEccentricities</h3>
+<p class="function">
+<b>bool</b> <b>SwitchesJointRepairBraceEccentricities</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Turn on repair of brace eccentricities
+</dl>
+<a name="TemperatureUnit()"></a>
+<h3>TemperatureUnit</h3>
+<p class="function">
+<b>string</b> <b>TemperatureUnit</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Temperature unit of Usfos export equal to FEM Analysis units
+</dl>
+<a name="UseIllegalValues()"></a>
+<h3>UseIllegalValues</h3>
+<p class="function">
+<b>bool</b> <b>UseIllegalValues</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set if use ILLEGAL card values for export data checks
+</dl>
+<a name="UseSpliceOutput()"></a>
+<h3>UseSpliceOutput</h3>
+<p class="function">
+<b>bool</b> <b>UseSpliceOutput</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>When checked pile and soil data is created by Splice
+When un-checked, pile data is directly exported and soil data is created by Gensod
+When un-checked, Usfos export is done without the need of Wajac and Splice licenses
+</dl>
+</body>
+</html>

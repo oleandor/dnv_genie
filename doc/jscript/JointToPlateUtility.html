@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: JointToPlateUtility
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: JointToPlateUtility
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="MetaObject.html">MetaObject</a>
+  |
+  +--<b>JointToPlateUtility</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="JointToPlateUtility.html#StructureToPlateUtility()">StructureToPlateUtility</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="JointToPlateUtility.html#JointToPlateUtility()">JointToPlateUtility</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="__Vector__.html">__Vector__</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="JointToPlateUtility.html#ConvertBeam(StraightBeam)">ConvertBeam</a></b>(<b><a href="StraightBeam.html">StraightBeam</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="__Vector__.html">__Vector__</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="JointToPlateUtility.html#ConvertJoint(Joint)">ConvertJoint</a></b>(<b><a href="Joint.html">Joint</a></b> joint)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MetaObject.html#ToString(DNVS::MoFa::Formatting::FormattingService)">ToString</a></b>(<b><a href="DNVS__MoFa__Formatting__FormattingService.html">DNVS::MoFa::Formatting::FormattingService</a></b> formattingService)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#AddRigidLink()">AddRigidLink</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Adds rigid links at the ends of the converted beams between the beams and the newly constructed plates.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#BraceOffset()">BraceOffset</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+The offset distance of the mesh transition zone on the braces</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="IJointBeamSplittingRule.html">IJointBeamSplittingRule</a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#BraceSplittingRule()">BraceSplittingRule</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Defines how far along the brace you want to have plates.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#ChordOffset()">ChordOffset</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+The offset distance of the mesh transition zone on the chord</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="IJointBeamSplittingRule.html">IJointBeamSplittingRule</a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#ChordSplittingRule()">ChordSplittingRule</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Defines how far along the chord you want to have plates.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConvertedBeamOption.html">ConvertedBeamOption</a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#ConvertedBeamOption()">ConvertedBeamOption</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Options:</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#CreateRefinementZones()">CreateRefinementZones</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+If checked, then feature edges based on the data in the 'mesh refinement zones' tab are created. Otherwise they are ignored.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#CreateTransitionZones()">CreateTransitionZones</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+If checked, then feature edges based on the data in the 'mesh transition zones' tab are created. Otherwise they are ignored.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#DeleteBracesInsideChord()">DeleteBracesInsideChord</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Deletes the part of the brace plates that lies inside the chord.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#DisconnectChordFromNonstructuralBeams()">DisconnectChordFromNonstructuralBeams</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Selecting the option 'Make Converted Beams Non-Structural' Genie does not delete the beams but makes them non-structural, instead. If this check-box is checked, then Genie disconnects the non-structural beams from the chord surface.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="MeshDensity.html">MeshDensity</a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#MeshDensity()">MeshDensity</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Mesh density to be assigned to the new shells.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="MeshDensity.html">MeshDensity</a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#MeshDensityInMeshTransitionZones()">MeshDensityInMeshTransitionZones</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Mesh density to be assigned to the new shells of the mesh transition zones.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="MeshOptionFace.html">MeshOptionFace</a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#MeshOptionFace()">MeshOptionFace</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Mesh option face to be assigned to the new shells.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="__Vector__.html">__Vector__</a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#MeshRefinementZonesDataFromBraces()">MeshRefinementZonesDataFromBraces</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Specify information for feature edges on chord and braces.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#Name()">Name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#PlugOffset()">PlugOffset</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="mfSet_mfDraw_.html">mfSet<mfDraw></a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#SetContainingMeshRefinementZones()">SetContainingMeshRefinementZones</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+All converted shell-strips near chord-brace boundaries will be placed in this set</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="mfSet_mfDraw_.html">mfSet<mfDraw></a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#SetContainingMeshTransitionZones()">SetContainingMeshTransitionZones</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+All converted shell-strips outside mesh-refinement zone will be placed in this set</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="mfSet_mfDraw_.html">mfSet<mfDraw></a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#SetContainingShells()">SetContainingShells</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+All converted shells will be placed in this set</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#SplitChordAndBracesAtSmartPositions()">SplitChordAndBracesAtSmartPositions</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Ensures that there are no irremovable edges at positions where braces meets the chord.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="__Vector__.html">__Vector__</a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointToPlateUtility.html#ThroughBraces()">ThroughBraces</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Specify information for through braces.</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="StructureToPlateUtility()"></a>
+<h3>StructureToPlateUtility</h3>
+<p class="function">
+<b>StructureToPlateUtility</b>()</p>
+<p>
+<hr>
+
+<a name="JointToPlateUtility()"></a>
+<h3>JointToPlateUtility</h3>
+<p class="function">
+<b>JointToPlateUtility</b>()</p>
+<p>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="ConvertBeam(StraightBeam)"></a>
+<h3>ConvertBeam</h3>
+<p class="function">
+<b><a href="__Vector__.html">__Vector__</a></b> <b>ConvertBeam</b>(<b><a href="StraightBeam.html">StraightBeam</a></b>)</p>
+<p>
+<hr>
+
+<a name="ConvertJoint(Joint)"></a>
+<h3>ConvertJoint</h3>
+<p class="function">
+<b><a href="__Vector__.html">__Vector__</a></b> <b>ConvertJoint</b>(<b><a href="Joint.html">Joint</a></b> joint)</p>
+<p>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="AddRigidLink()"></a>
+<h3>AddRigidLink</h3>
+<p class="function">
+<b>bool</b> <b>AddRigidLink</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Adds rigid links at the ends of the converted beams between the beams and the newly constructed plates.
+</dl>
+<a name="BraceOffset()"></a>
+<h3>BraceOffset</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>BraceOffset</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>The offset distance of the mesh transition zone on the braces
+</dl>
+<a name="BraceSplittingRule()"></a>
+<h3>BraceSplittingRule</h3>
+<p class="function">
+<b><a href="IJointBeamSplittingRule.html">IJointBeamSplittingRule</a></b> <b>BraceSplittingRule</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Defines how far along the brace you want to have plates.
+</dl>
+<a name="ChordOffset()"></a>
+<h3>ChordOffset</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>ChordOffset</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>The offset distance of the mesh transition zone on the chord
+</dl>
+<a name="ChordSplittingRule()"></a>
+<h3>ChordSplittingRule</h3>
+<p class="function">
+<b><a href="IJointBeamSplittingRule.html">IJointBeamSplittingRule</a></b> <b>ChordSplittingRule</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Defines how far along the chord you want to have plates.
+</dl>
+<a name="ConvertedBeamOption()"></a>
+<h3>ConvertedBeamOption</h3>
+<p class="function">
+<b><a href="ConvertedBeamOption.html">ConvertedBeamOption</a></b> <b>ConvertedBeamOption</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Options:
+Delete Converted Beams: Delete the initially given beams.
+Keep Converted Beams: Keep the initially given beams.
+Make Converted Beams Nonstructural: Keep the initially given beams and make them non-structural.
+</dl>
+<a name="CreateRefinementZones()"></a>
+<h3>CreateRefinementZones</h3>
+<p class="function">
+<b>bool</b> <b>CreateRefinementZones</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>If checked, then feature edges based on the data in the 'mesh refinement zones' tab are created. Otherwise they are ignored.
+</dl>
+<a name="CreateTransitionZones()"></a>
+<h3>CreateTransitionZones</h3>
+<p class="function">
+<b>bool</b> <b>CreateTransitionZones</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>If checked, then feature edges based on the data in the 'mesh transition zones' tab are created. Otherwise they are ignored.
+</dl>
+<a name="DeleteBracesInsideChord()"></a>
+<h3>DeleteBracesInsideChord</h3>
+<p class="function">
+<b>bool</b> <b>DeleteBracesInsideChord</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Deletes the part of the brace plates that lies inside the chord.
+</dl>
+<a name="DisconnectChordFromNonstructuralBeams()"></a>
+<h3>DisconnectChordFromNonstructuralBeams</h3>
+<p class="function">
+<b>bool</b> <b>DisconnectChordFromNonstructuralBeams</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Selecting the option 'Make Converted Beams Non-Structural' Genie does not delete the beams but makes them non-structural, instead. If this check-box is checked, then Genie disconnects the non-structural beams from the chord surface.
+</dl>
+<a name="MeshDensity()"></a>
+<h3>MeshDensity</h3>
+<p class="function">
+<b><a href="MeshDensity.html">MeshDensity</a></b> <b>MeshDensity</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Mesh density to be assigned to the new shells.
+</dl>
+<a name="MeshDensityInMeshTransitionZones()"></a>
+<h3>MeshDensityInMeshTransitionZones</h3>
+<p class="function">
+<b><a href="MeshDensity.html">MeshDensity</a></b> <b>MeshDensityInMeshTransitionZones</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Mesh density to be assigned to the new shells of the mesh transition zones.
+</dl>
+<a name="MeshOptionFace()"></a>
+<h3>MeshOptionFace</h3>
+<p class="function">
+<b><a href="MeshOptionFace.html">MeshOptionFace</a></b> <b>MeshOptionFace</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Mesh option face to be assigned to the new shells.
+</dl>
+<a name="MeshRefinementZonesDataFromBraces()"></a>
+<h3>MeshRefinementZonesDataFromBraces</h3>
+<p class="function">
+<b><a href="__Vector__.html">__Vector__</a></b> <b>MeshRefinementZonesDataFromBraces</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify information for feature edges on chord and braces.
+</dl>
+<a name="Name()"></a>
+<h3>Name</h3>
+<p class="function">
+<b>string</b> <b>Name</b>()</p>
+<p>
+<a name="PlugOffset()"></a>
+<h3>PlugOffset</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>PlugOffset</b>()</p>
+<p>
+<a name="SetContainingMeshRefinementZones()"></a>
+<h3>SetContainingMeshRefinementZones</h3>
+<p class="function">
+<b><a href="mfSet_mfDraw_.html">mfSet<mfDraw></a></b> <b>SetContainingMeshRefinementZones</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>All converted shell-strips near chord-brace boundaries will be placed in this set
+</dl>
+<a name="SetContainingMeshTransitionZones()"></a>
+<h3>SetContainingMeshTransitionZones</h3>
+<p class="function">
+<b><a href="mfSet_mfDraw_.html">mfSet<mfDraw></a></b> <b>SetContainingMeshTransitionZones</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>All converted shell-strips outside mesh-refinement zone will be placed in this set
+</dl>
+<a name="SetContainingShells()"></a>
+<h3>SetContainingShells</h3>
+<p class="function">
+<b><a href="mfSet_mfDraw_.html">mfSet<mfDraw></a></b> <b>SetContainingShells</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>All converted shells will be placed in this set
+</dl>
+<a name="SplitChordAndBracesAtSmartPositions()"></a>
+<h3>SplitChordAndBracesAtSmartPositions</h3>
+<p class="function">
+<b>bool</b> <b>SplitChordAndBracesAtSmartPositions</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Ensures that there are no irremovable edges at positions where braces meets the chord.
+</dl>
+<a name="ThroughBraces()"></a>
+<h3>ThroughBraces</h3>
+<p class="function">
+<b><a href="__Vector__.html">__Vector__</a></b> <b>ThroughBraces</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify information for through braces.
+</dl>
+</body>
+</html>

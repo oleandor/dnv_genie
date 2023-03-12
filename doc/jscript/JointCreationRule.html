@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: JointCreationRule
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: JointCreationRule
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+This rule will only be used by the GUI to call the correct script commands <br/>to generate new joints. Rules for automatic creation of joints. <br/>The joints will be defined and named according to the rules specified as well as the naming convention.
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Joint creation</td></tr><tr>  <td>     <code>GenieRules.JointCreation.exclude(geFreeBeamEnds,true);<br/>GenieRules.JointCreation.exclude(ge2BeamAligned,true);<br/>GenieRules.JointCreation.exclude(geThroughBeamPure,true);<br/>GenieRules.JointCreation.autoGenerate = true;<br/>     </code>		<div class="explanation">This command is scripted. Typically, when activating the automatic joint generation and the exclusion criteria as shown<br/>		</div>   </td></tr></table><hr/>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="JointCreationRule.html#exclude(JointCreationEnum, bool)">exclude</a></b>(<b><a href="JointCreationEnum.html">JointCreationEnum</a></b> rule, <b>bool</b> exclude)</code>
+<div class="explanation">
+Turn a rule on or off</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="JointCreationRule.html#excluded(JointCreationEnum)">excluded</a></b>(<b><a href="JointCreationEnum.html">JointCreationEnum</a></b> rule)</code>
+<div class="explanation">
+Query a rule</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="JointCreationRule.html#autoGenerate()">autoGenerate</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Specifies if Joints should be automatically generated as you modell (GUI option)</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="JointCreationEnum.html">JointCreationEnum</a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointCreationRule.html#ge2BeamAligned()">ge2BeamAligned</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Exclude 2-beam aligned intersections (default: exclude)</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="JointCreationEnum.html">JointCreationEnum</a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointCreationRule.html#geBeamEnds()">geBeamEnds</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Exclude intersections with beam ends (default: include)</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="JointCreationEnum.html">JointCreationEnum</a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointCreationRule.html#geFreeBeamEnds()">geFreeBeamEnds</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Exclude free beam ends (default: exclude)</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="JointCreationEnum.html">JointCreationEnum</a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointCreationRule.html#geFreeThroughBeams()">geFreeThroughBeams</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Exclude internal points on beams not part of an intersection (default: exclude)</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="JointCreationEnum.html">JointCreationEnum</a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointCreationRule.html#geThroughBeamPure()">geThroughBeamPure</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Exclude pure through-beam intersections (default: exclude)</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="JointCreationEnum.html">JointCreationEnum</a></b></code>
+</td>
+<td width="90%"><code><b><a href="JointCreationRule.html#geThroughBeams()">geThroughBeams</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Exclude intersections with through-beams (default: include)</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="JointCreationRule.html#selectionAware()">selectionAware</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Specifies whether the topology of the selection area is significant when creating joints in a selection</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="exclude(JointCreationEnum, bool)"></a>
+<h3>exclude</h3>
+<p class="function">
+<b>&nbsp;</b> <b>exclude</b>(<b><a href="JointCreationEnum.html">JointCreationEnum</a></b> rule, <b>bool</b> exclude)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Turn a rule on or off
+</dl>
+<hr>
+
+<a name="excluded(JointCreationEnum)"></a>
+<h3>excluded</h3>
+<p class="function">
+<b>bool</b> <b>excluded</b>(<b><a href="JointCreationEnum.html">JointCreationEnum</a></b> rule)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Query a rule
+</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="autoGenerate()"></a>
+<h3>autoGenerate</h3>
+<p class="function">
+<b>bool</b> <b>autoGenerate</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specifies if Joints should be automatically generated as you modell (GUI option)
+</dl>
+<a name="ge2BeamAligned()"></a>
+<h3>ge2BeamAligned</h3>
+<p class="function">
+<b><a href="JointCreationEnum.html">JointCreationEnum</a></b> <b>ge2BeamAligned</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Exclude 2-beam aligned intersections (default: exclude)
+</dl>
+<a name="geBeamEnds()"></a>
+<h3>geBeamEnds</h3>
+<p class="function">
+<b><a href="JointCreationEnum.html">JointCreationEnum</a></b> <b>geBeamEnds</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Exclude intersections with beam ends (default: include)
+</dl>
+<a name="geFreeBeamEnds()"></a>
+<h3>geFreeBeamEnds</h3>
+<p class="function">
+<b><a href="JointCreationEnum.html">JointCreationEnum</a></b> <b>geFreeBeamEnds</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Exclude free beam ends (default: exclude)
+</dl>
+<a name="geFreeThroughBeams()"></a>
+<h3>geFreeThroughBeams</h3>
+<p class="function">
+<b><a href="JointCreationEnum.html">JointCreationEnum</a></b> <b>geFreeThroughBeams</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Exclude internal points on beams not part of an intersection (default: exclude)
+</dl>
+<a name="geThroughBeamPure()"></a>
+<h3>geThroughBeamPure</h3>
+<p class="function">
+<b><a href="JointCreationEnum.html">JointCreationEnum</a></b> <b>geThroughBeamPure</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Exclude pure through-beam intersections (default: exclude)
+</dl>
+<a name="geThroughBeams()"></a>
+<h3>geThroughBeams</h3>
+<p class="function">
+<b><a href="JointCreationEnum.html">JointCreationEnum</a></b> <b>geThroughBeams</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Exclude intersections with through-beams (default: include)
+</dl>
+<a name="selectionAware()"></a>
+<h3>selectionAware</h3>
+<p class="function">
+<b>bool</b> <b>selectionAware</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specifies whether the topology of the selection area is significant when creating joints in a selectionWhen selectionAware is <CODE>false</CODE>, the entire model topology will be taken into account when evaluating joint exclusion rules. <BR>When selectionAware is <CODE>true</CODE>, only the topology of the selection will be taken into account evaluating joint exclusion rules.
+</dl>
+</body>
+</html>

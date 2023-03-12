@@ -1,0 +1,697 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: ChapterGraphics
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: ChapterGraphics
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Document graphics. For more information, please read to GeniE Volume 6
+</dl>
+<dl>
+<dl>
+<dt>Example:</dt>
+<dd>
+<table>
+<tr><td class="example">
+<pre>
+chap = ChapterGraphics();
+chap.setName("Graphics");
+chap.setLoopLoads(true);
+chap.setLoopSets(true);
+chap.setSets(Array(Cellar_deck, Main_deck, Row_1, Row_2));
+chap.setLoadCases(Analysis1, Array(LC_flare, LC_heli, LC_mass, LC_Operation));
+chap.setCapacityManager(CapMan1);
+chap.setCapacityRun(CapMan1.run(1));
+chap.setWorstLoadcase(false);
+</pre>
+</td></tr>
+</table>
+</dd></dl>
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="UnnamedObject.html">UnnamedObject</a>
+       |
+       +--<a href="abstactReportElement.html">abstactReportElement</a>
+            |
+            +--<a href="AbstractChapter.html">AbstractChapter</a>
+                 |
+                 +--<b>ChapterGraphics</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="ChapterGraphics.html#ChapterGraphics()">ChapterGraphics</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractChapter.html#add(abstactReportElement)">add</a></b>(<b><a href="abstactReportElement.html">abstactReportElement</a></b> element)</code>
+<div class="explanation">
+Add an element to the report.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractChapter.html#addAt(unsigned __int64, abstactReportElement)">addAt</a></b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b> index, <b><a href="abstactReportElement.html">abstactReportElement</a></b> element)</code>
+<div class="explanation">
+Add an element at a specified index</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="abstactReportElement.html#addOverrideFormat(string, NumberFormat, int)">addOverrideFormat</a></b>(<b>string</b>, <b><a href="NumberFormat.html">NumberFormat</a></b>, <b>int</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="abstactReportElement.html#disable()">disable</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="abstactReportElement.html">abstactReportElement</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractChapter.html#element(unsigned __int64)">element</a></b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b> index)</code>
+<div class="explanation">
+Get an element at a given index</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="abstactReportElement.html#enable()">enable</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractChapter.html#remove(abstactReportElement)">remove</a></b>(<b><a href="abstactReportElement.html">abstactReportElement</a></b> element)</code>
+<div class="explanation">
+Remove an element from the report.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractChapter.html#removeAt(unsigned __int64)">removeAt</a></b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b> index)</code>
+<div class="explanation">
+Remove the element with a given index from the report.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="abstactReportElement.html#setInheritParentLimits(bool)">setInheritParentLimits</a></b>(<b>bool</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="abstactReportElement.html#setNoLimit()">setNoLimit</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="abstactReportElement.html#setNoNumberFormat()">setNoNumberFormat</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="abstactReportElement.html#setNumberFormat(NumberFormat, int)">setNumberFormat</a></b>(<b><a href="NumberFormat.html">NumberFormat</a></b>, <b>int</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="lcLoadCaseManager.html">lcLoadCaseManager</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#getAnalysis()">getAnalysis</a></b>()</code>
+<div class="explanation">
+Retrieve the analysis set for this chapter</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="CapacityManager.html">CapacityManager</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#getCapacityManager()">getCapacityManager</a></b>()</code>
+<div class="explanation">
+Get the Capacity Manager if one is set</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="cmRunBase.html">cmRunBase</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#getCapacityRun()">getCapacityRun</a></b>()</code>
+<div class="explanation">
+Get the run that is set for the current capacity manager</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#getLoadCases()">getLoadCases</a></b>()</code>
+<div class="explanation">
+Deprecated from 7.3: Get an array of loadcases. Use getAnalysis to query the associated analysis.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#getLoopLoads()">getLoopLoads</a></b>()</code>
+<div class="explanation">
+Returns whether this chapter will loop the loadcases, producing an image for each loadcase</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#getLoopSets()">getLoopSets</a></b>()</code>
+<div class="explanation">
+Returns whether this chapter will loop the sets, producing an image for each set</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#getName()">getName</a></b>()</code>
+<div class="explanation">
+Get the name for this chapter</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#getNoAnalysis()">getNoAnalysis</a></b>()</code>
+<div class="explanation">
+Query whether an analysis is associated with this chapter. True means no analysis is set</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#getNoCapacityManager()">getNoCapacityManager</a></b>()</code>
+<div class="explanation">
+Query if a capacity manager is set. True means no Capacity Manager is set.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#getSets()">getSets</a></b>()</code>
+<div class="explanation">
+Get the array of sets. If setLoopSets is true an image will be produced for each set</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#getWorstLoadcase()">getWorstLoadcase</a></b>()</code>
+<div class="explanation">
+Query whether worst loadcase is set</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#setCapacityManager(CapacityManager)">setCapacityManager</a></b>(<b><a href="CapacityManager.html">CapacityManager</a></b> capacityManager)</code>
+<div class="explanation">
+Set the Capacity Manager. This will set the Analysis. A run must be chosen</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#setCapacityRun(cmRunBase)">setCapacityRun</a></b>(<b><a href="cmRunBase.html">cmRunBase</a></b> capacityRun)</code>
+<div class="explanation">
+Set the run for this Capacity Manager. Only Loadcases from this run should be selected</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#setCasePairs(lcLoadCaseManager, Array)">setCasePairs</a></b>(<b><a href="lcLoadCaseManager.html">lcLoadCaseManager</a></b> analysis, <b><a href="Array.html">Array</a></b>  arrayOfCasePairs)</code>
+<div class="explanation">
+Set an analysis and an array of associated case pairs. If setLoopLoads is true an image will be produced for each case pair in that analysis</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#setLoadCases(lcLoadCaseManager, Array)">setLoadCases</a></b>(<b><a href="lcLoadCaseManager.html">lcLoadCaseManager</a></b> analysis, <b><a href="Array.html">Array</a></b>  arrayOfLoadcases)</code>
+<div class="explanation">
+Deprecated from 7.3: Set an analysis and an array of associated loadcases. If setLoopLoads is true an image will be produced for each  loadcase in that analysis</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#setLoopLoads(bool)">setLoopLoads</a></b>(<b>bool</b> loopLoads)</code>
+<div class="explanation">
+Loop the loadcases, producing an image for each specified loadcase</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#setLoopSets(bool)">setLoopSets</a></b>(<b>bool</b> loopSets)</code>
+<div class="explanation">
+Loop the sets, producing an image for each specified set</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#setName(string)">setName</a></b>(<b>string</b> nameString)</code>
+<div class="explanation">
+Set the name for this chapter. This will be used for the chapter title</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#setNoAnalysis()">setNoAnalysis</a></b>()</code>
+<div class="explanation">
+Clear the analysis associated with this chapter</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#setNoCapacityManager()">setNoCapacityManager</a></b>()</code>
+<div class="explanation">
+Set no capacity manager</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#setSets(Array)">setSets</a></b>(<b><a href="Array.html">Array</a></b> arrayOfSets)</code>
+<div class="explanation">
+Set an array of sets. If setLoopSets is true an image will be produced for each set</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ChapterGraphics.html#setWorstLoadcase(bool)">setWorstLoadcase</a></b>(<b>bool</b> setWorstLoadcase)</code>
+<div class="explanation">
+If true, the worst loadcase will be displayed. Loop Loads should be false. A Capacity Manager and Run must be set.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="abstactReportElement.html">abstactReportElement</a></b></code>
+</td>
+<td width="90%"><code><b><a href="AbstractChapter.html#back()">back</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="unsigned___int64.html">unsigned __int64</a></b></code>
+</td>
+<td width="90%"><code><b><a href="AbstractChapter.html#elements()">elements</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Get number of elements</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="AbstractLimit.html">AbstractLimit</a></b></code>
+</td>
+<td width="90%"><code><b><a href="abstactReportElement.html#limit()">limit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="ChapterGraphics()"></a>
+<h3>ChapterGraphics</h3>
+<p class="function">
+<b>ChapterGraphics</b>()</p>
+<p>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="getAnalysis()"></a>
+<h3>getAnalysis</h3>
+<p class="function">
+<b><a href="lcLoadCaseManager.html">lcLoadCaseManager</a></b> <b>getAnalysis</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Retrieve the analysis set for this chapter
+</dl>
+<hr>
+
+<a name="getCapacityManager()"></a>
+<h3>getCapacityManager</h3>
+<p class="function">
+<b><a href="CapacityManager.html">CapacityManager</a></b> <b>getCapacityManager</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Get the Capacity Manager if one is set
+</dl>
+<hr>
+
+<a name="getCapacityRun()"></a>
+<h3>getCapacityRun</h3>
+<p class="function">
+<b><a href="cmRunBase.html">cmRunBase</a></b> <b>getCapacityRun</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Get the run that is set for the current capacity manager
+</dl>
+<hr>
+
+<a name="getLoadCases()"></a>
+<h3>getLoadCases</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>getLoadCases</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Deprecated from 7.3: Get an array of loadcases. Use getAnalysis to query the associated analysis.
+</dl>
+<hr>
+
+<a name="getLoopLoads()"></a>
+<h3>getLoopLoads</h3>
+<p class="function">
+<b>bool</b> <b>getLoopLoads</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns whether this chapter will loop the loadcases, producing an image for each loadcase
+</dl>
+<hr>
+
+<a name="getLoopSets()"></a>
+<h3>getLoopSets</h3>
+<p class="function">
+<b>bool</b> <b>getLoopSets</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns whether this chapter will loop the sets, producing an image for each set
+</dl>
+<hr>
+
+<a name="getName()"></a>
+<h3>getName</h3>
+<p class="function">
+<b>string</b> <b>getName</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Get the name for this chapter
+</dl>
+<hr>
+
+<a name="getNoAnalysis()"></a>
+<h3>getNoAnalysis</h3>
+<p class="function">
+<b>bool</b> <b>getNoAnalysis</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Query whether an analysis is associated with this chapter. True means no analysis is set
+</dl>
+<hr>
+
+<a name="getNoCapacityManager()"></a>
+<h3>getNoCapacityManager</h3>
+<p class="function">
+<b>bool</b> <b>getNoCapacityManager</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Query if a capacity manager is set. True means no Capacity Manager is set.
+</dl>
+<hr>
+
+<a name="getSets()"></a>
+<h3>getSets</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>getSets</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Get the array of sets. If setLoopSets is true an image will be produced for each set
+</dl>
+<hr>
+
+<a name="getWorstLoadcase()"></a>
+<h3>getWorstLoadcase</h3>
+<p class="function">
+<b>bool</b> <b>getWorstLoadcase</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Query whether worst loadcase is set
+</dl>
+<hr>
+
+<a name="setCapacityManager(CapacityManager)"></a>
+<h3>setCapacityManager</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setCapacityManager</b>(<b><a href="CapacityManager.html">CapacityManager</a></b> capacityManager)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set the Capacity Manager. This will set the Analysis. A run must be chosen
+</dl>
+<hr>
+
+<a name="setCapacityRun(cmRunBase)"></a>
+<h3>setCapacityRun</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setCapacityRun</b>(<b><a href="cmRunBase.html">cmRunBase</a></b> capacityRun)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set the run for this Capacity Manager. Only Loadcases from this run should be selected
+</dl>
+<hr>
+
+<a name="setCasePairs(lcLoadCaseManager, Array)"></a>
+<h3>setCasePairs</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setCasePairs</b>(<b><a href="lcLoadCaseManager.html">lcLoadCaseManager</a></b> analysis, <b><a href="Array.html">Array</a></b>  arrayOfCasePairs)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set an analysis and an array of associated case pairs. If setLoopLoads is true an image will be produced for each case pair in that analysis
+</dl>
+<hr>
+
+<a name="setLoadCases(lcLoadCaseManager, Array)"></a>
+<h3>setLoadCases</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setLoadCases</b>(<b><a href="lcLoadCaseManager.html">lcLoadCaseManager</a></b> analysis, <b><a href="Array.html">Array</a></b>  arrayOfLoadcases)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Deprecated from 7.3: Set an analysis and an array of associated loadcases. If setLoopLoads is true an image will be produced for each  loadcase in that analysis
+</dl>
+<hr>
+
+<a name="setLoopLoads(bool)"></a>
+<h3>setLoopLoads</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setLoopLoads</b>(<b>bool</b> loopLoads)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Loop the loadcases, producing an image for each specified loadcase
+</dl>
+<hr>
+
+<a name="setLoopSets(bool)"></a>
+<h3>setLoopSets</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setLoopSets</b>(<b>bool</b> loopSets)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Loop the sets, producing an image for each specified set
+</dl>
+<hr>
+
+<a name="setName(string)"></a>
+<h3>setName</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setName</b>(<b>string</b> nameString)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set the name for this chapter. This will be used for the chapter title
+</dl>
+<hr>
+
+<a name="setNoAnalysis()"></a>
+<h3>setNoAnalysis</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoAnalysis</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Clear the analysis associated with this chapter
+</dl>
+<hr>
+
+<a name="setNoCapacityManager()"></a>
+<h3>setNoCapacityManager</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoCapacityManager</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set no capacity manager
+</dl>
+<hr>
+
+<a name="setSets(Array)"></a>
+<h3>setSets</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSets</b>(<b><a href="Array.html">Array</a></b> arrayOfSets)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set an array of sets. If setLoopSets is true an image will be produced for each set
+</dl>
+<hr>
+
+<a name="setWorstLoadcase(bool)"></a>
+<h3>setWorstLoadcase</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setWorstLoadcase</b>(<b>bool</b> setWorstLoadcase)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>If true, the worst loadcase will be displayed. Loop Loads should be false. A Capacity Manager and Run must be set.
+</dl>
+<hr>
+
+</body>
+</html>

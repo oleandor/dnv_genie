@@ -1,0 +1,77 @@
+WAJAC     
+TITL      Wajac run name : Analysis1.step(2)                                    
+C          
+C                                           PREFIX
+FMOD                              
+C          
+C                                           PREFIX        FORM
+FWAVE                                        
+C          
+C              UNITS   GRAVITY       RHO      VISC    RHOAIR   VISCAIR
+CONS              1.   9.80665     1.025 1.19e-006  0.001226  1.462e-5
+C          
+C               OPT1      OPT2      OPT3      OPT4      OPT5      OPT6      OPT7
+OPTI              0.        0.        0.        0.        0.        0.        0.
+                  0.
+C          
+C                       ILFSAV    ISETOP
+MODE                        1.       10.
+C          
+C                 LN
+LONO              6.
+C         *************************** GEOM Section *****************************
+GEOM                                                                            
+C          
+C                  Z
+MUDP              0.
+C         *************************** HYDR Section *****************************
+HYDR                                                                            
+C          
+C               TYPE
+CPRI      FEM       
+CPRI      SPEC      
+CPRI      CDIR      
+C          
+C              ADMAS      DAMP
+MASS              0.        0.
+C                                                                               
+C         MarineGrowthZLevel1 ( Marine Growth as function of Z-level property ) 
+C          
+C         *************************** LOAD Section *****************************
+LOAD                                                                            
+C     
+C          ISEA THEO    HEIGHT    PERIOD      PHI0        T0      STEP     NSTEP
+SEA          1.  1.1       26.       14.      -60.        0.        5.      -24.
+SEA          2.  5.0       15.       12.      -60.        0.        5.      -24.
+SEA          3.  5.0       28.       14.      -60.        0.        5.      -24.
+SEA          4.  5.0       27.       15.      -60.        0.        5.      -24.
+SEA          5.  9.0        0.        0.        0.        0.        0.        1.
+C          
+C          ISEA BETA WKFA CTNO CBFA CSTR LOAD DLOA  WID WIME
+SEAOPT       1. 270.   1.   1.   1.  -1.   1.   1.   0.   0.
+SEAOPT       2. 180.   1.   1.   1.  -1.   1.   1.   0.   0.
+SEAOPT       3.  90.   1.   1.   1.  -1.   1.   1.   0.   0.
+SEAOPT       4.   0.   1.   1.   1.  -1.   1.   1.   0.   0.
+SEAOPT       5.   0.   1.   0.   0.  -1.   0.   0.   0.   0.
+C                                                                               
+C         CurrentProfile1 (  Current profile property )                         
+C     
+C     CTNO                                       Z         V     THETA       OPT
+CRNT    1.                                      0.        0.                  1.
+                                               80.       0.5                    
+                                              124.       1.1                    
+                                              154.       1.1                    
+C          
+C              DEPTH
+DPTH            124.
+C          
+C                  X         Y         Z
+MOMT              0.        0.        0.
+END       
+
+
+
+
+
+
+WAJAC 

@@ -1,0 +1,614 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: PointSetNamedPoints
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: PointSetNamedPoints
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Represents a geometric point-set with named points
+</dl>
+<dl>
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="Transformable.html">Transformable</a>
+            |
+            +--<b>PointSetNamedPoints</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="PointSetNamedPoints.html#PointSetNamedPoints(Array, string, string, int)">PointSetNamedPoints</a></b>(<b><a href="Array.html">Array</a></b> arrayOfPoints, <b>string</b> prefix, <b>string</b> postfix, <b>int</b> firstIndex)</code>
+<div class="explanation">
+Creates a point-set with named points. The names follow the rule 'prefix+(firstIndex+j)+postfix</div></td>
+</tr>
+<tr >
+<td><code><b><a href="PointSetNamedPoints.html#PointSetNamedPoints(PointSetNamedPoints, PointSetNamedPoints)">PointSetNamedPoints</a></b>(<b>PointSetNamedPoints</b> ggGuidePointSetNamedPoints_X, <b>PointSetNamedPoints</b> ggGuidePointSetNamedPoints_Y)</code>
+<div class="explanation">
+Creates a 2D point-set with named points. The names follow the rule 'nameX.nameY</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="PointSetNamedPoints.html#Append(PointSetNamedPoints)">Append</a></b>(<b>PointSetNamedPoints</b> guidePointSetNamedPoints)</code>
+<div class="explanation">
+Appends the given point-set (named points) to this</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="PointSetNamedPoints.html#AppendPoint(Point, string)">AppendPoint</a></b>(<b><a href="Point.html">Point</a></b> newPoint, <b>string</b> newPointKey)</code>
+<div class="explanation">
+Appends the given point to the point-set (named points)</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="PointSetNamedPoints.html#ArrayOfPoints()">ArrayOfPoints</a></b>()</code>
+<div class="explanation">
+Returns the points of the grid in an array</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="PointSetNamedPoints.html#ChangePointKeyByIndex(int, string)">ChangePointKeyByIndex</a></b>(<b>int</b> index, <b>string</b> newKey)</code>
+<div class="explanation">
+Changes the key of the point corresponding to the given index</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="PointSetNamedPoints.html#ChangePointKeyByKey(string, string)">ChangePointKeyByKey</a></b>(<b>string</b> key, <b>string</b> newKey)</code>
+<div class="explanation">
+Changes the key of the point corresponding to the given key</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="PointSetNamedPoints.html#GetCreationRule()">GetCreationRule</a></b>()</code>
+<div class="explanation">
+Returns the creation rule of a guide point-set with named points</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="PointSetNamedPoints.html#InsertPointBeforeIndex(int, Point, string)">InsertPointBeforeIndex</a></b>(<b>int</b> index, <b><a href="Point.html">Point</a></b> newPoint, <b>string</b> newPointKey)</code>
+<div class="explanation">
+Insert the given point to the point-set (named points) before this with index equal to the given one</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="PointSetNamedPoints.html#InsertPointBeforeKey(string, Point, string)">InsertPointBeforeKey</a></b>(<b>string</b> key, <b><a href="Point.html">Point</a></b> newPoint, <b>string</b> newPointKey)</code>
+<div class="explanation">
+Insert the given point to the point-set (named points) before this with name equal to the given key</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="PointSetNamedPoints.html#Point(int)">Point</a></b>(<b>int</b> key)</code>
+<div class="explanation">
+Returns the vertex of the point-set which corresponds to the given index</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="PointSetNamedPoints.html#Point(string)">Point</a></b>(<b>string</b> key)</code>
+<div class="explanation">
+Returns the vertex of the point-set which corresponds to the given key-string</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="PointSetNamedPoints.html#ProjectAndInsertPoint(Point, string)">ProjectAndInsertPoint</a></b>(<b><a href="Point.html">Point</a></b> newPoint, <b>string</b> newPointKey)</code>
+<div class="explanation">
+Projects and Inserts the given point to the point-set (named points) with name equal to the given key</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="PointSetNamedPoints.html#Remove(int)">Remove</a></b>(<b>int</b> index)</code>
+<div class="explanation">
+Removes the point with the given index from the point-set (named points)</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="PointSetNamedPoints.html#Remove(string)">Remove</a></b>(<b>string</b> key)</code>
+<div class="explanation">
+Removes the point from the point-set (named points) whose name is equal to the given key</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="PointSetNamedPoints.html#RemovePointByIndex(int)">RemovePointByIndex</a></b>(<b>int</b> index)</code>
+<div class="explanation">
+Removes the point with the given index from the point-set (named points)</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="PointSetNamedPoints.html#RemovePointByKey(string)">RemovePointByKey</a></b>(<b>string</b> key)</code>
+<div class="explanation">
+Removes the point from the point-set (named points) whose name is equal to the given key</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="PointSetNamedPoints.html#SetCreationRule(string)">SetCreationRule</a></b>(<b>string</b> creationRule)</code>
+<div class="explanation">
+Sets the creation rule of a guide point-set with named points</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copy3Point(Point, Point, Point, Point, Point, Point)">copy3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> sp1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> sp2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> sp3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> dp1</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> dp2</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> dp3</span>)</code>
+<div class="explanation">
+Copy the object without scaling from one location to another.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyMirror(Point, LengthVector3d)">copyMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int, std::shared_ptr<mfNameMask>)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyScale(double, Point)">copyScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Scale a copy of the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTransform(Transformation3d)">copyTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general transformation to a copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate a copy of this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int, std::shared_ptr<mfNameMask>)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#move3Point(Point, Point, Point, Point, Point, Point)">move3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> p4</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> p5</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> p6</span>)</code>
+<div class="explanation">
+Move the object from one coordinate system to another</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveMirror(Point, LengthVector3d)">moveMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveRotate(Point, LengthVector3d, Angle)">moveRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveScale(double, Point)">moveScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Move and scale the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTransform(Transformation3d)">moveTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general selection to the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTranslate(LengthVector3d)">moveTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geCONNECTED()">geCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use connected move</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geUNCONNECTED()">geUNCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use unconnected move</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="PointSetNamedPoints(Array, string, string, int)"></a>
+<h3>PointSetNamedPoints</h3>
+<p class="function">
+<b>PointSetNamedPoints</b>(<b><a href="Array.html">Array</a></b> arrayOfPoints, <b>string</b> prefix, <b>string</b> postfix, <b>int</b> firstIndex)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a point-set with named points. The names follow the rule 'prefix+(firstIndex+j)+postfix
+</dl>
+<hr>
+
+<a name="PointSetNamedPoints(PointSetNamedPoints, PointSetNamedPoints)"></a>
+<h3>PointSetNamedPoints</h3>
+<p class="function">
+<b>PointSetNamedPoints</b>(<b>PointSetNamedPoints</b> ggGuidePointSetNamedPoints_X, <b>PointSetNamedPoints</b> ggGuidePointSetNamedPoints_Y)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a 2D point-set with named points. The names follow the rule 'nameX.nameY
+</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="Append(PointSetNamedPoints)"></a>
+<h3>Append</h3>
+<p class="function">
+<b>&nbsp;</b> <b>Append</b>(<b>PointSetNamedPoints</b> guidePointSetNamedPoints)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Appends the given point-set (named points) to this
+</dl>
+<hr>
+
+<a name="AppendPoint(Point, string)"></a>
+<h3>AppendPoint</h3>
+<p class="function">
+<b>&nbsp;</b> <b>AppendPoint</b>(<b><a href="Point.html">Point</a></b> newPoint, <b>string</b> newPointKey)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Appends the given point to the point-set (named points)
+</dl>
+<hr>
+
+<a name="ArrayOfPoints()"></a>
+<h3>ArrayOfPoints</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>ArrayOfPoints</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the points of the grid in an array
+</dl>
+<hr>
+
+<a name="ChangePointKeyByIndex(int, string)"></a>
+<h3>ChangePointKeyByIndex</h3>
+<p class="function">
+<b>&nbsp;</b> <b>ChangePointKeyByIndex</b>(<b>int</b> index, <b>string</b> newKey)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Changes the key of the point corresponding to the given index
+</dl>
+<hr>
+
+<a name="ChangePointKeyByKey(string, string)"></a>
+<h3>ChangePointKeyByKey</h3>
+<p class="function">
+<b>&nbsp;</b> <b>ChangePointKeyByKey</b>(<b>string</b> key, <b>string</b> newKey)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Changes the key of the point corresponding to the given key
+</dl>
+<hr>
+
+<a name="GetCreationRule()"></a>
+<h3>GetCreationRule</h3>
+<p class="function">
+<b>string</b> <b>GetCreationRule</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the creation rule of a guide point-set with named points
+</dl>
+<hr>
+
+<a name="InsertPointBeforeIndex(int, Point, string)"></a>
+<h3>InsertPointBeforeIndex</h3>
+<p class="function">
+<b>&nbsp;</b> <b>InsertPointBeforeIndex</b>(<b>int</b> index, <b><a href="Point.html">Point</a></b> newPoint, <b>string</b> newPointKey)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Insert the given point to the point-set (named points) before this with index equal to the given one
+</dl>
+<hr>
+
+<a name="InsertPointBeforeKey(string, Point, string)"></a>
+<h3>InsertPointBeforeKey</h3>
+<p class="function">
+<b>&nbsp;</b> <b>InsertPointBeforeKey</b>(<b>string</b> key, <b><a href="Point.html">Point</a></b> newPoint, <b>string</b> newPointKey)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Insert the given point to the point-set (named points) before this with name equal to the given key
+</dl>
+<hr>
+
+<a name="Point(string)"></a>
+<h3>Point</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>Point</b>(<b>string</b> key)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the vertex of the point-set which corresponds to the given key-string
+</dl>
+<hr>
+
+<a name="Point(int)"></a>
+<h3>Point</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>Point</b>(<b>int</b> key)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the vertex of the point-set which corresponds to the given index
+</dl>
+<hr>
+
+<a name="ProjectAndInsertPoint(Point, string)"></a>
+<h3>ProjectAndInsertPoint</h3>
+<p class="function">
+<b>&nbsp;</b> <b>ProjectAndInsertPoint</b>(<b><a href="Point.html">Point</a></b> newPoint, <b>string</b> newPointKey)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Projects and Inserts the given point to the point-set (named points) with name equal to the given key
+</dl>
+<hr>
+
+<a name="Remove(string)"></a>
+<h3>Remove</h3>
+<p class="function">
+<b>&nbsp;</b> <b>Remove</b>(<b>string</b> key)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Removes the point from the point-set (named points) whose name is equal to the given key
+</dl>
+<hr>
+
+<a name="Remove(int)"></a>
+<h3>Remove</h3>
+<p class="function">
+<b>&nbsp;</b> <b>Remove</b>(<b>int</b> index)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Removes the point with the given index from the point-set (named points)
+</dl>
+<hr>
+
+<a name="RemovePointByIndex(int)"></a>
+<h3>RemovePointByIndex</h3>
+<p class="function">
+<b>&nbsp;</b> <b>RemovePointByIndex</b>(<b>int</b> index)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Removes the point with the given index from the point-set (named points)
+</dl>
+<hr>
+
+<a name="RemovePointByKey(string)"></a>
+<h3>RemovePointByKey</h3>
+<p class="function">
+<b>&nbsp;</b> <b>RemovePointByKey</b>(<b>string</b> key)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Removes the point from the point-set (named points) whose name is equal to the given key
+</dl>
+<hr>
+
+<a name="SetCreationRule(string)"></a>
+<h3>SetCreationRule</h3>
+<p class="function">
+<b>&nbsp;</b> <b>SetCreationRule</b>(<b>string</b> creationRule)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Sets the creation rule of a guide point-set with named points
+</dl>
+<hr>
+
+</body>
+</html>

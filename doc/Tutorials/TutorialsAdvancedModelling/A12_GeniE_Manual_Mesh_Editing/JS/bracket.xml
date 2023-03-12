@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="ASCII"?>
+<DNV_structure_concept_protocol version="1.6">
+  <administrative>
+    <program program="GeniE" version="D7.0-04" version_date="02-Dec-2014" platform="64bit"/>
+    <session_info date="04-Dec-2014" time="14:14:31" user="landj"/>
+  </administrative>
+  <model name="bracket">
+    <units>
+      <model_units length="m" time="s" temp_diff="delC" force="N" angle="rad" mass=""/>
+      <acis_units length="m"/>
+      <input_units>
+        <input_unit phenomenon="Angle" unit="deg"/>
+      </input_units>
+    </units>
+    <structure_domain>
+      <properties>
+        <sections/>
+        <materials>
+          <material name="Mat1">
+            <isotropic_linear_material yield_stress="255000000" density="7850" youngs_modulus="2.1e+011" poissons_ratio="0.3" thermal_expansion="1.2e-005" damping="0.03"/>
+          </material>
+        </materials>
+        <thicknesses>
+          <thickness name="th1">
+            <constant_thickness th="0.02"/>
+          </thickness>
+        </thicknesses>
+        <effective_flange/>
+        <wet_surfaces/>
+        <beam_types/>
+        <corrosion_additions/>
+        <sn_curves/>
+        <mass_density_factors/>
+        <mesh_options/>
+        <permeable_properties/>
+        <thickness_corrections/>
+        <pile_characteristics/>
+        <plate_types/>
+        <reinforcements/>
+        <load_interfaces/>
+        <structure_types/>
+        <mesh_properties>
+          <mesh_densities>
+            <mesh_density name="mesh100" density="0.1" enforce_density="false"/>
+            <mesh_density name="mesh150" density="0.15" global_default="true" enforce_density="false"/>
+            <mesh_density name="mesh050" density="0.05" enforce_density="false"/>
+          </mesh_densities>
+          <number_of_elements_properties/>
+        </mesh_properties>
+        <hydro_properties>
+          <air_drag_coefficients/>
+          <morison_diameters/>
+          <buoyancy_areas/>
+          <hydro_element_refinements/>
+          <flooding_coefficients/>
+          <morison_coefficients/>
+          <marine_growths/>
+          <hydro_permeabilities/>
+          <conductor_shieldings/>
+        </hydro_properties>
+      </properties>
+      <structures>
+        <structure>
+          <flat_plate name="Pl6">
+            <front/>
+            <back/>
+            <local_system>
+              <vector x="-1" y="-6.123233996e-017" z="0" dir="z"/>
+            </local_system>
+            <geometry>
+              <sheet>
+                <sat_reference>
+                  <face face_ref="FACE00000007"/>
+                </sat_reference>
+              </sheet>
+            </geometry>
+          </flat_plate>
+        </structure>
+        <structure>
+          <flat_plate name="Pl1">
+            <front/>
+            <back/>
+            <local_system>
+              <vector x="0" y="0" z="-1" dir="z"/>
+            </local_system>
+            <geometry>
+              <sheet>
+                <sat_reference>
+                  <face face_ref="FACE00000006"/>
+                </sat_reference>
+              </sheet>
+            </geometry>
+          </flat_plate>
+        </structure>
+        <structure>
+          <flat_plate name="Pl3">
+            <front/>
+            <back/>
+            <local_system>
+              <vector x="6.123233996e-017" y="-1" z="0" dir="z"/>
+            </local_system>
+            <geometry>
+              <sheet>
+                <sat_reference>
+                  <face face_ref="FACE00000005"/>
+                </sat_reference>
+              </sheet>
+            </geometry>
+          </flat_plate>
+        </structure>
+        <structure>
+          <flat_plate name="Pl2">
+            <front/>
+            <back/>
+            <local_system>
+              <vector x="-1" y="-6.123233996e-017" z="0" dir="z"/>
+            </local_system>
+            <geometry>
+              <sheet>
+                <sat_reference>
+                  <face face_ref="FACE00000004"/>
+                </sat_reference>
+              </sheet>
+            </geometry>
+          </flat_plate>
+        </structure>
+        <structure>
+          <flat_plate name="Pl5">
+            <front/>
+            <back/>
+            <local_system>
+              <vector x="0" y="0" z="-1" dir="z"/>
+            </local_system>
+            <geometry>
+              <sheet>
+                <sat_reference>
+                  <face face_ref="FACE00000003"/>
+                </sat_reference>
+              </sheet>
+            </geometry>
+          </flat_plate>
+        </structure>
+        <structure>
+          <flat_plate name="Pl8">
+            <front/>
+            <back/>
+            <local_system>
+              <vector x="0" y="0" z="-1" dir="z"/>
+            </local_system>
+            <geometry>
+              <sheet>
+                <sat_reference>
+                  <face face_ref="FACE00000002"/>
+                </sat_reference>
+              </sheet>
+            </geometry>
+          </flat_plate>
+        </structure>
+        <structure>
+          <flat_plate name="Pl7">
+            <front/>
+            <back/>
+            <local_system>
+              <vector x="-1" y="-6.123233996e-017" z="0" dir="z"/>
+            </local_system>
+            <geometry>
+              <sheet>
+                <sat_reference>
+                  <face face_ref="FACE00000001"/>
+                </sat_reference>
+              </sheet>
+            </geometry>
+          </flat_plate>
+        </structure>
+      </structures>
+      <manual_overlap_managers/>
+      <feature_concepts/>
+      <sets>
+        <set name="fine">
+          <concepts>
+            <concept concept_ref="Pl1"/>
+            <concept concept_ref="Pl3"/>
+            <concept concept_ref="Pl2"/>
+          </concepts>
+        </set>
+        <set name="medium">
+          <concepts>
+            <concept concept_ref="Pl6"/>
+            <concept concept_ref="Pl5"/>
+          </concepts>
+        </set>
+        <set name="coarse">
+          <concepts>
+            <concept concept_ref="Pl8"/>
+            <concept concept_ref="Pl7"/>
+          </concepts>
+        </set>
+      </sets>
+      <geometry>
+        <sat_embedded encoding="base64" compression="zip" tag_name="dnvscp">
+          <![CDATA[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]]>
+        </sat_embedded>
+      </geometry>
+    </structure_domain>
+    <utilities>
+      <guide_geometry>
+        <guide_planes>
+          <guide_plane name="GuidePlane3">
+            <spacings>
+              <x_spacings>
+                <x_spacing dx="0.75"/>
+                <x_spacing dx="1.25"/>
+              </x_spacings>
+              <y_spacings>
+                <y_spacing dy="0.75"/>
+                <y_spacing dy="1.25"/>
+              </y_spacings>
+            </spacings>
+            <corners>
+              <corner x="0" y="0" z="0"/>
+              <corner x="0" y="0" z="4"/>
+              <corner x="4" y="2.449293598e-016" z="4"/>
+              <corner x="4" y="2.449293598e-016" z="0"/>
+            </corners>
+          </guide_plane>
+          <guide_plane name="GuidePlane2">
+            <spacings>
+              <x_spacings>
+                <x_spacing dx="0.4166666667"/>
+                <x_spacing dx="0.4166666667"/>
+                <x_spacing dx="0.1666666667"/>
+                <x_spacing dx="0.1666666667"/>
+                <x_spacing dx="0.4166666667"/>
+                <x_spacing dx="0.4166666667"/>
+              </x_spacings>
+              <y_spacings>
+                <y_spacing dy="0.5"/>
+                <y_spacing dy="0.5"/>
+                <y_spacing dy="0.25"/>
+                <y_spacing dy="0.75"/>
+              </y_spacings>
+            </spacings>
+            <corners>
+              <corner x="-1.836970199e-016" y="3" z="4"/>
+              <corner x="1.836970199e-016" y="-3" z="4"/>
+              <corner x="1.836970199e-016" y="-3" z="0"/>
+              <corner x="-1.836970199e-016" y="3" z="0"/>
+            </corners>
+          </guide_plane>
+          <guide_plane name="GuidePlane1">
+            <spacings>
+              <x_spacings>
+                <x_spacing dx="0.4166666667"/>
+                <x_spacing dx="0.4166666667"/>
+                <x_spacing dx="0.1666666667"/>
+                <x_spacing dx="0.1666666667"/>
+                <x_spacing dx="0.4166666667"/>
+                <x_spacing dx="0.4166666667"/>
+              </x_spacings>
+              <y_spacings>
+                <y_spacing dy="0.5"/>
+                <y_spacing dy="0.5"/>
+                <y_spacing dy="0.25"/>
+                <y_spacing dy="0.75"/>
+              </y_spacings>
+            </spacings>
+            <corners>
+              <corner x="4" y="3" z="0"/>
+              <corner x="4" y="-3" z="0"/>
+              <corner x="1.836970199e-016" y="-3" z="0"/>
+              <corner x="-1.836970199e-016" y="3" z="0"/>
+            </corners>
+          </guide_plane>
+        </guide_planes>
+        <guide_curves>
+          <guide_curve name="Curve1">
+            <nurbs_curve>
+              <parameters>
+                <parameter f="0"/>
+                <parameter f="1"/>
+              </parameters>
+              <curve>
+                <sat_embedded encoding="base64">
+                  <![CDATA[MjAwMCAwIDEgMCAgICAgICAgICAgDQoxOCBTRVNBTSAtIGdtR2VvbWV0cnkgMTIgQUNJUyAyNS4wIE5UIDI0IFRodSBEZWMgMDQgMTQ6MTQ6MzIgMjAxNCANCjEwMDAgOS45OTk5OTk5OTk5OTk5OTk1ZS0wMDcgMWUtMDEwIA0KLTAgYm9keSAkLTEgLTEgLTEgJC0xICQxICQtMSAkLTEgRiAjDQotMSBsdW1wICQtMSAtMSAtMSAkLTEgJC0xICQyICQwIEYgIw0KLTIgc2hlbGwgJC0xIC0xIC0xICQtMSAkLTEgJC0xICQtMSAkMyAkMSBGICMNCi0zIHdpcmUgJC0xIC0xIC0xICQtMSAkLTEgJDQgJDIgJC0xIG91dCBGICMNCi00IGNvZWRnZSAkLTEgLTEgLTEgJC0xICQ0ICQ0ICQtMSAkNSBmb3J3YXJkICQzICQtMSAjDQotNSBlZGdlICQtMSAtMSAtMSAkLTEgJDYgMCAkNyAwLjk1ODU5NjQ2MjE4NDQ1NDcxICQ0ICQ4IGZvcndhcmQgQDcgdW5rbm93biBGICMNCi02IHZlcnRleCAkLTEgLTEgLTEgJC0xICQ1ICQ5ICMNCi03IHZlcnRleCAkLTEgLTEgLTEgJC0xICQ1ICQxMCAjDQotOCBpbnRjdXJ2ZS1jdXJ2ZSAkLTEgLTEgLTEgJC0xIGZvcndhcmQgeyBleGFjdGN1ciBmdWxsIG51cmJzIDIgb3BlbiAyIA0KCTAgMiAwLjk1ODU5NjQ2MjE4NDQ1NDcxIDIgDQoJMS41IDkuMTg0ODUwOTkzNjA1MTQ4NGUtMDE3IDAgMSANCgkwLjM2MDIxMDYwMjYyMDE4MDEyIDIuMjA1NjUzODA3NTg4NzE0ZS0wMTcgMC4zNjAyMTA2MDI2MjAxNzkxMiAwLjg4NzMxODc2NjYwNjg5MjU3IA0KCTQuNDQwODkyMDk4NTAwNjI2MmUtMDE2IDIuNzE5MjYyMTQ2ODkzNzgyMWUtMDMyIDEuNSAxIA0KCTAgDQoJbnVsbF9zdXJmYWNlIA0KCW51bGxfc3VyZmFjZSANCgludWxsYnMgDQoJbnVsbGJzIA0KCS0xIA0KCS0xIA0KCUkgSSANCgkwIA0KCTAgDQoJMCANCgkNCgktMSANCglub25lIEYgRiAxIEYgMCB9IEkgSSAjDQotOSBwb2ludCAkLTEgLTEgLTEgJC0xIDEuNSA5LjE4NDg1MDk5MzYwNTE0ODRlLTAxNyAwICMNCi0xMCBwb2ludCAkLTEgLTEgLTEgJC0xIDQuNDQwODkyMDk4NTAwNjI2MmUtMDE2IDIuNzE5MjYyMTQ2ODkzNzgyMWUtMDMyIDEuNSAjDQpFbmQtb2YtQUNJUy1kYXRhIA==]]>
+                </sat_embedded>
+              </curve>
+            </nurbs_curve>
+          </guide_curve>
+          <guide_curve name="Curve25">
+            <nurbs_curve>
+              <parameters>
+                <parameter f="0"/>
+                <parameter f="1"/>
+              </parameters>
+              <curve>
+                <sat_embedded encoding="base64">
+                  <![CDATA[MjAwMCAwIDEgMCAgICAgICAgICAgDQoxOCBTRVNBTSAtIGdtR2VvbWV0cnkgMTIgQUNJUyAyNS4wIE5UIDI0IFRodSBEZWMgMDQgMTQ6MTQ6MzIgMjAxNCANCjEwMDAgOS45OTk5OTk5OTk5OTk5OTk1ZS0wMDcgMWUtMDEwIA0KLTAgYm9keSAkLTEgLTEgLTEgJC0xICQxICQtMSAkLTEgRiAjDQotMSBsdW1wICQtMSAtMSAtMSAkLTEgJC0xICQyICQwIEYgIw0KLTIgc2hlbGwgJC0xIC0xIC0xICQtMSAkLTEgJC0xICQtMSAkMyAkMSBGICMNCi0zIHdpcmUgJC0xIC0xIC0xICQtMSAkLTEgJDQgJDIgJC0xIG91dCBGICMNCi00IGNvZWRnZSAkLTEgLTEgLTEgJC0xICQ0ICQ0ICQtMSAkNSBmb3J3YXJkICQzICQtMSAjDQotNSBlZGdlICQtMSAtMSAtMSAkLTEgJDYgMCAkNyAyLjQ5OTk5OTk5OTk1ICQ0ICQ4IGZvcndhcmQgQDcgdW5rbm93biBGICMNCi02IHZlcnRleCAkLTEgLTEgLTEgJC0xICQ1ICQ5ICMNCi03IHZlcnRleCAkLTEgLTEgLTEgJC0xICQ1ICQxMCAjDQotOCBpbnRjdXJ2ZS1jdXJ2ZSAkLTEgLTEgLTEgJC0xIGZvcndhcmQgeyBleGFjdGN1ciBmdWxsIG51YnMgMSBvcGVuIDQgDQoJMCAxIDEgMSAxLjQ5OTk5OTk5OTk1IDEgMi40OTk5OTk5OTk5NSAxIA0KCTMuMDYxNjE2OTk3ODY4MzgzZS0wMTcgLTAuNSAwIA0KCTIgLTAuNDk5OTk5OTk5ODk5OTk5ODggMCANCgkyIDAuNTAwMDAwMDAwMDAwMDAwMTEgMCANCgktMy4wNjE2MTY5OTc4NjgzODNlLTAxNyAwLjUgMCANCgkwIA0KCW51bGxfc3VyZmFjZSANCgludWxsX3N1cmZhY2UgDQoJbnVsbGJzIA0KCW51bGxicyANCgktMSANCgktMSANCglJIEkgDQoJMiAxIDEuNDk5OTk5OTk5OTUgDQoJMCANCgkwIA0KCQ0KCS0xIA0KCW5vbmUgRiBGIDEgRiAwIH0gSSBJICMNCi05IHBvaW50ICQtMSAtMSAtMSAkLTEgMy4wNjE2MTY5OTc4NjgzODNlLTAxNyAtMC41IDAgIw0KLTEwIHBvaW50ICQtMSAtMSAtMSAkLTEgLTMuMDYxNjE2OTk3ODY4MzgzZS0wMTcgMC41IDAgIw0KRW5kLW9mLUFDSVMtZGF0YSA=]]>
+                </sat_embedded>
+              </curve>
+            </nurbs_curve>
+          </guide_curve>
+          <guide_curve name="Curve27">
+            <nurbs_curve>
+              <parameters>
+                <parameter f="0"/>
+                <parameter f="1"/>
+              </parameters>
+              <curve>
+                <sat_embedded encoding="base64">
+                  <![CDATA[MjAwMCAwIDEgMCAgICAgICAgICAgDQoxOCBTRVNBTSAtIGdtR2VvbWV0cnkgMTIgQUNJUyAyNS4wIE5UIDI0IFRodSBEZWMgMDQgMTQ6MTQ6MzIgMjAxNCANCjEwMDAgOS45OTk5OTk5OTk5OTk5OTk1ZS0wMDcgMWUtMDEwIA0KLTAgYm9keSAkLTEgLTEgLTEgJC0xICQxICQtMSAkLTEgRiAjDQotMSBsdW1wICQtMSAtMSAtMSAkLTEgJC0xICQyICQwIEYgIw0KLTIgc2hlbGwgJC0xIC0xIC0xICQtMSAkLTEgJC0xICQtMSAkMyAkMSBGICMNCi0zIHdpcmUgJC0xIC0xIC0xICQtMSAkLTEgJDQgJDIgJC0xIG91dCBGICMNCi00IGNvZWRnZSAkLTEgLTEgLTEgJC0xICQ0ICQ0ICQtMSAkNSBmb3J3YXJkICQzICQtMSAjDQotNSBlZGdlICQtMSAtMSAtMSAkLTEgJDYgLTEuNSAkNyAxICQ0ICQ4IGZvcndhcmQgQDcgdW5rbm93biBGICMNCi02IHZlcnRleCAkLTEgLTEgLTEgJC0xICQ1ICQ5ICMNCi03IHZlcnRleCAkLTEgLTEgLTEgJC0xICQ1ICQxMCAjDQotOCBpbnRjdXJ2ZS1jdXJ2ZSAkLTEgLTEgLTEgJC0xIGZvcndhcmQgeyBleGFjdGN1ciBmdWxsIG51YnMgMSBvcGVuIDQgDQoJLTEuNSAxIC0wLjUgMSAwIDEgMSAxIA0KCS0zLjA2MTYxNjk5Nzg2ODM4M2UtMDE3IDAuNSAwIA0KCS0zLjA2MTYxNjk5Nzg2ODM4M2UtMDE3IDAuNSAyIA0KCTMuMDYxNjE2OTk3ODY4MzgzZS0wMTcgLTAuNSAyIA0KCTMuMDYxNjE2OTk3ODY4MzgzZS0wMTcgLTAuNSAwIA0KCTAgDQoJbnVsbF9zdXJmYWNlIA0KCW51bGxfc3VyZmFjZSANCgludWxsYnMgDQoJbnVsbGJzIA0KCS0xIA0KCS0xIA0KCUkgSSANCgkyIC0wLjUgMCANCgkwIA0KCTAgDQoJDQoJLTEgDQoJbm9uZSBGIEYgMSBGIDAgfSBJIEkgIw0KLTkgcG9pbnQgJC0xIC0xIC0xICQtMSAtMy4wNjE2MTY5OTc4NjgzODNlLTAxNyAwLjUgMCAjDQotMTAgcG9pbnQgJC0xIC0xIC0xICQtMSAzLjA2MTYxNjk5Nzg2ODM4M2UtMDE3IC0wLjUgMCAjDQpFbmQtb2YtQUNJUy1kYXRhIA==]]>
+                </sat_embedded>
+              </curve>
+            </nurbs_curve>
+          </guide_curve>
+          <guide_curve name="Curve30">
+            <nurbs_curve>
+              <parameters>
+                <parameter f="0"/>
+                <parameter f="1"/>
+              </parameters>
+              <curve>
+                <sat_embedded encoding="base64">
+                  <![CDATA[MjAwMCAwIDEgMCAgICAgICAgICAgDQoxOCBTRVNBTSAtIGdtR2VvbWV0cnkgMTIgQUNJUyAyNS4wIE5UIDI0IFRodSBEZWMgMDQgMTQ6MTQ6MzIgMjAxNCANCjEwMDAgOS45OTk5OTk5OTk5OTk5OTk1ZS0wMDcgMWUtMDEwIA0KLTAgYm9keSAkLTEgLTEgLTEgJC0xICQxICQtMSAkLTEgRiAjDQotMSBsdW1wICQtMSAtMSAtMSAkLTEgJC0xICQyICQwIEYgIw0KLTIgc2hlbGwgJC0xIC0xIC0xICQtMSAkLTEgJC0xICQtMSAkMyAkMSBGICMNCi0zIHdpcmUgJC0xIC0xIC0xICQtMSAkLTEgJDQgJDIgJC0xIG91dCBGICMNCi00IGNvZWRnZSAkLTEgLTEgLTEgJC0xICQ0ICQ0ICQtMSAkNSBmb3J3YXJkICQzICQtMSAjDQotNSBlZGdlICQtMSAtMSAtMSAkLTEgJDYgMCAkNiA2LjI4MzE4NTMwNzE3OTU4NzEgJDQgJDcgZm9yd2FyZCBANyB1bmtub3duIEYgIw0KLTYgdmVydGV4ICQtMSAtMSAtMSAkLTEgJDUgJDggIw0KLTcgaW50Y3VydmUtY3VydmUgJC0xIC0xIC0xICQtMSBmb3J3YXJkIHsgZXhhY3RjdXIgZnVsbCBudXJicyAyIHBlcmlvZGljIDUgDQoJMCAyIDEuNTcwNzk2MzI2Nzk0ODk3IDIgMy4xNDE1OTI2NTM1ODk3OTQgMiA0LjcxMjM4ODk4MDM4NDY5MDYgMiA2LjI4MzE4NTMwNzE3OTU4NzEgMiANCgkxLjIyNDY0Njc5OTE0NzM1MzJlLTAxNiAtMiA0IDEgDQoJMS4yMjQ2NDY3OTkxNDczNTMyZS0wMTYgLTIgNSAwLjcwNzEwNjc4MTE4NjU0ODI0IA0KCTEuODM2OTcwMTk4NzIxMDI5N2UtMDE2IC0zIDUgMSANCgkyLjQ0OTI5MzU5ODI5NDcwNjRlLTAxNiAtNCA1IDAuNzA3MTA2NzgxMTg2NTQ4NzkgDQoJMi40NDkyOTM1OTgyOTQ3MDY0ZS0wMTYgLTQgNCAxIA0KCTIuNDQ5MjkzNTk4Mjk0NzA2NGUtMDE2IC00IDMgMC43MDcxMDY3ODExODY1NDc1NyANCgkxLjgzNjk3MDE5ODcyMTAyOTdlLTAxNiAtMyAzIDEgDQoJMS4yMjQ2NDY3OTkxNDczNTMyZS0wMTYgLTIgMyAwLjcwNzEwNjc4MTE4NjU0NzkxIA0KCTEuMjI0NjQ2Nzk5MTQ3MzUzMmUtMDE2IC0yIDMuOTk5OTk5OTk5OTk5OTk5NiAxIA0KCTAgDQoJbnVsbF9zdXJmYWNlIA0KCW51bGxfc3VyZmFjZSANCgludWxsYnMgDQoJbnVsbGJzIA0KCS0xIA0KCS0xIA0KCUkgSSANCgkwIA0KCTAgDQoJMCANCgkNCgktMSANCglub25lIEYgRiAxIEYgMCB9IEkgSSAjDQotOCBwb2ludCAkLTEgLTEgLTEgJC0xIDEuMjI0NjQ2Nzk5MTQ3MzUzMmUtMDE2IC0yIDQgIw0KRW5kLW9mLUFDSVMtZGF0YSA=]]>
+                </sat_embedded>
+              </curve>
+            </nurbs_curve>
+          </guide_curve>
+          <guide_curve name="Curve29">
+            <nurbs_curve>
+              <parameters>
+                <parameter f="0"/>
+                <parameter f="1"/>
+              </parameters>
+              <curve>
+                <sat_embedded encoding="base64">
+                  <![CDATA[MjAwMCAwIDEgMCAgICAgICAgICAgDQoxOCBTRVNBTSAtIGdtR2VvbWV0cnkgMTIgQUNJUyAyNS4wIE5UIDI0IFRodSBEZWMgMDQgMTQ6MTQ6MzIgMjAxNCANCjEwMDAgOS45OTk5OTk5OTk5OTk5OTk1ZS0wMDcgMWUtMDEwIA0KLTAgYm9keSAkLTEgLTEgLTEgJC0xICQxICQtMSAkLTEgRiAjDQotMSBsdW1wICQtMSAtMSAtMSAkLTEgJC0xICQyICQwIEYgIw0KLTIgc2hlbGwgJC0xIC0xIC0xICQtMSAkLTEgJC0xICQtMSAkMyAkMSBGICMNCi0zIHdpcmUgJC0xIC0xIC0xICQtMSAkLTEgJDQgJDIgJC0xIG91dCBGICMNCi00IGNvZWRnZSAkLTEgLTEgLTEgJC0xICQ0ICQ0ICQtMSAkNSBmb3J3YXJkICQzICQtMSAjDQotNSBlZGdlICQtMSAtMSAtMSAkLTEgJDYgMCAkNyA1LjY0MTU5MjY1MzQ4OTc5MzEgJDQgJDggZm9yd2FyZCBANyB1bmtub3duIEYgIw0KLTYgdmVydGV4ICQtMSAtMSAtMSAkLTEgJDUgJDkgIw0KLTcgdmVydGV4ICQtMSAtMSAtMSAkLTEgJDUgJDEwICMNCi04IGludGN1cnZlLWN1cnZlICQtMSAtMSAtMSAkLTEgZm9yd2FyZCB7IGV4YWN0Y3VyIGZ1bGwgbnVyYnMgMiBvcGVuIDYgDQoJMCAyIDEgMiAyLjU3MDc5NjMyNjc5NDg5NjYgMiAzLjA3MDc5NjMyNjc0NDg5NyAyIDQuNjQxNTkyNjUzNDg5NzkzMSAyIA0KCTUuNjQxNTkyNjUzNDg5NzkzMSAyIA0KCS0xLjA3MTU2NTk0OTI1MzkzNGUtMDE2IDEuNzUgMCAxIA0KCTAuOTk5OTk5OTk5OTk5OTk5ODkgMS43NSAwIDEgDQoJMiAxLjc1MDAwMDAwMDAwMDAwMDIgMCAxIA0KCTMuMjUgMS43NTAwMDAwMDAwMDAwMDAyIDAgMC43MDcxMDY3ODExODY1NDc2OCANCgkzLjI1IDAuNTAwMDAwMDAwMDAwMDAwMjIgMCAxIA0KCTMuMjUgNS4wMDAwMjAzMTQyMTIzNDFlLTAxMSAwIDEgDQoJMy4yNSAtMC40OTk5OTk5OTk5MDAwMDAxNiAwIDEgDQoJMy4yNDk5OTk5OTk5OTk5OTk2IC0xLjc0OTk5OTk5OTgzNzQ5OTUgMCAwLjcwNzEwNjc4MTIwNDIyNTQzIA0KCTIuMDAwMDAwMDAwMDYyNTAwMiAtMS43NDk5OTk5OTk4OTk5OTk4IDAgMSANCgkxLjAwMDAwMDAwMDA2MjUwMDIgLTEuNzQ5OTk5OTk5OTUgMCAxIA0KCTYuMjUwMDExMjMyNzg2ODExZS0wMTEgLTEuNzUgMCAxIA0KCTAgDQoJbnVsbF9zdXJmYWNlIA0KCW51bGxfc3VyZmFjZSANCgludWxsYnMgDQoJbnVsbGJzIA0KCS0xIA0KCS0xIA0KCUkgSSANCgkwIA0KCTQgMSAyLjU3MDc5NjMyNjc5NDg5NjYgMy4wNzA3OTYzMjY3NDQ4OTcgNC42NDE1OTI2NTM0ODk3OTMxIA0KCTAgDQoJDQoJLTEgDQoJbm9uZSBGIEYgMSBGIDAgfSBJIEkgIw0KLTkgcG9pbnQgJC0xIC0xIC0xICQtMSAtMS4wNzE1NjU5NDkyNTM5MzRlLTAxNiAxLjc1IDAgIw0KLTEwIHBvaW50ICQtMSAtMSAtMSAkLTEgNi4yNTAwMTEyMzI3ODY4MTFlLTAxMSAtMS43NSAwICMNCkVuZC1vZi1BQ0lTLWRhdGEg]]>
+                </sat_embedded>
+              </curve>
+            </nurbs_curve>
+          </guide_curve>
+          <guide_curve name="Curve28">
+            <nurbs_curve>
+              <parameters>
+                <parameter f="0"/>
+                <parameter f="1"/>
+              </parameters>
+              <curve>
+                <sat_embedded encoding="base64">
+                  <![CDATA[MjAwMCAwIDEgMCAgICAgICAgICAgDQoxOCBTRVNBTSAtIGdtR2VvbWV0cnkgMTIgQUNJUyAyNS4wIE5UIDI0IFRodSBEZWMgMDQgMTQ6MTQ6MzIgMjAxNCANCjEwMDAgOS45OTk5OTk5OTk5OTk5OTk1ZS0wMDcgMWUtMDEwIA0KLTAgYm9keSAkLTEgLTEgLTEgJC0xICQxICQtMSAkLTEgRiAjDQotMSBsdW1wICQtMSAtMSAtMSAkLTEgJC0xICQyICQwIEYgIw0KLTIgc2hlbGwgJC0xIC0xIC0xICQtMSAkLTEgJC0xICQtMSAkMyAkMSBGICMNCi0zIHdpcmUgJC0xIC0xIC0xICQtMSAkLTEgJDQgJDIgJC0xIG91dCBGICMNCi00IGNvZWRnZSAkLTEgLTEgLTEgJC0xICQ0ICQ0ICQtMSAkNSBmb3J3YXJkICQzICQtMSAjDQotNSBlZGdlICQtMSAtMSAtMSAkLTEgJDYgMCAkNyA1LjY0MTU5MjY1MzU4OTc5MzEgJDQgJDggZm9yd2FyZCBANyB1bmtub3duIEYgIw0KLTYgdmVydGV4ICQtMSAtMSAtMSAkLTEgJDUgJDkgIw0KLTcgdmVydGV4ICQtMSAtMSAtMSAkLTEgJDUgJDEwICMNCi04IGludGN1cnZlLWN1cnZlICQtMSAtMSAtMSAkLTEgZm9yd2FyZCB7IGV4YWN0Y3VyIGZ1bGwgbnVyYnMgMiBvcGVuIDYgDQoJMCAyIDEgMiAyLjU3MDc5NjMyNjc5NDg5NjYgMiAzLjA3MDc5NjMyNjc5NDg5NjYgMiA0LjY0MTU5MjY1MzU4OTc5MzEgMiANCgk1LjY0MTU5MjY1MzU4OTc5MzEgMiANCgktMS4wNzE1NjU5NDkyNTM5MzRlLTAxNiAxLjc1IDAgMSANCgktMS4wNzE1NjU5NDkyNTM5MzRlLTAxNiAxLjc1IDEgMSANCgktMS4wNzE1NjU5NDkyNTM5MzRlLTAxNiAxLjc1IDIgMSANCgktMS4wNzE1NjU5NDkyNTM5MzRlLTAxNiAxLjc1IDMuMjUgMC43MDcxMDY3ODExODY1NDc3OSANCgktMy4wNjE2MTY5OTc4NjgzODNlLTAxNyAwLjUgMy4yNSAxIA0KCTAgMCAzLjI1IDEgDQoJMy4wNjE2MTY5OTc4NjgzODNlLTAxNyAtMC41IDMuMjUgMSANCgkxLjA3MTU2NTk0OTI1MzkzNGUtMDE2IC0xLjc1IDMuMjUgMC43MDcxMDY3ODExODY1NDc2OCANCgkxLjA3MTU2NTk0OTI1MzkzNGUtMDE2IC0xLjc1IDIgMSANCgkxLjA3MTU2NTk0OTI1MzkzNGUtMDE2IC0xLjc1IDEgMSANCgkxLjA3MTU2NTk0OTI1MzkzNGUtMDE2IC0xLjc1IDAgMSANCgkwIA0KCW51bGxfc3VyZmFjZSANCgludWxsX3N1cmZhY2UgDQoJbnVsbGJzIA0KCW51bGxicyANCgktMSANCgktMSANCglJIEkgDQoJMCANCgk0IDEgMi41NzA3OTYzMjY3OTQ4OTY2IDMuMDcwNzk2MzI2Nzk0ODk2NiA0LjY0MTU5MjY1MzU4OTc5MzEgDQoJMCANCgkNCgktMSANCglub25lIEYgRiAxIEYgMCB9IEkgSSAjDQotOSBwb2ludCAkLTEgLTEgLTEgJC0xIC0xLjA3MTU2NTk0OTI1MzkzNGUtMDE2IDEuNzUgMCAjDQotMTAgcG9pbnQgJC0xIC0xIC0xICQtMSAxLjA3MTU2NTk0OTI1MzkzNGUtMDE2IC0xLjc1IDAgIw0KRW5kLW9mLUFDSVMtZGF0YSA=]]>
+                </sat_embedded>
+              </curve>
+            </nurbs_curve>
+          </guide_curve>
+        </guide_curves>
+      </guide_geometry>
+    </utilities>
+    <rules>
+      <meshing basic_lc_factor="1" analysis_folders="true" use_uniformized_face_parameterization="false" longitudinal_mass_on_nonstructural_elements="true">
+        <general>
+          <fem_options element_type="1st_order" super_element_type="1" super_element_type_top="1"/>
+          <model_topology_performed_before_meshing auto_simply_topology="true" auto_split_periodic_geometry="false" repair_split_topology="false"/>
+          <element_type_preferences>
+            <prefer_rectangular_mesh flag="false"/>
+            <allow_triangular_elements flag="true"/>
+            <prefer_point_mass_as_node_mass flag="true"/>
+            <use_drilling_elements flag="false"/>
+            <use_eccentric_hinges flag="true"/>
+          </element_type_preferences>
+          <idealizations eliminate_internal_edges="true" eliminate_internal_vertices="true"/>
+          <other_preferences automate_fem_load_case_numbering="combinations_automatic" use_cocentricbeams="false" ignore_eccentricities="false" scantlings="gross_tickness">
+            <include_unused_properties flag="false"/>
+            <mesh_density_rounded flag="false"/>
+          </other_preferences>
+          <naming_preferences>
+            <use_long_loadcase_names flag="true"/>
+            <use_long_set_names flag="true"/>
+            <use_long_property_names flag="true"/>
+          </naming_preferences>
+          <face_mesher face_mesh_strategy="advancing_front_quad_mesher"/>
+          <edge_mesher edge_mesh_strategy="uniform_distribution"/>
+        </general>
+        <min_max_angle>
+          <min_angle>
+            <split active="false" value="0.2617993878"/>
+            <error active="false" value="0.01745329252"/>
+          </min_angle>
+          <max_angle>
+            <split active="false" value="2.879793266"/>
+            <error active="true" value="3.124139361"/>
+          </max_angle>
+        </min_max_angle>
+        <jacobi>
+          <max_relative_jacobi>
+            <split active="false" value="5"/>
+            <error active="false" value="10"/>
+          </max_relative_jacobi>
+          <min_normalized_jacobi>
+            <split active="false" value="0.2"/>
+            <error active="false" value="0"/>
+          </min_normalized_jacobi>
+        </jacobi>
+        <eliminate_short_edges>
+          <none/>
+        </eliminate_short_edges>
+        <chord_height>
+          <adjust_curved_edges value="0.2" active="false"/>
+        </chord_height>
+        <max_twist_angle>
+          <split active="false" value="0.1745329252"/>
+          <error active="false" value="0.5235987756"/>
+        </max_twist_angle>
+        <adjust_number_of_elements flag="true"/>
+        <write_loads_seperate flag="true"/>
+      </meshing>
+      <set_rules use_compact_scripting="true"/>
+      <tolerances use_tolerant_modelling="true" angle="0.03490658504" point="0.01"/>
+      <geometry_rules guide_curve_topology_snapping="true" beam_topology_snapping="true" creation_grouping="creation_grouping_off"/>
+      <joint_creation_rules auto_generate="false" selection_aware="false">
+        <exclusion_rules>
+          <exclusion_rule exclude="tb_free" in_use="true"/>
+          <exclusion_rule exclude="tb_int_pure" in_use="true"/>
+          <exclusion_rule exclude="tb_int_all" in_use="false"/>
+          <exclusion_rule exclude="eb_free" in_use="true"/>
+          <exclusion_rule exclude="eb_int_aligned" in_use="true"/>
+          <exclusion_rule exclude="eb_int_all" in_use="false"/>
+        </exclusion_rules>
+      </joint_creation_rules>
+      <connected_move_rules default_connected="false" use_geometric_points="false" rearrange_x_joints="false"/>
+      <tubular_joint_rules copy_reinforcement_on_copy="false">
+        <can default_can_fac="0.25" default_can_min="0.3" chord_alignment_tolerance="0.0872664626"/>
+        <stub default_stub_fac="1" default_stub_min="0.6"/>
+        <gap min_gap="0.0508" gap_tolerance="0.001" plane_tolerance="0.01745329252" brace_angle_move_limit="0.1745329252" iterations="2" flush_braces="false" gap_method="planewise"/>
+        <cone cone_angle="0.1651486774"/>
+      </tubular_joint_rules>
+    </rules>
+    <equipment_domain>
+      <equipment_concepts/>
+    </equipment_domain>
+    <evaluators>
+      <slicer_concepts/>
+    </evaluators>
+    <environment>
+      <environment_properties>
+        <wind_spectra/>
+        <wind_profiles/>
+        <wave_spectra/>
+        <current_profiles/>
+        <directions/>
+        <frequency_sets/>
+        <phase_sets/>
+        <regular_wave_sets/>
+        <scours/>
+        <seabed_properties/>
+        <soil_properties/>
+        <soil_data_properties/>
+        <spreading_functions/>
+        <wave_height_evaluators/>
+      </environment_properties>
+      <environment_concepts/>
+    </environment>
+    <compartments>
+      <compartment_properties>
+        <compartment_contents/>
+      </compartment_properties>
+    </compartments>
+    <analysis_domain>
+      <analyses>
+        <global/>
+        <analysis name="Analysis1">
+          <activities>
+            <create_mesh beams_as_members="true" smart_load_combinations="true" pile_boundary_condition="pile_soil_interaction" use_partial_mesher="true" lock_meshed_concepts_after_partial_meshing="true" regenerate_mesh_option="conditional" node_numbers_from_joint_name="false" element_numbers_from_beam_name="false" length_unit="" force_unit="" tempdiff_unit=""/>
+            <load_results/>
+          </activities>
+        </analysis>
+      </analyses>
+    </analysis_domain>
+  </model>
+</DNV_structure_concept_protocol>

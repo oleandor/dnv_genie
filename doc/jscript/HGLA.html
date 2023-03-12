@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: HGLA
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: HGLA
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Define a HGLA run
+</dl>
+<dl>
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="class_jmfDuplicateObject_class_jmfNamedObject_.html">class jmfDuplicateObject<class jmfNamedObject></a>
+            |
+            +--<a href="AbstractActivity.html">AbstractActivity</a>
+                 |
+                 +--<a href="AnalysisRun.html">AnalysisRun</a>
+                      |
+                      +--<b>HGLA</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="HGLA.html#HGLA()">HGLA</a></b>()</code>
+<div class="explanation">
+Construct a new Hull Girder Load Adjuster</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractActivity.html#enableLoadCase(AbstractLoadCase, bool)">enableLoadCase</a></b>(<b><a href="AbstractLoadCase.html">AbstractLoadCase</a></b>, <b>bool</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractActivity.html#execute()">execute</a></b>()</code>
+<div class="explanation">
+Execute the analysis</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractActivity.html#setActive()">setActive</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="lcActivity.html">lcActivity</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractActivity.html#step(int)">step</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Retrieve an object in the analysis</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="class_jmfDuplicateObject_class_jmfNamedObject_.html#copy()">copy</a></b>()</code>
+<div class="explanation">
+Make an identical copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td width="90%"><code><b><a href="HGLA.html#BulkheadPositions()">BulkheadPositions</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Bulkhead positions. There must be exactly 4 bulkhead positions</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="HGLA.html#CanCreateLoadFile()">CanCreateLoadFile</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="HGLA.html#CreateLoadFile()">CreateLoadFile</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="HGLA.html#ImportShipDataXMLFile()">ImportShipDataXMLFile</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Import ShipData XML File</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="HGLA.html#ShipDataXMLStatus()">ShipDataXMLStatus</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Get status of ShipData XML file.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ShipRegion.html">ShipRegion</a></b></code>
+</td>
+<td width="90%"><code><b><a href="HGLA.html#ShipRegion()">ShipRegion</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Ship region</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="HGLA.html#TorsionalReferenceZ()">TorsionalReferenceZ</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Torsional Z reference value</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="AnalysisRun.html#dataCheckOnly()">dataCheckOnly</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Data check only</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="AnalysisRun.html#generateInput()">generateInput</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Generate input files</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="AbstractActivity.html#needsToBeExecuted()">needsToBeExecuted</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="HGLA()"></a>
+<h3>HGLA</h3>
+<p class="function">
+<b>HGLA</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new Hull Girder Load Adjuster
+</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="BulkheadPositions()"></a>
+<h3>BulkheadPositions</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>BulkheadPositions</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Bulkhead positions. There must be exactly 4 bulkhead positions
+</dl>
+<a name="CanCreateLoadFile()"></a>
+<h3>CanCreateLoadFile</h3>
+<p class="function">
+<b>bool</b> <b>CanCreateLoadFile</b>()</p>
+<p>
+<a name="CreateLoadFile()"></a>
+<h3>CreateLoadFile</h3>
+<p class="function">
+<b>bool</b> <b>CreateLoadFile</b>()</p>
+<p>
+<a name="ImportShipDataXMLFile()"></a>
+<h3>ImportShipDataXMLFile</h3>
+<p class="function">
+<b>string</b> <b>ImportShipDataXMLFile</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Import ShipData XML File
+</dl>
+<a name="ShipDataXMLStatus()"></a>
+<h3>ShipDataXMLStatus</h3>
+<p class="function">
+<b>bool</b> <b>ShipDataXMLStatus</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Get status of ShipData XML file.
+</dl>
+<a name="ShipRegion()"></a>
+<h3>ShipRegion</h3>
+<p class="function">
+<b><a href="ShipRegion.html">ShipRegion</a></b> <b>ShipRegion</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Ship region
+</dl>
+<a name="TorsionalReferenceZ()"></a>
+<h3>TorsionalReferenceZ</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>TorsionalReferenceZ</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Torsional Z reference value
+</dl>
+</body>
+</html>

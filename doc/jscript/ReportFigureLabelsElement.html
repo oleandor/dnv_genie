@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: ReportFigureLabelsElement
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: ReportFigureLabelsElement
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Represent the label settings for a figure (image) in a report document
+</dl>
+<dl>
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="UnnamedObject.html">UnnamedObject</a>
+       |
+       +--<a href="ReportFigureElement.html">ReportFigureElement</a>
+            |
+            +--<b>ReportFigureLabelsElement</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="ReportFigureLabelsElement.html#ReportFigureLabelsElement()">ReportFigureLabelsElement</a></b>()</code>
+<div class="explanation">
+Construct a new report figure label element</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ReportFigureLabelsElement.html#clearLowerLimit()">clearLowerLimit</a></b>()</code>
+<div class="explanation">
+Clear lower bounds for which labels are drawn.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ReportFigureLabelsElement.html#clearUpperLimit()">clearUpperLimit</a></b>()</code>
+<div class="explanation">
+Clear upper bounds for which labels are drawn.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ReportFigureLabelsElement.html#enableLowerLimit(bool)">enableLowerLimit</a></b>(<b>bool</b> bool)</code>
+<div class="explanation">
+Enable/Disable label filtering for lower bounds, if available.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ReportFigureLabelsElement.html#enableUpperLimit(bool)">enableUpperLimit</a></b>(<b>bool</b> bool)</code>
+<div class="explanation">
+Enable/Disable label filtering for upper bounds, if available.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ReportFigureLabelsElement.html#getFilterLabels()">getFilterLabels</a></b>()</code>
+<div class="explanation">
+Are the label displayed filtered by the set limits?</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ReportFigureLabelsElement.html#getLabelsApplyTo()">getLabelsApplyTo</a></b>()</code>
+<div class="explanation">
+Get the type of object to labels will be applied to.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ReportFigureLabelsElement.html#getLabelsType()">getLabelsType</a></b>()</code>
+<div class="explanation">
+Get the type of label applied to objects of type "ApplyTo".</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ReportFigureLabelsElement.html#getOverlayLabels()">getOverlayLabels</a></b>()</code>
+<div class="explanation">
+Are the labels drawn on top of the model or within the scene?</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ReportFigureLabelsElement.html#setFilterLabels(bool)">setFilterLabels</a></b>(<b>bool</b> filterLabels)</code>
+<div class="explanation">
+Filter label display based on optional lower and upper bounds.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ReportFigureLabelsElement.html#setLabelsApplyTo(string)">setLabelsApplyTo</a></b>(<b>string</b> applyTo)</code>
+<div class="explanation">
+Set the type of object to apply labels to.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ReportFigureLabelsElement.html#setLabelsType(string)">setLabelsType</a></b>(<b>string</b> labelsType)</code>
+<div class="explanation">
+Set the type of label to apply to the objects of type "ApplyTo".</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ReportFigureLabelsElement.html#setLowerLimit(LimitNumber)">setLowerLimit</a></b>(<b><a href="LimitNumber.html">LimitNumber</a></b> lowerLimit)</code>
+<div class="explanation">
+Set lower bounds for which labels are drawn.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ReportFigureLabelsElement.html#setOverlayLabels(bool)">setOverlayLabels</a></b>(<b>bool</b> overlayLabels)</code>
+<div class="explanation">
+Overlay the labels on top of the model so they are not obscured by geometry.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ReportFigureLabelsElement.html#setUpperLimit(LimitNumber)">setUpperLimit</a></b>(<b><a href="LimitNumber.html">LimitNumber</a></b> upperLimit)</code>
+<div class="explanation">
+Set upper bounds for which labels are drawn.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="ReportFigureLabelsElement()"></a>
+<h3>ReportFigureLabelsElement</h3>
+<p class="function">
+<b>ReportFigureLabelsElement</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new report figure label element
+</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="clearLowerLimit()"></a>
+<h3>clearLowerLimit</h3>
+<p class="function">
+<b>&nbsp;</b> <b>clearLowerLimit</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Clear lower bounds for which labels are drawn.
+</dl>
+<hr>
+
+<a name="clearUpperLimit()"></a>
+<h3>clearUpperLimit</h3>
+<p class="function">
+<b>&nbsp;</b> <b>clearUpperLimit</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Clear upper bounds for which labels are drawn.
+</dl>
+<hr>
+
+<a name="enableLowerLimit(bool)"></a>
+<h3>enableLowerLimit</h3>
+<p class="function">
+<b>&nbsp;</b> <b>enableLowerLimit</b>(<b>bool</b> bool)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Enable/Disable label filtering for lower bounds, if available.
+</dl>
+<hr>
+
+<a name="enableUpperLimit(bool)"></a>
+<h3>enableUpperLimit</h3>
+<p class="function">
+<b>&nbsp;</b> <b>enableUpperLimit</b>(<b>bool</b> bool)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Enable/Disable label filtering for upper bounds, if available.
+</dl>
+<hr>
+
+<a name="getFilterLabels()"></a>
+<h3>getFilterLabels</h3>
+<p class="function">
+<b>bool</b> <b>getFilterLabels</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Are the label displayed filtered by the set limits?
+</dl>
+<hr>
+
+<a name="getLabelsApplyTo()"></a>
+<h3>getLabelsApplyTo</h3>
+<p class="function">
+<b>string</b> <b>getLabelsApplyTo</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Get the type of object to labels will be applied to.
+</dl>
+<hr>
+
+<a name="getLabelsType()"></a>
+<h3>getLabelsType</h3>
+<p class="function">
+<b>string</b> <b>getLabelsType</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Get the type of label applied to objects of type "ApplyTo".
+</dl>
+<hr>
+
+<a name="getOverlayLabels()"></a>
+<h3>getOverlayLabels</h3>
+<p class="function">
+<b>bool</b> <b>getOverlayLabels</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Are the labels drawn on top of the model or within the scene?
+</dl>
+<hr>
+
+<a name="setFilterLabels(bool)"></a>
+<h3>setFilterLabels</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setFilterLabels</b>(<b>bool</b> filterLabels)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Filter label display based on optional lower and upper bounds.
+</dl>
+<hr>
+
+<a name="setLabelsApplyTo(string)"></a>
+<h3>setLabelsApplyTo</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setLabelsApplyTo</b>(<b>string</b> applyTo)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set the type of object to apply labels to.
+</dl>
+<hr>
+
+<a name="setLabelsType(string)"></a>
+<h3>setLabelsType</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setLabelsType</b>(<b>string</b> labelsType)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set the type of label to apply to the objects of type "ApplyTo".
+</dl>
+<hr>
+
+<a name="setLowerLimit(LimitNumber)"></a>
+<h3>setLowerLimit</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setLowerLimit</b>(<b><a href="LimitNumber.html">LimitNumber</a></b> lowerLimit)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set lower bounds for which labels are drawn.
+</dl>
+<hr>
+
+<a name="setOverlayLabels(bool)"></a>
+<h3>setOverlayLabels</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setOverlayLabels</b>(<b>bool</b> overlayLabels)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Overlay the labels on top of the model so they are not obscured by geometry.
+</dl>
+<hr>
+
+<a name="setUpperLimit(LimitNumber)"></a>
+<h3>setUpperLimit</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setUpperLimit</b>(<b><a href="LimitNumber.html">LimitNumber</a></b> upperLimit)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set upper bounds for which labels are drawn.
+</dl>
+<hr>
+
+</body>
+</html>

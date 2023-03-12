@@ -1,0 +1,13 @@
+weight_item.name,weight_item.description,weight_item.weight.dry,weight_item.weight.content,weight_item.position.x,weight_item.position.y,weight_item.position.z,weight_item.dimension.dx,weight_item.dimension.dy,weight_item.dimension.dz,weight_item.time.in,weight_item.time.out
+LPumpA,Light pump,500,0,-2,-3,0.5,,,,8,84
+LPumpB,Light pump,500,0,-3,1,0.5,,,,8,84
+LPumpC,Light pump,500,0,-1,2,0.5,,,,8,84
+LPumpD,Light pump,500,0,-2,3,1.5,,,,,
+HPumpA,Heavy pump,1500,0,1,5,5.5,,,,8,84
+HPumpB,Heavy pump,1500,0,5,10,4.5,,,,,
+HPumpC,Heavy pump,1500,0,10,2,5.5,,,,3,66
+HPumpD,Heavy pump,1500,0,13,9,5.5,,,,3,66
+MiscA,Misc.,200,0,1,5,0.5,,,,,
+MiscB,Misc.,200,0,9,3,0.5,,,,,
+MiscC,Misc.,300,0,5,7,-0.5,,,,,
+MiscD,Misc.,300,0,12,9,0.5,,,,,

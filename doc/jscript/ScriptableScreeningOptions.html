@@ -1,0 +1,430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: ScriptableScreeningOptions
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: ScriptableScreeningOptions
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Screening criteria.
+</dl>
+<dl>
+<hr/>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#CornerAngleLargerThan()">CornerAngleLargerThan</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Angle.html">Angle</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#CornerAngleLargerThanValue()">CornerAngleLargerThanValue</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Reports all elements with a corner angle larger than the threshold.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#CornerAngleSmallerThan()">CornerAngleSmallerThan</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Angle.html">Angle</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#CornerAngleSmallerThanValue()">CornerAngleSmallerThanValue</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Reports all elements with a corner angle smaller than the threshold.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#IsCollapsedElement()">IsCollapsedElement</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Reports all collapsed elements.
+A collapsed element is a triangle or quadrilateral element of a zero area.
+A partially collapsed element is a quadrilateral element with overlapping node.
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#IsDisconnectedElement()">IsDisconnectedElement</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Reports all elements disconnected from the model.
+Elements connected only to masses, dampers, springs are disconnected.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#IsDisconnectedNode()">IsDisconnectedNode</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Reports all nodes not connected to any element.
+Nodes  only connected to linear couplings (support rigid links) are reported.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#IsOverlappingElement()">IsOverlappingElement</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Reports all elements that overlap any other element.
+This check excludes beams.
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#IsSestraQuadCriterionFailing()">IsSestraQuadCriterionFailing</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Reports all elements that fail Sestra quad criterion.
+Sestra will give an error for a quad element if L1 > 25*L2, where L1 is length oflongest diagonal and L2 is length of shortest diagonal.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#IsSestraTriCriterionFailing()">IsSestraTriCriterionFailing</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Reports all elements that fail Sestra tri criterion.
+Sestra will give error for a triangle element if area < maxlen*maxlen/100 (where maxlen is length of longest side, area is triangle area).</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#IsZeroPropertyElement()">IsZeroPropertyElement</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Reports all elements without any properties. Elements without properties cannot be used in any analysis.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#MinimumJacobiSmallerThan()">MinimumJacobiSmallerThan</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#MinimumJacobiSmallerThanValue()">MinimumJacobiSmallerThanValue</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Reports all elements with the Normalized Minimum Jacobian smaller than the threshold.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#OverlappingNodeWithinTolerance()">OverlappingNodeWithinTolerance</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#OverlappingNodeWithinToleranceValue()">OverlappingNodeWithinToleranceValue</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Reports all nodes which distance from other nodes is within the threshold.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#RelativeJacobiLargerThan()">RelativeJacobiLargerThan</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#RelativeJacobiLargerThanValue()">RelativeJacobiLargerThanValue</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Reports all elements with the Relative Jacobi larger than the threshold.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#ShortEdgeLengthSmallerThan()">ShortEdgeLengthSmallerThan</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#ShortEdgeLengthSmallerThanValue()">ShortEdgeLengthSmallerThanValue</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Reports all elements with the shortest edge shorter than the threshold.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#WarpingRelDistanceLargerThan()">WarpingRelDistanceLargerThan</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="ScriptableScreeningOptions.html#WarpingRelDistanceLargerThanValue()">WarpingRelDistanceLargerThanValue</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Reports all elements with relative warping deviation larger than the threshold.</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="CornerAngleLargerThan()"></a>
+<h3>CornerAngleLargerThan</h3>
+<p class="function">
+<b>bool</b> <b>CornerAngleLargerThan</b>()</p>
+<p>
+<a name="CornerAngleLargerThanValue()"></a>
+<h3>CornerAngleLargerThanValue</h3>
+<p class="function">
+<b><a href="Angle.html">Angle</a></b> <b>CornerAngleLargerThanValue</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reports all elements with a corner angle larger than the threshold.
+</dl>
+<a name="CornerAngleSmallerThan()"></a>
+<h3>CornerAngleSmallerThan</h3>
+<p class="function">
+<b>bool</b> <b>CornerAngleSmallerThan</b>()</p>
+<p>
+<a name="CornerAngleSmallerThanValue()"></a>
+<h3>CornerAngleSmallerThanValue</h3>
+<p class="function">
+<b><a href="Angle.html">Angle</a></b> <b>CornerAngleSmallerThanValue</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reports all elements with a corner angle smaller than the threshold.
+</dl>
+<a name="IsCollapsedElement()"></a>
+<h3>IsCollapsedElement</h3>
+<p class="function">
+<b>bool</b> <b>IsCollapsedElement</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reports all collapsed elements.
+A collapsed element is a triangle or quadrilateral element of a zero area.
+A partially collapsed element is a quadrilateral element with overlapping node.
+
+</dl>
+<a name="IsDisconnectedElement()"></a>
+<h3>IsDisconnectedElement</h3>
+<p class="function">
+<b>bool</b> <b>IsDisconnectedElement</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reports all elements disconnected from the model.
+Elements connected only to masses, dampers, springs are disconnected.
+</dl>
+<a name="IsDisconnectedNode()"></a>
+<h3>IsDisconnectedNode</h3>
+<p class="function">
+<b>bool</b> <b>IsDisconnectedNode</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reports all nodes not connected to any element.
+Nodes  only connected to linear couplings (support rigid links) are reported.
+</dl>
+<a name="IsOverlappingElement()"></a>
+<h3>IsOverlappingElement</h3>
+<p class="function">
+<b>bool</b> <b>IsOverlappingElement</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reports all elements that overlap any other element.
+This check excludes beams.
+
+</dl>
+<a name="IsSestraQuadCriterionFailing()"></a>
+<h3>IsSestraQuadCriterionFailing</h3>
+<p class="function">
+<b>bool</b> <b>IsSestraQuadCriterionFailing</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reports all elements that fail Sestra quad criterion.
+Sestra will give an error for a quad element if L1 > 25*L2, where L1 is length oflongest diagonal and L2 is length of shortest diagonal.
+</dl>
+<a name="IsSestraTriCriterionFailing()"></a>
+<h3>IsSestraTriCriterionFailing</h3>
+<p class="function">
+<b>bool</b> <b>IsSestraTriCriterionFailing</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reports all elements that fail Sestra tri criterion.
+Sestra will give error for a triangle element if area < maxlen*maxlen/100 (where maxlen is length of longest side, area is triangle area).
+</dl>
+<a name="IsZeroPropertyElement()"></a>
+<h3>IsZeroPropertyElement</h3>
+<p class="function">
+<b>bool</b> <b>IsZeroPropertyElement</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reports all elements without any properties. Elements without properties cannot be used in any analysis.
+</dl>
+<a name="MinimumJacobiSmallerThan()"></a>
+<h3>MinimumJacobiSmallerThan</h3>
+<p class="function">
+<b>bool</b> <b>MinimumJacobiSmallerThan</b>()</p>
+<p>
+<a name="MinimumJacobiSmallerThanValue()"></a>
+<h3>MinimumJacobiSmallerThanValue</h3>
+<p class="function">
+<b>double</b> <b>MinimumJacobiSmallerThanValue</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reports all elements with the Normalized Minimum Jacobian smaller than the threshold.
+</dl>
+<a name="OverlappingNodeWithinTolerance()"></a>
+<h3>OverlappingNodeWithinTolerance</h3>
+<p class="function">
+<b>bool</b> <b>OverlappingNodeWithinTolerance</b>()</p>
+<p>
+<a name="OverlappingNodeWithinToleranceValue()"></a>
+<h3>OverlappingNodeWithinToleranceValue</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>OverlappingNodeWithinToleranceValue</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reports all nodes which distance from other nodes is within the threshold.
+</dl>
+<a name="RelativeJacobiLargerThan()"></a>
+<h3>RelativeJacobiLargerThan</h3>
+<p class="function">
+<b>bool</b> <b>RelativeJacobiLargerThan</b>()</p>
+<p>
+<a name="RelativeJacobiLargerThanValue()"></a>
+<h3>RelativeJacobiLargerThanValue</h3>
+<p class="function">
+<b>double</b> <b>RelativeJacobiLargerThanValue</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reports all elements with the Relative Jacobi larger than the threshold.
+</dl>
+<a name="ShortEdgeLengthSmallerThan()"></a>
+<h3>ShortEdgeLengthSmallerThan</h3>
+<p class="function">
+<b>bool</b> <b>ShortEdgeLengthSmallerThan</b>()</p>
+<p>
+<a name="ShortEdgeLengthSmallerThanValue()"></a>
+<h3>ShortEdgeLengthSmallerThanValue</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>ShortEdgeLengthSmallerThanValue</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reports all elements with the shortest edge shorter than the threshold.
+</dl>
+<a name="WarpingRelDistanceLargerThan()"></a>
+<h3>WarpingRelDistanceLargerThan</h3>
+<p class="function">
+<b>bool</b> <b>WarpingRelDistanceLargerThan</b>()</p>
+<p>
+<a name="WarpingRelDistanceLargerThanValue()"></a>
+<h3>WarpingRelDistanceLargerThanValue</h3>
+<p class="function">
+<b>double</b> <b>WarpingRelDistanceLargerThanValue</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reports all elements with relative warping deviation larger than the threshold.
+</dl>
+</body>
+</html>

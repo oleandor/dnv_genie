@@ -1,0 +1,1192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: Meshing
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: Meshing
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="MetaObject.html">MetaObject</a>
+  |
+  +--<a href="mfRelationObject.html">mfRelationObject</a>
+       |
+       +--
+            |
+            +--
+                 |
+                 +--<b>Meshing</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="char.html">char</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Meshing.html#ToString(DNVS::MoFa::Formatting::FormattingService)">ToString</a></b>(<b><a href="DNVS__MoFa__Formatting__FormattingService.html">DNVS::MoFa::Formatting::FormattingService</a></b> formattingService)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ElementType.html">ElementType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#FemLoadcaseNumbering()">FemLoadcaseNumbering</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#IgnoreStructureNotPartOfSubsetWhenIdealizing()">IgnoreStructureNotPartOfSubsetWhenIdealizing</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Ignore unmeshed structure when idealizing*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#adjustNumberOfElements()">adjustNumberOfElements</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Adjust number of elements*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#allowTriangularElements()">allowTriangularElements</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#analysisFolders()">analysisFolders</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#autoSimplifyTopology()">autoSimplifyTopology</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Before meshing starts, the global SimplifyTopology(); function will be called to eliminate unwanted edges and vertices from the model prior to meshing.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#autoSplitPeriodicGeometry()">autoSplitPeriodicGeometry</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Before meshing starts, the global method SplitPeriodicGeometry(); will be called. This method ensures that cylinders and spheres and other periodic geometry can be meshed.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#basicLCfactor()">basicLCfactor</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="EdgeMeshStrategy.html">EdgeMeshStrategy</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#edgeMeshStrategy()">edgeMeshStrategy</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ElementType.html">ElementType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#elementType()">elementType</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Select between first order or second order elements.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#eliminateEdgeLengthLimit()">eliminateEdgeLengthLimit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#eliminateEdgeLimit()">eliminateEdgeLimit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#eliminateEdgeWithLengthRelativeToMeshDensity()">eliminateEdgeWithLengthRelativeToMeshDensity</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Relative length*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#eliminateEdgesWithAbsoluteLength()">eliminateEdgesWithAbsoluteLength</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Absolute Length*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#eliminateInternalEccentricities()">eliminateInternalEccentricities</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Eliminate internal eccentricities*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#eliminateInternalEdges()">eliminateInternalEdges</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Remove Internal Edges*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#eliminateInternalVertices()">eliminateInternalVertices</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Remove Internal Vertices*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#eliminateNonConceptualEdges()">eliminateNonConceptualEdges</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Eliminate non-conceptual short edges*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#eliminateShortEdges()">eliminateShortEdges</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="FaceMeshStrategy.html">FaceMeshStrategy</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#faceMeshStrategy()">faceMeshStrategy</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#failMaxAngleEnabled()">failMaxAngleEnabled</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Angle.html">Angle</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#failMaxAngleLimit()">failMaxAngleLimit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#failMaxRelativeJacobiEnabled()">failMaxRelativeJacobiEnabled</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#failMaxRelativeJacobiLimit()">failMaxRelativeJacobiLimit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#failMaxTwistAngleEnabled()">failMaxTwistAngleEnabled</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Angle.html">Angle</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#failMaxTwistAngleLimit()">failMaxTwistAngleLimit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#failMinAngleEnabled()">failMinAngleEnabled</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Angle.html">Angle</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#failMinAngleLimit()">failMinAngleLimit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#failMinNormalizedJacobiEnabled()">failMinNormalizedJacobiEnabled</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#failMinNormalizedJacobiLimit()">failMinNormalizedJacobiLimit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#ignoreEccentricities()">ignoreEccentricities</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*NonEccentric (CSR Bulk)*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#ignoreFilletOnSectionsWithFillets()">ignoreFilletOnSectionsWithFillets</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Ignore fillet on sections with fillets*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#includeUnusedProperties()">includeUnusedProperties</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#loadsBasedOnGrossDimensions()">loadsBasedOnGrossDimensions</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Loads based on gross dimensions*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#longitudinalMassOnNonStructuralElements()">longitudinalMassOnNonStructuralElements</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Longitudinal Mass On Nonstructural Elements*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#maxChordEnabled()">maxChordEnabled</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#maxChordLimit()">maxChordLimit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#meshDensityRounded()">meshDensityRounded</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Round off Mesh Density*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#minMaxDensityRatio()">minMaxDensityRatio</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>int</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#numberIterationsEliminateNonConceptualShortEdges()">numberIterationsEliminateNonConceptualShortEdges</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#preferLinearDependencies()">preferLinearDependencies</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Prefer Linear Dependencies*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#preferPointMassAsNodeMass()">preferPointMassAsNodeMass</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#preferRectangularMesh()">preferRectangularMesh</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#repairSplitTopology()">repairSplitTopology</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Repair split topology for meshing*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Scantlings.html">Scantlings</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#scantlings()">scantlings</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#splitMaxAngleEnabled()">splitMaxAngleEnabled</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Angle.html">Angle</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#splitMaxAngleLimit()">splitMaxAngleLimit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#splitMaxRelativeJacobiEnabled()">splitMaxRelativeJacobiEnabled</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#splitMaxRelativeJacobiLimit()">splitMaxRelativeJacobiLimit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#splitMaxTwistAngleEnabled()">splitMaxTwistAngleEnabled</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Angle.html">Angle</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#splitMaxTwistAngleLimit()">splitMaxTwistAngleLimit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#splitMinAngleEnabled()">splitMinAngleEnabled</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Angle.html">Angle</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#splitMinAngleLimit()">splitMinAngleLimit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#splitMinNormalizedJacobiEnabled()">splitMinNormalizedJacobiEnabled</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#splitMinNormalizedJacobiLimit()">splitMinNormalizedJacobiLimit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>int</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#superElementType()">superElementType</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#useCocentricBeams()">useCocentricBeams</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*CoCentric (CSR Tank)*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#useDrillingElements()">useDrillingElements</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Drilling Elements*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#useEccentricHinges()">useEccentricHinges</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Eccentric Hinges*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#useLongLoadcaseNames()">useLongLoadcaseNames</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#useLongPropertyNames()">useLongPropertyNames</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#useLongSetNames()">useLongSetNames</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#useMinMaxDensityRatio()">useMinMaxDensityRatio</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Adjust edge density using ratio*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#usePartialMeshing()">usePartialMeshing</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Deprecated, does nothing.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#useThickOverrideThinShellElements()">useThickOverrideThinShellElements</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*First Order Thick Shell Elements*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#useUniformizedFaceParameterization()">useUniformizedFaceParameterization</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Uniformized Face Parameterization*</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Meshing.html#writeLoadsSeparate()">writeLoadsSeparate</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+*Write loads separate*</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="ToString(DNVS::MoFa::Formatting::FormattingService)"></a>
+<h3>ToString</h3>
+<p class="function">
+<b><a href="char.html">char</a></b> <b>ToString</b>(<b><a href="DNVS__MoFa__Formatting__FormattingService.html">DNVS::MoFa::Formatting::FormattingService</a></b> formattingService)</p>
+<p>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="FemLoadcaseNumbering()"></a>
+<h3>FemLoadcaseNumbering</h3>
+<p class="function">
+<b><a href="ElementType.html">ElementType</a></b> <b>FemLoadcaseNumbering</b>()</p>
+<p>
+<a name="IgnoreStructureNotPartOfSubsetWhenIdealizing()"></a>
+<h3>IgnoreStructureNotPartOfSubsetWhenIdealizing</h3>
+<p class="function">
+<b>bool</b> <b>IgnoreStructureNotPartOfSubsetWhenIdealizing</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Ignore unmeshed structure when idealizing*
+If this option is turned off, structure that is not part of the meshable subset will still be considered.
+Nodes will be created at all intersections with structure is not being meshed.
+</dl>
+<a name="adjustNumberOfElements()"></a>
+<h3>adjustNumberOfElements</h3>
+<p class="function">
+<b>bool</b> <b>adjustNumberOfElements</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Adjust number of elements*
+Automatic adjust number of elements along edges should normally be enabled, as the face meshes normally will look better (with fewer triangles).
+Disable the option during problem solving if meshing hangs or if a poor mesh is observed, and check if this has any positive effect.
+</dl>
+<a name="allowTriangularElements()"></a>
+<h3>allowTriangularElements</h3>
+<p class="function">
+<b>bool</b> <b>allowTriangularElements</b>()</p>
+<p>
+<a name="analysisFolders()"></a>
+<h3>analysisFolders</h3>
+<p class="function">
+<b>bool</b> <b>analysisFolders</b>()</p>
+<p>
+<a name="autoSimplifyTopology()"></a>
+<h3>autoSimplifyTopology</h3>
+<p class="function">
+<b>bool</b> <b>autoSimplifyTopology</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Before meshing starts, the global SimplifyTopology(); function will be called to eliminate unwanted edges and vertices from the model prior to meshing.
+</dl>
+<a name="autoSplitPeriodicGeometry()"></a>
+<h3>autoSplitPeriodicGeometry</h3>
+<p class="function">
+<b>bool</b> <b>autoSplitPeriodicGeometry</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Before meshing starts, the global method SplitPeriodicGeometry(); will be called. This method ensures that cylinders and spheres and other periodic geometry can be meshed.
+</dl>
+<a name="basicLCfactor()"></a>
+<h3>basicLCfactor</h3>
+<p class="function">
+<b>double</b> <b>basicLCfactor</b>()</p>
+<p>
+<a name="edgeMeshStrategy()"></a>
+<h3>edgeMeshStrategy</h3>
+<p class="function">
+<b><a href="EdgeMeshStrategy.html">EdgeMeshStrategy</a></b> <b>edgeMeshStrategy</b>()</p>
+<p>
+<a name="elementType()"></a>
+<h3>elementType</h3>
+<p class="function">
+<b><a href="ElementType.html">ElementType</a></b> <b>elementType</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Select between first order or second order elements.
+</dl>
+<a name="eliminateEdgeLengthLimit()"></a>
+<h3>eliminateEdgeLengthLimit</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>eliminateEdgeLengthLimit</b>()</p>
+<p>
+<a name="eliminateEdgeLimit()"></a>
+<h3>eliminateEdgeLimit</h3>
+<p class="function">
+<b>double</b> <b>eliminateEdgeLimit</b>()</p>
+<p>
+<a name="eliminateEdgeWithLengthRelativeToMeshDensity()"></a>
+<h3>eliminateEdgeWithLengthRelativeToMeshDensity</h3>
+<p class="function">
+<b>bool</b> <b>eliminateEdgeWithLengthRelativeToMeshDensity</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Relative length*
+Edges whose length relative to the mesh density is shorter than the specified value will be removed (Ledge/Lmd < value).
+</dl>
+<a name="eliminateEdgesWithAbsoluteLength()"></a>
+<h3>eliminateEdgesWithAbsoluteLength</h3>
+<p class="function">
+<b>bool</b> <b>eliminateEdgesWithAbsoluteLength</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Absolute Length*
+Edges whose length is shorter than the specified value will be removed.
+</dl>
+<a name="eliminateInternalEccentricities()"></a>
+<h3>eliminateInternalEccentricities</h3>
+<p class="function">
+<b>bool</b> <b>eliminateInternalEccentricities</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Eliminate internal eccentricities*
+For consistent beam eccentricities at a node, move node according to eccentricity vector on FEM file.
+If this option is disabled, the node will be positioned on the centric beam and GeniE will instead provide separate information about the eccentricity on the FEM file.
+</dl>
+<a name="eliminateInternalEdges()"></a>
+<h3>eliminateInternalEdges</h3>
+<p class="function">
+<b>bool</b> <b>eliminateInternalEdges</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Remove Internal Edges*
+Eliminate edges not required to represent the model.
+This option can be used to reduce the number of patches on a plate that needs to be meshed separately.
+</dl>
+<a name="eliminateInternalVertices()"></a>
+<h3>eliminateInternalVertices</h3>
+<p class="function">
+<b>bool</b> <b>eliminateInternalVertices</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Remove Internal Vertices*
+Eliminate points not required to represent the model.
+This option can be used to get better mesh around holes with buckling stiffeners.
+</dl>
+<a name="eliminateNonConceptualEdges()"></a>
+<h3>eliminateNonConceptualEdges</h3>
+<p class="function">
+<b>bool</b> <b>eliminateNonConceptualEdges</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Eliminate non-conceptual short edges*
+Mesh edges shorter than specified value will be collapsed even if they are not caused by short model edges. This is done as a post-meshing operations, as opposed to the elimination of short model edges. Note that collapsing short edges may result in new edges which are still shorter than the threshold value. For that reason, the user may specify a number of times this operation will be performed. For performance reasons, this number should be as low as possible (preferably 1-3).
+</dl>
+<a name="eliminateShortEdges()"></a>
+<h3>eliminateShortEdges</h3>
+<p class="function">
+<b>bool</b> <b>eliminateShortEdges</b>()</p>
+<p>
+<a name="faceMeshStrategy()"></a>
+<h3>faceMeshStrategy</h3>
+<p class="function">
+<b><a href="FaceMeshStrategy.html">FaceMeshStrategy</a></b> <b>faceMeshStrategy</b>()</p>
+<p>
+<a name="failMaxAngleEnabled()"></a>
+<h3>failMaxAngleEnabled</h3>
+<p class="function">
+<b>bool</b> <b>failMaxAngleEnabled</b>()</p>
+<p>
+<a name="failMaxAngleLimit()"></a>
+<h3>failMaxAngleLimit</h3>
+<p class="function">
+<b><a href="Angle.html">Angle</a></b> <b>failMaxAngleLimit</b>()</p>
+<p>
+<a name="failMaxRelativeJacobiEnabled()"></a>
+<h3>failMaxRelativeJacobiEnabled</h3>
+<p class="function">
+<b>bool</b> <b>failMaxRelativeJacobiEnabled</b>()</p>
+<p>
+<a name="failMaxRelativeJacobiLimit()"></a>
+<h3>failMaxRelativeJacobiLimit</h3>
+<p class="function">
+<b>double</b> <b>failMaxRelativeJacobiLimit</b>()</p>
+<p>
+<a name="failMaxTwistAngleEnabled()"></a>
+<h3>failMaxTwistAngleEnabled</h3>
+<p class="function">
+<b>bool</b> <b>failMaxTwistAngleEnabled</b>()</p>
+<p>
+<a name="failMaxTwistAngleLimit()"></a>
+<h3>failMaxTwistAngleLimit</h3>
+<p class="function">
+<b><a href="Angle.html">Angle</a></b> <b>failMaxTwistAngleLimit</b>()</p>
+<p>
+<a name="failMinAngleEnabled()"></a>
+<h3>failMinAngleEnabled</h3>
+<p class="function">
+<b>bool</b> <b>failMinAngleEnabled</b>()</p>
+<p>
+<a name="failMinAngleLimit()"></a>
+<h3>failMinAngleLimit</h3>
+<p class="function">
+<b><a href="Angle.html">Angle</a></b> <b>failMinAngleLimit</b>()</p>
+<p>
+<a name="failMinNormalizedJacobiEnabled()"></a>
+<h3>failMinNormalizedJacobiEnabled</h3>
+<p class="function">
+<b>bool</b> <b>failMinNormalizedJacobiEnabled</b>()</p>
+<p>
+<a name="failMinNormalizedJacobiLimit()"></a>
+<h3>failMinNormalizedJacobiLimit</h3>
+<p class="function">
+<b>double</b> <b>failMinNormalizedJacobiLimit</b>()</p>
+<p>
+<a name="ignoreEccentricities()"></a>
+<h3>ignoreEccentricities</h3>
+<p class="function">
+<b>bool</b> <b>ignoreEccentricities</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*NonEccentric (CSR Bulk)*
+Check this when performing CSR Bulk code check.
+</dl>
+<a name="ignoreFilletOnSectionsWithFillets()"></a>
+<h3>ignoreFilletOnSectionsWithFillets</h3>
+<p class="function">
+<b>bool</b> <b>ignoreFilletOnSectionsWithFillets</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Ignore fillet on sections with fillets*
+Enable this option to force GeniE to produce FEM files which are compatible with other applications.
+For sections with non-zero fillet radius, this radius will be ignored on the mesh.
+</dl>
+<a name="includeUnusedProperties()"></a>
+<h3>includeUnusedProperties</h3>
+<p class="function">
+<b>bool</b> <b>includeUnusedProperties</b>()</p>
+<p>
+<a name="loadsBasedOnGrossDimensions()"></a>
+<h3>loadsBasedOnGrossDimensions</h3>
+<p class="function">
+<b>bool</b> <b>loadsBasedOnGrossDimensions</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Loads based on gross dimensions*
+This option is only valid for the 'Net Generic' case.
+Default rule is that environmental loads and self weight of beams are calculated using gross (original) dimensions.
+If unchecked, net (corroded) dimensions are used.
+</dl>
+<a name="longitudinalMassOnNonStructuralElements()"></a>
+<h3>longitudinalMassOnNonStructuralElements</h3>
+<p class="function">
+<b>bool</b> <b>longitudinalMassOnNonStructuralElements</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Longitudinal Mass On Nonstructural Elements*
+Longitudinal mass (along direction of beam) is included in the element mass matrix for nonstructural beam elements.
+</dl>
+<a name="maxChordEnabled()"></a>
+<h3>maxChordEnabled</h3>
+<p class="function">
+<b>bool</b> <b>maxChordEnabled</b>()</p>
+<p>
+<a name="maxChordLimit()"></a>
+<h3>maxChordLimit</h3>
+<p class="function">
+<b>double</b> <b>maxChordLimit</b>()</p>
+<p>
+<a name="meshDensityRounded()"></a>
+<h3>meshDensityRounded</h3>
+<p class="function">
+<b>bool</b> <b>meshDensityRounded</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Round off Mesh Density*
+The default rule is that elements are shorter than or equal to mesh density. Thus, the number of elements along an edge is obtained by rounding up (edgeLength/meshDensity). Turning on the "Round off Mesh Density" option allows for slightly larger elements. This is achieved by instead rounding up (edgeLength/meshDensity - 0.5).
+</dl>
+<a name="minMaxDensityRatio()"></a>
+<h3>minMaxDensityRatio</h3>
+<p class="function">
+<b>double</b> <b>minMaxDensityRatio</b>()</p>
+<p>
+<a name="numberIterationsEliminateNonConceptualShortEdges()"></a>
+<h3>numberIterationsEliminateNonConceptualShortEdges</h3>
+<p class="function">
+<b>int</b> <b>numberIterationsEliminateNonConceptualShortEdges</b>()</p>
+<p>
+<a name="preferLinearDependencies()"></a>
+<h3>preferLinearDependencies</h3>
+<p class="function">
+<b>bool</b> <b>preferLinearDependencies</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Prefer Linear Dependencies*
+With this option enabled, point-point connections which are modeled with stiff springs will be meshed as linear dependencies.
+If the option is disabled, the degrees of freedom modeled with linear dependencies will be meshed using stiff springs instead.
+</dl>
+<a name="preferPointMassAsNodeMass()"></a>
+<h3>preferPointMassAsNodeMass</h3>
+<p class="function">
+<b>bool</b> <b>preferPointMassAsNodeMass</b>()</p>
+<p>
+<a name="preferRectangularMesh()"></a>
+<h3>preferRectangularMesh</h3>
+<p class="function">
+<b>bool</b> <b>preferRectangularMesh</b>()</p>
+<p>
+<a name="repairSplitTopology()"></a>
+<h3>repairSplitTopology</h3>
+<p class="function">
+<b>bool</b> <b>repairSplitTopology</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Repair split topology for meshing*
+Attempt to repair split edges before conditional remesh. This will apply to edges which are split at an already existing node position.
+"The reparation will attempt to redistribute nodes and elements between the edges resulting from the split so that no remeshing will be called for.
+"If second order elements are used the option will be ignored. Edges which are split but will be idealized during meshing cannot be repaired.
+"Edges which are split in more than one point or have other modifications cannot be repaired.
+</dl>
+<a name="scantlings()"></a>
+<h3>scantlings</h3>
+<p class="function">
+<b><a href="Scantlings.html">Scantlings</a></b> <b>scantlings</b>()</p>
+<p>
+<a name="splitMaxAngleEnabled()"></a>
+<h3>splitMaxAngleEnabled</h3>
+<p class="function">
+<b>bool</b> <b>splitMaxAngleEnabled</b>()</p>
+<p>
+<a name="splitMaxAngleLimit()"></a>
+<h3>splitMaxAngleLimit</h3>
+<p class="function">
+<b><a href="Angle.html">Angle</a></b> <b>splitMaxAngleLimit</b>()</p>
+<p>
+<a name="splitMaxRelativeJacobiEnabled()"></a>
+<h3>splitMaxRelativeJacobiEnabled</h3>
+<p class="function">
+<b>bool</b> <b>splitMaxRelativeJacobiEnabled</b>()</p>
+<p>
+<a name="splitMaxRelativeJacobiLimit()"></a>
+<h3>splitMaxRelativeJacobiLimit</h3>
+<p class="function">
+<b>double</b> <b>splitMaxRelativeJacobiLimit</b>()</p>
+<p>
+<a name="splitMaxTwistAngleEnabled()"></a>
+<h3>splitMaxTwistAngleEnabled</h3>
+<p class="function">
+<b>bool</b> <b>splitMaxTwistAngleEnabled</b>()</p>
+<p>
+<a name="splitMaxTwistAngleLimit()"></a>
+<h3>splitMaxTwistAngleLimit</h3>
+<p class="function">
+<b><a href="Angle.html">Angle</a></b> <b>splitMaxTwistAngleLimit</b>()</p>
+<p>
+<a name="splitMinAngleEnabled()"></a>
+<h3>splitMinAngleEnabled</h3>
+<p class="function">
+<b>bool</b> <b>splitMinAngleEnabled</b>()</p>
+<p>
+<a name="splitMinAngleLimit()"></a>
+<h3>splitMinAngleLimit</h3>
+<p class="function">
+<b><a href="Angle.html">Angle</a></b> <b>splitMinAngleLimit</b>()</p>
+<p>
+<a name="splitMinNormalizedJacobiEnabled()"></a>
+<h3>splitMinNormalizedJacobiEnabled</h3>
+<p class="function">
+<b>bool</b> <b>splitMinNormalizedJacobiEnabled</b>()</p>
+<p>
+<a name="splitMinNormalizedJacobiLimit()"></a>
+<h3>splitMinNormalizedJacobiLimit</h3>
+<p class="function">
+<b>double</b> <b>splitMinNormalizedJacobiLimit</b>()</p>
+<p>
+<a name="superElementType()"></a>
+<h3>superElementType</h3>
+<p class="function">
+<b>int</b> <b>superElementType</b>()</p>
+<p>
+<a name="useCocentricBeams()"></a>
+<h3>useCocentricBeams</h3>
+<p class="function">
+<b>bool</b> <b>useCocentricBeams</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*CoCentric (CSR Tank)*
+Check this when performing CSR Tank code check.
+</dl>
+<a name="useDrillingElements()"></a>
+<h3>useDrillingElements</h3>
+<p class="function">
+<b>bool</b> <b>useDrillingElements</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Drilling Elements*
+The 3 & 4 node drilling shell elements will give better results in problems with skew elements where membrane behavior dominates, but are not necessarily better in all other situations.
+</dl>
+<a name="useEccentricHinges()"></a>
+<h3>useEccentricHinges</h3>
+<p class="function">
+<b>bool</b> <b>useEccentricHinges</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Eccentric Hinges*
+Check this option for creating Eccentric Hinges.
+Hinges that are applied at end of flexible part of beam in stead of at nodes for beam elements.
+</dl>
+<a name="useLongLoadcaseNames()"></a>
+<h3>useLongLoadcaseNames</h3>
+<p class="function">
+<b>bool</b> <b>useLongLoadcaseNames</b>()</p>
+<p>
+<a name="useLongPropertyNames()"></a>
+<h3>useLongPropertyNames</h3>
+<p class="function">
+<b>bool</b> <b>useLongPropertyNames</b>()</p>
+<p>
+<a name="useLongSetNames()"></a>
+<h3>useLongSetNames</h3>
+<p class="function">
+<b>bool</b> <b>useLongSetNames</b>()</p>
+<p>
+<a name="useMinMaxDensityRatio()"></a>
+<h3>useMinMaxDensityRatio</h3>
+<p class="function">
+<b>bool</b> <b>useMinMaxDensityRatio</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Adjust edge density using ratio*
+Density on edges with no enforced density will be calculated from the minimum and maximum density specified on the other edges of a face.
+The density will be set to maximum of minimum face density or ratio multiplied by maximum density. I.e. if ratio is 0, minimum density is used and if ratio is 1.0 maximum density will be used.
+Values outside the range 0-1 is not accepted. This feature is especially useful for areas of the model where the user does not want to specify a density.
+</dl>
+<a name="usePartialMeshing()"></a>
+<h3>usePartialMeshing</h3>
+<p class="function">
+<b>bool</b> <b>usePartialMeshing</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Deprecated, does nothing.
+</dl>
+<a name="useThickOverrideThinShellElements()"></a>
+<h3>useThickOverrideThinShellElements</h3>
+<p class="function">
+<b>bool</b> <b>useThickOverrideThinShellElements</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*First Order Thick Shell Elements*
+In the analysis, first order thin shell elements will be overridden by first order thick shell element in Sestra.
+The 3 & 4 node thick shell elements are suited for models where the element thickness is significant relative to the element mesh size and where out of plane shear forces are significant, but are not necessarily better in all other situations.
+In the Sestra analysis run, the option THCK is set to 1. on ELOP card in the Sestra input file. 
+Sestra 10.11 or later is required.
+</dl>
+<a name="useUniformizedFaceParameterization()"></a>
+<h3>useUniformizedFaceParameterization</h3>
+<p class="function">
+<b>bool</b> <b>useUniformizedFaceParameterization</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Uniformized Face Parameterization*
+For certain surfaces, the default parameterization provided by Acis is unsatisfactory for the low-level face mesher. 
+To improve the mesh of surfaces with complex geometry, try enabling this option. Note, however, that this will significantly reduce meshing performance.
+</dl>
+<a name="writeLoadsSeparate()"></a>
+<h3>writeLoadsSeparate</h3>
+<p class="function">
+<b>bool</b> <b>writeLoadsSeparate</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>*Write loads separate*
+Should normally be enabled, since memory usage is reduced.
+Disable the option during problem solving if some loads appear to be missing on FEM model, and check if this has any positive effect.
+</dl>
+</body>
+</html>

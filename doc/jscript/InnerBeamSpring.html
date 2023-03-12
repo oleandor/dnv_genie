@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: InnerBeamSpring
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: InnerBeamSpring
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Mesh the overlapping beams using double nodes connected with springs.
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Specify a spring connection between the beams</td></tr><tr>  <td>     <code>MySpringConnection = InnerBeamSpring(250,350,350,2500,0 kN*m,0 kN*m);<br/>     </code>		<div class="explanation">This command is scripted<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="Property.html">Property</a>
+            |
+            +--<a href="BeamType.html">BeamType</a>
+                 |
+                 +--<a href="BeamTypeInnerBeam.html">BeamTypeInnerBeam</a>
+                      |
+                      +--<b>InnerBeamSpring</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="InnerBeamSpring.html#InnerBeamSpring(TranslationalStiffness, TranslationalStiffness, TranslationalStiffness, RotationalStiffness, RotationalStiffness, RotationalStiffness)">InnerBeamSpring</a></b>(<b><a href="TranslationalStiffness.html">TranslationalStiffness</a></b>, <b><a href="TranslationalStiffness.html">TranslationalStiffness</a></b>, <b><a href="TranslationalStiffness.html">TranslationalStiffness</a></b>, <b><a href="RotationalStiffness.html">RotationalStiffness</a></b>, <b><a href="RotationalStiffness.html">RotationalStiffness</a></b>, <b><a href="RotationalStiffness.html">RotationalStiffness</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="RotationalStiffness.html">RotationalStiffness</a></b></code>
+</td>
+<td width="90%"><code><b><a href="InnerBeamSpring.html#rx()">rx</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="RotationalStiffness.html">RotationalStiffness</a></b></code>
+</td>
+<td width="90%"><code><b><a href="InnerBeamSpring.html#ry()">ry</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="RotationalStiffness.html">RotationalStiffness</a></b></code>
+</td>
+<td width="90%"><code><b><a href="InnerBeamSpring.html#rz()">rz</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="unsigned___int64.html">unsigned __int64</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Property.html#useCount()">useCount</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Returns the number of objects that uses this property</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="TranslationalStiffness.html">TranslationalStiffness</a></b></code>
+</td>
+<td width="90%"><code><b><a href="InnerBeamSpring.html#x()">x</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="TranslationalStiffness.html">TranslationalStiffness</a></b></code>
+</td>
+<td width="90%"><code><b><a href="InnerBeamSpring.html#y()">y</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="TranslationalStiffness.html">TranslationalStiffness</a></b></code>
+</td>
+<td width="90%"><code><b><a href="InnerBeamSpring.html#z()">z</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="InnerBeamSpring(TranslationalStiffness, TranslationalStiffness, TranslationalStiffness, RotationalStiffness, RotationalStiffness, RotationalStiffness)"></a>
+<h3>InnerBeamSpring</h3>
+<p class="function">
+<b>InnerBeamSpring</b>(<b><a href="TranslationalStiffness.html">TranslationalStiffness</a></b>, <b><a href="TranslationalStiffness.html">TranslationalStiffness</a></b>, <b><a href="TranslationalStiffness.html">TranslationalStiffness</a></b>, <b><a href="RotationalStiffness.html">RotationalStiffness</a></b>, <b><a href="RotationalStiffness.html">RotationalStiffness</a></b>, <b><a href="RotationalStiffness.html">RotationalStiffness</a></b>)</p>
+<p>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="rx()"></a>
+<h3>rx</h3>
+<p class="function">
+<b><a href="RotationalStiffness.html">RotationalStiffness</a></b> <b>rx</b>()</p>
+<p>
+<a name="ry()"></a>
+<h3>ry</h3>
+<p class="function">
+<b><a href="RotationalStiffness.html">RotationalStiffness</a></b> <b>ry</b>()</p>
+<p>
+<a name="rz()"></a>
+<h3>rz</h3>
+<p class="function">
+<b><a href="RotationalStiffness.html">RotationalStiffness</a></b> <b>rz</b>()</p>
+<p>
+<a name="x()"></a>
+<h3>x</h3>
+<p class="function">
+<b><a href="TranslationalStiffness.html">TranslationalStiffness</a></b> <b>x</b>()</p>
+<p>
+<a name="y()"></a>
+<h3>y</h3>
+<p class="function">
+<b><a href="TranslationalStiffness.html">TranslationalStiffness</a></b> <b>y</b>()</p>
+<p>
+<a name="z()"></a>
+<h3>z</h3>
+<p class="function">
+<b><a href="TranslationalStiffness.html">TranslationalStiffness</a></b> <b>z</b>()</p>
+<p>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: WRMorison
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: WRMorison
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Define Morison in Analysis. You may define if velocity decomposition shall be used when calculating<br/>the normal components of the drag forces, i.e. how to handle the v2 term in the Morison equation.
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Add Morison to analysis</td></tr><tr>  <td>     <code>Analysis1.step(2).morison().normalToElement(true);<br/>     </code>		<div class="explanation">This command is scripted. Please read the user manual GeniE Vol. 6 for more information about Morison.<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="UnnamedObject.html">UnnamedObject</a>
+       |
+       +--<b>WRMorison</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="WRMorison.html#lowerLimitDiameterMacCamyFuchs()">lowerLimitDiameterMacCamyFuchs</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Lower limit diameter for MacCamy-Fuchs use</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRMorison.html#normalToElement()">normalToElement</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Drag term absolute velocity multiplied with velocity component normal to element</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRMorison.html#total()">total</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Drag term absolute velocity replaced by total velocity</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRMorison.html#useMacCamyFuchs()">useMacCamyFuchs</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Compute inertia force coefficient CM using MacCamy Fuchs formula for vertical large diameter members</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="lowerLimitDiameterMacCamyFuchs()"></a>
+<h3>lowerLimitDiameterMacCamyFuchs</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>lowerLimitDiameterMacCamyFuchs</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Lower limit diameter for MacCamy-Fuchs use
+</dl>
+<a name="normalToElement()"></a>
+<h3>normalToElement</h3>
+<p class="function">
+<b>bool</b> <b>normalToElement</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Drag term absolute velocity multiplied with velocity component normal to element
+</dl>
+<a name="total()"></a>
+<h3>total</h3>
+<p class="function">
+<b>bool</b> <b>total</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Drag term absolute velocity replaced by total velocity
+</dl>
+<a name="useMacCamyFuchs()"></a>
+<h3>useMacCamyFuchs</h3>
+<p class="function">
+<b>bool</b> <b>useMacCamyFuchs</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Compute inertia force coefficient CM using MacCamy Fuchs formula for vertical large diameter members
+</dl>
+</body>
+</html>

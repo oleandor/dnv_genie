@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: PileSoilAnalysis
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: PileSoilAnalysis
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Define a Wave Load Analysis
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Execute and control input data for a pile soil analysis</td></tr><tr>  <td>     <code>Analysis1 = Analysis(true);<br/>Analysis1.add(MeshActivity());<br/>Analysis1.add(WaveLoadActivity(Condition1));<br/>Analysis2.add(PileSoilAnalysis(Condition1));<br/>Analysis1.add(LinearAnalysis());<br/>Analysis1.add(LoadResultsActivity());<br/>Analysis1.execute();<br/>     </code>		<div class="explanation">This command is scripted provided that you tick off for "Journal activity executions".<br/>It is required to define a wave load condition that can be referred to when defining the wave load activity<br/>(Insert|Environment|Deterministic Time Condition). For more details, see User Manual Volume 2 or 6.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Nonlinear Calculation - Material coefficients</td></tr><tr>  <td>     <code>Analysis1.step(3).soil.materialCoeffs.tanPhiCoeff = 1.1;<br/>Analysis1.step(3).soil.materialCoeffs.shearStrengthCoeff = 1.2;<br/>Analysis1.step(3).soil.materialCoeffs.skinFrictionCoeff = 1.3;<br/>Analysis1.step(3).soil.materialCoeffs.pileTipResistanceCoeff = 1.4;<br/>     </code>		<div class="explanation">This command is scripted. Material coefficients can be seen as safety factors used to modify the soil<br/>properties without changing the actual values. The actual values are divided by the coefficients meaning that<br/>a coefficient greater then one (1) reduces the capacity. For more details, see User Manual Volume 2 or 6.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Nonlinear Calculation - Soil Curve generation</td></tr><tr>  <td>     <code>Analysis1.step(3).soil.curveGeneration.lowestLevelWithCyclicPY = 1 m;<br/>Analysis1.step(3).soil.curveGeneration.lowestShearStiff = 120 KPa;<br/>Analysis1.step(3).soil.curveGeneration.zoneOfInfluenceTZ = 20;<br/>Analysis1.step(3).soil.curveGeneration.curveShapeFactorTZ = 0.85;<br/>     </code>		<div class="explanation">This command is scripted. For more details, see User Manual Volume 2 or 6.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Nonlinear Calculation - Group effects</td></tr><tr>  <td>     <code>Analysis1.step(3).soil.groupEffects. averagePoissonRatio = 0.6;<br/>Analysis1.step(3).soil.groupEffects. modulusOfElasticity(10000 KPa,0 m, 20000 KPa,-150 m);<br/>     </code>		<div class="explanation">Group interaction effects (pile-soil-pile interaction) are calculated from the elastic half-space theory assuming<br/>an E-modulus that increases linearly with depth. For more details, see User Manual Volume 2 or 6.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Nonlinear Calculation - Loads at surface</td></tr><tr>  <td>     <code>Analysis1.step(3).soil.loadsAtSurface.verticalStressAtSurface = 200 KPa;<br/>Analysis1.step(3).soil.loadsAtSurface.verticalStressUnderEmbankment = 100 KPa;<br/>Analysis1.step(3).soil.loadsAtSurface.widthOfEmbankmentSlopingPart = 1 m;<br/>Analysis1.step(3).soil.loadsAtSurface.distancePileToEmbankmentToe = 0.5 m;<br/>Analysis1.step(3).soil.loadsAtSurface.verticalStressUnderCircularLoadedArea = 50 KPa;<br/>     </code>		<div class="explanation">This command is scripted. Different types of vertical loading may exist at the soil surface in the vicinity of the pile.<br/>Such loading will influence the vertical stress down along the pile and hence the lateral resistance.<br/>For more details, see User Manual Volume 2 or 6.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Nonlinear Calculation - Splice</td></tr><tr>  <td>     <code>Analysis1.step(3).splice.solver.maxIterations = 25;<br/>Analysis1.step(3).splice.solver.convergenceCriterion = 0.0015 m;<br/>     </code>		<div class="explanation">This command is scripted. The solver settings that are used to control the Splice analysis are Max iterations<br/>and Convergence criterion. For more details, see User Manual Volume 2 or 6.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Linear Calculation</td></tr><tr>  <td>     <code>Analysis1 = Analysis(true);<br/>Analysis1.add(MeshActivity());<br/>Analysis1.add(WaveLoadActivity (Condition1));<br/>Analysis1.add(PileSoilAnalysis (Condition1));<br/>Analysis1.add(LoadResultsActivity());<br/>Analysis1.step(3).nonlinearAnalysis(false);<br/>     </code>		<div class="explanation">This command is scripted. It is possible to neglect the pile and soil analysis by inserting fixed boundary conditions<br/>along the piles and disregard the pile-soil analysis. This is the same as executing a wave and structural analysis where<br/>all piles are fixed at the finite element positions. For more details, see User Manual Volume 2 or 6.<br/>It is required to specify the pile boundary conditions to "Fixed" from the mesh activity.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Linear Calculation - Data check only</td></tr><tr>  <td>     <code>Analysis1.step(3).dataCheckOnly(true);<br/>     </code>		<div class="explanation">This command is scripted. The data check only option will run the Gensod activity, <br/>but only check the input data for the Splice analysis. For more details, see User Manual Volume 2 or 6.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Linear Calculation - Automatic generation of input files</td></tr><tr>  <td>     <code>Analysis1.step(3).generateInput = false;<br/>     </code>		<div class="explanation">This command is scripted. The default option ("True") implies that the input files for Gensod and Splice <br/>are automatically generated. In other words, if you modify one of the parameters this file is automatically updated<br/>prior to the next analysis run. If you want to have a manual control of the input file you should deselect this option. <br/>For more details, see User Manual Volume 2 or 6.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Running only Gensod step to enable Usfos export without running Splice</td></tr><tr>  <td>     <code>Analysis1 = Analysis(true);<br/>Analysis1.add(MeshActivity());<br/>Analysis1.add(WaveLoadActivity (Condition1));<br/>Analysis1.add(PileSoilAnalysis (Condition1));<br/>Analysis1.add(LoadResultsActivity());<br/>Analysis1.step(3).gensodOnly();<br/>     </code>		<div class="explanation">This command is scripted provided that you tick off for "Journal activity executions".<br/>When the user want to export to Usfos without running Splice, the 'gensodOnly()' command must be given.<br/>This will prevent execution of Sestra Reduction, Splice and Sestra Retracking steps and also modify the GUI.<br/>It is required to define a wave load condition that can be referred to when defining the wave load activity<br/>(Insert|Environment|Deterministic Time Condition). For more details, see User Manual Volume 2 or 6.<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="class_jmfDuplicateObject_class_jmfNamedObject_.html">class jmfDuplicateObject<class jmfNamedObject></a>
+            |
+            +--<a href="AbstractActivity.html">AbstractActivity</a>
+                 |
+                 +--<a href="AnalysisRun.html">AnalysisRun</a>
+                      |
+                      +--<b>PileSoilAnalysis</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="PileSoilAnalysis.html#PileSoilAnalysis(evHydroCondition)">PileSoilAnalysis</a></b>(<b><a href="evHydroCondition.html">evHydroCondition</a></b>)</code>
+<div class="explanation">
+Construct a new Pile Soil Analysis step</div></td>
+</tr>
+<tr >
+<td><code><b><a href="PileSoilAnalysis.html#PileSoilAnalysis(evHydroCondition, anSestraGenerator::ESLOption)">PileSoilAnalysis</a></b>(<b><a href="evHydroCondition.html">evHydroCondition</a></b>, <b><a href="anSestraGenerator__ESLOption.html">anSestraGenerator::ESLOption</a></b>)</code>
+<div class="explanation">
+Construct a new Pile Soil Analysis step (with ESL option)</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractActivity.html#enableLoadCase(AbstractLoadCase, bool)">enableLoadCase</a></b>(<b><a href="AbstractLoadCase.html">AbstractLoadCase</a></b>, <b>bool</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractActivity.html#execute()">execute</a></b>()</code>
+<div class="explanation">
+Execute the analysis</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractActivity.html#setActive()">setActive</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="lcActivity.html">lcActivity</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractActivity.html#step(int)">step</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Retrieve an object in the analysis</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="class_jmfDuplicateObject_class_jmfNamedObject_.html#copy()">copy</a></b>()</code>
+<div class="explanation">
+Make an identical copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="IntegratedRunType.html">IntegratedRunType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="PileSoilAnalysis.html#IntegratedRunType()">IntegratedRunType</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Integrated Run Type</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="AnalysisRun.html#dataCheckOnly()">dataCheckOnly</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Data check only</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="AnalysisRun.html#generateInput()">generateInput</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Generate input files</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="evHydroCondition.html">evHydroCondition</a></b></code>
+</td>
+<td width="90%"><code><b><a href="PileSoilAnalysis.html#hydroCondition()">hydroCondition</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Connected hydro condition</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="AbstractActivity.html#needsToBeExecuted()">needsToBeExecuted</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="PileSoilAnalysis.html#nonlinearAnalysis()">nonlinearAnalysis</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Nonlinear Analysis</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="IRSestra.html">IRSestra</a></b></code>
+</td>
+<td width="90%"><code><b><a href="PileSoilAnalysis.html#sestra()">sestra</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+The sestra data</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="IRSoil.html">IRSoil</a></b></code>
+</td>
+<td width="90%"><code><b><a href="PileSoilAnalysis.html#soil()">soil</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+The soil data</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="IRSplice.html">IRSplice</a></b></code>
+</td>
+<td width="90%"><code><b><a href="PileSoilAnalysis.html#splice()">splice</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+The splice data</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="PileSoilAnalysis(evHydroCondition)"></a>
+<h3>PileSoilAnalysis</h3>
+<p class="function">
+<b>PileSoilAnalysis</b>(<b><a href="evHydroCondition.html">evHydroCondition</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new Pile Soil Analysis step
+</dl>
+<hr>
+
+<a name="PileSoilAnalysis(evHydroCondition, anSestraGenerator::ESLOption)"></a>
+<h3>PileSoilAnalysis</h3>
+<p class="function">
+<b>PileSoilAnalysis</b>(<b><a href="evHydroCondition.html">evHydroCondition</a></b>, <b><a href="anSestraGenerator__ESLOption.html">anSestraGenerator::ESLOption</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new Pile Soil Analysis step (with ESL option)
+</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="IntegratedRunType()"></a>
+<h3>IntegratedRunType</h3>
+<p class="function">
+<b><a href="IntegratedRunType.html">IntegratedRunType</a></b> <b>IntegratedRunType</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Integrated Run Type
+</dl>
+<a name="hydroCondition()"></a>
+<h3>hydroCondition</h3>
+<p class="function">
+<b><a href="evHydroCondition.html">evHydroCondition</a></b> <b>hydroCondition</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Connected hydro condition
+</dl>
+<a name="nonlinearAnalysis()"></a>
+<h3>nonlinearAnalysis</h3>
+<p class="function">
+<b>bool</b> <b>nonlinearAnalysis</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Nonlinear Analysis
+</dl>
+<a name="sestra()"></a>
+<h3>sestra</h3>
+<p class="function">
+<b><a href="IRSestra.html">IRSestra</a></b> <b>sestra</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>The sestra data
+</dl>
+<a name="soil()"></a>
+<h3>soil</h3>
+<p class="function">
+<b><a href="IRSoil.html">IRSoil</a></b> <b>soil</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>The soil data
+</dl>
+<a name="splice()"></a>
+<h3>splice</h3>
+<p class="function">
+<b><a href="IRSplice.html">IRSplice</a></b> <b>splice</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>The splice data
+</dl>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: UnitsRule
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: UnitsRule
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Specify default input units and how labels etc, will appear on the desktop.
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>New workspace</td></tr><tr>  <td>     <code>GenieRules.Units.setOutputUnits("mm", "N", "delC");<br/>GenieRules.Units.setInputUnit(Length, "mm");<br/>GenieRules.Units.setInputUnit(Force, "N");<br/>GenieRules.Units.setInputUnit(TempDiff, "delC");<br/>GenieRules.Tolerances.useTolerantModelling = true;<br/>GenieRules.Compatibility.version = "V4.0-14";<br/>     </code>		<div class="explanation">This command is not scripted. If non-default output units are selected <br/>these will be logged. Typically when selecting "mm" as output units<br/>		</div>   </td></tr></table><hr/>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="UnitsRule.html#getDatabaseUnit(Variant)">getDatabaseUnit</a></b>(<b><a href="Variant.html">Variant</a></b>)</code>
+<div class="explanation">
+Deprecated, use getOutputUnit instead</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="UnitsRule.html#getInputUnit(UnitType)">getInputUnit</a></b>(<b><a href="UnitType.html">UnitType</a></b><span title="The quantity type you want to return the units for"> unitType</span>)</code>
+<div class="explanation">
+Return the input units for this quantity</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="UnitsRule.html#getOutputUnit(UnitType)">getOutputUnit</a></b>(<b><a href="UnitType.html">UnitType</a></b><span title="The quantity type you want to return the units for"> unitType</span>)</code>
+<div class="explanation">
+Return the output units for this quantity</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="UnitsRule.html#resetToDatabaseUnits()">resetToDatabaseUnits</a></b>()</code>
+<div class="explanation">
+Deprecated, use resetToOutputUnits instead</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="UnitsRule.html#resetToOutputUnits()">resetToOutputUnits</a></b>()</code>
+<div class="explanation">
+Reset all input units to the current output units</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="UnitsRule.html#setAcisUnits(string)">setAcisUnits</a></b>(<b>string</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="UnitsRule.html#setAcisUnitsToDatabaseUnits()">setAcisUnitsToDatabaseUnits</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="UnitsRule.html#setDatabaseUnits(string, string, string)">setDatabaseUnits</a></b>(<b>string</b>, <b>string</b>, <b>string</b>)</code>
+<div class="explanation">
+Deprecated, use setOutputUnits instead</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="UnitsRule.html#setDisplayFormat(UnitType, unsigned int, NumberFormat)">setDisplayFormat</a></b>(<b><a href="UnitType.html">UnitType</a></b><span title="The quantity type you want to change the display format for"> unitType</span>, <b><a href="unsigned_int.html">unsigned int</a></b><span title="The number of digits to be presented"> precision</span>, <b><a href="NumberFormat.html">NumberFormat</a></b><span title="Defines the formatting of numbers of type <code>unitType</code>"> format</span>)</code>
+<div class="explanation">
+Define the display format of this phenomenon</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="UnitsRule.html#setInputUnit(UnitType, string)">setInputUnit</a></b>(<b><a href="UnitType.html">UnitType</a></b><span title="The quantity type you want to change the units for"> unitType</span>, <b>string</b><span title="The quantity type you want to change the units for"> unitName</span>)</code>
+<div class="explanation">
+Change the input units for this quantity</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="UnitsRule.html#setOutputUnits(string, string, string)">setOutputUnits</a></b>(<b>string</b><span title="The output length unit"> length</span>, <b>string</b><span title="The output force unit"> force</span>, <b>string</b><span title="The output temperature difference unit"> tempDiff</span>)</code>
+<div class="explanation">
+Set the output units for this session</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="getDatabaseUnit(Variant)"></a>
+<h3>getDatabaseUnit</h3>
+<p class="function">
+<b>string</b> <b>getDatabaseUnit</b>(<b><a href="Variant.html">Variant</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Deprecated, use getOutputUnit instead
+</dl>
+<hr>
+
+<a name="getInputUnit(UnitType)"></a>
+<h3>getInputUnit</h3>
+<p class="function">
+<b>string</b> <b>getInputUnit</b>(<b><a href="UnitType.html">UnitType</a></b><span title="The quantity type you want to return the units for"> unitType</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Return the input units for this quantity
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>unitType</code> - The quantity type you want to return the units for</dl>
+<hr>
+
+<a name="getOutputUnit(UnitType)"></a>
+<h3>getOutputUnit</h3>
+<p class="function">
+<b>string</b> <b>getOutputUnit</b>(<b><a href="UnitType.html">UnitType</a></b><span title="The quantity type you want to return the units for"> unitType</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Return the output units for this quantity
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>unitType</code> - The quantity type you want to return the units for</dl>
+<hr>
+
+<a name="resetToDatabaseUnits()"></a>
+<h3>resetToDatabaseUnits</h3>
+<p class="function">
+<b>&nbsp;</b> <b>resetToDatabaseUnits</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Deprecated, use resetToOutputUnits instead
+</dl>
+<hr>
+
+<a name="resetToOutputUnits()"></a>
+<h3>resetToOutputUnits</h3>
+<p class="function">
+<b>&nbsp;</b> <b>resetToOutputUnits</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reset all input units to the current output units
+</dl>
+<hr>
+
+<a name="setAcisUnits(string)"></a>
+<h3>setAcisUnits</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setAcisUnits</b>(<b>string</b>)</p>
+<p>
+<hr>
+
+<a name="setAcisUnitsToDatabaseUnits()"></a>
+<h3>setAcisUnitsToDatabaseUnits</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setAcisUnitsToDatabaseUnits</b>()</p>
+<p>
+<hr>
+
+<a name="setDatabaseUnits(string, string, string)"></a>
+<h3>setDatabaseUnits</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setDatabaseUnits</b>(<b>string</b>, <b>string</b>, <b>string</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Deprecated, use setOutputUnits instead
+</dl>
+<hr>
+
+<a name="setDisplayFormat(UnitType, unsigned int, NumberFormat)"></a>
+<h3>setDisplayFormat</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setDisplayFormat</b>(<b><a href="UnitType.html">UnitType</a></b><span title="The quantity type you want to change the display format for"> unitType</span>, <b><a href="unsigned_int.html">unsigned int</a></b><span title="The number of digits to be presented"> precision</span>, <b><a href="NumberFormat.html">NumberFormat</a></b><span title="Defines the formatting of numbers of type <code>unitType</code>"> format</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Define the display format of this phenomenonThis formatting will typically be applied in the model documentation
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>unitType</code> - The quantity type you want to change the display format for<dd><code>precision</code> - The number of digits to be presented<dd><code>format</code> - Defines the formatting of numbers of type <code>unitType</code></dl>
+<hr>
+
+<a name="setInputUnit(UnitType, string)"></a>
+<h3>setInputUnit</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setInputUnit</b>(<b><a href="UnitType.html">UnitType</a></b><span title="The quantity type you want to change the units for"> unitType</span>, <b>string</b><span title="The quantity type you want to change the units for"> unitName</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Change the input units for this quantity
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>unitType</code> - The quantity type you want to change the units for<dd><code>unitName</code> - The quantity type you want to change the units for</dl>
+<hr>
+
+<a name="setOutputUnits(string, string, string)"></a>
+<h3>setOutputUnits</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setOutputUnits</b>(<b>string</b><span title="The output length unit"> length</span>, <b>string</b><span title="The output force unit"> force</span>, <b>string</b><span title="The output temperature difference unit"> tempDiff</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set the output units for this sessionThis governs the default unit for output files, such as FEM file. You can change it whenever you want
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>length</code> - The output length unit<dd><code>force</code> - The output force unit<dd><code>tempDiff</code> - The output temperature difference unit</dl>
+<hr>
+
+</body>
+</html>

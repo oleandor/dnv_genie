@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: MeshPriority
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: MeshPriority
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Define mesh priority sets that can be used during meshing. <br/>A mesh priority set will denote the meshing sequence.
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>New Mesh Priority</td></tr><tr>  <td>     <code>MeshPriority1 = MeshPriority();<br/>MeshPriority1.addMeshPriority();<br/>MeshPriority1.meshPriority(1).add(Bm1);<br/>MeshPriority1.addMeshPriority();<br/>MeshPriority1.meshPriority(2).add(Bm10);<br/>MeshPriority1.addMeshPriority();<br/>MeshPriority1.meshPriority(3).add(Bm100);<br/>     </code>		<div class="explanation">This command is scripted. Typically for a mesh priority set with <br/>three priorities containing Bm1, Bm10 and Bm100 respectively<br/>There can be several mesh priority sets, but only one can be used for a meshing activity<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<b>MeshPriority</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="MeshPriority.html#MeshPriority()">MeshPriority</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="PriorityNode.html">PriorityNode</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshPriority.html#addMeshPriority()">addMeshPriority</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshPriority.html#insertMeshPriority(unsigned __int64)">insertMeshPriority</a></b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="PriorityNode.html">PriorityNode</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshPriority.html#meshPriority(unsigned __int64)">meshPriority</a></b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshPriority.html#removeMeshPriority(unsigned __int64)">removeMeshPriority</a></b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshPriority.html#swapMeshPriorities(unsigned __int64, unsigned __int64)">swapMeshPriorities</a></b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b>, <b><a href="unsigned___int64.html">unsigned __int64</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="MeshPriority()"></a>
+<h3>MeshPriority</h3>
+<p class="function">
+<b>MeshPriority</b>()</p>
+<p>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="addMeshPriority()"></a>
+<h3>addMeshPriority</h3>
+<p class="function">
+<b><a href="PriorityNode.html">PriorityNode</a></b> <b>addMeshPriority</b>()</p>
+<p>
+<hr>
+
+<a name="insertMeshPriority(unsigned __int64)"></a>
+<h3>insertMeshPriority</h3>
+<p class="function">
+<b>&nbsp;</b> <b>insertMeshPriority</b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b>)</p>
+<p>
+<hr>
+
+<a name="meshPriority(unsigned __int64)"></a>
+<h3>meshPriority</h3>
+<p class="function">
+<b><a href="PriorityNode.html">PriorityNode</a></b> <b>meshPriority</b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b>)</p>
+<p>
+<hr>
+
+<a name="removeMeshPriority(unsigned __int64)"></a>
+<h3>removeMeshPriority</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeMeshPriority</b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b>)</p>
+<p>
+<hr>
+
+<a name="swapMeshPriorities(unsigned __int64, unsigned __int64)"></a>
+<h3>swapMeshPriorities</h3>
+<p class="function">
+<b>&nbsp;</b> <b>swapMeshPriorities</b>(<b><a href="unsigned___int64.html">unsigned __int64</a></b>, <b><a href="unsigned___int64.html">unsigned __int64</a></b>)</p>
+<p>
+<hr>
+
+</body>
+</html>

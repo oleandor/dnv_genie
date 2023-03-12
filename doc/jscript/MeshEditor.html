@@ -1,0 +1,893 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: MeshEditor
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: MeshEditor
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<b>MeshEditor</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="MeshEditor.html#MeshEditor(Analysis)">MeshEditor</a></b>(<b><a href="Analysis.html">Analysis</a></b>)</code>
+<div class="explanation">
+Create a new Mesh Editor.</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#AddBeamElement(long, long)">AddBeamElement</a></b>(<b><a href="long.html">long</a></b> node1, <b><a href="long.html">long</a></b>  node2)</code>
+<div class="explanation">
+Adds a beam element to provided nodes if no element exists already</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#AddNode(Point)">AddNode</a></b>(<b><a href="Point.html">Point</a></b> nodePosition)</code>
+<div class="explanation">
+Adds a node to the mesh at given position</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#AddPlateSeamsFromElements(Array)">AddPlateSeamsFromElements</a></b>(<b><a href="Array.html">Array</a></b> elements)</code>
+<div class="explanation">
+Adds plate seams to surround the selected elements</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#AddQuadElement(long, long, long, long)">AddQuadElement</a></b>(<b><a href="long.html">long</a></b> node1, <b><a href="long.html">long</a></b>  node2, <b><a href="long.html">long</a></b>  node3, <b><a href="long.html">long</a></b>  node4)</code>
+<div class="explanation">
+Adds a quadratic element to provided nodes if no element exists already</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#AddTriElement(long, long, long)">AddTriElement</a></b>(<b><a href="long.html">long</a></b> node1, <b><a href="long.html">long</a></b>  node2, <b><a href="long.html">long</a></b>  node3)</code>
+<div class="explanation">
+Adds a triangle element to provided nodes if no element exists already</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#AlignNodesAlongLine(long, long, LengthVector3d)">AlignNodesAlongLine</a></b>(<b><a href="long.html">long</a></b> startNode, <b><a href="long.html">long</a></b>  endNode, <b><a href="LengthVector3d.html">LengthVector3d</a></b>  vector)</code>
+<div class="explanation">
+Aligns all nodes between start and end and moves by vector</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#AlignNodesInGrid(long, long)">AlignNodesInGrid</a></b>(<b><a href="long.html">long</a></b> element1, <b><a href="long.html">long</a></b>  element2)</code>
+<div class="explanation">
+Aligns all nodes inside grid</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#CollapseEdge(long, long, Point)">CollapseEdge</a></b>(<b><a href="long.html">long</a></b> startNode, <b><a href="long.html">long</a></b> endNode, <b><a href="Point.html">Point</a></b> newPos)</code>
+<div class="explanation">
+Collapses an edge, deleting some elements and turning some quads into triangles.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#ConvertBeamElementToPlates(long, bool, bool)">ConvertBeamElementToPlates</a></b>(<b><a href="long.html">long</a></b> beamElementId, <b>bool</b>  connectStart, <b>bool</b>  connectEnd)</code>
+<div class="explanation">
+Converts a beam element to plate elements and connects according to arguments</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#CreateBeamFromElements(Array, std::shared_ptr<mfNameMask>)">CreateBeamFromElements</a></b>(<b><a href="Array.html">Array</a></b> element1, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b>)</code>
+<div class="explanation">
+Creates a beam from a selection of chained beam elements</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#CreatePlateFromElements(Array, std::shared_ptr<mfNameMask>)">CreatePlateFromElements</a></b>(<b><a href="Array.html">Array</a></b> elements, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b> nameMask)</code>
+<div class="explanation">
+Creates a plate from a selection of neighboring elements</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#EnhanceQuality(double, long)">EnhanceQuality</a></b>(<b>double</b> acceptable level of quality (0-1), <b><a href="long.html">long</a></b>  element id)</code>
+<div class="explanation">
+Enhances quality of an element</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#Execute(DNVS::MoFa::AnalysisModel::ElementOperations::IElementOperation)">Execute</a></b>(<b><a href="DNVS__MoFa__AnalysisModel__ElementOperations__IElementOperation.html">DNVS::MoFa::AnalysisModel::ElementOperations::IElementOperation</a></b>)</code>
+<div class="explanation">
+Executes element operation</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#GetNodePosition(long)">GetNodePosition</a></b>(<b><a href="long.html">long</a></b> node)</code>
+<div class="explanation">
+Gets the position at the given node</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#ImprintNode(long, Point)">ImprintNode</a></b>(<b><a href="long.html">long</a></b> elementId, <b><a href="Point.html">Point</a></b>  nodePosition)</code>
+<div class="explanation">
+Creates node inside quad or triangle and splits it</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#MergeTriangles(long, long)">MergeTriangles</a></b>(<b><a href="long.html">long</a></b> triangle1, <b><a href="long.html">long</a></b> triangle2)</code>
+<div class="explanation">
+Merge two neighboring triangle elements</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#MoveNode(long, Point)">MoveNode</a></b>(<b><a href="long.html">long</a></b> nodeId, <b><a href="Point.html">Point</a></b>  position)</code>
+<div class="explanation">
+Move node</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#MoveTriangle(long, long, long)">MoveTriangle</a></b>(<b><a href="long.html">long</a></b> triangleElement, <b><a href="long.html">long</a></b> nodeId, <b><a href="long.html">long</a></b> quadElement)</code>
+<div class="explanation">
+Move a triangle element</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#RefineBox(Point, Point, BoxOptions, long)">RefineBox</a></b>(<b><a href="Point.html">Point</a></b> p1, <b><a href="Point.html">Point</a></b> p2, <b><a href="BoxOptions.html">BoxOptions</a></b> options, <b><a href="long.html">long</a></b> refinement)</code>
+<div class="explanation">
+Refines all elements inside a box</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#RefineBox(Point, Point, LocalSystem, BoxOptions, long)">RefineBox</a></b>(<b><a href="Point.html">Point</a></b> p1, <b><a href="Point.html">Point</a></b> p2, <b><a href="LocalSystem.html">LocalSystem</a></b> locsys, <b><a href="BoxOptions.html">BoxOptions</a></b> options, <b><a href="long.html">long</a></b> refinement)</code>
+<div class="explanation">
+Refines all elements inside a box</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#RefineBoxWithDensity(Point, Point, BoxOptions, Length, unsigned __int64, unsigned __int64)">RefineBoxWithDensity</a></b>(<b><a href="Point.html">Point</a></b> p1, <b><a href="Point.html">Point</a></b> p2, <b><a href="BoxOptions.html">BoxOptions</a></b> options, <b><a href="Length.html">Length</a></b> interiorDensity, <b><a href="unsigned___int64.html">unsigned __int64</a></b>, <b><a href="unsigned___int64.html">unsigned __int64</a></b>)</code>
+<div class="explanation">
+Refines all elements inside a box</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#RefineBoxWithDensity(Point, Point, BoxOptions, Length, unsigned __int64, unsigned __int64, EdgeRefinementOptions)">RefineBoxWithDensity</a></b>(<b><a href="Point.html">Point</a></b> p1, <b><a href="Point.html">Point</a></b> p2, <b><a href="BoxOptions.html">BoxOptions</a></b> options, <b><a href="Length.html">Length</a></b> interiorDensity, <b><a href="unsigned___int64.html">unsigned __int64</a></b> edgeRefinementOptions, <b><a href="unsigned___int64.html">unsigned __int64</a></b>, <b><a href="EdgeRefinementOptions.html">EdgeRefinementOptions</a></b>)</code>
+<div class="explanation">
+Refines all elements inside a box</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#RefineBoxWithDensity(Point, Point, LocalSystem, BoxOptions, Length, unsigned __int64, unsigned __int64)">RefineBoxWithDensity</a></b>(<b><a href="Point.html">Point</a></b> p1, <b><a href="Point.html">Point</a></b> p2, <b><a href="LocalSystem.html">LocalSystem</a></b> locsys, <b><a href="BoxOptions.html">BoxOptions</a></b> options, <b><a href="Length.html">Length</a></b> interiorDensity, <b><a href="unsigned___int64.html">unsigned __int64</a></b>, <b><a href="unsigned___int64.html">unsigned __int64</a></b>)</code>
+<div class="explanation">
+Refines all elements inside a box</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#RefineBoxWithDensity(Point, Point, LocalSystem, BoxOptions, Length, unsigned __int64, unsigned __int64, EdgeRefinementOptions)">RefineBoxWithDensity</a></b>(<b><a href="Point.html">Point</a></b> p1, <b><a href="Point.html">Point</a></b> p2, <b><a href="LocalSystem.html">LocalSystem</a></b> locsys, <b><a href="BoxOptions.html">BoxOptions</a></b> options, <b><a href="Length.html">Length</a></b> interiorDensity, <b><a href="unsigned___int64.html">unsigned __int64</a></b> edgeRefinementOptions, <b><a href="unsigned___int64.html">unsigned __int64</a></b>, <b><a href="EdgeRefinementOptions.html">EdgeRefinementOptions</a></b>)</code>
+<div class="explanation">
+Refines all elements inside a box</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#RefineEdge(long, long, long)">RefineEdge</a></b>(<b><a href="long.html">long</a></b> startNode, <b><a href="long.html">long</a></b> endNode, <b><a href="long.html">long</a></b> refinement)</code>
+<div class="explanation">
+Refines an edge</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#RefineElement(long, long)">RefineElement</a></b>(<b><a href="long.html">long</a></b> elementId, <b><a href="long.html">long</a></b> refinement)</code>
+<div class="explanation">
+Refines an element</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#RefineGrid(long, long, long)">RefineGrid</a></b>(<b><a href="long.html">long</a></b> element1, <b><a href="long.html">long</a></b> element2, <b><a href="long.html">long</a></b> refinement)</code>
+<div class="explanation">
+Refines a grid of elements</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#RefineGrid(long, long, long, bool)">RefineGrid</a></b>(<b><a href="long.html">long</a></b> element1, <b><a href="long.html">long</a></b> element2, <b><a href="long.html">long</a></b> refinement, <b>bool</b> gridIncludesBoundary)</code>
+<div class="explanation">
+Refines a grid of elements</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#RemoveElement(long)">RemoveElement</a></b>(<b><a href="long.html">long</a></b> elementId)</code>
+<div class="explanation">
+Removes element</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#RemoveNode(long)">RemoveNode</a></b>(<b><a href="long.html">long</a></b> nodeId)</code>
+<div class="explanation">
+Removes node connecting triangles or quad and triangle</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#RemoveOrphanElements()">RemoveOrphanElements</a></b>()</code>
+<div class="explanation">
+Delete orphan elements, i.e. elements not connected to any concepts</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#RenumberElement(long, long)">RenumberElement</a></b>(<b><a href="long.html">long</a></b> oldId, <b><a href="long.html">long</a></b> newId)</code>
+<div class="explanation">
+Renumber external element number, swaps if both numbers are present in model</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#RenumberNode(long, long)">RenumberNode</a></b>(<b><a href="long.html">long</a></b> oldId, <b><a href="long.html">long</a></b> newId)</code>
+<div class="explanation">
+Renumber external node number, swaps if both numbers are present in model</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#ResizeGrid(long, long, double)">ResizeGrid</a></b>(<b><a href="long.html">long</a></b> element1, <b><a href="long.html">long</a></b>  element2, <b>double</b>  targetDensity)</code>
+<div class="explanation">
+Resizes a grid to reach the target density, possibly by refining the outermost element strip</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#SetMeshAutoFixWhileRefining(bool)">SetMeshAutoFixWhileRefining</a></b>(<b>bool</b>)</code>
+<div class="explanation">
+Set mesh auto fixing while refining.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#SlideTriangle(long)">SlideTriangle</a></b>(<b><a href="long.html">long</a></b> triangleId)</code>
+<div class="explanation">
+Moves a triangle in wedge direction</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#SplitEdge(long, long, Point)">SplitEdge</a></b>(<b><a href="long.html">long</a></b> startNode, <b><a href="long.html">long</a></b> endNode, <b><a href="Point.html">Point</a></b> splitPoint)</code>
+<div class="explanation">
+Split edge and connected elements in two</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#SplitElement(long, long, long)">SplitElement</a></b>(<b><a href="long.html">long</a></b> elementId, <b><a href="long.html">long</a></b> nodeId, <b><a href="long.html">long</a></b> nodeId2)</code>
+<div class="explanation">
+Split quad element with diagonal</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#UpdateProperties(BasicConcept)">UpdateProperties</a></b>(<b><a href="BasicConcept.html">BasicConcept</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MeshEditor.html#UpdateProperties(scPlateSegment)">UpdateProperties</a></b>(<b><a href="scPlateSegment.html">scPlateSegment</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="MeshEditor(Analysis)"></a>
+<h3>MeshEditor</h3>
+<p class="function">
+<b>MeshEditor</b>(<b><a href="Analysis.html">Analysis</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a new Mesh Editor.
+</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="AddBeamElement(long, long)"></a>
+<h3>AddBeamElement</h3>
+<p class="function">
+<b>&nbsp;</b> <b>AddBeamElement</b>(<b><a href="long.html">long</a></b> node1, <b><a href="long.html">long</a></b>  node2)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Adds a beam element to provided nodes if no element exists already
+</dl>
+<hr>
+
+<a name="AddNode(Point)"></a>
+<h3>AddNode</h3>
+<p class="function">
+<b>&nbsp;</b> <b>AddNode</b>(<b><a href="Point.html">Point</a></b> nodePosition)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Adds a node to the mesh at given position
+</dl>
+<hr>
+
+<a name="AddPlateSeamsFromElements(Array)"></a>
+<h3>AddPlateSeamsFromElements</h3>
+<p class="function">
+<b>&nbsp;</b> <b>AddPlateSeamsFromElements</b>(<b><a href="Array.html">Array</a></b> elements)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Adds plate seams to surround the selected elements
+</dl>
+<hr>
+
+<a name="AddQuadElement(long, long, long, long)"></a>
+<h3>AddQuadElement</h3>
+<p class="function">
+<b>&nbsp;</b> <b>AddQuadElement</b>(<b><a href="long.html">long</a></b> node1, <b><a href="long.html">long</a></b>  node2, <b><a href="long.html">long</a></b>  node3, <b><a href="long.html">long</a></b>  node4)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Adds a quadratic element to provided nodes if no element exists already
+</dl>
+<hr>
+
+<a name="AddTriElement(long, long, long)"></a>
+<h3>AddTriElement</h3>
+<p class="function">
+<b>&nbsp;</b> <b>AddTriElement</b>(<b><a href="long.html">long</a></b> node1, <b><a href="long.html">long</a></b>  node2, <b><a href="long.html">long</a></b>  node3)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Adds a triangle element to provided nodes if no element exists already
+</dl>
+<hr>
+
+<a name="AlignNodesAlongLine(long, long, LengthVector3d)"></a>
+<h3>AlignNodesAlongLine</h3>
+<p class="function">
+<b>&nbsp;</b> <b>AlignNodesAlongLine</b>(<b><a href="long.html">long</a></b> startNode, <b><a href="long.html">long</a></b>  endNode, <b><a href="LengthVector3d.html">LengthVector3d</a></b>  vector)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Aligns all nodes between start and end and moves by vector
+</dl>
+<hr>
+
+<a name="AlignNodesInGrid(long, long)"></a>
+<h3>AlignNodesInGrid</h3>
+<p class="function">
+<b>&nbsp;</b> <b>AlignNodesInGrid</b>(<b><a href="long.html">long</a></b> element1, <b><a href="long.html">long</a></b>  element2)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Aligns all nodes inside grid
+</dl>
+<hr>
+
+<a name="CollapseEdge(long, long, Point)"></a>
+<h3>CollapseEdge</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CollapseEdge</b>(<b><a href="long.html">long</a></b> startNode, <b><a href="long.html">long</a></b> endNode, <b><a href="Point.html">Point</a></b> newPos)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Collapses an edge, deleting some elements and turning some quads into triangles.
+</dl>
+<hr>
+
+<a name="ConvertBeamElementToPlates(long, bool, bool)"></a>
+<h3>ConvertBeamElementToPlates</h3>
+<p class="function">
+<b>&nbsp;</b> <b>ConvertBeamElementToPlates</b>(<b><a href="long.html">long</a></b> beamElementId, <b>bool</b>  connectStart, <b>bool</b>  connectEnd)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Converts a beam element to plate elements and connects according to arguments
+</dl>
+<hr>
+
+<a name="CreateBeamFromElements(Array, std::shared_ptr<mfNameMask>)"></a>
+<h3>CreateBeamFromElements</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CreateBeamFromElements</b>(<b><a href="Array.html">Array</a></b> element1, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a beam from a selection of chained beam elements
+</dl>
+<hr>
+
+<a name="CreatePlateFromElements(Array, std::shared_ptr<mfNameMask>)"></a>
+<h3>CreatePlateFromElements</h3>
+<p class="function">
+<b>&nbsp;</b> <b>CreatePlateFromElements</b>(<b><a href="Array.html">Array</a></b> elements, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b> nameMask)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a plate from a selection of neighboring elements
+</dl>
+<hr>
+
+<a name="EnhanceQuality(double, long)"></a>
+<h3>EnhanceQuality</h3>
+<p class="function">
+<b>&nbsp;</b> <b>EnhanceQuality</b>(<b>double</b> acceptable level of quality (0-1), <b><a href="long.html">long</a></b>  element id)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Enhances quality of an element
+</dl>
+<hr>
+
+<a name="Execute(DNVS::MoFa::AnalysisModel::ElementOperations::IElementOperation)"></a>
+<h3>Execute</h3>
+<p class="function">
+<b>&nbsp;</b> <b>Execute</b>(<b><a href="DNVS__MoFa__AnalysisModel__ElementOperations__IElementOperation.html">DNVS::MoFa::AnalysisModel::ElementOperations::IElementOperation</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Executes element operation
+</dl>
+<hr>
+
+<a name="GetNodePosition(long)"></a>
+<h3>GetNodePosition</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>GetNodePosition</b>(<b><a href="long.html">long</a></b> node)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Gets the position at the given node
+</dl>
+<hr>
+
+<a name="ImprintNode(long, Point)"></a>
+<h3>ImprintNode</h3>
+<p class="function">
+<b>&nbsp;</b> <b>ImprintNode</b>(<b><a href="long.html">long</a></b> elementId, <b><a href="Point.html">Point</a></b>  nodePosition)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates node inside quad or triangle and splits it
+</dl>
+<hr>
+
+<a name="MergeTriangles(long, long)"></a>
+<h3>MergeTriangles</h3>
+<p class="function">
+<b>&nbsp;</b> <b>MergeTriangles</b>(<b><a href="long.html">long</a></b> triangle1, <b><a href="long.html">long</a></b> triangle2)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Merge two neighboring triangle elements
+</dl>
+<hr>
+
+<a name="MoveNode(long, Point)"></a>
+<h3>MoveNode</h3>
+<p class="function">
+<b>&nbsp;</b> <b>MoveNode</b>(<b><a href="long.html">long</a></b> nodeId, <b><a href="Point.html">Point</a></b>  position)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Move node
+</dl>
+<hr>
+
+<a name="MoveTriangle(long, long, long)"></a>
+<h3>MoveTriangle</h3>
+<p class="function">
+<b>&nbsp;</b> <b>MoveTriangle</b>(<b><a href="long.html">long</a></b> triangleElement, <b><a href="long.html">long</a></b> nodeId, <b><a href="long.html">long</a></b> quadElement)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Move a triangle element
+</dl>
+<hr>
+
+<a name="RefineBox(Point, Point, BoxOptions, long)"></a>
+<h3>RefineBox</h3>
+<p class="function">
+<b>&nbsp;</b> <b>RefineBox</b>(<b><a href="Point.html">Point</a></b> p1, <b><a href="Point.html">Point</a></b> p2, <b><a href="BoxOptions.html">BoxOptions</a></b> options, <b><a href="long.html">long</a></b> refinement)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Refines all elements inside a box
+</dl>
+<hr>
+
+<a name="RefineBox(Point, Point, LocalSystem, BoxOptions, long)"></a>
+<h3>RefineBox</h3>
+<p class="function">
+<b>&nbsp;</b> <b>RefineBox</b>(<b><a href="Point.html">Point</a></b> p1, <b><a href="Point.html">Point</a></b> p2, <b><a href="LocalSystem.html">LocalSystem</a></b> locsys, <b><a href="BoxOptions.html">BoxOptions</a></b> options, <b><a href="long.html">long</a></b> refinement)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Refines all elements inside a box
+</dl>
+<hr>
+
+<a name="RefineBoxWithDensity(Point, Point, BoxOptions, Length, unsigned __int64, unsigned __int64)"></a>
+<h3>RefineBoxWithDensity</h3>
+<p class="function">
+<b>&nbsp;</b> <b>RefineBoxWithDensity</b>(<b><a href="Point.html">Point</a></b> p1, <b><a href="Point.html">Point</a></b> p2, <b><a href="BoxOptions.html">BoxOptions</a></b> options, <b><a href="Length.html">Length</a></b> interiorDensity, <b><a href="unsigned___int64.html">unsigned __int64</a></b>, <b><a href="unsigned___int64.html">unsigned __int64</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Refines all elements inside a box
+</dl>
+<hr>
+
+<a name="RefineBoxWithDensity(Point, Point, LocalSystem, BoxOptions, Length, unsigned __int64, unsigned __int64)"></a>
+<h3>RefineBoxWithDensity</h3>
+<p class="function">
+<b>&nbsp;</b> <b>RefineBoxWithDensity</b>(<b><a href="Point.html">Point</a></b> p1, <b><a href="Point.html">Point</a></b> p2, <b><a href="LocalSystem.html">LocalSystem</a></b> locsys, <b><a href="BoxOptions.html">BoxOptions</a></b> options, <b><a href="Length.html">Length</a></b> interiorDensity, <b><a href="unsigned___int64.html">unsigned __int64</a></b>, <b><a href="unsigned___int64.html">unsigned __int64</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Refines all elements inside a box
+</dl>
+<hr>
+
+<a name="RefineBoxWithDensity(Point, Point, BoxOptions, Length, unsigned __int64, unsigned __int64, EdgeRefinementOptions)"></a>
+<h3>RefineBoxWithDensity</h3>
+<p class="function">
+<b>&nbsp;</b> <b>RefineBoxWithDensity</b>(<b><a href="Point.html">Point</a></b> p1, <b><a href="Point.html">Point</a></b> p2, <b><a href="BoxOptions.html">BoxOptions</a></b> options, <b><a href="Length.html">Length</a></b> interiorDensity, <b><a href="unsigned___int64.html">unsigned __int64</a></b> edgeRefinementOptions, <b><a href="unsigned___int64.html">unsigned __int64</a></b>, <b><a href="EdgeRefinementOptions.html">EdgeRefinementOptions</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Refines all elements inside a box
+</dl>
+<hr>
+
+<a name="RefineBoxWithDensity(Point, Point, LocalSystem, BoxOptions, Length, unsigned __int64, unsigned __int64, EdgeRefinementOptions)"></a>
+<h3>RefineBoxWithDensity</h3>
+<p class="function">
+<b>&nbsp;</b> <b>RefineBoxWithDensity</b>(<b><a href="Point.html">Point</a></b> p1, <b><a href="Point.html">Point</a></b> p2, <b><a href="LocalSystem.html">LocalSystem</a></b> locsys, <b><a href="BoxOptions.html">BoxOptions</a></b> options, <b><a href="Length.html">Length</a></b> interiorDensity, <b><a href="unsigned___int64.html">unsigned __int64</a></b> edgeRefinementOptions, <b><a href="unsigned___int64.html">unsigned __int64</a></b>, <b><a href="EdgeRefinementOptions.html">EdgeRefinementOptions</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Refines all elements inside a box
+</dl>
+<hr>
+
+<a name="RefineEdge(long, long, long)"></a>
+<h3>RefineEdge</h3>
+<p class="function">
+<b>&nbsp;</b> <b>RefineEdge</b>(<b><a href="long.html">long</a></b> startNode, <b><a href="long.html">long</a></b> endNode, <b><a href="long.html">long</a></b> refinement)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Refines an edge
+</dl>
+<hr>
+
+<a name="RefineElement(long, long)"></a>
+<h3>RefineElement</h3>
+<p class="function">
+<b>&nbsp;</b> <b>RefineElement</b>(<b><a href="long.html">long</a></b> elementId, <b><a href="long.html">long</a></b> refinement)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Refines an element
+</dl>
+<hr>
+
+<a name="RefineGrid(long, long, long)"></a>
+<h3>RefineGrid</h3>
+<p class="function">
+<b>&nbsp;</b> <b>RefineGrid</b>(<b><a href="long.html">long</a></b> element1, <b><a href="long.html">long</a></b> element2, <b><a href="long.html">long</a></b> refinement)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Refines a grid of elements
+</dl>
+<hr>
+
+<a name="RefineGrid(long, long, long, bool)"></a>
+<h3>RefineGrid</h3>
+<p class="function">
+<b>&nbsp;</b> <b>RefineGrid</b>(<b><a href="long.html">long</a></b> element1, <b><a href="long.html">long</a></b> element2, <b><a href="long.html">long</a></b> refinement, <b>bool</b> gridIncludesBoundary)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Refines a grid of elements
+</dl>
+<hr>
+
+<a name="RemoveElement(long)"></a>
+<h3>RemoveElement</h3>
+<p class="function">
+<b>&nbsp;</b> <b>RemoveElement</b>(<b><a href="long.html">long</a></b> elementId)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Removes element
+</dl>
+<hr>
+
+<a name="RemoveNode(long)"></a>
+<h3>RemoveNode</h3>
+<p class="function">
+<b>&nbsp;</b> <b>RemoveNode</b>(<b><a href="long.html">long</a></b> nodeId)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Removes node connecting triangles or quad and triangle
+</dl>
+<hr>
+
+<a name="RemoveOrphanElements()"></a>
+<h3>RemoveOrphanElements</h3>
+<p class="function">
+<b>&nbsp;</b> <b>RemoveOrphanElements</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete orphan elements, i.e. elements not connected to any concepts
+</dl>
+<hr>
+
+<a name="RenumberElement(long, long)"></a>
+<h3>RenumberElement</h3>
+<p class="function">
+<b>&nbsp;</b> <b>RenumberElement</b>(<b><a href="long.html">long</a></b> oldId, <b><a href="long.html">long</a></b> newId)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Renumber external element number, swaps if both numbers are present in model
+</dl>
+<hr>
+
+<a name="RenumberNode(long, long)"></a>
+<h3>RenumberNode</h3>
+<p class="function">
+<b>&nbsp;</b> <b>RenumberNode</b>(<b><a href="long.html">long</a></b> oldId, <b><a href="long.html">long</a></b> newId)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Renumber external node number, swaps if both numbers are present in model
+</dl>
+<hr>
+
+<a name="ResizeGrid(long, long, double)"></a>
+<h3>ResizeGrid</h3>
+<p class="function">
+<b>&nbsp;</b> <b>ResizeGrid</b>(<b><a href="long.html">long</a></b> element1, <b><a href="long.html">long</a></b>  element2, <b>double</b>  targetDensity)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Resizes a grid to reach the target density, possibly by refining the outermost element strip
+</dl>
+<hr>
+
+<a name="SetMeshAutoFixWhileRefining(bool)"></a>
+<h3>SetMeshAutoFixWhileRefining</h3>
+<p class="function">
+<b>&nbsp;</b> <b>SetMeshAutoFixWhileRefining</b>(<b>bool</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set mesh auto fixing while refining.
+</dl>
+<hr>
+
+<a name="SlideTriangle(long)"></a>
+<h3>SlideTriangle</h3>
+<p class="function">
+<b>&nbsp;</b> <b>SlideTriangle</b>(<b><a href="long.html">long</a></b> triangleId)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Moves a triangle in wedge direction
+</dl>
+<hr>
+
+<a name="SplitEdge(long, long, Point)"></a>
+<h3>SplitEdge</h3>
+<p class="function">
+<b>&nbsp;</b> <b>SplitEdge</b>(<b><a href="long.html">long</a></b> startNode, <b><a href="long.html">long</a></b> endNode, <b><a href="Point.html">Point</a></b> splitPoint)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Split edge and connected elements in two
+</dl>
+<hr>
+
+<a name="SplitElement(long, long, long)"></a>
+<h3>SplitElement</h3>
+<p class="function">
+<b>&nbsp;</b> <b>SplitElement</b>(<b><a href="long.html">long</a></b> elementId, <b><a href="long.html">long</a></b> nodeId, <b><a href="long.html">long</a></b> nodeId2)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Split quad element with diagonal
+</dl>
+<hr>
+
+<a name="UpdateProperties(BasicConcept)"></a>
+<h3>UpdateProperties</h3>
+<p class="function">
+<b>&nbsp;</b> <b>UpdateProperties</b>(<b><a href="BasicConcept.html">BasicConcept</a></b>)</p>
+<p>
+<hr>
+
+<a name="UpdateProperties(scPlateSegment)"></a>
+<h3>UpdateProperties</h3>
+<p class="function">
+<b>&nbsp;</b> <b>UpdateProperties</b>(<b><a href="scPlateSegment.html">scPlateSegment</a></b>)</p>
+<p>
+<hr>
+
+</body>
+</html>

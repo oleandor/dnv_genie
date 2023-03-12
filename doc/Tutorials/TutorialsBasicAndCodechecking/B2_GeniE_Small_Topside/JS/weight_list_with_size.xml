@@ -1,0 +1,57 @@
+
+<weight_report name="dimension">
+
+  <weight_item name="LPumpA" description="Light pump"> 
+      <position x="-2" y="-3" z="1.5"/>    <weight dry="800"/>   
+      <dimension dx="3" dy="4" dz="3"/>
+  </weight_item >
+  <weight_item name="LPumpB" description="Light pump"> 
+      <position x="-2" y="1" z="0.5"/>    <weight dry="400"/>   
+      <dimension dx="2" dy="5" dz="4"/>
+  </weight_item >
+  <weight_item name="LPumpC" description="Light pump"> 
+      <position x="-1" y="2" z="0.5"/>    <weight dry="600"/>   
+      <dimension dx="1" dy="4" dz="6"/>
+  </weight_item >
+  <weight_item name="LPumpD" description="Light pump"> 
+      <position x="-3" y="3" z="1.5"/>    <weight dry="500"/>   
+      <dimension dx="2" dy="3" dz="3"/>
+  </weight_item >
+
+  <weight_item name="HPumpA" description="Heavy pump"> 
+      <position x="1" y="5" z="5.5"/>    <weight dry="1500"/>   
+      <dimension dx="3" dy="2" dz="2"/>
+  </weight_item >
+  <weight_item name="HPumpB" description="Heavy pump"> 
+      <position x="5" y="10" z="4.5"/>    <weight dry="1500"/>   
+      <dimension dx="3" dy="3" dz="3"/>
+  </weight_item >
+  <weight_item name="HPumpC" description="Heavy pump"> 
+      <position x="10" y="2" z="5.5"/>    <weight dry="1500"/>   
+      <dimension dx="3" dy="3" dz="3"/>
+  </weight_item >
+  <weight_item name="HPumpD" description="Heavy pump"> 
+      <position x="13" y="9" z="5.5"/>    <weight dry="1500"/>   
+      <dimension dx="3" dy="3" dz="3"/>
+  </weight_item >
+
+  <weight_item name="MiscA" description="Misc."> 
+      <position x="1" y="5" z="0.5"/>    <weight dry="200"/>   
+      <dimension dx="3" dy="3" dz="3"/>
+  </weight_item >
+  <weight_item name="MiscB" description="Misc."> 
+      <position x="9" y="3" z="0.5"/>    <weight dry="200"/>   
+      <dimension dx="3" dy="3" dz="3"/>
+  </weight_item >
+  <weight_item name="MiscC" description="Misc."> 
+      <position x="5" y="7" z="-0.5"/>    <weight dry="300"/>   
+      <dimension dx="3" dy="3" dz="3"/>
+  </weight_item >
+  <weight_item name="MiscD" description="Misc."> 
+      <position x="12" y="9" z="0.5"/>    <weight dry="300"/>   
+      <dimension dx="3" dy="3" dz="3"/>
+  </weight_item >
+
+</weight_report>
+
+

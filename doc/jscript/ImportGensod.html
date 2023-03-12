@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: ImportGensod
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: ImportGensod
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Import a GENSOD input file. The stand-alone application GENSOD generates <br/>the soil data needed by SPLICE, storing them in GENSOD.inp.
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Import a GENSOD.inp file</td></tr><tr>  <td>     <code>     </code>		<div class="explanation">GeniE restores the information from the GENSOD.inp file by reproducing <br/>the js-commands, thus supplying the folders "Environment/Location" and <br/>"Environment/Soil" of the GeniE browser with the relevant data.<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="AbstractExchange.html">AbstractExchange</a>
+  |
+  +--<a href="AbstractImport.html">AbstractImport</a>
+       |
+       +--<b>ImportGensod</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="ImportGensod.html#ImportGensod()">ImportGensod</a></b>()</code>
+<div class="explanation">
+Construct a new import helper object</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ImportGensod.html#DoImport(string)">DoImport</a></b>(<b>string</b>)</code>
+<div class="explanation">
+Perform import operation</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ImportGensod.html#setImportSoilLayersDatum(ImportSoilLayersDatum)">setImportSoilLayersDatum</a></b>(<b><a href="ImportSoilLayersDatum.html">ImportSoilLayersDatum</a></b>)</code>
+<div class="explanation">
+Specify how to import soil layers</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractImport.html#setNamePrefix(string)">setNamePrefix</a></b>(<b>string</b>)</code>
+<div class="explanation">
+Prefix imported object names with specified string</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractImport.html#setTransformation(Transformation3d)">setTransformation</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b>)</code>
+<div class="explanation">
+Transform imported 3d objects using specified transformation</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ImportGensod.html#ForceUnit()">ForceUnit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ImportGensod.html#LengthUnit()">LengthUnit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Analysis.html">Analysis</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ImportGensod.html#analysis()">analysis</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Import pile/soil interaction run into existing analysis</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="ImportGensod()"></a>
+<h3>ImportGensod</h3>
+<p class="function">
+<b>ImportGensod</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new import helper object
+</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="DoImport(string)"></a>
+<h3>DoImport</h3>
+<p class="function">
+<b>&nbsp;</b> <b>DoImport</b>(<b>string</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Perform import operation
+</dl>
+<hr>
+
+<a name="setImportSoilLayersDatum(ImportSoilLayersDatum)"></a>
+<h3>setImportSoilLayersDatum</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setImportSoilLayersDatum</b>(<b><a href="ImportSoilLayersDatum.html">ImportSoilLayersDatum</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify how to import soil layers
+</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="ForceUnit()"></a>
+<h3>ForceUnit</h3>
+<p class="function">
+<b>string</b> <b>ForceUnit</b>()</p>
+<p>
+<a name="LengthUnit()"></a>
+<h3>LengthUnit</h3>
+<p class="function">
+<b>string</b> <b>LengthUnit</b>()</p>
+<p>
+<a name="analysis()"></a>
+<h3>analysis</h3>
+<p class="function">
+<b><a href="Analysis.html">Analysis</a></b> <b>analysis</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Import pile/soil interaction run into existing analysis
+</dl>
+</body>
+</html>

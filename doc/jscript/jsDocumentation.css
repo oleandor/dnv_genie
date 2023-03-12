@@ -1,0 +1,128 @@
+tr.header { 
+  background: #006fad;
+	 color: #fff;
+	 font-size:1em;
+}
+div.explanation { 
+  color: #073;
+  font-style: italic;
+  margin-left: 40px; 
+}
+div.propertyStatus { 
+  font-style: italic;
+}
+tr { 
+	 border: solid 1px silver; 
+  color: #666; 
+  padding:5px; 
+  font-size:9pt; 
+}
+p.function { 
+  background: #eee;
+  font-size: smaller;
+  width: 58%; 
+  padding: 10px; 
+}
+body { 
+  padding-left: 20px; 
+  float: left; 
+}
+* {
+  font-family: arial; 
+  line-height:1.0em; 
+}
+a {
+  color:#006fad; 
+  text-decoration:none; 
+}
+a:hover {
+  text-decoration:underline; 
+}
+tr.own {
+  border: solid 1px silver;
+  color:#666; 
+  padding:5px; 
+  font-size:9pt; 
+}
+tr.inherited {
+  border: solid 1px silver;
+  color:#666; 
+  padding:5px; 
+  font-size:9pt; 
+}
+td.functionsummary {
+}
+td.returntype {
+  font-size: smaller;
+}
+td.NavBarCell1 {
+  background: #eee;
+  font-weight: bold; 
+  border:1px solid #fff; 
+}
+td.progver {
+  background: #eee;
+  font-weight: bold;
+  border:1px solid #fff; 
+}
+td.example {
+  background: #eee;
+  margin-left: 3em;
+  width: 68%;
+  border:1px solid #fff; 
+}
+td.illegalexample {
+  border: solid red;
+  background: #eee;
+  margin-left: 3em;
+  border:1px solid #fff; 
+}
+dt {
+  font-weight: bold;
+}
+td.overviewexplanation {
+  text-align : left;
+  text-indent : 10em;
+  border:1px solid #fff; 
+}
+td.overviewheader {
+  text-align : left;
+  border:1px solid #fff; 
+}
+table.overviewexplanation {
+ border-collapse:collapse;
+}
+table {
+width:990px; 
+}
+table td{ 
+font-size:1.1em; 
+} 
+table td, table th {
+  border-right:1px solid #fff; 
+  border-left:1px solid #fff; 
+  border-top:1px solid #fff; 
+  border-bottom:1px solid #fff; 
+  line-height:1.5em; 
+}
+p{ 
+}
+h1 { 
+  font-size:1.5em; 
+  color:#00334e; 
+  font-weight:normal; 
+  text-shadow:0px 1px 1px #fff; 
+}
+h2 { 
+color:#00334e; 
+font-weight:normal; 
+text-shadow:0px 1px 1px #fff; 
+}
+h3 { 
+  font-size:1em; 
+}
+hr { 
+  margin-top:20px; 
+  border:1px dotted #eee; 
+  width:640px; 
+}

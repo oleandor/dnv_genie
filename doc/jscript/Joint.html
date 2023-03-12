@@ -1,0 +1,768 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: Joint
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: Joint
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Represent a tubular joint
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Insert a joint by specifying its coordinates manually</td></tr><tr>  <td>     <code>Jt1 = Joint(Point(4 m,11.5 m,10 m));<br/>     </code>		<div class="explanation">This command is scripted. Typically, when defining a joint Jt1 at a beam intersection at (4m, 11.5m, 10m)<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Insert a joint by snapping to 1 point. Same conditions as above apply</td></tr><tr>  <td>     <code>Jt1 = Joint(Point(4 m,11.5 m,10 m));<br/>     </code>		<div class="explanation">This command is scripted. Typically, when defining a joint Jt1 at a beam intersection at (4m, 11.5m, 10m)<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Insert joints according to the joint creating rules by selecting a beam or beams.</td></tr><tr>  <td>     <code>Jt2 = Joint(Point(0 m,28.5 m,10 m));<br/>Jt3 = Joint(Point(4 m,28.5 m,10 m));<br/>Jt4 = Joint(Point(12 m,28.5 m,10 m));<br/>Jt5 = Joint(Point(18 m,28.5 m,10 m));<br/>Jt6 = Joint(Point(24 m,28.5 m,10 m));<br/>Jt7 = Joint(Point(27 m,28.5 m,10 m));<br/>     </code>		<div class="explanation">This command is scripted. Typically, when referring to a beam with 6 intersections a total of 6 joints are created.<br/>In this case the rules include that joints shall be created at each beam intersection<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="Transformable.html">Transformable</a>
+            |
+            +--<a href="BasicJoint.html">BasicJoint</a>
+                 |
+                 +--<b>Joint</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="Joint.html#Joint(Point)">Joint</a></b>(<b><a href="Point.html">Point</a></b> pos)</code>
+<div class="explanation">
+Construct a new tubular joint</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="std__shared_ptr_DNVS__MoFa__JointDesign__IBrace_.html">std::shared_ptr<DNVS::MoFa::JointDesign::IBrace></a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#GetBrace(Beam)">GetBrace</a></b>(<b><a href="Beam.html">Beam</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="std__shared_ptr_DNVS__MoFa__JointDesign__IBrace_.html">std::shared_ptr<DNVS::MoFa::JointDesign::IBrace></a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#GetBrace(Beam, bool)">GetBrace</a></b>(<b><a href="Beam.html">Beam</a></b>, <b>bool</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#addLJF()">addLJF</a></b>()</code>
+<div class="explanation">
+Compute and assign local joint flexibilities.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#addLJF(AbstractLoadCase)">addLJF</a></b>(<b><a href="AbstractLoadCase.html">AbstractLoadCase</a></b> loadcase)</code>
+<div class="explanation">
+Compute and assign local joint flexibilities.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#autoCan()">autoCan</a></b>()</code>
+<div class="explanation">
+Automatically generate cans on this joints chords</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#autoCone(Beam, int)">autoCone</a></b>(<b><a href="Beam.html">Beam</a></b> beam, <b>int</b> iseg)</code>
+<div class="explanation">
+Add a cone to the specified segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#autoGap()">autoGap</a></b>()</code>
+<div class="explanation">
+Calculate gap and move braces accordingly</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#autoReinforce(Beam, int)">autoReinforce</a></b>(<b><a href="Beam.html">Beam</a></b> beam, <b>int</b> iseg)</code>
+<div class="explanation">
+Reinforce the specified segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#autoStub()">autoStub</a></b>()</code>
+<div class="explanation">
+Automatically generate stubs on this joints braces</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicJoint.html#connect()">connect</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicJoint.html#connect(...)">connect</a></b>([ ...])</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicJoint.html#connectDefault(BasicConcept)">connectDefault</a></b>(<b><a href="BasicConcept.html">BasicConcept</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicJoint.html#connectDefaultNone()">connectDefaultNone</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#copyTemplate(Joint)">copyTemplate</a></b>(<b>Joint</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicJoint.html#disconnect()">disconnect</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicJoint.html#disconnect(BasicConcept)">disconnect</a></b>(<b><a href="BasicConcept.html">BasicConcept</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#flushBraces()">flushBraces</a></b>()</code>
+<div class="explanation">
+Flush all braces to the surface of the chord</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#getGap(Beam, Beam)">getGap</a></b>(<b><a href="Beam.html">Beam</a></b>, <b><a href="Beam.html">Beam</a></b>)</code>
+<div class="explanation">
+Returns gap between two braces.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicJoint.html#isolate(...)">isolate</a></b>([ ...])</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#manualGap(Beam, int, Beam, int, bool)">manualGap</a></b>(<b><a href="Beam.html">Beam</a></b> beam1, <b>int</b> iseg1, <b><a href="Beam.html">Beam</a></b> beam2, <b>int</b> iseg2, <b>bool</b> fixFirst)</code>
+<div class="explanation">
+Manually calculate the gap between two segments</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#resetLJF()">resetLJF</a></b>()</code>
+<div class="explanation">
+Reset local joint flexibilities.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#splitBraces()">splitBraces</a></b>()</code>
+<div class="explanation">
+Split all through-braces at the joint</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#unflushBraces()">unflushBraces</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#verifyCan()">verifyCan</a></b>()</code>
+<div class="explanation">
+Returns true if the length of the cans corresponds to the specified rules</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#verifyGap()">verifyGap</a></b>()</code>
+<div class="explanation">
+Returns true if this joint satisfies the minimum requirement for gap</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Joint.html#verifyStub()">verifyStub</a></b>()</code>
+<div class="explanation">
+Returns true if the length of the stubs corresponds to the specified rules</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copy3Point(Point, Point, Point, Point, Point, Point)">copy3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> sp1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> sp2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> sp3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> dp1</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> dp2</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> dp3</span>)</code>
+<div class="explanation">
+Copy the object without scaling from one location to another.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyMirror(Point, LengthVector3d)">copyMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int, std::shared_ptr<mfNameMask>)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyScale(double, Point)">copyScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Scale a copy of the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTransform(Transformation3d)">copyTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general transformation to a copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate a copy of this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int, std::shared_ptr<mfNameMask>)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#move3Point(Point, Point, Point, Point, Point, Point)">move3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> p4</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> p5</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> p6</span>)</code>
+<div class="explanation">
+Move the object from one coordinate system to another</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveMirror(Point, LengthVector3d)">moveMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveRotate(Point, LengthVector3d, Angle)">moveRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveScale(double, Point)">moveScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Move and scale the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTransform(Transformation3d)">moveTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general selection to the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTranslate(LengthVector3d)">moveTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Joint.html#Braces()">Braces</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Returns all braces in a joint</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Joint.html#Chords()">Chords</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Returns all chords in a joint</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BasicJoint.html#eccentricPoint()">eccentricPoint</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Return the eccentric coordinates of this joint</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geCONNECTED()">geCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use connected move</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geUNCONNECTED()">geUNCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use unconnected move</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BasicJoint.html#point()">point</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Return the coordinates of this joint</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="Joint(Point)"></a>
+<h3>Joint</h3>
+<p class="function">
+<b>Joint</b>(<b><a href="Point.html">Point</a></b> pos)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new tubular joint
+</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="GetBrace(Beam)"></a>
+<h3>GetBrace</h3>
+<p class="function">
+<b><a href="std__shared_ptr_DNVS__MoFa__JointDesign__IBrace_.html">std::shared_ptr<DNVS::MoFa::JointDesign::IBrace></a></b> <b>GetBrace</b>(<b><a href="Beam.html">Beam</a></b>)</p>
+<p>
+<hr>
+
+<a name="GetBrace(Beam, bool)"></a>
+<h3>GetBrace</h3>
+<p class="function">
+<b><a href="std__shared_ptr_DNVS__MoFa__JointDesign__IBrace_.html">std::shared_ptr<DNVS::MoFa::JointDesign::IBrace></a></b> <b>GetBrace</b>(<b><a href="Beam.html">Beam</a></b>, <b>bool</b>)</p>
+<p>
+<hr>
+
+<a name="addLJF(AbstractLoadCase)"></a>
+<h3>addLJF</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addLJF</b>(<b><a href="AbstractLoadCase.html">AbstractLoadCase</a></b> loadcase)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Compute and assign local joint flexibilities.
+</dl>
+<hr>
+
+<a name="addLJF()"></a>
+<h3>addLJF</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addLJF</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Compute and assign local joint flexibilities.
+</dl>
+<hr>
+
+<a name="autoCan()"></a>
+<h3>autoCan</h3>
+<p class="function">
+<b>&nbsp;</b> <b>autoCan</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Automatically generate cans on this joints chords
+</dl>
+<hr>
+
+<a name="autoCone(Beam, int)"></a>
+<h3>autoCone</h3>
+<p class="function">
+<b>&nbsp;</b> <b>autoCone</b>(<b><a href="Beam.html">Beam</a></b> beam, <b>int</b> iseg)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Add a cone to the specified segmentThis command will add a cone to the neightbour segment of this segment if the specified segment has a reinforcement property. If this segment is used to represent the reinfocement (typically can) on both sides of a joint, this command will add two cone sections. The cone section used is specified in the JointDesign rule
+</dl>
+<hr>
+
+<a name="autoGap()"></a>
+<h3>autoGap</h3>
+<p class="function">
+<b>&nbsp;</b> <b>autoGap</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Calculate gap and move braces accordinglyThis command calculates the gap as specified in the JointDesign rule It also recalculates the lengths of cans, stubs and cones
+</dl>
+<hr>
+
+<a name="autoReinforce(Beam, int)"></a>
+<h3>autoReinforce</h3>
+<p class="function">
+<b>&nbsp;</b> <b>autoReinforce</b>(<b><a href="Beam.html">Beam</a></b> beam, <b>int</b> iseg)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reinforce the specified segmentThis command will automatically generate a can or a stub on the selected segment if applicable
+</dl>
+<hr>
+
+<a name="autoStub()"></a>
+<h3>autoStub</h3>
+<p class="function">
+<b>&nbsp;</b> <b>autoStub</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Automatically generate stubs on this joints braces
+</dl>
+<hr>
+
+<a name="copyTemplate(Joint)"></a>
+<h3>copyTemplate</h3>
+<p class="function">
+<b>&nbsp;</b> <b>copyTemplate</b>(<b>Joint</b>)</p>
+<p>
+<hr>
+
+<a name="flushBraces()"></a>
+<h3>flushBraces</h3>
+<p class="function">
+<b>&nbsp;</b> <b>flushBraces</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Flush all braces to the surface of the chordIt is possible to turn on automatic flushing of braces in the JointDesign rule. If you want all your braces to be flushed, this is the recommended practice. Limitations: <BR>In the cases where braces intersects the chords, for example X-joints, the braces will not be flushed. <BR>If the braces are flushed after cans and stubs are generated, This command will not recalculate the length of the cans and stubs.
+</dl>
+<hr>
+
+<a name="getGap(Beam, Beam)"></a>
+<h3>getGap</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>getGap</b>(<b><a href="Beam.html">Beam</a></b>, <b><a href="Beam.html">Beam</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns gap between two braces.
+</dl>
+<hr>
+
+<a name="manualGap(Beam, int, Beam, int, bool)"></a>
+<h3>manualGap</h3>
+<p class="function">
+<b>&nbsp;</b> <b>manualGap</b>(<b><a href="Beam.html">Beam</a></b> beam1, <b>int</b> iseg1, <b><a href="Beam.html">Beam</a></b> beam2, <b>int</b> iseg2, <b>bool</b> fixFirst)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Manually calculate the gap between two segments
+</dl>
+<hr>
+
+<a name="resetLJF()"></a>
+<h3>resetLJF</h3>
+<p class="function">
+<b>&nbsp;</b> <b>resetLJF</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Reset local joint flexibilities.
+</dl>
+<hr>
+
+<a name="splitBraces()"></a>
+<h3>splitBraces</h3>
+<p class="function">
+<b>&nbsp;</b> <b>splitBraces</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Split all through-braces at the joint
+</dl>
+<hr>
+
+<a name="unflushBraces()"></a>
+<h3>unflushBraces</h3>
+<p class="function">
+<b>&nbsp;</b> <b>unflushBraces</b>()</p>
+<p>
+<hr>
+
+<a name="verifyCan()"></a>
+<h3>verifyCan</h3>
+<p class="function">
+<b>bool</b> <b>verifyCan</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns true if the length of the cans corresponds to the specified rules
+</dl>
+<hr>
+
+<a name="verifyGap()"></a>
+<h3>verifyGap</h3>
+<p class="function">
+<b>bool</b> <b>verifyGap</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns true if this joint satisfies the minimum requirement for gap
+</dl>
+<hr>
+
+<a name="verifyStub()"></a>
+<h3>verifyStub</h3>
+<p class="function">
+<b>bool</b> <b>verifyStub</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns true if the length of the stubs corresponds to the specified rules
+</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="Braces()"></a>
+<h3>Braces</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>Braces</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns all braces in a jointExample:
+for(var brace in Jt1.braces)
+{
+   Print(brace.name);
+}
+</dl>
+<a name="Chords()"></a>
+<h3>Chords</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>Chords</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns all chords in a jointExample:
+for(var chord in Jt1.chords)
+{
+   Print(chord.name);
+}
+</dl>
+</body>
+</html>

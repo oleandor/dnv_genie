@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: PointLoad
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: PointLoad
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="MetaObject.html">MetaObject</a>
+  |
+  +--<a href="mfRelationObject.html">mfRelationObject</a>
+       |
+       +--<a href="ITransformable.html">ITransformable</a>
+            |
+            +--<a href="Load.html">Load</a>
+                 |
+                 +--<a href="Load0d.html">Load0d</a>
+                      |
+                      +--<b>PointLoad</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="PointLoad.html#PointLoad(LoadCase, Footprint0d, PointForceMoment, LocalSystem)">PointLoad</a></b>(<b><a href="LoadCase.html">LoadCase</a></b><span title="Loadcase where Point Load acts"> loadcase</span>, <b><a href="Footprint0d.html">Footprint0d</a></b><span title="Footprint of Point Load"> footprint</span>, <b><a href="PointForceMoment.html">PointForceMoment</a></b><span title="Value of Point Load"> intensity</span>, <b><a href="LocalSystem.html">LocalSystem</a></b><span title="Local coordinate system"> locsys</span>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="PointLoad.html#PointLoad(LoadCase, Footprint0d, PointForceMoment, CoordinateSystem)">PointLoad</a></b>(<b><a href="LoadCase.html">LoadCase</a></b><span title="Loadcase where Point Load acts"> loadcase</span>, <b><a href="Footprint0d.html">Footprint0d</a></b><span title="Footprint of Point Load"> footprint</span>, <b><a href="PointForceMoment.html">PointForceMoment</a></b><span title="Value of Point Load"> intensity</span>, <b><a href="CoordinateSystem.html">CoordinateSystem</a></b><span title="Local coordinate system"> coordinateSystem</span>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="PointLoad.html#PointLoad(LoadCase, Point, ComplexForce, ComplexForce, ComplexForce, ComplexMomentOfForce, ComplexMomentOfForce, ComplexMomentOfForce)">PointLoad</a></b>(<b><a href="LoadCase.html">LoadCase</a></b><span title="Loadcase where PointLoad acts"> loadcase</span>, <b><a href="Point.html">Point</a></b><span title="Position of PointLoad"> pos</span>, <b><a href="ComplexForce.html">ComplexForce</a></b><span title="Force, x-component"> fx</span>, <b><a href="ComplexForce.html">ComplexForce</a></b><span title="Force, y-component"> fy</span>, <b><a href="ComplexForce.html">ComplexForce</a></b><span title="Force, z-component"> fz</span>, <b><a href="ComplexMomentOfForce.html">ComplexMomentOfForce</a></b><span title="Moment, x-component"> mx</span>, <b><a href="ComplexMomentOfForce.html">ComplexMomentOfForce</a></b><span title="Moment, y-component"> my</span>, <b><a href="ComplexMomentOfForce.html">ComplexMomentOfForce</a></b><span title="Moment, z-component"> mz</span>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="PointLoad.html#PointLoad(LoadCase, Point, ComplexForce, ComplexForce, ComplexForce, ComplexMomentOfForce, ComplexMomentOfForce, ComplexMomentOfForce, LocalSystem)">PointLoad</a></b>(<b><a href="LoadCase.html">LoadCase</a></b><span title="Loadcase where PointLoad acts"> loadcase</span>, <b><a href="Point.html">Point</a></b><span title="Position of PointLoad"> pos</span>, <b><a href="ComplexForce.html">ComplexForce</a></b><span title="Force, x-component"> fx</span>, <b><a href="ComplexForce.html">ComplexForce</a></b><span title="Force, y-component"> fy</span>, <b><a href="ComplexForce.html">ComplexForce</a></b><span title="Force, z-component"> fz</span>, <b><a href="ComplexMomentOfForce.html">ComplexMomentOfForce</a></b><span title="Moment, x-component"> mx</span>, <b><a href="ComplexMomentOfForce.html">ComplexMomentOfForce</a></b><span title="Moment, y-component"> my</span>, <b><a href="ComplexMomentOfForce.html">ComplexMomentOfForce</a></b><span title="Moment, z-component"> mz</span>, <b><a href="LocalSystem.html">LocalSystem</a></b><span title="Local coordinate system"> locsys</span>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MetaObject.html#ToString(DNVS::MoFa::Formatting::FormattingService)">ToString</a></b>(<b><a href="DNVS__MoFa__Formatting__FormattingService.html">DNVS::MoFa::Formatting::FormattingService</a></b> formattingService)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>Load</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Load.html#copy(LoadCase)">copy</a></b>(<b><a href="LoadCase.html">LoadCase</a></b> dest)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Footprint0d.html">Footprint0d</a></b></code>
+</td>
+<td width="90%"><code><b><a href="PointLoad.html#Footprint()">Footprint</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ComplexForce.html">ComplexForce</a></b></code>
+</td>
+<td width="90%"><code><b><a href="PointLoad.html#Fx()">Fx</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ComplexForce.html">ComplexForce</a></b></code>
+</td>
+<td width="90%"><code><b><a href="PointLoad.html#Fy()">Fy</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ComplexForce.html">ComplexForce</a></b></code>
+</td>
+<td width="90%"><code><b><a href="PointLoad.html#Fz()">Fz</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="PointForceMoment.html">PointForceMoment</a></b></code>
+</td>
+<td width="90%"><code><b><a href="PointLoad.html#Intensity()">Intensity</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LocalSystem.html">LocalSystem</a></b></code>
+</td>
+<td width="90%"><code><b><a href="PointLoad.html#Locsys()">Locsys</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ComplexMomentOfForce.html">ComplexMomentOfForce</a></b></code>
+</td>
+<td width="90%"><code><b><a href="PointLoad.html#Mx()">Mx</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ComplexMomentOfForce.html">ComplexMomentOfForce</a></b></code>
+</td>
+<td width="90%"><code><b><a href="PointLoad.html#My()">My</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ComplexMomentOfForce.html">ComplexMomentOfForce</a></b></code>
+</td>
+<td width="90%"><code><b><a href="PointLoad.html#Mz()">Mz</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="PointLoad.html#Name()">Name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td width="90%"><code><b><a href="PointLoad.html#Position()">Position</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="CoordinateSystem.html">CoordinateSystem</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Load.html#coordinateSystem()">coordinateSystem</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Specifies what coordinate system the load intensities will be evaluated in</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LoadCase.html">LoadCase</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Load.html#loadCase()">loadCase</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LocalSystem.html">LocalSystem</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Load.html#localSystem()">localSystem</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Specifies what local system the load intensities will be evaluated in</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="type_info.html">type_info</a></b></code>
+</td>
+<td width="90%"><code><b><a href="PointLoad.html#typePointLoad()">typePointLoad</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="PointLoad(LoadCase, Footprint0d, PointForceMoment, LocalSystem)"></a>
+<h3>PointLoad</h3>
+<p class="function">
+<b>PointLoad</b>(<b><a href="LoadCase.html">LoadCase</a></b><span title="Loadcase where Point Load acts"> loadcase</span>, <b><a href="Footprint0d.html">Footprint0d</a></b><span title="Footprint of Point Load"> footprint</span>, <b><a href="PointForceMoment.html">PointForceMoment</a></b><span title="Value of Point Load"> intensity</span>, <b><a href="LocalSystem.html">LocalSystem</a></b><span title="Local coordinate system"> locsys</span>)</p>
+<p>
+<dl><dt>Parameters:</dt>
+<dd><code>loadcase</code> - Loadcase where Point Load acts<dd><code>footprint</code> - Footprint of Point Load<dd><code>intensity</code> - Value of Point Load<dd><code>locsys</code> - Local coordinate system</dl>
+<hr>
+
+<a name="PointLoad(LoadCase, Footprint0d, PointForceMoment, CoordinateSystem)"></a>
+<h3>PointLoad</h3>
+<p class="function">
+<b>PointLoad</b>(<b><a href="LoadCase.html">LoadCase</a></b><span title="Loadcase where Point Load acts"> loadcase</span>, <b><a href="Footprint0d.html">Footprint0d</a></b><span title="Footprint of Point Load"> footprint</span>, <b><a href="PointForceMoment.html">PointForceMoment</a></b><span title="Value of Point Load"> intensity</span>, <b><a href="CoordinateSystem.html">CoordinateSystem</a></b><span title="Local coordinate system"> coordinateSystem</span>)</p>
+<p>
+<dl><dt>Parameters:</dt>
+<dd><code>loadcase</code> - Loadcase where Point Load acts<dd><code>footprint</code> - Footprint of Point Load<dd><code>intensity</code> - Value of Point Load<dd><code>coordinateSystem</code> - Local coordinate system</dl>
+<hr>
+
+<a name="PointLoad(LoadCase, Point, ComplexForce, ComplexForce, ComplexForce, ComplexMomentOfForce, ComplexMomentOfForce, ComplexMomentOfForce)"></a>
+<h3>PointLoad</h3>
+<p class="function">
+<b>PointLoad</b>(<b><a href="LoadCase.html">LoadCase</a></b><span title="Loadcase where PointLoad acts"> loadcase</span>, <b><a href="Point.html">Point</a></b><span title="Position of PointLoad"> pos</span>, <b><a href="ComplexForce.html">ComplexForce</a></b><span title="Force, x-component"> fx</span>, <b><a href="ComplexForce.html">ComplexForce</a></b><span title="Force, y-component"> fy</span>, <b><a href="ComplexForce.html">ComplexForce</a></b><span title="Force, z-component"> fz</span>, <b><a href="ComplexMomentOfForce.html">ComplexMomentOfForce</a></b><span title="Moment, x-component"> mx</span>, <b><a href="ComplexMomentOfForce.html">ComplexMomentOfForce</a></b><span title="Moment, y-component"> my</span>, <b><a href="ComplexMomentOfForce.html">ComplexMomentOfForce</a></b><span title="Moment, z-component"> mz</span>)</p>
+<p>
+<dl><dt>Parameters:</dt>
+<dd><code>loadcase</code> - Loadcase where PointLoad acts<dd><code>pos</code> - Position of PointLoad<dd><code>fx</code> - Force, x-component<dd><code>fy</code> - Force, y-component<dd><code>fz</code> - Force, z-component<dd><code>mx</code> - Moment, x-component<dd><code>my</code> - Moment, y-component<dd><code>mz</code> - Moment, z-component</dl>
+<hr>
+
+<a name="PointLoad(LoadCase, Point, ComplexForce, ComplexForce, ComplexForce, ComplexMomentOfForce, ComplexMomentOfForce, ComplexMomentOfForce, LocalSystem)"></a>
+<h3>PointLoad</h3>
+<p class="function">
+<b>PointLoad</b>(<b><a href="LoadCase.html">LoadCase</a></b><span title="Loadcase where PointLoad acts"> loadcase</span>, <b><a href="Point.html">Point</a></b><span title="Position of PointLoad"> pos</span>, <b><a href="ComplexForce.html">ComplexForce</a></b><span title="Force, x-component"> fx</span>, <b><a href="ComplexForce.html">ComplexForce</a></b><span title="Force, y-component"> fy</span>, <b><a href="ComplexForce.html">ComplexForce</a></b><span title="Force, z-component"> fz</span>, <b><a href="ComplexMomentOfForce.html">ComplexMomentOfForce</a></b><span title="Moment, x-component"> mx</span>, <b><a href="ComplexMomentOfForce.html">ComplexMomentOfForce</a></b><span title="Moment, y-component"> my</span>, <b><a href="ComplexMomentOfForce.html">ComplexMomentOfForce</a></b><span title="Moment, z-component"> mz</span>, <b><a href="LocalSystem.html">LocalSystem</a></b><span title="Local coordinate system"> locsys</span>)</p>
+<p>
+<dl><dt>Parameters:</dt>
+<dd><code>loadcase</code> - Loadcase where PointLoad acts<dd><code>pos</code> - Position of PointLoad<dd><code>fx</code> - Force, x-component<dd><code>fy</code> - Force, y-component<dd><code>fz</code> - Force, z-component<dd><code>mx</code> - Moment, x-component<dd><code>my</code> - Moment, y-component<dd><code>mz</code> - Moment, z-component<dd><code>locsys</code> - Local coordinate system</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="Footprint()"></a>
+<h3>Footprint</h3>
+<p class="function">
+<b><a href="Footprint0d.html">Footprint0d</a></b> <b>Footprint</b>()</p>
+<p>
+<a name="Fx()"></a>
+<h3>Fx</h3>
+<p class="function">
+<b><a href="ComplexForce.html">ComplexForce</a></b> <b>Fx</b>()</p>
+<p>
+<a name="Fy()"></a>
+<h3>Fy</h3>
+<p class="function">
+<b><a href="ComplexForce.html">ComplexForce</a></b> <b>Fy</b>()</p>
+<p>
+<a name="Fz()"></a>
+<h3>Fz</h3>
+<p class="function">
+<b><a href="ComplexForce.html">ComplexForce</a></b> <b>Fz</b>()</p>
+<p>
+<a name="Intensity()"></a>
+<h3>Intensity</h3>
+<p class="function">
+<b><a href="PointForceMoment.html">PointForceMoment</a></b> <b>Intensity</b>()</p>
+<p>
+<a name="Locsys()"></a>
+<h3>Locsys</h3>
+<p class="function">
+<b><a href="LocalSystem.html">LocalSystem</a></b> <b>Locsys</b>()</p>
+<p>
+<a name="Mx()"></a>
+<h3>Mx</h3>
+<p class="function">
+<b><a href="ComplexMomentOfForce.html">ComplexMomentOfForce</a></b> <b>Mx</b>()</p>
+<p>
+<a name="My()"></a>
+<h3>My</h3>
+<p class="function">
+<b><a href="ComplexMomentOfForce.html">ComplexMomentOfForce</a></b> <b>My</b>()</p>
+<p>
+<a name="Mz()"></a>
+<h3>Mz</h3>
+<p class="function">
+<b><a href="ComplexMomentOfForce.html">ComplexMomentOfForce</a></b> <b>Mz</b>()</p>
+<p>
+<a name="Name()"></a>
+<h3>Name</h3>
+<p class="function">
+<b>string</b> <b>Name</b>()</p>
+<p>
+<a name="Position()"></a>
+<h3>Position</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>Position</b>()</p>
+<p>
+<a name="typePointLoad()"></a>
+<h3>typePointLoad</h3>
+<p class="function">
+<b><a href="type_info.html">type_info</a></b> <b>typePointLoad</b>()</p>
+<p>
+</body>
+</html>

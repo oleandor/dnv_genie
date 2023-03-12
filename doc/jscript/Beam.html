@@ -1,0 +1,1364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: Beam
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: Beam
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Define a basic beam and modify beam specific parameters like local system,<br/> offset vector, split points, move ends, translate and buckling factors
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Modify the local system of a beam</td></tr><tr>  <td>     <code>Bm21.rotateLocalX(90);<br/>     </code>		<div class="explanation">This command is scripted. Typically when rotating the beam Bm21 90 degrees around the beam local x-axis<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Add eccentricities to the beam ends (Offset vector)</td></tr><tr>  <td>     <code>Bm21.setBeamOffset(Vector3d(0 m,0 m,-5cm));<br/>     </code>		<div class="explanation">This command is scripted. Typically when specifying an eccentricity of 5cm in negative global z-direction for beam Bm21<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Add additional vertices (or snap points) to a beam</td></tr><tr>  <td>     <code>Bm31.splitAt(0.2);<br/>Bm31.splitAt(0.4);<br/>Bm31.splitAt(0.6);<br/>Bm31.splitAt(0.8);<br/>     </code>		<div class="explanation">This command is scripted. Typically when distributing 4 points evenly of Bm31<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Move one beam end</td></tr><tr>  <td>     <code>Bm31.extendEnd(2, -150 cm);<br/><br/>Bm31.moveEnd(1, Vector3d(0 m,5 m,0 m));<br/>     </code>		<div class="explanation">This command is scripted. Typically when reducing the length with 150 cm relative to the end point 2 of Bm31<br/>The end point can be moved to another point, by a vector definition or extended/reduced<br/>along its own local x-axis. In the latter case a positive value means extension of the beam<br/>while a negative value means a reduction of the length.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Using a function to update the beam ends</td></tr><tr>  <td>     <code>var Bea = new Array();<br/>Bea[1] = Dx1A1;<br/>Bea[2] = Dx1C1;<br/>Bea[3] = Dx1E1;<br/>Bea[4] = Dx1G1;<br/>End1_X_center = 0.15 m;<br/>End2_X_center = 0.16 m;<br/>End1_Offset = 1.837 m;<br/>End2_Offset = 2.102 m;<br/>End2_X_center = 0.16 m;<br/>Main_Section = D39;<br/>End1_Section = Node_Diagonal_X;<br/>End2_Section = Node_Diagonal_X;<br/>DiagonalProp (Bea,End1_Offset,End2_Offset,Main_Section,End1_X_center,End2_X_center,End1_Section,End2_Section);<br/>     </code>		<div class="explanation">First list the beams to be updated in an array<br/>Define eccentricities and offsets for these beams<br/>Then call a user function to do the update<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>DiagonalProp - function to update beams</td></tr><tr>  <td>     <code>function DiagonalProp (Bea,End1_Offset,End2_Offset,Main_Section,End1_X_center,End2_X_center, End1_Section,End2_Section)<br/>{<br/>&nbsp;&nbsp;&nbsp;&nbsp;var NumBeam = Bea.length;<br/>&nbsp;&nbsp;&nbsp;&nbsp;for (i = 1; i < NumBeam ; i++) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bea[i].section = Main_Section;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ( End1_X_center != 0. m ) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bea[i].setEndOffset(1, Vector3d(End1_X_center, 0 m,0 m));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ( End2_X_center != 0. m ) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bea[i].setEndOffset(2, Vector3d(End2_X_center, 0 m,0 m));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ( End1_Offset != 0. m) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bea[i].divideSegmentAt (1,(End1_Offset / Bea[i].length()));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bea[i].SetSegmentSection(1, End1_Section);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ( End2_Offset != 0. m) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bea[i].divideSegmentAt(2,((Bea[i].getSegmentLength(2)-End2_Offset)/Bea[i].getSegmentLength(2)));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bea[i].SetSegmentSection(3, End2_Section);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>     </code>		<div class="explanation">Define eccentricities modelled by EndOffset<br/>Then set End1 Offset and/or End2 offset<br/>The beam is divided at relative position Lsegment / Lbeam<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Move a beam with a translation vector (Translate)</td></tr><tr>  <td>     <code>Bm31.extendEnd(2, -150 cm);<br/>Bm21.moveTranslate(Vector3d(0m,0m,2000mm));<br/>     </code>		<div class="explanation">This command is scripted. Typically when moving Bm21 2000mm in positive global z-direction)<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Copy a beam using a translation vector</td></tr><tr>  <td>     <code>Bm2 = Bm1.copyTranslate(Vector3d(0 m,0 m,10 m));<br/>     </code>		<div class="explanation">This command is scripted. Typically copying Bm1 with the shown vector<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Copy a beam by defining a rotation point, a vector and a rotation angle.</td></tr><tr>  <td>     <code>Bm103 = Bm21.copyRotate(Point(0 m,0 m,0 m), Vector3d(0,0,1),90 deg);<br/>     </code>		<div class="explanation">This command is scripted. Typically copying Bm1 around point (0,0,0) with vector (0,0,1) and angle 90 degrees<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Copy a beam by defining a mirror plane built up from a point and a normal vector</td></tr><tr>  <td>     <code>Bm2 = Bm1.copyMirror(Point(0 m,5 m,0 m), Vector3d(0,1,0));<br/><br/>autoMSet = Set();<br/>autoMSet.clear();<br/>autoMSet.add(Bm1);<br/>autoMSet.moveMirror(Point(0 m,5 m,0 m), Vector3d(0,1,0),geUNCONNECTED);<br/>Delete(autoMSet);<br/>     </code>		<div class="explanation">This command is scripted. Typically copying Bm1 around point (0,5,0) with vector (0,1,0)<br/>A typical move operation would be as shown above<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Copy a beam by defining a scaling factor and a point used as the scaling centre</td></tr><tr>  <td>     <code>Beam1_1 = Beam1.copyScale(5,Point(0,0,0));<br/>Beam2_1 = Beam2.copyScale(5,Point(0,0,0));<br/>     </code>		<div class="explanation">This command is scripted.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Copy beams by defining a source plane and a destination plane</td></tr><tr>  <td>     <code>Bm11 = Bm1.copy3Point(Point(27 m,0 m,10 m),Point(27 m,0 m,4 m),Point(27 m,28.5 m,10 m),<br/>Point(37 m,0 m,10 m),Point(37 m,0 m,4 m),Point(37 m,28.5 m,10 m));<br/><br/>Bm12 = Bm2.copy3Point(Point(27 m,0 m,10 m),Point(27 m,0 m,4 m),Point(27 m,28.5 m,10 m),<br/>Point(37 m,0 m,10 m),Point(37 m,0 m,4 m),Point(37 m,28.5 m,10 m));<br/>     </code>		<div class="explanation">This command is scripted. Typically copying Bm1and Bm2 using the input parameters above. <br/>For both planes three points must be defined.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Copy a beam by defining a general transformation</td></tr><tr>  <td>     <code>     </code>		<div class="explanation">This command is scripted depending on which operation is carried out.<br/>For examples, see Section 3.3.12 of User Manual Volume 3.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Join beams and segments</td></tr><tr>  <td>     <code>Bm144.joinBeams(Bm145);<br/>Bm144.joinSegments(1,2);<br/>     </code>		<div class="explanation">This command is scripted. Typically when joining Bm144 and Bm145<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Divide beams and segments using a number of division criteria</td></tr><tr>  <td>     <code>Bm2 = Bm1.divide(XPlane3d(24 m));<br/>     </code>		<div class="explanation">This command is scripted. Typically when dividing Bm1 with an X-plane at x= 24 m (there are now two beams Bm1 and Bm2)<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Delete the selection</td></tr><tr>  <td>     <code>Delete(Bm1);<br/>Delete(Bm2);<br/>     </code>		<div class="explanation">This command is scripted. Typically when selecting Bm1 or Bm2<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Add or modify properties to the selected beam</td></tr><tr>  <td>     <code>Bm1.section = HE600A;<br/>     </code>		<div class="explanation">This commands are scripted. Typically when adding profile type HE600A to Bm1<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="Transformable.html">Transformable</a>
+            |
+            +--<a href="BasicConcept.html">BasicConcept</a>
+                 |
+                 +--<b>Beam</b>
+</pre>
+<dl>
+<dt>Direct Known Subclasses:</dt> <dd><b><a href="CurvedBeam.html">CurvedBeam</a></b>, <b><a href="Pile.html">Pile</a></b>, <b><a href="StraightBeam.html">StraightBeam</a></b></dd>
+</dl>
+<hr/>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#SetNoClassification()">SetNoClassification</a></b>()</code>
+<div class="explanation">
+Remove beam classification assignment for whole beam</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>Beam</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#divide(mfRelationObject)">divide</a></b>(<b><a href="mfRelationObject.html">mfRelationObject</a></b> dividerObject)</code>
+<div class="explanation">
+Divide beam in two with a curve or a plate</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#divide(oriented_bbox3d, std::shared_ptr<mfNameMask>)">divide</a></b>(<b><a href="oriented_bbox3d.html">oriented_bbox3d</a></b><span title="bounding box to divide beam with"> boundingBox</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b>)</code>
+<div class="explanation">
+Divide a beam in multiple beams based on the input bounding box</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>Beam</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#divide(plane3d)">divide</a></b>(<b><a href="plane3d.html">plane3d</a></b> dividerPlane)</code>
+<div class="explanation">
+Divide beam in two with a plane</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>Beam</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#divideAt(double)">divideAt</a></b>(<b>double</b><span title="value in range <0,1>."> parameter</span>)</code>
+<div class="explanation">
+Divide beam at parameter value and return the second half of the beam</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>Beam</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#divideAtEccentric(double)">divideAtEccentric</a></b>(<b>double</b><span title="value in range <0,1>."> length fraction</span>)</code>
+<div class="explanation">
+Divide beam at eccentric length fraction value and return the second half of the beam</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#divideSegmentAt(int, double)">divideSegmentAt</a></b>(<b>int</b><span title="segment index"> iseg</span>, <b>double</b><span title="value in range <0,1>."> parameter</span>)</code>
+<div class="explanation">
+Divide beam segment at parameter value</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#divideSegmentAtEccentric(int, double)">divideSegmentAtEccentric</a></b>(<b>int</b>, <b>double</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#divideSegmentAtPlane(plane3d)">divideSegmentAtPlane</a></b>(<b><a href="plane3d.html">plane3d</a></b><span title="dividing plane"> plane</span>)</code>
+<div class="explanation">
+Divide beam segment using plane</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#explode(std::shared_ptr<mfNameMask>)">explode</a></b>(<b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Controls the naming of the new concepts"> nameMask</span>)</code>
+<div class="explanation">
+Split structure into smaller parts</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#extendEnd(long, Length)">extendEnd</a></b>(<b><a href="long.html">long</a></b><span title="Beam end number, 1 or 2."> iend</span>, <b><a href="Length.html">Length</a></b><span title="length to extend or shorten beam"> extension</span>)</code>
+<div class="explanation">
+Extend or shorten beam at end 1 or 2 along direction of beam</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#getConnectedBeams(pointOnBeam)">getConnectedBeams</a></b>(<b><a href="pointOnBeam.html">pointOnBeam</a></b>)</code>
+<div class="explanation">
+Returns all beams that are connected to this beam at pointOnBeam</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Material.html">Material</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#getSegmentMaterial(int)">getSegmentMaterial</a></b>(<b>int</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Section.html">Section</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#getSegmentSection(int)">getSegmentSection</a></b>(<b>int</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#intersect(mfRelationObject)">intersect</a></b>(<b><a href="mfRelationObject.html">mfRelationObject</a></b> object)</code>
+<div class="explanation">
+Find the intersection point between the beam and the object</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#intersect(plane3d)">intersect</a></b>(<b><a href="plane3d.html">plane3d</a></b> plane)</code>
+<div class="explanation">
+Find the intersection point, if between the beam and a plane</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#joinSegments(int, int)">joinSegments</a></b>(<b>int</b><span title="Master segment"> iseg1</span>, <b>int</b><span title="Slave segment"> iseg2</span>)</code>
+<div class="explanation">
+Join two neighbour segments</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#lockMesh(...)">lockMesh</a></b>([ ...])</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#move3Point(Point, Point, Point, Point, Point, Point)">move3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> p4</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> p5</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> p6</span>)</code>
+<div class="explanation">
+Move the object from one coordinate system to another</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#move3Point(Point, Point, Point, Point, Point, Point, ConnectionType)">move3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> p4</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> p5</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> p6</span>, <b><a href="ConnectionType.html">ConnectionType</a></b><span title="Specify the connection type (geCONNECTED or geUNCONNECTED)"> connectionType</span>)</code>
+<div class="explanation">
+Move the object from one coordinate system to another</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#moveEnd(long, LengthVector3d)">moveEnd</a></b>(<b><a href="long.html">long</a></b><span title="Beam end number, 1 or 2."> iend</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="vector describing movement"> offset</span>)</code>
+<div class="explanation">
+Move beam end by giving in a vector</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#moveEnd(long, Point)">moveEnd</a></b>(<b><a href="long.html">long</a></b><span title="Beam end number, 1 or 2."> iend</span>, <b><a href="Point.html">Point</a></b><span title="point that beam end should be moved to"> newPos</span>)</code>
+<div class="explanation">
+Move beam end by giving in the new end point</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#moveEndPoints(Point, Point)">moveEndPoints</a></b>(<b><a href="Point.html">Point</a></b><span title="New position of end1"> newPos1</span>, <b><a href="Point.html">Point</a></b><span title="New position of end2"> newPos2</span>)</code>
+<div class="explanation">
+Move beam ends to specified new positions</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveMirror(Point, LengthVector3d)">moveMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveMirror(Point, LengthVector3d, ConnectionType)">moveMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>, <b><a href="ConnectionType.html">ConnectionType</a></b><span title="Specify the connection type (geCONNECTED or geUNCONNECTED)"> connectionType</span>)</code>
+<div class="explanation">
+Mirror the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveRotate(Point, LengthVector3d, Angle)">moveRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveRotate(Point, LengthVector3d, Angle, ConnectionType)">moveRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b><a href="ConnectionType.html">ConnectionType</a></b><span title="Specify the connection type (geCONNECTED or geUNCONNECTED)"> connectionType</span>)</code>
+<div class="explanation">
+Rotate the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#moveSegmentEnd(int, double)">moveSegmentEnd</a></b>(<b>int</b><span title="Segment number. Will move end of this segment."> isegEnd</span>, <b>double</b><span title="Parameter value on beam with the new segment position."> parameter</span>)</code>
+<div class="explanation">
+Move segment end (boundary between two segments)</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveTransform(Transformation3d)">moveTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general transformation to the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveTransform(Transformation3d, ConnectionType)">moveTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>, <b><a href="ConnectionType.html">ConnectionType</a></b><span title="Specify the connection type (geCONNECTED or geUNCONNECTED)"> connectionType</span>)</code>
+<div class="explanation">
+Apply a general transformation to the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveTranslate(LengthVector3d)">moveTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#moveTranslate(LengthVector3d, ConnectionType)">moveTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b><a href="ConnectionType.html">ConnectionType</a></b><span title="Specify the connection type (geCONNECTED or geUNCONNECTED)"> connectionType</span>)</code>
+<div class="explanation">
+Translate this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>BasicConcept</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#offset(Length)">offset</a></b>(<b><a href="Length.html">Length</a></b><span title="distance"> distance</span>)</code>
+<div class="explanation">
+Apply an offset transformation to the object</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#parameter(Point)">parameter</a></b>(<b><a href="Point.html">Point</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#point(double)">point</a></b>(<b>double</b> param)</code>
+<div class="explanation">
+Return a point at parameter value <code>param</code> along the beam</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#project(Point)">project</a></b>(<b><a href="Point.html">Point</a></b> pos)</code>
+<div class="explanation">
+Project a point onto the curve</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#rotateLocalX(Angle)">rotateLocalX</a></b>(<b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotates the local coordinate system about the X axis. </div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#rotateLocalY(Angle)">rotateLocalY</a></b>(<b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotates the local coordinate system about the Y axis. </div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#rotateLocalZ(Angle)">rotateLocalZ</a></b>(<b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotates the local coordinate system about the Y axis. </div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Segment.html">Segment</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#segment(int)">segment</a></b>(<b>int</b><span title="Beam parameter, value in range <0,1>."> parameter</span>)</code>
+<div class="explanation">
+Provide access</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#setLocalX(LengthVector3d)">setLocalX</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="direction vector indicating local x"> xvector</span>)</code>
+<div class="explanation">
+Set the local x-direction.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#setLocalY(LengthVector3d)">setLocalY</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="direction vector indicating local y"> yvector</span>)</code>
+<div class="explanation">
+Set the local y-direction.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#setLocalZ(LengthVector3d)">setLocalZ</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="direction vector indicating local z"> zvector</span>)</code>
+<div class="explanation">
+Set the local z-direction.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#setNoCorrosionAddition()">setNoCorrosionAddition</a></b>()</code>
+<div class="explanation">
+Remove corrosion addition assignment for whole beam</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#setNoMaterial()">setNoMaterial</a></b>()</code>
+<div class="explanation">
+Remove material assignment</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#setNoMeshDensity()">setNoMeshDensity</a></b>()</code>
+<div class="explanation">
+Remove mesh density assignment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#setNoMeshOption()">setNoMeshOption</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#setNoMeshProperty()">setNoMeshProperty</a></b>()</code>
+<div class="explanation">
+Remove mesh property assignment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#setNoSection()">setNoSection</a></b>()</code>
+<div class="explanation">
+Remove cross section assignment for whole beam</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#setSegmentMaterial(int, Material)">setSegmentMaterial</a></b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="Material.html">Material</a></b><span title="Material property"> material</span>)</code>
+<div class="explanation">
+Set material assignment for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#setSegmentNoMaterial(int)">setSegmentNoMaterial</a></b>(<b>int</b><span title="Segment number"> iseg</span>)</code>
+<div class="explanation">
+Remove material assignment for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#setSegmentNoSection(int)">setSegmentNoSection</a></b>(<b>int</b><span title="Segment number"> iseg</span>)</code>
+<div class="explanation">
+Remove section assignment for segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#setSegmentSection(int, Section)">setSegmentSection</a></b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="Section.html">Section</a></b><span title="Cross section property"> material</span>)</code>
+<div class="explanation">
+Set cross section assignment for segment</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#simplifyTopology()">simplifyTopology</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Beam.html#splitAt(double)">splitAt</a></b>(<b>double</b><span title="Beam parameter, value in range <0,1>."> parameter</span>)</code>
+<div class="explanation">
+Insert split point at given parameter position</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BasicConcept.html#unLockMesh()">unLockMesh</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copy3Point(Point, Point, Point, Point, Point, Point)">copy3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> sp1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> sp2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> sp3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> dp1</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> dp2</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> dp3</span>)</code>
+<div class="explanation">
+Copy the object without scaling from one location to another.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyMirror(Point, LengthVector3d)">copyMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int, std::shared_ptr<mfNameMask>)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyScale(double, Point)">copyScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Scale a copy of the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTransform(Transformation3d)">copyTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general transformation to a copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate a copy of this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int, std::shared_ptr<mfNameMask>)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#move3Point(Point, Point, Point, Point, Point, Point)">move3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> p4</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> p5</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> p6</span>)</code>
+<div class="explanation">
+Move the object from one coordinate system to another</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveMirror(Point, LengthVector3d)">moveMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveRotate(Point, LengthVector3d, Angle)">moveRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveScale(double, Point)">moveScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Move and scale the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTransform(Transformation3d)">moveTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general selection to the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTranslate(LengthVector3d)">moveTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LengthVector3d.html">LengthVector3d</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#BeamDirection()">BeamDirection</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="DNVS__MoFa__Utility__SmartPointer_DNVS__MoFa__CurveOffsets__ICurveOffset_.html">DNVS::MoFa::Utility::SmartPointer<DNVS::MoFa::CurveOffsets::ICurveOffset></a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#CurveOffset()">CurveOffset</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="DNVS__MoFa__Utility__SmartPointer_DNVS__MoFa__CurveOrientations__ICurveOrientation_.html">DNVS::MoFa::Utility::SmartPointer<DNVS::MoFa::CurveOrientations::ICurveOrientation></a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#CurveOrientation()">CurveOrientation</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Apex.html">Apex</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#End1()">End1</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Apex.html">Apex</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#End2()">End2</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BasicConcept.html#centreOfGravity()">centreOfGravity</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="BeamClassification.html">BeamClassification</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#classification()">classification</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Classification (whole beam)</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="AbstractCorrosionAddition.html">AbstractCorrosionAddition</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#corrosionAddition()">corrosionAddition</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Corrosion Addition (whole beam)</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geCONNECTED()">geCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use connected move</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geUNCONNECTED()">geUNCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use unconnected move</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#intersectionPoints()">intersectionPoints</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+returns all points along a beam that can have intersecting beams</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LocalSystem.html">LocalSystem</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BasicConcept.html#localSystem()">localSystem</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Gets or sets the local coordinate system.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Mass.html">Mass</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BasicConcept.html#mass()">mass</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Material.html">Material</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#material()">material</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Material (whole beam)</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="MeshDensity.html">MeshDensity</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#meshDensity()">meshDensity</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Mesh density (whole beam)</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="MeshOptionEdge.html">MeshOptionEdge</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#meshOption()">meshOption</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>int</b></code>
+</td>
+<td width="90%"><code><b><a href="BasicConcept.html#primitivePartCount()">primitivePartCount</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Section.html">Section</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#section()">section</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Cross section (whole beam)</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>int</b></code>
+</td>
+<td width="90%"><code><b><a href="Beam.html#segmentCount()">segmentCount</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="SetNoClassification()"></a>
+<h3>SetNoClassification</h3>
+<p class="function">
+<b>&nbsp;</b> <b>SetNoClassification</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove beam classification assignment for whole beam
+</dl>
+<hr>
+
+<a name="divide(oriented_bbox3d, std::shared_ptr<mfNameMask>)"></a>
+<h3>divide</h3>
+<p class="function">
+<b>&nbsp;</b> <b>divide</b>(<b><a href="oriented_bbox3d.html">oriented_bbox3d</a></b><span title="bounding box to divide beam with"> boundingBox</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Divide a beam in multiple beams based on the input bounding box
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>boundingBox</code> - bounding box to divide beam with</dl>
+<hr>
+
+<a name="divide(plane3d)"></a>
+<h3>divide</h3>
+<p class="function">
+<b>Beam</b> <b>divide</b>(<b><a href="plane3d.html">plane3d</a></b> dividerPlane)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Divide beam in two with a plane
+</dl>
+<hr>
+
+<a name="divide(mfRelationObject)"></a>
+<h3>divide</h3>
+<p class="function">
+<b>Beam</b> <b>divide</b>(<b><a href="mfRelationObject.html">mfRelationObject</a></b> dividerObject)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Divide beam in two with a curve or a plate
+</dl>
+<hr>
+
+<a name="divideAt(double)"></a>
+<h3>divideAt</h3>
+<p class="function">
+<b>Beam</b> <b>divideAt</b>(<b>double</b><span title="value in range <0,1>."> parameter</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Divide beam at parameter value and return the second half of the beam
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>parameter</code> - value in range <0,1>.</dl>
+<hr>
+
+<a name="divideAtEccentric(double)"></a>
+<h3>divideAtEccentric</h3>
+<p class="function">
+<b>Beam</b> <b>divideAtEccentric</b>(<b>double</b><span title="value in range <0,1>."> length fraction</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Divide beam at eccentric length fraction value and return the second half of the beam
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>length fraction</code> - value in range <0,1>.</dl>
+<hr>
+
+<a name="divideSegmentAt(int, double)"></a>
+<h3>divideSegmentAt</h3>
+<p class="function">
+<b>&nbsp;</b> <b>divideSegmentAt</b>(<b>int</b><span title="segment index"> iseg</span>, <b>double</b><span title="value in range <0,1>."> parameter</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Divide beam segment at parameter value
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iseg</code> - segment index<dd><code>parameter</code> - value in range <0,1>.</dl>
+<hr>
+
+<a name="divideSegmentAtEccentric(int, double)"></a>
+<h3>divideSegmentAtEccentric</h3>
+<p class="function">
+<b>&nbsp;</b> <b>divideSegmentAtEccentric</b>(<b>int</b>, <b>double</b>)</p>
+<p>
+<hr>
+
+<a name="divideSegmentAtPlane(plane3d)"></a>
+<h3>divideSegmentAtPlane</h3>
+<p class="function">
+<b>&nbsp;</b> <b>divideSegmentAtPlane</b>(<b><a href="plane3d.html">plane3d</a></b><span title="dividing plane"> plane</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Divide beam segment using plane
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>plane</code> - dividing plane</dl>
+<hr>
+
+<a name="extendEnd(long, Length)"></a>
+<h3>extendEnd</h3>
+<p class="function">
+<b>bool</b> <b>extendEnd</b>(<b><a href="long.html">long</a></b><span title="Beam end number, 1 or 2."> iend</span>, <b><a href="Length.html">Length</a></b><span title="length to extend or shorten beam"> extension</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Extend or shorten beam at end 1 or 2 along direction of beam
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iend</code> - Beam end number, 1 or 2.<dd><code>extension</code> - length to extend or shorten beam</dl>
+<dl>
+<dt>Returns:</dt>
+<dd>
+</dl>
+<hr>
+
+<a name="getConnectedBeams(pointOnBeam)"></a>
+<h3>getConnectedBeams</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>getConnectedBeams</b>(<b><a href="pointOnBeam.html">pointOnBeam</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns all beams that are connected to this beam at pointOnBeamExample:
+for(var beam in Bm1.getConnectedBeams(point))
+{
+   Print(beam.name);
+}
+</dl>
+<hr>
+
+<a name="getSegmentMaterial(int)"></a>
+<h3>getSegmentMaterial</h3>
+<p class="function">
+<b><a href="Material.html">Material</a></b> <b>getSegmentMaterial</b>(<b>int</b>)</p>
+<p>
+<hr>
+
+<a name="getSegmentSection(int)"></a>
+<h3>getSegmentSection</h3>
+<p class="function">
+<b><a href="Section.html">Section</a></b> <b>getSegmentSection</b>(<b>int</b>)</p>
+<p>
+<hr>
+
+<a name="intersect(plane3d)"></a>
+<h3>intersect</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>intersect</b>(<b><a href="plane3d.html">plane3d</a></b> plane)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Find the intersection point, if between the beam and a plane
+</dl>
+<dl>
+<dt>Returns:</dt>
+<dd>
+</dl>
+<hr>
+
+<a name="intersect(mfRelationObject)"></a>
+<h3>intersect</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>intersect</b>(<b><a href="mfRelationObject.html">mfRelationObject</a></b> object)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Find the intersection point between the beam and the object
+</dl>
+<dl>
+<dt>Returns:</dt>
+<dd>
+</dl>
+<hr>
+
+<a name="joinSegments(int, int)"></a>
+<h3>joinSegments</h3>
+<p class="function">
+<b>&nbsp;</b> <b>joinSegments</b>(<b>int</b><span title="Master segment"> iseg1</span>, <b>int</b><span title="Slave segment"> iseg2</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Join two neighbour segments
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iseg1</code> - Master segment<dd><code>iseg2</code> - Slave segment</dl>
+<hr>
+
+<a name="moveEnd(long, LengthVector3d)"></a>
+<h3>moveEnd</h3>
+<p class="function">
+<b>bool</b> <b>moveEnd</b>(<b><a href="long.html">long</a></b><span title="Beam end number, 1 or 2."> iend</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="vector describing movement"> offset</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Move beam end by giving in a vector
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iend</code> - Beam end number, 1 or 2.<dd><code>offset</code> - vector describing movement</dl>
+<dl>
+<dt>Returns:</dt>
+<dd>
+</dl>
+<hr>
+
+<a name="moveEnd(long, Point)"></a>
+<h3>moveEnd</h3>
+<p class="function">
+<b>bool</b> <b>moveEnd</b>(<b><a href="long.html">long</a></b><span title="Beam end number, 1 or 2."> iend</span>, <b><a href="Point.html">Point</a></b><span title="point that beam end should be moved to"> newPos</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Move beam end by giving in the new end point
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iend</code> - Beam end number, 1 or 2.<dd><code>newPos</code> - point that beam end should be moved to</dl>
+<dl>
+<dt>Returns:</dt>
+<dd>
+</dl>
+<hr>
+
+<a name="moveEndPoints(Point, Point)"></a>
+<h3>moveEndPoints</h3>
+<p class="function">
+<b>bool</b> <b>moveEndPoints</b>(<b><a href="Point.html">Point</a></b><span title="New position of end1"> newPos1</span>, <b><a href="Point.html">Point</a></b><span title="New position of end2"> newPos2</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Move beam ends to specified new positions
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>newPos1</code> - New position of end1<dd><code>newPos2</code> - New position of end2</dl>
+<dl>
+<dt>Returns:</dt>
+<dd>
+</dl>
+<hr>
+
+<a name="moveSegmentEnd(int, double)"></a>
+<h3>moveSegmentEnd</h3>
+<p class="function">
+<b>&nbsp;</b> <b>moveSegmentEnd</b>(<b>int</b><span title="Segment number. Will move end of this segment."> isegEnd</span>, <b>double</b><span title="Parameter value on beam with the new segment position."> parameter</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Move segment end (boundary between two segments)
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>isegEnd</code> - Segment number. Will move end of this segment.<dd><code>parameter</code> - Parameter value on beam with the new segment position.</dl>
+<hr>
+
+<a name="parameter(Point)"></a>
+<h3>parameter</h3>
+<p class="function">
+<b>double</b> <b>parameter</b>(<b><a href="Point.html">Point</a></b>)</p>
+<p>
+<hr>
+
+<a name="point(double)"></a>
+<h3>point</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>point</b>(<b>double</b> param)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Return a point at parameter value <code>param</code> along the beamThe point is evaluated along the centric beam. This means that eccentricities are not taken into account.
+</dl>
+<hr>
+
+<a name="project(Point)"></a>
+<h3>project</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>project</b>(<b><a href="Point.html">Point</a></b> pos)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Project a point onto the curve
+</dl>
+<hr>
+
+<a name="segment(int)"></a>
+<h3>segment</h3>
+<p class="function">
+<b><a href="Segment.html">Segment</a></b> <b>segment</b>(<b>int</b><span title="Beam parameter, value in range <0,1>."> parameter</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Provide access
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>parameter</code> - Beam parameter, value in range <0,1>.</dl>
+<hr>
+
+<a name="setNoCorrosionAddition()"></a>
+<h3>setNoCorrosionAddition</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoCorrosionAddition</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove corrosion addition assignment for whole beam
+</dl>
+<hr>
+
+<a name="setNoMeshOption()"></a>
+<h3>setNoMeshOption</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoMeshOption</b>()</p>
+<p>
+<hr>
+
+<a name="setNoSection()"></a>
+<h3>setNoSection</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoSection</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove cross section assignment for whole beam
+</dl>
+<hr>
+
+<a name="setSegmentMaterial(int, Material)"></a>
+<h3>setSegmentMaterial</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentMaterial</b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="Material.html">Material</a></b><span title="Material property"> material</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set material assignment for segment
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iseg</code> - Segment number<dd><code>material</code> - Material property</dl>
+<hr>
+
+<a name="setSegmentNoMaterial(int)"></a>
+<h3>setSegmentNoMaterial</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentNoMaterial</b>(<b>int</b><span title="Segment number"> iseg</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove material assignment for segment
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iseg</code> - Segment number</dl>
+<hr>
+
+<a name="setSegmentNoSection(int)"></a>
+<h3>setSegmentNoSection</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentNoSection</b>(<b>int</b><span title="Segment number"> iseg</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove section assignment for segment
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iseg</code> - Segment number</dl>
+<hr>
+
+<a name="setSegmentSection(int, Section)"></a>
+<h3>setSegmentSection</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSegmentSection</b>(<b>int</b><span title="Segment number"> iseg</span>, <b><a href="Section.html">Section</a></b><span title="Cross section property"> material</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set cross section assignment for segment
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>iseg</code> - Segment number<dd><code>material</code> - Cross section property</dl>
+<hr>
+
+<a name="splitAt(double)"></a>
+<h3>splitAt</h3>
+<p class="function">
+<b>&nbsp;</b> <b>splitAt</b>(<b>double</b><span title="Beam parameter, value in range <0,1>."> parameter</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Insert split point at given parameter position
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>parameter</code> - Beam parameter, value in range <0,1>.</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="BeamDirection()"></a>
+<h3>BeamDirection</h3>
+<p class="function">
+<b><a href="LengthVector3d.html">LengthVector3d</a></b> <b>BeamDirection</b>()</p>
+<p>
+<a name="CurveOffset()"></a>
+<h3>CurveOffset</h3>
+<p class="function">
+<b><a href="DNVS__MoFa__Utility__SmartPointer_DNVS__MoFa__CurveOffsets__ICurveOffset_.html">DNVS::MoFa::Utility::SmartPointer<DNVS::MoFa::CurveOffsets::ICurveOffset></a></b> <b>CurveOffset</b>()</p>
+<p>
+<a name="CurveOrientation()"></a>
+<h3>CurveOrientation</h3>
+<p class="function">
+<b><a href="DNVS__MoFa__Utility__SmartPointer_DNVS__MoFa__CurveOrientations__ICurveOrientation_.html">DNVS::MoFa::Utility::SmartPointer<DNVS::MoFa::CurveOrientations::ICurveOrientation></a></b> <b>CurveOrientation</b>()</p>
+<p>
+<a name="End1()"></a>
+<h3>End1</h3>
+<p class="function">
+<b><a href="Apex.html">Apex</a></b> <b>End1</b>()</p>
+<p>
+<a name="End2()"></a>
+<h3>End2</h3>
+<p class="function">
+<b><a href="Apex.html">Apex</a></b> <b>End2</b>()</p>
+<p>
+<a name="classification()"></a>
+<h3>classification</h3>
+<p class="function">
+<b><a href="BeamClassification.html">BeamClassification</a></b> <b>classification</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Classification (whole beam)
+</dl>
+<a name="corrosionAddition()"></a>
+<h3>corrosionAddition</h3>
+<p class="function">
+<b><a href="AbstractCorrosionAddition.html">AbstractCorrosionAddition</a></b> <b>corrosionAddition</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Corrosion Addition (whole beam)
+</dl>
+<a name="intersectionPoints()"></a>
+<h3>intersectionPoints</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>intersectionPoints</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>returns all points along a beam that can have intersecting beamsExample:
+for(var point in Bm1.intersectionPoints)
+{
+   for(var beam in Bm1.getConnectedBeams(point))
+   {
+      Print(beam.name);
+   }
+}
+</dl>
+<a name="material()"></a>
+<h3>material</h3>
+<p class="function">
+<b><a href="Material.html">Material</a></b> <b>material</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Material (whole beam)
+</dl>
+<a name="meshDensity()"></a>
+<h3>meshDensity</h3>
+<p class="function">
+<b><a href="MeshDensity.html">MeshDensity</a></b> <b>meshDensity</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Mesh density (whole beam)
+</dl>
+<a name="meshOption()"></a>
+<h3>meshOption</h3>
+<p class="function">
+<b><a href="MeshOptionEdge.html">MeshOptionEdge</a></b> <b>meshOption</b>()</p>
+<p>
+<a name="section()"></a>
+<h3>section</h3>
+<p class="function">
+<b><a href="Section.html">Section</a></b> <b>section</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Cross section (whole beam)
+</dl>
+<a name="segmentCount()"></a>
+<h3>segmentCount</h3>
+<p class="function">
+<b>int</b> <b>segmentCount</b>()</p>
+<p>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: FemImportBasics
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: FemImportBasics
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Basic Fem import settings
+</dl>
+<dl>
+<hr/>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="FemImportBasics.html#AllowConceptInformationUpdate()">AllowConceptInformationUpdate</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Specify whether to allow FEM file to be updated with concept information during import</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Analysis.html">Analysis</a></b></code>
+</td>
+<td width="90%"><code><b><a href="FemImportBasics.html#Analysis()">Analysis</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Specify an analysis to import the mesh into</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="FemImportBasics.html#ComputeMeshDensities()">ComputeMeshDensities</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+ Based on the mesh in the FEM file GeniE will compute mesh densities properties and apply these to the geometry in the concept model. This functionality should only be enabled for cargo hold models with stiffener spaced mesh. 
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="FemImportBasics.html#ForceUnit()">ForceUnit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="FemImportBasics.html#ImportConceptInformation()">ImportConceptInformation</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Specify whether to include existing concept information during import of FEM file</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="FemImportBasics.html#LengthUnit()">LengthUnit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="FemImportBasics.html#NamePrefix()">NamePrefix</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Prefix imported object names with specified string</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="FemImportBasics.html#TempDiffUnit()">TempDiffUnit</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Transformation3d.html">Transformation3d</a></b></code>
+</td>
+<td width="90%"><code><b><a href="FemImportBasics.html#Transformation()">Transformation</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Transform imported 3d objects using specified transformation</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="FemImportBasics.html#UniqueThicknessProperties()">UniqueThicknessProperties</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Joins thickness properties with same actual thickness values into one property
+</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="AllowConceptInformationUpdate()"></a>
+<h3>AllowConceptInformationUpdate</h3>
+<p class="function">
+<b>bool</b> <b>AllowConceptInformationUpdate</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify whether to allow FEM file to be updated with concept information during import
+</dl>
+<a name="Analysis()"></a>
+<h3>Analysis</h3>
+<p class="function">
+<b><a href="Analysis.html">Analysis</a></b> <b>Analysis</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify an analysis to import the mesh into
+</dl>
+<a name="ComputeMeshDensities()"></a>
+<h3>ComputeMeshDensities</h3>
+<p class="function">
+<b>bool</b> <b>ComputeMeshDensities</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd> Based on the mesh in the FEM file GeniE will compute mesh densities properties and apply these to the geometry in the concept model. This functionality should only be enabled for cargo hold models with stiffener spaced mesh. 
+
+</dl>
+<a name="ForceUnit()"></a>
+<h3>ForceUnit</h3>
+<p class="function">
+<b>string</b> <b>ForceUnit</b>()</p>
+<p>
+<a name="ImportConceptInformation()"></a>
+<h3>ImportConceptInformation</h3>
+<p class="function">
+<b>bool</b> <b>ImportConceptInformation</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify whether to include existing concept information during import of FEM file
+</dl>
+<a name="LengthUnit()"></a>
+<h3>LengthUnit</h3>
+<p class="function">
+<b>string</b> <b>LengthUnit</b>()</p>
+<p>
+<a name="NamePrefix()"></a>
+<h3>NamePrefix</h3>
+<p class="function">
+<b>string</b> <b>NamePrefix</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Prefix imported object names with specified string
+</dl>
+<a name="TempDiffUnit()"></a>
+<h3>TempDiffUnit</h3>
+<p class="function">
+<b>string</b> <b>TempDiffUnit</b>()</p>
+<p>
+<a name="Transformation()"></a>
+<h3>Transformation</h3>
+<p class="function">
+<b><a href="Transformation3d.html">Transformation3d</a></b> <b>Transformation</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Transform imported 3d objects using specified transformation
+</dl>
+<a name="UniqueThicknessProperties()"></a>
+<h3>UniqueThicknessProperties</h3>
+<p class="function">
+<b>bool</b> <b>UniqueThicknessProperties</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Joins thickness properties with same actual thickness values into one property
+If joining of shell elements is the intention, this will ensure that elements with same actual thickness are actually joined even if the elements have different thickness properties
+</dl>
+</body>
+</html>

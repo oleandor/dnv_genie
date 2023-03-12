@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: Clay
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: Clay
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Represent a soil of type Clay. The default values for apiJFactor, <br/>frictionRatio, zDisplacement and roWater may be overrided.
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>New Clay</td></tr><tr>  <td>     <code>Clay3.ocRatio = 1.0;<br/>Clay3.frictionRatio = 1.0;<br/>Clay3.zDisplacement = 1.0 m;<br/>Clay3.roTotal = 1.94 tonne/m^3;<br/>Clay3.apiJFactor = 0.5;<br/>Clay3.epsc = 0.01;<br/>Clay3.shearStrengthValues(200 KPa,0 m,100 KPa,-100 m);<br/>     </code>		<div class="explanation">This command is scripted. Typically with relevant data as shown<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="class_jmfDuplicateObject_class_jmfNamedObject_.html">class jmfDuplicateObject<class jmfNamedObject></a>
+            |
+            +--<a href="Soil.html">Soil</a>
+                 |
+                 +--<b>Clay</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="Clay.html#Clay(bool, double, MassDensity, double, ForcePerUnitArea, ForcePerUnitArea)">Clay</a></b>(<b>bool</b><span title="The open gap code - Gensod specific data"> openGapCode</span>, <b>double</b><span title="The over-consolidation ratio - Gensod specific data"> ocRatio</span>, <b><a href="MassDensity.html">MassDensity</a></b><span title="The mass density that corresponds to the total unit weight"> roTotal</span>, <b>double</b><span title="The strain at half of max stress - API spesific data"> epsc</span>, <b><a href="ForcePerUnitArea.html">ForcePerUnitArea</a></b><span title="Shear strength value at z=0"> suz0</span>, <b><a href="ForcePerUnitArea.html">ForcePerUnitArea</a></b><span title="Shear strength value at z=100"> suz100</span>)</code>
+<div class="explanation">
+Construct a soil of type clay</div></td>
+</tr>
+<tr >
+<td><code><b><a href="Clay.html#Clay(bool, double, MassDensity, double, ForcePerUnitArea, Length, ForcePerUnitArea, Length)">Clay</a></b>(<b>bool</b><span title="The open gap code - Gensod specific data"> openGapCode</span>, <b>double</b><span title="The over-consolidation ratio - Gensod specific data"> ocRatio</span>, <b><a href="MassDensity.html">MassDensity</a></b><span title="The mass density that corresponds to the total unit weight"> roTotal</span>, <b>double</b><span title="The strain at half of max stress - API spesific data"> epsc</span>, <b><a href="ForcePerUnitArea.html">ForcePerUnitArea</a></b><span title="Shear strength value at z=z1"> suz1</span>, <b><a href="Length.html">Length</a></b><span title="Reference value for suz1"> z1</span>, <b><a href="ForcePerUnitArea.html">ForcePerUnitArea</a></b><span title="Shear strength value at z=z2"> suz2</span>, <b><a href="Length.html">Length</a></b><span title="Reference value for suz2"> z2</span>)</code>
+<div class="explanation">
+Construct a soil of type clay</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Clay.html#shearStrengthValues(ForcePerUnitArea, Length, ForcePerUnitArea, Length)">shearStrengthValues</a></b>(<b><a href="ForcePerUnitArea.html">ForcePerUnitArea</a></b>, <b><a href="Length.html">Length</a></b>, <b><a href="ForcePerUnitArea.html">ForcePerUnitArea</a></b>, <b><a href="Length.html">Length</a></b>)</code>
+<div class="explanation">
+Undrained shear strength values at two given z reference values</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ForcePerUnitArea.html">ForcePerUnitArea</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Clay.html#suz(Length)">suz</a></b>(<b><a href="Length.html">Length</a></b> z)</code>
+<div class="explanation">
+returns the undrained shear strength at a given z-coordinate</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="class_jmfDuplicateObject_class_jmfNamedObject_.html#copy()">copy</a></b>()</code>
+<div class="explanation">
+Make an identical copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="Clay.html#apiJFactor()">apiJFactor</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+The J factor for API code - API spesific data (default: 0.25)</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="Clay.html#epsc()">epsc</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+The strain at half of max stress - API spesific data</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="Soil.html#frictionRatio()">frictionRatio</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+The residual/peak skin friction ratio (default: 1.0)</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="Soil.html#ocRatio()">ocRatio</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+The over-consolidation ratio - Gensod specific data</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Soil.html#openGapCode()">openGapCode</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+The open gap code - Gensod specific data</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="MassDensity.html">MassDensity</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Soil.html#roTotal()">roTotal</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+The mass density that corresponds to the total unit weight</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Soil.html#zDisplacement()">zDisplacement</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+The T-Z curve z displacement from peak to residual skin friction. Not relevant if frictionRatio equals 1.0</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="Clay(bool, double, MassDensity, double, ForcePerUnitArea, ForcePerUnitArea)"></a>
+<h3>Clay</h3>
+<p class="function">
+<b>Clay</b>(<b>bool</b><span title="The open gap code - Gensod specific data"> openGapCode</span>, <b>double</b><span title="The over-consolidation ratio - Gensod specific data"> ocRatio</span>, <b><a href="MassDensity.html">MassDensity</a></b><span title="The mass density that corresponds to the total unit weight"> roTotal</span>, <b>double</b><span title="The strain at half of max stress - API spesific data"> epsc</span>, <b><a href="ForcePerUnitArea.html">ForcePerUnitArea</a></b><span title="Shear strength value at z=0"> suz0</span>, <b><a href="ForcePerUnitArea.html">ForcePerUnitArea</a></b><span title="Shear strength value at z=100"> suz100</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a soil of type clay
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>openGapCode</code> - The open gap code - Gensod specific data<dd><code>ocRatio</code> - The over-consolidation ratio - Gensod specific data<dd><code>roTotal</code> - The mass density that corresponds to the total unit weight<dd><code>epsc</code> - The strain at half of max stress - API spesific data<dd><code>suz0</code> - Shear strength value at z=0<dd><code>suz100</code> - Shear strength value at z=100</dl>
+<hr>
+
+<a name="Clay(bool, double, MassDensity, double, ForcePerUnitArea, Length, ForcePerUnitArea, Length)"></a>
+<h3>Clay</h3>
+<p class="function">
+<b>Clay</b>(<b>bool</b><span title="The open gap code - Gensod specific data"> openGapCode</span>, <b>double</b><span title="The over-consolidation ratio - Gensod specific data"> ocRatio</span>, <b><a href="MassDensity.html">MassDensity</a></b><span title="The mass density that corresponds to the total unit weight"> roTotal</span>, <b>double</b><span title="The strain at half of max stress - API spesific data"> epsc</span>, <b><a href="ForcePerUnitArea.html">ForcePerUnitArea</a></b><span title="Shear strength value at z=z1"> suz1</span>, <b><a href="Length.html">Length</a></b><span title="Reference value for suz1"> z1</span>, <b><a href="ForcePerUnitArea.html">ForcePerUnitArea</a></b><span title="Shear strength value at z=z2"> suz2</span>, <b><a href="Length.html">Length</a></b><span title="Reference value for suz2"> z2</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a soil of type clay
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>openGapCode</code> - The open gap code - Gensod specific data<dd><code>ocRatio</code> - The over-consolidation ratio - Gensod specific data<dd><code>roTotal</code> - The mass density that corresponds to the total unit weight<dd><code>epsc</code> - The strain at half of max stress - API spesific data<dd><code>suz1</code> - Shear strength value at z=z1<dd><code>z1</code> - Reference value for suz1<dd><code>suz2</code> - Shear strength value at z=z2<dd><code>z2</code> - Reference value for suz2</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="shearStrengthValues(ForcePerUnitArea, Length, ForcePerUnitArea, Length)"></a>
+<h3>shearStrengthValues</h3>
+<p class="function">
+<b>&nbsp;</b> <b>shearStrengthValues</b>(<b><a href="ForcePerUnitArea.html">ForcePerUnitArea</a></b>, <b><a href="Length.html">Length</a></b>, <b><a href="ForcePerUnitArea.html">ForcePerUnitArea</a></b>, <b><a href="Length.html">Length</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Undrained shear strength values at two given z reference values
+</dl>
+<hr>
+
+<a name="suz(Length)"></a>
+<h3>suz</h3>
+<p class="function">
+<b><a href="ForcePerUnitArea.html">ForcePerUnitArea</a></b> <b>suz</b>(<b><a href="Length.html">Length</a></b> z)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>returns the undrained shear strength at a given z-coordinate
+</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="apiJFactor()"></a>
+<h3>apiJFactor</h3>
+<p class="function">
+<b>double</b> <b>apiJFactor</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>The J factor for API code - API spesific data (default: 0.25)
+</dl>
+<a name="epsc()"></a>
+<h3>epsc</h3>
+<p class="function">
+<b>double</b> <b>epsc</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>The strain at half of max stress - API spesific data
+</dl>
+</body>
+</html>

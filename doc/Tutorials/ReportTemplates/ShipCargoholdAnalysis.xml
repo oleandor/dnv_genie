@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="ASCII"?>
+<report_template>
+	<report name="" title="Report1">
+		<chapters>
+			<chapter_graphics title="Global">
+				<figure_definitions>
+					<figure_definition title="Global structure" external_image="" filter_labels_set="false">
+						<camera standard_view="iso" />
+						<display_configuration background="paper" configuration_name="Modelling - Structure" />
+						<color_code disable_light_mode="false" legend_title="None" category="None" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Global mesh" external_image="" filter_labels_set="false">
+						<camera standard_view="auto" />
+						<display_configuration background="paper" configuration_name="Mesh - All" />
+						<color_code disable_light_mode="false" legend_title="None" category="None" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Global compartment arrangement" external_image="" filter_labels_set="false">
+						<camera standard_view="auto" />
+						<display_configuration background="paper" configuration_name="Compartments" />
+						<color_code disable_light_mode="false" legend_title="None" category="None" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+				</figure_definitions>
+			</chapter_graphics>
+			
+			<chapter_graphics title="Longitudinal CodeCheck Results">
+				<set_filters name_filter1="*Longitudinal*" name_filter2="*Side*"/>
+				<figure_definitions>
+					<figure_definition title="CodeCheck results summary" external_image="" filter_labels_set="false">
+						<camera standard_view="auto" />
+						<display_configuration background="paper" configuration_name="Capacity Models" />
+						<color_code disable_light_mode="false" legend_title="UfTot" category="Results" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Codecheck results buckling" external_image="" filter_labels_set="false">
+						<camera standard_view="auto" />
+						<display_configuration background="paper" configuration_name="Capacity Models" />
+						<color_code disable_light_mode="false" legend_title="Uf-Buckling" category="Results" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Codecheck results yield" external_image="" filter_labels_set="false">
+						<camera standard_view="auto" />
+						<display_configuration background="paper" configuration_name="Capacity Models" />
+						<color_code disable_light_mode="false" legend_title="Uf-Yield" category="Results" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+				</figure_definitions>
+			</chapter_graphics>
+			
+			<chapter_graphics title="Transverse CodeCheck Results">
+			    <set_filters name_filter1="*Transverse*"/>
+				<figure_definitions>
+					<figure_definition title="CodeCheck results summary" external_image="" filter_labels_set="false">
+						<camera standard_view="auto" />
+						<display_configuration background="paper" configuration_name="Capacity Models" />
+						<color_code disable_light_mode="false" legend_title="UfTot" category="Results" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Codecheck results buckling" external_image="" filter_labels_set="false">
+						<camera standard_view="auto" />
+						<display_configuration background="paper" configuration_name="Capacity Models" />
+						<color_code disable_light_mode="false" legend_title="Uf-Buckling" category="Results" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Codecheck results yield" external_image="" filter_labels_set="false">
+						<camera standard_view="auto" />
+						<display_configuration background="paper" configuration_name="Capacity Models" />
+						<color_code disable_light_mode="false" legend_title="Uf-Yield" category="Results" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+				</figure_definitions>
+			</chapter_graphics>
+			
+			<chapter_graphics title="Horizontal CodeCheck Results">
+		        <set_filters name_filter1="*Deck*" name_filter2="*Bottom*" name_filter3="*Stringer*"/>
+				<figure_definitions>
+					<figure_definition title="CodeCheck results summary" external_image="" filter_labels_set="false">
+						<camera standard_view="auto" />
+						<display_configuration background="paper" configuration_name="Capacity Models" />
+						<color_code disable_light_mode="false" legend_title="UfTot" category="Results" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Codecheck results buckling" external_image="" filter_labels_set="false">
+						<camera standard_view="auto" />
+						<display_configuration background="paper" configuration_name="Capacity Models" />
+						<color_code disable_light_mode="false" legend_title="Uf-Buckling" category="Results" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Codecheck results yield" external_image="" filter_labels_set="false">
+						<camera standard_view="auto" />
+						<display_configuration background="paper" configuration_name="Capacity Models" />
+						<color_code disable_light_mode="false" legend_title="Uf-Yield" category="Results" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+				</figure_definitions>
+			</chapter_graphics>
+			
+			<chapter_graphics title="Longitudinal Properties">
+			    <set_filters name_filter1="*Longitudinal*" name_filter2="*Side*"/>																		 
+				<figure_definitions>
+					<figure_definition title="Plate thickness" external_image="" filter_labels_set="false">
+						<camera standard_view="from_y" />
+						<display_configuration background="paper" configuration_name="Modelling - Structure" />
+						<color_code disable_light_mode="false" legend_title="Plate Thickness" category="Property values" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Beam section" external_image="" filter_labels_set="false">
+						<camera standard_view="from_y" />
+						<display_configuration background="paper" configuration_name="Modelling - Structure" />
+						<color_code disable_light_mode="false" legend_title="Section" category="Properties" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Material" external_image="" filter_labels_set="false">
+						<camera standard_view="from_y" />
+						<display_configuration background="paper" configuration_name="Modelling - Structure" />
+						<color_code disable_light_mode="false" legend_title="Material" category="Properties" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Corrosion addition seen from Y" external_image="" filter_labels_set="false">
+						<camera standard_view="from_y" />
+						<display_configuration background="paper" configuration_name="Modelling - Structure" />
+						<color_code disable_light_mode="false" legend_title="Corrosion Addition" category="Properties" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Corrosion addition seen from -Y" external_image="" filter_labels_set="false">
+						<camera standard_view="from_minus_y" />
+						<display_configuration background="paper" configuration_name="Modelling - Structure" />
+						<color_code disable_light_mode="false" legend_title="Corrosion Addition" category="Properties" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Mesh" external_image="" filter_labels_set="false">
+						<camera standard_view="from_y" />
+						<display_configuration background="paper" configuration_name="Mesh - All" />
+						<color_code disable_light_mode="false" legend_title="None" category="None" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Mesh plate net thickness" external_image="" filter_labels_set="false">
+						<camera standard_view="from_y" />
+						<display_configuration background="paper" configuration_name="Mesh - All" />
+						<color_code disable_light_mode="false" legend_title="Element Thickness" category="Mesh" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Mesh material yield" external_image="" filter_labels_set="false">
+						<camera standard_view="from_y" />
+						<display_configuration background="paper" configuration_name="Mesh - All" />
+						<color_code disable_light_mode="false" legend_title="Element Material Yield" category="Mesh" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+				</figure_definitions>
+			</chapter_graphics>
+			
+			<chapter_graphics title="Transverse Properties">
+			    <set_filters name_filter1="*Transverse*"/>												 
+				<figure_definitions>
+					<figure_definition title="Plate thickness" external_image="" filter_labels_set="false">
+						<camera standard_view="from_x" />
+						<display_configuration background="paper" configuration_name="Modelling - Structure" />
+						<color_code disable_light_mode="false" legend_title="Plate Thickness" category="Property values" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Beam section" external_image="" filter_labels_set="false">
+						<camera standard_view="from_x" />
+						<display_configuration background="paper" configuration_name="Modelling - Structure" />
+						<color_code disable_light_mode="false" legend_title="Section" category="Properties" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Material" external_image="" filter_labels_set="false">
+						<camera standard_view="from_x" />
+						<display_configuration background="paper" configuration_name="Modelling - Structure" />
+						<color_code disable_light_mode="false" legend_title="Material" category="Properties" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Corrosion addition seen from X" external_image="" filter_labels_set="false">
+						<camera standard_view="from_x" />
+						<display_configuration background="paper" configuration_name="Modelling - Structure" />
+						<color_code disable_light_mode="false" legend_title="Corrosion Addition" category="Properties" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Corrosion addition seen from -X" external_image="" filter_labels_set="false">
+						<camera standard_view="from_minus_x" />
+						<display_configuration background="paper" configuration_name="Modelling - Structure" />
+						<color_code disable_light_mode="false" legend_title="Corrosion Addition" category="Properties" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Mesh" external_image="" filter_labels_set="false">
+						<camera standard_view="from_x" />
+						<display_configuration background="paper" configuration_name="Mesh - All" />
+						<color_code disable_light_mode="false" legend_title="None" category="None" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Mesh plate net thickness" external_image="" filter_labels_set="false">
+						<camera standard_view="from_x" />
+						<display_configuration background="paper" configuration_name="Mesh - All" />
+						<color_code disable_light_mode="false" legend_title="Element Thickness" category="Mesh" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Mesh material yield" external_image="" filter_labels_set="false">
+						<camera standard_view="from_x" />
+						<display_configuration background="paper" configuration_name="Mesh - All" />
+						<color_code disable_light_mode="false" legend_title="Element Material Yield" category="Mesh" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+				</figure_definitions>
+			</chapter_graphics>
+			
+			<chapter_graphics title="Horisontal Properties">
+		        <set_filters name_filter1="*Deck*" name_filter2="*Bottom*" name_filter3="*Stringer*"/>																								
+				<figure_definitions>
+					<figure_definition title="Plate thickness" external_image="" filter_labels_set="false">
+						<camera standard_view="from_z" />
+						<display_configuration background="paper" configuration_name="Modelling - Structure" />
+						<color_code disable_light_mode="false" legend_title="Plate Thickness" category="Property values" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Beam section" external_image="" filter_labels_set="false">
+						<camera standard_view="from_z" />
+						<display_configuration background="paper" configuration_name="Modelling - Structure" />
+						<color_code disable_light_mode="false" legend_title="Section" category="Properties" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Material" external_image="" filter_labels_set="false">
+						<camera standard_view="from_z" />
+						<display_configuration background="paper" configuration_name="Modelling - Structure" />
+						<color_code disable_light_mode="false" legend_title="Material" category="Properties" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Corrosion addition seen from Z" external_image="" filter_labels_set="false">
+						<camera standard_view="from_z" />
+						<display_configuration background="paper" configuration_name="Modelling - Structure" />
+						<color_code disable_light_mode="false" legend_title="Corrosion Addition" category="Properties" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Corrosion addition seen from -Z" external_image="" filter_labels_set="false">
+						<camera standard_view="from_minus_z" />
+						<display_configuration background="paper" configuration_name="Modelling - Structure" />
+						<color_code disable_light_mode="false" legend_title="Corrosion Addition" category="Properties" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Mesh" external_image="" filter_labels_set="false">
+						<camera standard_view="from_z" />
+						<display_configuration background="paper" configuration_name="Mesh - All" />
+						<color_code disable_light_mode="false" legend_title="None" category="None" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Mesh plate net thickness" external_image="" filter_labels_set="false">
+						<camera standard_view="from_z" />
+						<display_configuration background="paper" configuration_name="Mesh - All" />
+						<color_code disable_light_mode="false" legend_title="Element Thickness" category="Mesh" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Mesh material yield" external_image="" filter_labels_set="false">
+						<camera standard_view="from_z" />
+						<display_configuration background="paper" configuration_name="Mesh - All" />
+						<color_code disable_light_mode="false" legend_title="Element Material Yield" category="Mesh" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+				</figure_definitions>
+			</chapter_graphics>
+			
+			<chapter_graphics title="Compartments">
+			    <load_filters name_filter1="*"/>									   
+				<figure_definitions>
+					<figure_definition title="Compartments content" external_image="" filter_labels_set="false">
+						<camera standard_view="auto" />
+						<display_configuration background="paper" configuration_name="Compartments" />
+						<color_code disable_light_mode="false" legend_title="Content" category="Properties" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+				</figure_definitions>
+			</chapter_graphics>
+
+			<chapter_graphics title="Loads">
+				<figure_definitions>
+					<figure_definition title="Surface loads" external_image="" filter_labels_set="false">
+						<camera standard_view="auto" />
+						<display_configuration background="paper" configuration_name="Default display" />
+						<color_code disable_light_mode="false" legend_title="None" category="None" visibleModelOnly="false" />
+						<labels overlay_labels="true" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Line loads" external_image="" filter_labels_set="false">
+						<camera standard_view="auto" />
+						<display_configuration background="paper" configuration_name="Default display" />
+						<color_code disable_light_mode="false" legend_title="None" category="None" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Point loads" external_image="" filter_labels_set="false">
+						<camera standard_view="auto" />
+						<display_configuration background="paper" configuration_name="Default display" />
+						<color_code disable_light_mode="false" legend_title="None" category="None" visibleModelOnly="false" />
+						<labels overlay_labels="true" apply_to="None" type="None" />
+						<results attribute="None" component="Von Mises" surface="Middle" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+				</figure_definitions>
+			</chapter_graphics>
+			
+			<chapter_graphics title="FEM Results">
+				<figure_definitions>
+					<figure_definition title="G-stress VonMises" external_image="" filter_labels_set="false">
+						<camera standard_view="from_x" />
+						<display_configuration background="paper" configuration_name="Results - with Mesh" />
+						<color_code disable_light_mode="false" legend_title="None" category="None" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="G Stress" component="Von Mises" surface="Top" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+					<figure_definition title="Node displacements" external_image="" filter_labels_set="false">
+						<camera standard_view="from_x" />
+						<display_configuration background="paper" configuration_name="Results - with Mesh" />
+						<color_code disable_light_mode="false" legend_title="None" category="None" visibleModelOnly="false" />
+						<labels overlay_labels="false" apply_to="None" type="None" />
+						<results attribute="Displacement" component="All" surface="Undefined" presentation="Contour Plot" global_min_max="false" anchor_min_max_labels="false" diagram_values="false" use_3d="false" contour_plot_annotations="false" />
+					</figure_definition>
+				</figure_definitions>
+			</chapter_graphics>
+		</chapters>
+	</report>
+</report_template>

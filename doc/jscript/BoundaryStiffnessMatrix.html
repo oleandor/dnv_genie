@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: BoundaryStiffnessMatrix
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: BoundaryStiffnessMatrix
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Represent a set of Boundary Stiffness Matrix
+</dl>
+<dl>
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="MetaObject.html">MetaObject</a>
+  |
+  +--<a href="AbstractBoundary.html">AbstractBoundary</a>
+       |
+       +--<b>BoundaryStiffnessMatrix</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="BoundaryStiffnessMatrix.html#BoundaryStiffnessMatrix(TranslationalBoundary, TranslationalBoundary, TranslationalBoundary, RotationalBoundary, RotationalBoundary, RotationalBoundary)">BoundaryStiffnessMatrix</a></b>(<b><a href="TranslationalBoundary.html">TranslationalBoundary</a></b> Dx, <b><a href="TranslationalBoundary.html">TranslationalBoundary</a></b> Dy, <b><a href="TranslationalBoundary.html">TranslationalBoundary</a></b> Dz, <b><a href="RotationalBoundary.html">RotationalBoundary</a></b> Rx, <b><a href="RotationalBoundary.html">RotationalBoundary</a></b> Ry, <b><a href="RotationalBoundary.html">RotationalBoundary</a></b> Rz)</code>
+<div class="explanation">
+Construct a new boundary condition stiffness matrix</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="MetaObject.html#ToString(DNVS::MoFa::Formatting::FormattingService)">ToString</a></b>(<b><a href="DNVS__MoFa__Formatting__FormattingService.html">DNVS::MoFa::Formatting::FormattingService</a></b> formattingService)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="DynamicQuantity.html">DynamicQuantity</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BoundaryStiffnessMatrix.html#getStiffness(int, int)">getStiffness</a></b>(<b>int</b> freedomI, <b>int</b> freedomJ)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="BoundaryStiffnessMatrix.html#setStiffness(int, int, DynamicQuantity)">setStiffness</a></b>(<b>int</b> freedomI, <b>int</b> freedomJ, <b><a href="DynamicQuantity.html">DynamicQuantity</a></b> stiffness)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="TranslationalBoundary.html">TranslationalBoundary</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BoundaryStiffnessMatrix.html#Dx()">Dx</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="TranslationalBoundary.html">TranslationalBoundary</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BoundaryStiffnessMatrix.html#Dy()">Dy</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="TranslationalBoundary.html">TranslationalBoundary</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BoundaryStiffnessMatrix.html#Dz()">Dz</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="RotationalBoundary.html">RotationalBoundary</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BoundaryStiffnessMatrix.html#Rx()">Rx</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="RotationalBoundary.html">RotationalBoundary</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BoundaryStiffnessMatrix.html#Ry()">Ry</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="RotationalBoundary.html">RotationalBoundary</a></b></code>
+</td>
+<td width="90%"><code><b><a href="BoundaryStiffnessMatrix.html#Rz()">Rz</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="BoundaryStiffnessMatrix(TranslationalBoundary, TranslationalBoundary, TranslationalBoundary, RotationalBoundary, RotationalBoundary, RotationalBoundary)"></a>
+<h3>BoundaryStiffnessMatrix</h3>
+<p class="function">
+<b>BoundaryStiffnessMatrix</b>(<b><a href="TranslationalBoundary.html">TranslationalBoundary</a></b> Dx, <b><a href="TranslationalBoundary.html">TranslationalBoundary</a></b> Dy, <b><a href="TranslationalBoundary.html">TranslationalBoundary</a></b> Dz, <b><a href="RotationalBoundary.html">RotationalBoundary</a></b> Rx, <b><a href="RotationalBoundary.html">RotationalBoundary</a></b> Ry, <b><a href="RotationalBoundary.html">RotationalBoundary</a></b> Rz)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new boundary condition stiffness matrix
+</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="getStiffness(int, int)"></a>
+<h3>getStiffness</h3>
+<p class="function">
+<b><a href="DynamicQuantity.html">DynamicQuantity</a></b> <b>getStiffness</b>(<b>int</b> freedomI, <b>int</b> freedomJ)</p>
+<p>
+<hr>
+
+<a name="setStiffness(int, int, DynamicQuantity)"></a>
+<h3>setStiffness</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setStiffness</b>(<b>int</b> freedomI, <b>int</b> freedomJ, <b><a href="DynamicQuantity.html">DynamicQuantity</a></b> stiffness)</p>
+<p>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="Dx()"></a>
+<h3>Dx</h3>
+<p class="function">
+<b><a href="TranslationalBoundary.html">TranslationalBoundary</a></b> <b>Dx</b>()</p>
+<p>
+<a name="Dy()"></a>
+<h3>Dy</h3>
+<p class="function">
+<b><a href="TranslationalBoundary.html">TranslationalBoundary</a></b> <b>Dy</b>()</p>
+<p>
+<a name="Dz()"></a>
+<h3>Dz</h3>
+<p class="function">
+<b><a href="TranslationalBoundary.html">TranslationalBoundary</a></b> <b>Dz</b>()</p>
+<p>
+<a name="Rx()"></a>
+<h3>Rx</h3>
+<p class="function">
+<b><a href="RotationalBoundary.html">RotationalBoundary</a></b> <b>Rx</b>()</p>
+<p>
+<a name="Ry()"></a>
+<h3>Ry</h3>
+<p class="function">
+<b><a href="RotationalBoundary.html">RotationalBoundary</a></b> <b>Ry</b>()</p>
+<p>
+<a name="Rz()"></a>
+<h3>Rz</h3>
+<p class="function">
+<b><a href="RotationalBoundary.html">RotationalBoundary</a></b> <b>Rz</b>()</p>
+<p>
+</body>
+</html>

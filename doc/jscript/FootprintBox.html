@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: FootprintBox
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: FootprintBox
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="Footprint.html">Footprint</a>
+            |
+            +--<b>FootprintBox</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="FootprintBox.html#FootprintBox(Point, LengthVector3d)">FootprintBox</a></b>(<b><a href="Point.html">Point</a></b><span title="Center point of box"> center</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Size of box"> box_size</span>)</code>
+<div class="explanation">
+Construct a new box region</div></td>
+</tr>
+<tr >
+<td><code><b><a href="FootprintBox.html#FootprintBox(Point, LengthVector3d, LocalSystem)">FootprintBox</a></b>(<b><a href="Point.html">Point</a></b><span title="Center point of box"> center</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Size of box"> box_size</span>, <b><a href="LocalSystem.html">LocalSystem</a></b><span title="Orientation of the box"> local_sys</span>)</code>
+<div class="explanation">
+Construct a new box region</div></td>
+</tr>
+<tr >
+<td><code><b><a href="FootprintBox.html#FootprintBox(Point, Point, LocalSystem)">FootprintBox</a></b>(<b><a href="Point.html">Point</a></b><span title="First corner of the box"> corner1</span>, <b><a href="Point.html">Point</a></b><span title="Corner diagonal to corner1"> corner2</span>, <b><a href="LocalSystem.html">LocalSystem</a></b><span title="Orientation of the box"> local_sys</span>)</code>
+<div class="explanation">
+Construct a new box region</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="FootprintBox.html#setBoxExtent(Point, LengthVector3d)">setBoxExtent</a></b>(<b><a href="Point.html">Point</a></b><span title="Center point of box"> center</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Size of box"> box_size</span>)</code>
+<div class="explanation">
+Specify the extent of the box</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td width="90%"><code><b><a href="FootprintBox.html#coordinateSystemOrigin()">coordinateSystemOrigin</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Access origin of box local coordinate system (used when applying load functions)</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LocalSystem.html">LocalSystem</a></b></code>
+</td>
+<td width="90%"><code><b><a href="FootprintBox.html#locsys()">locsys</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Access orientation of box</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="FootprintBox(Point, LengthVector3d)"></a>
+<h3>FootprintBox</h3>
+<p class="function">
+<b>FootprintBox</b>(<b><a href="Point.html">Point</a></b><span title="Center point of box"> center</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Size of box"> box_size</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new box region
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>center</code> - Center point of box<dd><code>box_size</code> - Size of box</dl>
+<hr>
+
+<a name="FootprintBox(Point, LengthVector3d, LocalSystem)"></a>
+<h3>FootprintBox</h3>
+<p class="function">
+<b>FootprintBox</b>(<b><a href="Point.html">Point</a></b><span title="Center point of box"> center</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Size of box"> box_size</span>, <b><a href="LocalSystem.html">LocalSystem</a></b><span title="Orientation of the box"> local_sys</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new box region
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>center</code> - Center point of box<dd><code>box_size</code> - Size of box<dd><code>local_sys</code> - Orientation of the box</dl>
+<hr>
+
+<a name="FootprintBox(Point, Point, LocalSystem)"></a>
+<h3>FootprintBox</h3>
+<p class="function">
+<b>FootprintBox</b>(<b><a href="Point.html">Point</a></b><span title="First corner of the box"> corner1</span>, <b><a href="Point.html">Point</a></b><span title="Corner diagonal to corner1"> corner2</span>, <b><a href="LocalSystem.html">LocalSystem</a></b><span title="Orientation of the box"> local_sys</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new box region
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>corner1</code> - First corner of the box<dd><code>corner2</code> - Corner diagonal to corner1<dd><code>local_sys</code> - Orientation of the box</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="setBoxExtent(Point, LengthVector3d)"></a>
+<h3>setBoxExtent</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setBoxExtent</b>(<b><a href="Point.html">Point</a></b><span title="Center point of box"> center</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Size of box"> box_size</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify the extent of the box
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>center</code> - Center point of box<dd><code>box_size</code> - Size of box</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="coordinateSystemOrigin()"></a>
+<h3>coordinateSystemOrigin</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>coordinateSystemOrigin</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Access origin of box local coordinate system (used when applying load functions)
+</dl>
+<a name="locsys()"></a>
+<h3>locsys</h3>
+<p class="function">
+<b><a href="LocalSystem.html">LocalSystem</a></b> <b>locsys</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Access orientation of box
+</dl>
+</body>
+</html>

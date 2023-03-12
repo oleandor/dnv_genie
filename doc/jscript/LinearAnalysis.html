@@ -1,0 +1,1048 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: LinearAnalysis
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: LinearAnalysis
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Define a Linear Analysis
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Execute a linear structural analysis with or without wave loads, pile and soil</td></tr><tr>  <td>     <code>Analysis1 = Analysis(true);<br/>Analysis1.add(MeshActivity());<br/>Analysis1.add(LinearAnalysis());<br/>Analysis1.add(LoadResultsActivity());<br/>Analysis1.execute();<br/>     </code>		<div class="explanation">This command is scripted. The analysis programs Sestra, Wajac and Splice are used by GeniE to<br/>solve the analyses; these programs require a separate license key to run<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>The Mesh Subset option</td></tr><tr>  <td>     <code>Analysis1.step(1).subset = bottom_deck;<br/>Analysis1.step(1).meshPriority = MeshPriority1;<br/>     </code>		<div class="explanation">This command is scripted. The Mesh Subset option is used to mesh parts of the concept model only. <br/>A boundary condition may also be part of a set - this means that a complete finite element model may <br/>be generated for sets (for analysis or for creation of super elements) as intersecting loads are automatically included<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Datacheck Only</td></tr><tr>  <td>     <code>Analysis1.step(2).dataCheckOnly = true;<br/>     </code>		<div class="explanation">This command is scripted. The Datacheck Only will set up the input file to Sestra so a<br/>data check is performed but no execution of finite element analysis.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Keep the input file after Analysis</td></tr><tr>  <td>     <code>Analysis1.step(2).generateInput = false;<br/>     </code>		<div class="explanation">This command is scripted. If you want to edit and keep the input file to Sestra you should deselect <br/>the Automatic generation of input files. If you do not deselect this option the modified input file to <br/>Sestra is not kept for subsequent analysis.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Option for Warp Correction</td></tr><tr>  <td>     <code>Analysis1.step(2).warpCorrection = false;<br/>     </code>		<div class="explanation">This command is scripted. The option for Warp Correction will use Sestra's option for improving <br/>the stiffness for warped 4 noded shell elements (i.e. elements with "nodes out of plane").<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Execute and control input data for an eigenvalue analysis - 1</td></tr><tr>  <td>     <code>Analysis1 = Analysis(true);<br/>Analysis1.add(MeshActivity());<br/>Analysis1.add(LinearAnalysis());<br/>Analysis1.step(2).setEigenvalueAnalysis(egLanczos, 10);<br/>Analysis1.add(LoadResultsActivity());<br/>Analysis1.execute();<br/>     </code>		<div class="explanation">This command is scripted. The default option is to use Lanczos solver with 10 eigen-modes.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Execute and control input data for an eigenvalue analysis - 2</td></tr><tr>  <td>     <code>Analysis1.step(2).setEigenvalueAnalysis (egMultifrontLanczos, 15, 2);<br/>     </code>		<div class="explanation">This command is scripted. The following eigenvalue algorithms are available for free vibration analysis:<br/>- An implicitly restarted Lanczos' method combined with a multifrontal solver<br/>- Householder's method<br/>- Subspace Iteration<br/>- Lanczos' method<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Option for Result File Format</td></tr><tr>  <td>     <code>Analysis1.step(2).resultFileFormat = SIN_Norsam;<br/>     </code>		<div class="explanation">This command is scripted. The following result file formats are available:<br/>- Norsam(SIN)<br/>- Formatted(SIF)<br/>- Unformatted(SIU)<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Execute and control input data for a dynamic analysis</td></tr><tr>  <td>     <code>Analysis1 = Analysis(true);<br/>Analysis1.add(MeshActivity());<br/>Analysis1.add(LinearAnalysis());<br/>Analysis1.step(2).setDynamicAnalysis();<br/>Analysis1.add(LoadResultsActivity());<br/>Analysis1.execute();<br/>     </code>		<div class="explanation">This command is scripted.<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="class_jmfDuplicateObject_class_jmfNamedObject_.html">class jmfDuplicateObject<class jmfNamedObject></a>
+            |
+            +--<a href="AbstractActivity.html">AbstractActivity</a>
+                 |
+                 +--<a href="AnalysisRun.html">AnalysisRun</a>
+                      |
+                      +--<b>LinearAnalysis</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="LinearAnalysis.html#LinearAnalysis()">LinearAnalysis</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="LinearAnalysis.html#LinearAnalysis()">LinearAnalysis</a></b>()</code>
+<div class="explanation">
+Construct a new Linear Analysis</div></td>
+</tr>
+<tr >
+<td><code><b><a href="LinearAnalysis.html#LinearAnalysis(anSestraGenerator::ESLOption)">LinearAnalysis</a></b>(<b><a href="anSestraGenerator__ESLOption.html">anSestraGenerator::ESLOption</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="LinearAnalysis.html#LinearAnalysis()">LinearAnalysis</a></b>()</code>
+<div class="explanation">
+Construct a new Linear Analysis with ESL option</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#AddESLULoadCombination(lcLoadCase, int, int, double, double)">AddESLULoadCombination</a></b>(<b><a href="lcLoadCase.html">lcLoadCase</a></b>, <b>int</b>, <b>int</b>, <b>double</b>, <b>double</b>)</code>
+<div class="explanation">
+...</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ResultCase.html">ResultCase</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#EIGEN(unsigned int)">EIGEN</a></b>(<b><a href="unsigned_int.html">unsigned int</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#UpdateESLULoadCombination(int, double)">UpdateESLULoadCombination</a></b>(<b>int</b>, <b>double</b>)</code>
+<div class="explanation">
+...</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#UpdateESLULoadCombinations()">UpdateESLULoadCombinations</a></b>()</code>
+<div class="explanation">
+...</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ResultCase.html">ResultCase</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#eigenvalue(unsigned int)">eigenvalue</a></b>(<b><a href="unsigned_int.html">unsigned int</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractActivity.html#enableLoadCase(AbstractLoadCase, bool)">enableLoadCase</a></b>(<b><a href="AbstractLoadCase.html">AbstractLoadCase</a></b>, <b>bool</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractActivity.html#execute()">execute</a></b>()</code>
+<div class="explanation">
+Execute the analysis</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractActivity.html#setActive()">setActive</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setDynamicAlpha(double, double)">setDynamicAlpha</a></b>(<b>double</b>, <b>double</b>)</code>
+<div class="explanation">
+Set dynamic analysis alpha</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setDynamicAnalysis(anSestraGenerator::DynamicDomain, analysisType, int)">setDynamicAnalysis</a></b>(<b><a href="anSestraGenerator__DynamicDomain.html">anSestraGenerator::DynamicDomain</a></b>, <b><a href="analysisType.html">analysisType</a></b>, <b>int</b>)</code>
+<div class="explanation">
+Set dynamic analysis solver properties</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setDynamicCyclicLoads(bool, bool, double, int, int)">setDynamicCyclicLoads</a></b>(<b>bool</b>, <b>bool</b>, <b>double</b>, <b>int</b>, <b>int</b>)</code>
+<div class="explanation">
+Set dynamic analysis cyclic loads properties</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setDynamicFFTMethod(bool, int)">setDynamicFFTMethod</a></b>(<b>bool</b>, <b>int</b>)</code>
+<div class="explanation">
+Set dynamic analysis Fast Fourier Transform method</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setDynamicModalDamping(bool, double)">setDynamicModalDamping</a></b>(<b>bool</b>, <b>double</b>)</code>
+<div class="explanation">
+Set dynamic analysis modal damping</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setDynamicReactionForces(bool, Point)">setDynamicReactionForces</a></b>(<b>bool</b>, <b><a href="Point.html">Point</a></b>)</code>
+<div class="explanation">
+Set dynamic analysis reaction forces properties</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setDynamicStaticBackSub(bool)">setDynamicStaticBackSub</a></b>(<b>bool</b>)</code>
+<div class="explanation">
+Set dynamic analysis static back substitution</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setDynamicTimeStep(double, bool, double)">setDynamicTimeStep</a></b>(<b>double</b>, <b>bool</b>, <b>double</b>)</code>
+<div class="explanation">
+Set dynamic analysis time step properties</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setESLFactor(double)">setESLFactor</a></b>(<b>double</b>)</code>
+<div class="explanation">
+Set factor to be multiplied with the equivalent static loads</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setESLLoadComb(int)">setESLLoadComb</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Set load combination to add to all equivalent static loads</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setESLStoreResults(bool)">setESLStoreResults</a></b>(<b>bool</b>)</code>
+<div class="explanation">
+Set to store results file</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setESLTextFormat(bool)">setESLTextFormat</a></b>(<b>bool</b>)</code>
+<div class="explanation">
+Set text format for SestraESL.srs file</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setESLTimesOption(anSestraGenerator::ESLTimesOption)">setESLTimesOption</a></b>(<b><a href="anSestraGenerator__ESLTimesOption.html">anSestraGenerator::ESLTimesOption</a></b>)</code>
+<div class="explanation">
+Set option for specification of equivalent static load times</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setEigenvalueAnalysis(egSolver, int)">setEigenvalueAnalysis</a></b>(<b><a href="egSolver.html">egSolver</a></b><span title="Eigenvalue Solver"> solver</span>, <b>int</b><span title="Number of modes"> modes</span>)</code>
+<div class="explanation">
+Set eigenvalue analysis solver properties</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setEigenvalueAnalysis(egSolver, int, double)">setEigenvalueAnalysis</a></b>(<b><a href="egSolver.html">egSolver</a></b><span title="Eigenvalue Solver"> solver</span>, <b>int</b><span title="Number of modes"> modes</span>, <b>double</b><span title="Shift"> shift</span>)</code>
+<div class="explanation">
+Set eigenvalue analysis solver properties</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setIncludeBeamElementForcesAndMoments(bool)">setIncludeBeamElementForcesAndMoments</a></b>(<b>bool</b>)</code>
+<div class="explanation">
+...</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setIncludeLoadsFromInterfaceFiles(bool)">setIncludeLoadsFromInterfaceFiles</a></b>(<b>bool</b>)</code>
+<div class="explanation">
+...</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setIncludeShellElementStresses(bool)">setIncludeShellElementStresses</a></b>(<b>bool</b>)</code>
+<div class="explanation">
+...</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setNoStressStiffeningLoadCase()">setNoStressStiffeningLoadCase</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setStaticAnalysis()">setStaticAnalysis</a></b>()</code>
+<div class="explanation">
+Set static analysis solver properties</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LinearAnalysis.html#setSubSets(Array)">setSubSets</a></b>(<b><a href="Array.html">Array</a></b>)</code>
+<div class="explanation">
+...</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="lcActivity.html">lcActivity</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractActivity.html#step(int)">step</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Retrieve an object in the analysis</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="class_jmfDuplicateObject_class_jmfNamedObject_.html#copy()">copy</a></b>()</code>
+<div class="explanation">
+Make an identical copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="jlcICasePairCollection.html">jlcICasePairCollection</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#LoadCaseCollection()">LoadCaseCollection</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="resultFileFormat.html">resultFileFormat</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#SIF_Formatted()">SIF_Formatted</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="resultFileFormat.html">resultFileFormat</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#SIN_Norsam()">SIN_Norsam</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="resultFileFormat.html">resultFileFormat</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#SIU_Unformatted()">SIU_Unformatted</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#continueOnError()">continueOnError</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="AnalysisRun.html#dataCheckOnly()">dataCheckOnly</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Data check only</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="analysisType.html">analysisType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#directIntegration()">directIntegration</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="egSolver.html">egSolver</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#egHouseholder()">egHouseholder</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="egSolver.html">egSolver</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#egLanczos()">egLanczos</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="egSolver.html">egSolver</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#egMultifrontLanczos()">egMultifrontLanczos</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="egSolver.html">egSolver</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#egSubspace()">egSubspace</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#forceSestra10()">forceSestra10</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="AnalysisRun.html#generateInput()">generateInput</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Generate input files</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#massMatrix()">massMatrix</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#modalMassFactors()">modalMassFactors</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="analysisType.html">analysisType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#modalSuperposition()">modalSuperposition</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="AbstractActivity.html#needsToBeExecuted()">needsToBeExecuted</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="resultFileFormat.html">resultFileFormat</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#resultFileFormat()">resultFileFormat</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#stressStiffening()">stressStiffening</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="lcLoadCase.html">lcLoadCase</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#stressStiffeningloadCase()">stressStiffeningloadCase</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#useMultifrontSolverLDL()">useMultifrontSolverLDL</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#useSestra10()">useSestra10</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#useSubset()">useSubset</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="LinearAnalysis.html#warpCorrection()">warpCorrection</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="LinearAnalysis()"></a>
+<h3>LinearAnalysis</h3>
+<p class="function">
+<b>LinearAnalysis</b>()</p>
+<p>
+<hr>
+
+<a name="LinearAnalysis()"></a>
+<h3>LinearAnalysis</h3>
+<p class="function">
+<b>LinearAnalysis</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new Linear Analysis
+</dl>
+<hr>
+
+<a name="LinearAnalysis(anSestraGenerator::ESLOption)"></a>
+<h3>LinearAnalysis</h3>
+<p class="function">
+<b>LinearAnalysis</b>(<b><a href="anSestraGenerator__ESLOption.html">anSestraGenerator::ESLOption</a></b>)</p>
+<p>
+<hr>
+
+<a name="LinearAnalysis()"></a>
+<h3>LinearAnalysis</h3>
+<p class="function">
+<b>LinearAnalysis</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new Linear Analysis with ESL option
+</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="AddESLULoadCombination(lcLoadCase, int, int, double, double)"></a>
+<h3>AddESLULoadCombination</h3>
+<p class="function">
+<b>&nbsp;</b> <b>AddESLULoadCombination</b>(<b><a href="lcLoadCase.html">lcLoadCase</a></b>, <b>int</b>, <b>int</b>, <b>double</b>, <b>double</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>...
+</dl>
+<hr>
+
+<a name="EIGEN(unsigned int)"></a>
+<h3>EIGEN</h3>
+<p class="function">
+<b><a href="ResultCase.html">ResultCase</a></b> <b>EIGEN</b>(<b><a href="unsigned_int.html">unsigned int</a></b>)</p>
+<p>
+<hr>
+
+<a name="UpdateESLULoadCombination(int, double)"></a>
+<h3>UpdateESLULoadCombination</h3>
+<p class="function">
+<b>&nbsp;</b> <b>UpdateESLULoadCombination</b>(<b>int</b>, <b>double</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>...
+</dl>
+<hr>
+
+<a name="UpdateESLULoadCombinations()"></a>
+<h3>UpdateESLULoadCombinations</h3>
+<p class="function">
+<b>&nbsp;</b> <b>UpdateESLULoadCombinations</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>...
+</dl>
+<hr>
+
+<a name="eigenvalue(unsigned int)"></a>
+<h3>eigenvalue</h3>
+<p class="function">
+<b><a href="ResultCase.html">ResultCase</a></b> <b>eigenvalue</b>(<b><a href="unsigned_int.html">unsigned int</a></b>)</p>
+<p>
+<hr>
+
+<a name="setDynamicAlpha(double, double)"></a>
+<h3>setDynamicAlpha</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setDynamicAlpha</b>(<b>double</b>, <b>double</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set dynamic analysis alpha
+</dl>
+<hr>
+
+<a name="setDynamicAnalysis(anSestraGenerator::DynamicDomain, analysisType, int)"></a>
+<h3>setDynamicAnalysis</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setDynamicAnalysis</b>(<b><a href="anSestraGenerator__DynamicDomain.html">anSestraGenerator::DynamicDomain</a></b>, <b><a href="analysisType.html">analysisType</a></b>, <b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set dynamic analysis solver properties
+</dl>
+<hr>
+
+<a name="setDynamicCyclicLoads(bool, bool, double, int, int)"></a>
+<h3>setDynamicCyclicLoads</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setDynamicCyclicLoads</b>(<b>bool</b>, <b>bool</b>, <b>double</b>, <b>int</b>, <b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set dynamic analysis cyclic loads properties
+</dl>
+<hr>
+
+<a name="setDynamicFFTMethod(bool, int)"></a>
+<h3>setDynamicFFTMethod</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setDynamicFFTMethod</b>(<b>bool</b>, <b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set dynamic analysis Fast Fourier Transform method
+</dl>
+<hr>
+
+<a name="setDynamicModalDamping(bool, double)"></a>
+<h3>setDynamicModalDamping</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setDynamicModalDamping</b>(<b>bool</b>, <b>double</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set dynamic analysis modal damping
+</dl>
+<hr>
+
+<a name="setDynamicReactionForces(bool, Point)"></a>
+<h3>setDynamicReactionForces</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setDynamicReactionForces</b>(<b>bool</b>, <b><a href="Point.html">Point</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set dynamic analysis reaction forces properties
+</dl>
+<hr>
+
+<a name="setDynamicStaticBackSub(bool)"></a>
+<h3>setDynamicStaticBackSub</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setDynamicStaticBackSub</b>(<b>bool</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set dynamic analysis static back substitution
+</dl>
+<hr>
+
+<a name="setDynamicTimeStep(double, bool, double)"></a>
+<h3>setDynamicTimeStep</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setDynamicTimeStep</b>(<b>double</b>, <b>bool</b>, <b>double</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set dynamic analysis time step properties
+</dl>
+<hr>
+
+<a name="setESLFactor(double)"></a>
+<h3>setESLFactor</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setESLFactor</b>(<b>double</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set factor to be multiplied with the equivalent static loads
+</dl>
+<hr>
+
+<a name="setESLLoadComb(int)"></a>
+<h3>setESLLoadComb</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setESLLoadComb</b>(<b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set load combination to add to all equivalent static loads
+</dl>
+<hr>
+
+<a name="setESLStoreResults(bool)"></a>
+<h3>setESLStoreResults</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setESLStoreResults</b>(<b>bool</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set to store results file
+</dl>
+<hr>
+
+<a name="setESLTextFormat(bool)"></a>
+<h3>setESLTextFormat</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setESLTextFormat</b>(<b>bool</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set text format for SestraESL.srs file
+</dl>
+<hr>
+
+<a name="setESLTimesOption(anSestraGenerator::ESLTimesOption)"></a>
+<h3>setESLTimesOption</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setESLTimesOption</b>(<b><a href="anSestraGenerator__ESLTimesOption.html">anSestraGenerator::ESLTimesOption</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set option for specification of equivalent static load times
+</dl>
+<hr>
+
+<a name="setEigenvalueAnalysis(egSolver, int)"></a>
+<h3>setEigenvalueAnalysis</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setEigenvalueAnalysis</b>(<b><a href="egSolver.html">egSolver</a></b><span title="Eigenvalue Solver"> solver</span>, <b>int</b><span title="Number of modes"> modes</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set eigenvalue analysis solver properties
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>solver</code> - Eigenvalue Solver<dd><code>modes</code> - Number of modes</dl>
+<hr>
+
+<a name="setEigenvalueAnalysis(egSolver, int, double)"></a>
+<h3>setEigenvalueAnalysis</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setEigenvalueAnalysis</b>(<b><a href="egSolver.html">egSolver</a></b><span title="Eigenvalue Solver"> solver</span>, <b>int</b><span title="Number of modes"> modes</span>, <b>double</b><span title="Shift"> shift</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set eigenvalue analysis solver properties
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>solver</code> - Eigenvalue Solver<dd><code>modes</code> - Number of modes<dd><code>shift</code> - Shift</dl>
+<hr>
+
+<a name="setIncludeBeamElementForcesAndMoments(bool)"></a>
+<h3>setIncludeBeamElementForcesAndMoments</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setIncludeBeamElementForcesAndMoments</b>(<b>bool</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>...
+</dl>
+<hr>
+
+<a name="setIncludeLoadsFromInterfaceFiles(bool)"></a>
+<h3>setIncludeLoadsFromInterfaceFiles</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setIncludeLoadsFromInterfaceFiles</b>(<b>bool</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>...
+</dl>
+<hr>
+
+<a name="setIncludeShellElementStresses(bool)"></a>
+<h3>setIncludeShellElementStresses</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setIncludeShellElementStresses</b>(<b>bool</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>...
+</dl>
+<hr>
+
+<a name="setNoStressStiffeningLoadCase()"></a>
+<h3>setNoStressStiffeningLoadCase</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoStressStiffeningLoadCase</b>()</p>
+<p>
+<hr>
+
+<a name="setStaticAnalysis()"></a>
+<h3>setStaticAnalysis</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setStaticAnalysis</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set static analysis solver properties
+</dl>
+<hr>
+
+<a name="setSubSets(Array)"></a>
+<h3>setSubSets</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setSubSets</b>(<b><a href="Array.html">Array</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>...
+</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="LoadCaseCollection()"></a>
+<h3>LoadCaseCollection</h3>
+<p class="function">
+<b><a href="jlcICasePairCollection.html">jlcICasePairCollection</a></b> <b>LoadCaseCollection</b>()</p>
+<p>
+<a name="SIF_Formatted()"></a>
+<h3>SIF_Formatted</h3>
+<p class="function">
+<b><a href="resultFileFormat.html">resultFileFormat</a></b> <b>SIF_Formatted</b>()</p>
+<p>
+<a name="SIN_Norsam()"></a>
+<h3>SIN_Norsam</h3>
+<p class="function">
+<b><a href="resultFileFormat.html">resultFileFormat</a></b> <b>SIN_Norsam</b>()</p>
+<p>
+<a name="SIU_Unformatted()"></a>
+<h3>SIU_Unformatted</h3>
+<p class="function">
+<b><a href="resultFileFormat.html">resultFileFormat</a></b> <b>SIU_Unformatted</b>()</p>
+<p>
+<a name="continueOnError()"></a>
+<h3>continueOnError</h3>
+<p class="function">
+<b>bool</b> <b>continueOnError</b>()</p>
+<p>
+<a name="directIntegration()"></a>
+<h3>directIntegration</h3>
+<p class="function">
+<b><a href="analysisType.html">analysisType</a></b> <b>directIntegration</b>()</p>
+<p>
+<a name="egHouseholder()"></a>
+<h3>egHouseholder</h3>
+<p class="function">
+<b><a href="egSolver.html">egSolver</a></b> <b>egHouseholder</b>()</p>
+<p>
+<a name="egLanczos()"></a>
+<h3>egLanczos</h3>
+<p class="function">
+<b><a href="egSolver.html">egSolver</a></b> <b>egLanczos</b>()</p>
+<p>
+<a name="egMultifrontLanczos()"></a>
+<h3>egMultifrontLanczos</h3>
+<p class="function">
+<b><a href="egSolver.html">egSolver</a></b> <b>egMultifrontLanczos</b>()</p>
+<p>
+<a name="egSubspace()"></a>
+<h3>egSubspace</h3>
+<p class="function">
+<b><a href="egSolver.html">egSolver</a></b> <b>egSubspace</b>()</p>
+<p>
+<a name="forceSestra10()"></a>
+<h3>forceSestra10</h3>
+<p class="function">
+<b>bool</b> <b>forceSestra10</b>()</p>
+<p>
+<a name="massMatrix()"></a>
+<h3>massMatrix</h3>
+<p class="function">
+<b>bool</b> <b>massMatrix</b>()</p>
+<p>
+<a name="modalMassFactors()"></a>
+<h3>modalMassFactors</h3>
+<p class="function">
+<b>bool</b> <b>modalMassFactors</b>()</p>
+<p>
+<a name="modalSuperposition()"></a>
+<h3>modalSuperposition</h3>
+<p class="function">
+<b><a href="analysisType.html">analysisType</a></b> <b>modalSuperposition</b>()</p>
+<p>
+<a name="resultFileFormat()"></a>
+<h3>resultFileFormat</h3>
+<p class="function">
+<b><a href="resultFileFormat.html">resultFileFormat</a></b> <b>resultFileFormat</b>()</p>
+<p>
+<a name="stressStiffening()"></a>
+<h3>stressStiffening</h3>
+<p class="function">
+<b>bool</b> <b>stressStiffening</b>()</p>
+<p>
+<a name="stressStiffeningloadCase()"></a>
+<h3>stressStiffeningloadCase</h3>
+<p class="function">
+<b><a href="lcLoadCase.html">lcLoadCase</a></b> <b>stressStiffeningloadCase</b>()</p>
+<p>
+<a name="useMultifrontSolverLDL()"></a>
+<h3>useMultifrontSolverLDL</h3>
+<p class="function">
+<b>bool</b> <b>useMultifrontSolverLDL</b>()</p>
+<p>
+<a name="useSestra10()"></a>
+<h3>useSestra10</h3>
+<p class="function">
+<b>bool</b> <b>useSestra10</b>()</p>
+<p>
+<a name="useSubset()"></a>
+<h3>useSubset</h3>
+<p class="function">
+<b>bool</b> <b>useSubset</b>()</p>
+<p>
+<a name="warpCorrection()"></a>
+<h3>warpCorrection</h3>
+<p class="function">
+<b>bool</b> <b>warpCorrection</b>()</p>
+<p>
+</body>
+</html>

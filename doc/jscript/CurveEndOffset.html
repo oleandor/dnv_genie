@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: CurveEndOffset
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: CurveEndOffset
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Reparameterizes the eccentric line so that any point on the centric line will be projected onto the eccentric line (shortest distance).The start and end eccentricities of the beam can be preserved by setting the keepAxialEccentricity* flags.This will lead to a discontinuous parameterization, where some parameter ranges on the centric beam may become invalid, restricting how fine mesh you can create on your beams.
+</dl>
+<dl>
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ICurveOffset.html">ICurveOffset</a>
+  |
+  +--<a href="CurveOffset.html">CurveOffset</a>
+       |
+       +--<b>CurveEndOffset</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="CurveEndOffset.html#CurveEndOffset(ICurveOffset, bool, bool)">CurveEndOffset</a></b>(<b><a href="ICurveOffset.html">ICurveOffset</a></b> curveOffset, <b>bool</b> keepAxialEccentricityAtEnd1, <b>bool</b> keepAxialEccentricityAtEnd2)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="LengthVector3d.html">LengthVector3d</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ICurveOffset.html#Offset(double, bool, bool)">Offset</a></b>(<b>double</b> lengthFraction, <b>bool</b> inLocalSystem, <b>bool</b> allowRedirection)</code>
+<div class="explanation">
+Compute the offset at a given length fraction</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ICurveOffset.html">ICurveOffset</a></b></code>
+</td>
+<td width="90%"><code><b><a href="CurveEndOffset.html#CurveOffset()">CurveOffset</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Specify the eccentricity to be applied to the curve. Along the curve, only the eccentricity normal to the curve will be computed.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ICurveOffset.html#IsConstant()">IsConstant</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Returns true if the local system is constant</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="CurveEndOffset.html#KeepAxialEccentricityAtEnd1()">KeepAxialEccentricityAtEnd1</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Specify whether the curve offset at end 1 should be kept or whether the axial part should be ignored.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="CurveEndOffset.html#KeepAxialEccentricityAtEnd2()">KeepAxialEccentricityAtEnd2</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Specify whether the curve offset at end 2 should be kept or whether the axial part should be ignored.</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="CurveEndOffset(ICurveOffset, bool, bool)"></a>
+<h3>CurveEndOffset</h3>
+<p class="function">
+<b>CurveEndOffset</b>(<b><a href="ICurveOffset.html">ICurveOffset</a></b> curveOffset, <b>bool</b> keepAxialEccentricityAtEnd1, <b>bool</b> keepAxialEccentricityAtEnd2)</p>
+<p>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="CurveOffset()"></a>
+<h3>CurveOffset</h3>
+<p class="function">
+<b><a href="ICurveOffset.html">ICurveOffset</a></b> <b>CurveOffset</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify the eccentricity to be applied to the curve. Along the curve, only the eccentricity normal to the curve will be computed.
+</dl>
+<a name="KeepAxialEccentricityAtEnd1()"></a>
+<h3>KeepAxialEccentricityAtEnd1</h3>
+<p class="function">
+<b>bool</b> <b>KeepAxialEccentricityAtEnd1</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify whether the curve offset at end 1 should be kept or whether the axial part should be ignored.
+</dl>
+<a name="KeepAxialEccentricityAtEnd2()"></a>
+<h3>KeepAxialEccentricityAtEnd2</h3>
+<p class="function">
+<b>bool</b> <b>KeepAxialEccentricityAtEnd2</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify whether the curve offset at end 2 should be kept or whether the axial part should be ignored.
+</dl>
+</body>
+</html>

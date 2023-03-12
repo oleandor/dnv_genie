@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: WROutput
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: WROutput
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Specify Output details in Analysis. Specify the overturning moment reference point,<br/>how much to add to the printed file from Wajac and details for the loads interface file. 
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Specify the overturning moment reference point</td></tr><tr>  <td>     <code>Analysis1.step(2).output().globalResults().momentRefPoint = Point(0 m,0 m,50 m);<br/>     </code>		<div class="explanation">This command is scripted. By typically specifying the z-value to 50 meters<br/>Please read the user manual GeniE Vol. 6 for more information about Output<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Add additional details to the Wajac listing file</td></tr><tr>  <td>     <code>Analysis1.step(2).output().printFile().addDeterministicData(Jacket,2,10);<br/>     </code>		<div class="explanation">This command is scripted. By selecting the named set "Jacket", sea state number "2" and step "10"<br/>The Print file option allows you to add additional details to the Wajac listing file from the hydrodynamic analysis.<br/>Please read the user manual GeniE Vol. 6 for more information about additional details for Output<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Control type of file format and the first load case number</td></tr><tr>  <td>     <code>Analysis1.step(2).output().loadsInterfaceFile().formatted(false);<br/>Analysis1.step(2).output().loadsInterfaceFile().loadCaseNumbering(true);<br/>Analysis1.step(2).output().loadsInterfaceFile().firstLoadCaseNumber = 45;<br/>     </code>		<div class="explanation">This command is scripted. By selecting unformatted files and start of first wave load case number to "45"<br/>The Loads interface file option controls type of file format and a manual control of the first load case number<br/>Please read the user manual GeniE Vol. 6 for more information about additional details for Output<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="UnnamedObject.html">UnnamedObject</a>
+       |
+       +--<b>WROutput</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="WROGlobalResults.html">WROGlobalResults</a></b></code>
+</td>
+<td width="90%"><code><b><a href="WROutput.html#globalResults()">globalResults</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+The global results data</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="WROLoadsInterfaceFile.html">WROLoadsInterfaceFile</a></b></code>
+</td>
+<td width="90%"><code><b><a href="WROutput.html#loadsInterfaceFile()">loadsInterfaceFile</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+The loads interface file data</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="WROPrintFile.html">WROPrintFile</a></b></code>
+</td>
+<td width="90%"><code><b><a href="WROutput.html#printFile()">printFile</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+The print file data</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="globalResults()"></a>
+<h3>globalResults</h3>
+<p class="function">
+<b><a href="WROGlobalResults.html">WROGlobalResults</a></b> <b>globalResults</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>The global results data
+</dl>
+<a name="loadsInterfaceFile()"></a>
+<h3>loadsInterfaceFile</h3>
+<p class="function">
+<b><a href="WROLoadsInterfaceFile.html">WROLoadsInterfaceFile</a></b> <b>loadsInterfaceFile</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>The loads interface file data
+</dl>
+<a name="printFile()"></a>
+<h3>printFile</h3>
+<p class="function">
+<b><a href="WROPrintFile.html">WROPrintFile</a></b> <b>printFile</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>The print file data
+</dl>
+</body>
+</html>

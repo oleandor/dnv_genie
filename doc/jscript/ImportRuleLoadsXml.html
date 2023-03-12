@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: ImportRuleLoadsXml
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: ImportRuleLoadsXml
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Import Rule Loads as XML file. Import loads and boundary conditions as defined <br/>by Nauticus Hull using the CSR rules for bulk ships.
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Import geometry and create concept model</td></tr><tr>  <td>     <code>RuleLoadsImporter = ImportRuleLoadsXml();<br/>RuleLoadsImporter.DoImport("C:/Location/ yourname.xml");<br/>     </code>		<div class="explanation">This command is scripted and a typical example is given above<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="AbstractExchange.html">AbstractExchange</a>
+  |
+  +--<a href="AbstractImport.html">AbstractImport</a>
+       |
+       +--<a href="AbstractImportConcept.html">AbstractImportConcept</a>
+            |
+            +--<b>ImportRuleLoadsXml</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="ImportRuleLoadsXml.html#ImportRuleLoadsXml()">ImportRuleLoadsXml</a></b>()</code>
+<div class="explanation">
+Construct a new export helper object</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ImportRuleLoadsXml.html#DoImport(string)">DoImport</a></b>(<b>string</b>)</code>
+<div class="explanation">
+Perform import operation</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractImport.html#setNamePrefix(string)">setNamePrefix</a></b>(<b>string</b>)</code>
+<div class="explanation">
+Prefix imported object names with specified string</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractImport.html#setTransformation(Transformation3d)">setTransformation</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b>)</code>
+<div class="explanation">
+Transform imported 3d objects using specified transformation</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Analysis.html">Analysis</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ImportRuleLoadsXml.html#activeAnalysis()">activeAnalysis</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="prWetSurface.html">prWetSurface</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ImportRuleLoadsXml.html#deckSurface()">deckSurface</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="abstractLinearSlicer.html">abstractLinearSlicer</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ImportRuleLoadsXml.html#evaluator()">evaluator</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="prWetSurface.html">prWetSurface</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ImportRuleLoadsXml.html#sideBottomSurface()">sideBottomSurface</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="ImportRuleLoadsXml()"></a>
+<h3>ImportRuleLoadsXml</h3>
+<p class="function">
+<b>ImportRuleLoadsXml</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new export helper object
+</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="DoImport(string)"></a>
+<h3>DoImport</h3>
+<p class="function">
+<b>&nbsp;</b> <b>DoImport</b>(<b>string</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Perform import operation
+</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="activeAnalysis()"></a>
+<h3>activeAnalysis</h3>
+<p class="function">
+<b><a href="Analysis.html">Analysis</a></b> <b>activeAnalysis</b>()</p>
+<p>
+<a name="deckSurface()"></a>
+<h3>deckSurface</h3>
+<p class="function">
+<b><a href="prWetSurface.html">prWetSurface</a></b> <b>deckSurface</b>()</p>
+<p>
+<a name="evaluator()"></a>
+<h3>evaluator</h3>
+<p class="function">
+<b><a href="abstractLinearSlicer.html">abstractLinearSlicer</a></b> <b>evaluator</b>()</p>
+<p>
+<a name="sideBottomSurface()"></a>
+<h3>sideBottomSurface</h3>
+<p class="function">
+<b><a href="prWetSurface.html">prWetSurface</a></b> <b>sideBottomSurface</b>()</p>
+<p>
+</body>
+</html>

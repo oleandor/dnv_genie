@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: LJFRule
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: LJFRule
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<hr/>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LJFRule.html#getLimitMax(LJFLimitType)">getLimitMax</a></b>(<b><a href="LJFLimitType.html">LJFLimitType</a></b> limitType)</code>
+<div class="explanation">
+the resulting LJFNNN ( sum of direct and scaled cross terms ) shall be in the range [ ljfFactorNNNMin * direct term, ljfFactorNNNMax * direct term];</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LJFRule.html#getLimitMin(LJFLimitType)">getLimitMin</a></b>(<b><a href="LJFLimitType.html">LJFLimitType</a></b> limitType)</code>
+<div class="explanation">
+the resulting LJFNNN ( sum of direct and scaled cross terms ) shall be in the range [ ljfFactorNNNMin * direct term, ljfFactorNNNMax * direct term];</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LJFRule.html#setLimit(LJFLimitType, double, double)">setLimit</a></b>(<b><a href="LJFLimitType.html">LJFLimitType</a></b> limitType, <b>double</b> minFactor, <b>double</b> maxFactor)</code>
+<div class="explanation">
+the resulting LJFNNN ( sum of direct and scaled cross terms ) shall be in the range [ ljfFactorNNNMin * direct term, ljfFactorNNNMax * direct term];</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LJFRule.html#setLimitMax(LJFLimitType, double)">setLimitMax</a></b>(<b><a href="LJFLimitType.html">LJFLimitType</a></b> limitType, <b>double</b> maxFactor)</code>
+<div class="explanation">
+the resulting LJFNNN ( sum of direct and scaled cross terms ) shall be in the range [ ljfFactorNNNMin * direct term, ljfFactorNNNMax * direct term];</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LJFRule.html#setLimitMin(LJFLimitType, double)">setLimitMin</a></b>(<b><a href="LJFLimitType.html">LJFLimitType</a></b> limitType, <b>double</b> minFactor)</code>
+<div class="explanation">
+the resulting LJFNNN ( sum of direct and scaled cross terms ) shall be in the range [ ljfFactorNNNMin * direct term, ljfFactorNNNMax * direct term];</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LJFLimitType.html">LJFLimitType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LJFRule.html#ljfAxial()">ljfAxial</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Used to reference the axial ljf</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LJFMethod.html">LJFMethod</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LJFRule.html#ljfBuitrago1993()">ljfBuitrago1993</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+(Default) Buitragos formulas from 1993</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LJFLimitType.html">LJFLimitType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LJFRule.html#ljfIPB()">ljfIPB</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Used to reference the in plane bending ljf</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LJFLimitType.html">LJFLimitType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LJFRule.html#ljfOPB()">ljfOPB</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Used to reference the out of plane bending ljf</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LJFMethod.html">LJFMethod</a></b></code>
+</td>
+<td width="90%"><code><b><a href="LJFRule.html#method()">method</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Specify the method used in the ljf calculations.</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="getLimitMax(LJFLimitType)"></a>
+<h3>getLimitMax</h3>
+<p class="function">
+<b>double</b> <b>getLimitMax</b>(<b><a href="LJFLimitType.html">LJFLimitType</a></b> limitType)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>the resulting LJFNNN ( sum of direct and scaled cross terms ) shall be in the range [ ljfFactorNNNMin * direct term, ljfFactorNNNMax * direct term];
+</dl>
+<hr>
+
+<a name="getLimitMin(LJFLimitType)"></a>
+<h3>getLimitMin</h3>
+<p class="function">
+<b>double</b> <b>getLimitMin</b>(<b><a href="LJFLimitType.html">LJFLimitType</a></b> limitType)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>the resulting LJFNNN ( sum of direct and scaled cross terms ) shall be in the range [ ljfFactorNNNMin * direct term, ljfFactorNNNMax * direct term];
+</dl>
+<hr>
+
+<a name="setLimit(LJFLimitType, double, double)"></a>
+<h3>setLimit</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setLimit</b>(<b><a href="LJFLimitType.html">LJFLimitType</a></b> limitType, <b>double</b> minFactor, <b>double</b> maxFactor)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>the resulting LJFNNN ( sum of direct and scaled cross terms ) shall be in the range [ ljfFactorNNNMin * direct term, ljfFactorNNNMax * direct term];
+</dl>
+<hr>
+
+<a name="setLimitMax(LJFLimitType, double)"></a>
+<h3>setLimitMax</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setLimitMax</b>(<b><a href="LJFLimitType.html">LJFLimitType</a></b> limitType, <b>double</b> maxFactor)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>the resulting LJFNNN ( sum of direct and scaled cross terms ) shall be in the range [ ljfFactorNNNMin * direct term, ljfFactorNNNMax * direct term];
+</dl>
+<hr>
+
+<a name="setLimitMin(LJFLimitType, double)"></a>
+<h3>setLimitMin</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setLimitMin</b>(<b><a href="LJFLimitType.html">LJFLimitType</a></b> limitType, <b>double</b> minFactor)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>the resulting LJFNNN ( sum of direct and scaled cross terms ) shall be in the range [ ljfFactorNNNMin * direct term, ljfFactorNNNMax * direct term];
+</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="ljfAxial()"></a>
+<h3>ljfAxial</h3>
+<p class="function">
+<b><a href="LJFLimitType.html">LJFLimitType</a></b> <b>ljfAxial</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Used to reference the axial ljf
+</dl>
+<a name="ljfBuitrago1993()"></a>
+<h3>ljfBuitrago1993</h3>
+<p class="function">
+<b><a href="LJFMethod.html">LJFMethod</a></b> <b>ljfBuitrago1993</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>(Default) Buitragos formulas from 1993
+</dl>
+<a name="ljfIPB()"></a>
+<h3>ljfIPB</h3>
+<p class="function">
+<b><a href="LJFLimitType.html">LJFLimitType</a></b> <b>ljfIPB</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Used to reference the in plane bending ljf
+</dl>
+<a name="ljfOPB()"></a>
+<h3>ljfOPB</h3>
+<p class="function">
+<b><a href="LJFLimitType.html">LJFLimitType</a></b> <b>ljfOPB</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Used to reference the out of plane bending ljf
+</dl>
+<a name="method()"></a>
+<h3>method</h3>
+<p class="function">
+<b><a href="LJFMethod.html">LJFMethod</a></b> <b>method</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify the method used in the ljf calculations.
+</dl>
+</body>
+</html>

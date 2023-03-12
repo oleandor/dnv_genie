@@ -1,0 +1,722 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: GuidePlane
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: GuidePlane
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Represent a planar guiding geometry
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Insert a guide plane and specify points (corner, elevation, length spacing) manually</td></tr><tr>  <td>     <code>GuidePlane1 = GuidePlane(Point(0 m,0 m,0 m),Point(10 m,0 m,0 m),Point(10 m,10 m,0 m),Point(0 m,10 m,0 m),4,4,1,2,2,1,1,2,3,4);<br/>GuidePlane1.snapmode = true;<br/>GuidePlane2 = GuidePlane(Point(0 m,0 m,5 m),Point(10 m,0 m,5 m),Point(10 m,10 m,5 m),Point(0 m,10 m,5 m),4,4,1,2,2,1,1,2,3,4);<br/>GuidePlane2.snapmode = true;<br/>GuidePlane3 = GuidePlane(Point(0 m,0 m,10 m),Point(10 m,0 m,10 m),Point(10 m,10 m,10 m),Point(0 m,10 m,10 m),4,4,1,2,2,1,1,2,3,4);<br/>GuidePlane3.snapmode = true;<br/>     </code>		<div class="explanation">This command is scripted. Typically when using different relevant values for u (1, 2, 2, 1) and v (1, 2, 3, 4) <br/>and creating 3 guide planes simultaneously by using a step length of 5 meters 2 times<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Insert a guide plane graphically by snapping to 4 points</td></tr><tr>  <td>     <code>GuidePlane3 = GuidePlane(Point(10 m,0 m,0 m),Point(10 m,10 m,0 m),Point(10 m,10 m,10 m),Point(10 m,0 m,10 m),4,4,1,1,1,1,1,1,1,1);<br/>     </code>		<div class="explanation">This command is scripted.<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="Transformable.html">Transformable</a>
+            |
+            +--<b>GuidePlane</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="GuidePlane.html#CreateGuidePlane(Point, Point, Point, Point, DNVS::MoFa::Utility::SmartPointer<ggSpacing>, DNVS::MoFa::Utility::SmartPointer<ggSpacing>)">CreateGuidePlane</a></b>(<b><a href="Point.html">Point</a></b><span title="Corner 1 of the guideplane"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Corner 2 of the guideplane"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Corner 3 of the guideplane"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Corner 4 of the guideplane"> p4</span>, <b><a href="DNVS__MoFa__Utility__SmartPointer_ggSpacing_.html">DNVS::MoFa::Utility::SmartPointer<ggSpacing></a></b><span title="Spacings in the u-direction of the guideplane"> uSpacing</span>, <b><a href="DNVS__MoFa__Utility__SmartPointer_ggSpacing_.html">DNVS::MoFa::Utility::SmartPointer<ggSpacing></a></b><span title="Spacings in the v-direction of the guideplane"> vSpacing</span>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuidePlane.html#CreateGuidePlane(Point, LengthVector3d, LengthVector3d, DNVS::MoFa::Utility::SmartPointer<ggSpacing>, DNVS::MoFa::Utility::SmartPointer<ggSpacing>)">CreateGuidePlane</a></b>(<b><a href="Point.html">Point</a></b> origin, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="direction vector"> u</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="direction vector"> v</span>, <b><a href="DNVS__MoFa__Utility__SmartPointer_ggSpacing_.html">DNVS::MoFa::Utility::SmartPointer<ggSpacing></a></b><span title="Spacings in the u-direction of the guideplane"> uSpacing</span>, <b><a href="DNVS__MoFa__Utility__SmartPointer_ggSpacing_.html">DNVS::MoFa::Utility::SmartPointer<ggSpacing></a></b><span title="Spacings in the v-direction of the guideplane"> vSpacing</span>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuidePlane.html#GuidePlane(Point, Point, Point, Point, int, int, ...)">GuidePlane</a></b>(<b><a href="Point.html">Point</a></b><span title="Corner 1 of the guideplane"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Corner 2 of the guideplane"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Corner 3 of the guideplane"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Corner 4 of the guideplane"> p4</span>, <b>int</b><span title="Number of spacings in the ksi direction of the guideplane"> nKsi</span>, <b>int</b><span title="Number of spacings in the eta direction of the guideplane"> nEta</span>, [ksiSpacings ..., etaSpacings ...])</code>
+<div class="explanation">
+Create a guideplane from 4 points (old style). Relative, uniform and non-uniform spacing</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuidePlane.html#GuidePlane(Point, Point, Point, Point, Array, Array)">GuidePlane</a></b>(<b><a href="Point.html">Point</a></b><span title="Corner 1 of the guideplane"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Corner 2 of the guideplane"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Corner 3 of the guideplane"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Corner 4 of the guideplane"> p4</span>, <b><a href="Array.html">Array</a></b><span title="Array of spacing values for the ksi spacings"> ksiSpacings</span>, <b><a href="Array.html">Array</a></b><span title="Array of spacing values for the eta spacings"> etaSpacings</span>)</code>
+<div class="explanation">
+Create a guideplane from 4 points (new style). Relative, non-uniform spacing</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuidePlane.html#GuidePlane(ThreePointsPlanes, Point, Point, Point, int, int)">GuidePlane</a></b>(<b><a href="ThreePointsPlanes.html">ThreePointsPlanes</a></b><span title="Plane-type"> Type</span>, <b><a href="Point.html">Point</a></b><span title="Edge-Corner 1 of the guideplane"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Edge-Corner 2 of the guideplane"> p2</span>, <b><a href="Point.html">Point</a></b><span title="A Point on the opposite edge of the guideplane"> p3</span>, <b>int</b><span title="Number of spacings in the ksi direction of the guideplane"> nKsi</span>, <b>int</b><span title="Number of spacings in the eta direction of the guideplane"> nEta</span>)</code>
+<div class="explanation">
+Create a guideplane from three points. Relative, uniform spacing</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuidePlane.html#GuidePlane(Point, Point, int, int)">GuidePlane</a></b>(<b><a href="Point.html">Point</a></b><span title="Left-Bottom Point of the guideplane"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Right-Top Point of the guideplane"> p3</span>, <b>int</b><span title="Number of spacings in the ksi direction of the guideplane"> nKsi</span>, <b>int</b><span title="Number of spacings in the eta direction of the guideplane"> nEta</span>)</code>
+<div class="explanation">
+Create a guide plane parallel to xy-plane. Relative, uniform spacing.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuidePlane.html#GuidePlane(PrimaryPlanes, Point, Point, int, int)">GuidePlane</a></b>(<b><a href="PrimaryPlanes.html">PrimaryPlanes</a></b><span title="tppXY or tppYZ or tppZX"> PimaryPlane</span>, <b><a href="Point.html">Point</a></b><span title="Left-Bottom Point of the guideplane"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Right-Top Point of the guideplane"> p3</span>, <b>int</b><span title="Number of spacings in the ksi direction of the guideplane"> nKsi</span>, <b>int</b><span title="Number of spacings in the eta direction of the guideplane"> nEta</span>)</code>
+<div class="explanation">
+Create a guide plane parallel to the coordinate system primary planes. Relative, uniform spacing</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuidePlane.html#GuidePlaneAbsoluteNonUniformSpacing(Point, LengthVector3d, LengthVector3d, Array, Array)">GuidePlaneAbsoluteNonUniformSpacing</a></b>(<b><a href="Point.html">Point</a></b><span title="Left-Bottom Point of the guideplane"> origin</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="u-Direction vector"> u</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="v-Direction vector"> v</span>, <b><a href="Array.html">Array</a></b><span title="Array of spacing values for the ksi spacings in u-direction"> ksiSpacings</span>, <b><a href="Array.html">Array</a></b><span title="Array of spacing values for the eta spacings in v-direction"> etaSpacings</span>)</code>
+<div class="explanation">
+Create a guide plane. Absolute, non-uniform spacing</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuidePlane.html#GuidePlaneAbsoluteUniformSpacing(Point, LengthVector3d, LengthVector3d, int, Length, int, Length)">GuidePlaneAbsoluteUniformSpacing</a></b>(<b><a href="Point.html">Point</a></b><span title="Left-Bottom Point of the guideplane"> origin</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="u-Direction vector"> u</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="v-Direction vector"> v</span>, <b>int</b><span title="Number of spacings in u-direction"> nKsi</span>, <b><a href="Length.html">Length</a></b><span title="Length of spacings in u-direction"> lengthKsi</span>, <b>int</b><span title="Number of spacings in v-direction"> nEta</span>, <b><a href="Length.html">Length</a></b><span title="Length of spacings in v-direction"> lengthEta</span>)</code>
+<div class="explanation">
+Create a guide plane. Absolute, uniform spacing</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuidePlane.html#GetCorner(int, int)">GetCorner</a></b>(<b>int</b> i, <b>int</b> j)</code>
+<div class="explanation">
+returns one of the plane corners: i,j take the values 0,1</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuidePlane.html#GetUSpacings()">GetUSpacings</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuidePlane.html#GetVSpacings()">GetVSpacings</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuidePlane.html#SetCorner(int, int, Point)">SetCorner</a></b>(<b>int</b> i, <b>int</b> j, <b><a href="Point.html">Point</a></b> point)</code>
+<div class="explanation">
+sets one of the plane corners: i,j take the values 0,1</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuidePlane.html#SetUSpacingType(Array)">SetUSpacingType</a></b>(<b><a href="Array.html">Array</a></b> arrayOfSpacings)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuidePlane.html#SetVSpacingType(Array)">SetVSpacingType</a></b>(<b><a href="Array.html">Array</a></b> arrayOfSpacings)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuidePlane.html#corners(Point, Point, Point, Point)">corners</a></b>(<b><a href="Point.html">Point</a></b> p1, <b><a href="Point.html">Point</a></b> p2, <b><a href="Point.html">Point</a></b> p3, <b><a href="Point.html">Point</a></b> p4)</code>
+<div class="explanation">
+Move the corners of the guideplane</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuidePlane.html#gridPoint(int, int)">gridPoint</a></b>(<b>int</b> iKsi, <b>int</b> iEta)</code>
+<div class="explanation">
+Return a point inside the guideplane based on the grid lines</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuidePlane.html#point(double, double)">point</a></b>(<b>double</b> iKsi, <b>double</b> iEta)</code>
+<div class="explanation">
+Return a point inside the guideplane</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuidePlane.html#project(Point)">project</a></b>(<b><a href="Point.html">Point</a></b> in)</code>
+<div class="explanation">
+project the point <code>in</code> onto the plane</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuidePlane.html#spacings(int, int, ...)">spacings</a></b>(<b>int</b> nKsi, <b>int</b> nEta, [ksiSpacings ..., etaSpacings ...])</code>
+<div class="explanation">
+Change the spacings on the guideplane</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copy3Point(Point, Point, Point, Point, Point, Point)">copy3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> sp1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> sp2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> sp3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> dp1</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> dp2</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> dp3</span>)</code>
+<div class="explanation">
+Copy the object without scaling from one location to another.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyMirror(Point, LengthVector3d)">copyMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int, std::shared_ptr<mfNameMask>)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyScale(double, Point)">copyScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Scale a copy of the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTransform(Transformation3d)">copyTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general transformation to a copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate a copy of this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int, std::shared_ptr<mfNameMask>)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#move3Point(Point, Point, Point, Point, Point, Point)">move3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> p4</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> p5</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> p6</span>)</code>
+<div class="explanation">
+Move the object from one coordinate system to another</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveMirror(Point, LengthVector3d)">moveMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveRotate(Point, LengthVector3d, Angle)">moveRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveScale(double, Point)">moveScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Move and scale the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTransform(Transformation3d)">moveTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general selection to the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTranslate(LengthVector3d)">moveTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geCONNECTED()">geCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use connected move</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geUNCONNECTED()">geUNCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use unconnected move</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LocalSystem.html">LocalSystem</a></b></code>
+</td>
+<td width="90%"><code><b><a href="GuidePlane.html#localSystem()">localSystem</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LengthVector3d.html">LengthVector3d</a></b></code>
+</td>
+<td width="90%"><code><b><a href="GuidePlane.html#normal()">normal</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="plane3d.html">plane3d</a></b></code>
+</td>
+<td width="90%"><code><b><a href="GuidePlane.html#plane()">plane</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="GuidePlane.html#snapMode()">snapMode</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>int</b></code>
+</td>
+<td width="90%"><code><b><a href="GuidePlane.html#xGrid()">xGrid</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>int</b></code>
+</td>
+<td width="90%"><code><b><a href="GuidePlane.html#yGrid()">yGrid</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="CreateGuidePlane(Point, Point, Point, Point, DNVS::MoFa::Utility::SmartPointer<ggSpacing>, DNVS::MoFa::Utility::SmartPointer<ggSpacing>)"></a>
+<h3>CreateGuidePlane</h3>
+<p class="function">
+<b>CreateGuidePlane</b>(<b><a href="Point.html">Point</a></b><span title="Corner 1 of the guideplane"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Corner 2 of the guideplane"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Corner 3 of the guideplane"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Corner 4 of the guideplane"> p4</span>, <b><a href="DNVS__MoFa__Utility__SmartPointer_ggSpacing_.html">DNVS::MoFa::Utility::SmartPointer<ggSpacing></a></b><span title="Spacings in the u-direction of the guideplane"> uSpacing</span>, <b><a href="DNVS__MoFa__Utility__SmartPointer_ggSpacing_.html">DNVS::MoFa::Utility::SmartPointer<ggSpacing></a></b><span title="Spacings in the v-direction of the guideplane"> vSpacing</span>)</p>
+<p>
+<dl><dt>Parameters:</dt>
+<dd><code>p1</code> - Corner 1 of the guideplane<dd><code>p2</code> - Corner 2 of the guideplane<dd><code>p3</code> - Corner 3 of the guideplane<dd><code>p4</code> - Corner 4 of the guideplane<dd><code>uSpacing</code> - Spacings in the u-direction of the guideplane<dd><code>vSpacing</code> - Spacings in the v-direction of the guideplane</dl>
+<hr>
+
+<a name="CreateGuidePlane(Point, LengthVector3d, LengthVector3d, DNVS::MoFa::Utility::SmartPointer<ggSpacing>, DNVS::MoFa::Utility::SmartPointer<ggSpacing>)"></a>
+<h3>CreateGuidePlane</h3>
+<p class="function">
+<b>CreateGuidePlane</b>(<b><a href="Point.html">Point</a></b> origin, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="direction vector"> u</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="direction vector"> v</span>, <b><a href="DNVS__MoFa__Utility__SmartPointer_ggSpacing_.html">DNVS::MoFa::Utility::SmartPointer<ggSpacing></a></b><span title="Spacings in the u-direction of the guideplane"> uSpacing</span>, <b><a href="DNVS__MoFa__Utility__SmartPointer_ggSpacing_.html">DNVS::MoFa::Utility::SmartPointer<ggSpacing></a></b><span title="Spacings in the v-direction of the guideplane"> vSpacing</span>)</p>
+<p>
+<dl><dt>Parameters:</dt>
+<dd><code>u</code> - direction vector<dd><code>v</code> - direction vector<dd><code>uSpacing</code> - Spacings in the u-direction of the guideplane<dd><code>vSpacing</code> - Spacings in the v-direction of the guideplane</dl>
+<hr>
+
+<a name="GuidePlane(Point, Point, Point, Point, int, int, ...)"></a>
+<h3>GuidePlane</h3>
+<p class="function">
+<b>GuidePlane</b>(<b><a href="Point.html">Point</a></b><span title="Corner 1 of the guideplane"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Corner 2 of the guideplane"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Corner 3 of the guideplane"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Corner 4 of the guideplane"> p4</span>, <b>int</b><span title="Number of spacings in the ksi direction of the guideplane"> nKsi</span>, <b>int</b><span title="Number of spacings in the eta direction of the guideplane"> nEta</span>, [ksiSpacings ..., etaSpacings ...])</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a guideplane from 4 points (old style). Relative, uniform and non-uniform spacing
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>p1</code> - Corner 1 of the guideplane<dd><code>p2</code> - Corner 2 of the guideplane<dd><code>p3</code> - Corner 3 of the guideplane<dd><code>p4</code> - Corner 4 of the guideplane<dd><code>nKsi</code> - Number of spacings in the ksi direction of the guideplane<dd><code>nEta</code> - Number of spacings in the eta direction of the guideplane<dd><code>ksiSpacings</code> - (Optional) List of spacing values for the ksi spacings<dd><code>etaSpacings</code> - (Optional) List of spacing values for the eta spacings</dl>
+<hr>
+
+<a name="GuidePlane(Point, Point, Point, Point, Array, Array)"></a>
+<h3>GuidePlane</h3>
+<p class="function">
+<b>GuidePlane</b>(<b><a href="Point.html">Point</a></b><span title="Corner 1 of the guideplane"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Corner 2 of the guideplane"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Corner 3 of the guideplane"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Corner 4 of the guideplane"> p4</span>, <b><a href="Array.html">Array</a></b><span title="Array of spacing values for the ksi spacings"> ksiSpacings</span>, <b><a href="Array.html">Array</a></b><span title="Array of spacing values for the eta spacings"> etaSpacings</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a guideplane from 4 points (new style). Relative, non-uniform spacing
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>p1</code> - Corner 1 of the guideplane<dd><code>p2</code> - Corner 2 of the guideplane<dd><code>p3</code> - Corner 3 of the guideplane<dd><code>p4</code> - Corner 4 of the guideplane<dd><code>ksiSpacings</code> - Array of spacing values for the ksi spacings<dd><code>etaSpacings</code> - Array of spacing values for the eta spacings</dl>
+<hr>
+
+<a name="GuidePlane(ThreePointsPlanes, Point, Point, Point, int, int)"></a>
+<h3>GuidePlane</h3>
+<p class="function">
+<b>GuidePlane</b>(<b><a href="ThreePointsPlanes.html">ThreePointsPlanes</a></b><span title="Plane-type"> Type</span>, <b><a href="Point.html">Point</a></b><span title="Edge-Corner 1 of the guideplane"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Edge-Corner 2 of the guideplane"> p2</span>, <b><a href="Point.html">Point</a></b><span title="A Point on the opposite edge of the guideplane"> p3</span>, <b>int</b><span title="Number of spacings in the ksi direction of the guideplane"> nKsi</span>, <b>int</b><span title="Number of spacings in the eta direction of the guideplane"> nEta</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a guideplane from three points. Relative, uniform spacing
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>Type</code> - Plane-type<dd><code>p1</code> - Edge-Corner 1 of the guideplane<dd><code>p2</code> - Edge-Corner 2 of the guideplane<dd><code>p3</code> - A Point on the opposite edge of the guideplane<dd><code>nKsi</code> - Number of spacings in the ksi direction of the guideplane<dd><code>nEta</code> - Number of spacings in the eta direction of the guideplane</dl>
+<hr>
+
+<a name="GuidePlane(Point, Point, int, int)"></a>
+<h3>GuidePlane</h3>
+<p class="function">
+<b>GuidePlane</b>(<b><a href="Point.html">Point</a></b><span title="Left-Bottom Point of the guideplane"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Right-Top Point of the guideplane"> p3</span>, <b>int</b><span title="Number of spacings in the ksi direction of the guideplane"> nKsi</span>, <b>int</b><span title="Number of spacings in the eta direction of the guideplane"> nEta</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a guide plane parallel to xy-plane. Relative, uniform spacing.
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>p1</code> - Left-Bottom Point of the guideplane<dd><code>p3</code> - Right-Top Point of the guideplane<dd><code>nKsi</code> - Number of spacings in the ksi direction of the guideplane<dd><code>nEta</code> - Number of spacings in the eta direction of the guideplane</dl>
+<hr>
+
+<a name="GuidePlane(PrimaryPlanes, Point, Point, int, int)"></a>
+<h3>GuidePlane</h3>
+<p class="function">
+<b>GuidePlane</b>(<b><a href="PrimaryPlanes.html">PrimaryPlanes</a></b><span title="tppXY or tppYZ or tppZX"> PimaryPlane</span>, <b><a href="Point.html">Point</a></b><span title="Left-Bottom Point of the guideplane"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Right-Top Point of the guideplane"> p3</span>, <b>int</b><span title="Number of spacings in the ksi direction of the guideplane"> nKsi</span>, <b>int</b><span title="Number of spacings in the eta direction of the guideplane"> nEta</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a guide plane parallel to the coordinate system primary planes. Relative, uniform spacing
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>PimaryPlane</code> - tppXY or tppYZ or tppZX<dd><code>p1</code> - Left-Bottom Point of the guideplane<dd><code>p3</code> - Right-Top Point of the guideplane<dd><code>nKsi</code> - Number of spacings in the ksi direction of the guideplane<dd><code>nEta</code> - Number of spacings in the eta direction of the guideplane</dl>
+<hr>
+
+<a name="GuidePlaneAbsoluteNonUniformSpacing(Point, LengthVector3d, LengthVector3d, Array, Array)"></a>
+<h3>GuidePlaneAbsoluteNonUniformSpacing</h3>
+<p class="function">
+<b>GuidePlaneAbsoluteNonUniformSpacing</b>(<b><a href="Point.html">Point</a></b><span title="Left-Bottom Point of the guideplane"> origin</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="u-Direction vector"> u</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="v-Direction vector"> v</span>, <b><a href="Array.html">Array</a></b><span title="Array of spacing values for the ksi spacings in u-direction"> ksiSpacings</span>, <b><a href="Array.html">Array</a></b><span title="Array of spacing values for the eta spacings in v-direction"> etaSpacings</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a guide plane. Absolute, non-uniform spacing
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>origin</code> - Left-Bottom Point of the guideplane<dd><code>u</code> - u-Direction vector<dd><code>v</code> - v-Direction vector<dd><code>ksiSpacings</code> - Array of spacing values for the ksi spacings in u-direction<dd><code>etaSpacings</code> - Array of spacing values for the eta spacings in v-direction</dl>
+<hr>
+
+<a name="GuidePlaneAbsoluteUniformSpacing(Point, LengthVector3d, LengthVector3d, int, Length, int, Length)"></a>
+<h3>GuidePlaneAbsoluteUniformSpacing</h3>
+<p class="function">
+<b>GuidePlaneAbsoluteUniformSpacing</b>(<b><a href="Point.html">Point</a></b><span title="Left-Bottom Point of the guideplane"> origin</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="u-Direction vector"> u</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="v-Direction vector"> v</span>, <b>int</b><span title="Number of spacings in u-direction"> nKsi</span>, <b><a href="Length.html">Length</a></b><span title="Length of spacings in u-direction"> lengthKsi</span>, <b>int</b><span title="Number of spacings in v-direction"> nEta</span>, <b><a href="Length.html">Length</a></b><span title="Length of spacings in v-direction"> lengthEta</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a guide plane. Absolute, uniform spacing
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>origin</code> - Left-Bottom Point of the guideplane<dd><code>u</code> - u-Direction vector<dd><code>v</code> - v-Direction vector<dd><code>nKsi</code> - Number of spacings in u-direction<dd><code>lengthKsi</code> - Length of spacings in u-direction<dd><code>nEta</code> - Number of spacings in v-direction<dd><code>lengthEta</code> - Length of spacings in v-direction</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="GetCorner(int, int)"></a>
+<h3>GetCorner</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>GetCorner</b>(<b>int</b> i, <b>int</b> j)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>returns one of the plane corners: i,j take the values 0,1
+</dl>
+<hr>
+
+<a name="GetUSpacings()"></a>
+<h3>GetUSpacings</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>GetUSpacings</b>()</p>
+<p>
+<hr>
+
+<a name="GetVSpacings()"></a>
+<h3>GetVSpacings</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>GetVSpacings</b>()</p>
+<p>
+<hr>
+
+<a name="SetCorner(int, int, Point)"></a>
+<h3>SetCorner</h3>
+<p class="function">
+<b>&nbsp;</b> <b>SetCorner</b>(<b>int</b> i, <b>int</b> j, <b><a href="Point.html">Point</a></b> point)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>sets one of the plane corners: i,j take the values 0,1
+</dl>
+<hr>
+
+<a name="SetUSpacingType(Array)"></a>
+<h3>SetUSpacingType</h3>
+<p class="function">
+<b>&nbsp;</b> <b>SetUSpacingType</b>(<b><a href="Array.html">Array</a></b> arrayOfSpacings)</p>
+<p>
+<hr>
+
+<a name="SetVSpacingType(Array)"></a>
+<h3>SetVSpacingType</h3>
+<p class="function">
+<b>&nbsp;</b> <b>SetVSpacingType</b>(<b><a href="Array.html">Array</a></b> arrayOfSpacings)</p>
+<p>
+<hr>
+
+<a name="corners(Point, Point, Point, Point)"></a>
+<h3>corners</h3>
+<p class="function">
+<b>&nbsp;</b> <b>corners</b>(<b><a href="Point.html">Point</a></b> p1, <b><a href="Point.html">Point</a></b> p2, <b><a href="Point.html">Point</a></b> p3, <b><a href="Point.html">Point</a></b> p4)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Move the corners of the guideplane
+</dl>
+<hr>
+
+<a name="gridPoint(int, int)"></a>
+<h3>gridPoint</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>gridPoint</b>(<b>int</b> iKsi, <b>int</b> iEta)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Return a point inside the guideplane based on the grid lines
+</dl>
+<hr>
+
+<a name="point(double, double)"></a>
+<h3>point</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>point</b>(<b>double</b> iKsi, <b>double</b> iEta)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Return a point inside the guideplane
+</dl>
+<hr>
+
+<a name="project(Point)"></a>
+<h3>project</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>project</b>(<b><a href="Point.html">Point</a></b> in)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>project the point <code>in</code> onto the plane
+</dl>
+<dl>
+<dt>Returns:</dt>
+<dd>
+</dl>
+<hr>
+
+<a name="spacings(int, int, ...)"></a>
+<h3>spacings</h3>
+<p class="function">
+<b>&nbsp;</b> <b>spacings</b>(<b>int</b> nKsi, <b>int</b> nEta, [ksiSpacings ..., etaSpacings ...])</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Change the spacings on the guideplane
+</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="localSystem()"></a>
+<h3>localSystem</h3>
+<p class="function">
+<b><a href="LocalSystem.html">LocalSystem</a></b> <b>localSystem</b>()</p>
+<p>
+<a name="normal()"></a>
+<h3>normal</h3>
+<p class="function">
+<b><a href="LengthVector3d.html">LengthVector3d</a></b> <b>normal</b>()</p>
+<p>
+<a name="plane()"></a>
+<h3>plane</h3>
+<p class="function">
+<b><a href="plane3d.html">plane3d</a></b> <b>plane</b>()</p>
+<p>
+<a name="snapMode()"></a>
+<h3>snapMode</h3>
+<p class="function">
+<b>bool</b> <b>snapMode</b>()</p>
+<p>
+<a name="xGrid()"></a>
+<h3>xGrid</h3>
+<p class="function">
+<b>int</b> <b>xGrid</b>()</p>
+<p>
+<a name="yGrid()"></a>
+<h3>yGrid</h3>
+<p class="function">
+<b>int</b> <b>yGrid</b>()</p>
+<p>
+</body>
+</html>

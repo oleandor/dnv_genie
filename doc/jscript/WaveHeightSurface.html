@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: WaveHeightSurface
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: WaveHeightSurface
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Represent an environment wave height surface
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Specify the wave heights as a function of wave heading and period</td></tr><tr>  <td>     <code>WaveHeightSurface1 = WaveHeightSurface(2s,1s,2,0,30,3);<br/>WaveHeightSurface1.set(2 s,0 deg,5 m);<br/>WaveHeightSurface1.set(2 s,30 deg,6 m);<br/>WaveHeightSurface1.set(2 s,60 deg,7 m);<br/>WaveHeightSurface1.set(3 s,0 deg,10 m);<br/>WaveHeightSurface1.set(3 s,30 deg,11 m);<br/>WaveHeightSurface1.set(3 s,60 deg,12 m);<br/>     </code>		<div class="explanation">This command is scripted.<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="class_jmfDuplicateObject_class_jmfNamedObject_.html">class jmfDuplicateObject<class jmfNamedObject></a>
+            |
+            +--<a href="WaveHeightEvaluator.html">WaveHeightEvaluator</a>
+                 |
+                 +--<b>WaveHeightSurface</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="WaveHeightSurface.html#WaveHeightSurface(Time, Time, int, Angle, Angle, int)">WaveHeightSurface</a></b>(<b><a href="Time.html">Time</a></b><span title="First wave period"> first_period</span>, <b><a href="Time.html">Time</a></b><span title="Wave period step"> period_step</span>, <b>int</b><span title="Number of wave periods"> no_periods</span>, <b><a href="Angle.html">Angle</a></b><span title="First wave heading"> first_heading</span>, <b><a href="Angle.html">Angle</a></b><span title="Wave heading step"> heading_step</span>, <b>int</b><span title="Number of wave headings"> no_headings</span>)</code>
+<div class="explanation">
+This command creates an environment wave height surface</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="WaveHeightSurface.html#set(Time, Angle, Length)">set</a></b>(<b><a href="Time.html">Time</a></b><span title="Wave period"> wave_period</span>, <b><a href="Angle.html">Angle</a></b><span title="Wave heading"> wave_heading</span>, <b><a href="Length.html">Length</a></b><span title="Wave height"> wave_height</span>)</code>
+<div class="explanation">
+Set the wave height at specified heading and wave period</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="WaveHeightSurface.html#setFirstHeading(Angle)">setFirstHeading</a></b>(<b><a href="Angle.html">Angle</a></b>)</code>
+<div class="explanation">
+Specify first heading angle</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="WaveHeightSurface.html#setFirstPeriod(Time)">setFirstPeriod</a></b>(<b><a href="Time.html">Time</a></b>)</code>
+<div class="explanation">
+Specify first wave period</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="WaveHeightSurface.html#setHeadingStep(Angle)">setHeadingStep</a></b>(<b><a href="Angle.html">Angle</a></b>)</code>
+<div class="explanation">
+Specify heading step</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="WaveHeightSurface.html#setNoHeadings(int)">setNoHeadings</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Specify number of headings</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="WaveHeightSurface.html#setNoPeriods(int)">setNoPeriods</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Specify number of wave periods</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="WaveHeightSurface.html#setPeriodStep(Time)">setPeriodStep</a></b>(<b><a href="Time.html">Time</a></b>)</code>
+<div class="explanation">
+Specify wave period step</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="class_jmfDuplicateObject_class_jmfNamedObject_.html#copy()">copy</a></b>()</code>
+<div class="explanation">
+Make an identical copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="WaveHeightSurface(Time, Time, int, Angle, Angle, int)"></a>
+<h3>WaveHeightSurface</h3>
+<p class="function">
+<b>WaveHeightSurface</b>(<b><a href="Time.html">Time</a></b><span title="First wave period"> first_period</span>, <b><a href="Time.html">Time</a></b><span title="Wave period step"> period_step</span>, <b>int</b><span title="Number of wave periods"> no_periods</span>, <b><a href="Angle.html">Angle</a></b><span title="First wave heading"> first_heading</span>, <b><a href="Angle.html">Angle</a></b><span title="Wave heading step"> heading_step</span>, <b>int</b><span title="Number of wave headings"> no_headings</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>This command creates an environment wave height surface
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>first_period</code> - First wave period<dd><code>period_step</code> - Wave period step<dd><code>no_periods</code> - Number of wave periods<dd><code>first_heading</code> - First wave heading<dd><code>heading_step</code> - Wave heading step<dd><code>no_headings</code> - Number of wave headings</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="set(Time, Angle, Length)"></a>
+<h3>set</h3>
+<p class="function">
+<b>&nbsp;</b> <b>set</b>(<b><a href="Time.html">Time</a></b><span title="Wave period"> wave_period</span>, <b><a href="Angle.html">Angle</a></b><span title="Wave heading"> wave_heading</span>, <b><a href="Length.html">Length</a></b><span title="Wave height"> wave_height</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set the wave height at specified heading and wave period
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>wave_period</code> - Wave period<dd><code>wave_heading</code> - Wave heading<dd><code>wave_height</code> - Wave height</dl>
+<hr>
+
+<a name="setFirstHeading(Angle)"></a>
+<h3>setFirstHeading</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setFirstHeading</b>(<b><a href="Angle.html">Angle</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify first heading angle
+</dl>
+<hr>
+
+<a name="setFirstPeriod(Time)"></a>
+<h3>setFirstPeriod</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setFirstPeriod</b>(<b><a href="Time.html">Time</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify first wave period
+</dl>
+<hr>
+
+<a name="setHeadingStep(Angle)"></a>
+<h3>setHeadingStep</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setHeadingStep</b>(<b><a href="Angle.html">Angle</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify heading step
+</dl>
+<hr>
+
+<a name="setNoHeadings(int)"></a>
+<h3>setNoHeadings</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoHeadings</b>(<b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify number of headings
+</dl>
+<hr>
+
+<a name="setNoPeriods(int)"></a>
+<h3>setNoPeriods</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setNoPeriods</b>(<b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify number of wave periods
+</dl>
+<hr>
+
+<a name="setPeriodStep(Time)"></a>
+<h3>setPeriodStep</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setPeriodStep</b>(<b><a href="Time.html">Time</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify wave period step
+</dl>
+<hr>
+
+</body>
+</html>

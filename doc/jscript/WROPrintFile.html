@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: WROPrintFile
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: WROPrintFile
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="UnnamedObject.html">UnnamedObject</a>
+       |
+       +--<b>WROPrintFile</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="WROPrintFile.html#addDeterministicData(Set, int, int)">addDeterministicData</a></b>(<b><a href="Set.html">Set</a></b>, <b>int</b>, <b>int</b>)</code>
+<div class="explanation">
+Add fluid kinematics data table</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="WROPrintFile.html#addPoint(Point)">addPoint</a></b>(<b><a href="Point.html">Point</a></b>)</code>
+<div class="explanation">
+Add point to fluid kinematics table</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="WROPrintFile.html#addTransferData(Set, double, double, bool, bool)">addTransferData</a></b>(<b><a href="Set.html">Set</a></b>, <b>double</b>, <b>double</b>, <b>bool</b>, <b>bool</b>)</code>
+<div class="explanation">
+Add data to new row of transfer function data table</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="WROPrintFile.html#removeDeterministicData()">removeDeterministicData</a></b>()</code>
+<div class="explanation">
+Remove data of deterministic data table</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="WROPrintFile.html#removeFluidData()">removeFluidData</a></b>()</code>
+<div class="explanation">
+Remove data of transfer function data table</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="WROPrintFile.html#removeTransferData()">removeTransferData</a></b>()</code>
+<div class="explanation">
+Remove data of transfer function data table</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="wajacWarningLevel.html">wajacWarningLevel</a></b></code>
+</td>
+<td width="90%"><code><b><a href="WROPrintFile.html#Default_hydrodynamic_coefficients_messages()">Default_hydrodynamic_coefficients_messages</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="wajacWarningLevel.html">wajacWarningLevel</a></b></code>
+</td>
+<td width="90%"><code><b><a href="WROPrintFile.html#Receives_no_loads_or_no_added_mass_messages()">Receives_no_loads_or_no_added_mass_messages</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="wajacWarningLevel.html">wajacWarningLevel</a></b></code>
+</td>
+<td width="90%"><code><b><a href="WROPrintFile.html#Show_all_warning_messages()">Show_all_warning_messages</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="wajacWarningLevel.html">wajacWarningLevel</a></b></code>
+</td>
+<td width="90%"><code><b><a href="WROPrintFile.html#Suppress_all_warning_messages()">Suppress_all_warning_messages</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td width="90%"><code><b><a href="WROPrintFile.html#fluidPointVector()">fluidPointVector</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="wajacWarningLevel.html">wajacWarningLevel</a></b></code>
+</td>
+<td width="90%"><code><b><a href="WROPrintFile.html#wajacWarningLevel()">wajacWarningLevel</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+The Wajac warning level</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="addDeterministicData(Set, int, int)"></a>
+<h3>addDeterministicData</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addDeterministicData</b>(<b><a href="Set.html">Set</a></b>, <b>int</b>, <b>int</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Add fluid kinematics data table
+</dl>
+<hr>
+
+<a name="addPoint(Point)"></a>
+<h3>addPoint</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addPoint</b>(<b><a href="Point.html">Point</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Add point to fluid kinematics table
+</dl>
+<hr>
+
+<a name="addTransferData(Set, double, double, bool, bool)"></a>
+<h3>addTransferData</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addTransferData</b>(<b><a href="Set.html">Set</a></b>, <b>double</b>, <b>double</b>, <b>bool</b>, <b>bool</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Add data to new row of transfer function data table
+</dl>
+<hr>
+
+<a name="removeDeterministicData()"></a>
+<h3>removeDeterministicData</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeDeterministicData</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove data of deterministic data table
+</dl>
+<hr>
+
+<a name="removeFluidData()"></a>
+<h3>removeFluidData</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeFluidData</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove data of transfer function data table
+</dl>
+<hr>
+
+<a name="removeTransferData()"></a>
+<h3>removeTransferData</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeTransferData</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove data of transfer function data table
+</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="Default_hydrodynamic_coefficients_messages()"></a>
+<h3>Default_hydrodynamic_coefficients_messages</h3>
+<p class="function">
+<b><a href="wajacWarningLevel.html">wajacWarningLevel</a></b> <b>Default_hydrodynamic_coefficients_messages</b>()</p>
+<p>
+<a name="Receives_no_loads_or_no_added_mass_messages()"></a>
+<h3>Receives_no_loads_or_no_added_mass_messages</h3>
+<p class="function">
+<b><a href="wajacWarningLevel.html">wajacWarningLevel</a></b> <b>Receives_no_loads_or_no_added_mass_messages</b>()</p>
+<p>
+<a name="Show_all_warning_messages()"></a>
+<h3>Show_all_warning_messages</h3>
+<p class="function">
+<b><a href="wajacWarningLevel.html">wajacWarningLevel</a></b> <b>Show_all_warning_messages</b>()</p>
+<p>
+<a name="Suppress_all_warning_messages()"></a>
+<h3>Suppress_all_warning_messages</h3>
+<p class="function">
+<b><a href="wajacWarningLevel.html">wajacWarningLevel</a></b> <b>Suppress_all_warning_messages</b>()</p>
+<p>
+<a name="fluidPointVector()"></a>
+<h3>fluidPointVector</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>fluidPointVector</b>()</p>
+<p>
+<a name="wajacWarningLevel()"></a>
+<h3>wajacWarningLevel</h3>
+<p class="function">
+<b><a href="wajacWarningLevel.html">wajacWarningLevel</a></b> <b>wajacWarningLevel</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>The Wajac warning level
+</dl>
+</body>
+</html>

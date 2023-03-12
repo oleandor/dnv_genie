@@ -1,0 +1,1301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: GuideGCC
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: GuideGCC
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Represents a guiding generalized cubic curve
+</dl>
+<dl>
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="Transformable.html">Transformable</a>
+            |
+            +--<a href="GuideCurve.html">GuideCurve</a>
+                 |
+                 +--<b>GuideGCC</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="GuideGCC.html#GuideGCC(GCCType, Array, double, double, double, Array)">GuideGCC</a></b>(<b><a href="GCCType.html">GCCType</a></b><span title=" generalized cubic type"> gccType</span>, <b><a href="Array.html">Array</a></b><span title="Control Points"> points</span>, <b>double</b><span title="Parameter"> parameter</span>, <b>double</b><span title="lower bound"> a</span>, <b>double</b><span title="upper bound"> b</span>, <b><a href="Array.html">Array</a></b><span title="List of spacing values"> spacings</span>)</code>
+<div class="explanation">
+Create a guiding generalized cubic curve</div></td>
+</tr>
+<tr >
+<td><code><b><a href="GuideGCC.html#GuideGCC(GCCType, Array, double, double, double)">GuideGCC</a></b>(<b><a href="GCCType.html">GCCType</a></b><span title=" generalized cubic type"> gccType</span>, <b><a href="Array.html">Array</a></b><span title="Control Points"> points</span>, <b>double</b><span title="Parameter"> parameter</span>, <b>double</b><span title="lower bound"> a</span>, <b>double</b><span title="upper bound"> b</span>)</code>
+<div class="explanation">
+Create a guiding generalized cubic curve</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#ActivateSnapPoints()">ActivateSnapPoints</a></b>()</code>
+<div class="explanation">
+Activates the snap points of the curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="GuideCurve.html">GuideCurve</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#CurvatureFunction(int, double)">CurvatureFunction</a></b>(<b>int</b> numberOfPoints, <b>double</b> scalingFactor)</code>
+<div class="explanation">
+Creates a poly-line of a given number of points of the curvature of a generalized cubic curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="GuideCurve.html">GuideCurve</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#CurvatureFunction2D(int, double)">CurvatureFunction2D</a></b>(<b>int</b> numberOfPoints, <b>double</b> scalingFactor)</code>
+<div class="explanation">
+Creates a poly-line of a given number of points of the 2D curvature of a (2D) generalized cubic curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="GuideCurve.html">GuideCurve</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#CurvaturePorcupine2D(int, double)">CurvaturePorcupine2D</a></b>(<b>int</b> numberOfPoints, <b>double</b> scalingFactor)</code>
+<div class="explanation">
+Creates a poly-line of a given number of points of the 2D curvature of a (2D) generalized cubic curve.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#CurvatureRadius(Point)">CurvatureRadius</a></b>(<b><a href="Point.html">Point</a></b>)</code>
+<div class="explanation">
+Returns the curvature radius of a curve at a given point</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="LengthVector3d.html">LengthVector3d</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#CurvatureVector(Point)">CurvatureVector</a></b>(<b><a href="Point.html">Point</a></b>)</code>
+<div class="explanation">
+Returns the curvature vector of a curve at a given point</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#DeactivateSnapPoints()">DeactivateSnapPoints</a></b>()</code>
+<div class="explanation">
+Deactivates the snap points of the curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#EvaluateAtLocalParameter(double)">EvaluateAtLocalParameter</a></b>(<b>double</b> localParameter)</code>
+<div class="explanation">
+Evaluates the generalized cubic curve at a given local-parametric value.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#EvaluateAtParameter(double)">EvaluateAtParameter</a></b>(<b>double</b> parameter)</code>
+<div class="explanation">
+Evaluates the generalized cubic curve at a given parametric value.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="LengthVector3d.html">LengthVector3d</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#EvaluateDerivativeAtLocalParameter(int, double)">EvaluateDerivativeAtLocalParameter</a></b>(<b>int</b> order, <b>double</b> local_parameter)</code>
+<div class="explanation">
+Evaluates the derivatives of a generalized cubic curve at a given parametric value.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="LengthVector3d.html">LengthVector3d</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#EvaluateDerivativeAtParameter(int, double)">EvaluateDerivativeAtParameter</a></b>(<b>int</b> order, <b>double</b> parameter)</code>
+<div class="explanation">
+Evaluates the derivatives of a generalized cubic curve at a given parametric value.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#GeometryToString()">GeometryToString</a></b>()</code>
+<div class="explanation">
+Returns analytic parameters of the curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="PointSet.html">PointSet</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#GetControlPointSet()">GetControlPointSet</a></b>()</code>
+<div class="explanation">
+Returns the the control points of a generalized cubic curve as a guiding-point-set.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#GetControlPolygonArray()">GetControlPolygonArray</a></b>()</code>
+<div class="explanation">
+Returns the array of the control points of a generalized cubic curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#GetCurveInformation()">GetCurveInformation</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#GetGrevilleAbscissas()">GetGrevilleAbscissas</a></b>()</code>
+<div class="explanation">
+Returns the Greville abscissas.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#GetLineSegmentEnds()">GetLineSegmentEnds</a></b>()</code>
+<div class="explanation">
+Returns the points L0/L3.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#GetLocalParameter(Point)">GetLocalParameter</a></b>(<b><a href="Point.html">Point</a></b> point)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#GetLowerBound()">GetLowerBound</a></b>()</code>
+<div class="explanation">
+Returns the lower bound of the parametric interval.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#GetParameter()">GetParameter</a></b>()</code>
+<div class="explanation">
+Returns the tension parameter of a generalized cubic curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#GetParameter(Point)">GetParameter</a></b>(<b><a href="Point.html">Point</a></b> point)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="plane3d.html">plane3d</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#GetPlane()">GetPlane</a></b>()</code>
+<div class="explanation">
+Returns the plane (if exists) on which the given curve lies.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>string</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#GetType()">GetType</a></b>()</code>
+<div class="explanation">
+Returns the type of a generalized cubic curve.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#GetUpperBound()">GetUpperBound</a></b>()</code>
+<div class="explanation">
+Returns the upper bound of the parametric interval.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#IsBezierCurve()">IsBezierCurve</a></b>()</code>
+<div class="explanation">
+Checks if the curve is a polynomial segment.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#IsClosed()">IsClosed</a></b>()</code>
+<div class="explanation">
+Checks if the curve is closed.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#IsLine()">IsLine</a></b>()</code>
+<div class="explanation">
+Checks if the curve is a linear segment.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#IsPlanar()">IsPlanar</a></b>()</code>
+<div class="explanation">
+Checks if the curve is planar.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#IsPolyline()">IsPolyline</a></b>()</code>
+<div class="explanation">
+Checks if the curve is a poly-line.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#IsRational()">IsRational</a></b>()</code>
+<div class="explanation">
+Checks if the curve is given by a rational function.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#IsSelfIntersecting()">IsSelfIntersecting</a></b>()</code>
+<div class="explanation">
+Checks if the curve is intersecting itself.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#IsSmooth()">IsSmooth</a></b>()</code>
+<div class="explanation">
+Checks if the curve is smooth (G1).</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#L0()">L0</a></b>()</code>
+<div class="explanation">
+Returns the first end of the linear segment L.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#L3()">L3</a></b>()</code>
+<div class="explanation">
+Returns the second end of the linear segment L.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#Length()">Length</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#PartialLength(double, double)">PartialLength</a></b>(<b>double</b> start_parameter, <b>double</b> end_parameter)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#Subdivide(double)">Subdivide</a></b>(<b>double</b>)</code>
+<div class="explanation">
+Subdivides the curve at the parametric value.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="LengthVector3d.html">LengthVector3d</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#TangentVector(Point)">TangentVector</a></b>(<b><a href="Point.html">Point</a></b>)</code>
+<div class="explanation">
+Returns the tangent vector of a curve at a given point</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#U(double)">U</a></b>(<b>double</b>)</code>
+<div class="explanation">
+Evaluate u(t)</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#V(double)">V</a></b>(<b>double</b>)</code>
+<div class="explanation">
+Evaluate v(t)</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#Xi_1()">Xi_1</a></b>()</code>
+<div class="explanation">
+Returns the Greville abscissa xi_1.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#Xi_2()">Xi_2</a></b>()</code>
+<div class="explanation">
+Returns the Greville abscissa xi_2.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#crop(double, double)">crop</a></b>(<b>double</b> start, <b>double</b> end)</code>
+<div class="explanation">
+crop the guide curve given a range [0..1]</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#curvePoint(int)">curvePoint</a></b>(<b>int</b> iParam)</code>
+<div class="explanation">
+Return a point along the guide curve based on the spacing coordinates</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#dU(double)">dU</a></b>(<b>double</b>)</code>
+<div class="explanation">
+Evaluate u'(t)</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#dV(double)">dV</a></b>(<b>double</b>)</code>
+<div class="explanation">
+Evaluate v'(t)</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideCurve</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#divide(ModelObject)">divide</a></b>(<b><a href="ModelObject.html">ModelObject</a></b> modelObject)</code>
+<div class="explanation">
+Subdivides a curve at the intersection point with a given model object.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideCurve</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#divide(plane3d)">divide</a></b>(<b><a href="plane3d.html">plane3d</a></b> plane)</code>
+<div class="explanation">
+Subdivides a curve at the intersection point with a given plane.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideCurve</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#divideAt(double)">divideAt</a></b>(<b>double</b> lengthFraction)</code>
+<div class="explanation">
+Subdivides a curve at the given length-fraction.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="LengthVector3d.html">LengthVector3d</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#endPoint()">endPoint</a></b>()</code>
+<div class="explanation">
+Get the end point (end 2 of the curve)</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="LengthVector3d.html">LengthVector3d</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#endTangent()">endTangent</a></b>()</code>
+<div class="explanation">
+Get the tangent vector at end 2 of the curve</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#flip()">flip</a></b>()</code>
+<div class="explanation">
+flip the parameter direction of the curve</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#intersect(ModelObject)">intersect</a></b>(<b><a href="ModelObject.html">ModelObject</a></b> modelObject)</code>
+<div class="explanation">
+Returns the intersection point with a model-object.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#intersect(plane3d)">intersect</a></b>(<b><a href="plane3d.html">plane3d</a></b> plane)</code>
+<div class="explanation">
+Returns the intersection point with a given plane.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>GuideCurve</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#offset(Length)">offset</a></b>(<b><a href="Length.html">Length</a></b> distance)</code>
+<div class="explanation">
+Offsets the given curve at the given distance.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>double</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#parameter(Point)">parameter</a></b>(<b><a href="Point.html">Point</a></b> point)</code>
+<div class="explanation">
+Returns the length-fraction at a given point on the curve.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#point(double)">point</a></b>(<b>double</b> param)</code>
+<div class="explanation">
+Return a point along the guide curve</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#project(Point)">project</a></b>(<b><a href="Point.html">Point</a></b> in)</code>
+<div class="explanation">
+project the point <code>in</code> onto the curve</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#punch(Variant)">punch</a></b>(<b><a href="Variant.html">Variant</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideCurve.html#spacings(Array)">spacings</a></b>(<b><a href="Array.html">Array</a></b> spacings)</code>
+<div class="explanation">
+Change the spacings on the guide curve</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="LengthVector3d.html">LengthVector3d</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#startPoint()">startPoint</a></b>()</code>
+<div class="explanation">
+Get the start point (end 1 of the curve)</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="LengthVector3d.html">LengthVector3d</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="GuideGCC.html#startTangent()">startTangent</a></b>()</code>
+<div class="explanation">
+Get the tangent vector at end 1 of the curve</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copy3Point(Point, Point, Point, Point, Point, Point)">copy3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> sp1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> sp2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> sp3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> dp1</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> dp2</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> dp3</span>)</code>
+<div class="explanation">
+Copy the object without scaling from one location to another.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyMirror(Point, LengthVector3d)">copyMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int, std::shared_ptr<mfNameMask>)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyScale(double, Point)">copyScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Scale a copy of the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTransform(Transformation3d)">copyTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general transformation to a copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate a copy of this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int, std::shared_ptr<mfNameMask>)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#move3Point(Point, Point, Point, Point, Point, Point)">move3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> p4</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> p5</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> p6</span>)</code>
+<div class="explanation">
+Move the object from one coordinate system to another</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveMirror(Point, LengthVector3d)">moveMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveRotate(Point, LengthVector3d, Angle)">moveRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveScale(double, Point)">moveScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Move and scale the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTransform(Transformation3d)">moveTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general selection to the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTranslate(LengthVector3d)">moveTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td width="90%"><code><b><a href="GuideCurve.html#end1()">end1</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Returns the start point of the curve</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td width="90%"><code><b><a href="GuideCurve.html#end2()">end2</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Returns the end point of the curve</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geCONNECTED()">geCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use connected move</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geUNCONNECTED()">geUNCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use unconnected move</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>int</b></code>
+</td>
+<td width="90%"><code><b><a href="GuideCurve.html#grid()">grid</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Gets or sets the number of grid points</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="GuideCurve.html#snapMode()">snapMode</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Gets or sets the snapping mode of the curve</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="GuideGCC(GCCType, Array, double, double, double, Array)"></a>
+<h3>GuideGCC</h3>
+<p class="function">
+<b>GuideGCC</b>(<b><a href="GCCType.html">GCCType</a></b><span title=" generalized cubic type"> gccType</span>, <b><a href="Array.html">Array</a></b><span title="Control Points"> points</span>, <b>double</b><span title="Parameter"> parameter</span>, <b>double</b><span title="lower bound"> a</span>, <b>double</b><span title="upper bound"> b</span>, <b><a href="Array.html">Array</a></b><span title="List of spacing values"> spacings</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a guiding generalized cubic curve
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>gccType</code> -  generalized cubic type<dd><code>points</code> - Control Points<dd><code>parameter</code> - Parameter<dd><code>a</code> - lower bound<dd><code>b</code> - upper bound<dd><code>spacings</code> - List of spacing values</dl>
+<hr>
+
+<a name="GuideGCC(GCCType, Array, double, double, double)"></a>
+<h3>GuideGCC</h3>
+<p class="function">
+<b>GuideGCC</b>(<b><a href="GCCType.html">GCCType</a></b><span title=" generalized cubic type"> gccType</span>, <b><a href="Array.html">Array</a></b><span title="Control Points"> points</span>, <b>double</b><span title="Parameter"> parameter</span>, <b>double</b><span title="lower bound"> a</span>, <b>double</b><span title="upper bound"> b</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a guiding generalized cubic curve
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>gccType</code> -  generalized cubic type<dd><code>points</code> - Control Points<dd><code>parameter</code> - Parameter<dd><code>a</code> - lower bound<dd><code>b</code> - upper bound</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="CurvatureFunction(int, double)"></a>
+<h3>CurvatureFunction</h3>
+<p class="function">
+<b><a href="GuideCurve.html">GuideCurve</a></b> <b>CurvatureFunction</b>(<b>int</b> numberOfPoints, <b>double</b> scalingFactor)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a poly-line of a given number of points of the curvature of a generalized cubic curve.
+</dl>
+<hr>
+
+<a name="CurvatureFunction2D(int, double)"></a>
+<h3>CurvatureFunction2D</h3>
+<p class="function">
+<b><a href="GuideCurve.html">GuideCurve</a></b> <b>CurvatureFunction2D</b>(<b>int</b> numberOfPoints, <b>double</b> scalingFactor)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a poly-line of a given number of points of the 2D curvature of a (2D) generalized cubic curve.
+</dl>
+<hr>
+
+<a name="CurvaturePorcupine2D(int, double)"></a>
+<h3>CurvaturePorcupine2D</h3>
+<p class="function">
+<b><a href="GuideCurve.html">GuideCurve</a></b> <b>CurvaturePorcupine2D</b>(<b>int</b> numberOfPoints, <b>double</b> scalingFactor)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Creates a poly-line of a given number of points of the 2D curvature of a (2D) generalized cubic curve.
+</dl>
+<hr>
+
+<a name="EvaluateAtLocalParameter(double)"></a>
+<h3>EvaluateAtLocalParameter</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>EvaluateAtLocalParameter</b>(<b>double</b> localParameter)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Evaluates the generalized cubic curve at a given local-parametric value.
+</dl>
+<hr>
+
+<a name="EvaluateAtParameter(double)"></a>
+<h3>EvaluateAtParameter</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>EvaluateAtParameter</b>(<b>double</b> parameter)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Evaluates the generalized cubic curve at a given parametric value.
+</dl>
+<hr>
+
+<a name="EvaluateDerivativeAtLocalParameter(int, double)"></a>
+<h3>EvaluateDerivativeAtLocalParameter</h3>
+<p class="function">
+<b><a href="LengthVector3d.html">LengthVector3d</a></b> <b>EvaluateDerivativeAtLocalParameter</b>(<b>int</b> order, <b>double</b> local_parameter)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Evaluates the derivatives of a generalized cubic curve at a given parametric value.
+</dl>
+<hr>
+
+<a name="EvaluateDerivativeAtParameter(int, double)"></a>
+<h3>EvaluateDerivativeAtParameter</h3>
+<p class="function">
+<b><a href="LengthVector3d.html">LengthVector3d</a></b> <b>EvaluateDerivativeAtParameter</b>(<b>int</b> order, <b>double</b> parameter)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Evaluates the derivatives of a generalized cubic curve at a given parametric value.
+</dl>
+<hr>
+
+<a name="GeometryToString()"></a>
+<h3>GeometryToString</h3>
+<p class="function">
+<b>string</b> <b>GeometryToString</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns analytic parameters of the curve.Returns the global properties of a curve.
+</dl>
+<hr>
+
+<a name="GetControlPointSet()"></a>
+<h3>GetControlPointSet</h3>
+<p class="function">
+<b><a href="PointSet.html">PointSet</a></b> <b>GetControlPointSet</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the the control points of a generalized cubic curve as a guiding-point-set.
+</dl>
+<hr>
+
+<a name="GetControlPolygonArray()"></a>
+<h3>GetControlPolygonArray</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>GetControlPolygonArray</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the array of the control points of a generalized cubic curve.
+</dl>
+<hr>
+
+<a name="GetCurveInformation()"></a>
+<h3>GetCurveInformation</h3>
+<p class="function">
+<b>string</b> <b>GetCurveInformation</b>()</p>
+<p>
+<hr>
+
+<a name="GetGrevilleAbscissas()"></a>
+<h3>GetGrevilleAbscissas</h3>
+<p class="function">
+<b>string</b> <b>GetGrevilleAbscissas</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the Greville abscissas.
+</dl>
+<hr>
+
+<a name="GetLineSegmentEnds()"></a>
+<h3>GetLineSegmentEnds</h3>
+<p class="function">
+<b>string</b> <b>GetLineSegmentEnds</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the points L0/L3.
+</dl>
+<hr>
+
+<a name="GetLocalParameter(Point)"></a>
+<h3>GetLocalParameter</h3>
+<p class="function">
+<b>double</b> <b>GetLocalParameter</b>(<b><a href="Point.html">Point</a></b> point)</p>
+<p>
+<hr>
+
+<a name="GetLowerBound()"></a>
+<h3>GetLowerBound</h3>
+<p class="function">
+<b>double</b> <b>GetLowerBound</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the lower bound of the parametric interval.
+</dl>
+<hr>
+
+<a name="GetParameter()"></a>
+<h3>GetParameter</h3>
+<p class="function">
+<b>double</b> <b>GetParameter</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the tension parameter of a generalized cubic curve.
+</dl>
+<hr>
+
+<a name="GetParameter(Point)"></a>
+<h3>GetParameter</h3>
+<p class="function">
+<b>double</b> <b>GetParameter</b>(<b><a href="Point.html">Point</a></b> point)</p>
+<p>
+<hr>
+
+<a name="GetPlane()"></a>
+<h3>GetPlane</h3>
+<p class="function">
+<b><a href="plane3d.html">plane3d</a></b> <b>GetPlane</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the plane (if exists) on which the given curve lies.
+</dl>
+<hr>
+
+<a name="GetType()"></a>
+<h3>GetType</h3>
+<p class="function">
+<b>string</b> <b>GetType</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the type of a generalized cubic curve.
+</dl>
+<hr>
+
+<a name="GetUpperBound()"></a>
+<h3>GetUpperBound</h3>
+<p class="function">
+<b>double</b> <b>GetUpperBound</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the upper bound of the parametric interval.
+</dl>
+<hr>
+
+<a name="IsBezierCurve()"></a>
+<h3>IsBezierCurve</h3>
+<p class="function">
+<b>bool</b> <b>IsBezierCurve</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Checks if the curve is a polynomial segment.
+</dl>
+<hr>
+
+<a name="IsClosed()"></a>
+<h3>IsClosed</h3>
+<p class="function">
+<b>bool</b> <b>IsClosed</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Checks if the curve is closed.
+</dl>
+<hr>
+
+<a name="IsLine()"></a>
+<h3>IsLine</h3>
+<p class="function">
+<b>bool</b> <b>IsLine</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Checks if the curve is a linear segment.
+</dl>
+<hr>
+
+<a name="IsPlanar()"></a>
+<h3>IsPlanar</h3>
+<p class="function">
+<b>bool</b> <b>IsPlanar</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Checks if the curve is planar.
+</dl>
+<hr>
+
+<a name="IsPolyline()"></a>
+<h3>IsPolyline</h3>
+<p class="function">
+<b>bool</b> <b>IsPolyline</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Checks if the curve is a poly-line.
+</dl>
+<hr>
+
+<a name="IsRational()"></a>
+<h3>IsRational</h3>
+<p class="function">
+<b>bool</b> <b>IsRational</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Checks if the curve is given by a rational function.
+</dl>
+<hr>
+
+<a name="IsSelfIntersecting()"></a>
+<h3>IsSelfIntersecting</h3>
+<p class="function">
+<b>bool</b> <b>IsSelfIntersecting</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Checks if the curve is intersecting itself.
+</dl>
+<hr>
+
+<a name="IsSmooth()"></a>
+<h3>IsSmooth</h3>
+<p class="function">
+<b>bool</b> <b>IsSmooth</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Checks if the curve is smooth (G1).
+</dl>
+<hr>
+
+<a name="L0()"></a>
+<h3>L0</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>L0</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the first end of the linear segment L.
+</dl>
+<hr>
+
+<a name="L3()"></a>
+<h3>L3</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>L3</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the second end of the linear segment L.
+</dl>
+<hr>
+
+<a name="Length()"></a>
+<h3>Length</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>Length</b>()</p>
+<p>
+<hr>
+
+<a name="PartialLength(double, double)"></a>
+<h3>PartialLength</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>PartialLength</b>(<b>double</b> start_parameter, <b>double</b> end_parameter)</p>
+<p>
+<hr>
+
+<a name="Subdivide(double)"></a>
+<h3>Subdivide</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>Subdivide</b>(<b>double</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Subdivides the curve at the parametric value.
+</dl>
+<hr>
+
+<a name="U(double)"></a>
+<h3>U</h3>
+<p class="function">
+<b>double</b> <b>U</b>(<b>double</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Evaluate u(t)
+</dl>
+<hr>
+
+<a name="V(double)"></a>
+<h3>V</h3>
+<p class="function">
+<b>double</b> <b>V</b>(<b>double</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Evaluate v(t)
+</dl>
+<hr>
+
+<a name="Xi_1()"></a>
+<h3>Xi_1</h3>
+<p class="function">
+<b>double</b> <b>Xi_1</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the Greville abscissa xi_1.
+</dl>
+<hr>
+
+<a name="Xi_2()"></a>
+<h3>Xi_2</h3>
+<p class="function">
+<b>double</b> <b>Xi_2</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Returns the Greville abscissa xi_2.
+</dl>
+<hr>
+
+<a name="dU(double)"></a>
+<h3>dU</h3>
+<p class="function">
+<b>double</b> <b>dU</b>(<b>double</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Evaluate u'(t)
+</dl>
+<hr>
+
+<a name="dV(double)"></a>
+<h3>dV</h3>
+<p class="function">
+<b>double</b> <b>dV</b>(<b>double</b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Evaluate v'(t)
+</dl>
+<hr>
+
+<a name="endPoint()"></a>
+<h3>endPoint</h3>
+<p class="function">
+<b><a href="LengthVector3d.html">LengthVector3d</a></b> <b>endPoint</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Get the end point (end 2 of the curve)
+</dl>
+<hr>
+
+<a name="endTangent()"></a>
+<h3>endTangent</h3>
+<p class="function">
+<b><a href="LengthVector3d.html">LengthVector3d</a></b> <b>endTangent</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Get the tangent vector at end 2 of the curve
+</dl>
+<hr>
+
+<a name="startPoint()"></a>
+<h3>startPoint</h3>
+<p class="function">
+<b><a href="LengthVector3d.html">LengthVector3d</a></b> <b>startPoint</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Get the start point (end 1 of the curve)
+</dl>
+<hr>
+
+<a name="startTangent()"></a>
+<h3>startTangent</h3>
+<p class="function">
+<b><a href="LengthVector3d.html">LengthVector3d</a></b> <b>startTangent</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Get the tangent vector at end 1 of the curve
+</dl>
+<hr>
+
+</body>
+</html>

@@ -1,0 +1,670 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: DetailBox
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: DetailBox
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Define a Detail Box
+</dl>
+<dl>
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="Transformable.html">Transformable</a>
+            |
+            +--<b>DetailBox</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="DetailBox.html#DetailBox(Point, Length, Length, Length, LocalSystem)">DetailBox</a></b>(<b><a href="Point.html">Point</a></b> hotspot, <b><a href="Length.html">Length</a></b> dimensionX, <b><a href="Length.html">Length</a></b> dimensionY, <b><a href="Length.html">Length</a></b> dimensionZ, <b><a href="LocalSystem.html">LocalSystem</a></b> localSystem)</code>
+<div class="explanation">
+Create a Detail-Box from hotspot, lengths in x,y,z and local coordinate system.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="DetailBox.html#DetailBox(Point, Length, Length, Length)">DetailBox</a></b>(<b><a href="Point.html">Point</a></b> hotspot, <b><a href="Length.html">Length</a></b> dimensionX, <b><a href="Length.html">Length</a></b> dimensionY, <b><a href="Length.html">Length</a></b> dimensionZ)</code>
+<div class="explanation">
+Create a Detail-Box from hotspot, lengths in x,y,z</div></td>
+</tr>
+<tr >
+<td><code><b><a href="DetailBox.html#DetailBox(Point, Length, Length, Length, Length, Length, Length, LocalSystem)">DetailBox</a></b>(<b><a href="Point.html">Point</a></b> hotspot, <b><a href="Length.html">Length</a></b> dimensionPDX, <b><a href="Length.html">Length</a></b> dimensionPDY, <b><a href="Length.html">Length</a></b> dimensionPDZ, <b><a href="Length.html">Length</a></b> dimensionNDX, <b><a href="Length.html">Length</a></b> dimensionNDY, <b><a href="Length.html">Length</a></b> dimensionNDZ, <b><a href="LocalSystem.html">LocalSystem</a></b> localSystem)</code>
+<div class="explanation">
+Create a Detail-Box from hotspot, lengths in positive and negative x,y,z and local coordinate system.</div></td>
+</tr>
+<tr >
+<td><code><b><a href="DetailBox.html#DetailBox(Point, Length, Length, Length, Length, Length, Length)">DetailBox</a></b>(<b><a href="Point.html">Point</a></b> hotspot, <b><a href="Length.html">Length</a></b> dimensionPDX, <b><a href="Length.html">Length</a></b> dimensionPDY, <b><a href="Length.html">Length</a></b> dimensionPDZ, <b><a href="Length.html">Length</a></b> dimensionNDX, <b><a href="Length.html">Length</a></b> dimensionNDY, <b><a href="Length.html">Length</a></b> dimensionNDZ)</code>
+<div class="explanation">
+Create a Detail-Box from hotspot, lengths in positive and negative x,y,z</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="DetailBox.html#SetNoMeshDensity()">SetNoMeshDensity</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="DetailBox.html#SetNoMeshOption()">SetNoMeshOption</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="DetailBox.html#SetNoMeshOptionHole()">SetNoMeshOptionHole</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copy3Point(Point, Point, Point, Point, Point, Point)">copy3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> sp1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> sp2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> sp3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> dp1</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> dp2</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> dp3</span>)</code>
+<div class="explanation">
+Copy the object without scaling from one location to another.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyMirror(Point, LengthVector3d)">copyMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate a copy of the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyRotate(Point, LengthVector3d, Angle, int, std::shared_ptr<mfNameMask>)">copyRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>angle</CODE> for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyScale(double, Point)">copyScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Scale a copy of the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTransform(Transformation3d)">copyTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general transformation to a copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate a copy of this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#copyTranslate(LengthVector3d, int, std::shared_ptr<mfNameMask>)">copyTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>, <b>int</b><span title="Number of copies"> n</span>, <b><a href="std__shared_ptr_mfNameMask_.html">std::shared_ptr<mfNameMask></a></b><span title="Calculates the name of the copies"> nameMask</span>)</code>
+<div class="explanation">
+Make <CODE>n</CODE> copies of the object,incrementing the <CODE>translation</CODE> vector for each copy</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#move3Point(Point, Point, Point, Point, Point, Point)">move3Point</a></b>(<b><a href="Point.html">Point</a></b><span title="Source: Anchor point"> p1</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point on x-axis"> p2</span>, <b><a href="Point.html">Point</a></b><span title="Source: Point indicating y-axis"> p3</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Anchor point"> p4</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point on x-axis"> p5</span>, <b><a href="Point.html">Point</a></b><span title="Destination: Point indicating y-axis"> p6</span>)</code>
+<div class="explanation">
+Move the object from one coordinate system to another</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveMirror(Point, LengthVector3d)">moveMirror</a></b>(<b><a href="Point.html">Point</a></b><span title="Point in mirror plane"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Mirror plane normal vector"> v1</span>)</code>
+<div class="explanation">
+Mirror the object around <CODE>p1</CODE> and <CODE>v1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveRotate(Point, LengthVector3d, Angle)">moveRotate</a></b>(<b><a href="Point.html">Point</a></b><span title="Point on rotation axis"> p1</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis vector"> p2</span>, <b><a href="Angle.html">Angle</a></b><span title="Rotation angle"> angle</span>)</code>
+<div class="explanation">
+Rotate the object around <CODE>p1</CODE> and <CODE>v1</CODE> the angle <CODE>angle</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveScale(double, Point)">moveScale</a></b>(<b>double</b><span title="Scaling factor"> s1</span>, <b><a href="Point.html">Point</a></b><span title="Scaling center"> p1</span>)</code>
+<div class="explanation">
+Move and scale the object with factor <CODE>s1</CODE> around the point <CODE>p1</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTransform(Transformation3d)">moveTransform</a></b>(<b><a href="Transformation3d.html">Transformation3d</a></b><span title="General transformation"> trans</span>)</code>
+<div class="explanation">
+Apply a general selection to the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Transformable.html#moveTranslate(LengthVector3d)">moveTranslate</a></b>(<b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Translation vector"> translation</span>)</code>
+<div class="explanation">
+Translate this object along the vector <CODE>translation</CODE></div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="oriented_bbox3d.html">oriented_bbox3d</a></b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#Box()">Box</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#Center()">Center</a></b></code> <span class="propertyStatus"> write only</span>
+<div class="explanation">
+Obsolete box Center property setter, use Hotspot instead.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#DimensionNDX()">DimensionNDX</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#DimensionNDY()">DimensionNDY</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#DimensionNDZ()">DimensionNDZ</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#DimensionPDX()">DimensionPDX</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#DimensionPDY()">DimensionPDY</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#DimensionPDZ()">DimensionPDZ</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#DimensionX()">DimensionX</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#DimensionY()">DimensionY</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#DimensionZ()">DimensionZ</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Point.html">Point</a></b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#Hotspot()">Hotspot</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#HotspotCoincidesWithCenter()">HotspotCoincidesWithCenter</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="LocalSystem.html">LocalSystem</a></b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#LocalSystem()">LocalSystem</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#MeshBeamsAsPlates()">MeshBeamsAsPlates</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#MeshConnectConvertedBeams()">MeshConnectConvertedBeams</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+When beams are converted to plates, this option tells whether the new plate elements should be connected using rigid links to the centerline of the beam at the start and end of the beam.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="MeshDensity.html">MeshDensity</a></b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#MeshDensity()">MeshDensity</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="MeshOptionHole.html">MeshOptionHole</a></b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#MeshOption()">MeshOption</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="MeshOptionHole.html">MeshOptionHole</a></b></code>
+</td>
+<td width="90%"><code><b><a href="DetailBox.html#MeshOptionHole()">MeshOptionHole</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geCONNECTED()">geCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use connected move</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ConnectionType.html">ConnectionType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Transformable.html#geUNCONNECTED()">geUNCONNECTED</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Use unconnected move</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="DetailBox(Point, Length, Length, Length, LocalSystem)"></a>
+<h3>DetailBox</h3>
+<p class="function">
+<b>DetailBox</b>(<b><a href="Point.html">Point</a></b> hotspot, <b><a href="Length.html">Length</a></b> dimensionX, <b><a href="Length.html">Length</a></b> dimensionY, <b><a href="Length.html">Length</a></b> dimensionZ, <b><a href="LocalSystem.html">LocalSystem</a></b> localSystem)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a Detail-Box from hotspot, lengths in x,y,z and local coordinate system.
+</dl>
+<hr>
+
+<a name="DetailBox(Point, Length, Length, Length)"></a>
+<h3>DetailBox</h3>
+<p class="function">
+<b>DetailBox</b>(<b><a href="Point.html">Point</a></b> hotspot, <b><a href="Length.html">Length</a></b> dimensionX, <b><a href="Length.html">Length</a></b> dimensionY, <b><a href="Length.html">Length</a></b> dimensionZ)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a Detail-Box from hotspot, lengths in x,y,z
+</dl>
+<hr>
+
+<a name="DetailBox(Point, Length, Length, Length, Length, Length, Length, LocalSystem)"></a>
+<h3>DetailBox</h3>
+<p class="function">
+<b>DetailBox</b>(<b><a href="Point.html">Point</a></b> hotspot, <b><a href="Length.html">Length</a></b> dimensionPDX, <b><a href="Length.html">Length</a></b> dimensionPDY, <b><a href="Length.html">Length</a></b> dimensionPDZ, <b><a href="Length.html">Length</a></b> dimensionNDX, <b><a href="Length.html">Length</a></b> dimensionNDY, <b><a href="Length.html">Length</a></b> dimensionNDZ, <b><a href="LocalSystem.html">LocalSystem</a></b> localSystem)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a Detail-Box from hotspot, lengths in positive and negative x,y,z and local coordinate system.
+</dl>
+<hr>
+
+<a name="DetailBox(Point, Length, Length, Length, Length, Length, Length)"></a>
+<h3>DetailBox</h3>
+<p class="function">
+<b>DetailBox</b>(<b><a href="Point.html">Point</a></b> hotspot, <b><a href="Length.html">Length</a></b> dimensionPDX, <b><a href="Length.html">Length</a></b> dimensionPDY, <b><a href="Length.html">Length</a></b> dimensionPDZ, <b><a href="Length.html">Length</a></b> dimensionNDX, <b><a href="Length.html">Length</a></b> dimensionNDY, <b><a href="Length.html">Length</a></b> dimensionNDZ)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Create a Detail-Box from hotspot, lengths in positive and negative x,y,z
+</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="SetNoMeshDensity()"></a>
+<h3>SetNoMeshDensity</h3>
+<p class="function">
+<b>&nbsp;</b> <b>SetNoMeshDensity</b>()</p>
+<p>
+<hr>
+
+<a name="SetNoMeshOption()"></a>
+<h3>SetNoMeshOption</h3>
+<p class="function">
+<b>&nbsp;</b> <b>SetNoMeshOption</b>()</p>
+<p>
+<hr>
+
+<a name="SetNoMeshOptionHole()"></a>
+<h3>SetNoMeshOptionHole</h3>
+<p class="function">
+<b>&nbsp;</b> <b>SetNoMeshOptionHole</b>()</p>
+<p>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="Box()"></a>
+<h3>Box</h3>
+<p class="function">
+<b><a href="oriented_bbox3d.html">oriented_bbox3d</a></b> <b>Box</b>()</p>
+<p>
+<a name="Center()"></a>
+<h3>Center</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>Center</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Obsolete box Center property setter, use Hotspot instead.
+</dl>
+<a name="DimensionNDX()"></a>
+<h3>DimensionNDX</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>DimensionNDX</b>()</p>
+<p>
+<a name="DimensionNDY()"></a>
+<h3>DimensionNDY</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>DimensionNDY</b>()</p>
+<p>
+<a name="DimensionNDZ()"></a>
+<h3>DimensionNDZ</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>DimensionNDZ</b>()</p>
+<p>
+<a name="DimensionPDX()"></a>
+<h3>DimensionPDX</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>DimensionPDX</b>()</p>
+<p>
+<a name="DimensionPDY()"></a>
+<h3>DimensionPDY</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>DimensionPDY</b>()</p>
+<p>
+<a name="DimensionPDZ()"></a>
+<h3>DimensionPDZ</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>DimensionPDZ</b>()</p>
+<p>
+<a name="DimensionX()"></a>
+<h3>DimensionX</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>DimensionX</b>()</p>
+<p>
+<a name="DimensionY()"></a>
+<h3>DimensionY</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>DimensionY</b>()</p>
+<p>
+<a name="DimensionZ()"></a>
+<h3>DimensionZ</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>DimensionZ</b>()</p>
+<p>
+<a name="Hotspot()"></a>
+<h3>Hotspot</h3>
+<p class="function">
+<b><a href="Point.html">Point</a></b> <b>Hotspot</b>()</p>
+<p>
+<a name="HotspotCoincidesWithCenter()"></a>
+<h3>HotspotCoincidesWithCenter</h3>
+<p class="function">
+<b>bool</b> <b>HotspotCoincidesWithCenter</b>()</p>
+<p>
+<a name="LocalSystem()"></a>
+<h3>LocalSystem</h3>
+<p class="function">
+<b><a href="LocalSystem.html">LocalSystem</a></b> <b>LocalSystem</b>()</p>
+<p>
+<a name="MeshBeamsAsPlates()"></a>
+<h3>MeshBeamsAsPlates</h3>
+<p class="function">
+<b>bool</b> <b>MeshBeamsAsPlates</b>()</p>
+<p>
+<a name="MeshConnectConvertedBeams()"></a>
+<h3>MeshConnectConvertedBeams</h3>
+<p class="function">
+<b>bool</b> <b>MeshConnectConvertedBeams</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>When beams are converted to plates, this option tells whether the new plate elements should be connected using rigid links to the centerline of the beam at the start and end of the beam.
+</dl>
+<a name="MeshDensity()"></a>
+<h3>MeshDensity</h3>
+<p class="function">
+<b><a href="MeshDensity.html">MeshDensity</a></b> <b>MeshDensity</b>()</p>
+<p>
+<a name="MeshOption()"></a>
+<h3>MeshOption</h3>
+<p class="function">
+<b><a href="MeshOptionHole.html">MeshOptionHole</a></b> <b>MeshOption</b>()</p>
+<p>
+<a name="MeshOptionHole()"></a>
+<h3>MeshOptionHole</h3>
+<p class="function">
+<b><a href="MeshOptionHole.html">MeshOptionHole</a></b> <b>MeshOptionHole</b>()</p>
+<p>
+</body>
+</html>

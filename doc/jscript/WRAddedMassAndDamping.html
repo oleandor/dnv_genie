@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: WRAddedMassAndDamping
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: WRAddedMassAndDamping
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Added mass and damping only
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Create Analysis with Deterministic seastates</td></tr><tr>  <td>     <code>Analysis1.step(2).addedMassAndDamping().calculateAddedMass(true);<br/>Analysis1.step(2).addedMassAndDamping().calculateDamping(true);<br/>Analysis1.step(2).addedMassAndDamping().includeInternalWater(true);<br/>Analysis1.step(2).addedMassAndDamping().useCm(true);<br/>     </code>		<div class="explanation">This command is scripted. Added mass and damping are calculated and written to the <br/>Loads Interface File independently of the choice of load calculation type. <br/>The default value is not to calculate added mass and damping for transfer to <br/>subsequent dynamic structural analysis. Please read the user manual GeniE Vol. 6<br/>for more information about Added mass and damping.<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="UnnamedObject.html">UnnamedObject</a>
+       |
+       +--<b>WRAddedMassAndDamping</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRAddedMassAndDamping.html#calculateAddedMass()">calculateAddedMass</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Calculate added mass</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRAddedMassAndDamping.html#calculateDamping()">calculateDamping</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Calculate damping</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRAddedMassAndDamping.html#includeInternalWater()">includeInternalWater</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Include internal water</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRAddedMassAndDamping.html#includeLongitudinalAddedMass()">includeLongitudinalAddedMass</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Include longitudinal added mass</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRAddedMassAndDamping.html#includeLongitudinalDamping()">includeLongitudinalDamping</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Include longitudinal damping</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRAddedMassAndDamping.html#includeLongitudinalHydrodynamicMass()">includeLongitudinalHydrodynamicMass</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Include longitudinal hydrodynamic mass</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="WRAddedMassAndDamping.html#useCm()">useCm</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use Cm=2.0</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="calculateAddedMass()"></a>
+<h3>calculateAddedMass</h3>
+<p class="function">
+<b>bool</b> <b>calculateAddedMass</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Calculate added mass
+</dl>
+<a name="calculateDamping()"></a>
+<h3>calculateDamping</h3>
+<p class="function">
+<b>bool</b> <b>calculateDamping</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Calculate damping
+</dl>
+<a name="includeInternalWater()"></a>
+<h3>includeInternalWater</h3>
+<p class="function">
+<b>bool</b> <b>includeInternalWater</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Include internal water
+</dl>
+<a name="includeLongitudinalAddedMass()"></a>
+<h3>includeLongitudinalAddedMass</h3>
+<p class="function">
+<b>bool</b> <b>includeLongitudinalAddedMass</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Include longitudinal added mass
+</dl>
+<a name="includeLongitudinalDamping()"></a>
+<h3>includeLongitudinalDamping</h3>
+<p class="function">
+<b>bool</b> <b>includeLongitudinalDamping</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Include longitudinal damping
+</dl>
+<a name="includeLongitudinalHydrodynamicMass()"></a>
+<h3>includeLongitudinalHydrodynamicMass</h3>
+<p class="function">
+<b>bool</b> <b>includeLongitudinalHydrodynamicMass</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Include longitudinal hydrodynamic mass
+</dl>
+<a name="useCm()"></a>
+<h3>useCm</h3>
+<p class="function">
+<b>bool</b> <b>useCm</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Use Cm=2.0
+</dl>
+</body>
+</html>

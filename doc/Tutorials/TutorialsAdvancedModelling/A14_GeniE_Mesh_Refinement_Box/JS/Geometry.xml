@@ -1,0 +1,2594 @@
+<?xml version="1.0" encoding="ASCII"?>
+  <DNV_structure_concept_protocol version="1.6">
+    <administrative>
+      <program program="GeniE" version="D7.4-09" version_date="26-Sep-2016" platform="64bit"/>
+      <session_info date="11-Oct-2016" time="15:33:15" user="landj"/>
+    </administrative>
+    <model name="refine_box">
+      <units>
+        <model_units length="m" time="s" temp_diff="delC" force="N" angle="rad" mass=""/>
+        <acis_units length="m"/>
+        <input_units>
+          <input_unit phenomenon="Angle" unit="deg"/>
+          <input_unit phenomenon="Force" unit="N"/>
+          <input_unit phenomenon="Length" unit="mm"/>
+          <input_unit phenomenon="TempDiff" unit="delC"/>
+        </input_units>
+      </units>
+      <structure_domain>
+        <properties>
+          <sections>
+            <section name="Tbar445x150x12x20" description="TYPE 42 CF Tbar T-headOnSlab">
+              <unsymmetrical_i_section h="0.445" tw="0.012" bftop="0.012001" bftop1="0.0060005" tftop="1e-006" bfbot="0.15" bfbot1="0.075" tfbot="0.02" sfy="1" sfz="1"/>
+            </section>
+            <section name="Tbar343x125x12x18" description="TYPE 42 CF Tbar T-headOnSlab">
+              <unsymmetrical_i_section h="0.343" tw="0.012" bftop="0.012001" bftop1="0.0060005" tftop="1e-006" bfbot="0.125" bfbot1="0.0625" tfbot="0.018" sfy="1" sfz="1"/>
+            </section>
+            <section name="Fbar300x18">
+              <bar_section h="0.3" b="0.018" sfy="1" sfz="1"/>
+            </section>
+            <section name="Fbar300x20">
+              <bar_section h="0.3" b="0.02" sfy="1" sfz="1"/>
+            </section>
+            <section name="Angle250x90x10x15" description="TYPE 31 R Angle RolledAngles">
+              <l_section h="0.25" b="0.09" tw="0.01" tf="0.015" sfy="1" sfz="1"/>
+            </section>
+            <section name="Angle400x100x13x18" description="TYPE 31 R Angle RolledAngles">
+              <l_section h="0.4" b="0.1" tw="0.013" tf="0.018" sfy="1" sfz="1"/>
+            </section>
+            <section name="Tbar370x150x12x20" description="TYPE 42 CF Tbar T-headOnSlab">
+              <unsymmetrical_i_section h="0.37" tw="0.012" bftop="0.012001" bftop1="0.0060005" tftop="1e-006" bfbot="0.15" bfbot1="0.075" tfbot="0.02" sfy="1" sfz="1"/>
+            </section>
+            <section name="Tbar368x125x12x18" description="TYPE 42 CF Tbar T-headOnSlab">
+              <unsymmetrical_i_section h="0.368" tw="0.012" bftop="0.012001" bftop1="0.0060005" tftop="1e-006" bfbot="0.125" bfbot1="0.0625" tfbot="0.018" sfy="1" sfz="1"/>
+            </section>
+            <section name="Fbar250x15" description="TYPE 10 xx Fbar Flatbar">
+              <bar_section h="0.25" b="0.015" sfy="1" sfz="1"/>
+            </section>
+            <section name="Angle350x100x12x17" description="TYPE 31 R Angle RolledAngles">
+              <l_section h="0.35" b="0.1" tw="0.012" tf="0.017" sfy="1" sfz="1"/>
+            </section>
+            <section name="Angle250x90x12x16" description="TYPE 31 R Angle RolledAngles">
+              <l_section h="0.25" b="0.09" tw="0.012" tf="0.016" sfy="1" sfz="1"/>
+            </section>
+            <section name="Tbar420x150x12x20" description="TYPE 42 CF Tbar T-headOnSlab">
+              <unsymmetrical_i_section h="0.42" tw="0.012" bftop="0.012001" bftop1="0.0060005" tftop="1e-006" bfbot="0.15" bfbot1="0.075" tfbot="0.02" sfy="1" sfz="1"/>
+            </section>
+            <section name="Tbar470x150x12x20" description="TYPE 42 CF Tbar T-headOnSlab">
+              <unsymmetrical_i_section h="0.47" tw="0.012" bftop="0.012001" bftop1="0.0060005" tftop="1e-006" bfbot="0.15" bfbot1="0.075" tfbot="0.02" sfy="1" sfz="1"/>
+            </section>
+            <section name="Tbar370x125x12x20" description="TYPE 42 CF Tbar T-headOnSlab">
+              <unsymmetrical_i_section h="0.37" tw="0.012" bftop="0.012001" bftop1="0.0060005" tftop="1e-006" bfbot="0.125" bfbot1="0.0625" tfbot="0.02" sfy="1" sfz="1"/>
+            </section>
+            <section name="Angle300x90x13x17" description="TYPE 31 R Angle RolledAngles">
+              <l_section h="0.3" b="0.09" tw="0.013" tf="0.017" sfy="1" sfz="1"/>
+            </section>
+            <section name="Fbar200x13_5">
+              <bar_section h="0.2" b="0.0135" sfy="1" sfz="1"/>
+            </section>
+            <section name="Fbar175x12">
+              <bar_section h="0.175" b="0.012" sfy="1" sfz="1"/>
+            </section>
+            <section name="Fbar150x12">
+              <bar_section h="0.15" b="0.012" sfy="1" sfz="1"/>
+            </section>
+            <section name="Fbar420x32">
+              <bar_section h="0.42" b="0.032" sfy="1" sfz="1"/>
+            </section>
+            <section name="Fbar350x30">
+              <bar_section h="0.35" b="0.03" sfy="1" sfz="1"/>
+            </section>
+          </sections>
+          <materials>
+            <material name="M235">
+              <isotropic_linear_material yield_stress="235000000" density="7850" youngs_modulus="2.06e+011" poissons_ratio="0.3" thermal_expansion="0" damping="0"/>
+            </material>
+            <material name="M315">
+              <isotropic_linear_material yield_stress="315000000" density="7850" youngs_modulus="2.06e+011" poissons_ratio="0.3" thermal_expansion="0" damping="0"/>
+            </material>
+            <material name="S_275">
+              <isotropic_linear_material yield_stress="275000000" density="7850" youngs_modulus="2.1e+011" poissons_ratio="0.3" thermal_expansion="1.2e-005" damping="0.03" tensile_strength="430000000"/>
+            </material>
+          </materials>
+          <thicknesses>
+            <thickness name="T18">
+              <constant_thickness th="0.018"/>
+            </thickness>
+            <thickness name="T14">
+              <constant_thickness th="0.014"/>
+            </thickness>
+            <thickness name="T16_5">
+              <constant_thickness th="0.0165"/>
+            </thickness>
+            <thickness name="T12">
+              <constant_thickness th="0.012"/>
+            </thickness>
+            <thickness name="T16">
+              <constant_thickness th="0.016"/>
+            </thickness>
+            <thickness name="T19">
+              <constant_thickness th="0.019"/>
+            </thickness>
+            <thickness name="T15">
+              <constant_thickness th="0.015"/>
+            </thickness>
+            <thickness name="T17">
+              <constant_thickness th="0.017"/>
+            </thickness>
+            <thickness name="T20">
+              <constant_thickness th="0.02"/>
+            </thickness>
+            <thickness name="T15Tck7">
+              <constant_thickness th="0.009"/>
+            </thickness>
+          </thicknesses>
+          <effective_flange/>
+          <wet_surfaces>
+            <wet_surface name="WS1"/>
+          </wet_surfaces>
+          <beam_types/>
+          <corrosion_additions/>
+          <sn_curves/>
+          <hinges>
+            <hinge name="Hinge2">
+              <connectivity_hinge coordinate_system_type="local">
+                <connectivities>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                </connectivities>
+              </connectivity_hinge>
+            </hinge>
+            <hinge name="Hinge1">
+              <connectivity_hinge coordinate_system_type="local">
+                <connectivities>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="0"/>
+                </connectivities>
+              </connectivity_hinge>
+            </hinge>
+            <hinge name="Hinge3">
+              <connectivity_hinge coordinate_system_type="local">
+                <connectivities>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                </connectivities>
+              </connectivity_hinge>
+            </hinge>
+            <hinge name="Hinge4">
+              <connectivity_hinge coordinate_system_type="local">
+                <connectivities>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                </connectivities>
+              </connectivity_hinge>
+            </hinge>
+            <hinge name="Hinge5">
+              <connectivity_hinge coordinate_system_type="local">
+                <connectivities>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="0"/>
+                  <connectivity f="1"/>
+                </connectivities>
+              </connectivity_hinge>
+            </hinge>
+            <hinge name="Hinge6">
+              <connectivity_hinge coordinate_system_type="local">
+                <connectivities>
+                  <connectivity f="1"/>
+                  <connectivity f="0"/>
+                  <connectivity f="1"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                </connectivities>
+              </connectivity_hinge>
+            </hinge>
+            <hinge name="Hinge7">
+              <connectivity_hinge coordinate_system_type="local">
+                <connectivities>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="0"/>
+                </connectivities>
+              </connectivity_hinge>
+            </hinge>
+            <hinge name="Hinge8">
+              <connectivity_hinge coordinate_system_type="local">
+                <connectivities>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                </connectivities>
+              </connectivity_hinge>
+            </hinge>
+            <hinge name="Hinge9">
+              <connectivity_hinge coordinate_system_type="local">
+                <connectivities>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                </connectivities>
+              </connectivity_hinge>
+            </hinge>
+            <hinge name="Hinge10">
+              <connectivity_hinge coordinate_system_type="local">
+                <connectivities>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                </connectivities>
+              </connectivity_hinge>
+            </hinge>
+            <hinge name="Hinge11">
+              <connectivity_hinge coordinate_system_type="local">
+                <connectivities>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="0"/>
+                  <connectivity f="1"/>
+                </connectivities>
+              </connectivity_hinge>
+            </hinge>
+            <hinge name="Hinge12">
+              <connectivity_hinge coordinate_system_type="local">
+                <connectivities>
+                  <connectivity f="1"/>
+                  <connectivity f="0"/>
+                  <connectivity f="1"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                </connectivities>
+              </connectivity_hinge>
+            </hinge>
+            <hinge name="Hinge13">
+              <connectivity_hinge coordinate_system_type="local">
+                <connectivities>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="0"/>
+                </connectivities>
+              </connectivity_hinge>
+            </hinge>
+            <hinge name="Hinge14">
+              <connectivity_hinge coordinate_system_type="local">
+                <connectivities>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                </connectivities>
+              </connectivity_hinge>
+            </hinge>
+            <hinge name="Hinge15">
+              <connectivity_hinge coordinate_system_type="local">
+                <connectivities>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                </connectivities>
+              </connectivity_hinge>
+            </hinge>
+            <hinge name="Hinge16">
+              <connectivity_hinge coordinate_system_type="local">
+                <connectivities>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                </connectivities>
+              </connectivity_hinge>
+            </hinge>
+            <hinge name="Hinge17">
+              <connectivity_hinge coordinate_system_type="local">
+                <connectivities>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="1"/>
+                  <connectivity f="0"/>
+                  <connectivity f="1"/>
+                </connectivities>
+              </connectivity_hinge>
+            </hinge>
+            <hinge name="Hinge18">
+              <connectivity_hinge coordinate_system_type="local">
+                <connectivities>
+                  <connectivity f="1"/>
+                  <connectivity f="0"/>
+                  <connectivity f="1"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                  <connectivity f="0"/>
+                </connectivities>
+              </connectivity_hinge>
+            </hinge>
+          </hinges>
+          <mass_density_factors>
+            <mass_density_factor name="MassFactor3" factor="1.177155267"/>
+            <mass_density_factor name="MassFactor12" factor="1.227466345"/>
+            <mass_density_factor name="MassFactor1" factor="1.304519197"/>
+            <mass_density_factor name="MassFactor2" factor="1.177467609"/>
+            <mass_density_factor name="MassFactor4" factor="1.177193082"/>
+            <mass_density_factor name="MassFactor5" factor="1.177292506"/>
+            <mass_density_factor name="MassFactor6" factor="1.17690382"/>
+            <mass_density_factor name="MassFactor7" factor="1.316451871"/>
+            <mass_density_factor name="MassFactor14" factor="1.195164599"/>
+            <mass_density_factor name="MassFactor10" factor="1.292069837"/>
+            <mass_density_factor name="MassFactor8" factor="1.162862853"/>
+            <mass_density_factor name="MassFactor13" factor="1.28902579"/>
+            <mass_density_factor name="MassFactor11" factor="1.26159971"/>
+            <mass_density_factor name="MassFactor9" factor="1.206747548"/>
+          </mass_density_factors>
+          <mesh_options/>
+          <permeable_properties/>
+          <thickness_corrections/>
+          <pile_characteristics/>
+          <plate_types/>
+          <reinforcements/>
+          <load_interfaces/>
+          <structure_types/>
+          <mesh_properties>
+            <mesh_densities>
+              <mesh_density name="mesh200" density="0.2" enforce_density="false"/>
+              <mesh_density name="mesh500" density="0.5" enforce_density="false"/>
+              <mesh_density name="mesh350" density="0.35" enforce_density="false"/>
+              <mesh_density name="mesh250" density="0.25" enforce_density="false"/>
+              <mesh_density name="mesh100" density="0.1" enforce_density="false"/>
+            </mesh_densities>
+            <number_of_elements_properties/>
+            <sniping_properties/>
+            <mesh_options_holes/>
+          </mesh_properties>
+          <hydro_properties>
+            <air_drag_coefficients/>
+            <morison_diameters/>
+            <buoyancy_areas/>
+            <hydro_element_refinements/>
+            <flooding_coefficients/>
+            <morison_coefficients/>
+            <marine_growths/>
+            <hydro_permeabilities/>
+            <conductor_shieldings/>
+          </hydro_properties>
+        </properties>
+        <structures>
+          <structure>
+            <flat_plate name="Pl50" thickness_ref="T16" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="0" y="0" z="1" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000071"/>
+                    <face face_ref="FACE00000072"/>
+                    <face face_ref="FACE00000073"/>
+                    <face face_ref="FACE00000079"/>
+                    <face face_ref="FACE00000080"/>
+                    <face face_ref="FACE00000083"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl2" thickness_ref="T19" material_ref="M235" mass_density_factor_ref="MassFactor4">
+              <front wet_surface_ref="WS1"/>
+              <back/>
+              <local_system>
+                <vector x="0" y="0" z="-1" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000008"/>
+                    <face face_ref="FACE00000009"/>
+                    <face face_ref="FACE00000010"/>
+                    <face face_ref="FACE00000012"/>
+                    <face face_ref="FACE00000018"/>
+                    <face face_ref="FACE00000019"/>
+                    <face face_ref="FACE00000029"/>
+                    <face face_ref="FACE00000030"/>
+                    <face face_ref="FACE00000031"/>
+                    <face face_ref="FACE00000032"/>
+                    <face face_ref="FACE00000033"/>
+                    <face face_ref="FACE00000034"/>
+                    <face face_ref="FACE00000035"/>
+                    <face face_ref="FACE00000036"/>
+                    <face face_ref="FACE00000048"/>
+                    <face face_ref="FACE00000049"/>
+                    <face face_ref="FACE00000051"/>
+                    <face face_ref="FACE00000057"/>
+                    <face face_ref="FACE00000058"/>
+                    <face face_ref="FACE00000061"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl5" thickness_ref="T16" material_ref="M235" mass_density_factor_ref="MassFactor4">
+              <front wet_surface_ref="WS1"/>
+              <back/>
+              <local_system>
+                <vector x="0" y="1" z="0" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000067"/>
+                    <face face_ref="FACE00000075"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl4" thickness_ref="T16" material_ref="M235">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="0" y="1" z="0" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000004"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl8" thickness_ref="T16" material_ref="M235" mass_density_factor_ref="MassFactor4">
+              <front wet_surface_ref="WS1"/>
+              <back/>
+              <local_system>
+                <vector x="0" y="1" z="0" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000042"/>
+                    <face face_ref="FACE00000043"/>
+                    <face face_ref="FACE00000045"/>
+                    <face face_ref="FACE00000046"/>
+                    <face face_ref="FACE00000047"/>
+                    <face face_ref="FACE00000052"/>
+                    <face face_ref="FACE00000053"/>
+                    <face face_ref="FACE00000056"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <curved_shell name="Pl11" thickness_ref="T20" material_ref="M235" mass_density_factor_ref="MassFactor4">
+              <front wet_surface_ref="WS1"/>
+              <back/>
+              <local_system>
+                <sense_flag sense="true"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000055"/>
+                    <face face_ref="FACE00000060"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </curved_shell>
+          </structure>
+          <structure>
+            <flat_plate name="Pl51" thickness_ref="T17" material_ref="M235" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="0" y="1" z="0" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000065"/>
+                    <face face_ref="FACE00000066"/>
+                    <face face_ref="FACE00000078"/>
+                    <face face_ref="FACE00000087"/>
+                    <face face_ref="FACE00000088"/>
+                    <face face_ref="FACE00000093"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl52" thickness_ref="T18" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="1.885889419e-018" y="0.6973549598" z="-0.7167259309" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000041"/>
+                    <face face_ref="FACE00000044"/>
+                    <face face_ref="FACE00000050"/>
+                    <face face_ref="FACE00000062"/>
+                    <face face_ref="FACE00000070"/>
+                    <face face_ref="FACE00000074"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl57" thickness_ref="T17" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="0" y="1" z="0" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000064"/>
+                    <face face_ref="FACE00000089"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl58" thickness_ref="T17" material_ref="M235" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="0" y="1" z="0" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000063"/>
+                    <face face_ref="FACE00000092"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl69" thickness_ref="T16" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="0" y="1" z="0" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000025"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl70" thickness_ref="T16" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="0" y="1" z="0" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000014"/>
+                    <face face_ref="FACE00000015"/>
+                    <face face_ref="FACE00000039"/>
+                    <face face_ref="FACE00000040"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <curved_shell name="Pl2253" thickness_ref="T15" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <sense_flag sense="true"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000081"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </curved_shell>
+          </structure>
+          <structure>
+            <flat_plate name="Pl1" thickness_ref="T15" material_ref="M315">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="-1" y="0" z="0" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000005"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <curved_shell name="Pl137" thickness_ref="T15" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <sense_flag sense="true"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000022"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </curved_shell>
+          </structure>
+          <structure>
+            <flat_plate name="Pl72" thickness_ref="T18" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="-1.624766269e-019" y="0.6973549598" z="-0.7167259309" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000024"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl77" thickness_ref="T18" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="-1.624766269e-019" y="0.6973549598" z="-0.7167259309" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000054"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl74" thickness_ref="T18" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="-1.624766269e-019" y="0.6973549598" z="-0.7167259309" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000059"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl76" thickness_ref="T18" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="-1.624766269e-019" y="0.6973549598" z="-0.7167259309" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000007"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl73" thickness_ref="T18" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="-1.624766269e-019" y="0.6973549598" z="-0.7167259309" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000006"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl75" thickness_ref="T18" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="-1.624766269e-019" y="0.6973549598" z="-0.7167259309" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000021"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl85" thickness_ref="T17" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="6.074978739e-049" y="-1.013989125e-030" z="-1" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000017"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl84" thickness_ref="T17" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="6.074978739e-049" y="-1.013989125e-030" z="-1" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000016"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl80" thickness_ref="T17" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="6.074978739e-049" y="-1.013989125e-030" z="-1" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000028"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl78" thickness_ref="T17" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="6.074978739e-049" y="-1.013989125e-030" z="-1" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000027"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl79" thickness_ref="T17" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="6.074978739e-049" y="-1.013989125e-030" z="-1" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000026"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl83" thickness_ref="T17" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="6.074978739e-049" y="-1.013989125e-030" z="-1" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000011"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl87" thickness_ref="T17" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="-6.584165015e-047" y="1.69073633e-029" z="-1" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000020"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl86" thickness_ref="T17" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="-6.584165015e-047" y="1.69073633e-029" z="-1" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000023"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl82" thickness_ref="T17" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="-6.584165015e-047" y="1.69073633e-029" z="-1" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000037"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl81" thickness_ref="T17" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="-6.584165015e-047" y="1.69073633e-029" z="-1" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000038"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <flat_plate name="Pl129" thickness_ref="T16" material_ref="M315" mass_density_factor_ref="MassFactor4">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="0" y="1" z="0" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000013"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <curved_shell name="Pl9" thickness_ref="T16" material_ref="M235">
+              <front/>
+              <back/>
+              <local_system>
+                <sense_flag sense="false"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000001"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </curved_shell>
+          </structure>
+          <structure>
+            <flat_plate name="Pl6" thickness_ref="T16" material_ref="M235">
+              <front/>
+              <back/>
+              <local_system>
+                <vector x="0" y="1" z="0" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000003"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <curved_shell name="Pl7" thickness_ref="T16" material_ref="M235">
+              <front/>
+              <back/>
+              <local_system>
+                <sense_flag sense="false"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000002"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </curved_shell>
+          </structure>
+          <structure>
+            <flat_plate name="Pl10" thickness_ref="T16_5" material_ref="M235" mass_density_factor_ref="MassFactor4">
+              <front wet_surface_ref="WS1"/>
+              <back/>
+              <local_system>
+                <vector x="0" y="1" z="0" dir="z"/>
+              </local_system>
+              <geometry>
+                <sheet>
+                  <sat_reference>
+                    <face face_ref="FACE00000068"/>
+                    <face face_ref="FACE00000069"/>
+                    <face face_ref="FACE00000076"/>
+                    <face face_ref="FACE00000077"/>
+                    <face face_ref="FACE00000082"/>
+                    <face face_ref="FACE00000084"/>
+                    <face face_ref="FACE00000085"/>
+                    <face face_ref="FACE00000086"/>
+                    <face face_ref="FACE00000090"/>
+                    <face face_ref="FACE00000091"/>
+                  </sat_reference>
+                </sheet>
+              </geometry>
+            </flat_plate>
+          </structure>
+          <structure>
+            <straight_beam name="Bm35">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="1" z="-1.836909531e-016" dir="y"/>
+                <vector x="0" y="1.836909531e-016" z="1" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Angle250x90x10x15" material_ref="M235" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="20.66" z="6" end="1"/>
+                        <position x="78.625" y="20.66" z="6" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000058"/>
+                        <edge edge_ref="EDGE00000062"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="-2.996148383e-017" z="-0.1631081081"/>
+                  <offset_end2 x="0" y="-2.996148383e-017" z="-0.1631081081"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm36">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="1" z="-1.836909531e-016" dir="y"/>
+                <vector x="0" y="1.836909531e-016" z="1" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Angle250x90x10x15" material_ref="M235" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="19.83" z="6" end="1"/>
+                        <position x="78.625" y="19.83" z="6" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000057"/>
+                        <edge edge_ref="EDGE00000061"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="-2.996148383e-017" z="-0.1631081081"/>
+                  <offset_end2 x="0" y="-2.996148383e-017" z="-0.1631081081"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm37">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="0" z="1" dir="y"/>
+                <vector x="0" y="-1" z="0" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Angle250x90x12x16" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="15.3" z="0.8" end="1"/>
+                        <position x="78.625" y="15.3" z="0.8" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000013"/>
+                        <edge edge_ref="EDGE00000020"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="0.1593728814" z="0"/>
+                  <offset_end2 x="0" y="0.1593728814" z="0"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm38">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="0" z="1" dir="y"/>
+                <vector x="0" y="-1" z="0" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Angle250x90x12x16" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="15.3" z="1.6" end="1"/>
+                        <position x="78.625" y="15.3" z="1.6" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000014"/>
+                        <edge edge_ref="EDGE00000030"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="0.1593728814" z="0"/>
+                  <offset_end2 x="0" y="0.1593728814" z="0"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm42">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="1" z="-1.836909531e-016" dir="y"/>
+                <vector x="0" y="1.836909531e-016" z="1" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar420x150x12x20" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="11.9" z="2.4" end="1"/>
+                        <position x="78.625" y="11.9" z="2.4" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000011"/>
+                        <edge edge_ref="EDGE00000022"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="-5.365420823e-017" z="-0.2920895522"/>
+                  <offset_end2 x="0" y="-5.365420823e-017" z="-0.2920895522"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm43">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="1" z="-1.836909531e-016" dir="y"/>
+                <vector x="0" y="1.836909531e-016" z="1" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar420x150x12x20" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="12.75" z="2.4" end="1"/>
+                        <position x="78.625" y="12.75" z="2.4" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000015"/>
+                        <edge edge_ref="EDGE00000021"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="-5.365420823e-017" z="-0.2920895522"/>
+                  <offset_end2 x="0" y="-5.365420823e-017" z="-0.2920895522"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm44">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="1" z="-1.836909531e-016" dir="y"/>
+                <vector x="0" y="1.836909531e-016" z="1" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar420x150x12x20" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="13.6" z="2.4" end="1"/>
+                        <position x="78.625" y="13.6" z="2.4" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000016"/>
+                        <edge edge_ref="EDGE00000023"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="-5.365420823e-017" z="-0.2920895522"/>
+                  <offset_end2 x="0" y="-5.365420823e-017" z="-0.2920895522"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm45">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="1" z="-1.836909531e-016" dir="y"/>
+                <vector x="0" y="1.836909531e-016" z="1" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar420x150x12x20" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="14.45" z="2.4" end="1"/>
+                        <position x="78.625" y="14.45" z="2.4" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000019"/>
+                        <edge edge_ref="EDGE00000029"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="-5.365420823e-017" z="-0.2920895522"/>
+                  <offset_end2 x="0" y="-5.365420823e-017" z="-0.2920895522"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm46">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="0.7167259357" z="0.6973549548" dir="y"/>
+                <vector x="0" y="-0.6973549548" z="0.7167259357" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar470x150x12x20" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="15.9163843" z="2.999725265" end="1"/>
+                        <position x="78.625" y="15.9163843" z="2.999725265" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000004"/>
+                        <edge edge_ref="EDGE00000006"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="0.2232020129" z="-0.229402072"/>
+                  <offset_end2 x="0" y="0.2232020129" z="-0.229402072"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm47">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="0.7167259357" z="0.6973549548" dir="y"/>
+                <vector x="0" y="-0.6973549548" z="0.7167259357" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar470x150x12x20" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="16.5327686" z="3.599450531" end="1"/>
+                        <position x="78.625" y="16.5327686" z="3.599450531" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000003"/>
+                        <edge edge_ref="EDGE00000005"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="0.2232020129" z="-0.229402072"/>
+                  <offset_end2 x="0" y="0.2232020129" z="-0.229402072"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm48">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="0.7167259357" z="0.6973549548" dir="y"/>
+                <vector x="0" y="-0.6973549548" z="0.7167259357" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar470x150x12x20" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="17.1491529" z="4.199175796" end="1"/>
+                        <position x="78.625" y="17.1491529" z="4.199175796" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000044"/>
+                        <edge edge_ref="EDGE00000050"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="0.2232020129" z="-0.229402072"/>
+                  <offset_end2 x="0" y="0.2232020129" z="-0.229402072"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm49">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="0.7167259357" z="0.6973549548" dir="y"/>
+                <vector x="0" y="-0.6973549548" z="0.7167259357" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar470x150x12x20" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="17.7655372" z="4.798901062" end="1"/>
+                        <position x="78.625" y="17.7655372" z="4.798901062" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000032"/>
+                        <edge edge_ref="EDGE00000038"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="0.2232020129" z="-0.229402072"/>
+                  <offset_end2 x="0" y="0.2232020129" z="-0.229402072"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm50">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="0.7167259357" z="0.6973549548" dir="y"/>
+                <vector x="0" y="-0.6973549548" z="0.7167259357" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar470x150x12x20" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="18.3819215" z="5.398626327" end="1"/>
+                        <position x="78.625" y="18.3819215" z="5.398626327" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000031"/>
+                        <edge edge_ref="EDGE00000037"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="0.2232020129" z="-0.229402072"/>
+                  <offset_end2 x="0" y="0.2232020129" z="-0.229402072"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm51">
+              <local_system>
+                <vector x="-1" y="0" z="0" dir="x"/>
+                <vector x="0" y="0" z="-1" dir="y"/>
+                <vector x="0" y="-1" z="0" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar370x150x12x20" material_ref="M235" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="19" z="9.4" end="1"/>
+                        <position x="78.625" y="19" z="9.4" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000051"/>
+                        <edge edge_ref="EDGE00000068"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="0.2636290322" z="0"/>
+                  <offset_end2 x="0" y="0.2636290322" z="0"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm52">
+              <local_system>
+                <vector x="-1" y="0" z="0" dir="x"/>
+                <vector x="0" y="0" z="-1" dir="y"/>
+                <vector x="0" y="-1" z="0" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar370x150x12x20" material_ref="M235" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="19" z="6.85" end="1"/>
+                        <position x="78.625" y="19" z="6.85" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000052"/>
+                        <edge edge_ref="EDGE00000070"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="0.2636290322" z="0"/>
+                  <offset_end2 x="0" y="0.2636290322" z="0"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm53">
+              <local_system>
+                <vector x="-1" y="0" z="0" dir="x"/>
+                <vector x="0" y="0" z="-1" dir="y"/>
+                <vector x="0" y="-1" z="0" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar370x150x12x20" material_ref="M235" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="19" z="7.7" end="1"/>
+                        <position x="78.625" y="19" z="7.7" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000053"/>
+                        <edge edge_ref="EDGE00000069"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="0.2636290322" z="0"/>
+                  <offset_end2 x="0" y="0.2636290322" z="0"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm54">
+              <local_system>
+                <vector x="-1" y="0" z="0" dir="x"/>
+                <vector x="0" y="0" z="-1" dir="y"/>
+                <vector x="0" y="-1" z="0" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar370x150x12x20" material_ref="M235" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="19" z="8.55" end="1"/>
+                        <position x="78.625" y="19" z="8.55" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000054"/>
+                        <edge edge_ref="EDGE00000067"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="0.2636290322" z="0"/>
+                  <offset_end2 x="0" y="0.2636290322" z="0"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm57">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="-1" z="6.123031769e-017" dir="y"/>
+                <vector x="0" y="-6.123031769e-017" z="-1" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar445x150x12x20" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="13.6" z="0" end="1"/>
+                        <position x="78.625" y="13.6" z="0" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000018"/>
+                        <edge edge_ref="EDGE00000025"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="1.874462657e-017" z="0.3061330935"/>
+                  <offset_end2 x="0" y="1.874462657e-017" z="0.3061330935"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm59">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="-1" z="6.123031769e-017" dir="y"/>
+                <vector x="0" y="-6.123031769e-017" z="-1" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar445x150x12x20" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="11.9" z="0" end="1"/>
+                        <position x="78.625" y="11.9" z="0" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000012"/>
+                        <edge edge_ref="EDGE00000027"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="1.874462657e-017" z="0.3061330935"/>
+                  <offset_end2 x="0" y="1.874462657e-017" z="0.3061330935"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm60">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="-1" z="6.123031769e-017" dir="y"/>
+                <vector x="0" y="-6.123031769e-017" z="-1" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar445x150x12x20" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="16.1" z="0" end="1"/>
+                        <position x="78.625" y="16.1" z="0" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000007"/>
+                        <edge edge_ref="EDGE00000010"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="1.874462657e-017" z="0.3061330935"/>
+                  <offset_end2 x="0" y="1.874462657e-017" z="0.3061330935"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm61">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="-1" z="6.123031769e-017" dir="y"/>
+                <vector x="0" y="-6.123031769e-017" z="-1" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar445x150x12x20" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="12.75" z="0" end="1"/>
+                        <position x="78.625" y="12.75" z="0" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000017"/>
+                        <edge edge_ref="EDGE00000026"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="1.874462657e-017" z="0.3061330935"/>
+                  <offset_end2 x="0" y="1.874462657e-017" z="0.3061330935"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm62">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="-1" z="6.123031769e-017" dir="y"/>
+                <vector x="0" y="-6.123031769e-017" z="-1" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar445x150x12x20" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="17.7" z="0" end="1"/>
+                        <position x="78.625" y="17.7" z="0" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000043"/>
+                        <edge edge_ref="EDGE00000049"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="1.874462657e-017" z="0.3061330935"/>
+                  <offset_end2 x="0" y="1.874462657e-017" z="0.3061330935"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm63">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="-1" z="6.123031769e-017" dir="y"/>
+                <vector x="0" y="-6.123031769e-017" z="-1" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar445x150x12x20" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="14.45" z="0" end="1"/>
+                        <position x="78.625" y="14.45" z="0" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000024"/>
+                        <edge edge_ref="EDGE00000028"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="1.874462657e-017" z="0.3061330935"/>
+                  <offset_end2 x="0" y="1.874462657e-017" z="0.3061330935"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm64">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="-1" z="6.123031769e-017" dir="y"/>
+                <vector x="0" y="-6.123031769e-017" z="-1" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar445x150x12x20" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="16.9" z="0" end="1"/>
+                        <position x="78.625" y="16.9" z="0" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000008"/>
+                        <edge edge_ref="EDGE00000009"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="1.874462657e-017" z="0.3061330935"/>
+                  <offset_end2 x="0" y="1.874462657e-017" z="0.3061330935"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm65">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="-1" z="6.123031769e-017" dir="y"/>
+                <vector x="0" y="-6.123031769e-017" z="-1" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar445x150x12x20" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="18.5" z="0" end="1"/>
+                        <position x="78.625" y="18.5" z="0" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000041"/>
+                        <edge edge_ref="EDGE00000048"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="1.874462657e-017" z="0.3061330935"/>
+                  <offset_end2 x="0" y="1.874462657e-017" z="0.3061330935"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm66">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="-1" z="6.123031769e-017" dir="y"/>
+                <vector x="0" y="-6.123031769e-017" z="-1" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar445x150x12x20" material_ref="M315" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="19.3" z="0" end="1"/>
+                        <position x="78.625" y="19.3" z="0" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000042"/>
+                        <edge edge_ref="EDGE00000047"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="1.874462657e-017" z="0.3061330935"/>
+                  <offset_end2 x="0" y="1.874462657e-017" z="0.3061330935"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm67">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="-1.224606354e-016" z="-1" dir="y"/>
+                <vector x="0" y="1" z="-1.224606354e-016" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar420x150x12x20" material_ref="M235" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="21.5" z="2.25" end="1"/>
+                        <position x="78.625" y="21.5" z="2.25" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000001"/>
+                        <edge edge_ref="EDGE00000002"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="-0.2920895522" z="3.576947215e-017"/>
+                  <offset_end2 x="0" y="-0.2920895522" z="3.576947215e-017"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm68">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="-1.224606354e-016" z="-1" dir="y"/>
+                <vector x="0" y="1" z="-1.224606354e-016" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar420x150x12x20" material_ref="M235" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="21.5" z="3" end="1"/>
+                        <position x="78.625" y="21.5" z="3" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000039"/>
+                        <edge edge_ref="EDGE00000046"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="-0.2920895522" z="3.576947215e-017"/>
+                  <offset_end2 x="0" y="-0.2920895522" z="3.576947215e-017"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm69">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="-1.224606354e-016" z="-1" dir="y"/>
+                <vector x="0" y="1" z="-1.224606354e-016" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar420x150x12x20" material_ref="M235" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="21.5" z="3.75" end="1"/>
+                        <position x="78.625" y="21.5" z="3.75" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000040"/>
+                        <edge edge_ref="EDGE00000045"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="-0.2920895522" z="3.576947215e-017"/>
+                  <offset_end2 x="0" y="-0.2920895522" z="3.576947215e-017"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm70">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="-1.224606354e-016" z="-1" dir="y"/>
+                <vector x="0" y="1" z="-1.224606354e-016" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar420x150x12x20" material_ref="M235" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="21.5" z="4.5" end="1"/>
+                        <position x="78.625" y="21.5" z="4.5" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000033"/>
+                        <edge edge_ref="EDGE00000036"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="-0.2920895522" z="3.576947215e-017"/>
+                  <offset_end2 x="0" y="-0.2920895522" z="3.576947215e-017"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm71">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="-1.224606354e-016" z="-1" dir="y"/>
+                <vector x="0" y="1" z="-1.224606354e-016" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar420x150x12x20" material_ref="M235" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="21.5" z="5.25" end="1"/>
+                        <position x="78.625" y="21.5" z="5.25" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000034"/>
+                        <edge edge_ref="EDGE00000035"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="-0.2920895522" z="3.576947215e-017"/>
+                  <offset_end2 x="0" y="-0.2920895522" z="3.576947215e-017"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm72">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="-1.224606354e-016" z="-1" dir="y"/>
+                <vector x="0" y="1" z="-1.224606354e-016" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar370x150x12x20" material_ref="M235" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="21.5" z="6.85" end="1"/>
+                        <position x="78.625" y="21.5" z="6.85" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000055"/>
+                        <edge edge_ref="EDGE00000065"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="-0.2636290322" z="3.228417879e-017"/>
+                  <offset_end2 x="0" y="-0.2636290322" z="3.228417879e-017"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm73">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="-1.224606354e-016" z="-1" dir="y"/>
+                <vector x="0" y="1" z="-1.224606354e-016" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar370x150x12x20" material_ref="M235" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="21.5" z="7.7" end="1"/>
+                        <position x="78.625" y="21.5" z="7.7" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000056"/>
+                        <edge edge_ref="EDGE00000066"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="-0.2636290322" z="3.228417879e-017"/>
+                  <offset_end2 x="0" y="-0.2636290322" z="3.228417879e-017"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm74">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="-1.224606354e-016" z="-1" dir="y"/>
+                <vector x="0" y="1" z="-1.224606354e-016" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar370x150x12x20" material_ref="M235" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="21.5" z="8.55" end="1"/>
+                        <position x="78.625" y="21.5" z="8.55" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000060"/>
+                        <edge edge_ref="EDGE00000064"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="-0.2636290322" z="3.228417879e-017"/>
+                  <offset_end2 x="0" y="-0.2636290322" z="3.228417879e-017"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+          <structure>
+            <straight_beam name="Bm75">
+              <local_system>
+                <vector x="1" y="0" z="0" dir="x"/>
+                <vector x="0" y="-1.224606354e-016" z="-1" dir="y"/>
+                <vector x="0" y="1" z="-1.224606354e-016" dir="z"/>
+              </local_system>
+              <segments>
+                <straight_segment index="1" section_ref="Tbar370x150x12x20" material_ref="M235" mass_density_factor_ref="MassFactor4">
+                  <geometry>
+                    <wire>
+                      <guide>
+                        <position x="74" y="21.5" z="9.4" end="1"/>
+                        <position x="78.625" y="21.5" z="9.4" end="2"/>
+                      </guide>
+                      <sat_reference>
+                        <edge edge_ref="EDGE00000059"/>
+                        <edge edge_ref="EDGE00000063"/>
+                      </sat_reference>
+                    </wire>
+                  </geometry>
+                </straight_segment>
+              </segments>
+              <curve_offset>
+                <linear_varying_curve_offset use_local_system="false">
+                  <offset_end1 x="0" y="-0.2636290322" z="3.228417879e-017"/>
+                  <offset_end2 x="0" y="-0.2636290322" z="3.228417879e-017"/>
+                </linear_varying_curve_offset>
+              </curve_offset>
+              <end1/>
+              <end2/>
+              <end1/>
+              <end2/>
+            </straight_beam>
+          </structure>
+        </structures>
+        <manual_overlap_managers/>
+        <feature_concepts/>
+        <sets>
+          <set name="concept_all">
+            <concepts>
+              <concept concept_ref="Pl50"/>
+              <concept concept_ref="Pl2"/>
+              <concept concept_ref="Pl5"/>
+              <concept concept_ref="Pl4"/>
+              <concept concept_ref="Pl8"/>
+              <concept concept_ref="Pl11"/>
+              <concept concept_ref="Pl51"/>
+              <concept concept_ref="Pl52"/>
+              <concept concept_ref="Pl57"/>
+              <concept concept_ref="Pl58"/>
+              <concept concept_ref="Pl69"/>
+              <concept concept_ref="Pl70"/>
+              <concept concept_ref="Pl2253"/>
+              <concept concept_ref="Pl1"/>
+              <concept concept_ref="Pl137"/>
+              <concept concept_ref="Pl72"/>
+              <concept concept_ref="Pl77"/>
+              <concept concept_ref="Pl74"/>
+              <concept concept_ref="Pl76"/>
+              <concept concept_ref="Pl73"/>
+              <concept concept_ref="Pl75"/>
+              <concept concept_ref="Pl85"/>
+              <concept concept_ref="Pl84"/>
+              <concept concept_ref="Pl80"/>
+              <concept concept_ref="Pl78"/>
+              <concept concept_ref="Pl79"/>
+              <concept concept_ref="Pl83"/>
+              <concept concept_ref="Pl87"/>
+              <concept concept_ref="Pl86"/>
+              <concept concept_ref="Pl82"/>
+              <concept concept_ref="Pl81"/>
+              <concept concept_ref="Pl129"/>
+              <concept concept_ref="Pl9"/>
+              <concept concept_ref="Pl6"/>
+              <concept concept_ref="Pl7"/>
+              <concept concept_ref="Pl10"/>
+              <concept concept_ref="Bm35"/>
+              <concept concept_ref="Bm36"/>
+              <concept concept_ref="Bm37"/>
+              <concept concept_ref="Bm38"/>
+              <concept concept_ref="Bm42"/>
+              <concept concept_ref="Bm43"/>
+              <concept concept_ref="Bm44"/>
+              <concept concept_ref="Bm45"/>
+              <concept concept_ref="Bm46"/>
+              <concept concept_ref="Bm47"/>
+              <concept concept_ref="Bm48"/>
+              <concept concept_ref="Bm49"/>
+              <concept concept_ref="Bm50"/>
+              <concept concept_ref="Bm51"/>
+              <concept concept_ref="Bm52"/>
+              <concept concept_ref="Bm53"/>
+              <concept concept_ref="Bm54"/>
+              <concept concept_ref="Bm57"/>
+              <concept concept_ref="Bm59"/>
+              <concept concept_ref="Bm60"/>
+              <concept concept_ref="Bm61"/>
+              <concept concept_ref="Bm62"/>
+              <concept concept_ref="Bm63"/>
+              <concept concept_ref="Bm64"/>
+              <concept concept_ref="Bm65"/>
+              <concept concept_ref="Bm66"/>
+              <concept concept_ref="Bm67"/>
+              <concept concept_ref="Bm68"/>
+              <concept concept_ref="Bm69"/>
+              <concept concept_ref="Bm70"/>
+              <concept concept_ref="Bm71"/>
+              <concept concept_ref="Bm72"/>
+              <concept concept_ref="Bm73"/>
+              <concept concept_ref="Bm74"/>
+              <concept concept_ref="Bm75"/>
+            </concepts>
+            <guides>
+              <guide guide_ref="Curve1"/>
+            </guides>
+          </set>
+          <set name="trans_plate">
+            <concepts>
+              <concept concept_ref="Pl2253"/>
+              <concept concept_ref="Pl1"/>
+              <concept concept_ref="Pl137"/>
+            </concepts>
+          </set>
+        </sets>
+        <geometry>
+          <sat_embedded encoding="base64" compression="zip" tag_name="dnvscp">
+            <![CDATA[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]]>
+          </sat_embedded>
+        </geometry>
+      </structure_domain>
+      <utilities>
+        <guide_geometry>
+          <guide_curves>
+            <guide_curve name="Curve1">
+              <nurbs_curve>
+                <parameters>
+                  <parameter f="0"/>
+                  <parameter f="1"/>
+                </parameters>
+                <curve>
+                  <sat_embedded encoding="base64">
+                    <![CDATA[MjAwMCAwIDEgMCAgICAgICAgICAgDQoxOCBTRVNBTSAtIGdtR2VvbWV0cnkgMTIgQUNJUyAyNS4wIE5UIDI0IFR1ZSBPY3QgMTEgMTU6MzM6MTUgMjAxNiANCjEwMDAgOS45OTk5OTk5OTk5OTk5OTk1ZS0wMDcgMWUtMDEwIA0KLTAgYm9keSAkLTEgLTEgLTEgJC0xICQxICQtMSAkLTEgVCA3Ni41IDE3LjQ5MTg0MDYwNDAyODA4MSAyIDc2LjUwMDAwMDAwMDAwMDEyOCAyMC4zOTk5OTk5OTk5OTk5OTkgNC45OTUxMjY5MzgyNTA2MTk0ICMNCi0xIGx1bXAgJC0xIC0xIC0xICQtMSAkLTEgJDIgJDAgVCA3Ni41IDE3LjQ5MTg0MDYwNDAyODA4MSAyIDc2LjUwMDAwMDAwMDAwMDEyOCAyMC4zOTk5OTk5OTk5OTk5OTkgNC45OTUxMjY5MzgyNTA2MTk0ICMNCi0yIHNoZWxsICQtMSAtMSAtMSAkLTEgJC0xICQtMSAkLTEgJDMgJDEgVCA3Ni41IDE3LjQ5MTg0MDYwNDAyODA4MSAyIDc2LjUwMDAwMDAwMDAwMDEyOCAyMC4zOTk5OTk5OTk5OTk5OTkgNC45OTUxMjY5MzgyNTA2MTk0ICMNCi0zIHdpcmUgJC0xIC0xIC0xICQtMSAkLTEgJDQgJDIgJC0xIG91dCBUIDc2LjUgMTcuNDkxODQwNjA0MDI4MDgxIDIgNzYuNTAwMDAwMDAwMDAwMTI4IDIwLjM5OTk5OTk5OTk5OTk5OSA0Ljk5NTEyNjkzODI1MDYxOTQgIw0KLTQgY29lZGdlICQtMSAtMSAtMSAkLTEgJDQgJDQgJC0xICQ1IGZvcndhcmQgJDMgJC0xICMNCi01IGVkZ2UgJC0xIC0xIC0xICQtMSAkNiAwICQ2IDEwLjY3ODQ1NjI3MDM3MDgyNyAkNCAkNyBmb3J3YXJkIEA3IHVua25vd24gVCA3Ni41IDE3LjQ5MTg0MDYwNDAyODA4MSAyIDc2LjUwMDAwMDAwMDAwMDEyOCAyMC4zOTk5OTk5OTk5OTk5OTkgNC45OTUxMjY5MzgyNTA2MTk0ICMNCi02IHZlcnRleCAkLTEgLTEgLTEgJC0xICQ1ICQ4ICMNCi03IGludGN1cnZlLWN1cnZlICQtMSAtMSAtMSAkLTEgZm9yd2FyZCB7IGV4YWN0Y3VyIGZ1bGwgbnVyYnMgMiBjbG9zZWQgOSANCgkwIDIgMS41NzA3OTYzMjY3OTQ4OTY2IDIgMi45NDA0NTcxODEwMTYyNDIzIDIgNC4xMTE3MDU1MzY1NDE2OTYxIDIgNS4yODI5NTM4OTc4MzU3MTk2IDIgDQoJNy4xNDQyNTYwMTIxNzk2OTIzIDIgOC4zMjkyMDIxNDM5NjIzMDAzIDIgOS41MTQxNDgyNzU3NDQ5MDgzIDIgMTAuNjc4NDU2MjcwMzcwODI3IDIgDQoJNzYuNSAxOS41OTk5OTk5OTk5OTk5OTggMiAxIA0KCTc2LjUwMDAwMDAwMDAwMDAxNCAyMC4zOTk5OTk5OTk5OTk5OTkgMiAwLjcwNzEwNjc4MTE4NjU0MTI0IA0KCTc2LjUwMDAwMDAwMDAwMDAyOCAyMC4zOTk5OTk5OTk5OTk5OTkgMi43OTk5OTk5OTk5OTk5OTk4IDEgDQoJNzYuNTAwMDAwMDAwMDAwMDI4IDIwLjM5OTk5OTk5OTk5OTk5OSAzLjQ4NDgzMDQyNzExMDY3MjcgMSANCgk3Ni41MDAwMDAwMDAwMDAwMjggMjAuMzk5OTk5OTk5OTk5OTk5IDQuMTY5NjYwODU0MjIxMzQ1NiAxIA0KCTc2LjUwMDAwMDAwMDAwMDAyOCAyMC4zOTk5OTk5OTk5OTk5OTkgNC42MzM5MjY0NzA3Njg4Mzk3IDAuODMzMzY3MjUyOTI4MTQ5OTUgDQoJNzYuNTAwMDAwMDAwMDAwMDE0IDE5Ljk3MjMwMTM2OTU1NDIxNiA0LjgxNDUyNjcwMzk0NDI5MTIgMSANCgk3Ni41IDE5LjU0NDYwMjczNjQzMDI4NSA0Ljk5NTEyNjkzODI1MDYxOTQgMC44MzMzNjcyNTEzMzM5NDU0IA0KCTc2LjUwMDAwMDAwMDAwMDAyOCAxOS4yMTE4NTE1MjgxMzc1OSA0LjY3MTM2OTAwNTg1NzcxMTEgMSANCgk3Ni41MDAwMDAwMDAwMDAwMjggMTguNTQ0ODI5NzgyODM0NDU1IDQuMDIyMzc0ODc1MjkyNTAwOCAxIA0KCTc2LjUwMDAwMDAwMDAwMDAyOCAxNy44Nzc4MDgwMzc1MzEzMiAzLjM3MzM4MDc0NDcyNzI4NjYgMSANCgk3Ni41MDAwMDAwMDAwMDAwMjggMTcuNDkxODQwNjA0MDI4MDgxIDIuOTk3ODQ0ODYzNDgwODk1OCAwLjgyOTU2MjIyMTk5NTU3MzI4IA0KCTc2LjUwMDAwMDAwMDAwMDAyOCAxNy42OTQ1MDg5NjU5NzYzMTEgMi40OTg5MjI0MzE3NDA0NDgxIDEgDQoJNzYuNTAwMDAwMDAwMDAwMDI4IDE3Ljg5NzE3NzMyNzkyNDU0MiAyIDAuODI5NTYyMjIxOTk1NTU5MDcgDQoJNzYuNTAwMDAwMDAwMDAwMTI4IDE4LjQzNTY5MjAwNTM3NDA3OSAyIDEgDQoJNzYuNTAwMDAwMDAwMDAwMTE0IDE5LjAxNzg0NjAwMjY4NzAzNyAyIDEgDQoJNzYuNTAwMDAwMDAwMDAwMDg1IDE5LjU5OTk5OTk5OTk5OTk5OCAyIDEgDQoJMCANCgludWxsX3N1cmZhY2UgDQoJbnVsbF9zdXJmYWNlIA0KCW51bGxicyANCgludWxsYnMgDQoJLTEgDQoJLTEgDQoJSSBJIA0KCTAgDQoJNSAxLjU3MDc5NjMyNjc5NDg5NjYgMi45NDA0NTcxODEwMTYyNDIzIDUuMjgyOTUzODk3ODM1NzE5NiA3LjE0NDI1NjAxMjE3OTY5MjMgOS41MTQxNDgyNzU3NDQ5MDgzIA0KCTAgDQoJDQoJLTEgDQoJbm9uZSBGIEYgMSBGIDAgfSBJIEkgIw0KLTggcG9pbnQgJC0xIC0xIC0xICQtMSA3Ni41IDE5LjU5OTk5OTk5OTk5OTk5OCAyICMNCkVuZC1vZi1BQ0lTLWRhdGEg]]>
+                  </sat_embedded>
+                </curve>
+              </nurbs_curve>
+            </guide_curve>
+          </guide_curves>
+          <guide_profiles>
+            <guide_profile name="hole_600x1400r300">
+              <rounded_rectangular_profile height="1.4" width="0.6" radius="0.3"/>
+            </guide_profile>
+            <guide_profile name="Dummy5">
+              <rounded_rectangular_profile height="1.4" width="0.6" radius="0.3"/>
+            </guide_profile>
+          </guide_profiles>
+          <transformations>
+            <transformation name="trans">
+              <rotation_matrix>
+                <m_ij m="1"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="1"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="1"/>
+                <m_ij m="0"/>
+                <m_ij m="78.625"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="1"/>
+              </rotation_matrix>
+            </transformation>
+            <transformation name="centre">
+              <rotation_matrix>
+                <m_ij m="1"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="1"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="1"/>
+                <m_ij m="0"/>
+                <m_ij m="-82875"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="1"/>
+              </rotation_matrix>
+            </transformation>
+            <transformation name="Dummy6">
+              <rotation_matrix>
+                <m_ij m="1"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="1"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="1"/>
+                <m_ij m="0"/>
+                <m_ij m="78.625"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="1"/>
+              </rotation_matrix>
+            </transformation>
+            <transformation name="Dummy7">
+              <rotation_matrix>
+                <m_ij m="1"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="1"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="1"/>
+                <m_ij m="0"/>
+                <m_ij m="-82875"/>
+                <m_ij m="0"/>
+                <m_ij m="0"/>
+                <m_ij m="1"/>
+              </rotation_matrix>
+            </transformation>
+          </transformations>
+        </guide_geometry>
+      </utilities>
+      <rules>
+        <meshing basic_lc_factor="1" analysis_folders="true" use_uniformized_face_parameterization="false" longitudinal_mass_on_nonstructural_elements="true">
+          <general>
+            <fem_options element_type="2nd_order" super_element_type="1" super_element_type_top="1"/>
+            <model_topology_performed_before_meshing auto_simply_topology="true" auto_split_periodic_geometry="false" repair_split_topology="false"/>
+            <element_type_preferences>
+              <prefer_rectangular_mesh flag="true"/>
+              <allow_triangular_elements flag="false"/>
+              <prefer_point_mass_as_node_mass flag="true"/>
+              <use_drilling_elements flag="false"/>
+              <use_eccentric_hinges flag="false"/>
+            </element_type_preferences>
+            <idealizations eliminate_internal_edges="false" eliminate_internal_vertices="true"/>
+            <other_preferences automate_fem_load_case_numbering="combinations_automatic" use_cocentricbeams="false" ignore_eccentricities="false" scantlings="gross_tickness">
+              <include_unused_properties flag="false"/>
+              <mesh_density_rounded flag="true"/>
+            </other_preferences>
+            <naming_preferences>
+              <use_long_loadcase_names flag="false"/>
+              <use_long_set_names flag="false"/>
+              <use_long_property_names flag="false"/>
+            </naming_preferences>
+            <face_mesher face_mesh_strategy="advancing_front_quad_mesher"/>
+            <edge_mesher edge_mesh_strategy="uniform_distribution"/>
+          </general>
+          <min_max_angle>
+            <min_angle>
+              <split active="true" value="0.2617993878"/>
+              <error active="false" value="0.01745329252"/>
+            </min_angle>
+            <max_angle>
+              <split active="true" value="2.879793266"/>
+              <error active="true" value="3.124139361"/>
+            </max_angle>
+          </min_max_angle>
+          <jacobi>
+            <max_relative_jacobi>
+              <split active="true" value="5"/>
+              <error active="false" value="10"/>
+            </max_relative_jacobi>
+            <min_normalized_jacobi>
+              <split active="true" value="0.2"/>
+              <error active="false" value="0"/>
+            </min_normalized_jacobi>
+          </jacobi>
+          <eliminate_short_edges>
+            <absolute value="0.015"/>
+          </eliminate_short_edges>
+          <chord_height>
+            <adjust_curved_edges value="0.2" active="false"/>
+          </chord_height>
+          <max_twist_angle>
+            <split active="false" value="0.1745329252"/>
+            <error active="false" value="0.5235987756"/>
+          </max_twist_angle>
+          <adjust_number_of_elements flag="true"/>
+          <write_loads_seperate flag="true"/>
+          <min_max_density_ratio>
+            <min_max_density_ratio_value value="0.1" active="false"/>
+          </min_max_density_ratio>
+        </meshing>
+        <set_rules use_compact_scripting="true"/>
+        <imported_file_history/>
+        <tolerances use_tolerant_modelling="true" angle="0.01745329252" point="0.01"/>
+        <geometry_rules guide_curve_topology_snapping="true" beam_topology_snapping="true" creation_grouping="creation_grouping_off"/>
+        <joint_creation_rules auto_generate="false" selection_aware="false">
+          <exclusion_rules>
+            <exclusion_rule exclude="tb_free" in_use="true"/>
+            <exclusion_rule exclude="tb_int_pure" in_use="true"/>
+            <exclusion_rule exclude="tb_int_all" in_use="false"/>
+            <exclusion_rule exclude="eb_free" in_use="true"/>
+            <exclusion_rule exclude="eb_int_aligned" in_use="true"/>
+            <exclusion_rule exclude="eb_int_all" in_use="false"/>
+          </exclusion_rules>
+        </joint_creation_rules>
+        <connected_move_rules default_connected="false" use_geometric_points="false" rearrange_x_joints="false"/>
+        <tubular_joint_rules copy_reinforcement_on_copy="false">
+          <can default_can_fac="0.25" default_can_min="0.3" chord_alignment_tolerance="0.0872664626"/>
+          <stub default_stub_fac="1" default_stub_min="0.6"/>
+          <gap min_gap="0.0508" gap_tolerance="0.001" plane_tolerance="0.01745329252" brace_angle_move_limit="0.1745329252" iterations="2" flush_braces="false" gap_method="planewise"/>
+          <cone cone_angle="0.1651486774"/>
+        </tubular_joint_rules>
+        <beam_creation_rules/>
+        <transformation_rules copy_transformer_method="use_individual_object_transformer"/>
+      </rules>
+      <equipment_domain>
+        <equipment_concepts/>
+      </equipment_domain>
+      <evaluators>
+        <slicer_concepts/>
+      </evaluators>
+      <environment>
+        <environment_properties>
+          <wind_spectra/>
+          <wind_profiles/>
+          <wave_spectra/>
+          <current_profiles/>
+          <directions/>
+          <frequency_sets/>
+          <phase_sets/>
+          <regular_wave_sets/>
+          <scours/>
+          <seabed_properties/>
+          <soil_properties/>
+          <soil_data_properties/>
+          <spreading_functions/>
+          <wave_height_evaluators/>
+        </environment_properties>
+        <environment_concepts/>
+      </environment>
+      <compartments>
+        <compartment_properties>
+          <compartment_contents/>
+        </compartment_properties>
+      </compartments>
+      <analysis_domain>
+        <analyses>
+          <global/>
+          <analysis name="Analysis1" active="true">
+            <activities>
+              <create_mesh beams_as_members="true" smart_load_combinations="true" pile_boundary_condition="pile_soil_interaction" use_partial_mesher="true" include_loads_on_mesh="true" lock_meshed_concepts_after_partial_meshing="true" regenerate_mesh_option="conditional" node_numbers_from_joint_name="false" element_numbers_from_beam_name="false" length_unit="" force_unit="" tempdiff_unit="">
+                <partial_remesh_handler prefer_NxM="true" allow_triangles="false" use_second_order="true" use_drilling="false" eliminate_internal_vertices="true" eliminate_internal_edges="false" use_uniformized_face_parametrization="false" is_remesh_required="false" short_edge_rel_length="-1" short_edge_abs_length="0.015" pile_remeshing_required="false" super_element_type="1" super_element_type_top="1">
+                  <edge_mesher edge_mesh_strategy="uniform_distribution"/>
+                  <face_mesher face_mesh_strategy="advancing_front_quad_mesher"/>
+                </partial_remesh_handler>
+              </create_mesh>
+              <load_results sin_file_option="match_load_and_result_case"/>
+            </activities>
+          </analysis>
+        </analyses>
+      </analysis_domain>
+    </model>
+  </DNV_structure_concept_protocol>

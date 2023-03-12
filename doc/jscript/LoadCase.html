@@ -1,0 +1,981 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: LoadCase
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: LoadCase
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Define a Load Case
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Define a load case where equipments, weight lists, and explicit loads are applied.</td></tr><tr>  <td>     <code>LC1 = LoadCase();<br/>     </code>		<div class="explanation">This command is scripted.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Define the load cases to be part of a code check run</td></tr><tr>  <td>     <code>1.<br/>Cc1.run(1).addLoadCase(LC_total);<br/><br/>2.<br/>Cc1.run(1).removeLoadCase(LC_total);<br/>     </code>		<div class="explanation">1. This command is scripted. Typically when using the load case "LC_Total" only<br/>2. When removing a load case from the run this is the typical script command<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="AbstractLoadCase.html">AbstractLoadCase</a>
+            |
+            +--<b>LoadCase</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="LoadCase.html#LoadCase()">LoadCase</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr >
+<td><code><b><a href="LoadCase.html#LoadCase(AbstractActivity)">LoadCase</a></b>(<b><a href="AbstractActivity.html">AbstractActivity</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="PlacedCompartment.html">PlacedCompartment</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#compartment(Compartment)">compartment</a></b>(<b><a href="Compartment.html">Compartment</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="PlacedCompartment.html">PlacedCompartment</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#compartment(Point)">compartment</a></b>(<b><a href="Point.html">Point</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="PlacedCompartment.html">PlacedCompartment</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#compartment(string)">compartment</a></b>(<b>string</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="DNVS__MoFa__Compartments__PlacedCompartmentOutline.html">DNVS::MoFa::Compartments::PlacedCompartmentOutline</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#compartmentOutline(DNVS::MoFa::Compartments::CompartmentOutline)">compartmentOutline</a></b>(<b><a href="DNVS__MoFa__Compartments__CompartmentOutline.html">DNVS::MoFa::Compartments::CompartmentOutline</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="DNVS__MoFa__Compartments__PlacedCompartmentOutline.html">DNVS::MoFa::Compartments::PlacedCompartmentOutline</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#compartmentOutline(DNVS::MoFa::Compartments::CompartmentOutlineManager, Point)">compartmentOutline</a></b>(<b><a href="DNVS__MoFa__Compartments__CompartmentOutlineManager.html">DNVS::MoFa::Compartments::CompartmentOutlineManager</a></b>, <b><a href="Point.html">Point</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="DNVS__MoFa__Compartments__PlacedCompartmentOutline.html">DNVS::MoFa::Compartments::PlacedCompartmentOutline</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#compartmentOutline(DNVS::MoFa::Compartments::CompartmentOutlineManager, string)">compartmentOutline</a></b>(<b><a href="DNVS__MoFa__Compartments__CompartmentOutlineManager.html">DNVS::MoFa::Compartments::CompartmentOutlineManager</a></b>, <b>string</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#deleteRotationField()">deleteRotationField</a></b>()</code>
+<div class="explanation">
+Delete rotation field for this loadcase</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#deleteWindField()">deleteWindField</a></b>()</code>
+<div class="explanation">
+Remove reference to wind loads for this loadcase</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#excludeSelfWeight()">excludeSelfWeight</a></b>()</code>
+<div class="explanation">
+Specify that structure mass shall NOT be used with specified translational acceleration field (e.g. gravity field) in loadcase</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#excludeStructureMassWithRotationField()">excludeStructureMassWithRotationField</a></b>()</code>
+<div class="explanation">
+Specify that structure mass shall NOT be used with specified rotational acceleration field in loadcase</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="DNVS__MoFa__Definition__TypedVector3d_DNVS__MoFa__Units__Quantity_DNVS__MoFa__Units__AccelerationPhenomenon,void_,void_.html">DNVS::MoFa::Definition::TypedVector3d<DNVS::MoFa::Units::Quantity<DNVS::MoFa::Units::AccelerationPhenomenon,void>,void></a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#getAccelerationAtPoint(point)">getAccelerationAtPoint</a></b>(<b><a href="point.html">point</a></b>)</code>
+<div class="explanation">
+Get acceleration at a given point</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#includeSelfWeight()">includeSelfWeight</a></b>()</code>
+<div class="explanation">
+Specify that structure mass shall be used with specified translational acceleration field (e.g. gravity field) in loadcase</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#includeStructureMassWithRotationField()">includeStructureMassWithRotationField</a></b>()</code>
+<div class="explanation">
+Specify that structure mass shall be used with specified rotational acceleration field in loadcase</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#setAcceleration(DNVS::MoFa::Definition::TypedVector3d<DNVS::MoFa::Units::Quantity<DNVS::MoFa::Units::AccelerationPhenomenon,void>,void>)">setAcceleration</a></b>(<b><a href="DNVS__MoFa__Definition__TypedVector3d_DNVS__MoFa__Units__Quantity_DNVS__MoFa__Units__AccelerationPhenomenon,void_,void_.html">DNVS::MoFa::Definition::TypedVector3d<DNVS::MoFa::Units::Quantity<DNVS::MoFa::Units::AccelerationPhenomenon,void>,void></a></b><span title="Acceleration vector"> vec</span>)</code>
+<div class="explanation">
+Set gravity acceleration vector</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#setHarmonicRotationField(Point, LengthVector3d, Angle, Time, Angle)">setHarmonicRotationField</a></b>(<b><a href="Point.html">Point</a></b><span title="Centre of rotation"> pos</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis direction"> axis</span>, <b><a href="Angle.html">Angle</a></b><span title="Angular displacement (max amplitude)"> angdis</span>, <b><a href="Time.html">Time</a></b><span title="Period of harmonic motion"> period</span>, <b><a href="Angle.html">Angle</a></b><span title="Phase shift (phase = 0.0 at max amplitude)"> phase</span>)</code>
+<div class="explanation">
+Specify harmonic rotation field for this loadcase</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#setRotationField(Point, LengthVector3d, RotationalVelocity, RotationalAcceleration)">setRotationField</a></b>(<b><a href="Point.html">Point</a></b><span title="Centre of rotation"> pos</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis direction"> axis</span>, <b><a href="RotationalVelocity.html">RotationalVelocity</a></b><span title="Angular velocity"> angvel</span>, <b><a href="RotationalAcceleration.html">RotationalAcceleration</a></b><span title="Angular acceleration"> angacc</span>)</code>
+<div class="explanation">
+Specify rotation field for this loadcase</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#setWindField(MassDensity, Length, Angle, WindProfileRelDir)">setWindField</a></b>(<b><a href="MassDensity.html">MassDensity</a></b>, <b><a href="Length.html">Length</a></b>, <b><a href="Angle.html">Angle</a></b>, <b><a href="WindProfileRelDir.html">WindProfileRelDir</a></b>)</code>
+<div class="explanation">
+Remove reference to wind loads for this loadcase</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#constantLoad(PrismEquipment)">constantLoad</a></b>(<b><a href="PrismEquipment.html">PrismEquipment</a></b><span title="equipment"> equipment</span>)</code>
+<div class="explanation">
+Specify that this equipment shall generate constant load</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#deleteExplicitLoads()">deleteExplicitLoads</a></b>()</code>
+<div class="explanation">
+Delete all explicit loads in loadcase</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="PlacedEquipment.html">PlacedEquipment</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#equipment(Equipment)">equipment</a></b>(<b><a href="Equipment.html">Equipment</a></b><span title="equipment"> equipment</span>)</code>
+<div class="explanation">
+get placed equipment from equipment for a given loadcase</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#equipmentAsBeamAndMass()">equipmentAsBeamAndMass</a></b>()</code>
+<div class="explanation">
+Specify that equipment shall be meshed as loadcase independent beams and mass</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#equipmentAsFootprintMass()">equipmentAsFootprintMass</a></b>()</code>
+<div class="explanation">
+Specify that equipment shall be meshed as loadcase independent mass at equipment footprint</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#equipmentAsLoad()">equipmentAsLoad</a></b>()</code>
+<div class="explanation">
+Specify that equipment shall be meshed as load</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#equipmentAsMass()">equipmentAsMass</a></b>()</code>
+<div class="explanation">
+Specify that equipment shall be meshed as loadcase independent eccentric mass</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#equipmentAsVerticalBeamAndMass()">equipmentAsVerticalBeamAndMass</a></b>()</code>
+<div class="explanation">
+Specify that equipment shall be meshed as loadcase independent vertical beams and mass</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#isPlaced(Equipment)">isPlaced</a></b>(<b><a href="Equipment.html">Equipment</a></b>)</code>
+<div class="explanation">
+Check if given equipment is placed in this loadcase.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#listEquipment()">listEquipment</a></b>()</code>
+<div class="explanation">
+Retrieve a list of all placed equipment in relevant loadcase</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#placeAtPoint(PrismEquipment, Point, LocalSystem)">placeAtPoint</a></b>(<b><a href="PrismEquipment.html">PrismEquipment</a></b><span title="Prism equipment"> equipment</span>, <b><a href="Point.html">Point</a></b><span title="Equipment position"> pos</span>, <b><a href="LocalSystem.html">LocalSystem</a></b><span title="Local coordinate system of placed equipmen"> locsys</span>)</code>
+<div class="explanation">
+Place prism equipment in loadcase</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#placeBBox(BoxEquipment)">placeBBox</a></b>(<b><a href="BoxEquipment.html">BoxEquipment</a></b><span title="Prism equipment"> equipment</span>)</code>
+<div class="explanation">
+Place bounding box equipment in loadcase</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#placeBBox(BoxEquipment, ...)">placeBBox</a></b>(<b><a href="BoxEquipment.html">BoxEquipment</a></b><span title="Prism equipment"> equipment</span>, [points ...])</code>
+<div class="explanation">
+Place bounding box equipment in loadcase</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#removeEquipment(Equipment)">removeEquipment</a></b>(<b><a href="Equipment.html">Equipment</a></b><span title="equipment"> equipment</span>)</code>
+<div class="explanation">
+remove equipment from placement in loadcase</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="PlacedLinearSlicer.html">PlacedLinearSlicer</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#slicer(abstractLinearSlicer)">slicer</a></b>(<b><a href="abstractLinearSlicer.html">abstractLinearSlicer</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#varyingLoad(PrismEquipment)">varyingLoad</a></b>(<b><a href="PrismEquipment.html">PrismEquipment</a></b><span title="equipment"> equipment</span>)</code>
+<div class="explanation">
+Specify that this equipment may generate linearly varying load</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#AddExternalMatricesLoads(ExternalMatrices, std::vector<double,std::allocator<double> >)">AddExternalMatricesLoads</a></b>(<b><a href="ExternalMatrices.html">ExternalMatrices</a></b>, <b><a href="std__vector_double,std__allocator_double___.html">std::vector<double,std::allocator<double> ></a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="std__vector_double,std__allocator_double___.html">std::vector<double,std::allocator<double> ></a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#GetExternalMatricesLoads(ExternalMatrices)">GetExternalMatricesLoads</a></b>(<b><a href="ExternalMatrices.html">ExternalMatrices</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#SetExternalMatricesLoads(ExternalMatrices, std::vector<double,std::allocator<double> >)">SetExternalMatricesLoads</a></b>(<b><a href="ExternalMatrices.html">ExternalMatrices</a></b>, <b><a href="std__vector_double,std__allocator_double___.html">std::vector<double,std::allocator<double> ></a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>LoadCase</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#copy()">copy</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>LoadCase</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="LoadCase.html#copy(AbstractActivity)">copy</a></b>(<b><a href="AbstractActivity.html">AbstractActivity</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractLoadCase.html#deleteAppliedLoads()">deleteAppliedLoads</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractLoadCase.html#generateAppliedLoads()">generateAppliedLoads</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractLoadCase.html#recalculateAppliedLoads()">recalculateAppliedLoads</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractLoadCase.html#resetFemLoadcase()">resetFemLoadcase</a></b>()</code>
+<div class="explanation">
+Reset the FEM loadcase number to be used for this loadcase</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractLoadCase.html#setActive()">setActive</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractLoadCase.html#setAutomaticFemLoadcase()">setAutomaticFemLoadcase</a></b>()</code>
+<div class="explanation">
+Reset the FEM loadcase number to be used for this loadcase</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractLoadCase.html#setCurrent()">setCurrent</a></b>()</code>
+<div class="explanation">
+Set loadcase as the current loadcase</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractLoadCase.html#setFemLoadcase(int)">setFemLoadcase</a></b>(<b>int</b>)</code>
+<div class="explanation">
+Set the FEM loadcase number to be used for this loadcase</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="AbstractLoadCase.html#setcurrent()">setcurrent</a></b>()</code>
+<div class="explanation">
+Same as "setCurrent" (Historical compatibility version)</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="DNVS__MoFa__Definition__TypedVector3d_DNVS__MoFa__Units__Quantity_DNVS__MoFa__Units__AccelerationPhenomenon,void_,void_.html">DNVS::MoFa::Definition::TypedVector3d<DNVS::MoFa::Units::Quantity<DNVS::MoFa::Units::AccelerationPhenomenon,void>,void></a></b></code>
+</td>
+<td width="90%"><code><b><a href="LoadCase.html#acceleration()">acceleration</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Set gravity acceleration vector</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="ComplexType.html">ComplexType</a></b></code>
+</td>
+<td width="90%"><code><b><a href="AbstractLoadCase.html#complexType()">complexType</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="double_or_DesignCondition.html">double or DesignCondition</a></b></code>
+</td>
+<td width="90%"><code><b><a href="AbstractLoadCase.html#designCondition()">designCondition</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="LoadCase.html#meshLoadsAsMass()">meshLoadsAsMass</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="LoadCase()"></a>
+<h3>LoadCase</h3>
+<p class="function">
+<b>LoadCase</b>()</p>
+<p>
+<hr>
+
+<a name="LoadCase(AbstractActivity)"></a>
+<h3>LoadCase</h3>
+<p class="function">
+<b>LoadCase</b>(<b><a href="AbstractActivity.html">AbstractActivity</a></b>)</p>
+<p>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="copy(AbstractActivity)"></a>
+<h3>copy</h3>
+<p class="function">
+<b>LoadCase</b> <b>copy</b>(<b><a href="AbstractActivity.html">AbstractActivity</a></b>)</p>
+<p>
+<hr>
+
+<a name="copy()"></a>
+<h3>copy</h3>
+<p class="function">
+<b>LoadCase</b> <b>copy</b>()</p>
+<p>
+<hr>
+
+<a name="AddExternalMatricesLoads(ExternalMatrices, std::vector<double,std::allocator<double> >)"></a>
+<h3>AddExternalMatricesLoads</h3>
+<p class="function">
+<b>&nbsp;</b> <b>AddExternalMatricesLoads</b>(<b><a href="ExternalMatrices.html">ExternalMatrices</a></b>, <b><a href="std__vector_double,std__allocator_double___.html">std::vector<double,std::allocator<double> ></a></b>)</p>
+<p>
+<hr>
+
+<a name="GetExternalMatricesLoads(ExternalMatrices)"></a>
+<h3>GetExternalMatricesLoads</h3>
+<p class="function">
+<b><a href="std__vector_double,std__allocator_double___.html">std::vector<double,std::allocator<double> ></a></b> <b>GetExternalMatricesLoads</b>(<b><a href="ExternalMatrices.html">ExternalMatrices</a></b>)</p>
+<p>
+<hr>
+
+<a name="SetExternalMatricesLoads(ExternalMatrices, std::vector<double,std::allocator<double> >)"></a>
+<h3>SetExternalMatricesLoads</h3>
+<p class="function">
+<b>&nbsp;</b> <b>SetExternalMatricesLoads</b>(<b><a href="ExternalMatrices.html">ExternalMatrices</a></b>, <b><a href="std__vector_double,std__allocator_double___.html">std::vector<double,std::allocator<double> ></a></b>)</p>
+<p>
+<hr>
+
+<a name="constantLoad(PrismEquipment)"></a>
+<h3>constantLoad</h3>
+<p class="function">
+<b>&nbsp;</b> <b>constantLoad</b>(<b><a href="PrismEquipment.html">PrismEquipment</a></b><span title="equipment"> equipment</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify that this equipment shall generate constant load
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>equipment</code> - equipment</dl>
+<hr>
+
+<a name="equipment(Equipment)"></a>
+<h3>equipment</h3>
+<p class="function">
+<b><a href="PlacedEquipment.html">PlacedEquipment</a></b> <b>equipment</b>(<b><a href="Equipment.html">Equipment</a></b><span title="equipment"> equipment</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>get placed equipment from equipment for a given loadcase
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>equipment</code> - equipment</dl>
+<hr>
+
+<a name="equipmentAsBeamAndMass()"></a>
+<h3>equipmentAsBeamAndMass</h3>
+<p class="function">
+<b>&nbsp;</b> <b>equipmentAsBeamAndMass</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify that equipment shall be meshed as loadcase independent beams and mass
+</dl>
+<hr>
+
+<a name="equipmentAsFootprintMass()"></a>
+<h3>equipmentAsFootprintMass</h3>
+<p class="function">
+<b>&nbsp;</b> <b>equipmentAsFootprintMass</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify that equipment shall be meshed as loadcase independent mass at equipment footprint
+</dl>
+<hr>
+
+<a name="equipmentAsLoad()"></a>
+<h3>equipmentAsLoad</h3>
+<p class="function">
+<b>&nbsp;</b> <b>equipmentAsLoad</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify that equipment shall be meshed as load
+</dl>
+<hr>
+
+<a name="equipmentAsMass()"></a>
+<h3>equipmentAsMass</h3>
+<p class="function">
+<b>&nbsp;</b> <b>equipmentAsMass</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify that equipment shall be meshed as loadcase independent eccentric mass
+</dl>
+<hr>
+
+<a name="equipmentAsVerticalBeamAndMass()"></a>
+<h3>equipmentAsVerticalBeamAndMass</h3>
+<p class="function">
+<b>&nbsp;</b> <b>equipmentAsVerticalBeamAndMass</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify that equipment shall be meshed as loadcase independent vertical beams and mass
+</dl>
+<hr>
+
+<a name="isPlaced(Equipment)"></a>
+<h3>isPlaced</h3>
+<p class="function">
+<b>bool</b> <b>isPlaced</b>(<b><a href="Equipment.html">Equipment</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Check if given equipment is placed in this loadcase.
+</dl>
+<hr>
+
+<a name="listEquipment()"></a>
+<h3>listEquipment</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>listEquipment</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Retrieve a list of all placed equipment in relevant loadcase
+</dl>
+<hr>
+
+<a name="placeAtPoint(PrismEquipment, Point, LocalSystem)"></a>
+<h3>placeAtPoint</h3>
+<p class="function">
+<b>&nbsp;</b> <b>placeAtPoint</b>(<b><a href="PrismEquipment.html">PrismEquipment</a></b><span title="Prism equipment"> equipment</span>, <b><a href="Point.html">Point</a></b><span title="Equipment position"> pos</span>, <b><a href="LocalSystem.html">LocalSystem</a></b><span title="Local coordinate system of placed equipmen"> locsys</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Place prism equipment in loadcase
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>equipment</code> - Prism equipment<dd><code>pos</code> - Equipment position<dd><code>locsys</code> - Local coordinate system of placed equipmen</dl>
+<hr>
+
+<a name="placeBBox(BoxEquipment)"></a>
+<h3>placeBBox</h3>
+<p class="function">
+<b>&nbsp;</b> <b>placeBBox</b>(<b><a href="BoxEquipment.html">BoxEquipment</a></b><span title="Prism equipment"> equipment</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Place bounding box equipment in loadcase
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>equipment</code> - Prism equipment</dl>
+<hr>
+
+<a name="placeBBox(BoxEquipment, ...)"></a>
+<h3>placeBBox</h3>
+<p class="function">
+<b>&nbsp;</b> <b>placeBBox</b>(<b><a href="BoxEquipment.html">BoxEquipment</a></b><span title="Prism equipment"> equipment</span>, [points ...])</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Place bounding box equipment in loadcase
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>equipment</code> - Prism equipment<dd><code>points</code> - positions</dl>
+<hr>
+
+<a name="removeEquipment(Equipment)"></a>
+<h3>removeEquipment</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeEquipment</b>(<b><a href="Equipment.html">Equipment</a></b><span title="equipment"> equipment</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>remove equipment from placement in loadcase
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>equipment</code> - equipment</dl>
+<hr>
+
+<a name="varyingLoad(PrismEquipment)"></a>
+<h3>varyingLoad</h3>
+<p class="function">
+<b>&nbsp;</b> <b>varyingLoad</b>(<b><a href="PrismEquipment.html">PrismEquipment</a></b><span title="equipment"> equipment</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify that this equipment may generate linearly varying load
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>equipment</code> - equipment</dl>
+<hr>
+
+<a name="deleteExplicitLoads()"></a>
+<h3>deleteExplicitLoads</h3>
+<p class="function">
+<b>&nbsp;</b> <b>deleteExplicitLoads</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete all explicit loads in loadcase
+</dl>
+<hr>
+
+<a name="deleteRotationField()"></a>
+<h3>deleteRotationField</h3>
+<p class="function">
+<b>&nbsp;</b> <b>deleteRotationField</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete rotation field for this loadcase
+</dl>
+<hr>
+
+<a name="deleteWindField()"></a>
+<h3>deleteWindField</h3>
+<p class="function">
+<b>&nbsp;</b> <b>deleteWindField</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove reference to wind loads for this loadcase
+</dl>
+<hr>
+
+<a name="excludeSelfWeight()"></a>
+<h3>excludeSelfWeight</h3>
+<p class="function">
+<b>&nbsp;</b> <b>excludeSelfWeight</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify that structure mass shall NOT be used with specified translational acceleration field (e.g. gravity field) in loadcase
+</dl>
+<hr>
+
+<a name="excludeStructureMassWithRotationField()"></a>
+<h3>excludeStructureMassWithRotationField</h3>
+<p class="function">
+<b>&nbsp;</b> <b>excludeStructureMassWithRotationField</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify that structure mass shall NOT be used with specified rotational acceleration field in loadcase
+</dl>
+<hr>
+
+<a name="getAccelerationAtPoint(point)"></a>
+<h3>getAccelerationAtPoint</h3>
+<p class="function">
+<b><a href="DNVS__MoFa__Definition__TypedVector3d_DNVS__MoFa__Units__Quantity_DNVS__MoFa__Units__AccelerationPhenomenon,void_,void_.html">DNVS::MoFa::Definition::TypedVector3d<DNVS::MoFa::Units::Quantity<DNVS::MoFa::Units::AccelerationPhenomenon,void>,void></a></b> <b>getAccelerationAtPoint</b>(<b><a href="point.html">point</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Get acceleration at a given point
+</dl>
+<hr>
+
+<a name="includeSelfWeight()"></a>
+<h3>includeSelfWeight</h3>
+<p class="function">
+<b>&nbsp;</b> <b>includeSelfWeight</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify that structure mass shall be used with specified translational acceleration field (e.g. gravity field) in loadcase
+</dl>
+<hr>
+
+<a name="includeStructureMassWithRotationField()"></a>
+<h3>includeStructureMassWithRotationField</h3>
+<p class="function">
+<b>&nbsp;</b> <b>includeStructureMassWithRotationField</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify that structure mass shall be used with specified rotational acceleration field in loadcase
+</dl>
+<hr>
+
+<a name="setAcceleration(DNVS::MoFa::Definition::TypedVector3d<DNVS::MoFa::Units::Quantity<DNVS::MoFa::Units::AccelerationPhenomenon,void>,void>)"></a>
+<h3>setAcceleration</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setAcceleration</b>(<b><a href="DNVS__MoFa__Definition__TypedVector3d_DNVS__MoFa__Units__Quantity_DNVS__MoFa__Units__AccelerationPhenomenon,void_,void_.html">DNVS::MoFa::Definition::TypedVector3d<DNVS::MoFa::Units::Quantity<DNVS::MoFa::Units::AccelerationPhenomenon,void>,void></a></b><span title="Acceleration vector"> vec</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set gravity acceleration vector
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>vec</code> - Acceleration vector</dl>
+<hr>
+
+<a name="setHarmonicRotationField(Point, LengthVector3d, Angle, Time, Angle)"></a>
+<h3>setHarmonicRotationField</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setHarmonicRotationField</b>(<b><a href="Point.html">Point</a></b><span title="Centre of rotation"> pos</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis direction"> axis</span>, <b><a href="Angle.html">Angle</a></b><span title="Angular displacement (max amplitude)"> angdis</span>, <b><a href="Time.html">Time</a></b><span title="Period of harmonic motion"> period</span>, <b><a href="Angle.html">Angle</a></b><span title="Phase shift (phase = 0.0 at max amplitude)"> phase</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify harmonic rotation field for this loadcase
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>pos</code> - Centre of rotation<dd><code>axis</code> - Rotation axis direction<dd><code>angdis</code> - Angular displacement (max amplitude)<dd><code>period</code> - Period of harmonic motion<dd><code>phase</code> - Phase shift (phase = 0.0 at max amplitude)</dl>
+<hr>
+
+<a name="setRotationField(Point, LengthVector3d, RotationalVelocity, RotationalAcceleration)"></a>
+<h3>setRotationField</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setRotationField</b>(<b><a href="Point.html">Point</a></b><span title="Centre of rotation"> pos</span>, <b><a href="LengthVector3d.html">LengthVector3d</a></b><span title="Rotation axis direction"> axis</span>, <b><a href="RotationalVelocity.html">RotationalVelocity</a></b><span title="Angular velocity"> angvel</span>, <b><a href="RotationalAcceleration.html">RotationalAcceleration</a></b><span title="Angular acceleration"> angacc</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Specify rotation field for this loadcase
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>pos</code> - Centre of rotation<dd><code>axis</code> - Rotation axis direction<dd><code>angvel</code> - Angular velocity<dd><code>angacc</code> - Angular acceleration</dl>
+<hr>
+
+<a name="setWindField(MassDensity, Length, Angle, WindProfileRelDir)"></a>
+<h3>setWindField</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setWindField</b>(<b><a href="MassDensity.html">MassDensity</a></b>, <b><a href="Length.html">Length</a></b>, <b><a href="Angle.html">Angle</a></b>, <b><a href="WindProfileRelDir.html">WindProfileRelDir</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Remove reference to wind loads for this loadcase
+</dl>
+<hr>
+
+<a name="slicer(abstractLinearSlicer)"></a>
+<h3>slicer</h3>
+<p class="function">
+<b><a href="PlacedLinearSlicer.html">PlacedLinearSlicer</a></b> <b>slicer</b>(<b><a href="abstractLinearSlicer.html">abstractLinearSlicer</a></b>)</p>
+<p>
+<hr>
+
+<a name="compartment(Point)"></a>
+<h3>compartment</h3>
+<p class="function">
+<b><a href="PlacedCompartment.html">PlacedCompartment</a></b> <b>compartment</b>(<b><a href="Point.html">Point</a></b>)</p>
+<p>
+<hr>
+
+<a name="compartment(string)"></a>
+<h3>compartment</h3>
+<p class="function">
+<b><a href="PlacedCompartment.html">PlacedCompartment</a></b> <b>compartment</b>(<b>string</b>)</p>
+<p>
+<hr>
+
+<a name="compartment(Compartment)"></a>
+<h3>compartment</h3>
+<p class="function">
+<b><a href="PlacedCompartment.html">PlacedCompartment</a></b> <b>compartment</b>(<b><a href="Compartment.html">Compartment</a></b>)</p>
+<p>
+<hr>
+
+<a name="compartmentOutline(DNVS::MoFa::Compartments::CompartmentOutlineManager, Point)"></a>
+<h3>compartmentOutline</h3>
+<p class="function">
+<b><a href="DNVS__MoFa__Compartments__PlacedCompartmentOutline.html">DNVS::MoFa::Compartments::PlacedCompartmentOutline</a></b> <b>compartmentOutline</b>(<b><a href="DNVS__MoFa__Compartments__CompartmentOutlineManager.html">DNVS::MoFa::Compartments::CompartmentOutlineManager</a></b>, <b><a href="Point.html">Point</a></b>)</p>
+<p>
+<hr>
+
+<a name="compartmentOutline(DNVS::MoFa::Compartments::CompartmentOutlineManager, string)"></a>
+<h3>compartmentOutline</h3>
+<p class="function">
+<b><a href="DNVS__MoFa__Compartments__PlacedCompartmentOutline.html">DNVS::MoFa::Compartments::PlacedCompartmentOutline</a></b> <b>compartmentOutline</b>(<b><a href="DNVS__MoFa__Compartments__CompartmentOutlineManager.html">DNVS::MoFa::Compartments::CompartmentOutlineManager</a></b>, <b>string</b>)</p>
+<p>
+<hr>
+
+<a name="compartmentOutline(DNVS::MoFa::Compartments::CompartmentOutline)"></a>
+<h3>compartmentOutline</h3>
+<p class="function">
+<b><a href="DNVS__MoFa__Compartments__PlacedCompartmentOutline.html">DNVS::MoFa::Compartments::PlacedCompartmentOutline</a></b> <b>compartmentOutline</b>(<b><a href="DNVS__MoFa__Compartments__CompartmentOutline.html">DNVS::MoFa::Compartments::CompartmentOutline</a></b>)</p>
+<p>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="meshLoadsAsMass()"></a>
+<h3>meshLoadsAsMass</h3>
+<p class="function">
+<b>bool</b> <b>meshLoadsAsMass</b>()</p>
+<p>
+<a name="acceleration()"></a>
+<h3>acceleration</h3>
+<p class="function">
+<b><a href="DNVS__MoFa__Definition__TypedVector3d_DNVS__MoFa__Units__Quantity_DNVS__MoFa__Units__AccelerationPhenomenon,void_,void_.html">DNVS::MoFa::Definition::TypedVector3d<DNVS::MoFa::Units::Quantity<DNVS::MoFa::Units::AccelerationPhenomenon,void>,void></a></b> <b>acceleration</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set gravity acceleration vectorGet gravity acceleration vector
+</dl>
+</body>
+</html>

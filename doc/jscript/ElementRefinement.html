@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: ElementRefinement
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: ElementRefinement
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Define shielding effects for conductor arrays.
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Define an element refinement</td></tr><tr>  <td>     <code>MyRefinement = ElementRefinement(5);<br/>     </code>		<div class="explanation">This command is scripted. For more details, please see <br/>User Manual Volume 2 and the Wajac User Manual<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="Property.html">Property</a>
+            |
+            +--<a href="class_jmfDuplicateObject_class_jprValue_.html">class jmfDuplicateObject<class jprValue></a>
+                 |
+                 +--<b>ElementRefinement</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="ElementRefinement.html#ElementRefinement(double)">ElementRefinement</a></b>(<b>double</b><span title="The element refinement coefficient"> refinementCoef</span>)</code>
+<div class="explanation">
+Construct a new element refinement property</div></td>
+</tr>
+<tr >
+<td><code><b><a href="ElementRefinement.html#ElementRefinement(double, bool, Length, Length)">ElementRefinement</a></b>(<b>double</b><span title="The element refinement coefficient"> refinementCoef</span>, <b>bool</b><span title="Constraint the subelement length based on the refinement coefficient"> doConstrain</span>, <b><a href="Length.html">Length</a></b><span title="Minimum length - 1/20 of element length is the absolute minimum"> minSubelemLength</span>, <b><a href="Length.html">Length</a></b><span title="Maximum length - 1/2 of element length is the absolute maximum"> maxSubelemLength</span>)</code>
+<div class="explanation">
+Construct a new element refinement property</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="class_jmfDuplicateObject_class_jprValue_.html#copy()">copy</a></b>()</code>
+<div class="explanation">
+Make an identical copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="ElementRefinement.html#doConstrain()">doConstrain</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Constraint the subelement length based on the refinement coefficient</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ElementRefinement.html#maxSubelemLength()">maxSubelemLength</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Maximum length - 1/2 of element length is the absolute maximum</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ElementRefinement.html#minSubelemLength()">minSubelemLength</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Minimum length - 1/20 of element length is the absolute minimum</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="ElementRefinement.html#refinementCoef()">refinementCoef</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+The element refinement coefficient</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="unsigned___int64.html">unsigned __int64</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Property.html#useCount()">useCount</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Returns the number of objects that uses this property</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="ElementRefinement(double)"></a>
+<h3>ElementRefinement</h3>
+<p class="function">
+<b>ElementRefinement</b>(<b>double</b><span title="The element refinement coefficient"> refinementCoef</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new element refinement property
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>refinementCoef</code> - The element refinement coefficient</dl>
+<hr>
+
+<a name="ElementRefinement(double, bool, Length, Length)"></a>
+<h3>ElementRefinement</h3>
+<p class="function">
+<b>ElementRefinement</b>(<b>double</b><span title="The element refinement coefficient"> refinementCoef</span>, <b>bool</b><span title="Constraint the subelement length based on the refinement coefficient"> doConstrain</span>, <b><a href="Length.html">Length</a></b><span title="Minimum length - 1/20 of element length is the absolute minimum"> minSubelemLength</span>, <b><a href="Length.html">Length</a></b><span title="Maximum length - 1/2 of element length is the absolute maximum"> maxSubelemLength</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new element refinement property
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>refinementCoef</code> - The element refinement coefficient<dd><code>doConstrain</code> - Constraint the subelement length based on the refinement coefficient<dd><code>minSubelemLength</code> - Minimum length - 1/20 of element length is the absolute minimum<dd><code>maxSubelemLength</code> - Maximum length - 1/2 of element length is the absolute maximum</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="doConstrain()"></a>
+<h3>doConstrain</h3>
+<p class="function">
+<b>bool</b> <b>doConstrain</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Constraint the subelement length based on the refinement coefficient
+</dl>
+<a name="maxSubelemLength()"></a>
+<h3>maxSubelemLength</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>maxSubelemLength</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Maximum length - 1/2 of element length is the absolute maximum
+</dl>
+<a name="minSubelemLength()"></a>
+<h3>minSubelemLength</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>minSubelemLength</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Minimum length - 1/20 of element length is the absolute minimum
+</dl>
+<a name="refinementCoef()"></a>
+<h3>refinementCoef</h3>
+<p class="function">
+<b>double</b> <b>refinementCoef</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>The element refinement coefficient
+</dl>
+</body>
+</html>

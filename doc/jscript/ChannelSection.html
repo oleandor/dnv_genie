@@ -1,0 +1,502 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: ChannelSection
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: ChannelSection
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Represent a channel section
+</dl>
+<dl>
+<br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="Property.html">Property</a>
+            |
+            +--<a href="Section.html">Section</a>
+                 |
+                 +--<b>ChannelSection</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="ChannelSection.html#ChannelSection(Length, Length, Length, Length)">ChannelSection</a></b>(<b><a href="Length.html">Length</a></b><span title="Total height"> height</span>, <b><a href="Length.html">Length</a></b><span title="Total width"> width</span>, <b><a href="Length.html">Length</a></b><span title="Web thickness"> webThickness</span>, <b><a href="Length.html">Length</a></b><span title="Flange thickness"> flangeThickness</span>)</code>
+<div class="explanation">
+Construct a new channel section</div></td>
+</tr>
+<tr >
+<td><code><b><a href="ChannelSection.html#ChannelSection(Length, Length, Length, Length, Length)">ChannelSection</a></b>(<b><a href="Length.html">Length</a></b><span title="Total height"> height</span>, <b><a href="Length.html">Length</a></b><span title="Total width"> width</span>, <b><a href="Length.html">Length</a></b><span title="Web thickness"> webThickness</span>, <b><a href="Length.html">Length</a></b><span title="Flange thickness"> flangeThickness</span>, <b><a href="Length.html">Length</a></b><span title="Fillet radius"> filletRadius</span>)</code>
+<div class="explanation">
+Construct a new channel section with fillet radius</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="Section.html#setDefault()">setDefault</a></b>()</code>
+<div class="explanation">
+Make this Section the default section</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="mfSectionGeneral.html">mfSectionGeneral</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#GeneralSectionOverride()">GeneralSectionOverride</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#HasGeneralSectionOverride()">HasGeneralSectionOverride</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Check if there is any general property override</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Area.html">Area</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#area()">area</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Cross sectional area</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#cogY()">cogY</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Return the distance from the minimum y-value of the section to cogY</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#cogZ()">cogZ</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Return the distance from the lower part of the section to cogZ</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="FabricationMethod.html">FabricationMethod</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#fabricationMethod()">fabricationMethod</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ChannelSection.html#filletRadius()">filletRadius</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Fillet radius</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ChannelSection.html#flangeThickness()">flangeThickness</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Flange thickness</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="GeneralPropertiesMethod.html">GeneralPropertiesMethod</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#generalPropertiesMethod()">generalPropertiesMethod</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ChannelSection.html#height()">height</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Total height</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="SecondMomentOfArea.html">SecondMomentOfArea</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#ix()">ix</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Torsional moment of inertia about shear centre</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="SecondMomentOfArea.html">SecondMomentOfArea</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#iy()">iy</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Moment of inertia about y axis</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="SecondMomentOfArea.html">SecondMomentOfArea</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#iyz()">iyz</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Product of inertia about y and z axes</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="SecondMomentOfArea.html">SecondMomentOfArea</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#iz()">iz</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Moment of inertia about z axis</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="mfSectionGeneral.html">mfSectionGeneral</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#libraryGeneralSection()">libraryGeneralSection</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Area.html">Area</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#shary()">shary</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Shear area y direction</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Area.html">Area</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#sharz()">sharz</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Shear area z direction</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#shceny()">shceny</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Shear center location y direction</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#shcenz()">shcenz</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Shear center location z direction</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#shearFactorY()">shearFactorY</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>double</b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#shearFactorZ()">shearFactorZ</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="FirstMomentOfArea.html">FirstMomentOfArea</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#sy()">sy</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Static area moment about y axis</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="FirstMomentOfArea.html">FirstMomentOfArea</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#sz()">sz</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Static area moment about z axis</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="unsigned___int64.html">unsigned __int64</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Property.html#useCount()">useCount</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+Returns the number of objects that uses this property</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ChannelSection.html#webThickness()">webThickness</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Web Thickness</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Length.html">Length</a></b></code>
+</td>
+<td width="90%"><code><b><a href="ChannelSection.html#width()">width</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Total width</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="FirstMomentOfArea.html">FirstMomentOfArea</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#wpy()">wpy</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Plastic section modulus about y axis</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="FirstMomentOfArea.html">FirstMomentOfArea</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#wpz()">wpz</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Plastic section modulus about z axis</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="SectionModulus.html">SectionModulus</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#wxmin()">wxmin</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Minimum torsional section modulus about shear centre</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="SectionModulus.html">SectionModulus</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#wymin()">wymin</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Minimum sectional modulus about y axis</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="SectionModulus.html">SectionModulus</a></b></code>
+</td>
+<td width="90%"><code><b><a href="Section.html#wzmin()">wzmin</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Minimum sectional modulus about z axis</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="ChannelSection(Length, Length, Length, Length)"></a>
+<h3>ChannelSection</h3>
+<p class="function">
+<b>ChannelSection</b>(<b><a href="Length.html">Length</a></b><span title="Total height"> height</span>, <b><a href="Length.html">Length</a></b><span title="Total width"> width</span>, <b><a href="Length.html">Length</a></b><span title="Web thickness"> webThickness</span>, <b><a href="Length.html">Length</a></b><span title="Flange thickness"> flangeThickness</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new channel section
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>height</code> - Total height<dd><code>width</code> - Total width<dd><code>webThickness</code> - Web thickness<dd><code>flangeThickness</code> - Flange thickness</dl>
+<hr>
+
+<a name="ChannelSection(Length, Length, Length, Length, Length)"></a>
+<h3>ChannelSection</h3>
+<p class="function">
+<b>ChannelSection</b>(<b><a href="Length.html">Length</a></b><span title="Total height"> height</span>, <b><a href="Length.html">Length</a></b><span title="Total width"> width</span>, <b><a href="Length.html">Length</a></b><span title="Web thickness"> webThickness</span>, <b><a href="Length.html">Length</a></b><span title="Flange thickness"> flangeThickness</span>, <b><a href="Length.html">Length</a></b><span title="Fillet radius"> filletRadius</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new channel section with fillet radius
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>height</code> - Total height<dd><code>width</code> - Total width<dd><code>webThickness</code> - Web thickness<dd><code>flangeThickness</code> - Flange thickness<dd><code>filletRadius</code> - Fillet radius</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="filletRadius()"></a>
+<h3>filletRadius</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>filletRadius</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Fillet radius
+</dl>
+<a name="flangeThickness()"></a>
+<h3>flangeThickness</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>flangeThickness</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Flange thickness
+</dl>
+<a name="height()"></a>
+<h3>height</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>height</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Total height
+</dl>
+<a name="webThickness()"></a>
+<h3>webThickness</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>webThickness</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Web Thickness
+</dl>
+<a name="width()"></a>
+<h3>width</h3>
+<p class="function">
+<b><a href="Length.html">Length</a></b> <b>width</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Total width
+</dl>
+</body>
+</html>

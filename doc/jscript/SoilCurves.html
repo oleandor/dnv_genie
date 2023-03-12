@@ -1,0 +1,1307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: SoilCurves
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: SoilCurves
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+Represent the soil codes
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>New Soil Curves</td></tr><tr>  <td>     <code>SoilCurves2 = SoilCurves(pyAPI1984,tzAPI1993,qzAPI1993);<br/>     </code>		<div class="explanation">This command is scripted. Typically with relevant data as shown<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<a href="class_jmfDuplicateObject_class_jmfNamedObject_.html">class jmfDuplicateObject<class jmfNamedObject></a>
+            |
+            +--<b>SoilCurves</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="SoilCurves.html#SoilCurves(pyCodes, tzCodes, qzCodes)">SoilCurves</a></b>(<b><a href="pyCodes.html">pyCodes</a></b><span title="The PY code"> pycode</span>, <b><a href="tzCodes.html">tzCodes</a></b><span title="The TZ code"> tzcode</span>, <b><a href="qzCodes.html">qzCodes</a></b><span title="The QZ code"> qzcode</span>)</code>
+<div class="explanation">
+This command creates the soil codes</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#addAdjustBaseMoment(Length, double, double)">addAdjustBaseMoment</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b>double</b><span title="Factor of Base Moment values"> BM-Factor</span>, <b>double</b><span title="Factor for rotation (angle) values"> Theta-Factor</span>)</code>
+<div class="explanation">
+Add adjust data for BaseMoment curve (for given pile diameter)</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#addAdjustBaseShear(Length, double, double)">addAdjustBaseShear</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b>double</b><span title="Factor of BaseShear (force) values"> BS-Factor</span>, <b>double</b><span title="Factor for lateral displacement (length) values"> Y-Factor</span>)</code>
+<div class="explanation">
+Add adjust data for BaseShear curve (for given pile diameter)</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#addAdjustMomTheta(Length, double, double)">addAdjustMomTheta</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b>double</b> Moment-Fact, <b>double</b> Theta-Fact)</code>
+<div class="explanation">
+Add adjust data for M-Theta (Distributed Moment) curve (for given pile diameter)</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#addAdjustPY(Length, double, double, Length, double, double, double)">addAdjustPY</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b>double</b><span title="The P-value multiplication factor"> pFact</span>, <b>double</b><span title="The Y-value multiplication factor"> yFact</span>, <b><a href="Length.html">Length</a></b><span title="The Y-Gap value"> yGap</span>, <b>double</b><span title="The P-value peak factor"> pPeakFact</span>, <b>double</b><span title="The P-value residual factor to this property"> pResFct</span>, <b>double</b><span title="The Y-value residual factor to this property"> yResFct</span>)</code>
+<div class="explanation">
+Add new PY soil curve adjust  data as a function of pile diameter</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#addAdjustQZ(Length, double, double, double, double, double)">addAdjustQZ</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b>double</b><span title="The compressive pile tip resistance multiplication factor"> cmpFact</span>, <b>double</b><span title="The tensile pile tip resistance multiplication factor"> tnsFact</span>, <b>double</b><span title="The q-z displacement values multiplication factor"> qzzFact</span>, <b>double</b><span title="The Q-value residual factor to this property"> qResFct</span>, <b>double</b><span title="The Z-value residual factor to this property"> zResFct</span>)</code>
+<div class="explanation">
+Add new QZ soil curve adjust data as a function of pile diameter</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#addAdjustTZ(Length, double, double, double, double, double)">addAdjustTZ</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b>double</b><span title="The compressive skin friction multiplication factor"> cmpFact</span>, <b>double</b><span title="The tensile skin friction multiplication factor"> tnsFact</span>, <b>double</b><span title="The t-z displacement values multiplication factor"> tzzFact</span>, <b>double</b><span title="The T-value residual factor to this property"> tResFct</span>, <b>double</b><span title="The Z-value residual factor to this property"> zResFct</span>)</code>
+<div class="explanation">
+Add new TZ soil curve adjust  data as a function of pile diameter</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#addManualBaseMoment(Length, Array, Array)">addManualBaseMoment</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b><a href="Array.html">Array</a></b><span title="Array of lateral displacement values"> Y_values</span>, <b><a href="Array.html">Array</a></b><span title="Array of BaseMoment (moment of force)"> BM_values</span>)</code>
+<div class="explanation">
+Add new BaseMoment curve (for given pile diameter)</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#addManualBaseShear(Length, Array, Array)">addManualBaseShear</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b><a href="Array.html">Array</a></b><span title="Array of lateral displacement values"> Y_values</span>, <b><a href="Array.html">Array</a></b><span title="Array of BaseShear (force)"> BS_values</span>)</code>
+<div class="explanation">
+Add new BaseShear curve (for given pile diameter)</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#addManualMomTheta(Length, Array, Array)">addManualMomTheta</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b><a href="Array.html">Array</a></b><span title="Array of Theta-values (rotation)"> Theta_values</span>, <b><a href="Array.html">Array</a></b><span title="Array of Distributed Moment-values"> Moment_values</span>)</code>
+<div class="explanation">
+Add new M-Theta (Distributed Moment) curve (for given pile diameter)</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#addManualPY(Length, Array, Array)">addManualPY</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b><a href="Array.html">Array</a></b><span title="Array of Y-coordinates (Y-values)"> y_values</span>, <b><a href="Array.html">Array</a></b><span title="Array of lateral resistance values (P-values)"> p_values</span>)</code>
+<div class="explanation">
+Add new lateral resistance values as a function of pile diameter and y-coordinates</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#addManualQZ(Length, Array, Array)">addManualQZ</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b><a href="Array.html">Array</a></b><span title="Array of Z-coordinates (Z-values)"> z_values</span>, <b><a href="Array.html">Array</a></b><span title="Array of pile tip resistance values (Q-values)"> q_values</span>)</code>
+<div class="explanation">
+Add new pile tip resistance values as a function of pile diameter and z-coordinates</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#addManualTZ(Length, Array, Array)">addManualTZ</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b><a href="Array.html">Array</a></b><span title="Array of Z-coordinates (Z-values)"> z_values</span>, <b><a href="Array.html">Array</a></b><span title="Array of skin friction values (T-values)"> t_values</span>)</code>
+<div class="explanation">
+Add new skin friction values as a function of pile diameter and z-coordinates</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeAdjustBaseMoment(Length)">removeAdjustBaseMoment</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</code>
+<div class="explanation">
+Delete one adjust BaseMoment curve</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeAdjustBaseShear(Length)">removeAdjustBaseShear</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</code>
+<div class="explanation">
+Delete one adjust BaseShear curve</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeAdjustMomTheta(Length)">removeAdjustMomTheta</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</code>
+<div class="explanation">
+Delete one adjust M-Theta curve</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeAdjustPY(Length)">removeAdjustPY</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</code>
+<div class="explanation">
+Delete one adjust PY soil curve dataset</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeAdjustQZ(Length)">removeAdjustQZ</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</code>
+<div class="explanation">
+Delete one adjust QZ soil curve dataset</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeAdjustTZ(Length)">removeAdjustTZ</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</code>
+<div class="explanation">
+Delete one adjust TZ soil curve dataset</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeAllAdjustBaseMoment()">removeAllAdjustBaseMoment</a></b>()</code>
+<div class="explanation">
+Delete all adjust BaseMoment curves</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeAllAdjustBaseShear()">removeAllAdjustBaseShear</a></b>()</code>
+<div class="explanation">
+Delete all adjust BaseShear curves</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeAllAdjustMomTheta()">removeAllAdjustMomTheta</a></b>()</code>
+<div class="explanation">
+Delete all manual M-Theta curves</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeAllAdjustPY()">removeAllAdjustPY</a></b>()</code>
+<div class="explanation">
+Delete all adjust PY soil curves datasets</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeAllAdjustQZ()">removeAllAdjustQZ</a></b>()</code>
+<div class="explanation">
+Delete all adjust QZ soil curves datasets</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeAllAdjustTZ()">removeAllAdjustTZ</a></b>()</code>
+<div class="explanation">
+Delete all adjust TZ soil curves datasets</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeAllManualBaseMoment()">removeAllManualBaseMoment</a></b>()</code>
+<div class="explanation">
+Delete all manual BaseMoment curves</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeAllManualBaseShear()">removeAllManualBaseShear</a></b>()</code>
+<div class="explanation">
+Delete all manual BaseShear curves</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeAllManualMomTheta()">removeAllManualMomTheta</a></b>()</code>
+<div class="explanation">
+Delete all manual M-Theta curves</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeAllManualPY()">removeAllManualPY</a></b>()</code>
+<div class="explanation">
+Delete all manual PY soil curves</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeAllManualQZ()">removeAllManualQZ</a></b>()</code>
+<div class="explanation">
+Delete all manual QZ soil curves</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeAllManualTZ()">removeAllManualTZ</a></b>()</code>
+<div class="explanation">
+Delete all manual TZ soil curves</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeManualBaseMoment(Length)">removeManualBaseMoment</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</code>
+<div class="explanation">
+Delete one manual BaseMoment curve</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeManualBaseShear(Length)">removeManualBaseShear</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</code>
+<div class="explanation">
+Delete one manual BaseShear curve</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeManualMomTheta(Length)">removeManualMomTheta</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</code>
+<div class="explanation">
+Delete one manual M-Theta curve</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeManualPY(Length)">removeManualPY</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</code>
+<div class="explanation">
+Delete one manual PY soil curve</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeManualQZ(Length)">removeManualQZ</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</code>
+<div class="explanation">
+Delete one manual QZ soil curve</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="SoilCurves.html#removeManualTZ(Length)">removeManualTZ</a></b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</code>
+<div class="explanation">
+Delete one manual TZ soil curve</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="ModelObject.html">ModelObject</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="class_jmfDuplicateObject_class_jmfNamedObject_.html#copy()">copy</a></b>()</code>
+<div class="explanation">
+Make an identical copy of the object</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#largeDiameterMonopile()">largeDiameterMonopile</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Additional curves for Large Diameter Monopile</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="pyCodes.html">pyCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#pyAPI1984()">pyAPI1984</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="pyCodes.html">pyCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#pyAPI1987()">pyAPI1987</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="pyCodes.html">pyCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#pyAPI2014()">pyAPI2014</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="pyCodes.html">pyCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#pyAutoBilinear()">pyAutoBilinear</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="pyCodes.html">pyCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#pyAutoLinear()">pyAutoLinear</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="pyCodes.html">pyCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#pyAutoTrilinear()">pyAutoTrilinear</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="pyCodes.html">pyCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#pyDNV1980()">pyDNV1980</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="pyCodes.html">pyCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#pyISO2004()">pyISO2004</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="pyCodes.html">pyCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#pyManual()">pyManual</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="pyCodes.html">pyCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#pyModifMatlock()">pyModifMatlock</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="pyCodes.html">pyCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#pycode()">pycode</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+The PY code</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="qzCodes.html">qzCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#qzAPI1993()">qzAPI1993</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="qzCodes.html">qzCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#qzAPI2014()">qzAPI2014</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="qzCodes.html">qzCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#qzAutoBilinear()">qzAutoBilinear</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="qzCodes.html">qzCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#qzAutoLinear()">qzAutoLinear</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="qzCodes.html">qzCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#qzAutoTrilinear()">qzAutoTrilinear</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="qzCodes.html">qzCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#qzElasticTheory()">qzElasticTheory</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="qzCodes.html">qzCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#qzManual()">qzManual</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="qzCodes.html">qzCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#qzcode()">qzcode</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+The QZ code</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="tzCodes.html">tzCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#tzAPI1993()">tzAPI1993</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="tzCodes.html">tzCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#tzAPI2014()">tzAPI2014</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="tzCodes.html">tzCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#tzAutoBilinear()">tzAutoBilinear</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="tzCodes.html">tzCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#tzAutoLinear()">tzAutoLinear</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="tzCodes.html">tzCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#tzAutoTrilinear()">tzAutoTrilinear</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="tzCodes.html">tzCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#tzKraft()">tzKraft</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="tzCodes.html">tzCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#tzManual()">tzManual</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="tzCodes.html">tzCodes</a></b></code>
+</td>
+<td width="90%"><code><b><a href="SoilCurves.html#tzcode()">tzcode</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+The TZ code</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="SoilCurves(pyCodes, tzCodes, qzCodes)"></a>
+<h3>SoilCurves</h3>
+<p class="function">
+<b>SoilCurves</b>(<b><a href="pyCodes.html">pyCodes</a></b><span title="The PY code"> pycode</span>, <b><a href="tzCodes.html">tzCodes</a></b><span title="The TZ code"> tzcode</span>, <b><a href="qzCodes.html">qzCodes</a></b><span title="The QZ code"> qzcode</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>This command creates the soil codes
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>pycode</code> - The PY code<dd><code>tzcode</code> - The TZ code<dd><code>qzcode</code> - The QZ code</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="addAdjustBaseMoment(Length, double, double)"></a>
+<h3>addAdjustBaseMoment</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addAdjustBaseMoment</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b>double</b><span title="Factor of Base Moment values"> BM-Factor</span>, <b>double</b><span title="Factor for rotation (angle) values"> Theta-Factor</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Add adjust data for BaseMoment curve (for given pile diameter)
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function<dd><code>BM-Factor</code> - Factor of Base Moment values<dd><code>Theta-Factor</code> - Factor for rotation (angle) values</dl>
+<hr>
+
+<a name="addAdjustBaseShear(Length, double, double)"></a>
+<h3>addAdjustBaseShear</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addAdjustBaseShear</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b>double</b><span title="Factor of BaseShear (force) values"> BS-Factor</span>, <b>double</b><span title="Factor for lateral displacement (length) values"> Y-Factor</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Add adjust data for BaseShear curve (for given pile diameter)
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function<dd><code>BS-Factor</code> - Factor of BaseShear (force) values<dd><code>Y-Factor</code> - Factor for lateral displacement (length) values</dl>
+<hr>
+
+<a name="addAdjustMomTheta(Length, double, double)"></a>
+<h3>addAdjustMomTheta</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addAdjustMomTheta</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b>double</b> Moment-Fact, <b>double</b> Theta-Fact)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Add adjust data for M-Theta (Distributed Moment) curve (for given pile diameter)
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function</dl>
+<hr>
+
+<a name="addAdjustPY(Length, double, double, Length, double, double, double)"></a>
+<h3>addAdjustPY</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addAdjustPY</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b>double</b><span title="The P-value multiplication factor"> pFact</span>, <b>double</b><span title="The Y-value multiplication factor"> yFact</span>, <b><a href="Length.html">Length</a></b><span title="The Y-Gap value"> yGap</span>, <b>double</b><span title="The P-value peak factor"> pPeakFact</span>, <b>double</b><span title="The P-value residual factor to this property"> pResFct</span>, <b>double</b><span title="The Y-value residual factor to this property"> yResFct</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Add new PY soil curve adjust  data as a function of pile diameter
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function<dd><code>pFact</code> - The P-value multiplication factor<dd><code>yFact</code> - The Y-value multiplication factor<dd><code>yGap</code> - The Y-Gap value<dd><code>pPeakFact</code> - The P-value peak factor<dd><code>pResFct</code> - The P-value residual factor to this property<dd><code>yResFct</code> - The Y-value residual factor to this property</dl>
+<hr>
+
+<a name="addAdjustQZ(Length, double, double, double, double, double)"></a>
+<h3>addAdjustQZ</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addAdjustQZ</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b>double</b><span title="The compressive pile tip resistance multiplication factor"> cmpFact</span>, <b>double</b><span title="The tensile pile tip resistance multiplication factor"> tnsFact</span>, <b>double</b><span title="The q-z displacement values multiplication factor"> qzzFact</span>, <b>double</b><span title="The Q-value residual factor to this property"> qResFct</span>, <b>double</b><span title="The Z-value residual factor to this property"> zResFct</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Add new QZ soil curve adjust data as a function of pile diameter
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function<dd><code>cmpFact</code> - The compressive pile tip resistance multiplication factor<dd><code>tnsFact</code> - The tensile pile tip resistance multiplication factor<dd><code>qzzFact</code> - The q-z displacement values multiplication factor<dd><code>qResFct</code> - The Q-value residual factor to this property<dd><code>zResFct</code> - The Z-value residual factor to this property</dl>
+<hr>
+
+<a name="addAdjustTZ(Length, double, double, double, double, double)"></a>
+<h3>addAdjustTZ</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addAdjustTZ</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b>double</b><span title="The compressive skin friction multiplication factor"> cmpFact</span>, <b>double</b><span title="The tensile skin friction multiplication factor"> tnsFact</span>, <b>double</b><span title="The t-z displacement values multiplication factor"> tzzFact</span>, <b>double</b><span title="The T-value residual factor to this property"> tResFct</span>, <b>double</b><span title="The Z-value residual factor to this property"> zResFct</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Add new TZ soil curve adjust  data as a function of pile diameter
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function<dd><code>cmpFact</code> - The compressive skin friction multiplication factor<dd><code>tnsFact</code> - The tensile skin friction multiplication factor<dd><code>tzzFact</code> - The t-z displacement values multiplication factor<dd><code>tResFct</code> - The T-value residual factor to this property<dd><code>zResFct</code> - The Z-value residual factor to this property</dl>
+<hr>
+
+<a name="addManualBaseMoment(Length, Array, Array)"></a>
+<h3>addManualBaseMoment</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addManualBaseMoment</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b><a href="Array.html">Array</a></b><span title="Array of lateral displacement values"> Y_values</span>, <b><a href="Array.html">Array</a></b><span title="Array of BaseMoment (moment of force)"> BM_values</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Add new BaseMoment curve (for given pile diameter)
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function<dd><code>Y_values</code> - Array of lateral displacement values<dd><code>BM_values</code> - Array of BaseMoment (moment of force)</dl>
+<hr>
+
+<a name="addManualBaseShear(Length, Array, Array)"></a>
+<h3>addManualBaseShear</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addManualBaseShear</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b><a href="Array.html">Array</a></b><span title="Array of lateral displacement values"> Y_values</span>, <b><a href="Array.html">Array</a></b><span title="Array of BaseShear (force)"> BS_values</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Add new BaseShear curve (for given pile diameter)
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function<dd><code>Y_values</code> - Array of lateral displacement values<dd><code>BS_values</code> - Array of BaseShear (force)</dl>
+<hr>
+
+<a name="addManualMomTheta(Length, Array, Array)"></a>
+<h3>addManualMomTheta</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addManualMomTheta</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b><a href="Array.html">Array</a></b><span title="Array of Theta-values (rotation)"> Theta_values</span>, <b><a href="Array.html">Array</a></b><span title="Array of Distributed Moment-values"> Moment_values</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Add new M-Theta (Distributed Moment) curve (for given pile diameter)
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function<dd><code>Theta_values</code> - Array of Theta-values (rotation)<dd><code>Moment_values</code> - Array of Distributed Moment-values</dl>
+<hr>
+
+<a name="addManualPY(Length, Array, Array)"></a>
+<h3>addManualPY</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addManualPY</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b><a href="Array.html">Array</a></b><span title="Array of Y-coordinates (Y-values)"> y_values</span>, <b><a href="Array.html">Array</a></b><span title="Array of lateral resistance values (P-values)"> p_values</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Add new lateral resistance values as a function of pile diameter and y-coordinates
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function<dd><code>y_values</code> - Array of Y-coordinates (Y-values)<dd><code>p_values</code> - Array of lateral resistance values (P-values)</dl>
+<hr>
+
+<a name="addManualQZ(Length, Array, Array)"></a>
+<h3>addManualQZ</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addManualQZ</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b><a href="Array.html">Array</a></b><span title="Array of Z-coordinates (Z-values)"> z_values</span>, <b><a href="Array.html">Array</a></b><span title="Array of pile tip resistance values (Q-values)"> q_values</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Add new pile tip resistance values as a function of pile diameter and z-coordinates
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function<dd><code>z_values</code> - Array of Z-coordinates (Z-values)<dd><code>q_values</code> - Array of pile tip resistance values (Q-values)</dl>
+<hr>
+
+<a name="addManualTZ(Length, Array, Array)"></a>
+<h3>addManualTZ</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addManualTZ</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>, <b><a href="Array.html">Array</a></b><span title="Array of Z-coordinates (Z-values)"> z_values</span>, <b><a href="Array.html">Array</a></b><span title="Array of skin friction values (T-values)"> t_values</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Add new skin friction values as a function of pile diameter and z-coordinates
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function<dd><code>z_values</code> - Array of Z-coordinates (Z-values)<dd><code>t_values</code> - Array of skin friction values (T-values)</dl>
+<hr>
+
+<a name="removeAdjustBaseMoment(Length)"></a>
+<h3>removeAdjustBaseMoment</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAdjustBaseMoment</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete one adjust BaseMoment curve
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function</dl>
+<hr>
+
+<a name="removeAdjustBaseShear(Length)"></a>
+<h3>removeAdjustBaseShear</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAdjustBaseShear</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete one adjust BaseShear curve
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function</dl>
+<hr>
+
+<a name="removeAdjustMomTheta(Length)"></a>
+<h3>removeAdjustMomTheta</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAdjustMomTheta</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete one adjust M-Theta curve
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function</dl>
+<hr>
+
+<a name="removeAdjustPY(Length)"></a>
+<h3>removeAdjustPY</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAdjustPY</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete one adjust PY soil curve dataset
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function</dl>
+<hr>
+
+<a name="removeAdjustQZ(Length)"></a>
+<h3>removeAdjustQZ</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAdjustQZ</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete one adjust QZ soil curve dataset
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function</dl>
+<hr>
+
+<a name="removeAdjustTZ(Length)"></a>
+<h3>removeAdjustTZ</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAdjustTZ</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete one adjust TZ soil curve dataset
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function</dl>
+<hr>
+
+<a name="removeAllAdjustBaseMoment()"></a>
+<h3>removeAllAdjustBaseMoment</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAllAdjustBaseMoment</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete all adjust BaseMoment curves
+</dl>
+<hr>
+
+<a name="removeAllAdjustBaseShear()"></a>
+<h3>removeAllAdjustBaseShear</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAllAdjustBaseShear</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete all adjust BaseShear curves
+</dl>
+<hr>
+
+<a name="removeAllAdjustMomTheta()"></a>
+<h3>removeAllAdjustMomTheta</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAllAdjustMomTheta</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete all manual M-Theta curves
+</dl>
+<hr>
+
+<a name="removeAllAdjustPY()"></a>
+<h3>removeAllAdjustPY</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAllAdjustPY</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete all adjust PY soil curves datasets
+</dl>
+<hr>
+
+<a name="removeAllAdjustQZ()"></a>
+<h3>removeAllAdjustQZ</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAllAdjustQZ</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete all adjust QZ soil curves datasets
+</dl>
+<hr>
+
+<a name="removeAllAdjustTZ()"></a>
+<h3>removeAllAdjustTZ</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAllAdjustTZ</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete all adjust TZ soil curves datasets
+</dl>
+<hr>
+
+<a name="removeAllManualBaseMoment()"></a>
+<h3>removeAllManualBaseMoment</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAllManualBaseMoment</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete all manual BaseMoment curves
+</dl>
+<hr>
+
+<a name="removeAllManualBaseShear()"></a>
+<h3>removeAllManualBaseShear</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAllManualBaseShear</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete all manual BaseShear curves
+</dl>
+<hr>
+
+<a name="removeAllManualMomTheta()"></a>
+<h3>removeAllManualMomTheta</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAllManualMomTheta</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete all manual M-Theta curves
+</dl>
+<hr>
+
+<a name="removeAllManualPY()"></a>
+<h3>removeAllManualPY</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAllManualPY</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete all manual PY soil curves
+</dl>
+<hr>
+
+<a name="removeAllManualQZ()"></a>
+<h3>removeAllManualQZ</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAllManualQZ</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete all manual QZ soil curves
+</dl>
+<hr>
+
+<a name="removeAllManualTZ()"></a>
+<h3>removeAllManualTZ</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeAllManualTZ</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete all manual TZ soil curves
+</dl>
+<hr>
+
+<a name="removeManualBaseMoment(Length)"></a>
+<h3>removeManualBaseMoment</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeManualBaseMoment</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete one manual BaseMoment curve
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function</dl>
+<hr>
+
+<a name="removeManualBaseShear(Length)"></a>
+<h3>removeManualBaseShear</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeManualBaseShear</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete one manual BaseShear curve
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function</dl>
+<hr>
+
+<a name="removeManualMomTheta(Length)"></a>
+<h3>removeManualMomTheta</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeManualMomTheta</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete one manual M-Theta curve
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function</dl>
+<hr>
+
+<a name="removeManualPY(Length)"></a>
+<h3>removeManualPY</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeManualPY</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete one manual PY soil curve
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function</dl>
+<hr>
+
+<a name="removeManualQZ(Length)"></a>
+<h3>removeManualQZ</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeManualQZ</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete one manual QZ soil curve
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function</dl>
+<hr>
+
+<a name="removeManualTZ(Length)"></a>
+<h3>removeManualTZ</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeManualTZ</b>(<b><a href="Length.html">Length</a></b><span title="Diameter value for function"> diameter</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete one manual TZ soil curve
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>diameter</code> - Diameter value for function</dl>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="largeDiameterMonopile()"></a>
+<h3>largeDiameterMonopile</h3>
+<p class="function">
+<b>bool</b> <b>largeDiameterMonopile</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Additional curves for Large Diameter Monopile
+</dl>
+<a name="pyAPI1984()"></a>
+<h3>pyAPI1984</h3>
+<p class="function">
+<b><a href="pyCodes.html">pyCodes</a></b> <b>pyAPI1984</b>()</p>
+<p>
+<a name="pyAPI1987()"></a>
+<h3>pyAPI1987</h3>
+<p class="function">
+<b><a href="pyCodes.html">pyCodes</a></b> <b>pyAPI1987</b>()</p>
+<p>
+<a name="pyAPI2014()"></a>
+<h3>pyAPI2014</h3>
+<p class="function">
+<b><a href="pyCodes.html">pyCodes</a></b> <b>pyAPI2014</b>()</p>
+<p>
+<a name="pyAutoBilinear()"></a>
+<h3>pyAutoBilinear</h3>
+<p class="function">
+<b><a href="pyCodes.html">pyCodes</a></b> <b>pyAutoBilinear</b>()</p>
+<p>
+<a name="pyAutoLinear()"></a>
+<h3>pyAutoLinear</h3>
+<p class="function">
+<b><a href="pyCodes.html">pyCodes</a></b> <b>pyAutoLinear</b>()</p>
+<p>
+<a name="pyAutoTrilinear()"></a>
+<h3>pyAutoTrilinear</h3>
+<p class="function">
+<b><a href="pyCodes.html">pyCodes</a></b> <b>pyAutoTrilinear</b>()</p>
+<p>
+<a name="pyDNV1980()"></a>
+<h3>pyDNV1980</h3>
+<p class="function">
+<b><a href="pyCodes.html">pyCodes</a></b> <b>pyDNV1980</b>()</p>
+<p>
+<a name="pyISO2004()"></a>
+<h3>pyISO2004</h3>
+<p class="function">
+<b><a href="pyCodes.html">pyCodes</a></b> <b>pyISO2004</b>()</p>
+<p>
+<a name="pyManual()"></a>
+<h3>pyManual</h3>
+<p class="function">
+<b><a href="pyCodes.html">pyCodes</a></b> <b>pyManual</b>()</p>
+<p>
+<a name="pyModifMatlock()"></a>
+<h3>pyModifMatlock</h3>
+<p class="function">
+<b><a href="pyCodes.html">pyCodes</a></b> <b>pyModifMatlock</b>()</p>
+<p>
+<a name="pycode()"></a>
+<h3>pycode</h3>
+<p class="function">
+<b><a href="pyCodes.html">pyCodes</a></b> <b>pycode</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>The PY code
+</dl>
+<a name="qzAPI1993()"></a>
+<h3>qzAPI1993</h3>
+<p class="function">
+<b><a href="qzCodes.html">qzCodes</a></b> <b>qzAPI1993</b>()</p>
+<p>
+<a name="qzAPI2014()"></a>
+<h3>qzAPI2014</h3>
+<p class="function">
+<b><a href="qzCodes.html">qzCodes</a></b> <b>qzAPI2014</b>()</p>
+<p>
+<a name="qzAutoBilinear()"></a>
+<h3>qzAutoBilinear</h3>
+<p class="function">
+<b><a href="qzCodes.html">qzCodes</a></b> <b>qzAutoBilinear</b>()</p>
+<p>
+<a name="qzAutoLinear()"></a>
+<h3>qzAutoLinear</h3>
+<p class="function">
+<b><a href="qzCodes.html">qzCodes</a></b> <b>qzAutoLinear</b>()</p>
+<p>
+<a name="qzAutoTrilinear()"></a>
+<h3>qzAutoTrilinear</h3>
+<p class="function">
+<b><a href="qzCodes.html">qzCodes</a></b> <b>qzAutoTrilinear</b>()</p>
+<p>
+<a name="qzElasticTheory()"></a>
+<h3>qzElasticTheory</h3>
+<p class="function">
+<b><a href="qzCodes.html">qzCodes</a></b> <b>qzElasticTheory</b>()</p>
+<p>
+<a name="qzManual()"></a>
+<h3>qzManual</h3>
+<p class="function">
+<b><a href="qzCodes.html">qzCodes</a></b> <b>qzManual</b>()</p>
+<p>
+<a name="qzcode()"></a>
+<h3>qzcode</h3>
+<p class="function">
+<b><a href="qzCodes.html">qzCodes</a></b> <b>qzcode</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>The QZ code
+</dl>
+<a name="tzAPI1993()"></a>
+<h3>tzAPI1993</h3>
+<p class="function">
+<b><a href="tzCodes.html">tzCodes</a></b> <b>tzAPI1993</b>()</p>
+<p>
+<a name="tzAPI2014()"></a>
+<h3>tzAPI2014</h3>
+<p class="function">
+<b><a href="tzCodes.html">tzCodes</a></b> <b>tzAPI2014</b>()</p>
+<p>
+<a name="tzAutoBilinear()"></a>
+<h3>tzAutoBilinear</h3>
+<p class="function">
+<b><a href="tzCodes.html">tzCodes</a></b> <b>tzAutoBilinear</b>()</p>
+<p>
+<a name="tzAutoLinear()"></a>
+<h3>tzAutoLinear</h3>
+<p class="function">
+<b><a href="tzCodes.html">tzCodes</a></b> <b>tzAutoLinear</b>()</p>
+<p>
+<a name="tzAutoTrilinear()"></a>
+<h3>tzAutoTrilinear</h3>
+<p class="function">
+<b><a href="tzCodes.html">tzCodes</a></b> <b>tzAutoTrilinear</b>()</p>
+<p>
+<a name="tzKraft()"></a>
+<h3>tzKraft</h3>
+<p class="function">
+<b><a href="tzCodes.html">tzCodes</a></b> <b>tzKraft</b>()</p>
+<p>
+<a name="tzManual()"></a>
+<h3>tzManual</h3>
+<p class="function">
+<b><a href="tzCodes.html">tzCodes</a></b> <b>tzManual</b>()</p>
+<p>
+<a name="tzcode()"></a>
+<h3>tzcode</h3>
+<p class="function">
+<b><a href="tzCodes.html">tzCodes</a></b> <b>tzcode</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>The TZ code
+</dl>
+</body>
+</html>

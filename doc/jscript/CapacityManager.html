@@ -1,0 +1,1005 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeniE V8.5-04 25-Jan-2023: CapacityManager
+</title>
+<link rel ="stylesheet" type="text/css" href="jsDocumentation.css" media="screen">
+<link rel ="stylesheet" type="text/css" href="print.css" media="print">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/genie.table.filter.min.js"></script>
+<script type="text/javascript" src="js/filterscript.js"></script>
+</head>
+<body >
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="3" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="3">
+  <tr valign="top">
+  <td class="NavBarCell1">
+<a href="index.html" class="NavBarFont1">Overview</a></td>
+  <td class="NavBarCell1">
+<a href="ClassHierarchy.html" class="NavBarFont1">Class Hierarchy</a>&nbsp;</td>
+<td class="progver">GeniE V8.5-04 25-Jan-2023 </td>  </tr>
+</table>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+<h1>Command: CapacityManager
+</h1>
+<!-- ======== START OF CLASS DATA ======== -->
+<dd>
+<dl><dt>Description:</dt>
+A collection of capacity models and options for the Capacity Manager
+</dl>
+<dl>
+<dt>Example of use: </dt></dl><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Create a Capacity Manager</td></tr><tr>  <td>     <code>Cc1 = CapacityManager(Analysis1);<br/>     </code>		<div class="explanation">This command is scripted. Typically when using "Analysis1" as basis for the capacity manager.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Update Members from Structure</td></tr><tr>  <td>     <code>Cc1.updateMembersFromStructure();<br/>     </code>		<div class="explanation">This command is scripted. This is used when you change something in the concept model, like removing <br/>a beam or altering segmentation, and you want this change to be reflected in the capacity model. <br/>Information is moved from the concept model to the capacity model.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Update Structure from Member</td></tr><tr>  <td>     <code>Cc1.updateStructureFromMembers();<br/>     </code>		<div class="explanation">This command is scripted. This is used to move information from the capacity model to the concept model.<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Set active</td></tr><tr>  <td>     <code>Cc1.setActive();<br/>     </code>		<div class="explanation">This command is scripted, typically when switching from capacity manager Cc2 to Cc1<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Edit Description</td></tr><tr>  <td>     <code>Cc1.description = "UM example";<br/>     </code>		<div class="explanation">This command is scripted, typically when adding the text UM Example<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Delete</td></tr><tr>  <td>     <code>Delete(Cc1);<br/>     </code>		<div class="explanation">This command is scripted, typically when deleting a capacity manager or a code check run<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Rename</td></tr><tr>  <td>     <code>Rename(Cc1,"UM_Cap_Manager");<br/>     </code>		<div class="explanation">This command is scripted, typically when renaming to UM_Cap_Manager<br/>		</div>   </td></tr></table><table border="1" cellpadding="3" cellspacing="0" width="100%"><tr class="header">  <td colspan=2>Properties</td></tr><tr>  <td>     <code>     </code>		<div class="explanation">This command is scripted. The scripting depends on which modifications are <br/>performed to the capacity manager or a code check run.<br/>		</div>   </td></tr></table><br/>
+<dl>
+<dt><h1>Details</h1></dt>
+<dl>
+<dt>Class hierarchy:</dt><dd>
+</dl>
+<pre>
+<a href="ModelObject.html">ModelObject</a>
+  |
+  +--<a href="NamedObject.html">NamedObject</a>
+       |
+       +--<b>CapacityManager</b>
+</pre>
+<hr/>
+&nbsp;
+<!-- ========= CONSTRUCTOR SUMMARY ======== -->
+
+<a name="constructor_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Constructor Summary</td>
+</tr>
+<tr >
+<td><code><b><a href="CapacityManager.html#CapacityManager()">CapacityManager</a></b>()</code>
+<div class="explanation">
+Construct a new CapacityManager</div></td>
+</tr>
+<tr >
+<td><code><b><a href="CapacityManager.html#CapacityManager(Analysis)">CapacityManager</a></b>(<b><a href="Analysis.html">Analysis</a></b>)</code>
+<div class="explanation">
+Construct a new CapacityManager</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= FUNCTION SUMMARY ======== -->
+
+<a name="function_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Function Summary</td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#DivideAlongDirection(CapacityPanel, LocalPanelDirection, int)">DivideAlongDirection</a></b>(<b><a href="CapacityPanel.html">CapacityPanel</a></b>, <b><a href="LocalPanelDirection.html">LocalPanelDirection</a></b>, <b>int</b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#DivideByPlane(CapacityPanel, plane3d)">DivideByPlane</a></b>(<b><a href="CapacityPanel.html">CapacityPanel</a></b>, <b><a href="plane3d.html">plane3d</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#Explode(CapacityPanel)">Explode</a></b>(<b><a href="CapacityPanel.html">CapacityPanel</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#Join(Array)">Join</a></b>(<b><a href="Array.html">Array</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#Join(CapacityPanel, CapacityPanel)">Join</a></b>(<b><a href="CapacityPanel.html">CapacityPanel</a></b>, <b><a href="CapacityPanel.html">CapacityPanel</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#addRun(AbstractCapacityRun)">addRun</a></b>(<b><a href="AbstractCapacityRun.html">AbstractCapacityRun</a></b><span title="run object"> run</span>)</code>
+<div class="explanation">
+Add a run to the CapacityManager</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#createJoints()">createJoints</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#createJoints(AbstractSet)">createJoints</a></b>(<b><a href="AbstractSet.html">AbstractSet</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#createMembers(AbstractSet, MemberCreationOption)">createMembers</a></b>(<b><a href="AbstractSet.html">AbstractSet</a></b>, <b><a href="MemberCreationOption.html">MemberCreationOption</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#createMembers(MemberCreationOption)">createMembers</a></b>(<b><a href="MemberCreationOption.html">MemberCreationOption</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#createPanels(AbstractSet, cmIdealizedPanelShape::ShapeAlgorithm)">createPanels</a></b>(<b><a href="AbstractSet.html">AbstractSet</a></b>, <b><a href="cmIdealizedPanelShape__ShapeAlgorithm.html">cmIdealizedPanelShape::ShapeAlgorithm</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#createPanels(cmIdealizedPanelShape::ShapeAlgorithm)">createPanels</a></b>(<b><a href="cmIdealizedPanelShape__ShapeAlgorithm.html">cmIdealizedPanelShape::ShapeAlgorithm</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#deleteCapacityModel(cmShape)">deleteCapacityModel</a></b>(<b><a href="cmShape.html">cmShape</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#deleteJoints()">deleteJoints</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#deleteMembers()">deleteMembers</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#deletePanels()">deletePanels</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#eraseCodeCheckLoads()">eraseCodeCheckLoads</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#eraseCodeCheckResults()">eraseCodeCheckResults</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#executeCodeChecks()">executeCodeChecks</a></b>()</code>
+<div class="explanation">
+Execute code check for all contained runs</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#generateCodeCheckLoads()">generateCodeCheckLoads</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#getPanelsFromPlate(Plate)">getPanelsFromPlate</a></b>(<b><a href="Plate.html">Plate</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="CapacityJoint.html">CapacityJoint</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#joint(...)">joint</a></b>([ ...])</code>
+<div class="explanation">
+Find a joint based on certain criteria, such as the frame joint it refers to.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="CapacityMember.html">CapacityMember</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#member(...)">member</a></b>([ ...])</code>
+<div class="explanation">
+Find a member based on certain criteria, such as the beam it refers to.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="CapacityPanel.html">CapacityPanel</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#panel(...)">panel</a></b>([ ...])</code>
+<div class="explanation">
+Find a panel based on certain criteria, such as the plate it refers to.</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#removeRun(int)">removeRun</a></b>(<b>int</b><span title="run index"> index</span>)</code>
+<div class="explanation">
+Delete run from CapacityManager</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b><a href="AbstractCapacityRun.html">AbstractCapacityRun</a></b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#run(int)">run</a></b>(<b>int</b><span title="run index"> index</span>)</code>
+<div class="explanation">
+Retrieve a run in the CapacityManager</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#setActive()">setActive</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#setMemberMaterial(Beam, Material)">setMemberMaterial</a></b>(<b><a href="Beam.html">Beam</a></b> beam, <b><a href="Material.html">Material</a></b> material)</code>
+<div class="explanation">
+Modify the material for all members that refers to beam</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#setMemberMaterial(Segment, Material)">setMemberMaterial</a></b>(<b><a href="Segment.html">Segment</a></b> segment, <b><a href="Material.html">Material</a></b> material)</code>
+<div class="explanation">
+Modify the material for all members that refers to segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#setMemberSection(Beam, Section)">setMemberSection</a></b>(<b><a href="Beam.html">Beam</a></b> beam, <b><a href="Section.html">Section</a></b> section)</code>
+<div class="explanation">
+Modify the section for all members that refers to beam</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#setMemberSection(Segment, Section)">setMemberSection</a></b>(<b><a href="Segment.html">Segment</a></b> segment, <b><a href="Section.html">Section</a></b> section)</code>
+<div class="explanation">
+Modify the section for all members that refers to segment</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#syncronizePropertiesFromStructure()">syncronizePropertiesFromStructure</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#updateMembers(AbstractSet, MemberCreationOption)">updateMembers</a></b>(<b><a href="AbstractSet.html">AbstractSet</a></b>, <b><a href="MemberCreationOption.html">MemberCreationOption</a></b>)</code>
+<div class="explanation">
+Partially updates the members whose underlying structure has been changed</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#updateMembers(MemberCreationOption)">updateMembers</a></b>(<b><a href="MemberCreationOption.html">MemberCreationOption</a></b>)</code>
+<div class="explanation">
+Partially updates the members whose underlying structure has been changed</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#updateMembersFromStructure()">updateMembersFromStructure</a></b>()</code>
+<div class="explanation">
+Updates member based on structural changes and modified properties</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#updatePanels(AbstractSet, cmIdealizedPanelShape::ShapeAlgorithm)">updatePanels</a></b>(<b><a href="AbstractSet.html">AbstractSet</a></b>, <b><a href="cmIdealizedPanelShape__ShapeAlgorithm.html">cmIdealizedPanelShape::ShapeAlgorithm</a></b>)</code>
+<div class="explanation">
+Partially updates the panels whose underlying structure has been changed</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#updatePanels(cmIdealizedPanelShape::ShapeAlgorithm)">updatePanels</a></b>(<b><a href="cmIdealizedPanelShape__ShapeAlgorithm.html">cmIdealizedPanelShape::ShapeAlgorithm</a></b>)</code>
+<div class="explanation">
+Partially updates the panels whose underlying structure has been changed</div></td>
+</tr>
+<tr 
+class="own">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>&nbsp;</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="CapacityManager.html#updateStructureFromMembers()">updateStructureFromMembers</a></b>()</code>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td class="returntype" align="right" valign="top" width="1%"><code>&nbsp;<b>bool</b></code>
+</td>
+<td class="functionsummary"><code><b><a href="ModelObject.html#supportsType(type_info)">supportsType</a></b>(<b><a href="type_info.html">type_info</a></b>)</code>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+&nbsp;
+<!-- ========= PROPERTY SUMMARY ======== -->
+
+<a name="property_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=2>
+Property Summary</td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="jcmRunBase.html">jcmRunBase</a></b></code>
+</td>
+<td width="90%"><code><b><a href="CapacityManager.html#allRuns()">allRuns</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Analysis.html">Analysis</a></b></code>
+</td>
+<td width="90%"><code><b><a href="CapacityManager.html#analysis()">analysis</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Select the analysis to be applied for code checks in this capacity manager.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="prCorrosionAdditionBase__additionRule.html">prCorrosionAdditionBase::additionRule</a></b></code>
+</td>
+<td width="90%"><code><b><a href="CapacityManager.html#corrosionAdditionRule()">corrosionAdditionRule</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Set the corrosion addition rule to be applied for code checks in this capacity manager.
+The corresponding scantlings rule should also be applied to the mesh, see Edit -> Rules -> Meshing.
+Finally corrosion addition properties must be assigned to relevant beams and plates.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="CapacityManager.html#createNewPanelsOnUpdate()">createNewPanelsOnUpdate</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="CapacityManager.html#defaultRunType()">defaultRunType</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="ModelObject.html#description()">description</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="unsigned___int64.html">unsigned __int64</a></b></code>
+</td>
+<td width="90%"><code><b><a href="CapacityManager.html#jointCount()">jointCount</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td width="90%"><code><b><a href="CapacityManager.html#joints()">joints</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="unsigned___int64.html">unsigned __int64</a></b></code>
+</td>
+<td width="90%"><code><b><a href="CapacityManager.html#memberCount()">memberCount</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td width="90%"><code><b><a href="CapacityManager.html#members()">members</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="inherited">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>string</b></code>
+</td>
+<td width="90%"><code><b><a href="NamedObject.html#name()">name</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+Use the name property to read or rename the name of the object.</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="unsigned___int64.html">unsigned __int64</a></b></code>
+</td>
+<td width="90%"><code><b><a href="CapacityManager.html#panelCount()">panelCount</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b><a href="Array.html">Array</a></b></code>
+</td>
+<td width="90%"><code><b><a href="CapacityManager.html#panels()">panels</a></b></code> <span class="propertyStatus"> read only</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>int</b></code>
+</td>
+<td width="90%"><code><b><a href="CapacityManager.html#ruleEdition()">ruleEdition</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+<tr 
+class="own">
+<td align="right" valign="top" width="1%">
+<code>&nbsp;<b>bool</b></code>
+</td>
+<td width="90%"><code><b><a href="CapacityManager.html#useFromStructureMemberOptions()">useFromStructureMemberOptions</a></b></code> <span class="propertyStatus"> read/write</span>
+<div class="explanation">
+</div></td>
+</tr>
+</table>
+<!-- ============ FIELD DETAIL =========== -->
+
+<p>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<a name="constructor_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Constructor Detail</td>
+</tr>
+</table>
+<a name="CapacityManager()"></a>
+<h3>CapacityManager</h3>
+<p class="function">
+<b>CapacityManager</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new CapacityManager
+</dl>
+<hr>
+
+<a name="CapacityManager(Analysis)"></a>
+<h3>CapacityManager</h3>
+<p class="function">
+<b>CapacityManager</b>(<b><a href="Analysis.html">Analysis</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Construct a new CapacityManager
+</dl>
+<hr>
+
+<!-- ========= FUNCTION DETAIL ======== -->
+
+<a name="function_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Function Detail</td>
+</tr>
+</table>
+<a name="DivideAlongDirection(CapacityPanel, LocalPanelDirection, int)"></a>
+<h3>DivideAlongDirection</h3>
+<p class="function">
+<b>&nbsp;</b> <b>DivideAlongDirection</b>(<b><a href="CapacityPanel.html">CapacityPanel</a></b>, <b><a href="LocalPanelDirection.html">LocalPanelDirection</a></b>, <b>int</b>)</p>
+<p>
+<hr>
+
+<a name="DivideByPlane(CapacityPanel, plane3d)"></a>
+<h3>DivideByPlane</h3>
+<p class="function">
+<b>&nbsp;</b> <b>DivideByPlane</b>(<b><a href="CapacityPanel.html">CapacityPanel</a></b>, <b><a href="plane3d.html">plane3d</a></b>)</p>
+<p>
+<hr>
+
+<a name="Explode(CapacityPanel)"></a>
+<h3>Explode</h3>
+<p class="function">
+<b>&nbsp;</b> <b>Explode</b>(<b><a href="CapacityPanel.html">CapacityPanel</a></b>)</p>
+<p>
+<hr>
+
+<a name="Join(CapacityPanel, CapacityPanel)"></a>
+<h3>Join</h3>
+<p class="function">
+<b>&nbsp;</b> <b>Join</b>(<b><a href="CapacityPanel.html">CapacityPanel</a></b>, <b><a href="CapacityPanel.html">CapacityPanel</a></b>)</p>
+<p>
+<hr>
+
+<a name="Join(Array)"></a>
+<h3>Join</h3>
+<p class="function">
+<b>&nbsp;</b> <b>Join</b>(<b><a href="Array.html">Array</a></b>)</p>
+<p>
+<hr>
+
+<a name="addRun(AbstractCapacityRun)"></a>
+<h3>addRun</h3>
+<p class="function">
+<b>&nbsp;</b> <b>addRun</b>(<b><a href="AbstractCapacityRun.html">AbstractCapacityRun</a></b><span title="run object"> run</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Add a run to the CapacityManager
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>run</code> - run object</dl>
+<hr>
+
+<a name="createJoints(AbstractSet)"></a>
+<h3>createJoints</h3>
+<p class="function">
+<b>&nbsp;</b> <b>createJoints</b>(<b><a href="AbstractSet.html">AbstractSet</a></b>)</p>
+<p>
+<hr>
+
+<a name="createJoints()"></a>
+<h3>createJoints</h3>
+<p class="function">
+<b>&nbsp;</b> <b>createJoints</b>()</p>
+<p>
+<hr>
+
+<a name="createMembers(MemberCreationOption)"></a>
+<h3>createMembers</h3>
+<p class="function">
+<b>&nbsp;</b> <b>createMembers</b>(<b><a href="MemberCreationOption.html">MemberCreationOption</a></b>)</p>
+<p>
+<hr>
+
+<a name="createMembers(AbstractSet, MemberCreationOption)"></a>
+<h3>createMembers</h3>
+<p class="function">
+<b>&nbsp;</b> <b>createMembers</b>(<b><a href="AbstractSet.html">AbstractSet</a></b>, <b><a href="MemberCreationOption.html">MemberCreationOption</a></b>)</p>
+<p>
+<hr>
+
+<a name="createPanels(cmIdealizedPanelShape::ShapeAlgorithm)"></a>
+<h3>createPanels</h3>
+<p class="function">
+<b>&nbsp;</b> <b>createPanels</b>(<b><a href="cmIdealizedPanelShape__ShapeAlgorithm.html">cmIdealizedPanelShape::ShapeAlgorithm</a></b>)</p>
+<p>
+<hr>
+
+<a name="createPanels(AbstractSet, cmIdealizedPanelShape::ShapeAlgorithm)"></a>
+<h3>createPanels</h3>
+<p class="function">
+<b>&nbsp;</b> <b>createPanels</b>(<b><a href="AbstractSet.html">AbstractSet</a></b>, <b><a href="cmIdealizedPanelShape__ShapeAlgorithm.html">cmIdealizedPanelShape::ShapeAlgorithm</a></b>)</p>
+<p>
+<hr>
+
+<a name="deleteCapacityModel(cmShape)"></a>
+<h3>deleteCapacityModel</h3>
+<p class="function">
+<b>&nbsp;</b> <b>deleteCapacityModel</b>(<b><a href="cmShape.html">cmShape</a></b>)</p>
+<p>
+<hr>
+
+<a name="deleteJoints()"></a>
+<h3>deleteJoints</h3>
+<p class="function">
+<b>&nbsp;</b> <b>deleteJoints</b>()</p>
+<p>
+<hr>
+
+<a name="deleteMembers()"></a>
+<h3>deleteMembers</h3>
+<p class="function">
+<b>&nbsp;</b> <b>deleteMembers</b>()</p>
+<p>
+<hr>
+
+<a name="deletePanels()"></a>
+<h3>deletePanels</h3>
+<p class="function">
+<b>&nbsp;</b> <b>deletePanels</b>()</p>
+<p>
+<hr>
+
+<a name="eraseCodeCheckLoads()"></a>
+<h3>eraseCodeCheckLoads</h3>
+<p class="function">
+<b>&nbsp;</b> <b>eraseCodeCheckLoads</b>()</p>
+<p>
+<hr>
+
+<a name="eraseCodeCheckResults()"></a>
+<h3>eraseCodeCheckResults</h3>
+<p class="function">
+<b>&nbsp;</b> <b>eraseCodeCheckResults</b>()</p>
+<p>
+<hr>
+
+<a name="executeCodeChecks()"></a>
+<h3>executeCodeChecks</h3>
+<p class="function">
+<b>&nbsp;</b> <b>executeCodeChecks</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Execute code check for all contained runs
+</dl>
+<hr>
+
+<a name="generateCodeCheckLoads()"></a>
+<h3>generateCodeCheckLoads</h3>
+<p class="function">
+<b>&nbsp;</b> <b>generateCodeCheckLoads</b>()</p>
+<p>
+<hr>
+
+<a name="getPanelsFromPlate(Plate)"></a>
+<h3>getPanelsFromPlate</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>getPanelsFromPlate</b>(<b><a href="Plate.html">Plate</a></b>)</p>
+<p>
+<hr>
+
+<a name="joint(...)"></a>
+<h3>joint</h3>
+<p class="function">
+<b><a href="CapacityJoint.html">CapacityJoint</a></b> <b>joint</b>([ ...])</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Find a joint based on certain criteria, such as the frame joint it refers to.
+</dl>
+<hr>
+
+<a name="member(...)"></a>
+<h3>member</h3>
+<p class="function">
+<b><a href="CapacityMember.html">CapacityMember</a></b> <b>member</b>([ ...])</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Find a member based on certain criteria, such as the beam it refers to.
+</dl>
+<hr>
+
+<a name="panel(...)"></a>
+<h3>panel</h3>
+<p class="function">
+<b><a href="CapacityPanel.html">CapacityPanel</a></b> <b>panel</b>([ ...])</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Find a panel based on certain criteria, such as the plate it refers to.
+</dl>
+<hr>
+
+<a name="removeRun(int)"></a>
+<h3>removeRun</h3>
+<p class="function">
+<b>&nbsp;</b> <b>removeRun</b>(<b>int</b><span title="run index"> index</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Delete run from CapacityManager
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>index</code> - run index</dl>
+<hr>
+
+<a name="run(int)"></a>
+<h3>run</h3>
+<p class="function">
+<b><a href="AbstractCapacityRun.html">AbstractCapacityRun</a></b> <b>run</b>(<b>int</b><span title="run index"> index</span>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Retrieve a run in the CapacityManager
+</dl>
+<dl><dt>Parameters:</dt>
+<dd><code>index</code> - run index</dl>
+<hr>
+
+<a name="setActive()"></a>
+<h3>setActive</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setActive</b>()</p>
+<p>
+<hr>
+
+<a name="setMemberMaterial(Segment, Material)"></a>
+<h3>setMemberMaterial</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setMemberMaterial</b>(<b><a href="Segment.html">Segment</a></b> segment, <b><a href="Material.html">Material</a></b> material)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Modify the material for all members that refers to segment
+</dl>
+<hr>
+
+<a name="setMemberMaterial(Beam, Material)"></a>
+<h3>setMemberMaterial</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setMemberMaterial</b>(<b><a href="Beam.html">Beam</a></b> beam, <b><a href="Material.html">Material</a></b> material)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Modify the material for all members that refers to beam
+</dl>
+<hr>
+
+<a name="setMemberSection(Segment, Section)"></a>
+<h3>setMemberSection</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setMemberSection</b>(<b><a href="Segment.html">Segment</a></b> segment, <b><a href="Section.html">Section</a></b> section)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Modify the section for all members that refers to segment
+</dl>
+<hr>
+
+<a name="setMemberSection(Beam, Section)"></a>
+<h3>setMemberSection</h3>
+<p class="function">
+<b>&nbsp;</b> <b>setMemberSection</b>(<b><a href="Beam.html">Beam</a></b> beam, <b><a href="Section.html">Section</a></b> section)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Modify the section for all members that refers to beam
+</dl>
+<hr>
+
+<a name="syncronizePropertiesFromStructure()"></a>
+<h3>syncronizePropertiesFromStructure</h3>
+<p class="function">
+<b>&nbsp;</b> <b>syncronizePropertiesFromStructure</b>()</p>
+<p>
+<hr>
+
+<a name="updateMembers(MemberCreationOption)"></a>
+<h3>updateMembers</h3>
+<p class="function">
+<b>&nbsp;</b> <b>updateMembers</b>(<b><a href="MemberCreationOption.html">MemberCreationOption</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Partially updates the members whose underlying structure has been changed
+</dl>
+<hr>
+
+<a name="updateMembers(AbstractSet, MemberCreationOption)"></a>
+<h3>updateMembers</h3>
+<p class="function">
+<b>&nbsp;</b> <b>updateMembers</b>(<b><a href="AbstractSet.html">AbstractSet</a></b>, <b><a href="MemberCreationOption.html">MemberCreationOption</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Partially updates the members whose underlying structure has been changed
+</dl>
+<hr>
+
+<a name="updateMembersFromStructure()"></a>
+<h3>updateMembersFromStructure</h3>
+<p class="function">
+<b>&nbsp;</b> <b>updateMembersFromStructure</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Updates member based on structural changes and modified propertiesIf the member has lost its connection to the structure model, it will be deleted
+</dl>
+<hr>
+
+<a name="updatePanels(cmIdealizedPanelShape::ShapeAlgorithm)"></a>
+<h3>updatePanels</h3>
+<p class="function">
+<b>&nbsp;</b> <b>updatePanels</b>(<b><a href="cmIdealizedPanelShape__ShapeAlgorithm.html">cmIdealizedPanelShape::ShapeAlgorithm</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Partially updates the panels whose underlying structure has been changed
+</dl>
+<hr>
+
+<a name="updatePanels(AbstractSet, cmIdealizedPanelShape::ShapeAlgorithm)"></a>
+<h3>updatePanels</h3>
+<p class="function">
+<b>&nbsp;</b> <b>updatePanels</b>(<b><a href="AbstractSet.html">AbstractSet</a></b>, <b><a href="cmIdealizedPanelShape__ShapeAlgorithm.html">cmIdealizedPanelShape::ShapeAlgorithm</a></b>)</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Partially updates the panels whose underlying structure has been changed
+</dl>
+<hr>
+
+<a name="updateStructureFromMembers()"></a>
+<h3>updateStructureFromMembers</h3>
+<p class="function">
+<b>&nbsp;</b> <b>updateStructureFromMembers</b>()</p>
+<p>
+<hr>
+
+<!-- ========= PROPERTY DETAIL ======== -->
+
+<a name="property_detail"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr class="header">
+<td colspan=1>
+Property Detail</td>
+</tr>
+</table>
+<a name="allRuns()"></a>
+<h3>allRuns</h3>
+<p class="function">
+<b><a href="jcmRunBase.html">jcmRunBase</a></b> <b>allRuns</b>()</p>
+<p>
+<a name="analysis()"></a>
+<h3>analysis</h3>
+<p class="function">
+<b><a href="Analysis.html">Analysis</a></b> <b>analysis</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Select the analysis to be applied for code checks in this capacity manager.
+</dl>
+<a name="corrosionAdditionRule()"></a>
+<h3>corrosionAdditionRule</h3>
+<p class="function">
+<b><a href="prCorrosionAdditionBase__additionRule.html">prCorrosionAdditionBase::additionRule</a></b> <b>corrosionAdditionRule</b>()</p>
+<p>
+<dl>
+<dt>Description:</dt>
+<dd>Set the corrosion addition rule to be applied for code checks in this capacity manager.
+The corresponding scantlings rule should also be applied to the mesh, see Edit -> Rules -> Meshing.
+Finally corrosion addition properties must be assigned to relevant beams and plates.
+</dl>
+<a name="createNewPanelsOnUpdate()"></a>
+<h3>createNewPanelsOnUpdate</h3>
+<p class="function">
+<b>bool</b> <b>createNewPanelsOnUpdate</b>()</p>
+<p>
+<a name="defaultRunType()"></a>
+<h3>defaultRunType</h3>
+<p class="function">
+<b>string</b> <b>defaultRunType</b>()</p>
+<p>
+<a name="jointCount()"></a>
+<h3>jointCount</h3>
+<p class="function">
+<b><a href="unsigned___int64.html">unsigned __int64</a></b> <b>jointCount</b>()</p>
+<p>
+<a name="joints()"></a>
+<h3>joints</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>joints</b>()</p>
+<p>
+<a name="memberCount()"></a>
+<h3>memberCount</h3>
+<p class="function">
+<b><a href="unsigned___int64.html">unsigned __int64</a></b> <b>memberCount</b>()</p>
+<p>
+<a name="members()"></a>
+<h3>members</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>members</b>()</p>
+<p>
+<a name="panelCount()"></a>
+<h3>panelCount</h3>
+<p class="function">
+<b><a href="unsigned___int64.html">unsigned __int64</a></b> <b>panelCount</b>()</p>
+<p>
+<a name="panels()"></a>
+<h3>panels</h3>
+<p class="function">
+<b><a href="Array.html">Array</a></b> <b>panels</b>()</p>
+<p>
+<a name="ruleEdition()"></a>
+<h3>ruleEdition</h3>
+<p class="function">
+<b>int</b> <b>ruleEdition</b>()</p>
+<p>
+<a name="useFromStructureMemberOptions()"></a>
+<h3>useFromStructureMemberOptions</h3>
+<p class="function">
+<b>bool</b> <b>useFromStructureMemberOptions</b>()</p>
+<p>
+</body>
+</html>
